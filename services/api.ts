@@ -2,11 +2,11 @@
 import { newsArticles as seedNews, events as seedEvents, businesses as seedBusinesses } from '../data';
 import { NewsArticle, Event, Business } from '../types';
 
-// CHAVES DO BANCO DE DADOS LOCAL - Versão 22 (Imagem Diurna Centro Histórico)
+// CHAVES DO BANCO DE DADOS LOCAL - Versão 29 (Correção Imagens Eventos)
 const DB_KEYS = {
-    NEWS: '@araucaria-app/news_v22',
-    EVENTS: '@araucaria-app/events_v22',
-    BUSINESSES: '@araucaria-app/businesses_v22'
+    NEWS: '@araucaria-app/news_v29',
+    EVENTS: '@araucaria-app/events_v29',
+    BUSINESSES: '@araucaria-app/businesses_v29'
 };
 
 // Simula um delay de rede para parecer uma API real
@@ -17,9 +17,13 @@ const getCollection = <T>(key: string, seedData: T[]): T[] => {
     try {
         const stored = localStorage.getItem(key);
         if (stored) {
-            return JSON.parse(stored);
+            const parsed = JSON.parse(stored);
+            // Verificação básica de integridade
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                return parsed;
+            }
         }
-        // Se não existir, inicializa com o seed data e salva
+        // Se não existir ou estiver corrompido, inicializa com o seed data e salva
         localStorage.setItem(key, JSON.stringify(seedData));
         return seedData;
     } catch (error) {
@@ -47,18 +51,19 @@ export const api = {
     // Simula buscar destaques agregados
     getHomeData: async () => {
         await delay(800);
+        // Para a Home, sempre garantimos dados frescos das chaves atuais
         const news = getCollection<NewsArticle>(DB_KEYS.NEWS, seedNews);
         const events = getCollection<Event>(DB_KEYS.EVENTS, seedEvents);
         const businesses = getCollection<Business>(DB_KEYS.BUSINESSES, seedBusinesses);
 
         return {
             news: news.slice(0, 3),
-            events: events.slice(0, 3), // Mostra 3 eventos na home
-            businesses: businesses.slice(0, 4) // Mostra 4 comércios na home
+            events: events.slice(0, 3), 
+            businesses: businesses.slice(0, 4) 
         };
     },
 
-    // Função de utilidade para resetar o banco (caso precise limpar cache)
+    // Função de utilidade para resetar o banco
     resetDatabase: async () => {
         localStorage.removeItem(DB_KEYS.NEWS);
         localStorage.removeItem(DB_KEYS.EVENTS);

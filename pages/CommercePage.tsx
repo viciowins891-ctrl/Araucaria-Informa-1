@@ -23,9 +23,9 @@ const CommercePage: React.FC = () => {
             {/* Hero Header Section */}
             <div className="relative bg-zinc-900 py-16 sm:py-20 mb-8 sm:mb-12">
                 <div className="absolute inset-0 overflow-hidden bg-gray-900">
-                    {/* Imagem urbana noturna (Skyline) */}
+                    {/* Imagem: Rua comercial charmosa, mais adequada ao contexto que um skyline gigante */}
                     <img 
-                        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop" 
+                        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1600&auto=format&fit=crop" 
                         alt="Centro Urbano e Comercial" 
                         className="w-full h-full object-cover opacity-30"
                         onError={(e) => {

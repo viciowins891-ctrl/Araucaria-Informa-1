@@ -11,16 +11,13 @@ import LoadingSpinner from '../components/LoadingSpinner';
 const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData);
     
-    // Imagem Hero: Floresta com neblina (Alta estabilidade)
-    const [heroImage, setHeroImage] = useState("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1600&auto=format&fit=crop");
-    const [imageErrorCount, setImageErrorCount] = useState(0);
+    // Imagem principal: Vista urbana com pôr do sol (Golden Hour), similar à referência de Araucária/Cidade Símbolo.
+    // Usamos Unsplash por ser estável e de alta qualidade.
+    const [heroImage, setHeroImage] = useState("https://images.unsplash.com/photo-1444723121867-c612671f26ae?q=80&w=1600&auto=format&fit=crop");
 
     const handleImageError = () => {
-        if (imageErrorCount === 0) {
-            // Fallback: Floresta verde vibrante
-            setHeroImage("https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop");
-        }
-        setImageErrorCount(prev => prev + 1);
+        // Fallback secundário: Horizonte urbano alternativo caso a primeira falhe
+        setHeroImage("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop");
     };
 
     if (loading) return <LoadingSpinner />;
@@ -33,11 +30,11 @@ const HomePage: React.FC = () => {
         <div>
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-zinc-900">
-                <div className="absolute inset-0 z-0 bg-gradient-to-br from-green-900 to-zinc-900">
+                <div className="absolute inset-0 z-0">
                      <img 
                         src={heroImage}
-                        alt="Paisagem de Araucária" 
-                        className={`w-full h-full object-cover transition-opacity duration-500 ${imageErrorCount > 2 ? 'opacity-0' : 'opacity-100'}`}
+                        alt="Vista aérea de Araucária - Cidade Símbolo" 
+                        className="w-full h-full object-cover"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
                     />
@@ -46,13 +43,13 @@ const HomePage: React.FC = () => {
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <span className="inline-block py-1 px-3 rounded-full bg-blue-600/40 border border-blue-400/30 text-blue-100 text-sm font-semibold mb-6 backdrop-blur-md">
+                    <span className="inline-block py-1 px-3 rounded-full bg-blue-600/80 border border-blue-400/30 text-blue-50 text-sm font-semibold mb-6 backdrop-blur-md shadow-sm">
                         Bem-vindo a Araucária
                     </span>
-                    <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-lg">
+                    <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-2xl">
                         A Cidade Símbolo<br/>do Paraná
                     </h1>
-                    <p className="mt-6 max-w-2xl mx-auto text-xl text-zinc-100 font-light drop-shadow-md">
+                    <p className="mt-6 max-w-2xl mx-auto text-xl text-zinc-100 font-light drop-shadow-lg text-shadow">
                         Notícias, cultura, eventos e o melhor do comércio local em um só lugar.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
