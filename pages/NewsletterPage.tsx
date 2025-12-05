@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { FormEvent } from 'react';
 
 const FeatureCard: React.FC<{ icon: string; title: string; description: string }> = ({ icon, title, description }) => (
     <div className="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-700/80 transition-shadow hover:shadow-lg">
@@ -16,6 +16,18 @@ const FeatureCard: React.FC<{ icon: string; title: string; description: string }
 );
 
 const NewsletterPage: React.FC = () => {
+    const handleSubscribe = (e: FormEvent) => {
+        e.preventDefault();
+        const form = e.target as HTMLFormElement;
+        const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+        
+        if (input && input.value) {
+            // Simulação de sucesso
+            alert(`Inscrição confirmada! Você receberá as novidades de Araucária no email: ${input.value}`);
+            input.value = ''; // Limpa o campo
+        }
+    };
+
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24 max-w-7xl">
             <main>
@@ -37,11 +49,13 @@ const NewsletterPage: React.FC = () => {
                     <div className="bg-surface-light dark:bg-gray-800 rounded-lg p-8 sm:p-10 border border-gray-200 dark:border-gray-700">
                         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white font-display">Receba atualizações semanais de Araucária</h3>
                         <p className="text-gray-500 dark:text-gray-400 mt-2 mb-8">Fique por dentro das últimas notícias, eventos e oportunidades da sua cidade.</p>
-                        <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                        
+                        <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onSubmit={handleSubscribe}>
                             <label className="sr-only" htmlFor="email-sub">Seu email</label>
                             <input className="w-full px-4 py-3 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary" id="email-sub" placeholder="Seu email" required type="email"/>
                             <button className="bg-primary text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark whitespace-nowrap" type="submit">Inscrever-se</button>
                         </form>
+                        
                         <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">Respeitamos sua privacidade. Cancele a inscrição a qualquer momento.</p>
                     </div>
                 </section>

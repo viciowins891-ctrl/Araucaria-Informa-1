@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { FormEvent } from 'react';
 
 interface FooterProps {
     simple?: boolean;
@@ -16,6 +16,17 @@ const SocialIcon: React.FC<{ href: string, iconPath: string }> = ({ href, iconPa
 
 const Footer: React.FC<FooterProps> = ({ simple = false }) => {
     
+    const handleSubscribe = (e: FormEvent) => {
+        e.preventDefault();
+        const form = e.target as HTMLFormElement;
+        const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+        
+        if (input && input.value) {
+            alert(`Obrigado! O email ${input.value} foi inscrito com sucesso.`);
+            input.value = '';
+        }
+    };
+
     if (simple) {
         return (
             <footer className="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700/80">
@@ -49,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                         </div>
                          <div className="col-span-2 md:col-span-2">
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Newsletter</h3>
-                            <form className="flex flex-col space-y-2">
+                            <form className="flex flex-col space-y-2" onSubmit={handleSubscribe}>
                                 <label className="sr-only" htmlFor="footer-email">Seu email</label>
                                 <input className="w-full text-sm px-3 py-2 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary" id="footer-email" placeholder="Seu email" required type="email"/>
                                 <button className="w-full bg-primary text-white text-sm font-semibold px-3 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">Inscrever-se</button>
@@ -100,7 +111,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                     </div>
                     <div className="col-span-2 md:col-span-1">
                         <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">Newsletter</h3>
-                        <form className="mt-4 flex flex-col gap-2">
+                        <form className="mt-4 flex flex-col gap-2" onSubmit={handleSubscribe}>
                             <input className="w-full px-4 py-2 border border-zinc-300 dark:border-zinc-700 rounded-md bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" placeholder="Seu email" required type="email" />
                             <button className="px-4 py-2 bg-primary-dark text-white font-medium rounded-md hover:opacity-90 transition-opacity" type="submit">Inscrever-se</button>
                         </form>
