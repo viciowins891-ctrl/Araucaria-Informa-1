@@ -5,7 +5,9 @@ import { useTheme } from '../context/ThemeContext';
 
 const NavItem: React.FC<{ to: string; children: React.ReactNode; onClick?: () => void }> = ({ to, children, onClick }) => {
     const location = useLocation();
-    const isActive = location.pathname === to;
+    
+    // Lógica melhorada: Ativo se for a rota exata OU se for uma sub-rota (exceto na home)
+    const isActive = location.pathname === to || (to !== '/' && location.pathname.startsWith(to));
 
     return (
         <NavLink

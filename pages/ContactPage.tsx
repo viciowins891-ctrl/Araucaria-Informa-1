@@ -1,7 +1,9 @@
 
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useState } from 'react';
 
 const ContactPage: React.FC = () => {
+    const [status, setStatus] = useState<'idle' | 'success'>('idle');
+
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;
@@ -12,9 +14,12 @@ const ContactPage: React.FC = () => {
         const subject = encodeURIComponent(`Contato Site: ${name}`);
         const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
         
-        window.location.href = `mailto:humberto_485@hotmail.com?subject=${subject}&body=${body}`;
-        
-        alert("Seu cliente de e-mail será aberto para enviar a mensagem.");
+        setStatus('success');
+
+        // Pequeno delay para mostrar a UI de sucesso antes de abrir o email
+        setTimeout(() => {
+            window.location.href = `mailto:humberto_485@hotmail.com?subject=${subject}&body=${body}`;
+        }, 1500);
     };
 
     return (
@@ -25,7 +30,26 @@ const ContactPage: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 relative overflow-hidden">
+                    
+                    {status === 'success' ? (
+                        <div className="absolute inset-0 bg-surface-light dark:bg-surface-dark flex flex-col items-center justify-center p-8 animate-fade-in-up z-10">
+                            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                                <span className="material-icons text-3xl">mail_outline</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Abrindo seu e-mail...</h3>
+                            <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
+                                Se o aplicativo de e-mail não abrir automaticamente, envie para <strong>humberto_485@hotmail.com</strong>
+                            </p>
+                            <button 
+                                onClick={() => setStatus('idle')}
+                                className="mt-6 text-primary hover:text-primary-dark font-semibold text-sm underline"
+                            >
+                                Voltar para o formulário
+                            </button>
+                        </div>
+                    ) : null}
+
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Envie uma mensagem</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>

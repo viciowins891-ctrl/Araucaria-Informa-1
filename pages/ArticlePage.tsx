@@ -6,12 +6,16 @@ import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
+// Imagem segura para caso a original quebre
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=1000';
+
 const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [article, setArticle] = useState<NewsArticle | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [imgSrc, setImgSrc] = useState<string>('');
 
     useEffect(() => {
         const fetchArticle = async () => {
@@ -21,6 +25,7 @@ const ArticlePage: React.FC = () => {
                 const data = await api.getNewsById(Number(id));
                 if (data) {
                     setArticle(data);
+                    setImgSrc(data.imageUrl);
                 } else {
                     setError('Artigo não encontrado.');
                 }
@@ -32,7 +37,6 @@ const ArticlePage: React.FC = () => {
         };
 
         fetchArticle();
-        // Rola para o topo ao abrir o artigo
         window.scrollTo(0, 0);
     }, [id]);
 
@@ -55,16 +59,17 @@ const ArticlePage: React.FC = () => {
     return (
         <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20">
             {/* Hero Section do Artigo */}
-            <div className="relative h-[400px] md:h-[500px] w-full">
+            <div className="relative h-[400px] md:h-[500px] w-full bg-gray-200 dark:bg-gray-800">
                 <img 
-                    src={article.imageUrl} 
+                    src={imgSrc || FALLBACK_IMAGE} 
                     alt={article.title} 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    onError={() => setImgSrc(FALLBACK_IMAGE)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/30"></div>
                 
-                <div className="absolute top-6 left-4 md:left-8">
+                <div className="absolute top-6 left-4 md:left-8 z-20">
                     <Link 
                         to="/noticias" 
                         className="inline-flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-colors text-sm font-medium"
@@ -139,8 +144,8 @@ const ArticlePage: React.FC = () => {
                     </div>
                     
                     <div className="mt-6 flex justify-end">
-                         <Link to="/noticias" className="text-primary font-semibold hover:underline">
-                            Ver mais notícias
+                         <Link to="/noticias" className="text-primary font-semibold hover:underline flex items-center gap-1">
+                            Ver mais notícias <span className="material-icons-outlined text-sm">arrow_forward</span>
                         </Link>
                     </div>
                 </div>
