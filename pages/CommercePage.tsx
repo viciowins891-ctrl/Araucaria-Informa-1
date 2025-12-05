@@ -1,5 +1,5 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { allBusinessCategories } from '../data';
 import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
@@ -7,6 +7,10 @@ import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const CommercePage: React.FC = () => {
+    useEffect(() => {
+        document.title = "Comércio Local - Araucária Informa";
+    }, []);
+
     const [selectedCategory, setSelectedCategory] = useState('Todas');
     const { data: businesses, loading, error } = useFetch(api.getBusinesses);
 

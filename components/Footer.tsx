@@ -96,6 +96,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                                 <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/contato">Contato</Link></li>
                                 <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/privacidade">Política de Privacidade</Link></li>
                                 <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/termos">Termos de Uso</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/quem-somos">Quem Somos</Link></li>
                             </ul>
                         </div>
 
@@ -172,7 +173,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/contato">Contato</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/privacidade">Política de Privacidade</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/termos">Termos de Uso</Link></li>
-                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/historia">Sobre</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/quem-somos">Quem Somos</Link></li>
                         </ul>
                     </div>
 

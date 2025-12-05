@@ -16,6 +16,7 @@ const EventsPage = lazy(() => import('./pages/EventsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage')); // Nova Página
 
 // Páginas Legais e de Suporte
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -53,6 +54,7 @@ const Layout: React.FC = () => {
                         <Route path="/eventos" element={<EventsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
                         <Route path="/historia" element={<HistoryPage />} />
+                        <Route path="/quem-somos" element={<AboutPage />} /> 
                         <Route path="/newsletter" element={<NewsletterPage />} />
                         
                         {/* Rotas Legais */}

@@ -10,6 +10,10 @@ import AdSpace from '../components/AdSpace';
 const ITEMS_PER_PAGE = 6;
 
 const NewsPage: React.FC = () => {
+    useEffect(() => {
+        document.title = "Notícias de Araucária - Araucária Informa";
+    }, []);
+
     const [selectedCategory, setSelectedCategory] = useState('Todas');
     const [currentPage, setCurrentPage] = useState(1);
     const { data: articles, loading, error } = useFetch(api.getNews);

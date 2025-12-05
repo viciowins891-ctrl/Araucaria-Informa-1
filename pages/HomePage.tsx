@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
@@ -10,6 +10,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
 const HomePage: React.FC = () => {
+    useEffect(() => {
+        document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
+    }, []);
+
     const { data, loading, error } = useFetch(api.getHomeData);
     
     // Imagem principal: Vista urbana com pôr do sol (Golden Hour), similar à referência de Araucária/Cidade Símbolo.

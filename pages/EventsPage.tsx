@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
 import EventCard from '../components/EventCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const EventsPage: React.FC = () => {
+    useEffect(() => {
+        document.title = "Eventos e Agenda Cultural - Araucária Informa";
+    }, []);
+
     const { data: events, loading, error } = useFetch(api.getEvents);
 
     return (

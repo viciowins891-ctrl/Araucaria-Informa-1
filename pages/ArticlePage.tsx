@@ -5,6 +5,7 @@ import { api } from '../services/api';
 import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
+import NewsCard from '../components/NewsCard'; // Importação necessária
 
 // Imagem segura para caso a original quebre
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=1000';
@@ -13,19 +14,29 @@ const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [article, setArticle] = useState<NewsArticle | null>(null);
+    const [relatedArticles, setRelatedArticles] = useState<NewsArticle[]>([]); // Estado para notícias relacionadas
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [imgSrc, setImgSrc] = useState<string>('');
 
     useEffect(() => {
-        const fetchArticle = async () => {
+        const fetchArticleAndRelated = async () => {
             if (!id) return;
             try {
                 setLoading(true);
-                const data = await api.getNewsById(Number(id));
-                if (data) {
-                    setArticle(data);
-                    setImgSrc(data.imageUrl);
+                const currentArticle = await api.getNewsById(Number(id));
+                if (currentArticle) {
+                    setArticle(currentArticle);
+                    setImgSrc(currentArticle.imageUrl);
+
+                    // Busca notícias relacionadas (mock: pega as 3 primeiras que não são a atual)
+                    // Num cenário real, filtraria por categoria ou tags
+                    const allNews = await api.getNews();
+                    const others = allNews
+                        .filter(item => item.id !== currentArticle.id)
+                        .slice(0, 3); // Pega 3 notícias para sugerir
+                    setRelatedArticles(others);
+
                 } else {
                     setError('Artigo não encontrado.');
                 }
@@ -36,7 +47,7 @@ const ArticlePage: React.FC = () => {
             }
         };
 
-        fetchArticle();
+        fetchArticleAndRelated();
         window.scrollTo(0, 0);
     }, [id]);
 
@@ -149,13 +160,22 @@ const ArticlePage: React.FC = () => {
                             </button>
                         </div>
                     </div>
-                    
-                    <div className="mt-6 flex justify-end">
-                         <Link to="/noticias" className="text-primary font-semibold hover:underline flex items-center gap-1">
-                            Ver mais notícias <span className="material-icons-outlined text-sm">arrow_forward</span>
-                        </Link>
-                    </div>
                 </div>
+
+                {/* Seção de Notícias Relacionadas / Leia Também */}
+                {relatedArticles.length > 0 && (
+                    <div className="mt-16">
+                        <div className="flex items-center gap-2 mb-6">
+                            <span className="w-1 h-8 bg-primary rounded-full"></span>
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-display">Leia Também</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {relatedArticles.map(relArticle => (
+                                <NewsCard key={relArticle.id} article={relArticle} />
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </article>
     );

@@ -29,7 +29,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '15/03/2024', // Data fixa de registro (Passado)
+        publishDate: '15/03/2024',
         author: 'Redação Municipal'
     },
     {
@@ -131,6 +131,81 @@ export const newsArticles: NewsArticle[] = [
         categoryColor: 'indigo',
         publishDate: '30/09/2024',
         author: 'Jornal do Campo'
+    },
+    {
+        id: 7,
+        title: 'Campanha de Vacinação atinge meta no município',
+        summary: 'Secretaria de Saúde comemora alta adesão da população na campanha contra a gripe.',
+        content: `
+            <p>A Secretaria Municipal de Saúde de Araucária divulgou hoje que a campanha de vacinação contra a gripe atingiu 95% da meta estipulada para o público-alvo. O resultado coloca o município entre os mais eficientes do estado na imunização.</p>
+            <p>As unidades básicas de saúde funcionaram em horário estendido durante a última semana para garantir que trabalhadores pudessem se vacinar. "A conscientização da população foi fundamental. Vacinas salvam vidas", reforçou a diretora de epidemiologia.</p>
+            <p>Ainda há doses disponíveis para a população geral em todas as UBS do município. É necessário apresentar documento com foto e carteirinha de vacinação.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1632613713312-3026338e5557?auto=format&fit=crop&q=80&w=1000',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '02/10/2024',
+        author: 'Saúde em Foco'
+    },
+    {
+        id: 8,
+        title: 'Festival de Teatro Infantil lota auditórios',
+        summary: 'Semana da criança foi marcada por apresentações culturais gratuitas em diversas escolas.',
+        content: `
+            <p>A magia do teatro invadiu as escolas municipais de Araucária. O Festival de Teatro Infantil, promovido pela Secretaria de Cultura, realizou mais de 20 apresentações gratuitas ao longo da última semana, atingindo cerca de 5 mil crianças.</p>
+            <p>Peças clássicas e produções locais fizeram parte do repertório. O objetivo do projeto é formar plateia e incentivar o gosto pela arte desde cedo. "Ver o brilho nos olhos das crianças não tem preço", disse um dos atores da companhia local.</p>
+            <p>O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no Parque Cachoeira.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1544390022-d7486e92b8d0?auto=format&fit=crop&q=80&w=1000',
+        category: 'Educação',
+        categoryColor: 'red',
+        publishDate: '15/10/2024',
+        author: 'Cultura Viva'
+    },
+    {
+        id: 9,
+        title: 'Novas ciclovias conectam bairros industriais',
+        summary: 'Projeto de mobilidade urbana facilita o deslocamento de trabalhadores para a área industrial.',
+        content: `
+            <p>A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial. O projeto prevê a conexão entre os bairros residenciais e o complexo da REPAR, oferecendo uma alternativa de transporte segura e sustentável para os trabalhadores.</p>
+            <p>Além da pavimentação exclusiva para bicicletas, o projeto inclui iluminação específica e sinalização reforçada nos cruzamentos. A previsão é que as obras sejam concluídas em 4 meses.</p>
+            <p>A iniciativa faz parte do Plano de Mobilidade Urbana, que visa reduzir o tráfego de veículos pesados e incentivar o transporte ativo.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1528629297340-d1d46694574e?auto=format&fit=crop&q=80&w=1000',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        publishDate: '20/10/2024',
+        author: 'Mobilidade Urbana'
+    },
+    {
+        id: 10,
+        title: 'Operação Tapa-Buracos avança no Jardim Iguaçu',
+        summary: 'Equipes da Secretaria de Obras trabalham em ritmo acelerado para recuperar vias danificadas pelas chuvas.',
+        content: `
+            <p>A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa-Buracos no bairro Jardim Iguaçu. A ação visa recuperar o asfalto danificado pelas fortes chuvas que atingiram a região no último mês.</p>
+            <p>Segundo o cronograma, as ruas principais serão atendidas prioritariamente para garantir o fluxo do transporte coletivo. Em seguida, as equipes entrarão nas vias secundárias.</p>
+            <p>Moradores podem solicitar reparos através do aplicativo oficial da prefeitura ou pelo telefone da ouvidoria.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        publishDate: '25/10/2024',
+        author: 'Redação Municipal'
+    },
+    {
+        id: 11,
+        title: 'Guarda Municipal recebe novas viaturas',
+        summary: 'Investimento na segurança pública inclui renovação da frota e novos equipamentos de proteção.',
+        content: `
+            <p>A Guarda Municipal de Araucária recebeu hoje 5 novas viaturas totalmente equipadas para o patrulhamento preventivo. O investimento faz parte do pacote de segurança pública anunciado no início do ano.</p>
+            <p>Além dos veículos, foram entregues novos coletes balísticos e rádios de comunicação digital. "Com esses equipamentos, conseguiremos reduzir o tempo de resposta às ocorrências", afirmou o comandante da GM.</p>
+            <p>As novas viaturas já estão em circulação nos bairros com maior índice de criminalidade.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '28/10/2024',
+        author: 'Segurança em Pauta'
     }
 ];
 
@@ -191,6 +266,42 @@ export const businesses: Business[] = [
         address: 'Rodovia do Xisto, 789',
         phone: '(41) 3901-1011',
         website: 'mecanicaexemplo.com.br'
+    },
+    {
+        id: 4,
+        name: 'Academia Corpo & Movimento',
+        category: 'Serviços',
+        imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000',
+        address: 'Rua São Vicente, 200 - Centro',
+        phone: '(41) 3642-0000',
+        website: 'academiacm.com.br'
+    },
+    {
+        id: 5,
+        name: 'Farmácia Saúde Total',
+        category: 'Varejo',
+        imageUrl: 'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=1000',
+        address: 'Av. Archelau de Almeida Torres, 500',
+        phone: '(41) 3643-9999',
+        website: 'farmaciasaude.com.br'
+    },
+    {
+        id: 6,
+        name: 'Pet Shop Amigo Fiel',
+        category: 'Serviços',
+        imageUrl: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1000',
+        address: 'Rua Miguel Bertolino Pizatto, 88',
+        phone: '(41) 3901-5555',
+        website: 'petshopamigo.com.br'
+    },
+    {
+        id: 7,
+        name: 'Restaurante Sabor da Terra',
+        category: 'Alimentação',
+        imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1000',
+        address: 'Rua Pedro Druszcz, 150',
+        phone: '(41) 3642-7777',
+        website: 'sabordaterra.com.br'
     }
 ];
 
