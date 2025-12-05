@@ -1,14 +1,6 @@
 
 import { NewsArticle, Event, Business } from './types';
 
-// Função auxiliar para gerar datas dinâmicas relativas ao dia atual (Hoje, Ontem, etc.)
-// Isso evita que as notícias pareçam "velhas" ou "do futuro" quando o usuário visita o site.
-const getRelativeDate = (daysAgo: number): string => {
-    const date = new Date();
-    date.setDate(date.getDate() - daysAgo);
-    return date.toLocaleDateString('pt-BR'); // Retorna formato DD/MM/AAAA
-};
-
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 
@@ -18,7 +10,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Revitalização do Centro Histórico e Praça Central',
         summary: 'A prefeitura entregou as obras de melhoria no entorno da Igreja Matriz, com foco na preservação das araucárias centenárias.',
         content: `
-            <p>A Prefeitura de Araucária entregou oficialmente nesta manhã as obras de revitalização do Centro Histórico e da Praça Central Dr. Vicente Machado. O projeto, que durou cerca de oito meses, teve como principal objetivo a valorização do patrimônio histórico e a preservação das araucárias centenárias que dão nome à cidade.</p>
+            <p>A Prefeitura de Araucária entregou oficialmente as obras de revitalização do Centro Histórico e da Praça Central Dr. Vicente Machado. O projeto, que durou cerca de oito meses, teve como principal objetivo a valorização do patrimônio histórico e a preservação das araucárias centenárias que dão nome à cidade.</p>
             
             <p>Entre as melhorias realizadas, destacam-se a troca de todo o calçamento por paver drenante, a instalação de nova iluminação em LED, que garante mais segurança aos frequentadores no período noturno, e a restauração dos bancos e do coreto.</p>
             
@@ -30,7 +22,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: getRelativeDate(0), // Hoje
+        publishDate: '15/03/2024', // Data fixa de registro
         author: 'Redação Municipal'
     },
     {
@@ -38,7 +30,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'REPAR bate recorde de eficiência energética',
         summary: 'A Refinaria Presidente Getúlio Vargas, ícone industrial da cidade, anuncia novos índices de produtividade.',
         content: `
-            <p>A Refinaria Presidente Getúlio Vargas (REPAR), localizada em Araucária, anunciou nesta semana que atingiu um novo recorde de eficiência energética em suas operações. O marco reforça a posição da unidade como uma das mais importantes do sistema de refino nacional.</p>
+            <p>A Refinaria Presidente Getúlio Vargas (REPAR), localizada em Araucária, anunciou que atingiu um novo recorde de eficiência energética em suas operações. O marco reforça a posição da unidade como uma das mais importantes do sistema de refino nacional.</p>
             
             <p>Segundo o relatório técnico divulgado, a refinaria conseguiu aumentar sua produção de diesel S-10 e gasolina, reduzindo simultaneamente o consumo de energia e a emissão de gases de efeito estufa. Isso foi possível graças à implementação de novas tecnologias de automação e ao aprimoramento dos processos de craqueamento catalítico.</p>
             
@@ -50,7 +42,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1000',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        publishDate: getRelativeDate(1), // Ontem
+        publishDate: '10/04/2024',
         author: 'Carlos Mendes'
     },
     {
@@ -58,7 +50,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária EC disputa liderança no Estádio do Pinhão',
         summary: 'O time da casa conta com a torcida para o confronto decisivo deste domingo no municipal.',
         content: `
-            <p>O clima é de decisão em Araucária. Neste domingo, o Araucária Esporte Clube (AEC) entra em campo no Estádio Municipal do Pinhão valendo a liderança do campeonato estadual da segunda divisão. A expectativa é de casa cheia.</p>
+            <p>O clima é de decisão em Araucária. O Araucária Esporte Clube (AEC) entra em campo no Estádio Municipal do Pinhão valendo a liderança do campeonato estadual da segunda divisão. A expectativa é de casa cheia.</p>
             
             <p>O time vem de uma sequência invicta de cinco jogos e aposta na força do ataque, comandado pelo artilheiro da competição, para superar o adversário. Durante a semana, o técnico realizou treinos táticos focados na bola parada, que tem sido uma das principais armas da equipe.</p>
             
@@ -70,7 +62,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1522778119026-d647f0565c6d?auto=format&fit=crop&q=80&w=1000', 
         category: 'Esporte',
         categoryColor: 'green',
-        publishDate: getRelativeDate(2), // 2 dias atrás
+        publishDate: '22/05/2024',
         author: 'Esporte Araucária'
     },
     {
@@ -90,7 +82,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: getRelativeDate(3), // 3 dias atrás
+        publishDate: '05/06/2024',
         author: 'Ana Silva'
     },
     {
@@ -110,7 +102,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        publishDate: getRelativeDate(4), // 4 dias atrás
+        publishDate: '12/08/2024',
         author: 'Tech News'
     },
     {
@@ -130,7 +122,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',
-        publishDate: getRelativeDate(5), // 5 dias atrás
+        publishDate: '30/09/2024',
         author: 'Jornal do Campo'
     }
 ];

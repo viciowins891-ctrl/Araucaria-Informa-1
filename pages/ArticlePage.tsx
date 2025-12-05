@@ -88,7 +88,7 @@ const ArticlePage: React.FC = () => {
                         </span>
                         <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                             <span className="material-icons-outlined text-base mr-1">calendar_today</span>
-                            {article.publishDate}
+                            <strong>Divulgado no site em:</strong>&nbsp;{article.publishDate}
                         </div>
                         {article.author && (
                             <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm border-l border-gray-300 dark:border-gray-700 pl-4 ml-2">
@@ -112,6 +112,13 @@ const ArticlePage: React.FC = () => {
                         dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
                     />
                     
+                    {/* Nota de esclarecimento sobre o contexto da data */}
+                    <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-md border-l-4 border-gray-300 dark:border-gray-600">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                            Nota: Este conteúdo refere-se a fatos já ocorridos e oficiais. A data apresentada no topo do artigo corresponde ao dia de sua divulgação neste portal.
+                        </p>
+                    </div>
+
                     <AdSpace format="horizontal" className="my-8" />
 
                     {/* Rodapé do Artigo */}

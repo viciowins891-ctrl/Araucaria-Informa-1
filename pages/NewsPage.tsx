@@ -77,6 +77,20 @@ const NewsPage: React.FC = () => {
                     </div>
                 </div>
 
+                {/* FAIXA DE AVISO / DISCLAIMER */}
+                <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 mb-10 rounded-r-md">
+                    <div className="flex">
+                        <div className="flex-shrink-0">
+                            <span className="material-icons text-amber-500 dark:text-amber-400">info</span>
+                        </div>
+                        <div className="ml-3">
+                            <p className="text-sm text-amber-800 dark:text-amber-200">
+                                <strong>Observação Importante:</strong> As reportagens listadas abaixo tratam de fatos já ocorridos e oficiais. As datas exibidas referem-se à divulgação do conteúdo no site.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <AdSpace format="horizontal" className="mb-10" />
 
                 {loading && <LoadingSpinner />}
