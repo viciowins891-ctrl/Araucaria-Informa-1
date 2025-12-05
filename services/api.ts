@@ -2,11 +2,11 @@
 import { newsArticles as seedNews, events as seedEvents, businesses as seedBusinesses } from '../data';
 import { NewsArticle, Event, Business } from '../types';
 
-// CHAVES DO BANCO DE DADOS LOCAL - Versão 11 (Correção Imagem Igreja/Praça Final)
+// CHAVES DO BANCO DE DADOS LOCAL - Versão 14 (Correção Definitiva Imagem + Fallback Atualizado)
 const DB_KEYS = {
-    NEWS: '@araucaria-app/news_v11',
-    EVENTS: '@araucaria-app/events_v11',
-    BUSINESSES: '@araucaria-app/businesses_v11'
+    NEWS: '@araucaria-app/news_v14',
+    EVENTS: '@araucaria-app/events_v14',
+    BUSINESSES: '@araucaria-app/businesses_v14'
 };
 
 // Simula um delay de rede para parecer uma API real

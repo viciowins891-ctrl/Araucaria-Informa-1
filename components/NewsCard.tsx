@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NewsArticle } from '../types';
 
 interface NewsCardProps {
@@ -15,23 +15,52 @@ const colorVariants: { [key: string]: string } = {
     indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 border-indigo-200 dark:border-indigo-800',
 };
 
+// Imagem genérica de cidade (Fallback seguro)
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=1000';
+
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 border-gray-200';
-    const [imageError, setImageError] = useState(false);
+    
+    // Estado para controlar a URL da imagem atual
+    const [imgSrc, setImgSrc] = useState(article.imageUrl);
+    // Estado para saber se já estamos usando o fallback
+    const [isFallback, setIsFallback] = useState(false);
+    // Estado para erro final (nem original nem fallback funcionaram)
+    const [hasError, setHasError] = useState(false);
+
+    // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
+    useEffect(() => {
+        setImgSrc(article.imageUrl);
+        setIsFallback(false);
+        setHasError(false);
+    }, [article.imageUrl]);
+
+    const handleError = () => {
+        if (!isFallback) {
+            // Primeira falha: Tenta carregar a imagem de fallback
+            console.warn(`Falha ao carregar imagem: ${article.title}. Tentando fallback.`);
+            setImgSrc(FALLBACK_IMAGE);
+            setIsFallback(true);
+        } else {
+            // Segunda falha (Fallback também falhou): Mostra o placeholder de erro
+            console.error(`Falha crítica: Imagem original e fallback falharam para ${article.title}`);
+            setHasError(true);
+        }
+    };
 
     return (
         <div className="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full hover:-translate-y-1">
             <div className="relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800">
-                {!imageError ? (
+                {!hasError ? (
                     <img 
                         alt={article.title} 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                        src={article.imageUrl}
-                        onError={() => setImageError(true)}
+                        src={imgSrc}
+                        onError={handleError}
                         referrerPolicy="no-referrer"
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+                    <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 flex-col gap-2">
                         <span className="material-icons-outlined text-4xl text-gray-400">image_not_supported</span>
                     </div>
                 )}
