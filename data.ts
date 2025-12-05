@@ -336,6 +336,36 @@ export const newsArticles: NewsArticle[] = [
         categoryColor: 'green',
         publishDate: '25/11/2024',
         author: 'Esporte News'
+    },
+    {
+        id: 21,
+        title: 'Hackathon Municipal reúne 500 jovens programadores',
+        summary: 'Maratona de programação buscou soluções digitais para problemas urbanos da cidade.',
+        content: `
+            <p>O primeiro Hackathon Municipal de Araucária foi um sucesso absoluto. O evento, realizado no último fim de semana no Parque Tecnológico, reuniu cerca de 500 estudantes e profissionais de tecnologia.</p>
+            <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
+            <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be3852f92?auto=format&fit=crop&q=80&w=1000',
+        category: 'Tecnologia',
+        categoryColor: 'yellow',
+        publishDate: '26/11/2024',
+        author: 'Tech News'
+    },
+    {
+        id: 22,
+        title: 'Sítio Ecológico abre novas trilhas para ecoturismo',
+        summary: 'Propriedade rural em Guajuvira aposta no turismo de natureza e observação de aves.',
+        content: `
+            <p>O turismo rural em Araucária ganhou mais uma atração de peso. O Sítio Ecológico Recanto das Águas inaugurou neste sábado três novas trilhas interpretativas em meio à mata nativa.</p>
+            <p>As trilhas possuem diferentes níveis de dificuldade e são guiadas por biólogos que explicam sobre a flora e fauna local. O local também montou uma estrutura para observação de aves (birdwatching), atraindo fotógrafos de natureza.</p>
+            <p>Após a caminhada, os visitantes podem desfrutar de um café colonial com produtos feitos na própria fazenda.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000',
+        category: 'Turismo',
+        categoryColor: 'indigo',
+        publishDate: '27/11/2024',
+        author: 'Jornal do Campo'
     }
 ];
 

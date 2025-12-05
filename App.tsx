@@ -1,6 +1,6 @@
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -61,6 +61,9 @@ const Layout: React.FC = () => {
                         <Route path="/privacidade" element={<PrivacyPolicyPage />} />
                         <Route path="/termos" element={<TermsPage />} />
                         <Route path="/contato" element={<ContactPage />} />
+
+                        {/* Rota 404 - Redireciona qualquer URL desconhecida para a Home */}
+                        <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>
                 </Suspense>
             </main>
