@@ -291,6 +291,51 @@ export const newsArticles: NewsArticle[] = [
         categoryColor: 'red',
         publishDate: '18/11/2024',
         author: 'Carreira e Futuro'
+    },
+    {
+        id: 18,
+        title: 'Rota de Turismo Rural ganha nova sinalização',
+        summary: 'Prefeitura instala placas indicativas no Caminho do Vinho e Guajuvira para orientar visitantes.',
+        content: `
+            <p>O Departamento de Turismo iniciou a instalação de novas placas de sinalização turística nas principais rotas rurais do município. A ação visa facilitar o acesso de visitantes aos restaurantes coloniais, vinícolas e chácaras de lazer.</p>
+            <p>"Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo. O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
+            <p>A rota do Guajuvira é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=1000',
+        category: 'Turismo',
+        categoryColor: 'indigo',
+        publishDate: '20/11/2024',
+        author: 'Turismo Araucária'
+    },
+    {
+        id: 19,
+        title: 'Startup local desenvolve app para transporte escolar',
+        summary: 'Aplicativo criado por jovens araucarienses permite aos pais rastrearem vans escolares em tempo real.',
+        content: `
+            <p>Uma startup incubada no parque tecnológico de Araucária lançou nesta semana um aplicativo inovador voltado para a segurança no transporte escolar. A ferramenta permite que pais e responsáveis acompanhem o trajeto da van escolar em tempo real pelo celular.</p>
+            <p>"A ideia surgiu da nossa própria necessidade de saber se nossos irmãos menores tinham chegado bem à escola", conta um dos fundadores, estudante de Análise de Sistemas da facear.</p>
+            <p>O aplicativo já está sendo testado por 15 motoristas de van da cidade e tem recebido feedback positivo pela facilidade de uso e precisão do GPS.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1512428559087-560fa5ce7d5b?auto=format&fit=crop&q=80&w=1000',
+        category: 'Tecnologia',
+        categoryColor: 'yellow',
+        publishDate: '22/11/2024',
+        author: 'Inovação Tech'
+    },
+    {
+        id: 20,
+        title: 'Ginásio Joval de Paula Souza será reformado',
+        summary: 'Complexo esportivo receberá novo piso, iluminação de LED e melhorias na acessibilidade.',
+        content: `
+            <p>A Secretaria de Esporte e Lazer anunciou a reforma completa do Ginásio de Esportes Joval de Paula Souza, no Parque Cachoeira. O local, palco de grandes competições estaduais, necessitava de reparos estruturais.</p>
+            <p>O projeto contempla a troca completa do piso da quadra por um material flutuante de alto desempenho, ideal para a prática de vôlei e basquete. Além disso, vestiários e arquibancadas serão adequados às normas de acessibilidade.</p>
+            <p>Durante as obras, as escolinhas de esporte serão remanejadas para quadras de escolas municipais próximas.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000',
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: '25/11/2024',
+        author: 'Esporte News'
     }
 ];
 
