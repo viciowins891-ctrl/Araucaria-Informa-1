@@ -105,8 +105,25 @@ const ArticlePage: React.FC = () => {
                     />
 
                     {/* Rodapé do Artigo */}
-                    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                        <div className="flex gap-2">
+                    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
+                        
+                        {/* Exibição da Fonte Original (Grounding) */}
+                        {article.sourceUrl && (
+                            <div className="bg-blue-50 dark:bg-blue-900/20 px-4 py-3 rounded-lg border border-blue-100 dark:border-blue-800 w-full md:w-auto">
+                                <p className="text-xs text-blue-800 dark:text-blue-300 mb-1 font-semibold uppercase">Fonte Original</p>
+                                <a 
+                                    href={article.sourceUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 text-primary hover:underline text-sm font-medium"
+                                >
+                                    <span className="material-icons-outlined text-base">open_in_new</span>
+                                    {article.sourceName || 'Ler matéria completa na fonte'}
+                                </a>
+                            </div>
+                        )}
+
+                        <div className="flex gap-2 ml-auto">
                             <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
                                 <span className="material-icons-outlined">share</span>
                             </button>
@@ -114,7 +131,10 @@ const ArticlePage: React.FC = () => {
                                 <span className="material-icons-outlined">favorite_border</span>
                             </button>
                         </div>
-                        <Link to="/noticias" className="text-primary font-semibold hover:underline">
+                    </div>
+                    
+                    <div className="mt-6 flex justify-end">
+                         <Link to="/noticias" className="text-primary font-semibold hover:underline">
                             Ver mais notícias
                         </Link>
                     </div>

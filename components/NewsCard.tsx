@@ -75,9 +75,17 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
             </Link>
 
             <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
-                    <span className="material-icons-outlined text-sm mr-1">schedule</span>
-                    <span>{article.publishDate}</span>
+                <div className="flex items-center justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
+                    <div className="flex items-center">
+                        <span className="material-icons-outlined text-sm mr-1">schedule</span>
+                        <span>{article.publishDate}</span>
+                    </div>
+                    {article.sourceName && (
+                        <div className="flex items-center text-blue-500 max-w-[50%] truncate">
+                            <span className="material-icons-outlined text-sm mr-1">public</span>
+                            <span className="truncate">{article.sourceName}</span>
+                        </div>
+                    )}
                 </div>
                 
                 <Link to={`/noticias/${article.id}`} className="block">

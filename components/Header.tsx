@@ -119,6 +119,7 @@ const Header: React.FC = () => {
                         <NavItem to="/eventos" onClick={() => setIsMobileMenuOpen(false)}>Eventos</NavItem>
                         <NavItem to="/comercio" onClick={() => setIsMobileMenuOpen(false)}>Comércio</NavItem>
                         <NavItem to="/historia" onClick={() => setIsMobileMenuOpen(false)}>História</NavItem>
+                        
                         <hr className="border-white/10 my-2" />
                         <a className="block text-center bg-white text-primary-dark font-bold text-sm px-5 py-3 rounded-lg hover:bg-blue-50 transition-colors" href="#">
                             Anuncie seu negócio

@@ -9,6 +9,8 @@ export interface NewsArticle {
     categoryColor: string;
     publishDate: string;
     author?: string;
+    sourceUrl?: string; // Link original da notícia (Google Search Grounding)
+    sourceName?: string; // Nome do site original
 }
 
 export interface Event {
