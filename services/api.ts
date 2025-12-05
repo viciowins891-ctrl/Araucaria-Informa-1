@@ -11,13 +11,10 @@ const DB_KEYS = {
     LAST_UPDATE: '@araucaria-app/last_ai_update_timestamp'
 };
 
-// Configuração de tempo para atualização (1 semana em milissegundos)
 const UPDATE_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; 
 
-// Simula um delay de rede para parecer uma API real
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-// Função auxiliar para inicializar ou recuperar dados do LocalStorage
 const getCollection = <T>(key: string, seedData: T[]): T[] => {
     try {
         const stored = localStorage.getItem(key);
@@ -48,16 +45,22 @@ export const api = {
     },
 
     updateNews: async (newArticles: NewsArticle[]): Promise<void> => {
-        // Não adicionamos delay aqui para ser rápido no background
         try {
+            if (!newArticles || newArticles.length === 0) return;
+
             const currentNews = getCollection<NewsArticle>(DB_KEYS.NEWS, seedNews);
             
-            // Filtra duplicatas por título
-            const uniqueNewArticles = newArticles.filter(
-                n => !currentNews.some(c => c.title === n.title)
-            );
+            // Filtra duplicatas comparando Títulos normalizados
+            const uniqueNewArticles = newArticles.filter(n => {
+                const isDuplicate = currentNews.some(c => 
+                    c.title.toLowerCase().trim() === n.title.toLowerCase().trim()
+                );
+                return !isDuplicate;
+            });
 
-            // Adiciona as novas no topo e mantém limite de 12
+            if (uniqueNewArticles.length === 0) return;
+
+            // Mantém as 12 notícias mais recentes
             const updatedCollection = [...uniqueNewArticles, ...currentNews].slice(0, 12);
             
             localStorage.setItem(DB_KEYS.NEWS, JSON.stringify(updatedCollection));
@@ -67,37 +70,29 @@ export const api = {
         }
     },
 
-    // NOVA FUNÇÃO: Verifica e executa atualização silenciosa
     checkAndRunBackgroundUpdate: async () => {
         try {
             const lastUpdateStr = localStorage.getItem(DB_KEYS.LAST_UPDATE);
             const now = Date.now();
             
-            // Se nunca atualizou ou se já passou 1 semana
+            // Verifica se deve atualizar (Se nunca rodou ou se passou o intervalo)
             const shouldUpdate = !lastUpdateStr || (now - Number(lastUpdateStr) > UPDATE_INTERVAL_MS);
 
             if (shouldUpdate) {
-                console.log("[AutoUpdate] Iniciando atualização semanal de notícias via IA...");
+                console.log("[AutoUpdate] Iniciando atualização silenciosa...");
                 
-                // Busca notícias (pode demorar alguns segundos)
                 const newArticles = await fetchWeeklyNewsWithAI();
                 
-                // Salva notícias
-                await api.updateNews(newArticles);
-                
-                // Atualiza timestamp
-                localStorage.setItem(DB_KEYS.LAST_UPDATE, now.toString());
-                
-                console.log("[AutoUpdate] Notícias atualizadas com sucesso. As alterações aparecerão na próxima recarga.");
-                
-                // Opcional: Forçar um evento de storage se quiséssemos atualizar a UI em tempo real, 
-                // mas para "segundo plano" deixar para a próxima visita é mais performático.
-            } else {
-                console.log("[AutoUpdate] Notícias estão atualizadas.");
+                if (newArticles.length > 0) {
+                    await api.updateNews(newArticles);
+                    localStorage.setItem(DB_KEYS.LAST_UPDATE, now.toString());
+                    console.log("[AutoUpdate] Sucesso: Novas notícias salvas.");
+                } else {
+                    console.log("[AutoUpdate] Nenhum artigo novo retornado pela IA.");
+                }
             }
         } catch (error) {
-            // Silencia o erro para o usuário final, apenas loga
-            console.warn("[AutoUpdate] Falha na atualização automática:", error);
+            console.warn("[AutoUpdate] Falha silenciosa:", error);
         }
     },
     
