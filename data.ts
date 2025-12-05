@@ -1,6 +1,14 @@
 
 import { NewsArticle, Event, Business } from './types';
 
+// Função auxiliar para gerar datas dinâmicas relativas ao dia atual (Hoje, Ontem, etc.)
+// Isso evita que as notícias pareçam "velhas" ou "do futuro" quando o usuário visita o site.
+const getRelativeDate = (daysAgo: number): string => {
+    const date = new Date();
+    date.setDate(date.getDate() - daysAgo);
+    return date.toLocaleDateString('pt-BR'); // Retorna formato DD/MM/AAAA
+};
+
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 
@@ -22,7 +30,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: 'Publicado hoje',
+        publishDate: getRelativeDate(0), // Hoje
         author: 'Redação Municipal'
     },
     {
@@ -42,7 +50,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1000',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        publishDate: 'Publicado ontem',
+        publishDate: getRelativeDate(1), // Ontem
         author: 'Carlos Mendes'
     },
     {
@@ -62,7 +70,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1522778119026-d647f0565c6d?auto=format&fit=crop&q=80&w=1000', 
         category: 'Esporte',
         categoryColor: 'green',
-        publishDate: '01/12/2025',
+        publishDate: getRelativeDate(2), // 2 dias atrás
         author: 'Esporte Araucária'
     },
     {
@@ -82,7 +90,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '30/11/2025',
+        publishDate: getRelativeDate(3), // 3 dias atrás
         author: 'Ana Silva'
     },
     {
@@ -102,7 +110,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        publishDate: '29/11/2025',
+        publishDate: getRelativeDate(4), // 4 dias atrás
         author: 'Tech News'
     },
     {
@@ -122,7 +130,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',
-        publishDate: '28/11/2025',
+        publishDate: getRelativeDate(5), // 5 dias atrás
         author: 'Jornal do Campo'
     }
 ];
