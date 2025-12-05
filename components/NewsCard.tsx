@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
 
 interface NewsCardProps {
@@ -50,7 +51,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     return (
         <div className="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full hover:-translate-y-1">
-            <div className="relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800">
+            <Link to={`/noticias/${article.id}`} className="block relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800 cursor-pointer">
                 {!hasError ? (
                     <img 
                         alt={article.title} 
@@ -71,7 +72,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                         {article.category}
                     </span>
                 </div>
-            </div>
+            </Link>
 
             <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
@@ -79,18 +80,20 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     <span>{article.publishDate}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
-                    {article.title}
-                </h3>
+                <Link to={`/noticias/${article.id}`} className="block">
+                    <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
+                        {article.title}
+                    </h3>
+                </Link>
                 
                 <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
                     {article.summary}
                 </p>
                 
                 <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1">
+                    <Link to={`/noticias/${article.id}`} className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1 cursor-pointer">
                         Ler artigo <span className="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-                    </span>
+                    </Link>
                 </div>
             </div>
         </div>

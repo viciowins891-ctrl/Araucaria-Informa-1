@@ -2,11 +2,11 @@
 import { newsArticles as seedNews, events as seedEvents, businesses as seedBusinesses } from '../data';
 import { NewsArticle, Event, Business } from '../types';
 
-// CHAVES DO BANCO DE DADOS LOCAL - Versão 29 (Correção Imagens Eventos)
+// CHAVES DO BANCO DE DADOS LOCAL - Versão 30 (Adição de Conteúdo Completo nas Notícias)
 const DB_KEYS = {
-    NEWS: '@araucaria-app/news_v29',
-    EVENTS: '@araucaria-app/events_v29',
-    BUSINESSES: '@araucaria-app/businesses_v29'
+    NEWS: '@araucaria-app/news_v30',
+    EVENTS: '@araucaria-app/events_v30',
+    BUSINESSES: '@araucaria-app/businesses_v30'
 };
 
 // Simula um delay de rede para parecer uma API real
@@ -36,6 +36,13 @@ export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
         await delay(600);
         return getCollection<NewsArticle>(DB_KEYS.NEWS, seedNews);
+    },
+
+    // Nova função para buscar uma notícia específica
+    getNewsById: async (id: number): Promise<NewsArticle | undefined> => {
+        await delay(400); // Delay ligeiramente menor
+        const allNews = getCollection<NewsArticle>(DB_KEYS.NEWS, seedNews);
+        return allNews.find(article => article.id === id);
     },
     
     getEvents: async (): Promise<Event[]> => {

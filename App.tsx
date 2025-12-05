@@ -9,6 +9,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 // Implementando Lazy Loading para performance (Code Splitting)
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage'));
+const ArticlePage = lazy(() => import('./pages/ArticlePage')); // Nova página
 const EventsPage = lazy(() => import('./pages/EventsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
@@ -27,6 +28,7 @@ const Layout: React.FC = () => {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/noticias" element={<NewsPage />} />
+                        <Route path="/noticias/:id" element={<ArticlePage />} /> {/* Rota Dinâmica */}
                         <Route path="/eventos" element={<EventsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
                         <Route path="/historia" element={<HistoryPage />} />

@@ -1,0 +1,127 @@
+
+import React, { useEffect, useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { api } from '../services/api';
+import { NewsArticle } from '../types';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+const ArticlePage: React.FC = () => {
+    const { id } = useParams<{ id: string }>();
+    const navigate = useNavigate();
+    const [article, setArticle] = useState<NewsArticle | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchArticle = async () => {
+            if (!id) return;
+            try {
+                setLoading(true);
+                const data = await api.getNewsById(Number(id));
+                if (data) {
+                    setArticle(data);
+                } else {
+                    setError('Artigo não encontrado.');
+                }
+            } catch (err) {
+                setError('Erro ao carregar o artigo.');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchArticle();
+        // Rola para o topo ao abrir o artigo
+        window.scrollTo(0, 0);
+    }, [id]);
+
+    if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
+
+    if (error || !article) return (
+        <div className="min-h-screen flex flex-col items-center justify-center p-4">
+            <span className="material-icons-outlined text-6xl text-gray-300 mb-4">article</span>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Ops!</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">{error || 'Artigo não encontrado.'}</p>
+            <button 
+                onClick={() => navigate('/noticias')}
+                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+            >
+                Voltar para Notícias
+            </button>
+        </div>
+    );
+
+    return (
+        <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20">
+            {/* Hero Section do Artigo */}
+            <div className="relative h-[400px] md:h-[500px] w-full">
+                <img 
+                    src={article.imageUrl} 
+                    alt={article.title} 
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/30"></div>
+                
+                <div className="absolute top-6 left-4 md:left-8">
+                    <Link 
+                        to="/noticias" 
+                        className="inline-flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-colors text-sm font-medium"
+                    >
+                        <span className="material-icons-outlined text-base">arrow_back</span>
+                        Voltar
+                    </Link>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-24 relative z-10">
+                <div className="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 dark:border-gray-800">
+                    <div className="flex flex-wrap items-center gap-4 mb-6">
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200`}>
+                            {article.category}
+                        </span>
+                        <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                            <span className="material-icons-outlined text-base mr-1">calendar_today</span>
+                            {article.publishDate}
+                        </div>
+                        {article.author && (
+                            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm border-l border-gray-300 dark:border-gray-700 pl-4 ml-2">
+                                <span className="material-icons-outlined text-base mr-1">person</span>
+                                por {article.author}
+                            </div>
+                        )}
+                    </div>
+
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white font-display leading-tight mb-8">
+                        {article.title}
+                    </h1>
+
+                    <hr className="border-gray-200 dark:border-gray-700 mb-8" />
+
+                    {/* Conteúdo do Artigo */}
+                    <div 
+                        className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
+                    />
+
+                    {/* Rodapé do Artigo */}
+                    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                        <div className="flex gap-2">
+                            <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                <span className="material-icons-outlined">share</span>
+                            </button>
+                            <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 transition-colors">
+                                <span className="material-icons-outlined">favorite_border</span>
+                            </button>
+                        </div>
+                        <Link to="/noticias" className="text-primary font-semibold hover:underline">
+                            Ver mais notícias
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </article>
+    );
+};
+
+export default ArticlePage;

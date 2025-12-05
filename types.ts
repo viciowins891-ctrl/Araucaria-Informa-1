@@ -3,10 +3,12 @@ export interface NewsArticle {
     id: number;
     title: string;
     summary: string;
+    content?: string; // Campo opcional para o texto completo
     imageUrl: string;
     category: string;
     categoryColor: string;
     publishDate: string;
+    author?: string;
 }
 
 export interface Event {
