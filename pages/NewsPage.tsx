@@ -1,15 +1,23 @@
 
-import React, { useState, useMemo } from 'react';
-import { allNewsCategories } from '../data'; // Mantemos categorias estáticas por enquanto
+import React, { useState, useMemo, useEffect } from 'react';
+import { allNewsCategories } from '../data';
 import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
 import NewsCard from '../components/NewsCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
+const ITEMS_PER_PAGE = 6;
+
 const NewsPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('Todas');
+    const [currentPage, setCurrentPage] = useState(1);
     const { data: articles, loading, error } = useFetch(api.getNews);
+
+    // Reseta para a página 1 sempre que trocar a categoria
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [selectedCategory]);
 
     const filteredArticles = useMemo(() => {
         if (!articles) return [];
@@ -18,6 +26,31 @@ const NewsPage: React.FC = () => {
         }
         return articles.filter(article => article.category === selectedCategory);
     }, [selectedCategory, articles]);
+
+    // Lógica de Paginação
+    const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
+    const currentArticles = filteredArticles.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+    );
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(prev => prev + 1);
+            scrollToTop();
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(prev => prev - 1);
+            scrollToTop();
+        }
+    };
 
     return (
         <div className="container mx-auto px-6 py-12 flex-grow">
@@ -51,37 +84,55 @@ const NewsPage: React.FC = () => {
                 {error && <div className="p-4 bg-red-100 text-red-700 rounded-md">Erro: {error}</div>}
 
                 {!loading && !error && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredArticles.map(article => (
-                            <NewsCard key={article.id} article={article} />
-                        ))}
-                        {filteredArticles.length === 0 && (
-                            <div className="col-span-full text-center py-10">
-                                <p className="text-gray-500 dark:text-gray-400 text-lg">Nenhuma notícia encontrada nesta categoria.</p>
-                            </div>
+                    <>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
+                            {currentArticles.map(article => (
+                                <NewsCard key={article.id} article={article} />
+                            ))}
+                            {filteredArticles.length === 0 && (
+                                <div className="col-span-full text-center py-10">
+                                    <p className="text-gray-500 dark:text-gray-400 text-lg">Nenhuma notícia encontrada nesta categoria.</p>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Paginação Real */}
+                        {filteredArticles.length > ITEMS_PER_PAGE && (
+                            <nav aria-label="Pagination" className="flex justify-center mt-12 items-center gap-2">
+                                <button 
+                                    onClick={handlePrevPage}
+                                    disabled={currentPage === 1}
+                                    className={`px-4 py-2 border rounded-md transition-colors ${
+                                        currentPage === 1 
+                                        ? 'border-gray-300 dark:border-gray-600 text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 cursor-not-allowed'
+                                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-700'
+                                    }`}
+                                >
+                                    Anterior
+                                </button>
+                                
+                                <span className="text-sm text-gray-600 dark:text-gray-400 px-2">
+                                    Página {currentPage} de {totalPages}
+                                </span>
+
+                                <button 
+                                    onClick={handleNextPage}
+                                    disabled={currentPage === totalPages}
+                                    className={`px-4 py-2 border rounded-md transition-colors ${
+                                        currentPage === totalPages
+                                        ? 'border-gray-300 dark:border-gray-600 text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 cursor-not-allowed'
+                                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-700'
+                                    }`}
+                                >
+                                    Próxima
+                                </button>
+                            </nav>
                         )}
-                    </div>
+                    </>
                 )}
                 
-                {!loading && !error && filteredArticles.length > 3 && (
+                {!loading && !error && currentArticles.length > 3 && (
                      <AdSpace format="horizontal" className="mt-12" />
-                )}
-
-                {!loading && !error && filteredArticles.length > 0 && (
-                    <nav aria-label="Pagination" className="flex justify-center mt-12">
-                        <button 
-                            disabled 
-                            className="px-4 py-2 mx-1 border border-gray-300 dark:border-gray-600 rounded-md text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 cursor-not-allowed transition-colors"
-                        >
-                            Anterior
-                        </button>
-                        <button 
-                            className="px-4 py-2 mx-1 border border-gray-300 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                            onClick={() => console.log('Próxima página (Simulação)')}
-                        >
-                            Próxima
-                        </button>
-                    </nav>
                 )}
             </section>
         </div>

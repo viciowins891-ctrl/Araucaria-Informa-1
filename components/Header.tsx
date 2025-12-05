@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 const NavItem: React.FC<{ to: string; children: React.ReactNode; onClick?: () => void }> = ({ to, children, onClick }) => {
@@ -90,9 +90,12 @@ const Header: React.FC = () => {
                             </span>
                         </button>
                         
-                        <a className="hidden lg:block bg-white text-primary-dark font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-50 transition-colors shadow-md ml-2" href="#">
+                        <Link 
+                            to="/contato"
+                            className="hidden lg:block bg-white text-primary-dark font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-50 transition-colors shadow-md ml-2"
+                        >
                             Anuncie
-                        </a>
+                        </Link>
 
                         {/* Mobile Hamburger Button */}
                         <button 
@@ -121,9 +124,13 @@ const Header: React.FC = () => {
                         <NavItem to="/historia" onClick={() => setIsMobileMenuOpen(false)}>História</NavItem>
                         
                         <hr className="border-white/10 my-2" />
-                        <a className="block text-center bg-white text-primary-dark font-bold text-sm px-5 py-3 rounded-lg hover:bg-blue-50 transition-colors" href="#">
+                        <Link 
+                            to="/contato"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block text-center bg-white text-primary-dark font-bold text-sm px-5 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                        >
                             Anuncie seu negócio
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
