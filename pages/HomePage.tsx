@@ -1,88 +1,121 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { newsArticles, events, businesses } from '../data';
+import { api } from '../services/api';
+import { useFetch } from '../hooks/useFetch';
 import NewsCard from '../components/NewsCard';
+import EventCard from '../components/EventCard';
+import BusinessCard from '../components/BusinessCard';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const HomePage: React.FC = () => {
+    const { data, loading, error } = useFetch(api.getHomeData);
+    
+    // Imagem Hero: Floresta com neblina (Alta estabilidade)
+    const [heroImage, setHeroImage] = useState("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1600&auto=format&fit=crop");
+    const [imageErrorCount, setImageErrorCount] = useState(0);
+
+    const handleImageError = () => {
+        if (imageErrorCount === 0) {
+            // Fallback: Floresta verde vibrante
+            setHeroImage("https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1600&auto=format&fit=crop");
+        }
+        setImageErrorCount(prev => prev + 1);
+    };
+
+    if (loading) return <LoadingSpinner />;
+    if (error) return <div className="text-center py-20 text-red-500">{error}</div>;
+    if (!data) return null;
+
+    const { news, events, businesses } = data;
+
     return (
         <div>
-            <section 
-                className="text-white bg-cover bg-center" 
-                style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBAAx5TXdts1I3HdXdvyaff3eTQHPEX8hq3Xavd_BXZlJb-YBxfOjO8czCk-sKsnoNCM_gqumN9IKzxZTUpeZFPFUHD-7o-jHMpcDwpWSfw-Ywert_Vlc1nnMQRpsDC3VUj33PJOoZjxmqRFh9BSgFFgqwvhhnuIZzTQMn8vHx0fagT7ZjfrmgoEXbimIOQL3ytPOm2uBJ798dlUioKQeOkchfJFMo0YpXjt-ZRsjB9Ro2sU9RhFUtakpvwiMQy7jtHsbnPckQK3uy9)"}}
-            >
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-48 text-center">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-display">Tudo sobre Araucária<br/>em um só lugar</h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-zinc-200">Atualizado semanalmente com notícias, eventos e oportunidades locais</p>
-                    <div className="mt-8 flex justify-center items-center space-x-4">
-                        <Link to="/noticias" className="px-6 py-3 bg-primary-dark text-white font-medium rounded-md hover:opacity-90 transition-opacity">Ver Últimas Notícias</Link>
-                        <Link to="/newsletter" className="px-6 py-3 bg-zinc-600/50 text-white font-medium rounded-md backdrop-blur-sm border border-zinc-500 hover:bg-zinc-500/50 transition-colors">Cadastrar Newsletter</Link>
+            {/* Hero Section */}
+            <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-zinc-900">
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-green-900 to-zinc-900">
+                     <img 
+                        src={heroImage}
+                        alt="Paisagem de Araucária" 
+                        className={`w-full h-full object-cover transition-opacity duration-500 ${imageErrorCount > 2 ? 'opacity-0' : 'opacity-100'}`}
+                        onError={handleImageError}
+                        referrerPolicy="no-referrer"
+                    />
+                    {/* Gradiente escuro para garantir leitura do texto branco */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-zinc-900"></div>
+                </div>
+
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <span className="inline-block py-1 px-3 rounded-full bg-blue-600/40 border border-blue-400/30 text-blue-100 text-sm font-semibold mb-6 backdrop-blur-md">
+                        Bem-vindo a Araucária
+                    </span>
+                    <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-lg">
+                        A Cidade Símbolo<br/>do Paraná
+                    </h1>
+                    <p className="mt-6 max-w-2xl mx-auto text-xl text-zinc-100 font-light drop-shadow-md">
+                        Notícias, cultura, eventos e o melhor do comércio local em um só lugar.
+                    </p>
+                    <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <Link to="/noticias" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1">
+                            Ver Notícias
+                        </Link>
+                        <Link to="/newsletter" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-bold rounded-full backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all shadow-lg transform hover:-translate-y-1">
+                            Receber Novidades
+                        </Link>
                     </div>
                 </div>
             </section>
 
-            <div className="space-y-16 sm:space-y-24 py-16 sm:py-24">
+            <div className="space-y-20 sm:space-y-28 py-16 sm:py-24 bg-gradient-to-b from-zinc-900/5 to-transparent dark:from-zinc-900 dark:to-background-dark">
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Últimas Notícias</h2>
-                        <Link to="/noticias" className="text-primary-dark font-medium hover:underline flex items-center gap-1">Ver todas <span className="material-icons-outlined text-base">arrow_forward</span></Link>
+                    <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
+                        <div>
+                            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Últimas Notícias</h2>
+                            <p className="mt-2 text-zinc-500 dark:text-zinc-400">O que está acontecendo na cidade agora.</p>
+                        </div>
+                        <Link to="/noticias" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
+                            Ver todas as notícias <span className="material-icons-outlined text-base">arrow_forward</span>
+                        </Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {newsArticles.slice(0, 3).map(article => (
+                        {news.map(article => (
                             <NewsCard key={article.id} article={article} />
                         ))}
                     </div>
                 </section>
                 
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Eventos Esta Semana</h2>
-                        <Link to="/eventos" className="text-primary-dark font-medium hover:underline flex items-center gap-1">Ver todos <span className="material-icons-outlined text-base">arrow_forward</span></Link>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                       {events.slice(0, 1).map(event => (
-                            <div key={event.id} className="bg-zinc-50 dark:bg-zinc-800/50 rounded-lg overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
-                                <img alt={event.title} className="w-full h-56 object-cover" src={event.imageUrl} />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">{event.title}</h3>
-                                    <p className="text-zinc-600 dark:text-zinc-300 mb-4 text-sm">{event.description}</p>
-                                    <div className="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
-                                        <div className="flex items-center gap-2"><span className="material-icons-outlined text-lg">schedule</span><span>{event.time}</span></div>
-                                        <div className="flex items-center gap-2"><span className="material-icons-outlined text-lg">location_on</span><span>{event.location}</span></div>
-                                    </div>
-                                </div>
+                    <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 sm:p-12">
+                        <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
+                            <div>
+                                <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Agenda Cultural</h2>
+                                <p className="mt-2 text-zinc-500 dark:text-zinc-400">Não perca os próximos eventos.</p>
                             </div>
-                       ))}
+                            <Link to="/eventos" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
+                                Ver calendário completo <span className="material-icons-outlined text-base">arrow_forward</span>
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                           {events.map(event => (
+                                <EventCard key={event.id} event={event} />
+                           ))}
+                        </div>
                     </div>
                 </section>
 
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Destaques Comerciais</h2>
-                        <Link to="/comercio" className="text-primary-dark font-medium hover:underline flex items-center gap-1">Ver todos <span className="material-icons-outlined text-base">arrow_forward</span></Link>
+                    <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
+                        <div>
+                            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Destaques do Comércio</h2>
+                            <p className="mt-2 text-zinc-500 dark:text-zinc-400">Apoie o negócio local.</p>
+                        </div>
+                        <Link to="/comercio" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
+                            Guia comercial <span className="material-icons-outlined text-base">arrow_forward</span>
+                        </Link>
                     </div>
                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                        {businesses.slice(0, 1).map(business => (
-                             <div key={business.id} className="bg-zinc-50 dark:bg-zinc-800/50 rounded-lg overflow-hidden shadow-sm">
-                                <img alt={`Fachada da ${business.name}`} className="w-full h-56 object-cover" src={business.imageUrl} />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-zinc-800 dark:text-zinc-100">{business.name}</h3>
-                                    <span className="text-sm bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 px-2 py-0.5 rounded-full my-2 inline-block">{business.category}</span>
-                                    <div className="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 mb-4">
-                                        <div className="flex items-center gap-2"><span className="material-icons-outlined text-lg">location_on</span><span>{business.address}</span></div>
-                                        <div className="flex items-center gap-2"><span className="material-icons-outlined text-lg">phone</span><span>{business.phone}</span></div>
-                                        <div className="flex items-center gap-2"><span className="material-icons-outlined text-lg">language</span><a className="text-primary-dark hover:underline" href="#">{business.website}</a></div>
-                                    </div>
-                                    <div className="flex items-stretch space-x-2">
-                                        <button className="flex-1 px-4 py-2 border border-zinc-300 dark:border-zinc-600 rounded-md text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center gap-2">
-                                            <span className="material-icons-outlined text-lg">call</span>Ligar
-                                        </button>
-                                        <a className="flex-1 px-4 py-2 bg-primary-dark text-white font-medium rounded-md hover:opacity-90 transition-opacity flex items-center justify-center gap-2" href="#">
-                                            <span className="material-icons-outlined text-lg">visibility</span>Visitar
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        {businesses.map(business => (
+                             <BusinessCard key={business.id} business={business} />
                         ))}
                     </div>
                 </section>

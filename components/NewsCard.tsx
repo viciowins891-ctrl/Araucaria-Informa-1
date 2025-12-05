@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { NewsArticle } from '../types';
 
 interface NewsCardProps {
@@ -7,34 +7,62 @@ interface NewsCardProps {
 }
 
 const colorVariants: { [key: string]: string } = {
-    blue: 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300',
-    purple: 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300',
-    green: 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300',
-    red: 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300',
-    yellow: 'bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300',
-    indigo: 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300',
+    blue: 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200 border-blue-200 dark:border-blue-800',
+    purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-200 border-purple-200 dark:border-purple-800',
+    green: 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200 border-green-200 dark:border-green-800',
+    red: 'bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-200 border-red-200 dark:border-red-800',
+    yellow: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-200 border-yellow-200 dark:border-yellow-800',
+    indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 border-indigo-200 dark:border-indigo-800',
 };
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
-    const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300';
+    const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 border-gray-200';
+    const [imageError, setImageError] = useState(false);
 
     return (
-        <div className="bg-surface-light dark:bg-surface-dark rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
-            <img alt={article.title} className="w-full h-56 object-cover" src={article.imageUrl} />
-            <div className="p-6 flex flex-col flex-grow">
-                <div className="flex justify-between items-center text-sm text-text-secondary-light dark:text-text-secondary-dark mb-2">
-                    <span className={`${categoryColorClass} text-xs font-medium px-2.5 py-0.5 rounded-full`}>{article.category}</span>
-                    <div className="flex items-center">
-                        <span className="material-icons-outlined text-sm mr-1">calendar_today</span>
-                        <span>{article.publishDate}</span>
+        <div className="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full hover:-translate-y-1">
+            <div className="relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800">
+                {!imageError ? (
+                    <img 
+                        alt={article.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                        src={article.imageUrl}
+                        onError={() => setImageError(true)}
+                        referrerPolicy="no-referrer"
+                    />
+                ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+                        <span className="material-icons-outlined text-4xl text-gray-400">image_not_supported</span>
                     </div>
+                )}
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                     <span className={`${categoryColorClass} text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border shadow-sm`}>
+                        {article.category}
+                    </span>
                 </div>
-                <h3 className="text-xl font-semibold text-text-light dark:text-text-dark mb-2">{article.title}</h3>
-                <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4 flex-grow">{article.summary}</p>
-                <a className="text-primary font-semibold hover:underline flex items-center self-start" href="#">
-                    Ler mais
-                    <span className="material-icons-outlined text-lg ml-1">arrow_forward</span>
-                </a>
+            </div>
+
+            <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-center text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
+                    <span className="material-icons-outlined text-sm mr-1">schedule</span>
+                    <span>{article.publishDate}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
+                    {article.title}
+                </h3>
+                
+                <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
+                    {article.summary}
+                </p>
+                
+                <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                    <span className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1">
+                        Ler artigo <span className="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </span>
+                </div>
             </div>
         </div>
     );

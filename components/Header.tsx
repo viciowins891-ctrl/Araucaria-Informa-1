@@ -1,11 +1,7 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-
-interface HeaderProps {
-    isDarkMode: boolean;
-    toggleDarkMode: () => void;
-}
+import { useTheme } from '../context/ThemeContext';
 
 const NavItem: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => {
     const location = useLocation();
@@ -14,41 +10,75 @@ const NavItem: React.FC<{ to: string; children: React.ReactNode }> = ({ to, chil
     return (
         <NavLink
             to={to}
-            className={`transition-colors ${
+            className={`relative px-1 py-2 text-sm font-medium transition-colors duration-200 ${
                 isActive 
-                ? 'font-semibold text-white border-b-2 border-white pb-1' 
-                : 'text-gray-200 hover:text-white'
+                ? 'text-white' 
+                : 'text-blue-100 hover:text-white'
             }`}
         >
             {children}
+            {isActive && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white rounded-full shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span>
+            )}
         </NavLink>
     );
 };
 
-const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
+const Header: React.FC = () => {
+    const { isDarkMode, toggleDarkMode } = useTheme();
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header className="bg-primary text-white shadow-md sticky top-0 z-50 font-display">
-            <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <NavLink className="text-2xl font-bold" to="/">Araucária Informa</NavLink>
-                <div className="hidden md:flex items-center space-x-6">
+        <header 
+            className={`sticky top-0 z-50 transition-all duration-300 ${
+                scrolled 
+                ? 'bg-primary-dark/95 dark:bg-background-dark/95 backdrop-blur-md shadow-lg py-2' 
+                : 'bg-primary-dark dark:bg-background-dark py-4'
+            }`}
+        >
+            <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                <NavLink className="flex items-center gap-2 group" to="/">
+                    <div className="bg-white text-primary-dark p-1 rounded-lg">
+                        <span className="material-icons-outlined text-2xl">forest</span>
+                    </div>
+                    <span className="text-xl sm:text-2xl font-bold text-white font-display tracking-tight">
+                        Araucária<span className="font-light opacity-80">Informa</span>
+                    </span>
+                </NavLink>
+
+                <div className="hidden md:flex items-center space-x-8 bg-white/10 px-6 py-2 rounded-full backdrop-blur-sm border border-white/10">
                     <NavItem to="/">Início</NavItem>
                     <NavItem to="/noticias">Notícias</NavItem>
                     <NavItem to="/eventos">Eventos</NavItem>
                     <NavItem to="/comercio">Comércio</NavItem>
                     <NavItem to="/historia">História</NavItem>
-                    <NavItem to="/newsletter">Newsletter</NavItem>
                 </div>
-                <div className="flex items-center space-x-4">
-                    <button onClick={toggleDarkMode} className="p-2 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
-                        <span className="material-icons-outlined">
+
+                <div className="flex items-center space-x-3">
+                    <button 
+                        onClick={toggleDarkMode} 
+                        className="p-2 rounded-full text-blue-100 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"
+                        aria-label="Alternar tema"
+                    >
+                        <span className="material-icons-outlined text-xl">
                             {isDarkMode ? 'light_mode' : 'dark_mode'}
                         </span>
                     </button>
-                    <button className="p-2 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
-                        <span className="material-icons-outlined">search</span>
+                    
+                    <button className="hidden sm:flex p-2 rounded-full text-blue-100 hover:text-white hover:bg-white/10 transition-colors focus:outline-none">
+                        <span className="material-icons-outlined text-xl">search</span>
                     </button>
-                    <a className="bg-white text-primary font-semibold px-5 py-2 rounded-md hover:bg-gray-100 transition-colors hidden sm:block" href="#">
-                        Anuncie Aqui
+                    
+                    <a className="hidden lg:block bg-white text-primary-dark font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-50 transition-colors shadow-md" href="#">
+                        Anuncie
                     </a>
                 </div>
             </nav>
