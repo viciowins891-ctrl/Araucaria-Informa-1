@@ -1,5 +1,6 @@
 
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useState } from 'react';
+import { newsletterService } from '../services/newsletterService';
 
 const FeatureCard: React.FC<{ icon: string; title: string; description: string }> = ({ icon, title, description }) => (
     <div className="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-700/80 transition-shadow hover:shadow-lg">
@@ -16,23 +17,26 @@ const FeatureCard: React.FC<{ icon: string; title: string; description: string }
 );
 
 const NewsletterPage: React.FC = () => {
-    const handleSubscribe = (e: FormEvent) => {
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [message, setMessage] = useState('');
+
+    const handleSubscribe = async (e: FormEvent) => {
         e.preventDefault();
-        const form = e.target as HTMLFormElement;
-        const input = form.querySelector('input[type="email"]') as HTMLInputElement;
         
-        if (input && input.value) {
-            const userEmail = input.value;
-            const recipient = "humberto_485@hotmail.com";
-            const subject = encodeURIComponent("Nova Inscrição: Newsletter Araucária Informa");
-            const body = encodeURIComponent(`Olá,\n\nGostaria de inscrever o email abaixo na lista de transmissão:\n\nEmail: ${userEmail}\n\nData: ${new Date().toLocaleDateString()}\n\nObrigado.`);
-            
-            // Abre o cliente de email do usuário
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-            
-            // Feedback visual
-            alert(`A solicitação de inscrição para ${userEmail} foi preparada no seu aplicativo de e-mail. Por favor, envie a mensagem para confirmar.`);
-            input.value = ''; 
+        if (!email) return;
+
+        setStatus('loading');
+        setMessage('');
+
+        try {
+            const response = await newsletterService.subscribe(email);
+            setStatus('success');
+            setMessage(response.message);
+            setEmail(''); // Limpa o campo
+        } catch (error: any) {
+            setStatus('error');
+            setMessage(error.message || "Ocorreu um erro ao tentar se inscrever.");
         }
     };
 
@@ -54,17 +58,65 @@ const NewsletterPage: React.FC = () => {
                 <section className="bg-gray-100 dark:bg-gray-800/50 p-8 sm:p-12 rounded-xl border border-gray-200 dark:border-gray-700/80 text-center max-w-4xl mx-auto mb-16 sm:mb-24">
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-display">Assine Nossa Newsletter</h2>
                     <p className="text-gray-600 dark:text-gray-400 mt-2 mb-8">Cadastre seu email abaixo e comece a receber conteúdo exclusivo sobre Araucária.</p>
-                    <div className="bg-surface-light dark:bg-gray-800 rounded-lg p-8 sm:p-10 border border-gray-200 dark:border-gray-700">
-                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white font-display">Receba atualizações semanais de Araucária</h3>
-                        <p className="text-gray-500 dark:text-gray-400 mt-2 mb-8">Fique por dentro das últimas notícias, eventos e oportunidades da sua cidade.</p>
+                    
+                    <div className="bg-surface-light dark:bg-gray-800 rounded-lg p-8 sm:p-10 border border-gray-200 dark:border-gray-700 relative overflow-hidden">
                         
-                        <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onSubmit={handleSubscribe}>
-                            <label className="sr-only" htmlFor="email-sub">Seu email</label>
-                            <input className="w-full px-4 py-3 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary" id="email-sub" placeholder="Seu email" required type="email"/>
-                            <button className="bg-primary text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark whitespace-nowrap" type="submit">Inscrever-se</button>
-                        </form>
-                        
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">Respeitamos sua privacidade. Cancele a inscrição a qualquer momento.</p>
+                        {status === 'success' ? (
+                            <div className="flex flex-col items-center justify-center py-8 animate-fade-in-up">
+                                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                                    <span className="material-icons text-3xl">check</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Inscrição Confirmada!</h3>
+                                <p className="text-gray-600 dark:text-gray-300">{message}</p>
+                                <button 
+                                    onClick={() => setStatus('idle')}
+                                    className="mt-6 text-primary hover:text-primary-dark font-semibold text-sm"
+                                >
+                                    Cadastrar outro e-mail
+                                </button>
+                            </div>
+                        ) : (
+                            <>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white font-display">Receba atualizações semanais de Araucária</h3>
+                                <p className="text-gray-500 dark:text-gray-400 mt-2 mb-8">Fique por dentro das últimas notícias, eventos e oportunidades da sua cidade.</p>
+                                
+                                <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onSubmit={handleSubscribe}>
+                                    <label className="sr-only" htmlFor="email-sub">Seu email</label>
+                                    <input 
+                                        className="w-full px-4 py-3 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary disabled:opacity-50" 
+                                        id="email-sub" 
+                                        placeholder="Seu email" 
+                                        required 
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        disabled={status === 'loading'}
+                                    />
+                                    <button 
+                                        className={`
+                                            bg-primary text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 
+                                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark 
+                                            whitespace-nowrap flex items-center justify-center min-w-[140px]
+                                            ${status === 'loading' ? 'opacity-70 cursor-wait' : ''}
+                                        `} 
+                                        type="submit"
+                                        disabled={status === 'loading'}
+                                    >
+                                        {status === 'loading' ? (
+                                            <>
+                                                <span className="material-icons-outlined animate-spin mr-2 text-sm">sync</span>
+                                                Enviando...
+                                            </>
+                                        ) : 'Inscrever-se'}
+                                    </button>
+                                </form>
+                                {status === 'error' && (
+                                    <p className="text-red-500 mt-4 text-sm font-medium">{message}</p>
+                                )}
+                                
+                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">Respeitamos sua privacidade. Cancele a inscrição a qualquer momento.</p>
+                            </>
+                        )}
                     </div>
                 </section>
                 

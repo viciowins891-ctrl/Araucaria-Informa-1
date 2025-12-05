@@ -1,6 +1,7 @@
 
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { newsletterService } from '../services/newsletterService';
 
 interface FooterProps {
     simple?: boolean;
@@ -22,23 +23,23 @@ const SocialIcon: React.FC<{ href: string, iconPath: string, label: string }> = 
 );
 
 const Footer: React.FC<FooterProps> = ({ simple = false }) => {
-    
-    const handleSubscribe = (e: FormEvent) => {
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+    const handleSubscribe = async (e: FormEvent) => {
         e.preventDefault();
-        const form = e.target as HTMLFormElement;
-        const input = form.querySelector('input[type="email"]') as HTMLInputElement;
-        
-        if (input && input.value) {
-            const userEmail = input.value;
-            const recipient = "humberto_485@hotmail.com";
-            const subject = encodeURIComponent("Nova Inscrição: Newsletter Araucária Informa");
-            const body = encodeURIComponent(`Olá,\n\nGostaria de inscrever o email abaixo na lista de transmissão:\n\nEmail: ${userEmail}\n\nData: ${new Date().toLocaleDateString()}\n\nObrigado.`);
-            
-            // Abre o cliente de email do usuário
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-            
-            alert(`Sua inscrição está quase pronta! Seu aplicativo de e-mail foi aberto para enviar a confirmação para ${recipient}.`);
-            input.value = '';
+        if (!email) return;
+
+        setStatus('loading');
+        try {
+            await newsletterService.subscribe(email);
+            setStatus('success');
+            setEmail('');
+            // Retorna ao estado inicial após 3 segundos para permitir nova inscrição
+            setTimeout(() => setStatus('idle'), 3000);
+        } catch (error) {
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
         }
     };
 
@@ -75,11 +76,32 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                         </div>
                          <div className="col-span-2 md:col-span-2">
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Newsletter</h3>
-                            <form className="flex flex-col space-y-2" onSubmit={handleSubscribe}>
-                                <label className="sr-only" htmlFor="footer-email">Seu email</label>
-                                <input className="w-full text-sm px-3 py-2 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary" id="footer-email" placeholder="Seu email" required type="email"/>
-                                <button className="w-full bg-primary text-white text-sm font-semibold px-3 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">Inscrever-se</button>
-                            </form>
+                            {status === 'success' ? (
+                                <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md p-3 text-center">
+                                    <p className="text-green-800 dark:text-green-300 text-sm font-semibold">Inscrição realizada com sucesso!</p>
+                                </div>
+                            ) : (
+                                <form className="flex flex-col space-y-2" onSubmit={handleSubscribe}>
+                                    <label className="sr-only" htmlFor="footer-email">Seu email</label>
+                                    <input 
+                                        className="w-full text-sm px-3 py-2 rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring-primary focus:border-primary disabled:opacity-50" 
+                                        id="footer-email" 
+                                        placeholder="Seu email" 
+                                        required 
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        disabled={status === 'loading'}
+                                    />
+                                    <button 
+                                        className="w-full bg-primary text-white text-sm font-semibold px-3 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark disabled:opacity-70 disabled:cursor-wait" 
+                                        type="submit"
+                                        disabled={status === 'loading'}
+                                    >
+                                        {status === 'loading' ? 'Enviando...' : 'Inscrever-se'}
+                                    </button>
+                                </form>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -118,7 +140,6 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/contato">Contato</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/privacidade">Política de Privacidade</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/termos">Termos de Uso</Link></li>
-                            {/* Link corrigido para página de História */}
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/historia">Sobre</Link></li>
                         </ul>
                     </div>
@@ -154,10 +175,34 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                     </div>
                     <div className="col-span-2 md:col-span-1">
                         <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">Newsletter</h3>
-                        <form className="mt-4 flex flex-col gap-2" onSubmit={handleSubscribe}>
-                            <input className="w-full px-4 py-2 border border-zinc-300 dark:border-zinc-700 rounded-md bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" placeholder="Seu email" required type="email" />
-                            <button className="px-4 py-2 bg-primary-dark text-white font-medium rounded-md hover:opacity-90 transition-opacity" type="submit">Inscrever-se</button>
-                        </form>
+                        {status === 'success' ? (
+                            <div className="bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-md p-4 text-center mt-4 animate-fade-in-up">
+                                <span className="material-icons text-green-600 dark:text-green-400 mb-1">check_circle</span>
+                                <p className="text-green-800 dark:text-green-300 text-sm font-semibold">Inscrição realizada!</p>
+                            </div>
+                        ) : (
+                            <form className="mt-4 flex flex-col gap-2" onSubmit={handleSubscribe}>
+                                <input 
+                                    className="w-full px-4 py-2 border border-zinc-300 dark:border-zinc-700 rounded-md bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary disabled:opacity-50" 
+                                    placeholder="Seu email" 
+                                    required 
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    disabled={status === 'loading'}
+                                />
+                                <button 
+                                    className="px-4 py-2 bg-primary-dark text-white font-medium rounded-md hover:opacity-90 transition-opacity disabled:opacity-70 disabled:cursor-wait" 
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                >
+                                    {status === 'loading' ? '...' : 'Inscrever-se'}
+                                </button>
+                            </form>
+                        )}
+                        {status === 'error' && (
+                            <p className="text-red-500 text-xs mt-2">Erro ao inscrever-se.</p>
+                        )}
                     </div>
                 </div>
                 <div className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 text-center text-sm text-zinc-500 dark:text-zinc-400">
