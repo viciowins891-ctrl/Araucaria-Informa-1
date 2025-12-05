@@ -206,6 +206,91 @@ export const newsArticles: NewsArticle[] = [
         categoryColor: 'blue',
         publishDate: '28/10/2024',
         author: 'Segurança em Pauta'
+    },
+    {
+        id: 12,
+        title: 'Hospital Municipal inaugura nova ala pediátrica',
+        summary: 'Ampliação promete dobrar a capacidade de atendimento infantil e conta com equipamentos de última geração.',
+        content: `
+            <p>O Hospital Municipal de Araucária (HMA) inaugurou nesta manhã sua nova ala pediátrica. O espaço foi totalmente reformulado para oferecer um ambiente mais acolhedor e humanizado para as crianças e seus familiares.</p>
+            <p>Com a expansão, o número de leitos de internação infantil passou de 15 para 30. Além disso, foram adquiridos novos equipamentos de monitoramento vital e respiradores específicos para o público pediátrico.</p>
+            <p>"Saúde é prioridade. Nossas crianças merecem o melhor atendimento possível, sem precisar se deslocar para Curitiba", destacou a direção do hospital.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '01/11/2024',
+        author: 'Saúde Agora'
+    },
+    {
+        id: 13,
+        title: 'Feira de Robótica reúne estudantes da rede pública',
+        summary: 'Alunos apresentaram projetos inovadores focados em sustentabilidade e automação.',
+        content: `
+            <p>O Parque Cachoeira foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
+            <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1581092921461-eab62e97a78e?auto=format&fit=crop&q=80&w=1000',
+        category: 'Educação',
+        categoryColor: 'red',
+        publishDate: '05/11/2024',
+        author: 'EducaTech'
+    },
+    {
+        id: 14,
+        title: 'Novo supermercado gera 200 empregos diretos',
+        summary: 'Grande rede varejista abre as portas no bairro Costeira, movimentando a economia local.',
+        content: `
+            <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro Costeira.</p>
+            <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&q=80&w=1000',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '08/11/2024',
+        author: 'Economia Local'
+    },
+    {
+        id: 15,
+        title: 'Limpeza do Rio Iguaçu retira 5 toneladas de lixo',
+        summary: 'Ação voluntária mobilizou comunidade e ONGs ambientais no último fim de semana.',
+        content: `
+            <p>Um mutirão de limpeza realizado nas margens do Rio Iguaçu, no trecho que corta Araucária, resultou na retirada de mais de 5 toneladas de resíduos sólidos. A ação contou com a participação de 100 voluntários, incluindo escoteiros e moradores ribeirinhos.</p>
+            <p>Entre os itens encontrados estavam pneus, plásticos e até móveis velhos. A Secretaria de Meio Ambiente apoiou a ação com caminhões para o transporte correto do material recolhido.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1618477461853-586eff3f7280?auto=format&fit=crop&q=80&w=1000',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '12/11/2024',
+        author: 'EcoAção'
+    },
+    {
+        id: 16,
+        title: 'Torneio de Xadrez movimenta o fim de semana',
+        summary: 'Competição reuniu enxadristas de todas as idades no Centro de Convivência.',
+        content: `
+            <p>O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado. O evento reuniu mais de 80 participantes, divididos em categorias do sub-10 ao veterano.</p>
+            <p>O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub-14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=1000',
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: '15/11/2024',
+        author: 'Esporte Araucária'
+    },
+    {
+        id: 17,
+        title: 'Curso gratuito de qualificação profissional abre inscrições',
+        summary: 'Senai e Prefeitura oferecem vagas para cursos na área industrial e administrativa.',
+        content: `
+            <p>Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai. São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
+            <p>As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência. O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000',
+        category: 'Educação',
+        categoryColor: 'red',
+        publishDate: '18/11/2024',
+        author: 'Carreira e Futuro'
     }
 ];
 

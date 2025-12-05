@@ -16,12 +16,11 @@ const HomePage: React.FC = () => {
 
     const { data, loading, error } = useFetch(api.getHomeData);
     
-    // Imagem principal: Vista urbana com pôr do sol (Golden Hour), similar à referência de Araucária/Cidade Símbolo.
-    // Usamos Unsplash por ser estável e de alta qualidade.
-    const [heroImage, setHeroImage] = useState("https://images.unsplash.com/photo-1444723121867-c612671f26ae?q=80&w=1600&auto=format&fit=crop");
+    // Imagem principal: Vista urbana com pôr do sol (Golden Hour)
+    const DEFAULT_HERO_IMAGE = "https://images.unsplash.com/photo-1444723121867-c612671f26ae?q=80&w=1600&auto=format&fit=crop";
+    const [heroImage, setHeroImage] = useState(DEFAULT_HERO_IMAGE);
 
     const handleImageError = () => {
-        // Fallback secundário: Horizonte urbano alternativo caso a primeira falhe
         setHeroImage("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop");
     };
 
@@ -30,40 +29,65 @@ const HomePage: React.FC = () => {
     if (!data) return null;
 
     const { news, events, businesses } = data;
+    
+    // Lógica para destacar a última notícia na Hero Section
+    const featuredNews = news.length > 0 ? news[0] : null;
+    const gridNews = news.length > 0 ? news.slice(1, 4) : []; // Pega as próximas 3 notícias para o grid
+
+    // Se houver uma notícia de destaque, usamos a imagem dela. Se não, usa a padrão.
+    const activeHeroImage = featuredNews ? featuredNews.imageUrl : heroImage;
 
     return (
         <div>
-            {/* Hero Section */}
-            <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-zinc-900">
+            {/* Hero Section Dinâmica - Notícia em Destaque */}
+            <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                      <img 
-                        src={heroImage}
-                        alt="Vista aérea de Araucária - Cidade Símbolo" 
-                        className="w-full h-full object-cover"
+                        src={activeHeroImage}
+                        alt={featuredNews ? featuredNews.title : "Vista de Araucária"} 
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
                     />
-                    {/* Gradiente escuro para garantir leitura do texto branco */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-zinc-900"></div>
+                    {/* Gradiente escuro para garantir leitura */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <span className="inline-block py-1 px-3 rounded-full bg-blue-600/80 border border-blue-400/30 text-blue-50 text-sm font-semibold mb-6 backdrop-blur-md shadow-sm">
-                        Bem-vindo a Araucária
-                    </span>
-                    <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-2xl">
-                        A Cidade Símbolo<br/>do Paraná
-                    </h1>
-                    <p className="mt-6 max-w-2xl mx-auto text-xl text-zinc-100 font-light drop-shadow-lg text-shadow">
-                        Notícias, cultura, eventos e o melhor do comércio local em um só lugar.
-                    </p>
-                    <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <Link to="/noticias" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1">
-                            Ver Notícias
-                        </Link>
-                        <Link to="/newsletter" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-bold rounded-full backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all shadow-lg transform hover:-translate-y-1">
-                            Receber Novidades
-                        </Link>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20">
+                    <div className="max-w-4xl">
+                        {featuredNews ? (
+                            <>
+                                <span className="inline-block py-1 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                                    Destaque do Dia
+                                </span>
+                                <Link to={`/noticias/${featuredNews.id}`} className="block group-hover:opacity-90 transition-opacity">
+                                    <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-display tracking-tight drop-shadow-lg mb-6">
+                                        {featuredNews.title}
+                                    </h1>
+                                </Link>
+                                <p className="text-gray-200 text-lg sm:text-xl line-clamp-2 max-w-2xl mb-8 font-light drop-shadow-md">
+                                    {featuredNews.summary}
+                                </p>
+                                <div className="flex gap-4">
+                                    <Link 
+                                        to={`/noticias/${featuredNews.id}`} 
+                                        className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
+                                    >
+                                        Ler Matéria Completa
+                                        <span className="material-icons-outlined ml-2">arrow_forward</span>
+                                    </Link>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <span className="inline-block py-1 px-3 rounded-full bg-blue-600/80 border border-blue-400/30 text-blue-50 text-sm font-semibold mb-6 backdrop-blur-md shadow-sm">
+                                    Bem-vindo a Araucária
+                                </span>
+                                <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-2xl">
+                                    A Cidade Símbolo<br/>do Paraná
+                                </h1>
+                            </>
+                        )}
                     </div>
                 </div>
             </section>
@@ -78,7 +102,7 @@ const HomePage: React.FC = () => {
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
                         <div>
-                            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Últimas Notícias</h2>
+                            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 font-display">Mais Notícias</h2>
                             <p className="mt-2 text-zinc-500 dark:text-zinc-400">O que está acontecendo na cidade agora.</p>
                         </div>
                         <Link to="/noticias" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
@@ -86,7 +110,7 @@ const HomePage: React.FC = () => {
                         </Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {news.map(article => (
+                        {gridNews.map(article => (
                             <NewsCard key={article.id} article={article} />
                         ))}
                     </div>
