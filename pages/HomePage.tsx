@@ -7,6 +7,7 @@ import NewsCard from '../components/NewsCard';
 import EventCard from '../components/EventCard';
 import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import AdSpace from '../components/AdSpace';
 
 const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData);
@@ -64,6 +65,12 @@ const HomePage: React.FC = () => {
             </section>
 
             <div className="space-y-20 sm:space-y-28 py-16 sm:py-24 bg-gradient-to-b from-zinc-900/5 to-transparent dark:from-zinc-900 dark:to-background-dark">
+                
+                {/* Ad Placeholder */}
+                <div className="container mx-auto px-4">
+                    <AdSpace format="horizontal" />
+                </div>
+
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
                         <div>
@@ -99,6 +106,11 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                 </section>
+                
+                {/* Ad Placeholder */}
+                <div className="container mx-auto px-4">
+                    <AdSpace format="horizontal" />
+                </div>
 
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">

@@ -22,9 +22,17 @@ const NewsletterPage: React.FC = () => {
         const input = form.querySelector('input[type="email"]') as HTMLInputElement;
         
         if (input && input.value) {
-            // Simulação de sucesso
-            alert(`Inscrição confirmada! Você receberá as novidades de Araucária no email: ${input.value}`);
-            input.value = ''; // Limpa o campo
+            const userEmail = input.value;
+            const recipient = "humberto_485@hotmail.com";
+            const subject = encodeURIComponent("Nova Inscrição: Newsletter Araucária Informa");
+            const body = encodeURIComponent(`Olá,\n\nGostaria de inscrever o email abaixo na lista de transmissão:\n\nEmail: ${userEmail}\n\nData: ${new Date().toLocaleDateString()}\n\nObrigado.`);
+            
+            // Abre o cliente de email do usuário
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            
+            // Feedback visual
+            alert(`A solicitação de inscrição para ${userEmail} foi preparada no seu aplicativo de e-mail. Por favor, envie a mensagem para confirmar.`);
+            input.value = ''; 
         }
     };
 

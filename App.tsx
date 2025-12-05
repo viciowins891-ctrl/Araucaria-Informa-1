@@ -6,15 +6,21 @@ import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import LoadingSpinner from './components/LoadingSpinner';
 import { api } from './services/api';
+import CookieConsent from './components/CookieConsent';
 
 // Implementando Lazy Loading para performance (Code Splitting)
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage'));
-const ArticlePage = lazy(() => import('./pages/ArticlePage')); // Nova página
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const EventsPage = lazy(() => import('./pages/EventsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
+
+// Páginas Legais e de Suporte
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 const Layout: React.FC = () => {
     const location = useLocation();
@@ -29,6 +35,11 @@ const Layout: React.FC = () => {
         }, 1000); // Espera 1 segundo após carregar o app para iniciar a verificação
     }, []);
 
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <div className="flex flex-col min-h-screen font-body text-text-light dark:text-text-dark bg-background-light dark:bg-background-dark transition-colors duration-300">
             <Header />
@@ -38,15 +49,21 @@ const Layout: React.FC = () => {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/noticias" element={<NewsPage />} />
-                        <Route path="/noticias/:id" element={<ArticlePage />} /> {/* Rota Dinâmica */}
+                        <Route path="/noticias/:id" element={<ArticlePage />} />
                         <Route path="/eventos" element={<EventsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
                         <Route path="/historia" element={<HistoryPage />} />
                         <Route path="/newsletter" element={<NewsletterPage />} />
+                        
+                        {/* Rotas Legais */}
+                        <Route path="/privacidade" element={<PrivacyPolicyPage />} />
+                        <Route path="/termos" element={<TermsPage />} />
+                        <Route path="/contato" element={<ContactPage />} />
                     </Routes>
                 </Suspense>
             </main>
             <Footer simple={isSimpleFooterPage} />
+            <CookieConsent />
         </div>
     );
 };

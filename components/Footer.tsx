@@ -1,18 +1,10 @@
 
 import React, { FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
     simple?: boolean;
 }
-
-const SocialIcon: React.FC<{ href: string, iconPath: string }> = ({ href, iconPath }) => (
-    <a href={href} className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary">
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d={iconPath} />
-        </svg>
-    </a>
-);
-
 
 const Footer: React.FC<FooterProps> = ({ simple = false }) => {
     
@@ -22,7 +14,15 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
         const input = form.querySelector('input[type="email"]') as HTMLInputElement;
         
         if (input && input.value) {
-            alert(`Obrigado! O email ${input.value} foi inscrito com sucesso.`);
+            const userEmail = input.value;
+            const recipient = "humberto_485@hotmail.com";
+            const subject = encodeURIComponent("Nova Inscrição: Newsletter Araucária Informa");
+            const body = encodeURIComponent(`Olá,\n\nGostaria de inscrever o email abaixo na lista de transmissão:\n\nEmail: ${userEmail}\n\nData: ${new Date().toLocaleDateString()}\n\nObrigado.`);
+            
+            // Abre o cliente de email do usuário
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            
+            alert(`Sua inscrição está quase pronta! Seu aplicativo de e-mail foi aberto para enviar a confirmação para ${recipient}.`);
             input.value = '';
         }
     };
@@ -43,19 +43,19 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                         <div>
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Links Rápidos</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#/">Início</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#/noticias">Notícias</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#/eventos">Eventos</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#/comercio">Comércio</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#/historia">História</a></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/">Início</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/noticias">Notícias</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/eventos">Eventos</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/comercio">Comércio</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/historia">História</Link></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Legal</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Sobre</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Política de Privacidade</a></li>
-                                <li><a className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Contato</a></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/contato">Contato</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/privacidade">Política de Privacidade</Link></li>
+                                <li><Link className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" to="/termos">Termos de Uso</Link></li>
                             </ul>
                         </div>
                          <div className="col-span-2 md:col-span-2">
@@ -90,19 +90,19 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                     <div>
                         <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">Links Rápidos</h3>
                         <ul className="mt-4 space-y-2 text-sm">
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#/">Início</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#/noticias">Notícias</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#/eventos">Eventos</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#/comercio">Comércio</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#/historia">História</a></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/">Início</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/noticias">Notícias</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/eventos">Eventos</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/comercio">Comércio</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/historia">História</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">Legal</h3>
                         <ul className="mt-4 space-y-2 text-sm">
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#">Sobre</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#">Política de Privacidade</a></li>
-                            <li><a className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" href="#">Contato</a></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/contato">Contato</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/privacidade">Política de Privacidade</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/termos">Termos de Uso</Link></li>
                         </ul>
                     </div>
                     <div>

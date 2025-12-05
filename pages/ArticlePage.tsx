@@ -4,6 +4,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
+import AdSpace from '../components/AdSpace';
 
 const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -96,6 +97,8 @@ const ArticlePage: React.FC = () => {
                         {article.title}
                     </h1>
 
+                    <AdSpace format="horizontal" className="my-6" />
+
                     <hr className="border-gray-200 dark:border-gray-700 mb-8" />
 
                     {/* Conteúdo do Artigo */}
@@ -103,6 +106,8 @@ const ArticlePage: React.FC = () => {
                         className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed"
                         dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
                     />
+                    
+                    <AdSpace format="horizontal" className="my-8" />
 
                     {/* Rodapé do Artigo */}
                     <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
