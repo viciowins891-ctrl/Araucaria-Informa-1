@@ -13,6 +13,22 @@ const getUpcomingDate = (daysFromNow: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 23,
+        title: 'Governador inaugura Poupatempo em Araucária para modernizar serviços públicos',
+        summary: 'A primeira unidade de rua do Poupatempo Paraná foi inaugurada em Araucária, oferecendo cerca de 240 serviços presenciais e digitais e um atendimento humanizado para a população.',
+        content: `
+            <p>O Governador do Estado inaugurou nesta manhã a unidade do Poupatempo em Araucária, um marco para a modernização dos serviços públicos na região. Localizada no centro da cidade, a nova agência reúne, em um único local, serviços de diversos órgãos estaduais e municipais.</p>
+            <p>Com capacidade para realizar centenas de atendimentos diários, o Poupatempo Araucária oferece emissão de RG, carteira de habilitação, solicitação de seguro-desemprego, além de serviços da Sanepar e Copel. "É o fim da burocracia e das filas intermináveis. O cidadão merece respeito e agilidade", afirmou o governador durante a solenidade.</p>
+            <p>A unidade conta com totens de autoatendimento e uma equipe treinada para auxiliar os cidadãos na utilização dos serviços digitais, promovendo também a inclusão digital para aqueles que têm dificuldade com tecnologia.</p>
+            <p>O atendimento funciona de segunda a sexta-feira, das 9h às 17h, e aos sábados, das 9h às 13h, mediante agendamento prévio pelo site oficial ou aplicativo.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000', // Imagem institucional/governamental
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '05/12/2025',
+        author: 'Agência Estadual de Notícias'
+    },
+    {
         id: 1,
         title: 'Revitalização do Centro Histórico e Praça Central',
         summary: 'A prefeitura entregou as obras de melhoria no entorno da Igreja Matriz, com foco na preservação das araucárias centenárias.',
@@ -25,7 +41,6 @@ export const newsArticles: NewsArticle[] = [
 
             <p>A população já pode usufruir do espaço, que contará com uma agenda cultural especial nos finais de semana, incluindo feiras de artesanato e apresentações musicais.</p>
         `,
-        // Imagem: Praça pública com igreja/arquitetura histórica ao fundo
         imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -45,7 +60,6 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Especialistas do setor de energia apontam que Araucária continua sendo um ponto estratégico para a logística de combustíveis no sul do Brasil, abastecendo não apenas o Paraná, mas também partes de Santa Catarina e Mato Grosso do Sul.</p>
         `,
-        // Imagem: Indústria / Refinaria ao pôr do sol (Clássica de Araucária)
         imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1000',
         category: 'Infraestrutura',
         categoryColor: 'purple',
@@ -65,7 +79,6 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Além do jogo, haverá uma ação social no intervalo, com sorteio de brindes e arrecadação de alimentos não perecíveis para instituições de caridade locais.</p>
         `,
-        // Imagem: Estádio de Futebol com gramado verde
         imageUrl: 'https://images.unsplash.com/photo-1522778119026-d647f0565c6d?auto=format&fit=crop&q=80&w=1000', 
         category: 'Esporte',
         categoryColor: 'green',
@@ -85,7 +98,6 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Para o próximo ano, a Secretaria de Educação planeja expandir o projeto para mais três escolas, além de incluir novas modalidades de artes marciais.</p>
         `,
-        // Imagem: Kimonos/Judô
         imageUrl: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
@@ -105,7 +117,6 @@ export const newsArticles: NewsArticle[] = [
             
             <p>"Queremos usar a tecnologia para facilitar a vida do cidadão, seja garantindo acesso à informação ou melhorando a mobilidade urbana", destacou o diretor de Tecnologia da Informação do município.</p>
         `,
-        // Imagem: Tecnologia urbana / Conectividade
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
         category: 'Tecnologia',
         categoryColor: 'yellow',
@@ -125,7 +136,6 @@ export const newsArticles: NewsArticle[] = [
             
             <p>"Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>
         `,
-        // Imagem: Estrada rural tranquila com natureza
         imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',

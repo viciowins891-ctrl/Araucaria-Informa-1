@@ -16,7 +16,8 @@ const EventsPage = lazy(() => import('./pages/EventsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
-const AboutPage = lazy(() => import('./pages/AboutPage')); // Nova Página
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage')); // Página de Erro
 
 // Páginas Legais e de Suporte
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -62,8 +63,8 @@ const Layout: React.FC = () => {
                         <Route path="/termos" element={<TermsPage />} />
                         <Route path="/contato" element={<ContactPage />} />
 
-                        {/* Rota 404 - Redireciona qualquer URL desconhecida para a Home */}
-                        <Route path="*" element={<Navigate to="/" replace />} />
+                        {/* Rota 404 - Exibe página personalizada em vez de redirecionar */}
+                        <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </Suspense>
             </main>
