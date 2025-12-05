@@ -18,6 +18,7 @@ export interface Event {
     title: string;
     description: string;
     imageUrl: string;
+    date: string; // Adicionado: Data do evento (ex: 25/12/2025)
     time: string;
     location: string;
 }

@@ -85,7 +85,7 @@ const NewsPage: React.FC = () => {
                         </div>
                         <div className="ml-3">
                             <p className="text-sm text-amber-800 dark:text-amber-200">
-                                <strong>Observação Importante:</strong> As reportagens listadas abaixo tratam de fatos já ocorridos e oficiais. As datas exibidas referem-se à divulgação do conteúdo no site.
+                                <strong>Observação Importante:</strong> As reportagens listadas abaixo tratam de fatos já ocorridos e oficiais, exceto eventos que são atuais ou futuros. As datas exibidas referem-se à divulgação do conteúdo no site.
                             </p>
                         </div>
                     </div>

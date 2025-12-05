@@ -1,6 +1,13 @@
 
 import { NewsArticle, Event, Business } from './types';
 
+// Função auxiliar APENAS para Eventos (para que pareçam sempre futuros/próximos)
+const getUpcomingDate = (daysFromNow: number): string => {
+    const date = new Date();
+    date.setDate(date.getDate() + daysFromNow);
+    return date.toLocaleDateString('pt-BR'); // Retorna formato DD/MM/AAAA
+};
+
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 
@@ -22,7 +29,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '15/03/2024', // Data fixa de registro
+        publishDate: '15/03/2024', // Data fixa de registro (Passado)
         author: 'Redação Municipal'
     },
     {
@@ -132,8 +139,8 @@ export const events: Event[] = [
         id: 1,
         title: 'Festa do Pêssego',
         description: 'A tradicional celebração da colheita com a melhor gastronomia polonesa e shows regionais.',
-        // Imagem: Cesta de pêssegos frescos
         imageUrl: 'https://images.unsplash.com/photo-1595123550441-d377e017de6a?auto=format&fit=crop&q=80&w=1000',
+        date: getUpcomingDate(5), // Daqui a 5 dias (Futuro)
         time: '18:00 - 23:00',
         location: 'Parque Cachoeira'
     },
@@ -142,16 +149,17 @@ export const events: Event[] = [
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
         imageUrl: 'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&q=80&w=1000',
-        time: 'Sáb e Dom, 18:00 - 22:00',
+        date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
+        time: '18:00 - 22:00',
         location: 'Praça Central'
     },
     {
         id: 3,
         title: 'Concerto no Teatro da Praça',
         description: 'Apresentação especial da orquestra municipal com clássicos e música popular brasileira.',
-        // Imagem: Teatro/Palco com cortinas ou orquestra
         imageUrl: 'https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&q=80&w=1000',
-        time: 'Sextas, às 19:30',
+        date: getUpcomingDate(7), // Daqui a uma semana (Futuro)
+        time: '19:30',
         location: 'Teatro da Praça'
     }
 ];
