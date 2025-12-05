@@ -2,15 +2,15 @@
 import { NewsArticle, Event, Business } from './types';
 
 // URLs atualizadas com imagens de alta disponibilidade do Unsplash.
-// Correção final para Centro Histórico (v14 - Nova Fonte).
+// Correção final para Centro Histórico (v22 - Imagem Diurna/Praça Renovada).
 
 export const newsArticles: NewsArticle[] = [
     {
         id: 1,
         title: 'Revitalização do Centro Histórico e Praça Central',
-        summary: 'A prefeitura entregou as obras de melhoria no entorno da Igreja Matriz, valorizando o patrimônio local.',
-        // Nova imagem: Praça/Igreja com fonte (Alta estabilidade v14)
-        imageUrl: 'https://images.unsplash.com/photo-1560251180-1a0b939945c1?auto=format&fit=crop&q=80&w=1000',
+        summary: 'A prefeitura entregou as obras de melhoria no entorno da Igreja Matriz, com foco na preservação das araucárias centenárias.',
+        // Imagem Diurna: Praça com Igreja e árvores, passando a ideia de espaço público renovado e limpo.
+        imageUrl: 'https://images.unsplash.com/photo-1548625361-bd8769c94788?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: 'Publicado hoje'
