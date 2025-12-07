@@ -1,6 +1,5 @@
-
 import React, { Suspense, lazy, useEffect } from 'react';
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -13,6 +12,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const NewsPage = lazy(() => import('./pages/NewsPage'));
 const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const EventsPage = lazy(() => import('./pages/EventsPage'));
+const EventDetailsPage = lazy(() => import('./pages/EventDetailsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
@@ -53,6 +53,7 @@ const Layout: React.FC = () => {
                         <Route path="/noticias" element={<NewsPage />} />
                         <Route path="/noticias/:id" element={<ArticlePage />} />
                         <Route path="/eventos" element={<EventsPage />} />
+                        <Route path="/eventos/:id" element={<EventDetailsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
                         <Route path="/historia" element={<HistoryPage />} />
                         <Route path="/quem-somos" element={<AboutPage />} /> 

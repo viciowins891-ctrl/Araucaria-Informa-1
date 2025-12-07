@@ -22,7 +22,8 @@ export const newsArticles: NewsArticle[] = [
             <p>A unidade conta com totens de autoatendimento e uma equipe treinada para auxiliar os cidadãos na utilização dos serviços digitais, promovendo também a inclusão digital para aqueles que têm dificuldade com tecnologia.</p>
             <p>O atendimento funciona de segunda a sexta-feira, das 9h às 17h, e aos sábados, das 9h às 13h, mediante agendamento prévio pelo site oficial ou aplicativo.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000', // Imagem institucional/governamental
+        // URL Corrigida e atualizada para uma imagem genérica de atendimento/serviço público ou escritório moderno
+        imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1000', 
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '05/12/2025',

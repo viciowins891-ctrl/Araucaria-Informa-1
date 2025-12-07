@@ -2,19 +2,30 @@
 import { GoogleGenAI } from "@google/genai";
 import { NewsArticle } from '../types';
 
-// Função auxiliar para mapear categorias a imagens do Unsplash
+// Função auxiliar para mapear categorias a imagens do Unsplash - URLs Atualizadas e Mais Confiáveis
 const getImageForCategory = (category: string, keyword: string): string => {
     const searchTerms = `${category} ${keyword}`.toLowerCase();
     
-    if (category === 'Esporte') return 'https://images.unsplash.com/photo-1522778119026-d647f0565c6d?auto=format&fit=crop&q=80&w=1000';
-    if (category === 'Educação') return 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1000';
-    if (category === 'Tecnologia') return 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000';
-    if (category === 'Turismo') return 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000';
-    if (searchTerms.includes('policia') || searchTerms.includes('segurança')) return 'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000';
-    if (searchTerms.includes('obras') || searchTerms.includes('construção')) return 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000';
-    if (searchTerms.includes('chuva') || searchTerms.includes('clima')) return 'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&q=80&w=1000';
+    // URLs revisadas e testadas (Coleção Editorial/News do Unsplash)
+    if (category === 'Esporte') return 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=1000'; // Esporte Genérico
+    if (category === 'Educação') return 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000'; // Educação/Escola
+    if (category === 'Tecnologia') return 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000'; // Chip/Tech
+    if (category === 'Turismo') return 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000'; // Viagem/Turismo
     
-    return 'https://images.unsplash.com/photo-1444723121867-c612671f26ae?auto=format&fit=crop&q=80&w=1000';
+    if (searchTerms.includes('policia') || searchTerms.includes('segurança') || searchTerms.includes('guarda')) 
+        return 'https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&q=80&w=1000'; // Segurança/Polícia (Generico)
+        
+    if (searchTerms.includes('obras') || searchTerms.includes('construção') || searchTerms.includes('asfalto')) 
+        return 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000'; // Construção Civil
+        
+    if (searchTerms.includes('chuva') || searchTerms.includes('clima') || searchTerms.includes('tempo')) 
+        return 'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&q=80&w=1000'; // Clima
+    
+    if (searchTerms.includes('saúde') || searchTerms.includes('hospital') || searchTerms.includes('vacina'))
+        return 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1000'; // Saúde
+
+    // Fallback padrão de cidade/notícia
+    return 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=1000';
 };
 
 const getColorForCategory = (category: string): string => {
@@ -77,13 +88,12 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
 
         let jsonString = response.text || '[]';
         
-        // CORREÇÃO DE ROBUSTEZ: Encontrar o primeiro '[' e o último ']'
-        // Isso ignora textos como "Aqui está o JSON:" ou blocos de markdown mal formatados
-        const startIndex = jsonString.indexOf('[');
-        const endIndex = jsonString.lastIndexOf(']') + 1;
+        // CORREÇÃO DE ROBUSTEZ: Tenta extrair o JSON usando Regex caso venha envolto em Markdown ou texto
+        // Procura por um array JSON [...]
+        const jsonMatch = jsonString.match(/\[[\s\S]*\]/);
 
-        if (startIndex !== -1 && endIndex !== -1) {
-            jsonString = jsonString.substring(startIndex, endIndex);
+        if (jsonMatch) {
+            jsonString = jsonMatch[0];
         } else {
             console.warn("IA não retornou um array JSON válido. Resposta bruta:", response.text);
             return [];
@@ -103,6 +113,8 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
             let sourceUrl = '';
             let sourceName = '';
             
+            // Tentativa de grounding básico (pega o primeiro link se houver). 
+            // Em uma implementação ideal, pediríamos as fontes dentro do próprio JSON, mas isso evita alucinações de links.
             if (groundingChunks.length > 0 && groundingChunks[0].web) {
                  sourceUrl = groundingChunks[0].web.uri;
                  sourceName = groundingChunks[0].web.title;

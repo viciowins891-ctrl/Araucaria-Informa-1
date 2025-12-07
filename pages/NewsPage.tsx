@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import { allNewsCategories } from '../data';
 import { api } from '../services/api';
@@ -59,25 +58,27 @@ const NewsPage: React.FC = () => {
     return (
         <div className="container mx-auto px-6 py-12 flex-grow">
             <section>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-8">
                     <div>
                         <h1 className="text-4xl font-bold text-gray-900 dark:text-white font-display">Notícias</h1>
                         <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">Fique por dentro de tudo que acontece em Araucária</p>
                     </div>
                     
-                    <div>
-                        <label htmlFor="category-filter" className="sr-only">Filtrar por categoria</label>
-                        <select
-                            id="category-filter"
-                            name="category"
-                            onChange={(e) => setSelectedCategory(e.target.value)}
-                            value={selectedCategory}
-                            className="block w-full min-w-[200px] pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-gray-100"
-                        >
-                            {allNewsCategories.map(category => (
-                                <option key={category}>{category}</option>
-                            ))}
-                        </select>
+                    <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                        <div className="w-full sm:w-auto">
+                            <label htmlFor="category-filter" className="sr-only">Filtrar por categoria</label>
+                            <select
+                                id="category-filter"
+                                name="category"
+                                onChange={(e) => setSelectedCategory(e.target.value)}
+                                value={selectedCategory}
+                                className="block w-full min-w-[200px] pl-3 pr-10 py-2.5 text-base border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm rounded-lg bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-gray-100 shadow-sm"
+                            >
+                                {allNewsCategories.map(category => (
+                                    <option key={category}>{category}</option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -108,7 +109,8 @@ const NewsPage: React.FC = () => {
                                 <NewsCard key={article.id} article={article} />
                             ))}
                             {filteredArticles.length === 0 && (
-                                <div className="col-span-full text-center py-10">
+                                <div className="col-span-full text-center py-20 bg-gray-50 dark:bg-zinc-800/50 rounded-xl border border-dashed border-gray-300 dark:border-gray-700">
+                                    <span className="material-icons text-4xl text-gray-400 mb-2">article</span>
                                     <p className="text-gray-500 dark:text-gray-400 text-lg">Nenhuma notícia encontrada nesta categoria.</p>
                                 </div>
                             )}
@@ -129,7 +131,7 @@ const NewsPage: React.FC = () => {
                                     Anterior
                                 </button>
                                 
-                                <span className="text-sm text-gray-600 dark:text-gray-400 px-2">
+                                <span className="text-sm text-gray-600 dark:text-gray-400 px-4 font-medium">
                                     Página {currentPage} de {totalPages}
                                 </span>
 

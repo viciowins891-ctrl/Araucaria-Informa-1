@@ -8,7 +8,7 @@ import AdSpace from '../components/AdSpace';
 import NewsCard from '../components/NewsCard'; // Importação necessária
 
 // Imagem segura para caso a original quebre
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=1000';
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
 
 const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -18,6 +18,7 @@ const ArticlePage: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [imgSrc, setImgSrc] = useState<string>('');
+    const [imageError, setImageError] = useState(false);
 
     useEffect(() => {
         const fetchArticleAndRelated = async () => {
@@ -28,6 +29,7 @@ const ArticlePage: React.FC = () => {
                 if (currentArticle) {
                     setArticle(currentArticle);
                     setImgSrc(currentArticle.imageUrl);
+                    setImageError(false);
 
                     // Busca notícias relacionadas (mock: pega as 3 primeiras que não são a atual)
                     // Num cenário real, filtraria por categoria ou tags
@@ -51,6 +53,13 @@ const ArticlePage: React.FC = () => {
         window.scrollTo(0, 0);
     }, [id]);
 
+    const handleImageError = () => {
+        if (!imageError) {
+             setImgSrc(FALLBACK_IMAGE);
+             setImageError(true);
+        }
+    };
+
     if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
 
     if (error || !article) return (
@@ -70,13 +79,13 @@ const ArticlePage: React.FC = () => {
     return (
         <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20">
             {/* Hero Section do Artigo */}
-            <div className="relative h-[400px] md:h-[500px] w-full bg-gray-200 dark:bg-gray-800">
+            <div className="relative h-[400px] md:h-[500px] w-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
                 <img 
                     src={imgSrc || FALLBACK_IMAGE} 
                     alt={article.title} 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
-                    onError={() => setImgSrc(FALLBACK_IMAGE)}
+                    onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/30"></div>
                 

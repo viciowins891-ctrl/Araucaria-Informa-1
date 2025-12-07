@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Event } from '../types';
 
 interface EventCardProps {
@@ -47,9 +47,12 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                     </div>
                 </div>
                 
-                <button className="mt-6 w-full py-2 bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-300 rounded-lg text-sm font-bold hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors">
+                <Link 
+                    to={`/eventos/${event.id}`}
+                    className="mt-6 w-full py-2 bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-300 rounded-lg text-sm font-bold hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors flex items-center justify-center"
+                >
                     Ver Detalhes
-                </button>
+                </Link>
             </div>
         </div>
     );

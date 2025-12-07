@@ -1,4 +1,3 @@
-
 import { newsArticles as seedNews, events as seedEvents, businesses as seedBusinesses } from '../data';
 import { NewsArticle, Event, Business } from '../types';
 import { fetchWeeklyNewsWithAI } from './aiService';
@@ -99,6 +98,12 @@ export const api = {
     getEvents: async (): Promise<Event[]> => {
         await delay(500);
         return getCollection<Event>(DB_KEYS.EVENTS, seedEvents);
+    },
+
+    getEventById: async (id: number): Promise<Event | undefined> => {
+        await delay(400);
+        const allEvents = getCollection<Event>(DB_KEYS.EVENTS, seedEvents);
+        return allEvents.find(event => event.id === id);
     },
     
     getBusinesses: async (): Promise<Business[]> => {
