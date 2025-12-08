@@ -1,3 +1,4 @@
+
 import React, { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -17,24 +18,27 @@ const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage')); // Página de Erro
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage')); 
 
 // Páginas Legais e de Suporte
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
+// Página Secreta de Administração
+const AdminGeneratorPage = lazy(() => import('./pages/AdminGeneratorPage'));
+
 const Layout: React.FC = () => {
     const location = useLocation();
     const isSimpleFooterPage = location.pathname === '/historia' || location.pathname === '/newsletter';
+    const isAdminPage = location.pathname === '/admin';
 
     // Hook para rodar a verificação de atualização automática
     useEffect(() => {
         // Executa a verificação em "background" sem travar a UI
-        // O setTimeout(..., 0) joga a execução para o final da fila de eventos
         setTimeout(() => {
             api.checkAndRunBackgroundUpdate();
-        }, 1000); // Espera 1 segundo após carregar o app para iniciar a verificação
+        }, 1000); 
     }, []);
 
     // Scroll to top on route change
@@ -44,9 +48,8 @@ const Layout: React.FC = () => {
 
     return (
         <div className="flex flex-col min-h-screen font-body text-text-light dark:text-text-dark bg-background-light dark:bg-background-dark transition-colors duration-300">
-            <Header />
+            {!isAdminPage && <Header />}
             <main className="flex-grow">
-                {/* Suspense exibe um fallback enquanto o código da página é baixado */}
                 <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
@@ -64,13 +67,15 @@ const Layout: React.FC = () => {
                         <Route path="/termos" element={<TermsPage />} />
                         <Route path="/contato" element={<ContactPage />} />
 
-                        {/* Rota 404 - Exibe página personalizada em vez de redirecionar */}
+                        {/* Rota Secreta do Gerador */}
+                        <Route path="/admin" element={<AdminGeneratorPage />} />
+
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </Suspense>
             </main>
-            <Footer simple={isSimpleFooterPage} />
-            <CookieConsent />
+            {!isAdminPage && <Footer simple={isSimpleFooterPage} />}
+            {!isAdminPage && <CookieConsent />}
         </div>
     );
 };
