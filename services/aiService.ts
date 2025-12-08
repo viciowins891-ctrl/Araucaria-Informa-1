@@ -32,6 +32,8 @@ const getColorForCategory = (category: string): string => {
 // Função poderosa para gerar artigos longos que aprovam no AdSense
 export const generateDeepArticle = async (topic: string = ''): Promise<NewsArticle[]> => {
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    // Usando o modelo Pro para melhor raciocínio, ou Flash para rapidez.
+    // O Flash é mais estável para JSON grandes.
     const model = 'gemini-2.5-flash';
 
     const searchContext = topic ? `sobre "${topic}"` : "sobre fatos recentes, política, obras ou eventos comunitários";
@@ -44,20 +46,23 @@ export const generateDeepArticle = async (topic: string = ''): Promise<NewsArtic
         
         REGRAS RÍGIDAS PARA ADSENSE (SEO):
         1. **Tamanho:** O texto DEVE ter no mínimo 500 a 700 palavras. Texto curto será rejeitado.
-        2. **Estrutura:** Use tags HTML para estruturar o texto no campo 'content':
+        2. **Título:** O título DEVE ser curto e direto (máximo 10 a 12 palavras) para não quebrar o layout mobile.
+        3. **Estrutura:** Use tags HTML para estruturar o texto no campo 'content':
            - <h3> para subtítulos (mínimo 3 subtítulos).
            - <p> para parágrafos (bem desenvolvidos).
            - <ul>/<li> para listas se necessário.
            - <blockquote> para citações (invente citações de autoridades locais baseadas no contexto se não encontrar reais).
-        3. **Originalidade:** Não copie trechos. Reescreva tudo com suas palavras em tom formal e informativo.
-        4. **Fatos:** Use a ferramenta GoogleSearch para encontrar dados reais (nomes de ruas, bairros, políticos locais, valores de obras).
+        4. **Originalidade:** Não copie trechos. Reescreva tudo com suas palavras em tom formal e informativo.
+        5. **Fatos:** Use a ferramenta GoogleSearch para encontrar dados reais (nomes de ruas, bairros, políticos locais, valores de obras).
         
-        SAÍDA ESPERADA:
-        Retorne APENAS um JSON Array válido. Não use blocos de código markdown (como \`\`\`json).
-        Exemplo:
+        SAÍDA OBRIGATÓRIA:
+        Você deve retornar APENAS um JSON Array válido. 
+        Não coloque crases (\`\`\`) ou a palavra json no inicio. Apenas comece com [ e termine com ].
+        
+        Exemplo de formato:
         [
           {
-            "title": "Título Impactante e Jornalístico",
+            "title": "Título Curto e Impactante (Máx 12 palavras)",
             "summary": "Um resumo denso de 2 ou 3 frases para o card.",
             "content": "O TEXTO HTML LONGO E COMPLETO AQUI...",
             "category": "Escolha entre: Cidade, Infraestrutura, Esporte, Educação, Segurança, Saúde, Política",
@@ -74,20 +79,24 @@ export const generateDeepArticle = async (topic: string = ''): Promise<NewsArtic
             contents: prompt,
             config: {
                 tools: [{ googleSearch: {} }],
-                // IMPORTANTE: responseMimeType removido pois conflita com googleSearch.
-                // O parsing manual abaixo garante o JSON.
             }
         });
 
         let jsonString = response.text || "";
         
-        // Limpeza robusta para garantir que pegamos apenas o JSON, caso a IA envie texto extra
+        // --- LIMPEZA MANUAL DO JSON ---
+        // A IA às vezes coloca \`\`\`json no começo. Vamos remover isso.
         jsonString = jsonString.replace(/```json/g, '').replace(/```/g, '').trim();
+        
+        // Garante que pegamos apenas o array []
         const startIndex = jsonString.indexOf('[');
         const endIndex = jsonString.lastIndexOf(']');
         
         if (startIndex !== -1 && endIndex !== -1) {
             jsonString = jsonString.substring(startIndex, endIndex + 1);
+        } else {
+             // Se não achou JSON, tenta forçar um erro para cair no catch
+             throw new Error("A IA não retornou um formato JSON válido.");
         }
 
         let rawArticles = [];
@@ -95,15 +104,15 @@ export const generateDeepArticle = async (topic: string = ''): Promise<NewsArtic
         try {
             rawArticles = JSON.parse(jsonString);
         } catch (e) {
-            console.error("Erro parse JSON", e);
-            console.log("Conteúdo recebido:", jsonString);
-            throw new Error("A IA não retornou um JSON válido. Tente novamente.");
+            console.error("Erro no parse manual do JSON", e);
+            console.log("String recebida:", jsonString);
+            throw new Error("Falha ao processar o texto da IA. Tente novamente.");
         }
 
         const groundingChunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
 
         return rawArticles.map((article: any) => {
-            // Tenta pegar link real do grounding
+            // Tenta pegar link real do grounding (fonte da pesquisa)
             let sourceUrl = '';
             if (groundingChunks.length > 0 && groundingChunks[0].web) {
                  sourceUrl = groundingChunks[0].web.uri;

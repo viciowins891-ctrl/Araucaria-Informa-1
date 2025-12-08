@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
@@ -39,8 +38,8 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            {/* Hero Section Dinâmica - Notícia em Destaque */}
-            <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-zinc-900 group">
+            {/* Hero Section Dinâmica - Altura Flexível e Padding Ajustado */}
+            <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                      <img 
                         src={activeHeroImage}
@@ -50,22 +49,23 @@ const HomePage: React.FC = () => {
                         referrerPolicy="no-referrer"
                     />
                     {/* Gradiente escuro para garantir leitura */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 opacity-90"></div>
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16">
                     <div className="max-w-4xl">
                         {featuredNews ? (
                             <>
-                                <span className="inline-block py-1 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                                <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm">
                                     Destaque do Dia
                                 </span>
-                                <Link to={`/noticias/${featuredNews.id}`} className="block group-hover:opacity-90 transition-opacity">
-                                    <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-display tracking-tight drop-shadow-lg mb-6">
+                                <Link to={`/noticias/${featuredNews.id}`} className="block group-hover:opacity-90 transition-opacity py-2">
+                                    {/* Ajuste de tipografia: leading-tight -> leading-snug e py-2 para evitar cortes */}
+                                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-display tracking-tight drop-shadow-lg mb-6 break-words">
                                         {featuredNews.title}
                                     </h1>
                                 </Link>
-                                <p className="text-gray-200 text-lg sm:text-xl line-clamp-2 max-w-2xl mb-8 font-light drop-shadow-md">
+                                <p className="text-gray-200 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light drop-shadow-md">
                                     {featuredNews.summary}
                                 </p>
                                 <div className="flex gap-4">
