@@ -14,36 +14,57 @@ const HomePage: React.FC = () => {
     }, []);
 
     const { data, loading, error } = useFetch(api.getHomeData);
-    
-    // Imagem principal: Vista urbana com pôr do sol (Golden Hour)
-    const DEFAULT_HERO_IMAGE = "https://images.unsplash.com/photo-1444723121867-c612671f26ae?q=80&w=1600&auto=format&fit=crop";
+
+    // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
+    const DEFAULT_HERO_IMAGE = "/images/final_nature.png";
     const [heroImage, setHeroImage] = useState(DEFAULT_HERO_IMAGE);
 
+    // Estado local para gerenciar a imagem exibida (permite fallback em caso de erro)
+    const [displayImage, setDisplayImage] = useState<string>("");
+
+    // Cache Buster para forçar recarregamento da imagem
+    const [cacheBuster] = useState(Date.now());
+
+    // Determina a notícia de destaque (se houver dados)
+    const featuredNews = data?.news && data.news.length > 0 ? data.news[0] : null;
+
+    // Sincroniza a imagem exibida quando a notícia de destaque muda
+    useEffect(() => {
+        if (featuredNews?.imageUrl) {
+            // Se URL externa, usa direta. Se local que sabemos que falha, forçamos a segura.
+            // Mas agora todas as locais apontam para final_nature.png
+            setDisplayImage(featuredNews.imageUrl);
+        } else {
+            setDisplayImage(heroImage);
+        }
+    }, [featuredNews, heroImage]);
+
     const handleImageError = () => {
-        setHeroImage("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop");
+        // Fallback final para a imagem local segura se tudo falhar
+        console.log("Falha ao carregar imagem principal. Usando fallback local.");
+
+        // Evita loop se o fallback também falhar (mas não deve, pois é local)
+        if (displayImage !== "/images/final_nature.png") {
+            setDisplayImage("/images/final_nature.png");
+        }
     };
 
+    // Renderização Condicional
     if (loading) return <LoadingSpinner />;
     if (error) return <div className="text-center py-20 text-red-500">{error}</div>;
     if (!data) return null;
 
     const { news, events, businesses } = data;
-    
-    // Lógica para destacar a última notícia na Hero Section
-    const featuredNews = news.length > 0 ? news[0] : null;
     const gridNews = news.length > 0 ? news.slice(1, 4) : []; // Pega as próximas 3 notícias para o grid
-
-    // Se houver uma notícia de destaque, usamos a imagem dela. Se não, usa a padrão.
-    const activeHeroImage = featuredNews ? featuredNews.imageUrl : heroImage;
 
     return (
         <div>
             {/* Hero Section Dinâmica - Altura Flexível e Padding Ajustado */}
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
-                     <img 
-                        src={activeHeroImage}
-                        alt={featuredNews ? featuredNews.title : "Vista de Araucária"} 
+                    <img
+                        src={`${displayImage}?v=${cacheBuster}`}
+                        alt="Imagem de destaque - Araucária"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
@@ -59,18 +80,20 @@ const HomePage: React.FC = () => {
                                 <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm">
                                     Destaque do Dia
                                 </span>
-                                <Link to={`/noticias/${featuredNews.id}`} className="block group-hover:opacity-90 transition-opacity py-2">
-                                    {/* Ajuste de tipografia: leading-tight -> leading-snug e py-2 para evitar cortes */}
-                                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-display tracking-tight drop-shadow-lg mb-6 break-words">
+
+                                <Link to={`/noticias/${featuredNews.id}`} className="block transition-opacity py-2 hover:opacity-90">
+                                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 break-words">
                                         {featuredNews.title}
                                     </h1>
                                 </Link>
-                                <p className="text-gray-200 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light drop-shadow-md">
+
+                                <p className="text-gray-100 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light">
                                     {featuredNews.summary}
                                 </p>
+
                                 <div className="flex gap-4">
-                                    <Link 
-                                        to={`/noticias/${featuredNews.id}`} 
+                                    <Link
+                                        to={`/noticias/${featuredNews.id}`}
                                         className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
                                     >
                                         Ler Matéria Completa
@@ -83,8 +106,8 @@ const HomePage: React.FC = () => {
                                 <span className="inline-block py-1 px-3 rounded-full bg-blue-600/80 border border-blue-400/30 text-blue-50 text-sm font-semibold mb-6 backdrop-blur-md shadow-sm">
                                     Bem-vindo a Araucária
                                 </span>
-                                <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight font-display tracking-tight drop-shadow-2xl">
-                                    A Cidade Símbolo<br/>do Paraná
+                                <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-2xl">
+                                    A Cidade Símbolo<br />do Paraná
                                 </h1>
                             </>
                         )}
@@ -93,7 +116,7 @@ const HomePage: React.FC = () => {
             </section>
 
             <div className="space-y-20 sm:space-y-28 py-16 sm:py-24 bg-gradient-to-b from-zinc-900/5 to-transparent dark:from-zinc-900 dark:to-background-dark">
-                
+
                 {/* Ad Placeholder */}
                 <div className="container mx-auto px-4">
                     <AdSpace format="horizontal" />
@@ -115,7 +138,7 @@ const HomePage: React.FC = () => {
                         ))}
                     </div>
                 </section>
-                
+
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 sm:p-12">
                         <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">
@@ -128,13 +151,13 @@ const HomePage: React.FC = () => {
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                           {events.map(event => (
+                            {events.map(event => (
                                 <EventCard key={event.id} event={event} />
-                           ))}
+                            ))}
                         </div>
                     </div>
                 </section>
-                
+
                 {/* Ad Placeholder */}
                 <div className="container mx-auto px-4">
                     <AdSpace format="horizontal" />
@@ -150,14 +173,14 @@ const HomePage: React.FC = () => {
                             Guia comercial <span className="material-icons-outlined text-base">arrow_forward</span>
                         </Link>
                     </div>
-                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {businesses.map(business => (
-                             <BusinessCard key={business.id} business={business} />
+                            <BusinessCard key={business.id} business={business} />
                         ))}
                     </div>
                 </section>
             </div>
-        </div>
+        </div >
     );
 };
 

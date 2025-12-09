@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
+import { getOptimizedImageUrl } from '../services/imageUtils';
 
 interface NewsCardProps {
     article: NewsArticle;
@@ -17,13 +18,16 @@ const colorVariants: { [key: string]: string } = {
 };
 
 // Imagem genérica de cidade/notícia (Fallback seguro)
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=800';
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 border-gray-200';
-    
+
+    // Otimiza a URL inicial
+    const optimizedImageUrl = getOptimizedImageUrl(article.imageUrl, 800);
+
     // Estado para controlar a URL da imagem atual
-    const [imgSrc, setImgSrc] = useState(article.imageUrl);
+    const [imgSrc, setImgSrc] = useState(optimizedImageUrl);
     // Estado para saber se já estamos usando o fallback
     const [isFallback, setIsFallback] = useState(false);
     // Estado para erro final (nem original nem fallback funcionaram)
@@ -31,7 +35,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
     useEffect(() => {
-        setImgSrc(article.imageUrl);
+        setImgSrc(getOptimizedImageUrl(article.imageUrl, 800));
         setIsFallback(false);
         setHasError(false);
     }, [article.imageUrl]);
@@ -53,10 +57,11 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
         <div className="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full hover:-translate-y-1">
             <Link to={`/noticias/${article.id}`} className="block relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800 cursor-pointer">
                 {!hasError ? (
-                    <img 
-                        alt={article.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    <img
+                        alt={article.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         src={imgSrc}
+                        loading="lazy"
                         onError={handleError}
                         referrerPolicy="no-referrer"
                     />
@@ -66,10 +71,10 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                         <span className="text-xs text-gray-400 font-medium">Sem imagem disponível</span>
                     </div>
                 )}
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 left-4">
-                     <span className={`${categoryColorClass} text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border shadow-sm`}>
+                    <span className={`${categoryColorClass} text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border shadow-sm`}>
                         {article.category}
                     </span>
                 </div>
@@ -88,17 +93,17 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                         </div>
                     )}
                 </div>
-                
+
                 <Link to={`/noticias/${article.id}`} className="block">
                     <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
                         {article.title}
                     </h3>
                 </Link>
-                
+
                 <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
                     {article.summary}
                 </p>
-                
+
                 <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
                     <Link to={`/noticias/${article.id}`} className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1 cursor-pointer">
                         Ler artigo <span className="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
