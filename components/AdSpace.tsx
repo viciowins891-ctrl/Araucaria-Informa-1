@@ -12,8 +12,8 @@ declare global {
     }
 }
 
-const AdSpace: React.FC<AdSpaceProps> = ({ 
-    className = "", 
+const AdSpace: React.FC<AdSpaceProps> = ({
+    className = "",
     format = 'horizontal',
     slotId = "1234567890" // ID de exemplo, substitua pelo real do painel AdSense
 }) => {
@@ -21,7 +21,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
 
     // Define o estilo baseado no formato solicitado
     let style: React.CSSProperties = { display: 'block' };
-    
+
     if (format === 'horizontal') {
         style = { ...style, width: '100%', height: '90px' }; // Leaderboard padrão
     } else if (format === 'square') {
@@ -49,7 +49,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
     const isDevelopment = true; // Mude para false quando for para produção com IDs reais
 
     if (isDevelopment) {
-        let dimensions = "h-24 w-full"; 
+        let dimensions = "h-24 w-full";
         if (format === 'square') dimensions = "h-64 w-full max-w-[300px]";
         if (format === 'vertical') dimensions = "h-[600px] w-full max-w-[160px]";
 
@@ -65,7 +65,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
 
     return (
         <div className={`flex justify-center my-8 ${className} overflow-hidden`}>
-            <ins 
+            <ins
                 ref={adRef}
                 className="adsbygoogle"
                 style={style}

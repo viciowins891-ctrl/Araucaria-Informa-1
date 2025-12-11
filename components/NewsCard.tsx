@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
 import { getOptimizedImageUrl } from '../services/imageUtils';
+import { getPlaceholderImage } from '../services/aiService';
 
 interface NewsCardProps {
     article: NewsArticle;
@@ -17,7 +18,7 @@ const colorVariants: { [key: string]: string } = {
     indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 border-indigo-200 dark:border-indigo-800',
 };
 
-// Imagem genérica de cidade/notícia (Fallback seguro)
+// Imagem genérica de cidade/notícia (Fallback seguro) - Mantemos apenas como última opção se a função falhar
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=800';
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
@@ -42,9 +43,9 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     const handleError = () => {
         if (!isFallback) {
-            // Primeira falha: Tenta carregar a imagem de fallback
-            console.warn(`Falha ao carregar imagem: ${article.title}. Tentando fallback.`);
-            setImgSrc(FALLBACK_IMAGE);
+            // Primeira falha: Tenta carregar a imagem de placeholder contextual
+            console.warn(`Falha ao carregar imagem: ${article.title}. Tentando placeholder contextual.`);
+            setImgSrc(getPlaceholderImage(article.category));
             setIsFallback(true);
         } else {
             // Segunda falha (Fallback também falhou): Mostra o placeholder de erro

@@ -8,6 +8,9 @@ import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
+
+import { getPlaceholderImage } from '../services/aiService';
+
 const HomePage: React.FC = () => {
     useEffect(() => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
@@ -43,9 +46,10 @@ const HomePage: React.FC = () => {
         // Fallback final para a imagem local segura se tudo falhar
         console.log("Falha ao carregar imagem principal. Usando fallback local.");
 
-        // Evita loop se o fallback também falhar (mas não deve, pois é local)
-        if (displayImage !== "/images/final_nature.png") {
-            setDisplayImage("/images/final_nature.png");
+        const fallback = featuredNews ? getPlaceholderImage(featuredNews.category) : DEFAULT_HERO_IMAGE;
+
+        if (displayImage !== fallback) {
+            setDisplayImage(fallback);
         }
     };
 

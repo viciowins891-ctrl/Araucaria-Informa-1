@@ -2,7 +2,7 @@
 import { supabase } from './supabaseClient';
 import { newsArticles, events, businesses } from '../data';
 
-const migrateContent = async () => {
+export const migrateContent = async () => {
     console.log('Iniciando migração de conteúdo...');
 
     // Migrar Notícias
@@ -55,4 +55,4 @@ const migrateContent = async () => {
     else console.log('Comércios migrados com sucesso!');
 };
 
-migrateContent();
+

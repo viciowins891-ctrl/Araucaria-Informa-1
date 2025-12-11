@@ -22,8 +22,8 @@ export const newsArticles: NewsArticle[] = [
             <p>A unidade conta com totens de autoatendimento e uma equipe treinada para auxiliar os cidadãos na utilização dos serviços digitais, promovendo também a inclusão digital para aqueles que têm dificuldade com tecnologia.</p>
             <p>O atendimento funciona de segunda a sexta-feira, das 9h às 17h, e aos sábados, das 9h às 13h, mediante agendamento prévio pelo site oficial ou aplicativo.</p>
         `,
-        // URL Corrigida e atualizada para uma imagem genérica de atendimento/serviço público ou escritório moderno
-        imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1000', 
+        // URL Corrigida e atualizada para uma imagem genérica de atendimento/serviço público moderno
+        imageUrl: '/images/poupatempo_fachada.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '05/12/2025',
@@ -42,7 +42,7 @@ export const newsArticles: NewsArticle[] = [
 
             <p>A população já pode usufruir do espaço, que contará com uma agenda cultural especial nos finais de semana, incluindo feiras de artesanato e apresentações musicais.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1548544149-4835e62ee5b3?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/revitalizacao_praca_central.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '15/03/2024',
@@ -61,7 +61,8 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Especialistas do setor de energia apontam que Araucária continua sendo um ponto estratégico para a logística de combustíveis no sul do Brasil, abastecendo não apenas o Paraná, mas também partes de Santa Catarina e Mato Grosso do Sul.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1000',
+        // URL REPAR: Industrial / Refinaria
+        imageUrl: '/images/repar_refinaria_aerea.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '10/04/2024',
@@ -80,7 +81,8 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Além do jogo, haverá uma ação social no intervalo, com sorteio de brindes e arrecadação de alimentos não perecíveis para instituições de caridade locais.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1522778119026-d647f0565c6d?auto=format&fit=crop&q=80&w=1000', 
+        // URL Araucária EC: Futebol / Estádio
+        imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '22/05/2024',
@@ -99,7 +101,7 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Para o próximo ano, a Secretaria de Educação planeja expandir o projeto para mais três escolas, além de incluir novas modalidades de artes marciais.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1578357078586-4917d4b0907d?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '05/06/2024',
@@ -241,7 +243,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O Parque Cachoeira foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
             <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1581092921461-eab62e97a78e?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '05/11/2024',
@@ -394,7 +396,7 @@ export const events: Event[] = [
         id: 2,
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
-        imageUrl: 'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/feira_noturna_v3.png?v=999',
         date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
         time: '18:00 - 22:00',
         location: 'Praça Central'

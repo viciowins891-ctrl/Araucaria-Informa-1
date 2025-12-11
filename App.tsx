@@ -18,7 +18,7 @@ const CommercePage = lazy(() => import('./pages/CommercePage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage')); 
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Páginas Legais e de Suporte
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -27,6 +27,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 // Página Secreta de Administração
 const AdminGeneratorPage = lazy(() => import('./pages/AdminGeneratorPage'));
+
 
 const Layout: React.FC = () => {
     const location = useLocation();
@@ -38,13 +39,15 @@ const Layout: React.FC = () => {
         // Executa a verificação em "background" sem travar a UI
         setTimeout(() => {
             api.checkAndRunBackgroundUpdate();
-        }, 1000); 
+        }, 1000);
     }, []);
 
     // Scroll to top on route change
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
+
+
 
     return (
         <div className="flex flex-col min-h-screen font-body text-text-light dark:text-text-dark bg-background-light dark:bg-background-dark transition-colors duration-300">
@@ -59,9 +62,9 @@ const Layout: React.FC = () => {
                         <Route path="/eventos/:id" element={<EventDetailsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
                         <Route path="/historia" element={<HistoryPage />} />
-                        <Route path="/quem-somos" element={<AboutPage />} /> 
+                        <Route path="/quem-somos" element={<AboutPage />} />
                         <Route path="/newsletter" element={<NewsletterPage />} />
-                        
+
                         {/* Rotas Legais */}
                         <Route path="/privacidade" element={<PrivacyPolicyPage />} />
                         <Route path="/termos" element={<TermsPage />} />
@@ -69,6 +72,7 @@ const Layout: React.FC = () => {
 
                         {/* Rota Secreta do Gerador */}
                         <Route path="/admin" element={<AdminGeneratorPage />} />
+
 
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>

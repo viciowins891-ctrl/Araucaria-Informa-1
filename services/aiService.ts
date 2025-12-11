@@ -1,121 +1,284 @@
 
 import { NewsArticle } from '../types';
 
-// Mock Data de Alta Qualidade para AdSense (Conteúdo Evergreen)
-// Estratégia: Artigos profundos, úteis e locais com imagens reais.
 
-export const generateDeepArticle = async (topic: string = ''): Promise<NewsArticle[]> => {
+// ============================================================================
+// 1. SISTEMA DE IMAGENS CONTEXTUALIZADAS (Curadoria Profissional)
+// ============================================================================
 
+// Função de Placeholder Local (Fallback Seguro)
+// Garante que se o Unsplash falhar, temos uma imagem bonita localmente.
+export const getPlaceholderImage = (category: string): string => {
+    // Normaliza a categoria para garantir o match (e aceita o formato UPPERCASE do usuário)
+    const normalized = category.toUpperCase();
 
-    // Removendo delay artificial para evitar sensação de lentidão
-    // await new Promise(resolve => setTimeout(resolve, 1500));
+    // Mapeamento Inteligente: Categoria Interna/Externa -> Arquivo Local
+    // Note: Arquivos convertidos para .png conforme geração
+    if (normalized.includes('ECONOMIA') || normalized.includes('INDÚSTRIA')) return '/images/placeholder_economia.png';
+    if (normalized.includes('TURISMO') || normalized.includes('LAZER')) return '/images/placeholder_turismo.png';
+    if (normalized.includes('EDUCAÇÃO')) return '/images/placeholder_educacao.png';
+    if (normalized.includes('INFRAESTRUTURA') || normalized.includes('OBRA')) return '/images/placeholder_infraestrutura.png';
+    if (normalized.includes('SEGURANÇA')) return '/images/placeholder_seguranca.png';
+    if (normalized.includes('ESPORTE') || normalized.includes('CULTURA')) return '/images/placeholder_esporte.png';
+    if (normalized.includes('COMÉRCIO') || normalized.includes('VAREJO')) return '/images/placeholder_comercio.png';
 
-    const highQualityArticles: NewsArticle[] = [
-        {
-            id: 1001,
-            title: "O Guia Definitivo do Parque Cachoeira em Araucária",
-            summary: "Descubra trilhas, museus e os melhores horários para visitar o maior cartão postal da nossa cidade. Um guia completo para famílias.",
-            content: `
-                <p>O <strong>Parque Cachoeira</strong> não é apenas um ponto turístico, é o coração verde de Araucária. Localizado próximo ao centro, o parque oferece uma fuga necessária da rotina urbana, com uma infraestrutura que mistura preservação ambiental e história local.</p>
-                
-                <h3>Museu Tingüi-Cuera</h3>
-                <p>Dentro do parque, encontra-se o Museu Tingüi-Cuera, que guarda a memória dos povos originários e dos primeiros imigrantes da região. O acervo conta com ferramentas antigas, teares e fotografias que narram a evolução da nossa indústria e sociedade.</p>
-
-                <h3>Trilhas e Lazer</h3>
-                <p>Para quem gosta de caminhadas, as trilhas pavimentadas ao redor do lago são perfeitas. É comum encontrar capivaras e diversas espécies de aves nativas. O parque também conta com churrasqueiras (necessário reserva antecipada) e playgrounds para as crianças.</p>
-                
-                <h3>Horário de Funcionamento</h3>
-                <p>O parque abre todos os dias, das 6h às 21h. A entrada é gratuita. Recomenda-se levar repelente nos dias mais quentes e chegar cedo aos finais de semana para garantir um bom lugar nos quiosques.</p>
-            `,
-            category: "Turismo",
-            categoryColor: "indigo",
-            publishDate: new Date().toLocaleDateString('pt-BR'),
-            author: "Redação Araucária Informa",
-            imageUrl: "/images/final_nature.png", // Foto Real Local Verificada (Anti-Chicago)
-
-            sourceName: "Guia Oficial de Turismo",
-            sourceUrl: ""
-        },
-        {
-            id: 1002,
-            title: "REPAR: O Impacto Econômico da Refinaria em Nossa Cidade",
-            summary: "Entenda como a Refinaria Presidente Getúlio Vargas moldou o desenvolvimento de Araucária e sua importância no cenário nacional.",
-            content: `
-                <p>A <strong>Refinaria Presidente Getúlio Vargas (REPAR)</strong>, inaugurada na década de 70, transformou Araucária de uma pequena cidade agrícola em um polo industrial gigante. Responsável por cerca de 12% da produção de derivados de petróleo do Brasil, a REPAR é o motor econômico da região.</p>
-                
-                <h3>Geração de Empregos</h3>
-                <p>Direta e indiretamente, a refinaria movimenta milhares de postos de trabalho. Desde engenheiros petroquímicos até o setor de serviços e transporte, a economia local gira em torno deste gigante. O ISS gerado pela planta é fundamental para o orçamento municipal, financiando saúde e educação.</p>
-
-                <h3>Desafios e Futuro</h3>
-                <p>Com as novas diretrizes de energia limpa, a REPAR vem se modernizando. Projetos de eficiência energética e controle de emissões são pautas constantes, garantindo que o desenvolvimento econômico não custe a qualidade de vida dos araucarienses.</p>
-                
-                <p>Morar em Araucária é conviver com a história da industrialização brasileira, vendo de perto as torres que processam o combustível que move o país.</p>
-            `,
-            category: "Economia", // Mapeado para blue ou purple
-            categoryColor: "blue",
-            publishDate: new Date().toLocaleDateString('pt-BR'),
-            author: "Economia em Pauta",
-            imageUrl: "https://images.unsplash.com/photo-1518709779341-56cf85360843?auto=format&fit=crop&q=80&w=1000", // Foto industrial 'cinemática'
-            sourceName: "Dados Econômicos Locais",
-            sourceUrl: ""
-        },
-        {
-            id: 1003,
-            title: "Educação em Alta: CMEIs de Araucária são Referência",
-            summary: "Investimentos em infraestrutura e pedagogia colocam a educação infantil do município entre as melhores da região metropolitana.",
-            content: `
-                <p>A educação pública de Araucária tem se destacado. Com a inauguração de novos <strong>CMEIs (Centros Municipais de Educação Infantil)</strong>, a cidade busca zerar a fila de espera e oferecer ensino de qualidade desde os primeiros passos.</p>
-                
-                <h3>Estrutura Moderna</h3>
-                <p>As novas unidades no Jardim Iguaçu e Costeira contam com salas climatizadas, refeitórios adaptados e parques seguros. O investimento não é apenas em tijolo, mas em gente: a capacitação contínua dos professores tem sido prioridade da secretaria.</p>
-
-                <h3>Alimentação Escolar</h3>
-                <p>Um ponto forte é a merenda. Com acompanhamento nutricional rigoroso e produtos vindos da agricultura familiar local, as crianças recebem uma alimentação balanceada, fundamental para o desenvolvimento cognitivo nesta fase.</p>
-            `,
-            category: "Educação",
-            categoryColor: "red",
-            publishDate: new Date().toLocaleDateString('pt-BR'),
-            author: "Secretaria de Educação",
-            imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000", // Foto de escola/crianças
-            sourceName: "Portal da Transparência",
-            sourceUrl: ""
-        },
-        {
-            id: 1004,
-            title: "Segurança: Nova Iluminação LED Reduz Ocorrências nos Bairros",
-            summary: "Programa de modernização da iluminação pública traz mais segurança e economia para as ruas de Araucária.",
-            content: `
-                <p>Araucária está mais clara e segura. O programa de substituição das antigas lâmpadas de sódio (amarelas) por <strong>tecnologia LED</strong> já atingiu 80% dos bairros. A mudança não é apenas estética, mas um fator crucial de segurança pública.</p>
-                
-                <h3>Economia aos Cofres Públicos</h3>
-                <p>Além de iluminar melhor, o LED consome até 60% menos energia. Essa economia na conta de luz da prefeitura permite reinvestimentos em outras áreas, como a Guarda Municipal e monitoramento por câmeras.</p>
-
-                <h3>Sensação de Segurança</h3>
-                <p>Locais como o Capela Velha e Thomson, antes escuros, agora contam com visibilidade plena à noite. "Agora dá pra caminhar na praça com a família depois do trabalho", relata um morador do Campina da Barra.</p>
-            `,
-            category: "Segurança",
-            categoryColor: "red",
-            publishDate: new Date().toLocaleDateString('pt-BR'),
-            author: "Redação Araucária Informa",
-            imageUrl: "https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&q=80&w=1000", // Foto de luzes/polícia
-            sourceName: "Segurança Pública",
-            sourceUrl: ""
-        }
-    ];
-
-    // Simula uma rotação de notícias baseada no "tópico" se houver, ou retorna todas
-    if (topic) {
-        return highQualityArticles.filter(a =>
-            a.title.toLowerCase().includes(topic.toLowerCase()) ||
-            a.content.toLowerCase().includes(topic.toLowerCase())
-        );
-    }
-
-    // Retorna mistura para parecer dinâmico
-    return highQualityArticles;
+    // Default seguro
+    return '/images/placeholder_default.png';
 };
 
-// Mantemos a função de exportação para compatibilidade
-export const fetchWeeklyNewsWithAI = async () => {
-    return generateDeepArticle();
+// Banco de Imagens Curado: Estilo Jornalístico, Sem Pessoas (focado em objetos/cenários), Alta Resolução
+// Mapeia Tópicos -> Lista de IDs do Unsplash garantidos
+const IMAGE_DB: Record<string, string[]> = {
+
+    'Política': [
+        'https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&q=80&w=1000', // Prédio governamental abstrato / Caneta
+        'https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&q=80&w=1000', // Documentos / Martelo
+        'https://images.unsplash.com/photo-1529101091760-6149d4c46b95?auto=format&fit=crop&q=80&w=1000'  // Fachada clássica
+    ],
+    'Economia': [
+        'https://images.unsplash.com/photo-1611974765270-ca1258822981?auto=format&fit=crop&q=80&w=1000', // Gráfico financeiro (azul/clean)
+        'https://images.unsplash.com/photo-1565514020176-dbf2277cc16d?auto=format&fit=crop&q=80&w=1000', // Moedas / Calculadora
+        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1000'  // Ambiente corporativo abstrato
+    ],
+    'Segurança': [
+        'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000', // Viatura (detalhe/luzes)
+        'https://images.unsplash.com/photo-1455735459330-969720ae058c?auto=format&fit=crop&q=80&w=1000', // Cadeado digital
+        'https://images.unsplash.com/photo-1590422749870-13a83017a224?auto=format&fit=crop&q=80&w=1000'  // Câmera de segurança
+    ],
+    'Trânsito': [
+        'https://images.unsplash.com/photo-1569629743817-70d8db6c323b?auto=format&fit=crop&q=80&w=1000', // Rodovia noturna (longa exposição)
+        'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&q=80&w=1000', // Semáforo
+        'https://images.unsplash.com/photo-1563299796-b729d0af54a5?auto=format&fit=crop&q=80&w=1000' // Cone de trânsito / Obras
+    ],
+    'Meio ambiente': [
+        'https://images.unsplash.com/photo-1542601906990-24d4c16419d0?auto=format&fit=crop&q=80&w=1000', // Folha / Reciclagem
+        'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000', // Campo verde
+        'https://images.unsplash.com/photo-1611273426728-6536b694ddda?auto=format&fit=crop&q=80&w=1000' // Rio limpo
+    ],
+    'Clima': [
+        'https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80&w=1000', // Céu nublado / Tempestade
+        'https://images.unsplash.com/photo-1504386106331-1fd61157add3?auto=format&fit=crop&q=80&w=1000', // Sol forte
+        'https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&q=80&w=1000' // Chuva na janela
+    ],
+    'Tecnologia': [
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000', // Circuito / Chip
+        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000', // Rede digital / Globo
+        'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000' // Código / Matrix
+    ],
+    'Educação': [
+        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000', // Lápis / Livros
+        'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000', // Biblioteca moderna
+        'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&q=80&w=1000' // Mesa de estudo
+    ],
+    'Saúde': [
+        'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=1000', // Estetoscópio
+        'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1000', // Ambiente hospitalar clean
+        'https://images.unsplash.com/photo-1584036561566-b93a901668d4?auto=format&fit=crop&q=80&w=1000' // Microscópio / Laboratório
+    ],
+    'Energia': [
+        'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1000', // Lâmpada ideia / LED
+        'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=1000', // Painel Solar / Eólica
+        'https://images.unsplash.com/photo-1569762825000-c971033d5966?auto=format&fit=crop&q=80&w=1000' // Torres de transmissão
+    ],
+    'Transporte': [
+        'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=1000', // Ônibus moderno
+        'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&q=80&w=1000', // Ponto de ônibus / Terminal
+        'https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?auto=format&fit=crop&q=80&w=1000' // Trem / Trilho
+    ],
+    'Eventos locais': [
+        'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1000', // Plateia desfocada
+        'https://images.unsplash.com/photo-1514525253440-b393452e3383?auto=format&fit=crop&q=80&w=1000', // Palco / Luzes
+        'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&q=80&w=1000' // Confete / Celebração
+    ],
+    'Infraestrutura': [
+        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1000', // Construção / Guindaste
+        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000', // Pavimentação / Obra
+        'https://images.unsplash.com/photo-1590486803833-1c5dc8ce4721?auto=format&fit=crop&q=80&w=1000' // Ponte / Concreto
+    ],
+    'Geral': [
+        'https://images.unsplash.com/photo-1449824913929-2b3a3e36e65b?auto=format&fit=crop&q=80&w=1000'  // Cidade vista de cima (neutra)
+    ]
+};
+
+// Palavras-chave para detecção
+const KEYWORDS: Record<string, string[]> = {
+    'Política': ['câmara', 'prefeito', 'vereador', 'lei', 'decreto', 'votação', 'eleição', 'posse', 'mandato'],
+    'Economia': ['dinheiro', 'imposto', 'repar', 'indústria', 'emprego', 'vaga', 'loja', 'varejo', 'investimento', 'PIB'],
+    'Segurança': ['polícia', 'guarda', 'segurança', 'roubo', 'furto', 'crime', 'delegacia', 'viatura', 'arma'],
+    'Trânsito': ['trânsito', 'carro', 'ônibus', 'rua', 'avenida', 'semáforo', 'acidente', 'engarrafamento', 'multa'],
+    'Meio ambiente': ['árvore', 'rio', 'lixo', 'reciclagem', 'preservação', 'parque', 'animais', 'poluição'],
+    'Clima': ['chuva', 'sol', 'frio', 'calor', 'tempestade', 'tempo', 'previsão', 'granizo'],
+    'Tecnologia': ['internet', 'app', 'aplicativo', 'wifi', '5g', 'computador', 'celular', 'digital', 'inovação'],
+    'Educação': ['escola', 'aluno', 'professor', 'aula', 'curso', 'cmei', 'faculdade', 'ensino', 'matrícula'],
+    'Saúde': ['hospital', 'médico', 'vacina', 'doença', 'paciente', 'ubs', 'remédio', 'saúde', 'dengue'],
+    'Energia': ['luz', 'copel', 'apagão', 'poste', 'energia', 'elétrica', 'solar', 'consumo'],
+    'Transporte': ['triar', 'terminal', 'passageiro', 'linha', 'cartão'],
+    'Eventos locais': ['festa', 'show', 'feira', 'festival', 'evento', 'teatro', 'cinema', 'música'],
+    'Infraestrutura': ['obra', 'buraco', 'asfalto', 'pavimentação', 'ponte', 'viaduto', 'construção'],
+};
+
+// ============================================================================
+// 2. FUNÇÕES DE PROCESSAMENTO
+// ============================================================================
+
+/**
+ * Detecta o tema principal da notícia com base no título e conteúdo.
+ * Retorna uma das categorias oficiais do sistema.
+ */
+export const detectTopic = (title: string, content: string): string => {
+    const fullText = `${title} ${content}`.toLowerCase();
+    let bestMatch = 'Geral';
+    let maxCount = 0;
+
+    for (const [topic, words] of Object.entries(KEYWORDS)) {
+        let count = 0;
+        words.forEach(word => {
+            if (fullText.includes(word)) count++;
+        });
+
+        if (count > maxCount) {
+            maxCount = count;
+            bestMatch = topic;
+        }
+    }
+
+    // Fallback inteligente para termos muito fortes
+    if (fullText.includes('repar') || fullText.includes('petrobras')) return 'Economia';
+    if (fullText.includes('parque cachoeira')) return 'Meio ambiente';
+
+    return bestMatch;
+};
+
+/**
+ * Gera uma imagem 100% contextualizada baseada no Tópico detectado.
+ * Seleciona aleatoriamente do pool curado para garantir variedade e qualidade.
+ */
+export const generateContextualImage = (topic: string): string => {
+    const images = IMAGE_DB[topic] || IMAGE_DB['Geral'];
+    // Hash do dia para variar imagem mas manter consistência no mesmo update
+    const randomIdx = Math.floor(Math.random() * images.length);
+    return images[randomIdx];
+};
+
+
+// ============================================================================
+// 3. SIMULAÇÃO DE UPDATE SEMANAL (Conteúdo Fresco)
+// ============================================================================
+
+const WEEKLY_TEMPLATES = [
+    {
+        title: "Prefeitura anuncia novo pacote de obras em {bairro}",
+        summary: "Investimento de R$ 5 milhões promete renovar a malha viária e construir nova praça.",
+        content: "A Secretaria de Obras deu início nesta semana a um ambicioso projeto de revitalização...",
+        baseCategory: "Infraestrutura"
+    },
+    {
+        title: "Campanha de conscientização sobre {tema} começa segunda-feira",
+        summary: "Ação conjunta entre secretarias visa informar a população e prevenir problemas futuros.",
+        content: "Equipes estarão nas ruas distribuindo material informativo...",
+        baseCategory: "Saúde"
+    },
+    {
+        title: "Indústria local abre {numero} novas vagas de emprego",
+        summary: "Oportunidades são para diversos níveis de escolaridade. Saiba como se candidatar.",
+        content: "O setor industrial de Araucária continua aquecido. Uma grande multinacional...",
+        baseCategory: "Economia"
+    }
+];
+
+const BAIRROS = ['Jardim Iguaçu', 'Costeira', 'Campina da Barra', 'Centro', 'Capela Velha'];
+const TEMAS_SAUDE = ['Dengue', 'Vacinação', 'Saúde Mental', 'Diabetes'];
+
+/**
+ * Gera um prompt de imagem otimizado com base na categoria e título.
+ * Define o foco visual específico para manter a identidade do Araucária Informa.
+ */
+export const generateImagePrompt = (title: string, category: string): string => {
+    let visualFocus = "";
+    // Normaliza a categoria para facilitar o match
+    const normCategory = category.toUpperCase();
+
+    // Mapeamento de Foco Visual para as 7 Categorias do Araucária Informa
+    if (normCategory.includes('ECONOMIA') || normCategory.includes('INDÚSTRIA')) {
+        visualFocus = "Fotografia de drone, vista da Refinaria REPAR ou silhuetas industriais. Tom azul e cinza.";
+    } else if (normCategory.includes('TURISMO') || normCategory.includes('LAZER') || normCategory.includes('MEIO AMBIENTE')) {
+        visualFocus = "Paisagem natural, Araucárias, Parque Cachoeira ou turismo rural. Cores vibrantes.";
+    } else if (normCategory.includes('EDUCAÇÃO') || normCategory.includes('ESCOLA')) {
+        visualFocus = "Crianças em atividades escolares (Robótica ou leitura), infraestrutura de CMEI moderno.";
+    } else if (normCategory.includes('INFRAESTRUTURA') || normCategory.includes('OBRA') || normCategory.includes('TRÂNSITO')) {
+        visualFocus = "Obras urbanas, novas ciclovias, ruas com iluminação LED ou serviços públicos modernos.";
+    } else if (normCategory.includes('SEGURANÇA')) {
+        visualFocus = "Câmeras de monitoramento inteligente ou Guarda Municipal (GM) em ação. Foco em tecnologia.";
+    } else if (normCategory.includes('ESPORTE') || normCategory.includes('CULTURA') || normCategory.includes('EVENTOS')) {
+        visualFocus = "Ginásio Joval de Paula Souza, palco de festival de teatro ou jogo de futebol. Cena comunitária e dinâmica.";
+    } else if (normCategory.includes('COMÉRCIO') || normCategory.includes('VAREJO')) {
+        visualFocus = "Vitrine de loja de Araucária ou comércio de rua, com foco em incentivo local. Foto convidativa.";
+    } else {
+        // Prompt genérico para categorias desconhecidas
+        visualFocus = "Cena urbana de Araucária, representando notícias locais. Alta resolução.";
+    }
+
+    // Combina o título específico da notícia com o foco visual da categoria
+    return `Gere uma imagem com estilo de fotografia jornalística. Título do artigo: "${title}". Foco Visual: ${visualFocus}`;
+};
+
+/**
+ * Simula a busca de novas notícias "confirmadas" (Geradas via Templates para demo)
+ */
+export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
+    console.log("[AI Service] Buscando notícias da semana...");
+
+    // Simula delay de rede
+    await new Promise(r => setTimeout(r, 800));
+
+    // Gera 1 notícia nova baseada na semana atual
+    const weekNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
+    const templateIdx = weekNumber % WEEKLY_TEMPLATES.length;
+    const template = WEEKLY_TEMPLATES[templateIdx];
+
+    // Preenche variáveis do template
+    let finalTitle = template.title;
+    if (finalTitle.includes('{bairro}')) finalTitle = finalTitle.replace('{bairro}', BAIRROS[weekNumber % BAIRROS.length]);
+    if (finalTitle.includes('{tema}')) finalTitle = finalTitle.replace('{tema}', TEMAS_SAUDE[weekNumber % TEMAS_SAUDE.length]);
+    if (finalTitle.includes('{numero}')) finalTitle = finalTitle.replace('{numero}', (30 + (weekNumber % 10) * 5).toString());
+
+    // Processamento Inteligente
+    const detectedTopic = detectTopic(finalTitle, template.content);
+
+    // GERAÇÃO DE PROMPT (Simulação de IA Real)
+    // Aqui usamos a lógica nova para "construir" o pedido da imagem, mesmo que no final usemos o banco curado.
+    const imagePrompt = generateImagePrompt(finalTitle, detectedTopic);
+    console.log(`[AI PROMPT GEN]: ${imagePrompt}`);
+
+    const contextualImage = generateContextualImage(detectedTopic);
+
+    // Mapeia categoria visual (cores do UI)
+    const categoryColorMap: Record<string, string> = {
+        'Economia': 'blue', 'Saúde': 'red', 'Infraestrutura': 'purple',
+        'Segurança': 'red', 'Educação': 'yellow', 'Meio ambiente': 'green',
+        'Tecnologia': 'indigo'
+    };
+
+    const newArticle: NewsArticle = {
+        id: 2000 + weekNumber, // ID único por semana
+        title: finalTitle,
+        summary: template.summary,
+        content: `<p>${template.content}</p><p>Mais detalhes serão divulgados no Diário Oficial.</p>`,
+        category: detectedTopic, // Usa o tópico detectado como categoria exibida
+        categoryColor: categoryColorMap[detectedTopic] || 'blue',
+        publishDate: new Date().toLocaleDateString('pt-BR'),
+        author: "Sistema de Atualização Semanal",
+        imageUrl: contextualImage,
+        sourceName: "Notícias Oficiais",
+        sourceUrl: ""
+    };
+
+    console.log(`[AI Service] Notícia Gerada: [${detectedTopic}] ${finalTitle}`);
+    console.log(`[AI Service] Imagem Aplicada: ${contextualImage}`);
+
+    return [newArticle];
+};
+
+export const generateDeepArticle = async (topic: string = ''): Promise<NewsArticle[]> => {
+    return fetchWeeklyNewsWithAI();
 };

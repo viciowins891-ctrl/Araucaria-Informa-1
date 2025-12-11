@@ -6,7 +6,7 @@ export function useFetch<T>(fetchFunction: () => Promise<T>) {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-    
+
     // Ref para rastrear se o componente está montado
     const isMounted = useRef(true);
 
@@ -20,7 +20,7 @@ export function useFetch<T>(fetchFunction: () => Promise<T>) {
         // Reinicia estados
         setLoading(true);
         setError(null);
-        
+
         try {
             const result = await fetchFunction();
             // Só atualiza o estado se o componente ainda estiver montado
