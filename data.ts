@@ -434,7 +434,7 @@ export const businesses: Business[] = [
         id: 1,
         name: 'Panificadora e Confeitaria Araucária',
         category: 'Alimentação',
-        imageUrl: 'https://images.unsplash.com/photo-1556217477-d325251ece38?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/panificadora_araucaria_real.jpg',
         address: 'Rua das Flores, 123 - Centro',
         phone: '(41) 3901-2345',
         website: 'padariaexemplo.com.br',

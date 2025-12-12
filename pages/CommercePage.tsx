@@ -5,6 +5,7 @@ import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
 import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import RegistrationModal from '../components/RegistrationModal';
 
 const CommercePage: React.FC = () => {
     useEffect(() => {
@@ -12,6 +13,7 @@ const CommercePage: React.FC = () => {
     }, []);
 
     const [selectedCategory, setSelectedCategory] = useState('Todas');
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const { data: businesses, loading, error } = useFetch(api.getBusinesses);
 
     const filteredBusinesses = useMemo(() => {
@@ -49,7 +51,10 @@ const CommercePage: React.FC = () => {
                         Tudo o que você precisa, pertinho de você.
                     </p>
 
-                    <button className="inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-primary/50 ring-4 ring-primary/20">
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-primary/50 ring-4 ring-primary/20"
+                    >
                         <span className="material-icons-outlined">storefront</span>
                         Divulgue seu Negócio
                     </button>
@@ -176,7 +181,10 @@ const CommercePage: React.FC = () => {
                         Junte-se a centenas de empresas que já estão conectadas. O Araucária Informa é a vitrine digital que faltava para impulsionar suas vendas.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-white text-primary-dark font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-lg">
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="bg-white text-primary-dark font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
+                        >
                             Cadastrar Grátis
                         </button>
                         <button className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white/10 transition-all text-lg">
@@ -188,6 +196,7 @@ const CommercePage: React.FC = () => {
                     </p>
                 </div>
             </div>
+            <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
     );
 };

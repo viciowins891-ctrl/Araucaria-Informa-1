@@ -170,7 +170,7 @@ export const api = {
 
         return (data || []).map((b: any) => ({
             ...b,
-            imageUrl: b.imageurl
+            imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.imageurl
         }));
     },
 
