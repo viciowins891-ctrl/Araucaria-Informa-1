@@ -11,16 +11,24 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 async function cleanDatabase() {
     console.log('Iniciando limpeza do banco de dados...');
 
-    const { error } = await supabase
+
+    const { error: errorNews } = await supabase
         .from('news_articles')
         .delete()
-        .neq('id', 0); // Deleta tudo que não for ID 0 (todos)
+        .neq('id', 0);
 
-    if (error) {
-        console.error('Erro ao limpar banco:', error);
-    } else {
-        console.log('Banco de dados limpo com sucesso! Todas as notícias antigas (e erradas) foram removidas.');
-    }
+    if (errorNews) console.error('Erro ao limpar notícias:', errorNews);
+    else console.log('Notícias limpas.');
+
+    const { error: errorEvents } = await supabase
+        .from('events')
+        .delete()
+        .neq('id', 0);
+
+    if (errorEvents) console.error('Erro ao limpar eventos:', errorEvents);
+    else console.log('Eventos limpos.');
+
+    console.log('Banco de dados resetado. O app passará a usar os dados locais (data.ts) atualizados.');
 }
 
 cleanDatabase();

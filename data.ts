@@ -13,6 +13,22 @@ const getUpcomingDate = (daysFromNow: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 24,
+        title: 'Prefeitura anuncia novo pacote de obras em Capela Velha',
+        summary: 'Investimento milionário contempla pavimentação, drenagem e nova iluminação em diversas ruas do bairro.',
+        content: `
+            <p>A Prefeitura de Araucária lançou nesta terça-feira um ambicioso pacote de obras voltado para o bairro Capela Velha. Com um investimento previsto de R$ 15 milhões, o projeto visa transformar a infraestrutura local e melhorar a qualidade de vida dos moradores.</p>
+            <p>Entre as principais intervenções estão a pavimentação asfáltica de 10 quilômetros de vias, a implantação de um novo sistema de drenagem para combater alagamentos históricos e a instalação de iluminação em LED em todo o bairro.</p>
+            <p>"O Capela Velha cresceu muito e precisava dessa atenção. Essas obras vão valorizar os imóveis e trazer mais segurança para todos", afirmou o prefeito durante a solenidade de assinatura da ordem de serviço.</p>
+            <p>As obras devem começar já na próxima semana, com previsão de conclusão em 12 meses. O trânsito em algumas ruas será desviado, e á orientada a atenção aos motoristas.</p>
+        `,
+        imageUrl: '/images/pacote_obras_capela_velha.jpg',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        publishDate: '12/12/2025',
+        author: 'Redação Municipal'
+    },
+    {
         id: 23,
         title: 'Governador inaugura Poupatempo em Araucária para modernizar serviços públicos',
         summary: 'A primeira unidade de rua do Poupatempo Paraná foi inaugurada em Araucária, oferecendo cerca de 240 serviços presenciais e digitais e um atendimento humanizado para a população.',
@@ -82,7 +98,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além do jogo, haverá uma ação social no intervalo, com sorteio de brindes e arrecadação de alimentos não perecíveis para instituições de caridade locais.</p>
         `,
         // URL Araucária EC: Futebol / Estádio
-        imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/araucaria_ec_jogo.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '22/05/2024',
@@ -101,7 +117,7 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Para o próximo ano, a Secretaria de Educação planeja expandir o projeto para mais três escolas, além de incluir novas modalidades de artes marciais.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1578357078586-4917d4b0907d?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/judo_escolas_real.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '05/06/2024',
@@ -120,7 +136,7 @@ export const newsArticles: NewsArticle[] = [
             
             <p>"Queremos usar a tecnologia para facilitar a vida do cidadão, seja garantindo acesso à informação ou melhorando a mobilidade urbana", destacou o diretor de Tecnologia da Informação do município.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/araucaria_smart_city.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '12/08/2024',
@@ -154,7 +170,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As unidades básicas de saúde funcionaram em horário estendido durante a última semana para garantir que trabalhadores pudessem se vacinar. "A conscientização da população foi fundamental. Vacinas salvam vidas", reforçou a diretora de epidemiologia.</p>
             <p>Ainda há doses disponíveis para a população geral em todas as UBS do município. É necessário apresentar documento com foto e carteirinha de vacinação.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1632613713312-3026338e5557?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/vacinacao_meta_2024.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '02/10/2024',
@@ -184,7 +200,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além da pavimentação exclusiva para bicicletas, o projeto inclui iluminação específica e sinalização reforçada nos cruzamentos. A previsão é que as obras sejam concluídas em 4 meses.</p>
             <p>A iniciativa faz parte do Plano de Mobilidade Urbana, que visa reduzir o tráfego de veículos pesados e incentivar o transporte ativo.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1528629297340-d1d46694574e?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/ciclovia_industrial.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '20/10/2024',
@@ -199,7 +215,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Segundo o cronograma, as ruas principais serão atendidas prioritariamente para garantir o fluxo do transporte coletivo. Em seguida, as equipes entrarão nas vias secundárias.</p>
             <p>Moradores podem solicitar reparos através do aplicativo oficial da prefeitura ou pelo telefone da ouvidoria.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/tapa_buracos_real_final.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '25/10/2024',
@@ -214,7 +230,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além dos veículos, foram entregues novos coletes balísticos e rádios de comunicação digital. "Com esses equipamentos, conseguiremos reduzir o tempo de resposta às ocorrências", afirmou o comandante da GM.</p>
             <p>As novas viaturas já estão em circulação nos bairros com maior índice de criminalidade.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/viaturas_gm_real.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '28/10/2024',
@@ -271,7 +287,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um mutirão de limpeza realizado nas margens do Rio Iguaçu, no trecho que corta Araucária, resultou na retirada de mais de 5 toneladas de resíduos sólidos. A ação contou com a participação de 100 voluntários, incluindo escoteiros e moradores ribeirinhos.</p>
             <p>Entre os itens encontrados estavam pneus, plásticos e até móveis velhos. A Secretaria de Meio Ambiente apoiou a ação com caminhões para o transporte correto do material recolhido.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1618477461853-586eff3f7280?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/limpeza_rio_iguacu_real.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '12/11/2024',
@@ -314,7 +330,8 @@ export const newsArticles: NewsArticle[] = [
             <p>"Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo. O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
             <p>A rota do Guajuvira é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=1000',
+        // URL Turismo Rural
+        imageUrl: '/images/rota_turismo_rural.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '20/11/2024',
@@ -329,7 +346,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"A ideia surgiu da nossa própria necessidade de saber se nossos irmãos menores tinham chegado bem à escola", conta um dos fundadores, estudante de Análise de Sistemas da facear.</p>
             <p>O aplicativo já está sendo testado por 15 motoristas de van da cidade e tem recebido feedback positivo pela facilidade de uso e precisão do GPS.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1512428559087-560fa5ce7d5b?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/startup_app_real.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '22/11/2024',
@@ -359,7 +376,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
             <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be3852f92?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/hackathon_real.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '26/11/2024',
@@ -374,7 +391,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As trilhas possuem diferentes níveis de dificuldade e são guiadas por biólogos que explicam sobre a flora e fauna local. O local também montou uma estrutura para observação de aves (birdwatching), atraindo fotógrafos de natureza.</p>
             <p>Após a caminhada, os visitantes podem desfrutar de um café colonial com produtos feitos na própria fazenda.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/sitio_ecologico_trilhas.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '27/11/2024',
@@ -387,7 +404,7 @@ export const events: Event[] = [
         id: 1,
         title: 'Festa do Pêssego',
         description: 'A tradicional celebração da colheita com a melhor gastronomia polonesa e shows regionais.',
-        imageUrl: 'https://images.unsplash.com/photo-1595123550441-d377e017de6a?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/festa_pessego_real.jpg',
         date: getUpcomingDate(5), // Daqui a 5 dias (Futuro)
         time: '18:00 - 23:00',
         location: 'Parque Cachoeira'
@@ -396,7 +413,7 @@ export const events: Event[] = [
         id: 2,
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
-        imageUrl: '/images/feira_noturna_v3.png?v=999',
+        imageUrl: '/images/feira_noturna_real_v2.jpg',
         date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
         time: '18:00 - 22:00',
         location: 'Praça Central'
@@ -420,7 +437,9 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1556217477-d325251ece38?auto=format&fit=crop&q=80&w=1000',
         address: 'Rua das Flores, 123 - Centro',
         phone: '(41) 3901-2345',
-        website: 'padariaexemplo.com.br'
+        website: 'padariaexemplo.com.br',
+        description: 'Pães artesanais, tortas e doces finos. O melhor café da manhã da cidade.',
+        isFeatured: true
     },
     {
         id: 2,
@@ -429,7 +448,8 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=1000',
         address: 'Av. Victor do Amaral, 456',
         phone: '(41) 3901-6789',
-        website: 'livrariaexemplo.com.br'
+        website: 'livrariaexemplo.com.br',
+        description: 'Acervo completo de livros novos e usados, vinis e raridades.'
     },
     {
         id: 3,
@@ -438,7 +458,8 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&q=80&w=1000',
         address: 'Rodovia do Xisto, 789',
         phone: '(41) 3901-1011',
-        website: 'mecanicaexemplo.com.br'
+        website: 'mecanicaexemplo.com.br',
+        description: 'Serviços completos de mecânica, elétrica e funilaria para seu veículo.'
     },
     {
         id: 4,
@@ -447,7 +468,9 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000',
         address: 'Rua São Vicente, 200 - Centro',
         phone: '(41) 3642-0000',
-        website: 'academiacm.com.br'
+        website: 'academiacm.com.br',
+        description: 'Estrutura completa para musculação, crossfit e aulas de dança.',
+        isFeatured: true
     },
     {
         id: 5,
@@ -456,7 +479,8 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=1000',
         address: 'Av. Archelau de Almeida Torres, 500',
         phone: '(41) 3643-9999',
-        website: 'farmaciasaude.com.br'
+        website: 'farmaciasaude.com.br',
+        description: 'Medicamentos, perfumaria e manipulação com os melhores preços.'
     },
     {
         id: 6,
@@ -465,7 +489,8 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1000',
         address: 'Rua Miguel Bertolino Pizatto, 88',
         phone: '(41) 3901-5555',
-        website: 'petshopamigo.com.br'
+        website: 'petshopamigo.com.br',
+        description: 'Banho, tosa e clínica veterinária 24 horas para seu melhor amigo.'
     },
     {
         id: 7,
@@ -474,7 +499,8 @@ export const businesses: Business[] = [
         imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1000',
         address: 'Rua Pedro Druszcz, 150',
         phone: '(41) 3642-7777',
-        website: 'sabordaterra.com.br'
+        website: 'sabordaterra.com.br',
+        description: 'Buffet por quilo e à la carte com o melhor da comida caseira.'
     }
 ];
 

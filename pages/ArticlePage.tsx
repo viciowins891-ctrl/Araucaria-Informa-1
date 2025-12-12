@@ -1,11 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
-import NewsCard from '../components/NewsCard'; // Importação necessária
+import NewsCard from '../components/NewsCard';
 
 // Imagem segura para caso a original quebre
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -14,11 +14,15 @@ const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [article, setArticle] = useState<NewsArticle | null>(null);
-    const [relatedArticles, setRelatedArticles] = useState<NewsArticle[]>([]); // Estado para notícias relacionadas
+    const [relatedArticles, setRelatedArticles] = useState<NewsArticle[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [imgSrc, setImgSrc] = useState<string>('');
     const [imageError, setImageError] = useState(false);
+
+    // UI States
+    const [readingProgress, setReadingProgress] = useState(0);
+    const [showShareToast, setShowShareToast] = useState(false);
 
     useEffect(() => {
         const fetchArticleAndRelated = async () => {
@@ -31,12 +35,11 @@ const ArticlePage: React.FC = () => {
                     setImgSrc(currentArticle.imageUrl);
                     setImageError(false);
 
-                    // Busca notícias relacionadas (mock: pega as 3 primeiras que não são a atual)
-                    // Num cenário real, filtraria por categoria ou tags
+                    // Busca notícias relacionadas
                     const allNews = await api.getNews();
                     const others = allNews
                         .filter(item => item.id !== currentArticle.id)
-                        .slice(0, 3); // Pega 3 notícias para sugerir
+                        .slice(0, 3);
                     setRelatedArticles(others);
 
                 } else {
@@ -53,23 +56,43 @@ const ArticlePage: React.FC = () => {
         window.scrollTo(0, 0);
     }, [id]);
 
+    // Reading Progress Listener
+    useEffect(() => {
+        const updateReadingProgress = () => {
+            const currentScroll = window.scrollY;
+            const scrollHeight = document.body.scrollHeight - window.innerHeight;
+            if (scrollHeight) {
+                setReadingProgress(Number((currentScroll / scrollHeight).toFixed(2)) * 100);
+            }
+        };
+
+        window.addEventListener('scroll', updateReadingProgress);
+        return () => window.removeEventListener('scroll', updateReadingProgress);
+    }, []);
+
     const handleImageError = () => {
         if (!imageError) {
-             setImgSrc(FALLBACK_IMAGE);
-             setImageError(true);
+            setImgSrc(FALLBACK_IMAGE);
+            setImageError(true);
         }
+    };
+
+    const handleShare = () => {
+        navigator.clipboard.writeText(window.location.href);
+        setShowShareToast(true);
+        setTimeout(() => setShowShareToast(false), 3000);
     };
 
     if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
 
     if (error || !article) return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4">
-            <span className="material-icons-outlined text-6xl text-gray-300 mb-4">article</span>
+        <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-background-light dark:bg-background-dark">
+            <span className="material-icons-outlined text-6xl text-gray-300 mb-4 animate-bounce">article</span>
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Ops!</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">{error || 'Artigo não encontrado.'}</p>
-            <button 
+            <button
                 onClick={() => navigate('/noticias')}
-                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30"
             >
                 Voltar para Notícias
             </button>
@@ -77,111 +100,184 @@ const ArticlePage: React.FC = () => {
     );
 
     return (
-        <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20">
-            {/* Hero Section do Artigo */}
-            <div className="relative h-[400px] md:h-[500px] w-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
-                <img 
-                    src={imgSrc || FALLBACK_IMAGE} 
-                    alt={article.title} 
-                    className="w-full h-full object-cover"
+        <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20 font-body">
+
+            {/* Reading Progress Bar */}
+            <div className="fixed top-0 left-0 w-full h-1 z-50 bg-gray-200 dark:bg-gray-800">
+                <div
+                    className="h-full bg-primary transition-all duration-150 ease-out"
+                    style={{ width: `${readingProgress}%` }}
+                ></div>
+            </div>
+
+            {/* Share Toast */}
+            {showShareToast && (
+                <div className="fixed bottom-8 right-8 z-50 animate-fade-in-up">
+                    <div className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3">
+                        <span className="material-icons text-green-400">check_circle</span>
+                        <span>Link copiado para a área de transferência!</span>
+                    </div>
+                </div>
+            )}
+
+            {/* Hero Section */}
+            <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700 z-10"></div>
+                <img
+                    src={imgSrc || FALLBACK_IMAGE}
+                    alt={article.title}
+                    className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[2s]"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/30"></div>
-                
-                <div className="absolute top-6 left-4 md:left-8 z-20">
-                    <Link 
-                        to="/noticias" 
-                        className="inline-flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-full backdrop-blur-sm transition-colors text-sm font-medium"
-                    >
-                        <span className="material-icons-outlined text-base">arrow_back</span>
-                        Voltar
-                    </Link>
+                <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/60 z-10"></div>
+
+                {/* Navigation/Breadcrumbs Overlay */}
+                <div className="absolute top-0 left-0 w-full p-6 z-20">
+                    <div className="container mx-auto">
+                        <nav className="flex items-center space-x-2 text-sm text-white/80 font-medium">
+                            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                            <span className="material-icons text-xs">chevron_right</span>
+                            <Link to="/noticias" className="hover:text-white transition-colors">Notícias</Link>
+                            <span className="material-icons text-xs">chevron_right</span>
+                            <span className="text-white truncate max-w-[200px]">{article.title}</span>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-24 relative z-10">
-                <div className="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 dark:border-gray-800">
-                    <div className="flex flex-wrap items-center gap-4 mb-6">
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200`}>
-                            {article.category}
-                        </span>
-                        <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                            <span className="material-icons-outlined text-base mr-1">calendar_today</span>
-                            <strong>Divulgado no site em:</strong>&nbsp;{article.publishDate}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-32 relative z-20">
+                <div className="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100 dark:border-gray-800 backdrop-blur-sm">
+
+                    {/* Header do Artigo */}
+                    <div className="flex flex-col gap-6 mb-8">
+                        <div className="flex flex-wrap items-center gap-4">
+                            <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20`}>
+                                {article.category}
+                            </span>
+                            <time className="flex items-center text-gray-500 dark:text-gray-400 text-sm font-medium">
+                                <span className="material-icons-outlined text-base mr-2">event</span>
+                                {article.publishDate}
+                            </time>
                         </div>
-                        {article.author && (
-                            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm border-l border-gray-300 dark:border-gray-700 pl-4 ml-2">
-                                <span className="material-icons-outlined text-base mr-1">person</span>
-                                por {article.author}
+
+                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white font-display leading-[1.15] tracking-tight">
+                            {article.title}
+                        </h1>
+
+                        <div className="flex items-center justify-between border-y border-gray-100 dark:border-gray-800 py-6">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center text-xl font-bold text-gray-600 dark:text-gray-300 uppercase">
+                                    {article.author ? article.author[0] : 'R'}
+                                </div>
+                                <div>
+                                    <p className="text-sm font-bold text-gray-900 dark:text-white">{article.author || 'Redação'}</p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-400">Jornalista / Colunista</p>
+                                </div>
                             </div>
-                        )}
+
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={handleShare}
+                                    className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/10 transition-all active:scale-95"
+                                    title="Copiar Link"
+                                >
+                                    <span className="material-icons-outlined">link</span>
+                                </button>
+                                <button
+                                    className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"
+                                    title="Salvar (Favorito)"
+                                >
+                                    <span className="material-icons-outlined">bookmark_border</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white font-display leading-tight mb-8">
-                        {article.title}
-                    </h1>
-
-                    <AdSpace format="horizontal" className="my-6" />
-
-                    <hr className="border-gray-200 dark:border-gray-700 mb-8" />
-
-                    {/* Conteúdo do Artigo */}
-                    <div 
-                        className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
-                    />
-                    
-                    {/* Nota de esclarecimento sobre o contexto da data */}
-                    <div className="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-md border-l-4 border-gray-300 dark:border-gray-600">
-                        <p className="text-xs text-gray-500 dark:text-gray-400 italic">
-                            Nota: Este conteúdo refere-se a fatos já ocorridos e oficiais. A data apresentada no topo do artigo corresponde ao dia de sua divulgação neste portal.
-                        </p>
-                    </div>
+                    {/* Resumo/Lead */}
+                    {article.summary && (
+                        <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6">
+                            {article.summary}
+                        </div>
+                    )}
 
                     <AdSpace format="horizontal" className="my-8" />
 
-                    {/* Rodapé do Artigo */}
-                    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
-                        
-                        {/* Exibição da Fonte Original (Grounding) */}
-                        {article.sourceUrl && (
-                            <div className="bg-blue-50 dark:bg-blue-900/20 px-4 py-3 rounded-lg border border-blue-100 dark:border-blue-800 w-full md:w-auto">
-                                <p className="text-xs text-blue-800 dark:text-blue-300 mb-1 font-semibold uppercase">Fonte Original</p>
-                                <a 
-                                    href={article.sourceUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-primary hover:underline text-sm font-medium"
-                                >
-                                    <span className="material-icons-outlined text-base">open_in_new</span>
-                                    {article.sourceName || 'Ler matéria completa na fonte'}
-                                </a>
-                            </div>
-                        )}
+                    {/* Conteúdo Principal */}
+                    <div
+                        className="prose prose-lg md:prose-xl dark:prose-invert max-w-none 
+                        prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-8
+                        prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                        prose-img:rounded-xl prose-img:shadow-lg"
+                        dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
+                    />
 
-                        <div className="flex gap-2 ml-auto">
-                            <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-                                <span className="material-icons-outlined">share</span>
-                            </button>
-                            <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 transition-colors">
-                                <span className="material-icons-outlined">favorite_border</span>
-                            </button>
+                    {/* Nota de rodapé do conteúdo */}
+                    <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <div className="flex gap-3">
+                            <span className="material-icons-outlined text-gray-400">info</span>
+                            <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                                Este conteúdo é de responsabilidade do autor e não reflete necessariamente a opinião do portal Araucária Informa. Dados e datas referem-se ao momento da publicação.
+                            </p>
                         </div>
                     </div>
+
+                    {/* Fonte Original Button */}
+                    {article.sourceUrl && (
+                        <div className="mt-8 flex justify-center">
+                            <a
+                                href={article.sourceUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors font-medium"
+                            >
+                                <span className="material-icons-outlined text-sm">open_in_new</span>
+                                Ler matéria completa na fonte original ({article.sourceName || 'Link'})
+                            </a>
+                        </div>
+                    )}
+
+                    <div className="my-12 h-px bg-gray-200 dark:bg-gray-800 w-full"></div>
+
+                    {/* Tags (Mock) */}
+                    <div className="flex flex-wrap gap-2 mb-12">
+                        {['Araucária', 'Notícias', article.category, 'Paraná', 'Atualidade'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-md text-sm cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                #{tag}
+                            </span>
+                        ))}
+                    </div>
+
                 </div>
 
-                {/* Seção de Notícias Relacionadas / Leia Também */}
+                {/* Seção de Notícias Relacionadas */}
                 {relatedArticles.length > 0 && (
-                    <div className="mt-16">
-                        <div className="flex items-center gap-2 mb-6">
-                            <span className="w-1 h-8 bg-primary rounded-full"></span>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-display">Leia Também</h2>
+                    <div className="mt-20">
+                        <div className="flex items-center justify-between mb-8">
+                            <div className="flex items-center gap-3">
+                                <div className="p-2 bg-primary/10 rounded-lg">
+                                    <span className="material-icons text-primary">auto_stories</span>
+                                </div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-display">
+                                    Conteúdo Relacionado
+                                </h2>
+                            </div>
+                            <Link to="/noticias" className="text-primary hover:text-primary-dark font-medium hidden md:inline-flex items-center gap-1">
+                                Ver tudo <span className="material-icons text-sm">arrow_forward</span>
+                            </Link>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {relatedArticles.map(relArticle => (
                                 <NewsCard key={relArticle.id} article={relArticle} />
                             ))}
+                        </div>
+
+                        <div className="mt-8 text-center md:hidden">
+                            <Link to="/noticias" className="btn-primary inline-flex">
+                                Ver todas as notícias
+                            </Link>
                         </div>
                     </div>
                 )}

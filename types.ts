@@ -31,4 +31,6 @@ export interface Business {
     address: string;
     phone: string;
     website: string;
+    description?: string;
+    isFeatured?: boolean;
 }

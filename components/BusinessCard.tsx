@@ -37,7 +37,13 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
                         <span className="material-icons text-4xl text-gray-400">storefront</span>
                     </div>
                 )}
-                <div className="absolute top-3 right-3 z-20">
+                <div className="absolute top-3 right-3 z-20 flex flex-col items-end gap-2">
+                    {business.isFeatured && (
+                        <span className="bg-amber-400 text-amber-900 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full shadow-sm flex items-center gap-1 animate-pulse">
+                            <span className="material-icons text-[14px]">star</span>
+                            Destaque
+                        </span>
+                    )}
                     <span className="bg-white/90 dark:bg-black/80 backdrop-blur-sm text-xs font-bold text-gray-800 dark:text-white px-3 py-1 rounded-full shadow-sm">
                         {business.category}
                     </span>
@@ -46,6 +52,12 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
 
             <div className="p-5 flex flex-col flex-grow">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition-colors">{business.name}</h2>
+
+                {business.description && (
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-2 leading-relaxed">
+                        {business.description}
+                    </p>
+                )}
 
                 <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex-grow mt-4">
                     <div className="flex items-start gap-3">
