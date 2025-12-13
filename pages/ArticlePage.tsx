@@ -1,12 +1,14 @@
 
 import React, { useEffect, useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 import NewsCard from '../components/NewsCard';
-import { getPlaceholderImage } from '../services/aiService';
+import ShareButton from '../components/ShareButton';
+import { getPlaceholderImage, generateContextualImage } from '../services/aiService';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -24,6 +26,7 @@ const ArticlePage: React.FC = () => {
     // UI States
     const [readingProgress, setReadingProgress] = useState(0);
     const [showShareToast, setShowShareToast] = useState(false);
+    const [secondaryImage, setSecondaryImage] = useState<string>('');
 
     useEffect(() => {
         const fetchArticleAndRelated = async () => {
@@ -35,6 +38,43 @@ const ArticlePage: React.FC = () => {
                     setArticle(currentArticle);
                     setImgSrc(currentArticle.imageUrl);
                     setImageError(false);
+
+
+                    // Lógica para Imagem Secundária:
+                    // 1. Por padrão, tenta um placeholder da categoria.
+                    let secImg = getPlaceholderImage(currentArticle.category);
+
+                    // 2. Se a imagem principal for uma das nossas "Exclusivas" (geradas por IA ou Custom), usamos ela também aqui para manter o contexto.
+                    const mainImg = currentArticle.imageUrl || '';
+                    if (mainImg.includes('/images/news_') || mainImg.includes('/images/custom_')) {
+                        secImg = mainImg;
+                    }
+
+                    // 3. Override de segurança (caso específico do user)
+                    if (currentArticle.title.toLowerCase().includes('drogas') || currentArticle.title.toLowerCase().includes('incinera')) {
+                        secImg = '/images/custom_drugs.jpg';
+                    }
+
+                    // 4. Override SUPREMO por ID (Para vencer cache do Supabase/Vercel)
+                    // Garante que as imagens do Nano Banana Pro apareçam custe o que custar
+                    const idNum = Number(id);
+                    if (idNum === 101) secImg = '/images/news_cmei_interior.png'; // Interior para não repetir a capa
+                    if (idNum === 102) secImg = '/images/news_budget_chamber.png'; // Plenário (Interior)
+                    if (idNum === 103) secImg = '/images/news_poupatempo_service.png'; // Interior Moderno (Nano Banana Pro)
+                    if (idNum === 104) secImg = '/images/investimento_federal_real.png'; // Imagem de arquivo (Backup)
+                    if (idNum === 105) secImg = '/images/news_drugs_seized.png'; // Material Apreendido (Nano Banana Pro)
+                    if (idNum === 106) secImg = '/images/news_vaccine_pregnant.png'; // Gestante Vacina (Nano Banana Pro)
+                    if (idNum === 107) secImg = '/images/news_christmas_cantata.png'; // Coral Santuário (Nano Banana Pro)
+                    if (idNum === 108) secImg = '/images/news_cyclone_damage.png'; // Estrago/Fiação Caída (Nano Banana Pro)
+                    if (idNum === 109) secImg = '/images/pacote_obras_capela_velha.jpg'; // Obras/Reforma (Contexto Local)
+                    if (idNum === 7) secImg = '/images/news_vaccine_flu.png'; // Vacinação Gripe (Nano Banana Pro)
+                    if (idNum === 8) secImg = '/images/placeholder_educacao.png'; // Teatro (Falta image, mantendo padrao/fallback ou pular)
+                    if (idNum === 9) secImg = '/images/repar_refinaria_aerea.jpg'; // Ciclovia/REPAR (Contexto Industrial)
+                    if (idNum === 10) secImg = '/images/news_pothole_repair.png'; // Tapa-Buracos (Nano Banana Pro)
+                    if (idNum === 11) secImg = '/images/custom_gm_official_pickups.jpg'; // Foto Oficial (Caminhonetes/Frota)
+                    if (idNum === 12) secImg = '/images/news_pediatric_ward.png'; // Ala Pediátrica Interior (Nano Banana Pro)
+
+                    setSecondaryImage(secImg);
 
                     // Busca notícias relacionadas
                     const allNews = await api.getNews();
@@ -121,6 +161,26 @@ const ArticlePage: React.FC = () => {
                 </div>
             )}
 
+            {/* SEO & Meta Tags Dinâmicas */}
+            <Helmet>
+                <title>{article.title} - Araucária Informa</title>
+                <meta name="description" content={article.summary || article.title} />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:title" content={article.title} />
+                <meta property="og:description" content={article.summary || article.title} />
+                <meta property="og:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={window.location.href} />
+                <meta property="twitter:title" content={article.title} />
+                <meta property="twitter:description" content={article.summary || article.title} />
+                <meta property="twitter:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
+            </Helmet>
+
             {/* Hero Section */}
             <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700 z-10"></div>
@@ -178,13 +238,7 @@ const ArticlePage: React.FC = () => {
                             </div>
 
                             <div className="flex gap-2">
-                                <button
-                                    onClick={handleShare}
-                                    className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/10 transition-all active:scale-95"
-                                    title="Copiar Link"
-                                >
-                                    <span className="material-icons-outlined">link</span>
-                                </button>
+                                <ShareButton title={article.title} />
                                 <button
                                     className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"
                                     title="Salvar (Favorito)"
@@ -193,95 +247,112 @@ const ArticlePage: React.FC = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Resumo/Lead */}
-                    {article.summary && (
-                        <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6">
-                            {article.summary}
-                        </div>
-                    )}
+                        {/* Resumo/Lead */}
+                        {article.summary && (
+                            <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6">
+                                {article.summary}
+                            </div>
+                        )}
 
-                    <AdSpace format="horizontal" className="my-8" />
+                        {/* Imagem Secundária Decorativa */}
+                        {secondaryImage && (
+                            <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
+                                <img
+                                    src={secondaryImage}
+                                    alt={`Imagem ilustrativa - ${article.category}`}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    referrerPolicy="no-referrer"
+                                    onError={(e) => {
+                                        e.currentTarget.style.display = 'none'; // Esconde se quebrar de vez
+                                        e.currentTarget.parentElement!.style.display = 'none';
+                                    }}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            </figure>
+                        )}
 
-                    {/* Conteúdo Principal */}
-                    <div
-                        className="prose prose-lg md:prose-xl dark:prose-invert max-w-none 
+                        <AdSpace format="horizontal" className="mb-6" />
+
+                        {/* Conteúdo Principal */}
+                        <div
+                            className="prose prose-lg md:prose-xl dark:prose-invert max-w-none 
                         prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
                         prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-8
                         prose-a:text-primary prose-a:no-underline hover:prose-a:underline
                         prose-img:rounded-xl prose-img:shadow-lg"
-                        dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
-                    />
+                            dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
+                        />
 
-                    {/* Nota de rodapé do conteúdo */}
-                    <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <div className="flex gap-3">
-                            <span className="material-icons-outlined text-gray-400">info</span>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                                Este conteúdo é de responsabilidade do autor e não reflete necessariamente a opinião do portal Araucária Informa. Dados e datas referem-se ao momento da publicação.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Fonte Original Button */}
-                    {article.sourceUrl && (
-                        <div className="mt-8 flex justify-center">
-                            <a
-                                href={article.sourceUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors font-medium"
-                            >
-                                <span className="material-icons-outlined text-sm">open_in_new</span>
-                                Ler matéria completa na fonte original ({article.sourceName || 'Link'})
-                            </a>
-                        </div>
-                    )}
-
-                    <div className="my-12 h-px bg-gray-200 dark:bg-gray-800 w-full"></div>
-
-                    {/* Tags (Mock) */}
-                    <div className="flex flex-wrap gap-2 mb-12">
-                        {['Araucária', 'Notícias', article.category, 'Paraná', 'Atualidade'].map((tag) => (
-                            <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-md text-sm cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                                #{tag}
-                            </span>
-                        ))}
-                    </div>
-
-                </div>
-
-                {/* Seção de Notícias Relacionadas */}
-                {relatedArticles.length > 0 && (
-                    <div className="mt-20">
-                        <div className="flex items-center justify-between mb-8">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-primary/10 rounded-lg">
-                                    <span className="material-icons text-primary">auto_stories</span>
-                                </div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-display">
-                                    Conteúdo Relacionado
-                                </h2>
+                        {/* Nota de rodapé do conteúdo */}
+                        <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
+                            <div className="flex gap-3">
+                                <span className="material-icons-outlined text-gray-400">info</span>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                                    Este conteúdo é de responsabilidade do autor e não reflete necessariamente a opinião do portal Araucária Informa. Dados e datas referem-se ao momento da publicação.
+                                </p>
                             </div>
-                            <Link to="/noticias" className="text-primary hover:text-primary-dark font-medium hidden md:inline-flex items-center gap-1">
-                                Ver tudo <span className="material-icons text-sm">arrow_forward</span>
-                            </Link>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {relatedArticles.map(relArticle => (
-                                <NewsCard key={relArticle.id} article={relArticle} />
+                        {/* Fonte Original Button */}
+                        {article.sourceUrl && (
+                            <div className="mt-8 flex justify-center">
+                                <a
+                                    href={article.sourceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors font-medium"
+                                >
+                                    <span className="material-icons-outlined text-sm">open_in_new</span>
+                                    Ler matéria completa na fonte original ({article.sourceName || 'Link'})
+                                </a>
+                            </div>
+                        )}
+
+                        <div className="my-12 h-px bg-gray-200 dark:bg-gray-800 w-full"></div>
+
+                        {/* Tags (Mock) */}
+                        <div className="flex flex-wrap gap-2 mb-12">
+                            {['Araucária', 'Notícias', article.category, 'Paraná', 'Atualidade'].map((tag) => (
+                                <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-md text-sm cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                    #{tag}
+                                </span>
                             ))}
                         </div>
 
-                        <div className="mt-8 text-center md:hidden">
-                            <Link to="/noticias" className="btn-primary inline-flex">
-                                Ver todas as notícias
-                            </Link>
-                        </div>
                     </div>
-                )}
+
+                    {/* Seção de Notícias Relacionadas */}
+                    {relatedArticles.length > 0 && (
+                        <div className="mt-20">
+                            <div className="flex items-center justify-between mb-8">
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2 bg-primary/10 rounded-lg">
+                                        <span className="material-icons text-primary">auto_stories</span>
+                                    </div>
+                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-display">
+                                        Conteúdo Relacionado
+                                    </h2>
+                                </div>
+                                <Link to="/noticias" className="text-primary hover:text-primary-dark font-medium hidden md:inline-flex items-center gap-1">
+                                    Ver tudo <span className="material-icons text-sm">arrow_forward</span>
+                                </Link>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {relatedArticles.map(relArticle => (
+                                    <NewsCard key={relArticle.id} article={relArticle} />
+                                ))}
+                            </div>
+
+                            <div className="mt-8 text-center md:hidden">
+                                <Link to="/noticias" className="btn-primary inline-flex">
+                                    Ver todas as notícias
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
         </article>
     );

@@ -46,7 +46,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
     // Se não tivermos um ID real configurado ou estivermos em localhost,
     // mostramos o placeholder antigo para não quebrar o layout visualmente.
     // O AdSense não exibe anúncios em localhost/domínios não aprovados.
-    const isDevelopment = true; // Mude para false quando for para produção com IDs reais
+    const isDevelopment = false; // Mude para false quando for para produção com IDs reais
 
     if (isDevelopment) {
         let dimensions = "h-24 w-full";
@@ -69,7 +69,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
                 ref={adRef}
                 className="adsbygoogle"
                 style={style}
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // Substitua pelo seu ID
+                data-ad-client="ca-pub-5835671313720295" // ID do Araucária Informa
                 data-ad-slot={slotId}
                 data-ad-format="auto"
                 data-full-width-responsive="true"

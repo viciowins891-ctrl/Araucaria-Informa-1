@@ -5,6 +5,7 @@ import { api } from '../services/api';
 import { Event } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
+import ShareButton from '../components/ShareButton';
 
 const EventDetailsPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -226,10 +227,9 @@ const EventDetailsPage: React.FC = () => {
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google" className="w-5 h-5" />
                                     Google Calendar
                                 </button>
-                                <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
-                                    <span className="material-icons-outlined">share</span>
-                                    Compartilhar
-                                </button>
+                                <div className="w-full">
+                                    <ShareButton title={`Confira este evento: ${event.title}`} />
+                                </div>
                             </div>
                         </div>
                     </div>

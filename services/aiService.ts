@@ -165,24 +165,54 @@ export const generateContextualImage = (topic: string): string => {
 // 3. SIMULAÇÃO DE UPDATE SEMANAL (Conteúdo Fresco)
 // ============================================================================
 
+// Templates REAIS baseados nas notícias oficiais de Dezembro/2025 para rotação semanal
 const WEEKLY_TEMPLATES = [
     {
-        title: "Prefeitura anuncia novo pacote de obras em {bairro}",
-        summary: "Investimento de R$ 5 milhões promete renovar a malha viária e construir nova praça.",
-        content: "A Secretaria de Obras deu início nesta semana a um ambicioso projeto de revitalização...",
-        baseCategory: "Infraestrutura"
+        title: "Araucária zera fila de espera por vagas em CMEIs para 2025",
+        summary: "Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.",
+        content: "Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada. O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025.",
+        baseCategory: "Educação",
+        fixedImage: "/images/news_cmei_2025.png"
     },
     {
-        title: "Campanha de conscientização sobre {tema} começa segunda-feira",
-        summary: "Ação conjunta entre secretarias visa informar a população e prevenir problemas futuros.",
-        content: "Equipes estarão nas ruas distribuindo material informativo...",
+        title: "Orçamento Municipal para 2026 deve chegar a R$ 2,3 bilhões",
+        summary: "Previsão orçamentária aponta crescimento na arrecadação e maiores investimentos em obras e saúde.",
+        content: "A Lei Orçamentária Anual (LOA) discutida na Câmara Municipal projeta um orçamento recorde de aproximadamente R$ 2,3 bilhões para Araucária em 2026. A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária.",
+        baseCategory: "Economia",
+        fixedImage: "/images/news_budget.png"
+    },
+    {
+        title: "Governador inaugura unidade do Poupatempo em Araucária",
+        summary: "Nova agência no centro da cidade unifica mais de 240 serviços estaduais e municipais.",
+        content: "Foi inaugurada oficialmente a primeira unidade de rua do Poupatempo no Paraná, localizada em Araucária. O espaço moderno facilita a vida do cidadão, permitindo emitir documentos como RG e CNH, além de solicitar serviços da Copel e Sanepar em um único lugar.",
+        baseCategory: "Cidade",
+        fixedImage: "/images/news_poupatempo.png"
+    },
+    {
+        title: "Pacote de investimentos federais destina R$ 20 milhões para Araucária",
+        summary: "Recursos serão aplicados na construção de novas unidades de saúde e reformas escolares.",
+        content: "Em visita oficial, representantes do Governo Federal anunciaram um pacote de investimentos para Araucária. Serão R$ 2,8 milhões destinados à Saúde e R$ 18 milhões para a Educação, focados na ampliação da rede física de atendimento.",
+        baseCategory: "Política",
+        fixedImage: "/images/news_investments.png"
+    },
+    {
+        title: "Polícia Civil incinera 114 kg de drogas apreendidas na região",
+        summary: "Ação realizada nesta semana marca o combate efetivo ao tráfico em Araucária.",
+        content: "A Polícia Civil do Paraná (PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária. O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões.",
+        baseCategory: "Segurança",
+        fixedImage: "/images/custom_drugs.jpg"
+    },
+    {
+        title: "Vacinação contra Vírus Sincicial Respiratório (VSR) para gestantes",
+        summary: "Saúde inicia imunização para proteger recém-nascidos de infecções graves.",
+        content: "A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes. A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.",
         baseCategory: "Saúde"
     },
     {
-        title: "Indústria local abre {numero} novas vagas de emprego",
-        summary: "Oportunidades são para diversos níveis de escolaridade. Saiba como se candidatar.",
-        content: "O setor industrial de Araucária continua aquecido. Uma grande multinacional...",
-        baseCategory: "Economia"
+        title: "Cantata de Natal emociona fiéis no Santuário",
+        summary: "Apresentação 'Um Conto de Natal' reuniu centenas de pessoas no fim de semana.",
+        content: "O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro. O evento contou com coral infantil e orquestra, emocionando o público presente.",
+        baseCategory: "Cultura"
     }
 ];
 
@@ -250,7 +280,8 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
     const imagePrompt = generateImagePrompt(finalTitle, detectedTopic);
     console.log(`[AI PROMPT GEN]: ${imagePrompt}`);
 
-    const contextualImage = generateContextualImage(detectedTopic);
+    // @ts-ignore
+    const contextualImage = template.fixedImage || generateContextualImage(detectedTopic);
 
     // Mapeia categoria visual (cores do UI)
     const categoryColorMap: Record<string, string> = {

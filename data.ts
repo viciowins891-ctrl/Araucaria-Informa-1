@@ -8,139 +8,142 @@ const getUpcomingDate = (daysFromNow: number): string => {
     return date.toLocaleDateString('pt-BR'); // Retorna formato DD/MM/AAAA
 };
 
+// Função auxiliar para gerar datas passadas recentes (para notícias)
+const getPastDate = (daysAgo: number): string => {
+    const date = new Date();
+    date.setDate(date.getDate() - daysAgo);
+    return date.toLocaleDateString('pt-BR'); // Retorna formato DD/MM/AAAA
+};
+
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 
 export const newsArticles: NewsArticle[] = [
     {
-        id: 24,
-        title: 'Prefeitura anuncia novo pacote de obras em Capela Velha',
-        summary: 'Investimento milionário contempla pavimentação, drenagem e nova iluminação em diversas ruas do bairro.',
+        id: 101, // ID Único Real
+        title: 'Araucária zera fila de espera por vagas em CMEIs para 2025',
+        summary: 'Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.',
         content: `
-            <p>A Prefeitura de Araucária lançou nesta terça-feira um ambicioso pacote de obras voltado para o bairro Capela Velha. Com um investimento previsto de R$ 15 milhões, o projeto visa transformar a infraestrutura local e melhorar a qualidade de vida dos moradores.</p>
-            <p>Entre as principais intervenções estão a pavimentação asfáltica de 10 quilômetros de vias, a implantação de um novo sistema de drenagem para combater alagamentos históricos e a instalação de iluminação em LED em todo o bairro.</p>
-            <p>"O Capela Velha cresceu muito e precisava dessa atenção. Essas obras vão valorizar os imóveis e trazer mais segurança para todos", afirmou o prefeito durante a solenidade de assinatura da ordem de serviço.</p>
-            <p>As obras devem começar já na próxima semana, com previsão de conclusão em 12 meses. O trânsito em algumas ruas será desviado, e á orientada a atenção aos motoristas.</p>
+            <p>Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada.</p>
+            <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária de educação.</p>
         `,
-        imageUrl: '/images/pacote_obras_capela_velha.jpg',
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        publishDate: '12/12/2025',
-        author: 'Redação Municipal'
-    },
-    {
-        id: 23,
-        title: 'Governador inaugura Poupatempo em Araucária para modernizar serviços públicos',
-        summary: 'A primeira unidade de rua do Poupatempo Paraná foi inaugurada em Araucária, oferecendo cerca de 240 serviços presenciais e digitais e um atendimento humanizado para a população.',
-        content: `
-            <p>O Governador do Estado inaugurou nesta manhã a unidade do Poupatempo em Araucária, um marco para a modernização dos serviços públicos na região. Localizada no centro da cidade, a nova agência reúne, em um único local, serviços de diversos órgãos estaduais e municipais.</p>
-            <p>Com capacidade para realizar centenas de atendimentos diários, o Poupatempo Araucária oferece emissão de RG, carteira de habilitação, solicitação de seguro-desemprego, além de serviços da Sanepar e Copel. "É o fim da burocracia e das filas intermináveis. O cidadão merece respeito e agilidade", afirmou o governador durante a solenidade.</p>
-            <p>A unidade conta com totens de autoatendimento e uma equipe treinada para auxiliar os cidadãos na utilização dos serviços digitais, promovendo também a inclusão digital para aqueles que têm dificuldade com tecnologia.</p>
-            <p>O atendimento funciona de segunda a sexta-feira, das 9h às 17h, e aos sábados, das 9h às 13h, mediante agendamento prévio pelo site oficial ou aplicativo.</p>
-        `,
-        // URL Corrigida e atualizada para uma imagem genérica de atendimento/serviço público moderno
-        imageUrl: '/images/poupatempo_fachada.jpg',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        publishDate: '05/12/2025',
-        author: 'Agência Estadual de Notícias'
-    },
-    {
-        id: 1,
-        title: 'Revitalização do Centro Histórico e Praça Central',
-        summary: 'A prefeitura entregou as obras de melhoria no entorno da Igreja Matriz, com foco na preservação das araucárias centenárias.',
-        content: `
-            <p>A Prefeitura de Araucária entregou oficialmente as obras de revitalização do Centro Histórico e da Praça Central Dr. Vicente Machado. O projeto, que durou cerca de oito meses, teve como principal objetivo a valorização do patrimônio histórico e a preservação das araucárias centenárias que dão nome à cidade.</p>
-            
-            <p>Entre as melhorias realizadas, destacam-se a troca de todo o calçamento por paver drenante, a instalação de nova iluminação em LED, que garante mais segurança aos frequentadores no período noturno, e a restauração dos bancos e do coreto.</p>
-            
-            <p>"Esta obra não é apenas estética, é um resgate da nossa identidade. A praça é o coração da cidade e precisava desse cuidado", afirmou o secretário de Urbanismo durante a cerimônia. O paisagismo também foi renovado, com o plantio de flores da estação e a manutenção cuidadosa das árvores nativas.</p>
-
-            <p>A população já pode usufruir do espaço, que contará com uma agenda cultural especial nos finais de semana, incluindo feiras de artesanato e apresentações musicais.</p>
-        `,
-        imageUrl: '/images/revitalizacao_praca_central.jpg',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        publishDate: '15/03/2024',
-        author: 'Redação Municipal'
-    },
-    {
-        id: 2,
-        title: 'REPAR bate recorde de eficiência energética',
-        summary: 'A Refinaria Presidente Getúlio Vargas, ícone industrial da cidade, anuncia novos índices de produtividade.',
-        content: `
-            <p>A Refinaria Presidente Getúlio Vargas (REPAR), localizada em Araucária, anunciou que atingiu um novo recorde de eficiência energética em suas operações. O marco reforça a posição da unidade como uma das mais importantes do sistema de refino nacional.</p>
-            
-            <p>Segundo o relatório técnico divulgado, a refinaria conseguiu aumentar sua produção de diesel S-10 e gasolina, reduzindo simultaneamente o consumo de energia e a emissão de gases de efeito estufa. Isso foi possível graças à implementação de novas tecnologias de automação e ao aprimoramento dos processos de craqueamento catalítico.</p>
-            
-            <p>O impacto econômico para a região é significativo. A REPAR é responsável por uma grande fatia da arrecadação de impostos do município, e o aumento da eficiência garante a manutenção de postos de trabalho e atrai empresas satélites para o polo industrial.</p>
-            
-            <p>Especialistas do setor de energia apontam que Araucária continua sendo um ponto estratégico para a logística de combustíveis no sul do Brasil, abastecendo não apenas o Paraná, mas também partes de Santa Catarina e Mato Grosso do Sul.</p>
-        `,
-        // URL REPAR: Industrial / Refinaria
-        imageUrl: '/images/repar_refinaria_aerea.jpg',
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        publishDate: '10/04/2024',
-        author: 'Carlos Mendes'
-    },
-    {
-        id: 3,
-        title: 'Araucária EC disputa liderança no Estádio do Pinhão',
-        summary: 'O time da casa conta com a torcida para o confronto decisivo deste domingo no municipal.',
-        content: `
-            <p>O clima é de decisão em Araucária. O Araucária Esporte Clube (AEC) entra em campo no Estádio Municipal do Pinhão valendo a liderança do campeonato estadual da segunda divisão. A expectativa é de casa cheia.</p>
-            
-            <p>O time vem de uma sequência invicta de cinco jogos e aposta na força do ataque, comandado pelo artilheiro da competição, para superar o adversário. Durante a semana, o técnico realizou treinos táticos focados na bola parada, que tem sido uma das principais armas da equipe.</p>
-            
-            <p>"A torcida é o nosso 12º jogador. Precisamos lotar o Pinhão e empurrar o time do começo ao fim", convocou o capitão da equipe em entrevista coletiva. Os ingressos já estão à venda na bilheteria do estádio e em pontos comerciais parceiros.</p>
-            
-            <p>Além do jogo, haverá uma ação social no intervalo, com sorteio de brindes e arrecadação de alimentos não perecíveis para instituições de caridade locais.</p>
-        `,
-        // URL Araucária EC: Futebol / Estádio
-        imageUrl: '/images/araucaria_ec_jogo.jpg',
-        category: 'Esporte',
-        categoryColor: 'green',
-        publishDate: '22/05/2024',
-        author: 'Esporte Araucária'
-    },
-    {
-        id: 4,
-        title: 'Projeto Social leva Judô para escolas municipais',
-        summary: 'Iniciativa tem formado cidadãos através da disciplina e prática esportiva no contraturno escolar.',
-        content: `
-            <p>Um projeto inovador está transformando a rotina de crianças da rede municipal de ensino em Araucária. O programa "Tatame Cidadão" oferece aulas gratuitas de Judô no contraturno escolar, unindo esporte, disciplina e educação.</p>
-            
-            <p>Atualmente atendendo mais de 200 alunos, a iniciativa visa não apenas formar atletas, mas principalmente cidadãos. "O Judô ensina respeito ao próximo, autocontrole e persistência. São valores que as crianças levam para a sala de aula e para a vida", explica o sensei coordenador do projeto.</p>
-            
-            <p>Os resultados já são visíveis: diretores das escolas participantes relatam melhora no comportamento e no rendimento escolar dos praticantes. Além disso, alguns alunos já começam a se destacar em competições regionais, trazendo medalhas para a cidade.</p>
-            
-            <p>Para o próximo ano, a Secretaria de Educação planeja expandir o projeto para mais três escolas, além de incluir novas modalidades de artes marciais.</p>
-        `,
-        imageUrl: '/images/judo_escolas_real.jpg',
+        imageUrl: '/images/news_cmei_realistic.png', // Versão realista gerada pelo Nano Banana Pro
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '05/06/2024',
-        author: 'Ana Silva'
+        publishDate: getPastDate(0), // Hoje
+        author: 'Redação Municipal'
     },
     {
-        id: 5,
-        title: 'Tecnologia: Araucária investe em Cidades Inteligentes',
-        summary: 'Novos pontos de Wi-Fi gratuito e monitoramento digital começam a ser instalados nos bairros.',
+        id: 102,
+        title: 'Orçamento Municipal para 2026 deve chegar a R$ 2,3 bilhões',
+        summary: 'Previsão orçamentária aponta crescimento na arrecadação e maiores investimentos em obras e saúde.',
         content: `
-            <p>Araucária está dando passos largos rumo ao futuro. A prefeitura iniciou nesta semana a instalação de novos pontos de Wi-Fi gratuito em praças e parques da cidade, como parte do programa "Araucária Conectada".</p>
-            
-            <p>Além da internet livre, o projeto contempla a instalação de câmeras de monitoramento inteligente integradas à Guarda Municipal. Esses equipamentos utilizam inteligência artificial para identificar placas de veículos suspeitos e situações de risco, aumentando a segurança nos bairros.</p>
-            
-            <p>Outra novidade é a modernização dos semáforos nas principais avenidas, que passarão a ser sincronizados digitalmente para melhorar o fluxo do trânsito nos horários de pico (a chamada "onda verde").</p>
-            
-            <p>"Queremos usar a tecnologia para facilitar a vida do cidadão, seja garantindo acesso à informação ou melhorando a mobilidade urbana", destacou o diretor de Tecnologia da Informação do município.</p>
+            <p>A Lei Orçamentária Anual (LOA) discutida na Câmara Municipal projeta um orçamento recorde de aproximadamente R$ 2,3 bilhões para Araucária em 2026.</p>
+            <p>A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária, como a duplicação de avenidas importantes e a construção do novo hospital.</p>
         `,
-        imageUrl: '/images/araucaria_smart_city.jpg',
-        category: 'Tecnologia',
-        categoryColor: 'yellow',
-        publishDate: '12/08/2024',
-        author: 'Tech News'
+        imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
+        category: 'Economia',
+        categoryColor: 'blue',
+        publishDate: getPastDate(1), // Ontem
+        author: 'Câmara Municipal'
+    },
+    {
+        id: 103,
+        title: 'Governador inaugura unidade do Poupatempo em Araucária',
+        summary: 'Nova agência no centro unifica mais de 240 serviços estaduais e facilita a vida do cidadão.',
+        content: `
+            <p>Foi inaugurada oficialmente a primeira unidade de rua do Poupatempo no Paraná, localizada em Araucária. O espaço moderno facilita a vida do cidadão, permitindo emitir documentos como RG e CNH, além de solicitar serviços da Copel e Sanepar em um único lugar.</p>
+            <p>"É o fim da burocracia e das filas. O cidadão resolve tudo em um só lugar", destacou o governador Ratinho Jr durante a cerimônia.</p>
+        `,
+        imageUrl: '/images/custom_poupatempo_official.jpg', // Foto oficial externa sem máscaras
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: getPastDate(2),
+        author: 'Agência Estadual'
+    },
+    {
+        id: 104,
+        title: 'Pacote de investimentos federais destina R$ 20 milhões para Araucária',
+        summary: 'Recursos anunciados pelo Governo Federal serão aplicados na saúde e educação.',
+        content: `
+            <p>Em visita oficial, representantes do Governo Federal anunciaram um pacote de investimentos para Araucária. Serão R$ 2,8 milhões destinados à Saúde e R$ 18 milhões para a Educação, focados na ampliação da rede física de atendimento.</p>
+            <p>Os recursos devem ser liberados já no início do próximo semestre, acelerando obras paradas e equipando novas unidades.</p>
+        `,
+        imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
+        category: 'Política',
+        categoryColor: 'purple',
+        publishDate: getPastDate(3),
+        author: 'Brasília News'
+    },
+    {
+        id: 105,
+        title: 'Polícia Civil incinera 114 kg de drogas apreendidas na região',
+        summary: 'Ação realizada nesta semana marca o combate efetivo ao tráfico em Araucária.',
+        content: `
+            <p>A Polícia Civil do Paraná (PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária.</p>
+            <p>O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões. Todo o material foi destruído em fornos industriais com autorização judicial.</p>
+        `,
+        imageUrl: '/images/custom_drugs.jpg', // Nova imagem gerada (Nano Banana Pro)
+        category: 'Segurança',
+        categoryColor: 'red',
+        publishDate: getPastDate(3),
+        author: 'PCPR'
+    },
+    {
+        id: 106,
+        title: 'Vacinação contra Vírus Sincicial Respiratório (VSR) para gestantes',
+        summary: 'Saúde inicia imunização para proteger recém-nascidos de infecções graves.',
+        content: `
+            <p>A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes. A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.</p>
+            <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município.</p>
+        `,
+        imageUrl: '/images/vacinacao_meta_2024.jpg',
+        category: 'Saúde',
+        categoryColor: 'blue',
+        publishDate: getPastDate(4),
+        author: 'Saúde Agora'
+    },
+    {
+        id: 107,
+        title: 'Cantata de Natal emociona fiéis no Santuário',
+        summary: 'Apresentação "Um Conto de Natal" reuniu centenas de pessoas no fim de semana.',
+        content: `
+            <p>O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro. O evento contou com coral infantil e orquestra, emocionando o público presente.</p>
+            <p>Novas apresentações estão programas para o próximo fim de semana na Praça da Matriz.</p>
+        `,
+        imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
+        category: 'Cultura',
+        categoryColor: 'indigo',
+        publishDate: getPastDate(5),
+        author: 'Cultura Viva'
+    },
+    {
+        id: 108,
+        title: 'Ciclone extratropical: Equipes trabalham para restabelecer energia',
+        summary: 'Após tempestade, Copel atua para religar 21 unidades consumidoras ainda sem luz.',
+        content: `
+            <p>O ciclone extratropical que atingiu a região sul nos últimos dias deixou estragos pontuais em Araucária. Segundo boletim da Copel, cerca de 21 unidades consumidoras permaneciam sem energia nesta manhã.</p>
+            <p>Equipes de emergência estão nas ruas para remover galhos de árvores sobre a fiação e normalizar o serviço o mais rápido possível.</p>
+        `,
+        imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
+        category: 'Cidade',
+        categoryColor: 'gray',
+        publishDate: getPastDate(6),
+        author: 'Tempo Agora'
+    },
+    {
+        id: 109, // Novo ID para o Ginásio
+        title: 'Ginásio Joval de Paula Souza será reformado',
+        summary: 'Prefeitura anuncia revitalização completa do complexo esportivo no Parque Cachoeira.',
+        content: `
+            <p>Um dos principais palcos do esporte araucariense, o Ginásio Joval de Paula Souza, passará por uma ampla reforma. O anúncio foi feito pela Secretaria de Esporte e Lazer, que prevê melhorias no piso da quadra, vestiários e cobertura.</p>
+            <p>As obras devem começar no próximo mês e visam oferecer mais conforto e segurança para atletas e torcedores. O ginásio ficará fechado durante o período de intervenção, com atividades remanejadas para outros locais.</p>
+        `,
+        imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: getPastDate(4),
+        author: 'Esporte News'
     },
     {
         id: 6,
@@ -158,7 +161,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',
-        publishDate: '30/09/2024',
+        publishDate: getPastDate(9),
         author: 'Jornal do Campo'
     },
     {
@@ -173,7 +176,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '02/10/2024',
+        publishDate: getPastDate(10),
         author: 'Saúde em Foco'
     },
     {
@@ -188,7 +191,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1544390022-d7486e92b8d0?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '15/10/2024',
+        publishDate: getPastDate(12),
         author: 'Cultura Viva'
     },
     {
@@ -203,7 +206,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/ciclovia_industrial.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        publishDate: '20/10/2024',
+        publishDate: getPastDate(14),
         author: 'Mobilidade Urbana'
     },
     {
@@ -218,7 +221,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/tapa_buracos_real_final.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        publishDate: '25/10/2024',
+        publishDate: getPastDate(15),
         author: 'Redação Municipal'
     },
     {
@@ -230,10 +233,10 @@ export const newsArticles: NewsArticle[] = [
             <p>Além dos veículos, foram entregues novos coletes balísticos e rádios de comunicação digital. "Com esses equipamentos, conseguiremos reduzir o tempo de resposta às ocorrências", afirmou o comandante da GM.</p>
             <p>As novas viaturas já estão em circulação nos bairros com maior índice de criminalidade.</p>
         `,
-        imageUrl: '/images/viaturas_gm_real.jpg',
+        imageUrl: '/images/custom_gm_official_jeep.jpg', // Foto Oficial (Jeep/Chaves)
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '28/10/2024',
+        publishDate: getPastDate(16),
         author: 'Segurança em Pauta'
     },
     {
@@ -245,10 +248,10 @@ export const newsArticles: NewsArticle[] = [
             <p>Com a expansão, o número de leitos de internação infantil passou de 15 para 30. Além disso, foram adquiridos novos equipamentos de monitoramento vital e respiradores específicos para o público pediátrico.</p>
             <p>"Saúde é prioridade. Nossas crianças merecem o melhor atendimento possível, sem precisar se deslocar para Curitiba", destacou a direção do hospital.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/custom_hospital_official.jpg', // Foto Oficial Inauguração (Corte Fita)
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '01/11/2024',
+        publishDate: getPastDate(18),
         author: 'Saúde Agora'
     },
     {
@@ -262,7 +265,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '05/11/2024',
+        publishDate: getPastDate(20),
         author: 'EducaTech'
     },
     {
@@ -276,7 +279,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&q=80&w=1000',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '08/11/2024',
+        publishDate: getPastDate(21),
         author: 'Economia Local'
     },
     {
@@ -290,7 +293,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/limpeza_rio_iguacu_real.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '12/11/2024',
+        publishDate: getPastDate(22),
         author: 'EcoAção'
     },
     {
@@ -304,7 +307,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
         categoryColor: 'green',
-        publishDate: '15/11/2024',
+        publishDate: getPastDate(25),
         author: 'Esporte Araucária'
     },
     {
@@ -318,7 +321,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '18/11/2024',
+        publishDate: getPastDate(28),
         author: 'Carreira e Futuro'
     },
     {
@@ -334,7 +337,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/rota_turismo_rural.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
-        publishDate: '20/11/2024',
+        publishDate: getPastDate(30),
         author: 'Turismo Araucária'
     },
     {
@@ -349,7 +352,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/startup_app_real.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        publishDate: '22/11/2024',
+        publishDate: getPastDate(32),
         author: 'Inovação Tech'
     },
     {
@@ -364,7 +367,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
         categoryColor: 'green',
-        publishDate: '25/11/2024',
+        publishDate: getPastDate(35),
         author: 'Esporte News'
     },
     {
@@ -379,7 +382,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/hackathon_real.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        publishDate: '26/11/2024',
+        publishDate: getPastDate(40),
         author: 'Tech News'
     },
     {
@@ -394,7 +397,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/sitio_ecologico_trilhas.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
-        publishDate: '27/11/2024',
+        publishDate: getPastDate(42),
         author: 'Jornal do Campo'
     }
 ];

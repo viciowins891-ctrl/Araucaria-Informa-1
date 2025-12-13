@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={`${displayImage}?v=${cacheBuster}`}
+                        src={displayImage}
                         alt="Imagem de destaque - Araucária"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         onError={handleImageError}

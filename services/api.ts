@@ -196,8 +196,8 @@ export const api = {
                 businessesPromise
             ]);
 
-            // Combina: Evergreen PRIMEIRO
-            const allNews = [...evergreen, ...dbNews];
+            // Combina: DB News PRIMEIRO (Prioridade para curadoria manual/local)
+            const allNews = [...dbNews, ...evergreen];
 
             return {
                 news: allNews.slice(0, 6),
