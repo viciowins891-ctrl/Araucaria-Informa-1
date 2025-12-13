@@ -8,13 +8,13 @@ const HistoryPage: React.FC = () => {
                 <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">História de Araucária</h1>
                 <p className="mt-4 text-lg text-text-secondary-light dark:text-text-secondary-dark">Descubra as curiosidades e a rica história da nossa cidade.</p>
             </div>
-            
+
             {/* Hero Image: Portal Polonês (Representação artística: Arco/Arquitetura) */}
             <div className="mb-12 rounded-xl overflow-hidden shadow-lg group relative bg-gray-200 dark:bg-gray-800 h-64 sm:h-96 flex flex-col items-center justify-center">
                 <span className="material-icons text-5xl text-gray-400 mb-2">archway</span>
-                <img 
-                    src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=1600&auto=format&fit=crop" 
-                    alt="Paisagem e Cultura Local" 
+                <img
+                    src="/images/portal_polones_araucaria.jpg"
+                    alt="Paisagem e Cultura Local"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
                     onError={(e) => e.currentTarget.style.display = 'none'}
                 />
@@ -45,23 +45,23 @@ const HistoryPage: React.FC = () => {
                 </div>
                 {/* Imagem: Arquitetura Rústica/Madeira */}
                 <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-200 dark:bg-gray-800 h-64 relative flex items-center justify-center">
-                     <span className="material-icons text-5xl text-gray-400 absolute">house</span>
-                     <img 
-                        src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1000&auto=format&fit=crop" 
-                        alt="Arquitetura Típica" 
+                    <span className="material-icons text-5xl text-gray-400 absolute">house</span>
+                    <img
+                        src="/images/casa_cavalo_baio.jpg"
+                        alt="Arquitetura Típica"
                         className="w-full h-full object-cover relative z-10"
                         onError={(e) => e.currentTarget.style.display = 'none'}
                     />
                 </div>
             </div>
 
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
                 {/* Imagem: Araucárias e Natureza */}
                 <div className="rounded-lg overflow-hidden shadow-md bg-gray-200 dark:bg-gray-800 h-64 relative flex items-center justify-center">
-                     <span className="material-icons text-5xl text-gray-400 absolute">park</span>
-                     <img 
-                        src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1000&auto=format&fit=crop" 
-                        alt="Pinheiros e Natureza" 
+                    <span className="material-icons text-5xl text-gray-400 absolute">park</span>
+                    <img
+                        src="/images/parque_cachoeira_entrada.jpg"
+                        alt="Pinheiros e Natureza"
                         className="w-full h-full object-cover relative z-10"
                         onError={(e) => e.currentTarget.style.display = 'none'}
                     />
