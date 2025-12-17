@@ -101,6 +101,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 19) secImg = '/images/school_transport_app_araucaria.png'; // App Transporte Escolar (Interna)
                     if (idNum === 20) secImg = '/images/plaza_bible_lighting_night.png'; // Praça da Bíblia (Interna)
                     if (idNum === 13) secImg = '/images/school_robotics_fair_project.png'; // Feira Robótica (Interna)
+                    if (idNum === 108) secImg = '/images/cyclone_repair_internal.png'; // Ciclone (Interna) - Fix Duplicação
 
 
                     setSecondaryImage(secImg);
