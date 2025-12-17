@@ -646,7 +646,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde". Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
             <p>Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/healthy_cooking_cover.jpg',
         category: 'Cidade',
         categoryColor: 'red',
         publishDate: getPastDate(88),
@@ -688,7 +688,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O sábado foi de festa nas escolas municipais. O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
             <p>A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1561578917-472191842388?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/festa_junina_cover.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(95),
