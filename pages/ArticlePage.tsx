@@ -99,6 +99,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 15) secImg = '/images/river_cleanup_volunteers.png'; // Limpeza Rio Iguaçu (Interna)
                     if (idNum === 12) secImg = '/images/hospital_pediatric_ward_interior.png'; // Hospital Ala Pediátrica (Interna)
                     if (idNum === 19) secImg = '/images/school_transport_app_araucaria.png'; // App Transporte Escolar (Interna)
+                    if (idNum === 20) secImg = '/images/plaza_bible_lighting_night.png'; // Praça da Bíblia (Interna)
                     if (idNum === 13) secImg = '/images/school_robotics_fair_project.png'; // Feira Robótica (Interna)
 
 

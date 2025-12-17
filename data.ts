@@ -357,18 +357,18 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 20,
-        title: 'Ginásio Joval de Paula Souza será reformado',
-        summary: 'Complexo esportivo receberá novo piso, iluminação de LED e melhorias na acessibilidade.',
+        title: 'Praça da Bíblia recebe nova iluminação em LED',
+        summary: 'Revitalização do espaço público garante mais segurança e lazer para as famílias à noite.',
         content: `
-            <p>A Secretaria de Esporte e Lazer anunciou a reforma completa do Ginásio de Esportes Joval de Paula Souza, no Parque Cachoeira. O local, palco de grandes competições estaduais, necessitava de reparos estruturais.</p>
-            <p>O projeto contempla a troca completa do piso da quadra por um material flutuante de alto desempenho, ideal para a prática de vôlei e basquete. Além disso, vestiários e arquibancadas serão adequados às normas de acessibilidade.</p>
-            <p>Durante as obras, as escolinhas de esporte serão remanejadas para quadras de escolas municipais próximas.</p>
+            <p>Quem passa pela Praça da Bíblia à noite já percebe a diferença. A Prefeitura concluiu nesta semana a instalação do novo sistema de iluminação em LED em todo o perímetro da praça.</p>
+            <p>"Agora dá para trazer as crianças para brincar com tranquilidade", elogiou uma moradora local. Além das novas luminárias, o paisagismo foi recuperado e bancos foram reformados.</p>
+            <p>O projeto faz parte do programa "Cidade Iluminada", que prevê a modernização da iluminação pública em diversos bairros.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000',
-        category: 'Esporte',
-        categoryColor: 'green',
+        imageUrl: '/images/plaza_bible_lighting_night.png',
+        category: 'Cidade',
+        categoryColor: 'blue',
         publishDate: getPastDate(35),
-        author: 'Esporte News'
+        author: 'Redação Municipal'
     },
     {
         id: 21,
