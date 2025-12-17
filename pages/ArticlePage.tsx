@@ -142,7 +142,7 @@ const ArticlePage: React.FC = () => {
 
                     if (idNum === 40) secImg = '/images/healthy_cooking_real_final_v1.jpg'; // Culinária (Interna)
                     if (idNum === 41) secImg = '/images/photography_contest_camera_internal.jpg'; // Fotografia (Interna)
-                    if (idNum === 42) secImg = '/images/ubs_health_center_night_internal.jpg'; // UBS Noturna (Interna)
+                    if (idNum === 42) secImg = '/images/ubs_california_inner_real_final.jpg'; // UBS Noturna (Interna)
                     if (idNum === 43) secImg = '/images/festa_junina_inner_real_final.jpg'; // Festa Junina (Interna)
                     if (idNum === 44) secImg = '/images/pioneers_homage_inner_real_final.jpg'; // Pioneiros (Interna)
                     if (idNum === 45) secImg = '/images/school_games_torch_internal.jpg'; // Jogos Escolares (Interna)
