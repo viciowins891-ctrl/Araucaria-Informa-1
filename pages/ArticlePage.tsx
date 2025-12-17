@@ -40,6 +40,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 36) {
                         setImgSrc('/images/iptu_real_queue_final.jpg');
                     }
+                    if (currentArticle.id === 37) {
+                        setImgSrc('/images/bus_schedule_real_final.png');
+                    }
                     setImageError(false);
 
 
@@ -122,7 +125,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 33) secImg = '/images/coral_municipal_internal_v2.png'; // Coral (Interna v2)
                     if (idNum === 34) secImg = '/images/parque_cachoeira_internal_v2.png'; // Parque Cachoeira (Interna v2)
                     if (idNum === 35) secImg = '/images/carros_antigos_internal_v2.png'; // Carros Antigos (Interna v2)
-                    if (idNum === 37) secImg = '/images/bus_schedule_internal.png'; // Novos Horários (Interna)
+                    if (idNum === 37) secImg = '/images/bus_schedule_real_final.png'; // Novos Horários (Interna)
                     if (idNum === 38) secImg = '/images/environment_week_collage.jpg'; // Semana Meio Ambiente (Interna)
                     if (idNum === 36) secImg = '/images/iptu_real_queue_final.jpg'; // IPTU (Interna)
                     if (idNum === 39) secImg = '/images/araucaria_volei_celebration_internal.png'; // Vôlei (Interna)
