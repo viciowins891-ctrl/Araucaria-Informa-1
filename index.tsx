@@ -13,11 +13,14 @@ if (!rootElement) {
 
 import ErrorBoundary from './components/ErrorBoundary';
 
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <ErrorBoundary>
     <HashRouter>
       <App />
+      <SpeedInsights />
     </HashRouter>
   </ErrorBoundary>
 );
