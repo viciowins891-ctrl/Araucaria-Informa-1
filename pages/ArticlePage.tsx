@@ -89,6 +89,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 7) secImg = '/images/news_vaccination_indoor_campaign.png'; // Campanha de Vacinação (Interior)
                     if (idNum === 8) secImg = '/images/childrens_theater_stage_play.png'; // Teatro Infantil (Interna)
                     if (idNum === 9) secImg = '/images/new_bike_path_industrial.png'; // Ciclovia Industrial (Interna)
+                    if (idNum === 10) secImg = '/images/road_repair_pothole_asphalt.png'; // Tapa Buraco (Interna)
                     if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
                     if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
                     if (idNum === 14) secImg = '/images/new_supermarket_interior.png'; // Novo Supermercado (Interna)
