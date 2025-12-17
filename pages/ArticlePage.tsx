@@ -49,6 +49,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 40) {
                         setImgSrc('/images/healthy_cooking_real_final_v1.jpg');
                     }
+                    if (currentArticle.id === 44) {
+                        setImgSrc('/images/pioneers_homage_inner_real_final.jpg');
+                    }
 
                     setImageError(false);
 
@@ -141,7 +144,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 41) secImg = '/images/photography_contest_camera_internal.jpg'; // Fotografia (Interna)
                     if (idNum === 42) secImg = '/images/ubs_health_center_night_internal.jpg'; // UBS Noturna (Interna)
                     if (idNum === 43) secImg = '/images/festa_junina_inner_real_final.jpg'; // Festa Junina (Interna)
-                    if (idNum === 44) secImg = '/images/pioneers_homage_ceremony_internal.jpg'; // Pioneiros (Interna)
+                    if (idNum === 44) secImg = '/images/pioneers_homage_inner_real_final.jpg'; // Pioneiros (Interna)
                     if (idNum === 45) secImg = '/images/school_games_torch_internal.jpg'; // Jogos Escolares (Interna)
 
 
