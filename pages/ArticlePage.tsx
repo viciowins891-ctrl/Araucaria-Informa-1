@@ -46,6 +46,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 38) {
                         setImgSrc('/images/environment_week_real_final_v1.jpg');
                     }
+                    if (currentArticle.id === 39) {
+                        setImgSrc('/images/araucaria_volei_real_final_v1.jpg');
+                    }
                     setImageError(false);
 
 
@@ -131,7 +134,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 37) secImg = '/images/bus_schedule_real_final_v5.png'; // Novos Horários (Interna)
                     if (idNum === 38) secImg = '/images/environment_week_real_final_v1.jpg'; // Semana Meio Ambiente (Interna)
                     if (idNum === 36) secImg = '/images/iptu_real_queue_final.jpg'; // IPTU (Interna)
-                    if (idNum === 39) secImg = '/images/araucaria_volei_celebration_internal.png'; // Vôlei (Interna)
+                    if (idNum === 39) secImg = '/images/araucaria_volei_real_final_v1.jpg'; // Vôlei (Interna)
                     if (idNum === 40) secImg = '/images/healthy_cooking_course_internal.png'; // Culinária (Interna)
                     if (idNum === 41) secImg = '/images/photography_contest_camera_internal.jpg'; // Fotografia (Interna)
                     if (idNum === 42) secImg = '/images/ubs_health_center_night_internal.jpg'; // UBS Noturna (Interna)
