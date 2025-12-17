@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
     }, []);
 
-    const { data, loading, error } = useFetch(api.getHomeData);
+    const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
     const DEFAULT_HERO_IMAGE = "/images/final_nature.png";
