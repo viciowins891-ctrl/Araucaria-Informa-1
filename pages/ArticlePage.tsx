@@ -84,7 +84,8 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 4 || idNum === 104) secImg = '/images/investimento_federal_real.png'; // Investimentos
                     if (idNum === 5 || idNum === 105) secImg = '/images/operacao_pcpr_viaturas.png'; // Drogas/PCPR
                     if (idNum === 6 || idNum === 106) secImg = '/images/news_vaccine_pregnant.png';
-                    if (idNum === 7 || idNum === 107) secImg = '/images/news_christmas_cantata.png';
+                    if (idNum === 107) secImg = '/images/news_christmas_cantata.png';
+                    if (idNum === 7) secImg = '/images/news_vaccination_indoor_campaign.png'; // Campanha de Vacinação (Interior)
                     // if (idNum === 8) secImg = '/images/teatro_kids_inner_fixed.png'; // Revertido para padrão estudantes
                     if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
                     if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
