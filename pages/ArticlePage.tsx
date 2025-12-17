@@ -223,7 +223,7 @@ const ArticlePage: React.FC = () => {
                 <img
                     src={imgSrc || FALLBACK_IMAGE}
                     alt={article.title}
-                    className="w-full h-full object-cover animate-slow-zoom"
+                    className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                 />

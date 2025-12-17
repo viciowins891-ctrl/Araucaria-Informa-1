@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
                     <img
                         src={finalDisplayImage}
                         alt="Imagem de destaque - Araucária"
-                        className="w-full h-full object-cover animate-slow-zoom"
+                        className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-1000 md:group-hover:scale-105"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
                     />
