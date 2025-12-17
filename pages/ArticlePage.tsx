@@ -38,7 +38,7 @@ const ArticlePage: React.FC = () => {
                     setArticle(currentArticle);
                     setImgSrc(currentArticle.imageUrl);
                     if (currentArticle.id === 36) {
-                        setImgSrc('/images/iptu_real_queue.jpg');
+                        setImgSrc('/images/iptu_real_queue_v2.jpg');
                     }
                     setImageError(false);
 
