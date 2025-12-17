@@ -114,6 +114,8 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 29) secImg = '/images/iluminacao_led_internal.jpg'; // Iluminação LED (Interna)
                     if (idNum === 29) secImg = '/images/iluminacao_led_internal.jpg'; // Iluminação LED (Interna)
                     if (idNum === 30) secImg = '/images/feira_livros_internal_real.jpg'; // Feira de Livros (Interna Real)
+                    if (idNum === 31) secImg = '/images/vacinacao_pet_internal.png'; // Vacinação Pet (Interna)
+                    if (idNum === 32) secImg = '/images/feira_produtor_roof_internal.png'; // Feira Produtor Cobertura (Interna)
 
 
                     setSecondaryImage(secImg);
