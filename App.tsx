@@ -2,7 +2,7 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Analytics } from "@vercel/analytics/react";
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -45,10 +45,14 @@ const Layout: React.FC = () => {
         }, 1000);
     }, []);
 
-    // Scroll to top on route change
+    const navType = useNavigationType();
+
+    // Scroll to top on route change, UNLESS it's a back/pop navigation
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
+        if (navType !== 'POP') {
+            window.scrollTo(0, 0);
+        }
+    }, [location.pathname, navType]);
 
 
 
