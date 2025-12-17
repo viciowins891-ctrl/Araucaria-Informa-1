@@ -109,6 +109,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 25) secImg = '/images/binario_centro_internal.jpg'; // Binário Centro (Interna)
                     if (idNum === 26) secImg = '/images/festival_gastronomico_internal.jpg'; // Festival Gastronômico (Interna)
                     if (idNum === 27) secImg = '/images/lousas_digitais_internal.jpg'; // Lousas Digitais (Interna)
+                    if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
 
 
                     setSecondaryImage(secImg);
