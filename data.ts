@@ -646,7 +646,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde". Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
             <p>Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
         `,
-        imageUrl: '/images/healthy_cooking_cover.jpg',
+        imageUrl: '/images/healthy_cooking_cover_real_final.jpg',
         category: 'Cidade',
         categoryColor: 'red',
         publishDate: getPastDate(88),
