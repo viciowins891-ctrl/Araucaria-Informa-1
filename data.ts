@@ -520,7 +520,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica. A imunização é gratuita e obrigatória para o controle da raiva.</p>
             <p>Equipes estarão concentradas na Praça da Bíblia das 9h às 17h. É importante levar os animais em caixas de transporte ou com guias e coleiras.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1632219156475-470a7d9b9365?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/vacinacao_pet_cover.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(65),
@@ -534,7 +534,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova. A obra era uma reivindicação antiga dos agricultores, que sofriam com a exposição ao sol forte e chuvas.</p>
             <p>"Agora temos dignidade para trabalhar e nossos clientes podem comprar com calma", comemorou o presidente da associação dos feirantes.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1533038590840-1cde6b418935?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/feira_produtor_roof_cover.png',
         category: 'Economia',
         categoryColor: 'indigo',
         publishDate: getPastDate(68),
