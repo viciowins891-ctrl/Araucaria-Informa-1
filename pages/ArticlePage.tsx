@@ -86,7 +86,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 6 || idNum === 106) secImg = '/images/news_vaccine_pregnant.png';
                     if (idNum === 7 || idNum === 107) secImg = '/images/news_christmas_cantata.png';
                     // if (idNum === 8) secImg = '/images/teatro_kids_inner_fixed.png'; // Revertido para padrão estudantes
-                    if (idNum === 109) secImg = '/images/custom_gym_official.png'; // Ginásio Joval
+                    if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
                     if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
 
                     setSecondaryImage(secImg);
