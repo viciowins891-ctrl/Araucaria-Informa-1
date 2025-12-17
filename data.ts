@@ -506,7 +506,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros. A regra é simples: traga um livro usado em bom estado e troque por outro de seu interesse.</p>
             <p>O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1507842217121-9e93dd2ccd08?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/feira_livros_cover.png',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: getPastDate(62),

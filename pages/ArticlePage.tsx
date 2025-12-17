@@ -112,6 +112,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
                     if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
                     if (idNum === 29) secImg = '/images/iluminacao_led_internal.jpg'; // Iluminação LED (Interna)
+                    if (idNum === 30) secImg = 'https://images.unsplash.com/photo-1507842217121-9e93dd2ccd08?auto=format&fit=crop&q=80&w=1000'; // Feira de Livros (Manter Interna Antiga)
 
 
                     setSecondaryImage(secImg);
