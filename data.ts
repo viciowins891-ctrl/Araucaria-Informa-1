@@ -618,7 +618,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Para celebrar a Semana Mundial do Meio Ambiente, a prefeitura organizou uma série de atividades educativas. O destaque fica para as oficinas de compostagem doméstica e reciclagem criativa, abertas ao público no Parque Tecnológico.</p>
             <p>"Pequenas atitudes mudam o mundo. Queremos engajar a população na preservação local", disse o diretor de meio ambiente.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1542601906990-b4d3fb7d5afa?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/environment_week_collage.jpg',
         category: 'Cidade',
         categoryColor: 'green',
         publishDate: getPastDate(82),
