@@ -116,9 +116,9 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 30) secImg = '/images/feira_livros_internal_real.jpg'; // Feira de Livros (Interna Real)
                     if (idNum === 31) secImg = '/images/vacinacao_pet_internal.png'; // Vacinação Pet (Interna)
                     if (idNum === 32) secImg = '/images/feira_produtor_roof_internal.png'; // Feira Produtor Cobertura (Interna)
-                    if (idNum === 33) secImg = '/images/coral_municipal_internal.png'; // Coral (Interna)
-                    if (idNum === 34) secImg = '/images/parque_cachoeira_internal.png'; // Parque Cachoeira (Interna)
-                    if (idNum === 35) secImg = '/images/carros_antigos_internal.png'; // Carros Antigos (Interna)
+                    if (idNum === 33) secImg = '/images/coral_municipal_internal_v2.png'; // Coral (Interna v2)
+                    if (idNum === 34) secImg = '/images/parque_cachoeira_internal_v2.png'; // Parque Cachoeira (Interna v2)
+                    if (idNum === 35) secImg = '/images/carros_antigos_internal_v2.png'; // Carros Antigos (Interna v2)
 
 
                     setSecondaryImage(secImg);
