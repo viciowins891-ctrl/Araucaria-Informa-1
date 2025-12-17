@@ -632,7 +632,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Em uma partida eletrizante, o Araucária Vôlei derrotou o time de Blumenau por 3 sets a 1 e manteve a liderança isolada da Superliga B. O ginásio estava lotado e a torcida empurrou o time em cada ponto.</p>
             <p>O próximo desafio será fora de casa, contra o vice-líder, valendo a ponta da tabela.</p>
         `,
-        imageUrl: '/images/araucaria_volei_cover_new_v2.jpg',
+        imageUrl: '/images/araucaria_volei_cover_final.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: getPastDate(85),
