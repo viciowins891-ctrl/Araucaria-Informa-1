@@ -132,6 +132,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 37) secImg = '/images/bus_schedule_real_final_v5.png'; // Novos Horários (Interna)
                     if (idNum === 38) secImg = '/images/environment_week_real_final_v1.jpg'; // Semana Meio Ambiente (Interna)
                     if (idNum === 36) secImg = '/images/iptu_real_queue_final.jpg'; // IPTU (Interna)
+                    if (idNum === 39) secImg = '/images/araucaria_volei_inner_final.png'; // Vôlei (Interna)
 
                     if (idNum === 40) secImg = '/images/healthy_cooking_course_internal.png'; // Culinária (Interna)
                     if (idNum === 41) secImg = '/images/photography_contest_camera_internal.jpg'; // Fotografia (Interna)
