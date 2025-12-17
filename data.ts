@@ -548,7 +548,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Se você gosta de cantar, essa é a sua chance. O Coral Municipal de Araucária abriu vagas para os naipes de soprano, contralto, tenor e baixo. As audições acontecerão na Casa da Cultura.</p>
             <p>O grupo se apresenta em eventos oficiais e festivais de música. Os ensaios são semanais e gratuitos.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1525920980995-f8a382bf42c5?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/coral_municipal_cover.png',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: getPastDate(70),
@@ -562,7 +562,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do Parque Cachoeira. A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
             <p>A iniciativa visa conscientizar os visitantes sobre a importância de não deixar resíduos na natureza.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1618477461853-5f8dd68aa395?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/parque_cachoeira_cleanup_cover.png',
         category: 'Cidade',
         categoryColor: 'green',
         publishDate: getPastDate(72),
@@ -576,7 +576,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O ronco dos motores clássicos tomou conta do Centro Cívico neste fim de semana. O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</p>
             <p>O evento também contou com mercado de pulgas (peças antigas) e praça de alimentação com food trucks.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/carros_antigos_cover.png',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: getPastDate(75),
