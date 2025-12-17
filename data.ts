@@ -660,7 +660,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Fotógrafos amadores e profissionais já podem inscrever seus trabalhos no 10º Concurso Municipal de Fotografia. O tema "Olhares sobre Araucária" convida a registrar as belezas urbanas e rurais da cidade.</p>
             <p>As melhores fotos farão parte de uma exposição itinerante e do calendário oficial do município.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/photography_contest_cover_real_final.jpg',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: getPastDate(90),
