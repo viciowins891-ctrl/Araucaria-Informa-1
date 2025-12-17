@@ -119,6 +119,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 33) secImg = '/images/coral_municipal_internal_v2.png'; // Coral (Interna v2)
                     if (idNum === 34) secImg = '/images/parque_cachoeira_internal_v2.png'; // Parque Cachoeira (Interna v2)
                     if (idNum === 35) secImg = '/images/carros_antigos_internal_v2.png'; // Carros Antigos (Interna v2)
+                    if (idNum === 37) secImg = '/images/bus_schedule_internal.png'; // Novos Horários (Interna)
 
 
                     setSecondaryImage(secImg);

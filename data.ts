@@ -604,7 +604,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A Companhia Municipal de Transporte Coletivo (CMTC) informou que, a partir desta segunda-feira, haverá alteração na grade de horários das linhas Tupy e Costeira. O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
             <p>Os novos horários já estão disponíveis no aplicativo do transporte e nos terminais.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/bus_schedule_main.png',
         category: 'Cidade',
         categoryColor: 'gray',
         publishDate: getPastDate(80),
