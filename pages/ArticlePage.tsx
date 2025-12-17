@@ -117,7 +117,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 31) secImg = '/images/vacinacao_pet_internal.png'; // Vacinação Pet (Interna)
                     if (idNum === 32) secImg = '/images/feira_produtor_roof_internal.png'; // Feira Produtor Cobertura (Interna)
                     if (idNum === 33) secImg = '/images/coral_municipal_internal.png'; // Coral (Interna)
-                    if (idNum === 34) secImg = '/images/parque_cachoeira_cleanup_internal.png'; // Parque Cachoeira (Interna)
+                    if (idNum === 34) secImg = '/images/parque_cachoeira_internal.png'; // Parque Cachoeira (Interna)
                     if (idNum === 35) secImg = '/images/carros_antigos_internal.png'; // Carros Antigos (Interna)
 
 
