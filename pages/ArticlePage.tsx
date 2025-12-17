@@ -91,6 +91,8 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
                     if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
                     if (idNum === 14) secImg = '/images/new_supermarket_interior.png'; // Novo Supermercado (Interna)
+                    if (idNum === 15) secImg = '/images/river_cleanup_volunteers.png'; // Limpeza Rio Iguaçu (Interna)
+
 
                     setSecondaryImage(secImg);
 
