@@ -1,26 +1,28 @@
+# 🔔 LEMBRETE URGENTE (PRÓXIMA SESSÃO)
+- [ ] **Configurar Segurança (RLS) no Supabase:** Executar o script SQL no painel do Supabase para impedir que visitantes apaguem o banco de dados. (O usuário pediu para ser lembrado disso ao retornar).
+
 # Status do Projeto - Araucária Informa
-**Data:** 11/12/2025 (Última atualização)
+**Data:** 14/12/2025 (Última atualização)
 
-## ✅ Concluído Nesta Sessão:
+## ✅ Concluído Nesta Sessão (Foco: AdSense e SEO):
 
-### 1. Sistema de Imagens Inteligente
-- **Detecção de Contexto:** O sistema agora lê o título da notícia e define automaticamente o tópico (Economia, Infraestrutura, Saúde, etc.).
-- **Banco de Imagens Curado:** Implementado um banco interno com URLs de alta qualidade do Unsplash para cada categoria, garantindo estilo jornalístico e sem pessoas/marcas.
-- **Placeholders Locais (Fallback):** Criadas e instaladas 8 imagens locais (na pasta `/public/images/`) para garantir que o site nunca fique sem imagem, mesmo offline.
-  - Categorias cobertas: Economia, Turismo, Educação, Infraestrutura, Segurança, Esporte, Comércio e Default.
+### 1. Correção de Sitemap (Crítico)
+- **Sitemap Completo:** O arquivo `sitemap.xml` foi regenerado manualmente para incluir TODAS as URLs de notícias (IDs 1-22 e 101-109) e eventos. Antes, apenas 5 páginas estáticas eram listadas, o que impedia o Google de encontrar 90% do conteúdo do site, gerando a rejeição por "Baixo Valor".
 
-### 2. Atualização Semanal Automática
-- **Agendador "Lazy Cron":** Implementado no `api.ts`. O site verifica automaticamente, ao ser aberto, se já se passou 1 semana desde a última atualização.
-- **Simulação Realista:** Se o tempo passou, ele gera uma nova notícia baseada em templates rotativos (Obras, Saúde, Indústria), simulando uma "vida" real para o portal.
-- **Integração Completa:** A nova notícia ganha destaque na Home e sua imagem é contextualizada automaticamente.
+### 2. Melhoria na Home Page
+- **Densidade de Texto:** Adicionada uma nova seção "Resumo das Últimas Notícias" logo abaixo da grade de imagens na `HomePage`. Esta seção lista os títulos e resumos completos em formato de texto.
+  - **Objetivo:** Aumentar a quantidade de texto legível para o crawler na página principal, evitando que o site pareça ser apenas uma galeria de imagens (o que infringe políticas de "Conteúdo Raso").
 
-### 3. Melhorias de Robustez
-- **HomePage e NewsCard:** Atualizados para usar a função `getPlaceholderImage()`. Se a imagem principal falhar, o sistema busca o placeholder específico da categoria (ex: falhou notícia de obra -> mostra cone/construção) em vez de uma imagem genérica.
+### 3. Validação de Build e Deploy
+- **Deploy Realizado:** O site foi re-publicado no Vercel com sucesso (Comando `vercel --prod`). As alterações já estão online.
+
+### 4. Ajuste Manual de Imagens
+- **Festival de Teatro (ID 8):** Revertido para a imagem genérica de "Educação" (estudantes/livros) conforme solicitação final do usuário, após testes com upload manual.
+- **Correção Geral:** Corrigido bug onde algumas categorias (Saúde, Política, Tecnologia) não tinham imagem secundária definida, causando erro no "print". Agora todas possuem placeholders definidos.
 
 ---
 
-O sistema está **autônomo, estável e salvo**. Todo o código foi persistido nos arquivos locais.
-
-## 🚀 Próximos Passos Sugeridos:
-1. **Validar em Produção:** Testar o comportamento do `localStorage` em diferentes dispositivos se for publicar.
-2. **Expandir Templates:** Adicionar mais variações de notícias semanais no `aiService.ts` para aumentar a variedade a longo prazo.
+## 🚀 Ação Imediata do Usuário (Painel AdSense):
+1. **Acesse o Google AdSense:** Vá para a página onde aparece "Encontramos violações da política".
+2. **Confirme a Correção:** Marque a caixinha "Confirmo que corrigi os problemas".
+3. **Solicite Revisão:** Clique no botão azul "Pedir revisão".

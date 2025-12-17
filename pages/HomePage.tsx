@@ -143,6 +143,70 @@ const HomePage: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Seção de Texto/Lista para SEO e Densidade de Conteúdo (AdSense Friendly) */}
+                <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-white dark:bg-zinc-800/30 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-700/30">
+                        <div className="flex items-center gap-2 mb-6">
+                            <span className="material-icons-outlined text-primary">feed</span>
+                            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 font-display">
+                                Resumo das Últimas Notícias
+                            </h3>
+                        </div>
+                        <div className="space-y-6">
+                            {news.slice(0, 5).map(item => (
+                                <div key={item.id} className="border-b border-zinc-100 dark:border-zinc-700/50 last:border-0 pb-6 last:pb-0">
+                                    <Link to={`/noticias/${item.id}`} className="group block">
+                                        <h4 className="text-lg font-bold text-zinc-700 dark:text-zinc-200 group-hover:text-primary transition-colors mb-2">
+                                            {item.title}
+                                        </h4>
+                                        <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-3xl">
+                                            {item.summary}
+                                        </p>
+                                        <div className="mt-2 flex items-center text-xs text-zinc-400 font-medium">
+                                            <span className="capitalize">{item.category}</span>
+                                            <span className="mx-2">•</span>
+                                            <span>{item.publishDate}</span>
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-700/50">
+                            <Link to="/noticias" className="text-sm font-bold text-primary hover:text-primary-dark flex items-center gap-1">
+                                Ver arquivo completo de notícias <span className="material-icons-outlined text-sm">arrow_forward</span>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Seção Textual SEO (Para AdSense) */}
+                <section className="container mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-800/50 rounded-3xl p-8 sm:p-12 shadow-sm border border-zinc-100 dark:border-zinc-700/50">
+                    <div className="max-w-4xl mx-auto text-center mb-10">
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm">Nossa Missão</span>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-zinc-800 dark:text-zinc-100 mt-2 font-display">
+                            Informação com Credibilidade para Araucária
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-zinc-600 dark:text-zinc-300 leading-relaxed text-lg text-justify">
+                        <div>
+                            <p className="mb-6">
+                                O <strong>Araucária Informa</strong> nasceu com o propósito de conectar os moradores da Cidade Símbolo do Paraná aos acontecimentos mais importantes da região. Mais do que um portal de notícias, somos um guia completo de utilidade pública, cultura e desenvolvimento econômico local.
+                            </p>
+                            <p>
+                                Nossa cobertura abrange desde as decisões políticas no Paço Municipal até os eventos culturais que movimentam o Parque Cachoeira e as praças da cidade. Valorizamos o jornalismo sério, a apuração rigorosa dos fatos e, acima de tudo, o respeito pelo cidadão araucariense.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="mb-6">
+                                Além de informar, buscamos fortalecer o comércio local através do nosso Guia Comercial, dando visibilidade para empreendedores e facilitando a vida de quem procura serviços na cidade. Acreditamos que uma cidade bem informada é uma cidade que cresce mais forte e unida.
+                            </p>
+                            <p>
+                                Seja no Centro, no Costeira, no Capela Velha ou na área rural, o Araucária Informa está presente, trazendo a notícia em tempo real, com a qualidade e a agilidade que você merece. Obrigado por nos escolher como sua fonte diária de informação!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 sm:p-12">
                         <div className="flex flex-col sm:flex-row justify-between items-end mb-10 gap-4">

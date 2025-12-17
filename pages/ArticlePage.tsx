@@ -41,38 +41,52 @@ const ArticlePage: React.FC = () => {
 
 
                     // Lógica para Imagem Secundária:
-                    // 1. Por padrão, tenta um placeholder da categoria.
+                    // 1. Definição da Imagem Secundária (Interior da Notícia)
+                    // Por padrão, carregamos um placeholder baseado na categoria (Imagens com 'Print'/Tema)
                     let secImg = getPlaceholderImage(currentArticle.category);
 
-                    // 2. Se a imagem principal for uma das nossas "Exclusivas" (geradas por IA ou Custom), usamos ela também aqui para manter o contexto.
-                    const mainImg = currentArticle.imageUrl || '';
-                    if (mainImg.includes('/images/news_') || mainImg.includes('/images/custom_')) {
-                        secImg = mainImg;
+                    // Mapeamento explícito para categorias que usam os placeholders "com print"
+                    if (currentArticle.category === 'Educação' || currentArticle.title.toLowerCase().includes('escola')) {
+                        secImg = '/images/placeholder_educacao.png';
+                    } else if (currentArticle.category === 'Infraestrutura' || currentArticle.title.toLowerCase().includes('obra')) {
+                        secImg = '/images/placeholder_infraestrutura.png';
+                    } else if (currentArticle.category === 'Segurança' || currentArticle.title.toLowerCase().includes('polícia')) {
+                        secImg = '/images/placeholder_seguranca.png';
+                    } else if (currentArticle.category === 'Esporte' || currentArticle.title.toLowerCase().includes('jogo')) {
+                        secImg = '/images/placeholder_esporte.png';
+                    } else if (currentArticle.category === 'Turismo') {
+                        secImg = '/images/placeholder_turismo.png';
+                    } else if (currentArticle.category === 'Economia' || currentArticle.title.toLowerCase().includes('emprego')) {
+                        secImg = '/images/placeholder_economia.png';
+                    } else if (currentArticle.category === 'Cidade' && currentArticle.title.toLowerCase().includes('comércio')) {
+                        secImg = '/images/placeholder_comercio.png';
                     }
 
-                    // 3. Override de segurança (caso específico do user)
+                    // Ajustes para temas sem placeholder oficial, usando imagens contextuais
+                    if (currentArticle.category === 'Saúde' || currentArticle.title.toLowerCase().includes('vacina')) {
+                        secImg = '/images/news_context_health.png';
+                    }
+                    if (currentArticle.title.toLowerCase().includes('orçamento') || currentArticle.title.toLowerCase().includes('câmara')) {
+                        secImg = '/images/news_budget_chamber.png';
+                    }
+
+                    // 2. Override de segurança (caso específico - Drogas)
                     if (currentArticle.title.toLowerCase().includes('drogas') || currentArticle.title.toLowerCase().includes('incinera')) {
                         secImg = '/images/custom_drugs.jpg';
                     }
 
-                    // 4. Override SUPREMO por ID (Para vencer cache do Supabase/Vercel)
-                    // Garante que as imagens do Nano Banana Pro apareçam custe o que custar
+                    // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)
+                    // Garante que as notícias principais (1-10) mantenham suas fotos internas exclusivas
                     const idNum = Number(id);
-                    if (idNum === 101) secImg = '/images/news_cmei_interior.png'; // Interior para não repetir a capa
-                    if (idNum === 102) secImg = '/images/news_budget_chamber.png'; // Plenário (Interior)
-                    if (idNum === 103) secImg = '/images/news_poupatempo_service.png'; // Interior Moderno (Nano Banana Pro)
-                    if (idNum === 104) secImg = '/images/investimento_federal_real.png'; // Imagem de arquivo (Backup)
-                    if (idNum === 105) secImg = '/images/news_drugs_seized.png'; // Material Apreendido (Nano Banana Pro)
-                    if (idNum === 106) secImg = '/images/news_vaccine_pregnant.png'; // Gestante Vacina (Nano Banana Pro)
-                    if (idNum === 107) secImg = '/images/news_christmas_cantata.png'; // Coral Santuário (Nano Banana Pro)
-                    if (idNum === 108) secImg = '/images/news_cyclone_damage.png'; // Estrago/Fiação Caída (Nano Banana Pro)
-                    if (idNum === 109) secImg = '/images/pacote_obras_capela_velha.jpg'; // Obras/Reforma (Contexto Local)
-                    if (idNum === 7) secImg = '/images/news_vaccine_flu.png'; // Vacinação Gripe (Nano Banana Pro)
-                    if (idNum === 8) secImg = '/images/placeholder_educacao.png'; // Teatro (Falta image, mantendo padrao/fallback ou pular)
-                    if (idNum === 9) secImg = '/images/repar_refinaria_aerea.jpg'; // Ciclovia/REPAR (Contexto Industrial)
-                    if (idNum === 10) secImg = '/images/news_pothole_repair.png'; // Tapa-Buracos (Nano Banana Pro)
-                    if (idNum === 11) secImg = '/images/custom_gm_official_pickups.jpg'; // Foto Oficial (Caminhonetes/Frota)
-                    if (idNum === 12) secImg = '/images/news_pediatric_ward.png'; // Ala Pediátrica Interior (Nano Banana Pro)
+                    if (idNum === 1 || idNum === 101) secImg = '/images/cmei_interior_pessoas.png'; // CMEI
+                    if (idNum === 2 || idNum === 102) secImg = '/images/prefeitura_orcamento_real.png'; // Orçamento
+                    if (idNum === 3 || idNum === 103) secImg = '/images/poupatempo_atendimento_pessoas.png'; // Poupatempo
+                    if (idNum === 4 || idNum === 104) secImg = '/images/investimento_federal_real.png'; // Investimentos
+                    if (idNum === 5 || idNum === 105) secImg = '/images/operacao_pcpr_viaturas.png'; // Drogas/PCPR
+                    if (idNum === 6 || idNum === 106) secImg = '/images/news_vaccine_pregnant.png';
+                    if (idNum === 7 || idNum === 107) secImg = '/images/news_christmas_cantata.png';
+                    // if (idNum === 8) secImg = '/images/teatro_kids_inner_fixed.png'; // Revertido para padrão estudantes
+                    if (idNum === 109) secImg = '/images/custom_gym_official.png'; // Ginásio Joval
 
                     setSecondaryImage(secImg);
 
@@ -212,6 +226,11 @@ const ArticlePage: React.FC = () => {
 
                     {/* Header do Artigo */}
                     <div className="flex flex-col gap-6 mb-8">
+                        <Link to="/noticias" className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit">
+                            <span className="material-icons-outlined text-sm mr-1">arrow_back</span>
+                            <span className="text-sm font-medium">Voltar</span>
+                        </Link>
+
                         <div className="flex flex-wrap items-center gap-4">
                             <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20`}>
                                 {article.category}

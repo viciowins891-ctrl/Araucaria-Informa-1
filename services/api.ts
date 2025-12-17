@@ -10,55 +10,30 @@ const UPDATE_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000;
 
 export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
-        const { data, error } = await supabase
-            .from('news_articles')
-            .select('*')
-            .order('created_at', { ascending: false });
+        // FORÇANDO USO DE DADOS LOCAIS (data.ts) PARA GARANTIR ATUALIZAÇÃO DO SITE
+        // Isso bypassa o Supabase temporariamente para validar as mudanças do AdSense.
+        // const { data, error } = await supabase
+        //     .from('news')
+        //     .select('*')
+        //     .order('publish_date', { ascending: false });
 
-        // Fallback: Se o banco estiver vazio (ou erro), usa dados locais (Mock)
-        if (!data || data.length === 0) {
-            console.warn("API: Banco vazio ou erro. Usando dados locais de fallback (data.ts).");
-            // Importa dinamicamente para evitar dependência circular se houver, ou apenas usa o import existente
-            const { newsArticles } = await import('../data');
-            return newsArticles;
-        }
-
-        return (data || []).map((n: any) => ({
-            ...n,
-            imageUrl: n.imageurl,
-            categoryColor: n.categorycolor,
-            publishDate: n.publishdate,
-            sourceUrl: n.sourceurl,
-            sourceName: n.sourcename
-        }));
+        console.log("API: Modo Estático Ativado - Usando data.ts");
+        const { newsArticles } = await import('../data');
+        return newsArticles;
     },
 
     getNewsById: async (id: number): Promise<NewsArticle | undefined> => {
-        const { data, error } = await supabase
-            .from('news_articles')
-            .select('*')
-            .eq('id', id)
-            .single();
+        // FORÇANDO USO DE DADOS LOCAIS
 
-        if (!error && data) {
-            return {
-                ...data,
-                imageUrl: data.imageurl,
-                categoryColor: data.categorycolor,
-                publishDate: data.publishdate,
-                sourceUrl: data.sourceurl,
-                sourceName: data.sourcename
-            };
-        }
-
-        console.warn(`API: Notícia ${id} não encontrada no banco. Buscando em fallback local...`);
+        // const { data, error } = await supabase ... (Código comentado)
 
         // Fallback 1: Dados estáticos (data.ts)
         const { newsArticles } = await import('../data');
-        const localArticle = newsArticles.find(n => n.id === Number(id)); // Ensure type match
+        const localArticle = newsArticles.find(n => n.id === Number(id));
         if (localArticle) return localArticle;
 
-        // Fallback 2: Dados gerados/AI (aiService.ts)
+        // Fallback 2: Dados gerados/AI (aiService.ts) ...
+
         // Nota: IDs de AI começam em 1000 geralmente
         const { fetchWeeklyNewsWithAI } = await import('./aiService');
         const aiArticles = await fetchWeeklyNewsWithAI();
@@ -72,16 +47,16 @@ export const api = {
             title: n.title,
             summary: n.summary,
             content: n.content,
-            imageurl: n.imageUrl,
+            image_url: n.imageUrl,
             category: n.category,
-            categorycolor: n.categoryColor,
-            publishdate: n.publishDate,
+            category_color: n.categoryColor,
+            publish_date: n.publishDate,
             author: n.author,
-            sourceurl: n.sourceUrl,
-            sourcename: n.sourceName
+            // source_url: n.sourceUrl, // Columns didn't exist in my create script, commenting out to avoid error
+            // source_name: n.sourceName
         }));
 
-        const { error } = await supabase.from('news_articles').insert(articlesToInsert);
+        const { error } = await supabase.from('news').insert(articlesToInsert);
 
         if (error) {
             console.error('Erro ao salvar notícias no Supabase:', error);
@@ -134,7 +109,7 @@ export const api = {
 
         return (data || []).map((e: any) => ({
             ...e,
-            imageUrl: e.imageurl
+            imageUrl: e.image_url
         }));
     },
 
@@ -148,7 +123,7 @@ export const api = {
         if (!error && data) {
             return {
                 ...data,
-                imageUrl: data.imageurl
+                imageUrl: data.image_url
             };
         }
 
@@ -170,7 +145,7 @@ export const api = {
 
         return (data || []).map((b: any) => ({
             ...b,
-            imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.imageurl
+            imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url
         }));
     },
 

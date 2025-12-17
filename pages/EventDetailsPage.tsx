@@ -14,6 +14,15 @@ const EventDetailsPage: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [weatherMock, setWeatherMock] = useState({ temp: 18, condition: 'Céu Limpo', icon: 'wb_sunny' });
+    const [isRegistered, setIsRegistered] = useState(false);
+
+    const handleConfirmPresence = () => {
+        if (isRegistered) return;
+        // Simulação de delay de rede
+        const originalText = document.title;
+        setIsRegistered(true);
+        alert(`Presença confirmada para o evento: ${event?.title}!`);
+    };
 
     useEffect(() => {
         const fetchEvent = async () => {
@@ -110,9 +119,21 @@ const EventDetailsPage: React.FC = () => {
 
                             {/* Ticket / CTA Button */}
                             <div className="flex-shrink-0 animate-fade-in-up delay-100">
-                                <button className="bg-white text-gray-900 hover:bg-gray-100 font-bold py-4 px-8 rounded-full shadow-xl transition-all transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-3">
-                                    <span className="material-icons text-primary">confirmation_number</span>
-                                    Confirmar Presença
+                                <button
+                                    onClick={handleConfirmPresence}
+                                    disabled={isRegistered}
+                                    className={`
+                                        font-bold py-4 px-8 rounded-full shadow-xl transition-all transform flex items-center gap-3
+                                        ${isRegistered
+                                            ? 'bg-green-500 text-white cursor-default'
+                                            : 'bg-white text-gray-900 hover:bg-gray-100 hover:-translate-y-1 hover:shadow-2xl'
+                                        }
+                                    `}
+                                >
+                                    <span className={`material-icons ${isRegistered ? 'text-white' : 'text-primary'}`}>
+                                        {isRegistered ? 'check_circle' : 'confirmation_number'}
+                                    </span>
+                                    {isRegistered ? 'Presença Confirmada' : 'Confirmar Presença'}
                                 </button>
                             </div>
                         </div>

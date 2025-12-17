@@ -2,50 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://araucariainforma.com/</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://araucariainforma.com/noticias</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>hourly</changefreq>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://araucariainforma.com/eventos</loc>
-    <lastmod>2025-12-12</lastmod>
+    <loc>https://araucariainforma.com/comercio</loc>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://araucariainforma.com/comercio</loc>
-    <lastmod>2025-12-12</lastmod>
+    <loc>https://araucariainforma.com/eventos</loc>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://araucariainforma.com/historia</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://araucariainforma.com/quem-somos</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://araucariainforma.com/contato</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://araucariainforma.com/privacidade</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://araucariainforma.com/termos</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- News Articles -->
+  <url><loc>https://araucariainforma.com/noticias/101</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/102</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/103</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/104</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/105</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/106</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/107</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/108</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/109</loc><priority>0.7</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/6</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/7</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/8</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/9</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/10</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/11</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/12</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/13</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/14</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/15</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/16</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/17</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/18</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/19</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/20</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/21</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/22</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/23</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/24</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/25</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/26</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/27</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/28</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/29</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/30</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/31</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/32</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/33</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/34</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/35</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/36</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/37</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/38</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/39</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/40</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/41</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/42</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/43</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/44</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/noticias/45</loc><priority>0.6</priority></url>
+
+  <!-- Events -->
+  <url><loc>https://araucariainforma.com/eventos/1</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/eventos/2</loc><priority>0.6</priority></url>
+  <url><loc>https://araucariainforma.com/eventos/3</loc><priority>0.6</priority></url>
 </urlset>

@@ -22,6 +22,12 @@ export const getPlaceholderImage = (category: string): string => {
     if (normalized.includes('ESPORTE') || normalized.includes('CULTURA')) return '/images/placeholder_esporte.png';
     if (normalized.includes('COMÉRCIO') || normalized.includes('VAREJO')) return '/images/placeholder_comercio.png';
 
+    // Novos mapeamentos para completar os temas
+    if (normalized.includes('SAÚDE') || normalized.includes('MÉDICO')) return '/images/news_context_health.png';
+    if (normalized.includes('POLÍTICA') || normalized.includes('CÂMARA') || normalized.includes('PREFEITURA')) return '/images/news_budget_chamber.png';
+    if (normalized.includes('TECNOLOGIA') || normalized.includes('INOVAÇÃO')) return '/images/news_hackathon_coding.png';
+    if (normalized.includes('CIDADE') || normalized.includes('URBANO')) return '/images/araucaria_smart_city.jpg';
+
     // Default seguro
     return '/images/placeholder_default.png';
 };
