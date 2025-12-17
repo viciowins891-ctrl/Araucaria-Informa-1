@@ -436,7 +436,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos. O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
             <p>A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/binario_centro_cover.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: getPastDate(50),
