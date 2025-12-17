@@ -492,7 +492,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O programa "Araucária Mais Iluminada" chegou ao bairro Capela Velha. Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
             <p>A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1617135042220-302a2817ee6b?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/iluminacao_led_cover.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: getPastDate(60),

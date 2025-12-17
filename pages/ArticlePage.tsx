@@ -110,6 +110,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 26) secImg = '/images/festival_gastronomico_internal.jpg'; // Festival Gastronômico (Interna)
                     if (idNum === 27) secImg = '/images/lousas_digitais_internal.jpg'; // Lousas Digitais (Interna)
                     if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
+                    if (idNum === 29) secImg = 'https://images.unsplash.com/photo-1617135042220-302a2817ee6b?auto=format&fit=crop&q=80&w=1000'; // Iluminação LED (Manter Interna Antiga)
 
 
                     setSecondaryImage(secImg);
