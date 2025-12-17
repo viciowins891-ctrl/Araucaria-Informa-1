@@ -93,8 +93,13 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 11) secImg = '/images/municipal_guard_real.png'; // Viaturas GM (Interna)
                     if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
                     if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
+                    if (idNum === 17) secImg = '/images/vocational_training_industrial_class.png'; // Curso SENAI (Interna)
+                    if (idNum === 18) secImg = '/images/rural_tourism_signage_araucaria.png'; // Sinalização Caminho do Vinho (Interna)
                     if (idNum === 14) secImg = '/images/new_supermarket_interior.png'; // Novo Supermercado (Interna)
                     if (idNum === 15) secImg = '/images/river_cleanup_volunteers.png'; // Limpeza Rio Iguaçu (Interna)
+                    if (idNum === 12) secImg = '/images/hospital_pediatric_ward_interior.png'; // Hospital Ala Pediátrica (Interna)
+                    if (idNum === 19) secImg = '/images/school_transport_app_araucaria.png'; // App Transporte Escolar (Interna)
+                    if (idNum === 13) secImg = '/images/school_robotics_fair_project.png'; // Feira Robótica (Interna)
 
 
                     setSecondaryImage(secImg);
