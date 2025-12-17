@@ -304,7 +304,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado. O evento reuniu mais de 80 participantes, divididos em categorias do sub-10 ao veterano.</p>
             <p>O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub-14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/news_chess_tournament.png',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: getPastDate(25),

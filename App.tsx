@@ -9,6 +9,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import LoadingSpinner from './components/LoadingSpinner';
 import { api } from './services/api';
 import CookieConsent from './components/CookieConsent';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Implementando Lazy Loading para performance (Code Splitting)
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -91,7 +92,9 @@ const App: React.FC = () => {
     return (
         <HelmetProvider>
             <ThemeProvider>
-                <Layout />
+                <ErrorBoundary>
+                    <Layout />
+                </ErrorBoundary>
             </ThemeProvider>
         </HelmetProvider>
     );

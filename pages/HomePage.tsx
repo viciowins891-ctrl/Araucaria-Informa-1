@@ -20,37 +20,29 @@ const HomePage: React.FC = () => {
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
     const DEFAULT_HERO_IMAGE = "/images/final_nature.png";
-    const [heroImage, setHeroImage] = useState(DEFAULT_HERO_IMAGE);
 
-    // Estado local para gerenciar a imagem exibida (permite fallback em caso de erro)
-    const [displayImage, setDisplayImage] = useState<string>("");
-
-    // Cache Buster para forçar recarregamento da imagem
-    const [cacheBuster] = useState(Date.now());
+    // Estado para controlar erro de carregamento da imagem
+    const [imageError, setImageError] = useState(false);
 
     // Determina a notícia de destaque (se houver dados)
     const featuredNews = data?.news && data.news.length > 0 ? data.news[0] : null;
 
-    // Sincroniza a imagem exibida quando a notícia de destaque muda
-    useEffect(() => {
-        if (featuredNews?.imageUrl) {
-            // Se URL externa, usa direta. Se local que sabemos que falha, forçamos a segura.
-            // Mas agora todas as locais apontam para final_nature.png
-            setDisplayImage(featuredNews.imageUrl);
-        } else {
-            setDisplayImage(heroImage);
+    // Lógica direta de seleção de imagem (Sem useEffect para evitar flash)
+    // 1. Se houve erro, usa fallback
+    // 2. Se tem notícia destaque com imagem, usa ela
+    // 3. Se não, usa imagem padrão
+    const getHeroImage = () => {
+        if (imageError) {
+            return featuredNews ? getPlaceholderImage(featuredNews.category) : DEFAULT_HERO_IMAGE;
         }
-    }, [featuredNews, heroImage]);
+        return featuredNews?.imageUrl || DEFAULT_HERO_IMAGE;
+    };
+
+    const finalDisplayImage = getHeroImage();
 
     const handleImageError = () => {
-        // Fallback final para a imagem local segura se tudo falhar
-        console.log("Falha ao carregar imagem principal. Usando fallback local.");
-
-        const fallback = featuredNews ? getPlaceholderImage(featuredNews.category) : DEFAULT_HERO_IMAGE;
-
-        if (displayImage !== fallback) {
-            setDisplayImage(fallback);
-        }
+        console.log("Falha ao carregar imagem principal. Ativando fallback.");
+        setImageError(true);
     };
 
     // Renderização Condicional
@@ -67,7 +59,7 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={displayImage}
+                        src={finalDisplayImage}
                         alt="Imagem de destaque - Araucária"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         onError={handleImageError}

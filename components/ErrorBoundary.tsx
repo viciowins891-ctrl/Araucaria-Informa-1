@@ -1,43 +1,37 @@
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 interface State {
     hasError: boolean;
-    error: Error | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
     public state: State = {
-        hasError: false,
-        error: null
+        hasError: false
     };
 
-    public static getDerivedStateFromError(error: Error): State {
-        return { hasError: true, error };
+    public static getDerivedStateFromError(_: Error): State {
+        return { hasError: true };
     }
 
     public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        console.error('Uncaught error:', error, errorInfo);
+        console.error("Uncaught error:", error, errorInfo);
     }
 
     public render() {
         if (this.state.hasError) {
             return (
-                <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
-                    <h1 className="text-3xl font-bold text-red-500 mb-4">Ops! Algo deu errado.</h1>
-                    <p className="text-xl mb-4">Ocorreu um erro ao renderizar a página.</p>
-                    <div className="bg-black p-4 rounded border border-gray-700 max-w-2xl overflow-auto">
-                        <code className="text-sm font-mono text-red-300">
-                            {this.state.error && this.state.error.toString()}
-                        </code>
-                    </div>
+                <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-center p-4">
+                    <h1 className="text-4xl font-bold text-red-600 mb-4">Ops! Algo deu errado.</h1>
+                    <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
+                        Pedimos desculpas, mas encontramos um erro inesperado ao carregar esta página. Nossa equipe já foi notificada.
+                    </p>
                     <button
-                        className="mt-6 px-6 py-2 bg-blue-600 rounded hover:bg-blue-700"
                         onClick={() => window.location.reload()}
+                        className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
                     >
                         Tentar Novamente
                     </button>
