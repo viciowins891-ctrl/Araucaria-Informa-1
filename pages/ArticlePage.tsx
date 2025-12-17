@@ -245,10 +245,13 @@ const ArticlePage: React.FC = () => {
 
                     {/* Header do Artigo */}
                     <div className="flex flex-col gap-6 mb-8">
-                        <Link to="/noticias" className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit">
+                        <button
+                            onClick={() => navigate(-1)}
+                            className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit bg-transparent border-none cursor-pointer"
+                        >
                             <span className="material-icons-outlined text-sm mr-1">arrow_back</span>
                             <span className="text-sm font-medium">Voltar</span>
-                        </Link>
+                        </button>
 
                         <div className="flex flex-wrap items-center gap-4">
                             <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20`}>
