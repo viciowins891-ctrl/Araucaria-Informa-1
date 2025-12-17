@@ -105,6 +105,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 21) secImg = '/images/news_hackathon_coding.png'; // Hackathon (Interna)
                     if (idNum === 23) secImg = '/images/araucaria_ec_jogo.jpg'; // Futsal (Interna)
                     if (idNum === 32) secImg = '/images/feira_definitiva_v100.png'; // Feira Produtor (Interna)
+                    if (idNum === 24) secImg = '/images/campanha_agasalho_internal.jpg'; // Campanha Agasalho (Internacom)
 
 
                     setSecondaryImage(secImg);
