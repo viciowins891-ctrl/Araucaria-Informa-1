@@ -15,7 +15,7 @@ const HistoryPage: React.FC = () => {
                 <img
                     src="/images/portal_polones_araucaria_real.png"
                     alt="Paisagem e Cultura Local"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-10"
                     onError={(e) => e.currentTarget.style.display = 'none'}
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-12 z-20">
