@@ -60,9 +60,9 @@ const HistoryPage: React.FC = () => {
                 <div className="rounded-lg overflow-hidden shadow-md bg-gray-200 dark:bg-gray-800 h-64 relative flex items-center justify-center">
                     <span className="material-icons text-5xl text-gray-400 absolute">park</span>
                     <img
-                        src="/images/parque_cachoeira_entrada.jpg"
+                        src="/images/parque_cachoeira_real.png"
                         alt="Pinheiros e Natureza"
-                        className="w-full h-full object-cover relative z-10"
+                        className="absolute inset-0 w-full h-full object-cover z-10"
                         onError={(e) => e.currentTarget.style.display = 'none'}
                     />
                 </div>
