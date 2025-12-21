@@ -119,7 +119,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 13) secImg = '/images/school_robotics_fair_project.png'; // Feira Robótica (Interna)
                     if (idNum === 108) secImg = '/images/copel_repair_real_v2.png'; // Ciclone (Interna) - Fix Duplicação
                     if (idNum === 21) secImg = '/images/news_hackathon_coding.png'; // Hackathon (Interna)
-                    if (idNum === 23) secImg = '/images/araucaria_ec_jogo.jpg'; // Futsal (Interna)
+                    if (idNum === 23) secImg = '/images/araucaria_futsal_real.jpg'; // Futsal (Interna)
                     if (idNum === 32) secImg = '/images/feira_definitiva_v100.png'; // Feira Produtor (Interna)
                     if (idNum === 24) secImg = '/images/campanha_agasalho_internal.jpg'; // Campanha Agasalho (Internacom)
                     if (idNum === 25) secImg = '/images/binario_centro_internal.jpg'; // Binário Centro (Interna)
