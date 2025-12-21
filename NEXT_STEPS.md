@@ -1,5 +1,5 @@
 # 🔔 LEMBRETE URGENTE (PRÓXIMA SESSÃO)
-- [ ] **Configurar Segurança (RLS) no Supabase:** Executar o script SQL no painel do Supabase para impedir que visitantes apaguem o banco de dados. (O usuário pediu para ser lembrado disso ao retornar).
+- [x] **Configurar Segurança (RLS) no Supabase:** Executar o script SQL no painel do Supabase para impedir que visitantes apaguem o banco de dados. (Concluído em 18/12/2025).
 
 # Status do Projeto - Araucária Informa
 **Data:** 14/12/2025 (Última atualização)

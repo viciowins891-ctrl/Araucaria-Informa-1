@@ -751,6 +751,24 @@ export const events: Event[] = [
         date: getUpcomingDate(7), // Daqui a uma semana (Futuro)
         time: '19:30',
         location: 'Teatro da Praça'
+    },
+    {
+        id: 4,
+        title: 'Bazar Beneficente da APAE',
+        description: 'Grande bazar com roupas, calçados e utensílios a preços acessíveis. Toda a renda será revertida para a instituição.',
+        imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=1000',
+        date: getUpcomingDate(10),
+        time: '09:00 - 17:00',
+        location: 'Salão Paroquial Matriz'
+    },
+    {
+        id: 5,
+        title: 'Final do Campeonato Amador de Futebol',
+        description: 'A grande decisão do campeonato varzeano de Araucária. Venha torcer pelo seu time do bairro!',
+        imageUrl: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=1000',
+        date: getUpcomingDate(14),
+        time: '15:30',
+        location: 'Estádio Municipal'
     }
 ];
 

@@ -13,7 +13,7 @@ const HistoryPage: React.FC = () => {
             <div className="mb-12 rounded-xl overflow-hidden shadow-lg group relative bg-gray-200 dark:bg-gray-800 h-64 sm:h-96 flex flex-col items-center justify-center">
                 <span className="material-icons text-5xl text-gray-400 mb-2">archway</span>
                 <img
-                    src="/images/portal_polones_araucaria.jpg"
+                    src="/images/portal_polones_araucaria_real.png"
                     alt="Paisagem e Cultura Local"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
                     onError={(e) => e.currentTarget.style.display = 'none'}

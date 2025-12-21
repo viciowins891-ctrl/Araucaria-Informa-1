@@ -28,6 +28,10 @@
                 {
                     "key": "Permissions-Policy",
                     "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+                },
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; img-src 'self' https://images.unsplash.com https://*.supabase.co data: blob: https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google.com https://*.gstatic.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.googleapis.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net;"
                 }
             ]
         }
