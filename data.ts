@@ -688,7 +688,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O sábado foi de festa nas escolas municipais. O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
             <p>A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
         `,
-        imageUrl: '/images/festa_junina_cover.jpg',
+        imageUrl: '/images/festa_junina_real_cover.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(95),
