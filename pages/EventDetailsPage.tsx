@@ -245,7 +245,7 @@ const EventDetailsPage: React.FC = () => {
                                     onClick={addToCalendar}
                                     className="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2"
                                 >
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google" className="w-5 h-5" />
+                                    <img src="/images/google_calendar.svg" alt="Google" className="w-5 h-5" />
                                     Google Calendar
                                 </button>
                                 <div className="w-full">
