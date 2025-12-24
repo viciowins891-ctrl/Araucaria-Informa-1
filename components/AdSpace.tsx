@@ -46,7 +46,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
     // Se não tivermos um ID real configurado ou estivermos em localhost,
     // mostramos o placeholder antigo para não quebrar o layout visualmente.
     // O AdSense não exibe anúncios em localhost/domínios não aprovados.
-    const isDevelopment = false; // Mude para false quando for para produção com IDs reais
+    const isDevelopment = true; // Mude para false quando for para produção com IDs reais
 
     if (isDevelopment) {
         let dimensions = "h-24 w-full";
