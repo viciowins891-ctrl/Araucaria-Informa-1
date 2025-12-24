@@ -747,7 +747,7 @@ export const events: Event[] = [
         id: 3,
         title: 'Concerto no Teatro da Praça',
         description: 'Apresentação especial da orquestra municipal com clássicos e música popular brasileira.',
-        imageUrl: 'https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/coral_municipal_internal_v2.png',
         date: getUpcomingDate(7), // Daqui a uma semana (Futuro)
         time: '19:30',
         location: 'Teatro da Praça'
@@ -756,7 +756,7 @@ export const events: Event[] = [
         id: 4,
         title: 'Bazar Beneficente da APAE',
         description: 'Grande bazar com roupas, calçados e utensílios a preços acessíveis. Toda a renda será revertida para a instituição.',
-        imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/feira_livros_cover.png',
         date: getUpcomingDate(10),
         time: '09:00 - 17:00',
         location: 'Salão Paroquial Matriz'
@@ -765,7 +765,7 @@ export const events: Event[] = [
         id: 5,
         title: 'Final do Campeonato Amador de Futebol',
         description: 'A grande decisão do campeonato varzeano de Araucária. Venha torcer pelo seu time do bairro!',
-        imageUrl: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/araucaria_ec_jogo.jpg',
         date: getUpcomingDate(14),
         time: '15:30',
         location: 'Estádio Municipal'
