@@ -184,10 +184,7 @@ const EventDetailsPage: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* <AdSpace format="horizontal" /> */}
-                        <div className="bg-gray-100 p-4 text-center text-sm text-gray-500 rounded-lg">
-                            Publicidade (Desativada temporariamente)
-                        </div>
+                        <AdSpace format="horizontal" />
                     </div>
 
                     {/* Sidebar de Informações */}
@@ -252,10 +249,7 @@ const EventDetailsPage: React.FC = () => {
                                     Google Calendar
                                 </button>
                                 <div className="w-full">
-                                    {/* <ShareButton title={`Confira este evento: ${event.title}`} /> */}
-                                    <button onClick={() => alert('Compartilhamento em breve')} className="w-full bg-blue-50 text-blue-600 font-semibold py-2 rounded-lg">
-                                        Compartilhar
-                                    </button>
+                                    <ShareButton title={`Confira este evento: ${event.title}`} />
                                 </div>
                             </div>
                         </div>
