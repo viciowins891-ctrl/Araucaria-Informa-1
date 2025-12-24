@@ -94,9 +94,7 @@ ${article.content}
                             Acessar Dashboard
                         </button>
                     </form>
-                    <div className="mt-6 text-center">
-                        <p className="text-xs text-gray-400">Sistema seguro v1.0 • Integração Vercel + OpenAI</p>
-                    </div>
+
                 </div>
             </div>
         );
