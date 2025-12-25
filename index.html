@@ -34,9 +34,19 @@
     <meta property="twitter:image" content="https://araucariainforma.com/images/araucaria_social_share.png" />
 
     <!-- Google AdSense -->
-    <!-- Substitua "ca-pub-XXXXXXXXXXXXXXXX" pelo seu ID de publicador real do AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5835671313720295"
-        crossorigin="anonymous"></script>
+    <!-- Google AdSense (Deferred Loading for Performance) -->
+    <script>
+        // Carrega o AdSense apenas após o carregamento total da página e interação do usuário
+        window.onload = function () {
+            setTimeout(function () {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5835671313720295");
+                script.setAttribute("crossorigin", "anonymous");
+                script.setAttribute("async", "true");
+                document.head.appendChild(script);
+            }, 3500); // 3.5 segundos de delay para priorizar LCP
+        };
+    </script>
 
     <!-- Scripts e Estilos -->
     <!-- Scripts e Estilos -->

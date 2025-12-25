@@ -27,7 +27,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada.</p>
             <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária de educação.</p>
         `,
-        imageUrl: '/images/news_cmei_2025.png', // Versão realista gerada pelo Nano Banana Pro
+        imageUrl: '/images/custom_cmei_official.jpg', // Versão Otimizada (JPG) para LCP rápido
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(0), // Hoje
