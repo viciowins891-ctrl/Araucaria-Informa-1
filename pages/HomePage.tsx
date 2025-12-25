@@ -64,7 +64,9 @@ const HomePage: React.FC = () => {
                         // Removido srcset complexo para imagem local estática, pois o browser lida bem.
                         // O preload no index.html garante a prioridade.
                         alt="Imagem de destaque - Araucária"
-                        className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-1000 md:group-hover:scale-105"
+                        // PERFORMANCE: Removida animação 'animate-slow-zoom' no mobile.
+                        // Imagens estáticas registram o LCP mais rápido em dispositivos móveis.
+                        className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
                         width="1920"
