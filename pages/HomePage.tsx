@@ -31,23 +31,18 @@ const HomePage: React.FC = () => {
 
     // Lógica direta de seleção de imagem (Sem useEffect para evitar flash)
     // 1. Se houve erro, usa fallback
-    // 2. Se tem notícia destaque com imagem, usa ela
-    // 3. Se não, usa imagem padrão
-    const getHeroImage = () => {
-        if (imageError) {
-            return featuredNews ? getPlaceholderImage(featuredNews.category) : DEFAULT_HERO_IMAGE;
-        }
-        return featuredNews?.imageUrl || DEFAULT_HERO_IMAGE;
-    };
-
-    const finalDisplayImage = getHeroImage();
+    // ESTRATÉGIA DE PERFORMANCE (LCP MAXIMIZADO):
+    // Usamos SEMPRE a imagem estática local (/images/final_nature.png) como background do Hero.
+    // Isso garante que o 'preload' no index.html funcione 100% e elimina a "troca" de imagem (layout shift)
+    // quando a API retorna a notícia. O usuário vê a imagem instantaneamente.
+    const finalDisplayImage = DEFAULT_HERO_IMAGE;
 
     // Otimização de Imagens Responsivas (LCP Boost)
-    const mobileHero = getOptimizedImageUrl(finalDisplayImage, 640);
-    const desktopHero = getOptimizedImageUrl(finalDisplayImage, 1920);
+    // Como é uma imagem local (public folder), não usamos o otimizador do Unsplash aqui,
+    // mas o navegador já vai cachear agressivamente e o preload já fez o trabalho pesado.
 
     const handleImageError = () => {
-        console.log("Falha ao carregar imagem principal. Ativando fallback.");
+        console.log("Falha ao carregar imagem principal.");
         setImageError(true);
     };
 
@@ -65,9 +60,9 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={desktopHero}
-                        srcSet={`${mobileHero} 640w, ${desktopHero} 1920w`}
-                        sizes="(max-width: 768px) 100vw, 100vw"
+                        src={finalDisplayImage}
+                        // Removido srcset complexo para imagem local estática, pois o browser lida bem.
+                        // O preload no index.html garante a prioridade.
                         alt="Imagem de destaque - Araucária"
                         className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-1000 md:group-hover:scale-105"
                         onError={handleImageError}
