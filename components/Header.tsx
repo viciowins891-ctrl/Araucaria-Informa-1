@@ -61,11 +61,8 @@ const Header: React.FC = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <NavLink className="flex items-center gap-2 group z-50 relative" to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                        <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-                            <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14,6L10.25,11H13.11L9.31,16H11.75L8,21H16L12.25,16H14.69L10.89,11H13.75L10,6H14Z" opacity="0.3" />
-                                <path d="M12,2L5.5,11H9L5.5,16H9L5.5,21H18.5L15,16H18.5L15,11H18.5L12,2M12,5.86L14.97,10H12.65L15.35,14H12.65L15.35,19H8.65L11.35,14H8.65L11.35,10H9.03L12,5.86Z" />
-                            </svg>
+                        <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                            <img src="/favicon.png" alt="Logo Araucária Informa" className="w-full h-full object-cover" />
                         </div>
                         <span className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight">
                             Araucária<span className="font-light text-blue-200">Informa</span>
