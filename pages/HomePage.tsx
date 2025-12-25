@@ -11,6 +11,8 @@ import AdSpace from '../components/AdSpace';
 
 import { getPlaceholderImage } from '../services/aiService';
 
+import { getOptimizedImageUrl } from '../services/imageUtils';
+
 const HomePage: React.FC = () => {
     useEffect(() => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
@@ -40,6 +42,10 @@ const HomePage: React.FC = () => {
 
     const finalDisplayImage = getHeroImage();
 
+    // Otimização de Imagens Responsivas (LCP Boost)
+    const mobileHero = getOptimizedImageUrl(finalDisplayImage, 640);
+    const desktopHero = getOptimizedImageUrl(finalDisplayImage, 1920);
+
     const handleImageError = () => {
         console.log("Falha ao carregar imagem principal. Ativando fallback.");
         setImageError(true);
@@ -59,7 +65,9 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={finalDisplayImage}
+                        src={desktopHero}
+                        srcSet={`${mobileHero} 640w, ${desktopHero} 1920w`}
+                        sizes="(max-width: 768px) 100vw, 100vw"
                         alt="Imagem de destaque - Araucária"
                         className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-1000 md:group-hover:scale-105"
                         onError={handleImageError}
