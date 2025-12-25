@@ -66,7 +66,7 @@ const EventDetailsPage: React.FC = () => {
 
     if (error || !event) return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
-            <span className="material-icons-outlined text-6xl text-gray-300 mb-4">event_busy</span>
+            <svg className="w-16 h-16 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Ops!</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">{error || 'Evento não encontrado.'}</p>
             <button
@@ -96,7 +96,7 @@ const EventDetailsPage: React.FC = () => {
                         to="/eventos"
                         className="inline-flex items-center gap-2 bg-black/30 hover:bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-md transition-colors text-sm font-medium border border-white/10"
                     >
-                        <span className="material-icons-outlined text-base">arrow_back</span>
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                         Voltar para Agenda
                     </Link>
                 </div>
@@ -112,7 +112,7 @@ const EventDetailsPage: React.FC = () => {
                                     {event.title}
                                 </h1>
                                 <div className="flex items-center text-white/90 mt-4 text-lg">
-                                    <span className="material-icons-outlined mr-2">place</span>
+                                    <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                     {event.location}
                                 </div>
                             </div>
@@ -130,9 +130,11 @@ const EventDetailsPage: React.FC = () => {
                                         }
                                     `}
                                 >
-                                    <span className={`material-icons ${isRegistered ? 'text-white' : 'text-primary'}`}>
-                                        {isRegistered ? 'check_circle' : 'confirmation_number'}
-                                    </span>
+                                    {isRegistered ? (
+                                        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                    ) : (
+                                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
+                                    )}
                                     {isRegistered ? 'Presença Confirmada' : 'Confirmar Presença'}
                                 </button>
                             </div>
@@ -150,7 +152,9 @@ const EventDetailsPage: React.FC = () => {
                         <div className="bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-white dark:bg-blue-900/30 rounded-full shadow-sm text-yellow-500">
-                                    <span className="material-icons-outlined text-3xl">{weatherMock.icon}</span>
+                                    {weatherMock.icon === 'wb_sunny' && <svg className="w-8 h-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>}
+                                    {weatherMock.icon === 'cloud_queue' && <svg className="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>}
+                                    {weatherMock.icon === 'umbrella' && <svg className="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>}
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 dark:text-blue-300 font-medium uppercase tracking-wide">Previsão para o dia</p>
@@ -197,7 +201,7 @@ const EventDetailsPage: React.FC = () => {
                             <div className="space-y-8">
                                 <div className="group flex items-start">
                                     <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors">
-                                        <span className="material-icons text-primary text-xl">calendar_month</span>
+                                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Data</p>
@@ -213,7 +217,7 @@ const EventDetailsPage: React.FC = () => {
 
                                 <div className="group flex items-start">
                                     <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors">
-                                        <span className="material-icons text-primary text-xl">schedule</span>
+                                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Horário</p>
@@ -223,7 +227,7 @@ const EventDetailsPage: React.FC = () => {
 
                                 <div className="group flex items-start">
                                     <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors">
-                                        <span className="material-icons text-primary text-xl">location_on</span>
+                                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Localização</p>
@@ -234,7 +238,7 @@ const EventDetailsPage: React.FC = () => {
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center text-gray-500 hover:text-primary text-sm mt-2 transition-colors border border-gray-200 dark:border-gray-700 px-3 py-1 rounded-lg hover:border-primary"
                                         >
-                                            <span className="material-icons text-sm mr-1">map</span> Ver no mapa
+                                            <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-1.447-.894L15 7m0 13V7" /></svg> Ver no mapa
                                         </a>
                                     </div>
                                 </div>

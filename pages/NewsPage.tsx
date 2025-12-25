@@ -90,7 +90,7 @@ const NewsPage: React.FC = () => {
                     <div className="w-full lg:w-auto">
                         <label htmlFor="category-filter" className="sr-only">Filtrar por categoria</label>
                         <div className="relative">
-                            <span className="material-icons-outlined absolute left-3 top-3 text-gray-400">filter_list</span>
+                            <svg className="absolute left-3 top-3 w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
                             <select
                                 id="category-filter"
                                 name="category"
@@ -110,7 +110,7 @@ const NewsPage: React.FC = () => {
                 <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 p-4 mb-10 rounded-r-md">
                     <div className="flex">
                         <div className="flex-shrink-0">
-                            <span className="material-icons text-amber-500 dark:text-amber-400">info</span>
+                            <svg className="w-6 h-6 text-amber-500 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
                         <div className="ml-3">
                             <p className="text-sm text-amber-800 dark:text-amber-200">
@@ -135,7 +135,7 @@ const NewsPage: React.FC = () => {
                             {filteredArticles.length === 0 && (
                                 <div className="col-span-full py-20 flex flex-col items-center justify-center bg-gray-50 dark:bg-zinc-800/50 rounded-xl border border-dashed border-gray-300 dark:border-gray-700">
                                     <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-full mb-4">
-                                        <span className="material-icons-outlined text-4xl text-gray-400">article</span>
+                                        <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
                                     </div>
                                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Nenhuma notícia encontrada</h3>
                                     <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
