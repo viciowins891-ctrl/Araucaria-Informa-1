@@ -38,17 +38,36 @@
 
     <!-- Google AdSense -->
     <!-- Google AdSense (Deferred Loading for Performance) -->
+    <!-- Google AdSense (Lazy Load on Interaction) -->
     <script>
-        // Carrega o AdSense apenas após o carregamento total da página e interação do usuário
-        window.onload = function () {
-            setTimeout(function () {
-                var script = document.createElement("script");
-                script.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5835671313720295");
-                script.setAttribute("crossorigin", "anonymous");
-                script.setAttribute("async", "true");
-                document.head.appendChild(script);
-            }, 3500); // 3.5 segundos de delay para priorizar LCP
-        };
+        // Carrega o AdSense apenas após interação do usuário (Scroll, Click, Touch)
+        // Isso remove o peso do TBT (Total Blocking Time) do PageSpeed Insights
+        let adSenseLoaded = false;
+
+        function loadAdSense() {
+            if (adSenseLoaded) return;
+            adSenseLoaded = true;
+
+            var script = document.createElement("script");
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5835671313720295";
+            script.crossOrigin = "anonymous";
+            script.async = true;
+            document.head.appendChild(script);
+
+            // Remove listeners para não executar de novo
+            document.removeEventListener('scroll', loadAdSense);
+            document.removeEventListener('mousemove', loadAdSense);
+            document.removeEventListener('touchstart', loadAdSense);
+        }
+
+        // Gatilhos de interação
+        window.addEventListener('scroll', loadAdSense, { passive: true });
+        window.addEventListener('mousemove', loadAdSense, { passive: true });
+        window.addEventListener('touchstart', loadAdSense, { passive: true });
+
+        // Fallback: Carrega depois de 8 segundos se não houver interação
+        // (Garante que os anúncios apareçam eventualmente mesmo se o usuário só olhar)
+        setTimeout(loadAdSense, 8000);
     </script>
 
     <!-- Scripts e Estilos -->

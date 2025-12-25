@@ -46,22 +46,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({
     // Se não tivermos um ID real configurado ou estivermos em localhost,
     // mostramos o placeholder antigo para não quebrar o layout visualmente.
     // O AdSense não exibe anúncios em localhost/domínios não aprovados.
-    const isDevelopment = true; // Mude para false quando for para produção com IDs reais
-
-    if (isDevelopment) {
-        let dimensions = "h-24 w-full";
-        if (format === 'square') dimensions = "h-64 w-full max-w-[300px]";
-        if (format === 'vertical') dimensions = "h-[600px] w-full max-w-[160px]";
-
-        return (
-            <div className={`flex flex-col items-center justify-center my-8 ${className}`}>
-                <div className={`bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg flex flex-col items-center justify-center text-gray-400 text-xs uppercase tracking-widest font-semibold overflow-hidden ${dimensions}`}>
-                    <span className="mb-1">Publicidade</span>
-                    <span className="text-[10px] opacity-60">Google AdSense (Modo Dev)</span>
-                </div>
-            </div>
-        );
-    }
+    const isDevelopment = false; // Mude para false quando for para produção com IDs reais
 
     return (
         <div className={`flex justify-center my-8 ${className} overflow-hidden`}>
