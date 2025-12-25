@@ -46,12 +46,12 @@ const HomePage: React.FC = () => {
     };
 
     // Renderização Condicional
-    if (loading) return <LoadingSpinner />;
-    if (error) return <div className="text-center py-20 text-red-500">{error}</div>;
-    if (!data) return null;
-
-    const { news, events, businesses } = data;
-    const gridNews = news.length > 0 ? news.slice(1, 4) : []; // Pega as próximas 3 notícias para o grid
+    // LOADING STATE: Não bloqueia mais a renderização inteira.
+    // Mostra o Hero com imagem padrão enquanto carrega os dados.
+    const news = data?.news || [];
+    const events = data?.events || [];
+    const businesses = data?.businesses || [];
+    const gridNews = news.length > 0 ? news.slice(1, 4) : [];
 
     return (
         <div>
@@ -76,7 +76,14 @@ const HomePage: React.FC = () => {
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16">
                     <div className="max-w-4xl">
-                        {featuredNews ? (
+                        {loading ? (
+                            <div className="animate-pulse space-y-6">
+                                <div className="h-8 bg-white/20 rounded w-48"></div>
+                                <div className="h-20 bg-white/20 rounded w-full max-w-2xl"></div>
+                                <div className="h-4 bg-white/20 rounded w-96"></div>
+                                <div className="h-12 bg-white/20 rounded-full w-64 mt-8"></div>
+                            </div>
+                        ) : featuredNews ? (
                             <>
                                 <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm">
                                     Destaque do Dia
@@ -133,11 +140,19 @@ const HomePage: React.FC = () => {
                             Ver todas as notícias <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </Link>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {gridNews.map(article => (
-                            <NewsCard key={article.id} article={article} />
-                        ))}
-                    </div>
+                    {loading ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[1, 2, 3].map(i => (
+                                <div key={i} className="bg-white dark:bg-zinc-800 rounded-2xl h-96 animate-pulse"></div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {gridNews.map(article => (
+                                <NewsCard key={article.id} article={article} />
+                            ))}
+                        </div>
+                    )}
                 </section>
 
                 {/* Seção de Texto/Lista para SEO e Densidade de Conteúdo (AdSense Friendly) */}
