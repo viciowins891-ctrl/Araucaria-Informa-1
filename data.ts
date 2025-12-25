@@ -450,7 +450,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Começou hoje o 3º Festival Gastronômico de Inverno de Araucária. Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
             <p>O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/gastronomic_festival_real_final_v2.png',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: getPastDate(52),
