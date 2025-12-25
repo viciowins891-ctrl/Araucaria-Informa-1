@@ -148,9 +148,21 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                     <div className="col-span-2 md:col-span-1">
                         <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100">Sobre</h3>
                         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Portal de informações sobre Araucária, atualizado semanalmente com notícias, eventos e oportunidades locais.</p>
-                        <div className="mt-4 flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
-                            <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
-                            <span>Informações verificadas</span>
+                        <div className="flex flex-col gap-2 mt-4">
+                            <div className="inline-flex items-center gap-2 text-sm text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/40 px-3 py-1.5 rounded-full w-fit">
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+                                <span className="font-medium">Informações verificadas</span>
+                            </div>
+                            <a
+                                href="https://securityheaders.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm text-blue-700 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 px-3 py-1.5 rounded-full w-fit hover:bg-blue-200 dark:hover:bg-blue-900/60 transition-colors cursor-pointer"
+                                title="Verificado por auditoria externa"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" /></svg>
+                                <span className="font-bold">Segurança A+</span>
+                            </a>
                         </div>
                     </div>
 
