@@ -11,8 +11,13 @@ import { api } from './services/api';
 import CookieConsent from './components/CookieConsent';
 import ErrorBoundary from './components/ErrorBoundary';
 
-// Implementando Lazy Loading para performance (Code Splitting)
-const HomePage = lazy(() => import('./pages/HomePage'));
+
+
+// Importação Eager (Imediata) para a Home Page - CRUCIAL PARA LCP E SEO
+// Não use Lazy Loading na página inicial, pois atrasa o carregamento da imagem principal
+import HomePage from './pages/HomePage';
+
+// Implementando Lazy Loading para outras páginas (Code Splitting)
 const NewsPage = lazy(() => import('./pages/NewsPage'));
 const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const EventsPage = lazy(() => import('./pages/EventsPage'));
