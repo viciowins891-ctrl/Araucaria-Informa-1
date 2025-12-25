@@ -808,7 +808,7 @@ export const businesses: Business[] = [
         id: 4,
         name: 'Academia Corpo & Movimento',
         category: 'Serviços',
-        imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/gym_body_movement_real.webp',
         address: 'Rua São Vicente, 200 - Centro',
         phone: '(41) 3642-0000',
         website: 'academiacm.com.br',
