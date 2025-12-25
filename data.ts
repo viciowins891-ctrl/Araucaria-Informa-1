@@ -702,7 +702,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Em uma noite de emoção, a Câmara Municipal realizou a entrega de títulos de Cidadão Benemérito a cinco personalidades que contribuíram para o desenvolvimento de Araucária. Entre os homenageados estavam professores aposentados e antigos comerciantes.</p>
             <p>"Reconhecer nossa história é valorizar nosso futuro", discursou o presidente da casa.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/pioneers_homage_real_final_v2.png',
         category: 'Cidade',
         categoryColor: 'gold',
         publishDate: getPastDate(98),
