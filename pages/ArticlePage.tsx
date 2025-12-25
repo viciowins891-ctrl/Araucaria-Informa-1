@@ -198,6 +198,14 @@ const ArticlePage: React.FC = () => {
         setTimeout(() => setShowShareToast(false), 3000);
     };
 
+    const handleBack = () => {
+        if (window.history.state && window.history.state.idx > 0) {
+            navigate(-1);
+        } else {
+            navigate('/noticias');
+        }
+    };
+
     if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
 
     if (error || !article) return (
@@ -281,13 +289,13 @@ const ArticlePage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-32 relative z-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-32 relative z-30">
                 <div className="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100 dark:border-gray-800 backdrop-blur-sm">
 
                     {/* Header do Artigo */}
                     <div className="flex flex-col gap-6 mb-8">
                         <button
-                            onClick={() => navigate(-1)}
+                            onClick={handleBack}
                             className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit bg-transparent border-none cursor-pointer"
                         >
                             <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>

@@ -55,7 +55,7 @@ const CommercePage: React.FC = () => {
                         onClick={() => setIsModalOpen(true)}
                         className="inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-primary/50 ring-4 ring-primary/20"
                     >
-                        <span className="material-icons-outlined">storefront</span>
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
                         Divulgue seu Negócio
                     </button>
                 </div>
@@ -69,7 +69,7 @@ const CommercePage: React.FC = () => {
                 {error && (
                     <div className="text-center py-16 bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-red-100 dark:border-red-900/30">
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 dark:bg-red-900/20 text-red-500 mb-4">
-                            <span className="material-icons text-3xl">error_outline</span>
+                            <svg className="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Erro ao carregar</h3>
                         <p className="text-gray-500 dark:text-gray-400">{error}</p>
@@ -82,7 +82,7 @@ const CommercePage: React.FC = () => {
                         {featuredBusinesses.length > 0 && selectedCategory === 'Todas' && (
                             <div className="mb-16">
                                 <div className="flex items-center gap-2 mb-6">
-                                    <span className="material-icons text-amber-500 text-2xl">star</span>
+                                    <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
                                         Destaques da Semana
                                     </h2>
@@ -123,10 +123,10 @@ const CommercePage: React.FC = () => {
                                                     : 'bg-transparent text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-zinc-700 hover:text-gray-900 dark:hover:text-white'}
                                             `}
                                         >
-                                            {category === 'Todas' && <span className="material-icons text-sm">widgets</span>}
-                                            {category === 'Alimentação' && <span className="material-icons text-sm">restaurant</span>}
-                                            {category === 'Serviços' && <span className="material-icons text-sm">build</span>}
-                                            {category === 'Varejo' && <span className="material-icons text-sm">shopping_bag</span>}
+                                            {category === 'Todas' && <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>}
+                                            {category === 'Alimentação' && <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>}
+                                            {category === 'Serviços' && <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+                                            {category === 'Varejo' && <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>}
                                             {category}
                                         </button>
                                     ))}
@@ -152,7 +152,7 @@ const CommercePage: React.FC = () => {
 
                         {filteredBusinesses.length === 0 && (
                             <div className="text-center py-20 bg-white dark:bg-zinc-800 rounded-2xl border border-dashed border-gray-200 dark:border-zinc-700">
-                                <span className="material-icons text-6xl text-gray-300 dark:text-zinc-600 mb-4">store_front</span>
+                                <svg className="w-20 h-20 text-gray-300 dark:text-zinc-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
                                 <p className="text-gray-500 dark:text-gray-400 text-lg">Nenhum comércio encontrado nesta categoria.</p>
                                 <button
                                     onClick={() => setSelectedCategory('Todas')}

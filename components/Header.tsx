@@ -63,9 +63,8 @@ const Header: React.FC = () => {
                     <NavLink className="flex items-center gap-2 group z-50 relative" to="/" onClick={() => setIsMobileMenuOpen(false)}>
                         <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
                             <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12,2L2,22H22L12,2M12,6L17.5,17H6.5L12,6M12,9.5L14.5,14.5H9.5L12,9.5Z" />
-                                <path d="M12 2L6 14H18L12 2Z" fill="currentColor" opacity="0.5" />
-                                <path d="M12 22V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                <path d="M14,6L10.25,11H13.11L9.31,16H11.75L8,21H16L12.25,16H14.69L10.89,11H13.75L10,6H14Z" opacity="0.3" />
+                                <path d="M12,2L5.5,11H9L5.5,16H9L5.5,21H18.5L15,16H18.5L15,11H18.5L12,2M12,5.86L14.97,10H12.65L15.35,14H12.65L15.35,19H8.65L11.35,14H8.65L11.35,10H9.03L12,5.86Z" />
                             </svg>
                         </div>
                         <span className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight">
