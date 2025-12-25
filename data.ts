@@ -590,7 +590,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A Secretaria de Finanças reforça que o prazo para pagamento do IPTU com desconto de 15% na cota única encerra-se no próximo dia 10. Os carnês já foram entregues, mas a segunda via pode ser emitida pelo site oficial.</p>
             <p>A arrecadação do imposto é fundamental para os investimentos em saúde, educação e asfalto.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/iptu_v1.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(78),
