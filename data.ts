@@ -262,7 +262,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O Parque Cachoeira foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
             <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/robotics_fair_real_final_v2.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(20),
