@@ -173,7 +173,8 @@ const HomePage: React.FC = () => {
                             </h3>
                         </div>
                         <div className="space-y-6">
-                            {news.slice(0, 5).map(item => (
+                            {/* Ajustado slice(4, 9) para evitar DUPLICIDADE com o Hero e o Grid acima */}
+                            {news.slice(4, 9).map(item => (
                                 <div key={item.id} className="border-b border-zinc-100 dark:border-zinc-700/50 last:border-0 pb-6 last:pb-0">
                                     <Link to={`/noticias/${item.id}`} className="group block">
                                         <h4 className="text-lg font-bold text-zinc-700 dark:text-zinc-200 group-hover:text-primary transition-colors mb-2">
