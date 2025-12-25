@@ -64,6 +64,11 @@ const HomePage: React.FC = () => {
                         className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-1000 md:group-hover:scale-105"
                         onError={handleImageError}
                         referrerPolicy="no-referrer"
+                        width="1920"
+                        height="1080"
+                        // @ts-ignore
+                        fetchPriority="high"
+                        loading="eager"
                     />
                     {/* Gradiente escuro para garantir leitura */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 opacity-90"></div>
