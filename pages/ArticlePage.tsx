@@ -271,7 +271,7 @@ const ArticlePage: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full p-6 z-20">
                     <div className="container mx-auto">
                         <nav className="flex items-center space-x-2 text-sm text-white/80 font-medium">
-                            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                            <Link to="/" className="hover:text-white transition-colors">Início</Link>
                             <span className="material-icons text-xs">chevron_right</span>
                             <Link to="/noticias" className="hover:text-white transition-colors">Notícias</Link>
                             <span className="material-icons text-xs">chevron_right</span>
