@@ -422,7 +422,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano. Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
             <p>A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/winter_clothing_drive_real_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(48),

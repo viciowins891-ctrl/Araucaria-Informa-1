@@ -35,7 +35,7 @@ export const api = {
         // Fallback 2: Dados gerados/AI (aiService.ts) ...
 
         // Nota: IDs de AI começam em 1000 geralmente
-        const { fetchWeeklyNewsWithAI } = await import('./aiService');
+        // const { fetchWeeklyNewsWithAI } = await import('./aiService'); // Removido import dinâmico redundante
         const aiArticles = await fetchWeeklyNewsWithAI();
         const aiArticle = aiArticles.find(n => n.id === Number(id));
 
