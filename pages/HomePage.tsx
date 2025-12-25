@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
                                         className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
                                     >
                                         Ler Matéria Completa
-                                        <span className="material-icons-outlined ml-2">arrow_forward</span>
+                                        <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </Link>
                                 </div>
                             </>
@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
                             <p className="mt-2 text-zinc-500 dark:text-zinc-400">O que está acontecendo na cidade agora.</p>
                         </div>
                         <Link to="/noticias" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
-                            Ver todas as notícias <span className="material-icons-outlined text-base">arrow_forward</span>
+                            Ver todas as notícias <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,7 +144,7 @@ const HomePage: React.FC = () => {
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white dark:bg-zinc-800/30 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-700/30">
                         <div className="flex items-center gap-2 mb-6">
-                            <span className="material-icons-outlined text-primary">feed</span>
+                            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
                             <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 font-display">
                                 Resumo das Últimas Notícias
                             </h3>
@@ -170,7 +170,7 @@ const HomePage: React.FC = () => {
                         </div>
                         <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-700/50">
                             <Link to="/noticias" className="text-sm font-bold text-primary hover:text-primary-dark flex items-center gap-1">
-                                Ver arquivo completo de notícias <span className="material-icons-outlined text-sm">arrow_forward</span>
+                                Ver arquivo completo de notícias <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                             </Link>
                         </div>
                     </div>
@@ -212,7 +212,7 @@ const HomePage: React.FC = () => {
                                 <p className="mt-2 text-zinc-500 dark:text-zinc-400">Não perca os próximos eventos.</p>
                             </div>
                             <Link to="/eventos" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
-                                Ver calendário completo <span className="material-icons-outlined text-base">arrow_forward</span>
+                                Ver calendário completo <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -235,7 +235,7 @@ const HomePage: React.FC = () => {
                             <p className="mt-2 text-zinc-500 dark:text-zinc-400">Apoie o negócio local.</p>
                         </div>
                         <Link to="/comercio" className="text-primary font-semibold hover:text-primary-dark flex items-center gap-1 transition-colors">
-                            Guia comercial <span className="material-icons-outlined text-base">arrow_forward</span>
+                            Guia comercial <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </Link>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

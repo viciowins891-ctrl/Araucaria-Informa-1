@@ -68,7 +68,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 flex-col gap-2">
-                        <span className="material-icons-outlined text-4xl text-gray-400">newspaper</span>
+                        <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
                         <span className="text-xs text-gray-400 font-medium">Sem imagem disponível</span>
                     </div>
                 )}
@@ -84,12 +84,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
             <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
                     <div className="flex items-center">
-                        <span className="material-icons-outlined text-sm mr-1">schedule</span>
+                        <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         <span>{article.publishDate}</span>
                     </div>
                     {article.sourceName && (
                         <div className="flex items-center text-blue-500 max-w-[50%] truncate">
-                            <span className="material-icons-outlined text-sm mr-1">public</span>
+                            <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
                             <span className="truncate">{article.sourceName}</span>
                         </div>
                     )}
@@ -107,7 +107,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
                 <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
                     <Link to={`/noticias/${article.id}`} className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1 cursor-pointer">
-                        Ler artigo <span className="material-icons-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        Ler artigo <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </Link>
                 </div>
             </div>
