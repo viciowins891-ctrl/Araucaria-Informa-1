@@ -262,7 +262,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O Parque Cachoeira foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
             <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
         `,
-        imageUrl: '/images/robotics_fair_real_final_v2.jpg',
+        imageUrl: '/images/robotics_fair_real_final_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(20),
@@ -276,7 +276,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro Costeira.</p>
             <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
         `,
-        imageUrl: '/images/supermarket_opening_real_final_v2.png',
+        imageUrl: '/images/supermarket_opening_real_final_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(21),
@@ -318,7 +318,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai. São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
             <p>As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência. O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>
         `,
-        imageUrl: '/images/vocational_course_real_v2.png',
+        imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(28),
@@ -422,7 +422,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano. Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
             <p>A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
         `,
-        imageUrl: '/images/winter_clothing_drive_real_v2.png',
+        imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(48),
@@ -450,7 +450,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Começou hoje o 3º Festival Gastronômico de Inverno de Araucária. Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
             <p>O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
         `,
-        imageUrl: '/images/gastronomic_festival_real_final_v2.png',
+        imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: getPastDate(52),
@@ -716,7 +716,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A tocha olímpica simbólica percorreu as escolas da cidade anunciando a abertura dos Jogos Escolares de Araucária (JEA). A cerimônia de abertura acontece nesta sexta-feira no Ginásio do CSU.</p>
             <p>Os jogos promovem a integração entre as escolas públicas e particulares, revelando novos talentos para o esporte municipal.</p>
         `,
-        imageUrl: '/images/jea_real_final_v2.jpg',
+        imageUrl: '/images/jea_real_final_v2.webp',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: getPastDate(100),
