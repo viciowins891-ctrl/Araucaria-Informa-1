@@ -59,7 +59,32 @@ const EventDetailsPage: React.FC = () => {
     }, [id]);
 
     const addToCalendar = () => {
-        alert("Funcionalidade simulada: Evento adicionado ao seu calendário!");
+        if (!event) return;
+
+        // Parse da data (DD/MM/AAAA)
+        const [day, month, year] = event.date.split('/');
+
+        // Parse do horário (HH:MM - HH:MM)
+        const [startTime, endTime] = event.time.split(' - ');
+
+        // Formata para o padrão do Google Calendar (AAAAMMDDTHHMMSS)
+        // Nota: Assumindo fuso horário local, o ideal seria converter para UTC, 
+        // mas para simplificar e funcionar no frontend sem lib de data:
+        const formatDate = (d: string, m: string, y: string, time: string) => {
+            return `${y}${m}${d}T${time.replace(':', '')}00`;
+        };
+
+        const startDateTime = formatDate(day, month, year, startTime);
+        const endDateTime = formatDate(day, month, year, endTime);
+
+        const googleUrl = new URL('https://calendar.google.com/calendar/render');
+        googleUrl.searchParams.append('action', 'TEMPLATE');
+        googleUrl.searchParams.append('text', event.title + ' - Araucária Informa');
+        googleUrl.searchParams.append('dates', `${startDateTime}/${endDateTime}`);
+        googleUrl.searchParams.append('details', event.description + '\n\nSaiba mais em: ' + window.location.href);
+        googleUrl.searchParams.append('location', event.location + ', Araucária - PR');
+
+        window.open(googleUrl.toString(), '_blank');
     };
 
     if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
