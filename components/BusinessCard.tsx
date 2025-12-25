@@ -34,13 +34,13 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
                     />
                 ) : (
                     <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gray-300 dark:bg-gray-700 z-10">
-                        <span className="material-icons text-4xl text-gray-400">storefront</span>
+                        <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
                     </div>
                 )}
                 <div className="absolute top-3 right-3 z-20 flex flex-col items-end gap-2">
                     {business.isFeatured && (
                         <span className="bg-amber-400 text-amber-900 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full shadow-sm flex items-center gap-1 animate-pulse">
-                            <span className="material-icons text-[14px]">star</span>
+                            <svg className="w-4 h-4 text-amber-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                             Destaque
                         </span>
                     )}
@@ -61,15 +61,15 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
 
                 <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400 flex-grow mt-4">
                     <div className="flex items-start gap-3">
-                        <span className="material-icons-outlined text-primary text-lg mt-0.5">location_on</span>
+                        <svg className="w-5 h-5 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                         <span className="leading-tight">{business.address}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                        <span className="material-icons-outlined text-primary text-lg">call</span>
+                        <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                         <span>{business.phone}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                        <span className="material-icons-outlined text-primary text-lg">language</span>
+                        <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
                         <a className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary truncate transition-colors underline decoration-transparent hover:decoration-current" href={safeWebsiteUrl} target="_blank" rel="noopener noreferrer">
                             {business.website}
                         </a>
@@ -78,7 +78,7 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
 
                 <div className="pt-6 grid grid-cols-2 gap-3 mt-auto">
                     <button className="flex items-center justify-center gap-2 w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2.5 text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 transition-all">
-                        <span className="material-icons-outlined text-lg">call</span>
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                         Ligar
                     </button>
                     <a
@@ -87,7 +87,7 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 w-full rounded-lg bg-primary-dark text-white px-4 py-2.5 text-sm font-semibold hover:bg-blue-800 hover:shadow-md transition-all"
                     >
-                        <span className="material-icons-outlined text-lg">visibility</span>
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                         Visitar
                     </a>
                 </div>
