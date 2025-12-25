@@ -29,6 +29,8 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-10"
                         src={optimizedImageUrl}
                         loading="lazy"
+                        width="800"
+                        height="450"
                         onError={() => setImageError(true)}
                         referrerPolicy="no-referrer"
                     />

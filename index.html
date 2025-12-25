@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- LCP Optimization: Preload Hero Image -->
-    <link rel="preload" as="image" href="/images/final_nature.png" fetchpriority="high" />
+    <!-- LCP Optimization: Responsive Preload -->
+    <!-- Mobile Image (Small Payload) -->
+    <link rel="preload" as="image" href="/images/final_nature_mobile.png" media="(max-width: 767px)"
+        fetchpriority="high" />
+    <!-- Desktop Image (High Res) -->
+    <link rel="preload" as="image" href="/images/final_nature.png" media="(min-width: 768px)" fetchpriority="high" />
 
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>

@@ -22,6 +22,7 @@ const HomePage: React.FC = () => {
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
     const DEFAULT_HERO_IMAGE = "/images/final_nature.png";
+    const MOBILE_HERO_IMAGE = "/images/final_nature_mobile.png";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
@@ -60,10 +61,12 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={finalDisplayImage}
+                        src={DEFAULT_HERO_IMAGE}
+                        srcSet={`${MOBILE_HERO_IMAGE} 767w, ${DEFAULT_HERO_IMAGE} 1920w`}
+                        sizes="(max-width: 767px) 100vw, 100vw"
+                        alt="Imagem de destaque - Araucária"
                         // Removido srcset complexo para imagem local estática, pois o browser lida bem.
                         // O preload no index.html garante a prioridade.
-                        alt="Imagem de destaque - Araucária"
                         // PERFORMANCE: Removida animação 'animate-slow-zoom' no mobile.
                         // Imagens estáticas registram o LCP mais rápido em dispositivos móveis.
                         className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"

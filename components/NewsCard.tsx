@@ -33,6 +33,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const [isFallback, setIsFallback] = useState(false);
     // Estado para erro final (nem original nem fallback funcionaram)
     const [hasError, setHasError] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
     // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
     useEffect(() => {
@@ -60,9 +61,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                 {!hasError ? (
                     <img
                         alt={article.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        src={imgSrc}
+                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        src={getOptimizedImageUrl(imgSrc, 400)} // Use a smaller size for the card thumbnail
                         loading="lazy"
+                        width="400" // Explicit width for layout shift prevention
+                        height="250" // Explicit height for layout shift prevention (assuming aspect ratio)
+                        onLoad={() => setImageLoaded(true)}
                         onError={handleError}
                         referrerPolicy="no-referrer"
                     />
