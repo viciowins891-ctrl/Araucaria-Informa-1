@@ -716,7 +716,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A tocha olímpica simbólica percorreu as escolas da cidade anunciando a abertura dos Jogos Escolares de Araucária (JEA). A cerimônia de abertura acontece nesta sexta-feira no Ginásio do CSU.</p>
             <p>Os jogos promovem a integração entre as escolas públicas e particulares, revelando novos talentos para o esporte municipal.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/jea_real_final_v2.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: getPastDate(100),
