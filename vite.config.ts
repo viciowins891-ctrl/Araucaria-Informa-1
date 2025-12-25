@@ -95,7 +95,8 @@ export default defineConfig(({ mode }) => {
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
-            'utils': ['@supabase/supabase-js', '@google/generative-ai']
+            'supabase-vendor': ['@supabase/supabase-js'],
+            'ai-vendor': ['@google/generative-ai']
           }
         }
       },
