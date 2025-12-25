@@ -27,7 +27,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada.</p>
             <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária de educação.</p>
         `,
-        imageUrl: '/images/custom_cmei_official.jpg', // Versão Otimizada (JPG) para LCP rápido
+        imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(0), // Hoje
@@ -55,7 +55,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Foi inaugurada oficialmente a primeira unidade de rua do Poupatempo no Paraná, localizada em Araucária. O espaço moderno facilita a vida do cidadão, permitindo emitir documentos como RG e CNH, além de solicitar serviços da Copel e Sanepar em um único lugar.</p>
             <p>"É o fim da burocracia e das filas. O cidadão resolve tudo em um só lugar", destacou o governador Ratinho Jr durante a cerimônia.</p>
         `,
-        imageUrl: '/images/custom_poupatempo_official.jpg', // Foto oficial externa sem máscaras
+        imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(2),
@@ -83,7 +83,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A Polícia Civil do Paraná (PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária.</p>
             <p>O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões. Todo o material foi destruído em fornos industriais com autorização judicial.</p>
         `,
-        imageUrl: '/images/custom_drugs.jpg', // Nova imagem gerada (Nano Banana Pro)
+        imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: getPastDate(3),
@@ -97,7 +97,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes. A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.</p>
             <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município.</p>
         `,
-        imageUrl: '/images/vacinacao_meta_2024.jpg',
+        imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Saúde',
         categoryColor: 'blue',
         publishDate: getPastDate(4),
@@ -173,7 +173,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As unidades básicas de saúde funcionaram em horário estendido durante a última semana para garantir que trabalhadores pudessem se vacinar. "A conscientização da população foi fundamental. Vacinas salvam vidas", reforçou a diretora de epidemiologia.</p>
             <p>Ainda há doses disponíveis para a população geral em todas as UBS do município. É necessário apresentar documento com foto e carteirinha de vacinação.</p>
         `,
-        imageUrl: '/images/vacinacao_meta_2024.jpg',
+        imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(10),
@@ -203,7 +203,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além da pavimentação exclusiva para bicicletas, o projeto inclui iluminação específica e sinalização reforçada nos cruzamentos. A previsão é que as obras sejam concluídas em 4 meses.</p>
             <p>A iniciativa faz parte do Plano de Mobilidade Urbana, que visa reduzir o tráfego de veículos pesados e incentivar o transporte ativo.</p>
         `,
-        imageUrl: '/images/ciclovia_industrial.jpg',
+        imageUrl: '/images/ciclovia_industrial.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: getPastDate(14),
@@ -218,7 +218,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Segundo o cronograma, as ruas principais serão atendidas prioritariamente para garantir o fluxo do transporte coletivo. Em seguida, as equipes entrarão nas vias secundárias.</p>
             <p>Moradores podem solicitar reparos através do aplicativo oficial da prefeitura ou pelo telefone da ouvidoria.</p>
         `,
-        imageUrl: '/images/tapa_buracos_real_final.jpg',
+        imageUrl: '/images/tapa_buracos_real_final.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: getPastDate(15),
@@ -233,7 +233,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além dos veículos, foram entregues novos coletes balísticos e rádios de comunicação digital. "Com esses equipamentos, conseguiremos reduzir o tempo de resposta às ocorrências", afirmou o comandante da GM.</p>
             <p>As novas viaturas já estão em circulação nos bairros com maior índice de criminalidade.</p>
         `,
-        imageUrl: '/images/custom_gm_official_jeep.jpg', // Foto Oficial (Jeep/Chaves)
+        imageUrl: '/images/custom_gm_official_jeep.webp', // Foto Oficial (Jeep/Chaves)
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(16),
@@ -248,7 +248,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Com a expansão, o número de leitos de internação infantil passou de 15 para 30. Além disso, foram adquiridos novos equipamentos de monitoramento vital e respiradores específicos para o público pediátrico.</p>
             <p>"Saúde é prioridade. Nossas crianças merecem o melhor atendimento possível, sem precisar se deslocar para Curitiba", destacou a direção do hospital.</p>
         `,
-        imageUrl: '/images/custom_hospital_official.jpg', // Foto Oficial Inauguração (Corte Fita)
+        imageUrl: '/images/custom_hospital_official.webp', // Foto Oficial Inauguração (Corte Fita)
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(18),
@@ -290,7 +290,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um mutirão de limpeza realizado nas margens do Rio Iguaçu, no trecho que corta Araucária, resultou na retirada de mais de 5 toneladas de resíduos sólidos. A ação contou com a participação de 100 voluntários, incluindo escoteiros e moradores ribeirinhos.</p>
             <p>Entre os itens encontrados estavam pneus, plásticos e até móveis velhos. A Secretaria de Meio Ambiente apoiou a ação com caminhões para o transporte correto do material recolhido.</p>
         `,
-        imageUrl: '/images/limpeza_rio_iguacu_real.jpg',
+        imageUrl: '/images/limpeza_rio_iguacu_real.webp',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(22),
@@ -349,7 +349,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"A ideia surgiu da nossa própria necessidade de saber se nossos irmãos menores tinham chegado bem à escola", conta um dos fundadores, estudante de Análise de Sistemas da facear.</p>
             <p>O aplicativo já está sendo testado por 15 motoristas de van da cidade e tem recebido feedback positivo pela facilidade de uso e precisão do GPS.</p>
         `,
-        imageUrl: '/images/startup_app_real.jpg',
+        imageUrl: '/images/startup_app_real.webp',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: getPastDate(32),
@@ -379,7 +379,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
             <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
         `,
-        imageUrl: '/images/hackathon_real.jpg',
+        imageUrl: '/images/hackathon_real.webp',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: getPastDate(40),
@@ -394,7 +394,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As trilhas possuem diferentes níveis de dificuldade e são guiadas por biólogos que explicam sobre a flora e fauna local. O local também montou uma estrutura para observação de aves (birdwatching), atraindo fotógrafos de natureza.</p>
             <p>Após a caminhada, os visitantes podem desfrutar de um café colonial com produtos feitos na própria fazenda.</p>
         `,
-        imageUrl: '/images/sitio_ecologico_trilhas.jpg',
+        imageUrl: '/images/sitio_ecologico_trilhas.webp',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: getPastDate(42),
@@ -436,7 +436,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos. O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
             <p>A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
         `,
-        imageUrl: '/images/binario_centro_cover.jpg',
+        imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: getPastDate(50),
@@ -618,7 +618,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Para celebrar a Semana Mundial do Meio Ambiente, a prefeitura organizou uma série de atividades educativas. O destaque fica para as oficinas de compostagem doméstica e reciclagem criativa, abertas ao público no Parque Tecnológico.</p>
             <p>"Pequenas atitudes mudam o mundo. Queremos engajar a população na preservação local", disse o diretor de meio ambiente.</p>
         `,
-        imageUrl: '/images/environment_week_collage.jpg',
+        imageUrl: '/images/environment_week_collage.webp',
         category: 'Cidade',
         categoryColor: 'green',
         publishDate: getPastDate(82),
@@ -632,7 +632,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Em uma partida eletrizante, o Araucária Vôlei derrotou o time de Blumenau por 3 sets a 1 e manteve a liderança isolada da Superliga B. O ginásio estava lotado e a torcida empurrou o time em cada ponto.</p>
             <p>O próximo desafio será fora de casa, contra o vice-líder, valendo a ponta da tabela.</p>
         `,
-        imageUrl: '/images/araucaria_volei_cover_final.jpg',
+        imageUrl: '/images/araucaria_volei_cover_final.webp',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: getPastDate(85),
@@ -646,7 +646,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde". Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
             <p>Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
         `,
-        imageUrl: '/images/healthy_cooking_cover_real_final.jpg',
+        imageUrl: '/images/healthy_cooking_cover_real_final.webp',
         category: 'Cidade',
         categoryColor: 'red',
         publishDate: getPastDate(88),
@@ -660,7 +660,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Fotógrafos amadores e profissionais já podem inscrever seus trabalhos no 10º Concurso Municipal de Fotografia. O tema "Olhares sobre Araucária" convida a registrar as belezas urbanas e rurais da cidade.</p>
             <p>As melhores fotos farão parte de uma exposição itinerante e do calendário oficial do município.</p>
         `,
-        imageUrl: '/images/photography_contest_cover_real_final.jpg',
+        imageUrl: '/images/photography_contest_cover_real_final.webp',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: getPastDate(90),
@@ -688,7 +688,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O sábado foi de festa nas escolas municipais. O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
             <p>A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
         `,
-        imageUrl: '/images/festa_junina_real_cover.jpg',
+        imageUrl: '/images/festa_junina_real_cover.webp',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: getPastDate(95),
@@ -729,7 +729,7 @@ export const events: Event[] = [
         id: 1,
         title: 'Festa do Pêssego',
         description: 'A tradicional celebração da colheita com a melhor gastronomia polonesa e shows regionais.',
-        imageUrl: '/images/festa_pessego_real.jpg',
+        imageUrl: '/images/festa_pessego_real.webp',
         date: getUpcomingDate(5), // Daqui a 5 dias (Futuro)
         time: '18:00 - 23:00',
         location: 'Parque Cachoeira'
@@ -738,7 +738,7 @@ export const events: Event[] = [
         id: 2,
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
-        imageUrl: '/images/feira_noturna_real_v2.jpg',
+        imageUrl: '/images/feira_noturna_real_v2.webp',
         date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
         time: '18:00 - 22:00',
         location: 'Praça Central'
@@ -765,7 +765,7 @@ export const events: Event[] = [
         id: 5,
         title: 'Final do Campeonato Amador de Futebol',
         description: 'A grande decisão do campeonato varzeano de Araucária. Venha torcer pelo seu time do bairro!',
-        imageUrl: '/images/araucaria_ec_jogo.jpg',
+        imageUrl: '/images/araucaria_ec_jogo.webp',
         date: getUpcomingDate(14),
         time: '15:30',
         location: 'Estádio Municipal'
@@ -777,7 +777,7 @@ export const businesses: Business[] = [
         id: 1,
         name: 'Panificadora e Confeitaria Araucária',
         category: 'Alimentação',
-        imageUrl: '/images/panificadora_araucaria_real.jpg',
+        imageUrl: '/images/panificadora_araucaria_real.webp',
         address: 'Rua das Flores, 123 - Centro',
         phone: '(41) 3901-2345',
         website: 'padariaexemplo.com.br',
