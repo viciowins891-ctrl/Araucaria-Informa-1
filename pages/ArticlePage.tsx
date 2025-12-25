@@ -198,13 +198,7 @@ const ArticlePage: React.FC = () => {
         setTimeout(() => setShowShareToast(false), 3000);
     };
 
-    const handleBack = () => {
-        if (window.history.state && window.history.state.idx > 0) {
-            navigate(-1);
-        } else {
-            navigate('/noticias');
-        }
-    };
+
 
     if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
 
@@ -294,13 +288,19 @@ const ArticlePage: React.FC = () => {
 
                     {/* Header do Artigo */}
                     <div className="flex flex-col gap-6 mb-8">
-                        <button
-                            onClick={handleBack}
-                            className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit bg-transparent border-none cursor-pointer"
+                        <Link
+                            to="/noticias"
+                            onClick={(e) => {
+                                if (window.history.state && window.history.state.idx > 0) {
+                                    e.preventDefault();
+                                    navigate(-1);
+                                }
+                            }}
+                            className="inline-flex items-center text-gray-500 hover:text-primary transition-colors mb-2 w-fit cursor-pointer relative z-50 p-1 -ml-1 group/back"
                         >
-                            <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                            <svg className="w-4 h-4 mr-1 transform transition-transform group-hover/back:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                             <span className="text-sm font-medium">Voltar</span>
-                        </button>
+                        </Link>
 
                         <div className="flex flex-wrap items-center gap-4">
                             <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20`}>
