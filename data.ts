@@ -276,7 +276,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro Costeira.</p>
             <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
         `,
-        imageUrl: '/images/iptu_real_final_v2.png',
+        imageUrl: '/images/supermarket_opening_real_final_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: getPastDate(21),
