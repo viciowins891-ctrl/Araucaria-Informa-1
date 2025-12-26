@@ -174,6 +174,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/noticias">Notícias</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/eventos">Eventos</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/comercio">Comércio</Link></li>
+                            <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary font-bold text-primary" to="/anuncie">Anuncie Conosco 🚀</Link></li>
                             <li><Link className="text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-primary" to="/historia">História</Link></li>
                         </ul>
                     </div>
