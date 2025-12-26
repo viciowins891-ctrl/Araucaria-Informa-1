@@ -23,7 +23,7 @@ const AdvertisePage: React.FC = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
                             <a
-                                href="https://wa.me/5541999999999?text=Olá, quero anunciar no portal mais rápido de Araucária!"
+                                href="https://wa.me/5541999904961?text=Ol%C3%A1%2C%20quero%20anunciar%20no%20portal%20mais%20r%C3%A1pido%20de%20Arauc%C3%A1ria!"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
@@ -137,7 +137,7 @@ const AdvertisePage: React.FC = () => {
                         Pronto para elevar o nível da sua publicidade?
                     </h2>
                     <a
-                        href="https://wa.me/5541999999999"
+                        href="https://wa.me/5541999904961"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-10 py-5 bg-white text-primary font-bold text-xl rounded-full shadow-2xl hover:bg-gray-100 transition-colors"
