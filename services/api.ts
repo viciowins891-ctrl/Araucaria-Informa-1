@@ -43,7 +43,7 @@ export const api = {
                     // Força a imagem correta (raw png) e adiciona query de cache para garantir refresh
                     return {
                         ...item,
-                        imageUrl: '/images/food_trucks_cover_final.png?v=final_v2'
+                        imageUrl: '/images/food_trucks_cover_final.png?v=final_v3'
                     };
                 }
                 return item;
