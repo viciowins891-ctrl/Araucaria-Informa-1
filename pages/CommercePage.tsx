@@ -35,12 +35,12 @@ const CommercePage: React.FC = () => {
             <div className="relative bg-zinc-900 py-20 sm:py-28 mb-10 overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src="/images/commerce_hero_unique.webp"
-                        srcSet="/images/commerce_hero_unique_mobile.webp 768w, /images/commerce_hero_unique.webp 1200w"
+                        src="/images/commerce_hero_unique_bright.webp"
+                        srcSet="/images/commerce_hero_unique_bright_mobile.webp 768w, /images/commerce_hero_unique_bright.webp 1200w"
                         alt="Centro Comercial Movimentado de Araucária"
-                        className="w-full h-full object-cover opacity-30"
+                        className="w-full h-full object-cover opacity-60"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
                 </div>
 
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
