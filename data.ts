@@ -146,6 +146,21 @@ export const newsArticles: NewsArticle[] = [
         author: 'Esporte News'
     },
     {
+        id: 110,
+        title: 'Feira Gastronômica traz Food Trucks e música para o Centro',
+        summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
+        content: `
+            <p>A Praça Central de Araucária será palco neste fim de semana de mais uma edição da Feira Gastronômica Noturna. O evento reúne dezenas de Food Trucks oferecendo desde hambúrgueres artesanais até pratos típicos da culinária polonesa, como o pierogi.</p>
+            <p>Além da gastronomia, a feira contará com apresentações musicais de artistas locais. "É uma opção de lazer acessível e segura para as famílias araucarienses", destacou o organizador.</p>
+            <p>O evento começa às 18h e vai até as 22h, com entrada gratuita.</p>
+        `,
+        imageUrl: '/images/food_trucks_cover_new_final.png',
+        category: 'Lazer',
+        categoryColor: 'yellow',
+        publishDate: getPastDate(1),
+        author: 'Guia Curitiba'
+    },
+    {
         id: 6,
         title: 'Câmara aprova incentivo ao turismo rural',
         summary: 'Caminho do Guajuvira e roteiros poloneses receberão verba para sinalização e melhorias.',
