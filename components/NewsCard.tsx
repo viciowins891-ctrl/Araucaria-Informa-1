@@ -41,7 +41,8 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
         // Override específico para Food Truck (Correção Hotfix)
         if (article.title.toLowerCase().includes('food truck')) {
-            finalUrl = '/images/food_trucks_cover_final.png';
+            // Usa query param v=new para forçar refresh de cache
+            finalUrl = '/images/food_trucks_cover_final.png?v=new';
         }
 
         setImgSrc(finalUrl);
@@ -69,7 +70,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     <img
                         alt={article.title}
                         className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        src={getOptimizedImageUrl(imgSrc, 400)} // Use a smaller size for the card thumbnail
+                        src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)} // Use a smaller size for the card thumbnail
                         loading="lazy"
                         width="400" // Explicit width for layout shift prevention
                         height="250" // Explicit height for layout shift prevention (assuming aspect ratio)
