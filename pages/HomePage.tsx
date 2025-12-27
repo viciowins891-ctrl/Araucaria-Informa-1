@@ -21,8 +21,8 @@ const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
-    const DEFAULT_HERO_IMAGE = "/images/background_city_araucaria.jpg";
-    const MOBILE_HERO_IMAGE = "/images/background_city_araucaria.jpg";
+    const DEFAULT_HERO_IMAGE = "/images/background_hero_latest.png";
+    const MOBILE_HERO_IMAGE = "/images/background_hero_latest.png";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
