@@ -14,12 +14,15 @@ const HistoryPage: React.FC = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 mb-2 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m8-2a2 2 0 100-4 2 2 0 000 4z" />
                 </svg>
-                <img
-                    src="/images/portal_polones_araucaria_real.png"
-                    alt="Paisagem e Cultura Local"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-10"
-                    onError={(e) => e.currentTarget.style.display = 'none'}
-                />
+                <picture className="absolute inset-0 w-full h-full">
+                    <source srcSet="/images/portal_polones_araucaria_real_mobile.webp" media="(max-width: 640px)" />
+                    <img
+                        src="/images/portal_polones_araucaria_real.png"
+                        alt="Paisagem e Cultura Local"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-10 relative"
+                        onError={(e) => e.currentTarget.style.display = 'none'}
+                    />
+                </picture>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-12 z-20">
                     <p className="text-white text-lg font-semibold">Portal Polonês</p>
                     <p className="text-zinc-300 text-sm">Homenagem à imigração e cultura local</p>
@@ -50,12 +53,15 @@ const HistoryPage: React.FC = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
-                    <img
-                        src="/images/casa_cavalo_baio.jpg"
-                        alt="Arquitetura Típica"
-                        className="w-full h-full object-cover relative z-10"
-                        onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
+                    <picture className="w-full h-full relative z-10">
+                        <source srcSet="/images/casa_cavalo_baio_mobile.webp" media="(max-width: 640px)" />
+                        <img
+                            src="/images/casa_cavalo_baio.jpg"
+                            alt="Arquitetura Típica"
+                            className="w-full h-full object-cover"
+                            onError={(e) => e.currentTarget.style.display = 'none'}
+                        />
+                    </picture>
                 </div>
             </div>
 
@@ -65,12 +71,15 @@ const HistoryPage: React.FC = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
-                    <img
-                        src="/images/parque_cachoeira_real.png"
-                        alt="Pinheiros e Natureza"
-                        className="absolute inset-0 w-full h-full object-cover z-10"
-                        onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
+                    <picture className="absolute inset-0 w-full h-full z-10">
+                        <source srcSet="/images/parque_cachoeira_real_mobile.webp" media="(max-width: 640px)" />
+                        <img
+                            src="/images/parque_cachoeira_real.png"
+                            alt="Pinheiros e Natureza"
+                            className="w-full h-full object-cover"
+                            onError={(e) => e.currentTarget.style.display = 'none'}
+                        />
+                    </picture>
                 </div>
                 <div>
                     <h3 className="text-2xl font-bold mb-4 text-text-light dark:text-text-dark font-display">Parque Cachoeira</h3>

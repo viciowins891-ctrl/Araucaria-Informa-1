@@ -9,7 +9,8 @@ interface BusinessCardProps {
 
 const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
     const [imageError, setImageError] = useState(false);
-    const optimizedImageUrl = getOptimizedImageUrl(business.imageUrl, 800);
+    // Solicitando 640px para ativar a lógica de mobile.webp (que é suficiente para cards)
+    const optimizedImageUrl = getOptimizedImageUrl(business.imageUrl, 640);
 
     const getSafeUrl = (url: string) => {
         if (url.startsWith('http://') || url.startsWith('https://')) {

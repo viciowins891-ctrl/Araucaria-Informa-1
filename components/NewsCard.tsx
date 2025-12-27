@@ -24,8 +24,8 @@ const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 border-gray-200';
 
-    // Otimiza a URL inicial
-    const optimizedImageUrl = getOptimizedImageUrl(article.imageUrl, 800);
+    // Otimiza a URL inicial (640px é suficiente para cards e ativa mobile.webp)
+    const optimizedImageUrl = getOptimizedImageUrl(article.imageUrl, 640);
 
     // Estado para controlar a URL da imagem atual
     const [imgSrc, setImgSrc] = useState(optimizedImageUrl);
@@ -37,7 +37,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
     useEffect(() => {
-        setImgSrc(getOptimizedImageUrl(article.imageUrl, 800));
+        setImgSrc(getOptimizedImageUrl(article.imageUrl, 640));
         setIsFallback(false);
         setHasError(false);
     }, [article.imageUrl]);

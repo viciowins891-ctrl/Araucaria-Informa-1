@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
     // Lógica direta de seleção de imagem (Sem useEffect para evitar flash)
     // 1. Se houve erro, usa fallback
     // ESTRATÉGIA DE PERFORMANCE (LCP MAXIMIZADO):
-    // Usamos SEMPRE a imagem estática local (/images/final_nature.png) como background do Hero.
+    // Usamos SEMPRE a imagem estática local (/images/background_city_aerial.jpg) como background do Hero.
     // Isso garante que o 'preload' no index.html funcione 100% e elimina a "troca" de imagem (layout shift)
     // quando a API retorna a notícia. O usuário vê a imagem instantaneamente.
     const finalDisplayImage = DEFAULT_HERO_IMAGE;
