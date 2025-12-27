@@ -11,60 +11,105 @@ const UPDATE_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000;
 
 export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
-        // FORÇANDO USO DE DADOS LOCAIS (data.ts) PARA GARANTIR ATUALIZAÇÃO DO SITE
-        // Isso bypassa o Supabase temporariamente para validar as mudanças do AdSense.
-        // const supabase = await getSupabase();
-        // const { data, error } = await supabase
-        //     .from('news')
-        //     .select('*')
-        //     .order('publish_date', { ascending: false });
+        // BUSCA HÍBRIDA: Supabase + LocalStorage (Cache) + Estático
+        try {
+            // 1. Tenta Supabase
+            const supabase = await getSupabase();
+            const { data: dbNews } = await supabase
+                .from('news')
+                .select('*')
+                .order('publish_date', { ascending: false });
 
-        console.log("API: Modo Estático Ativado - Usando data.ts");
-        const { newsArticles } = await import('../data');
-        return newsArticles;
+            // 2. Busca Cache Local (Fallback para erro de RLS)
+            let cachedNews: NewsArticle[] = [];
+            try {
+                const stored = localStorage.getItem('araucaria_news_cache');
+                if (stored) cachedNews = JSON.parse(stored);
+            } catch (e) { console.warn("Erro ao ler cache local de news"); }
+
+            // 3. Busca Dados Estáticos
+            const { newsArticles: staticNews } = await import('../data');
+
+            // COMBINAÇÃO: Cache > DB > Estático
+            // Remove duplicatas baseado no título (já que IDs podem conflitar entre local e server)
+            const allNews = [...cachedNews, ...(dbNews || []), ...staticNews];
+
+            const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
+
+            // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
+            return uniqueNews
+                .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+                .slice(0, 100) as NewsArticle[];
+
+        } catch (e) {
+            console.error("API: Falha crítica em getNews", e);
+            const { newsArticles } = await import('../data');
+            return newsArticles;
+        }
     },
 
     getNewsById: async (id: number): Promise<NewsArticle | undefined> => {
-        // FORÇANDO USO DE DADOS LOCAIS
-
-        // const { data, error } = await supabase ... (Código comentado)
-
-        // Fallback 1: Dados estáticos (data.ts)
-        const { newsArticles } = await import('../data');
-        const localArticle = newsArticles.find(n => n.id === Number(id));
-        if (localArticle) return localArticle;
-
-        // Fallback 2: Dados gerados/AI (aiService.ts) ...
-
-        // Nota: IDs de AI começam em 1000 geralmente
-        // const { fetchWeeklyNewsWithAI } = await import('./aiService'); // Removido import dinâmico redundante
-        const { fetchWeeklyNewsWithAI } = await import('./aiService');
-        const aiArticles = await fetchWeeklyNewsWithAI();
-        const aiArticle = aiArticles.find(n => n.id === Number(id));
-
-        return aiArticle;
+        // Busca unificada
+        const allNews = await api.getNews();
+        return allNews.find(n => n.id === Number(id));
     },
 
     updateNews: async (newArticles: NewsArticle[]): Promise<void> => {
-        const articlesToInsert = newArticles.map(n => ({
+        // Tenta salvar no Supabase, se falhar (RLS), salva no LocalStorage
+        const supabase = await getSupabase();
+
+        // Prepara objeto seguro (como antes)
+        const articlesToInsert = newArticles.map(n => {
+            let isoDate;
+            if (n.publishDate && n.publishDate.includes('/')) {
+                const parts = n.publishDate.split('/');
+                isoDate = parts.length === 3 ? `${parts[2]}-${parts[1]}-${parts[0]}` : new Date().toISOString();
+            } else {
+                isoDate = n.publishDate || new Date().toISOString();
+            }
+
+            return {
+                ...n, // Mantém propriedades originais para o cache local
+                id: Math.floor(Math.random() * 100000) + 2000, // Gera ID temporário para o cache local
+                image_url: n.imageUrl || '/images/placeholder.jpg',
+                category: n.category || 'Geral',
+                publish_date: isoDate,
+                author: n.author || 'Redação IA',
+                created_at: new Date().toISOString()
+            };
+        });
+
+        console.log("[API] Tentando salvar notícias...");
+
+        // Tenta Supabase (pode falhar por RLS)
+        const { error } = await supabase.from('news').insert(articlesToInsert.map(n => ({
             title: n.title,
             summary: n.summary,
             content: n.content,
-            image_url: n.imageUrl,
+            image_url: n.image_url,
             category: n.category,
             category_color: n.categoryColor,
-            publish_date: n.publishDate,
-            author: n.author,
-            // source_url: n.sourceUrl, // Columns didn't exist in my create script, commenting out to avoid error
-            // source_name: n.sourceName
-        }));
-
-        const supabase = await getSupabase();
-        const { error } = await supabase.from('news').insert(articlesToInsert);
+            publish_date: n.publish_date,
+            author: n.author
+        })));
 
         if (error) {
-            console.error('Erro ao salvar notícias no Supabase:', error);
-            throw error;
+            console.warn('[API] Falha no Supabase (Provável RLS). Salvando no Cache Local do Navegador.', error.message);
+
+            // FALLBACK: Salva no LocalStorage
+            try {
+                const existingStr = localStorage.getItem('araucaria_news_cache');
+                const existing = existingStr ? JSON.parse(existingStr) : [];
+                // Adiciona novas no topo
+                const updated = [...articlesToInsert, ...existing];
+                // Mantém apenas as últimas 100 para não estourar memória (aprox 10 páginas)
+                localStorage.setItem('araucaria_news_cache', JSON.stringify(updated.slice(0, 100)));
+                console.log("[API] Notícias salvas no Cache Local com sucesso!");
+            } catch (e) {
+                console.error("[API] Falha ao salvar no local storage", e);
+            }
+        } else {
+            console.log("[API] Notícias salvas no Supabase com sucesso!");
         }
     },
 
@@ -75,28 +120,25 @@ export const api = {
             const shouldUpdate = !lastUpdateStr || (now - Number(lastUpdateStr) > UPDATE_INTERVAL_MS);
 
             if (shouldUpdate) {
-                console.log("[AutoUpdate] Verificando agendamento semanal...");
-                console.log(`[AutoUpdate] Última atualização: ${lastUpdateStr ? new Date(Number(lastUpdateStr)).toLocaleString() : 'Nunca'}`);
-
-                console.log("[AutoUpdate] Iniciando processo de atualização via IA...");
+                console.log("[AutoUpdate] Verificando conte\u00A0do novo...");
+                console.log("[AutoUpdate] Gerando not\u00EDcias via IA...");
                 const { fetchWeeklyNewsWithAI } = await import('./aiService');
                 const newArticles = await fetchWeeklyNewsWithAI();
 
                 if (newArticles.length > 0) {
-                    console.log(`[AutoUpdate] Sucesso! ${newArticles.length} novas notícias geradas.`);
-                    // Em produção: salvar no DB
-                    // await api.updateNews(newArticles); 
-
+                    console.log(`[AutoUpdate] Sucesso! ${newArticles.length} novas not\u00EDcias.`);
+                    // SALVA (Supabase ou LocalStorage Fallback)
+                    await api.updateNews(newArticles);
                     localStorage.setItem(DB_KEYS.LAST_UPDATE, now.toString());
-                    console.log("[AutoUpdate] Timestamp atualizado. Próxima execução em 7 dias.");
+                    console.log("[AutoUpdate] Próxima execu\u00E7\u00E3o em 7 dias.");
                 } else {
-                    console.error("[AutoUpdate] Falha: Nenhuma notícia foi retornada do serviço.");
+                    console.error("[AutoUpdate] Falha: Nenhuma not\u00EDcia gerada.");
                 }
             } else {
-                console.log("[AutoUpdate] Sistema atualizado. Nenhuma ação necessária.");
+                console.log("[AutoUpdate] Conte\u00FAdo recente. Nenhuma a\u00E7\u00E3o.");
             }
         } catch (error) {
-            console.error("[AutoUpdate] Erro Crítico durante execução:", error);
+            console.error("[AutoUpdate] Erro:", error);
         }
     },
 
@@ -192,11 +234,14 @@ export const api = {
                 businessesPromise
             ]);
 
-            // Combina: DB News PRIMEIRO (Prioridade para curadoria manual/local)
-            const allNews = [...dbNews, ...evergreen];
+            // Combina: Evergreen (IA Fresca) PRIMEIRO, depois DB/Local
+            const combinedNews = [...evergreen, ...dbNews];
+
+            // Re-ordena por data para garantir que o mais recente (Seja IA ou Banco) fique no topo
+            const sortedNews = combinedNews.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
             return {
-                news: allNews.slice(0, 6),
+                news: sortedNews.slice(0, 6),
                 events: events.slice(0, 3),
                 businesses: businesses.slice(0, 4)
             };

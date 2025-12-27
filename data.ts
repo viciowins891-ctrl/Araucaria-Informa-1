@@ -30,7 +30,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: getPastDate(0), // Hoje
+        publishDate: '2025-12-20',
         author: 'Redação Municipal'
     },
     {
@@ -44,7 +44,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Economia',
         categoryColor: 'blue',
-        publishDate: getPastDate(1), // Ontem
+        publishDate: '2025-12-18',
         author: 'Câmara Municipal'
     },
     {
@@ -58,7 +58,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: getPastDate(2),
+        publishDate: '2025-12-15',
         author: 'Agência Estadual'
     },
     {
@@ -72,7 +72,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Política',
         categoryColor: 'purple',
-        publishDate: getPastDate(3),
+        publishDate: '2025-12-12',
         author: 'Brasília News'
     },
     {
@@ -86,7 +86,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
         category: 'Segurança',
         categoryColor: 'red',
-        publishDate: getPastDate(3),
+        publishDate: '2025-12-10',
         author: 'PCPR'
     },
     {
@@ -100,7 +100,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Saúde',
         categoryColor: 'blue',
-        publishDate: getPastDate(4),
+        publishDate: '2025-12-08',
         author: 'Saúde Agora'
     },
     {
@@ -114,7 +114,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         category: 'Cultura',
         categoryColor: 'indigo',
-        publishDate: getPastDate(5),
+        publishDate: '2025-12-05',
         author: 'Cultura Viva'
     },
     {
@@ -128,7 +128,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         category: 'Cidade',
         categoryColor: 'gray',
-        publishDate: getPastDate(6),
+        publishDate: '2025-12-01',
         author: 'Tempo Agora'
     },
     {

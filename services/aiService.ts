@@ -147,149 +147,110 @@ export const generateContextualImage = (topic: string): string => {
 // 3. SIMULAÇÃO DE UPDATE SEMANAL (Conteúdo Fresco)
 // ============================================================================
 
-// Templates REAIS baseados nas notícias oficiais de Dezembro/2025 para rotação semanal
-const WEEKLY_TEMPLATES = [
-    {
-        title: "Araucária zera fila de espera por vagas em CMEIs para 2025",
-        summary: "Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.",
-        content: "Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada. O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025.",
-        baseCategory: "Educação",
-        fixedImage: "/images/news_cmei_2025.png"
-    },
-    {
-        title: "Orçamento Municipal para 2026 deve chegar a R$ 2,3 bilhões",
-        summary: "Previsão orçamentária aponta crescimento na arrecadação e maiores investimentos em obras e saúde.",
-        content: "A Lei Orçamentária Anual (LOA) discutida na Câmara Municipal projeta um orçamento recorde de aproximadamente R$ 2,3 bilhões para Araucária em 2026. A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária.",
-        baseCategory: "Economia",
-        fixedImage: "/images/news_budget.png"
-    },
-    {
-        title: "Governador inaugura unidade do Poupatempo em Araucária",
-        summary: "Nova agência no centro da cidade unifica mais de 240 serviços estaduais e municipais.",
-        content: "Foi inaugurada oficialmente a primeira unidade de rua do Poupatempo no Paraná, localizada em Araucária. O espaço moderno facilita a vida do cidadão, permitindo emitir documentos como RG e CNH, além de solicitar serviços da Copel e Sanepar em um único lugar.",
-        baseCategory: "Cidade",
-        fixedImage: "/images/news_poupatempo.png"
-    },
-    {
-        title: "Pacote de investimentos federais destina R$ 20 milhões para Araucária",
-        summary: "Recursos serão aplicados na construção de novas unidades de saúde e reformas escolares.",
-        content: "Em visita oficial, representantes do Governo Federal anunciaram um pacote de investimentos para Araucária. Serão R$ 2,8 milhões destinados à Saúde e R$ 18 milhões para a Educação, focados na ampliação da rede física de atendimento.",
-        baseCategory: "Política",
-        fixedImage: "/images/news_investments.png"
-    },
-    {
-        title: "Polícia Civil incinera 114 kg de drogas apreendidas na região",
-        summary: "Ação realizada nesta semana marca o combate efetivo ao tráfico em Araucária.",
-        content: "A Polícia Civil do Paraná (PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária. O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões.",
-        baseCategory: "Segurança",
-        fixedImage: "/images/custom_drugs.jpg"
-    },
-    {
-        title: "Vacinação contra Vírus Sincicial Respiratório (VSR) para gestantes",
-        summary: "Saúde inicia imunização para proteger recém-nascidos de infecções graves.",
-        content: "A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes. A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.",
-        baseCategory: "Saúde"
-    },
-    {
-        title: "Cantata de Natal emociona fiéis no Santuário",
-        summary: "Apresentação 'Um Conto de Natal' reuniu centenas de pessoas no fim de semana.",
-        content: "O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro. O evento contou com coral infantil e orquestra, emocionando o público presente.",
-        baseCategory: "Cultura"
-    }
-];
+// ============================================================================
+// 3. GERAÇÃO REAL COM GOOGLE GEMINI (Conteúdo Fresco e Único)
+// ============================================================================
 
-const BAIRROS = ['Jardim Iguaçu', 'Costeira', 'Campina da Barra', 'Centro', 'Capela Velha'];
-const TEMAS_SAUDE = ['Dengue', 'Vacinação', 'Saúde Mental', 'Diabetes'];
-
-/**
- * Gera um prompt de imagem otimizado com base na categoria e título.
- * Define o foco visual específico para manter a identidade do Araucária Informa.
- */
-export const generateImagePrompt = (title: string, category: string): string => {
-    let visualFocus = "";
-    // Normaliza a categoria para facilitar o match
-    const normCategory = category.toUpperCase();
-
-    // Mapeamento de Foco Visual para as 7 Categorias do Araucária Informa
-    if (normCategory.includes('ECONOMIA') || normCategory.includes('INDÚSTRIA')) {
-        visualFocus = "Fotografia de drone, vista da Refinaria REPAR ou silhuetas industriais. Tom azul e cinza.";
-    } else if (normCategory.includes('TURISMO') || normCategory.includes('LAZER') || normCategory.includes('MEIO AMBIENTE')) {
-        visualFocus = "Paisagem natural, Araucárias, Parque Cachoeira ou turismo rural. Cores vibrantes.";
-    } else if (normCategory.includes('EDUCAÇÃO') || normCategory.includes('ESCOLA')) {
-        visualFocus = "Crianças em atividades escolares (Robótica ou leitura), infraestrutura de CMEI moderno.";
-    } else if (normCategory.includes('INFRAESTRUTURA') || normCategory.includes('OBRA') || normCategory.includes('TRÂNSITO')) {
-        visualFocus = "Obras urbanas, novas ciclovias, ruas com iluminação LED ou serviços públicos modernos.";
-    } else if (normCategory.includes('SEGURANÇA')) {
-        visualFocus = "Câmeras de monitoramento inteligente ou Guarda Municipal (GM) em ação. Foco em tecnologia.";
-    } else if (normCategory.includes('ESPORTE') || normCategory.includes('CULTURA') || normCategory.includes('EVENTOS')) {
-        visualFocus = "Ginásio Joval de Paula Souza, palco de festival de teatro ou jogo de futebol. Cena comunitária e dinâmica.";
-    } else if (normCategory.includes('COMÉRCIO') || normCategory.includes('VAREJO')) {
-        visualFocus = "Vitrine de loja de Araucária ou comércio de rua, com foco em incentivo local. Foto convidativa.";
-    } else {
-        // Prompt genérico para categorias desconhecidas
-        visualFocus = "Cena urbana de Araucária, representando notícias locais. Alta resolução.";
-    }
-
-    // Combina o título específico da notícia com o foco visual da categoria
-    return `Gere uma imagem com estilo de fotografia jornalística. Título do artigo: "${title}". Foco Visual: ${visualFocus}`;
-};
-
-/**
- * Simula a busca de novas notícias "confirmadas" (Geradas via Templates para demo)
- */
 export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
-    console.log("[AI Service] Buscando notícias da semana...");
+    console.log("[AI Service] Iniciando geração em lote (3 notícias) via Google Gemini...");
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-    // Simula delay de rede
-    await new Promise(r => setTimeout(r, 800));
+    // Fallback de Emergência: Gera 3 notícias distintas
+    const fallbackNews = () => {
+        const topics = [
+            { t: 'Feira de Adoção Pet acontece neste fim de semana no Parque Cachoeira', c: 'Cidade', focus: 'Animais' },
+            { t: 'Novas turbinas da REPAR aumentam eficiência energética em 15%', c: 'Economia', focus: 'Indústria' },
+            { t: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres', c: 'Infraestrutura', focus: 'Obras' },
+            { t: 'Araucária Vôlei vence mais uma e segue líder na Superliga', c: 'Esporte', focus: 'Vôlei' },
+            { t: 'Festival de Food Trucks agita o Centro Cívico nesta sexta', c: 'Cultura', focus: 'FoodTruck' },
+            { t: 'Campanha de Vacinação contra a Gripe bate meta em Araucária', c: 'Saúde', focus: 'Saúde' },
+            { t: 'Guarda Municipal recebe novas viaturas tecnológicas', c: 'Segurança', focus: 'Segurança' }
+        ];
 
-    // Gera 1 notícia nova baseada na semana atual
-    const weekNumber = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
-    const templateIdx = weekNumber % WEEKLY_TEMPLATES.length;
-    const template = WEEKLY_TEMPLATES[templateIdx];
+        // Imagens Curadas HD (Fallback)
+        const topicImages: Record<string, string> = {
+            'Animais': 'https://images.unsplash.com/photo-1601758228041-f3b2795255db?auto=format&fit=crop&q=80&w=1000',
+            'Indústria': 'https://images.unsplash.com/photo-1563968743333-044cef8004c3?auto=format&fit=crop&q=80&w=1000',
+            'Obras': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
+            'Vôlei': 'https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&q=80&w=1000',
+            'FoodTruck': 'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&q=80&w=1000',
+            'Saúde': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
+            'Segurança': 'https://images.unsplash.com/photo-1590422749870-13a83017a224?auto=format&fit=crop&q=80&w=1000'
+        };
 
-    // Preenche variáveis do template
-    let finalTitle = template.title;
-    if (finalTitle.includes('{bairro}')) finalTitle = finalTitle.replace('{bairro}', BAIRROS[weekNumber % BAIRROS.length]);
-    if (finalTitle.includes('{tema}')) finalTitle = finalTitle.replace('{tema}', TEMAS_SAUDE[weekNumber % TEMAS_SAUDE.length]);
-    if (finalTitle.includes('{numero}')) finalTitle = finalTitle.replace('{numero}', (30 + (weekNumber % 10) * 5).toString());
+        // Embaralha e seleciona 6 tópicos únicos
+        const shuffled = topics.sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, 6);
 
-    // Processamento Inteligente
-    const detectedTopic = detectTopic(finalTitle, template.content);
-
-    // GERAÇÃO DE PROMPT (Simulação de IA Real)
-    // Aqui usamos a lógica nova para "construir" o pedido da imagem, mesmo que no final usemos o banco curado.
-    const imagePrompt = generateImagePrompt(finalTitle, detectedTopic);
-    console.log(`[AI PROMPT GEN]: ${imagePrompt}`);
-
-    // @ts-ignore
-    const contextualImage = template.fixedImage || generateContextualImage(detectedTopic);
-
-    // Mapeia categoria visual (cores do UI)
-    const categoryColorMap: Record<string, string> = {
-        'Economia': 'blue', 'Saúde': 'red', 'Infraestrutura': 'purple',
-        'Segurança': 'red', 'Educação': 'yellow', 'Meio ambiente': 'green',
-        'Tecnologia': 'indigo'
+        return selected.map((topic, index) => ({
+            id: Date.now() + index,
+            title: topic.t,
+            summary: "Confira os detalhes sobre este importante acontecimento recente em nossa cidade.",
+            content: `<p>${topic.t}. A cidade de Araucária segue em constante desenvolvimento com ações que beneficiam toda a comunidade. Mais informações serão divulgadas nos canais oficiais.</p>`,
+            category: topic.c,
+            categoryColor: 'blue',
+            publishDate: new Date().toISOString().split('T')[0],
+            author: "Redação IA Autoservice",
+            imageUrl: topicImages[topic.focus] || generateContextualImage(topic.c),
+            sourceName: "Araucária Urgente"
+        }));
     };
 
-    const newArticle: NewsArticle = {
-        id: 2000 + weekNumber, // ID único por semana
-        title: finalTitle,
-        summary: template.summary,
-        content: `<p>${template.content}</p><p>Mais detalhes serão divulgados no Diário Oficial.</p>`,
-        category: detectedTopic, // Usa o tópico detectado como categoria exibida
-        categoryColor: categoryColorMap[detectedTopic] || 'blue',
-        publishDate: new Date().toLocaleDateString('pt-BR'),
-        author: "Sistema de Atualização Semanal",
-        imageUrl: contextualImage,
-        sourceName: "Notícias Oficiais",
-        sourceUrl: ""
-    };
+    if (!apiKey) {
+        console.warn("[AI Service] Sem chave de API. Usando fallback em lote.");
+        return fallbackNews();
+    }
 
-    console.log(`[AI Service] Notícia Gerada: [${detectedTopic}] ${finalTitle}`);
-    console.log(`[AI Service] Imagem Aplicada: ${contextualImage}`);
+    try {
+        const prompt = `
+            Atue como um jornalista sênior de Araucária, Paraná.
+            Gere 6 (SEIS) notícias curtas, inéditas e realistas sobre a cidade (evite "Poupatempo" ou "CMEI").
+            Varie os temas entre: Clima, Trânsito, Cultura, Esporte e Economia.
+            Responda EXATAMENTE como um ARRAY JSON:
+            [
+                { "title": "...", "summary": "...", "content": "...", "category": "..." },
+                ...
+            ]
+        `;
 
-    return [newArticle];
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+
+        const data = await response.json();
+        let generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!generatedText) throw new Error("Sem resposta da IA");
+
+        generatedText = generatedText.replace(/```json/g, '').replace(/```/g, '').trim();
+        const newsArray = JSON.parse(generatedText);
+
+        if (!Array.isArray(newsArray)) throw new Error("Resposta não é um array");
+
+        // Processa o lote de notícias geradas
+        return newsArray.map((newsData: any, index: number) => {
+            const detectedTopic = newsData.category || detectTopic(newsData.title, newsData.summary);
+            const colors: Record<string, string> = { 'Economia': 'blue', 'Esporte': 'green', 'Cultura': 'purple', 'Segurança': 'red' };
+
+            return {
+                id: Date.now() + index,
+                title: newsData.title,
+                summary: newsData.summary,
+                content: newsData.content,
+                category: detectedTopic,
+                categoryColor: colors[detectedTopic] || 'gray',
+                publishDate: new Date().toISOString().split('T')[0],
+                author: "IA Reporter - Araucária Informa",
+                imageUrl: generateContextualImage(detectedTopic),
+                sourceName: "IA Gen"
+            };
+        });
+
+    } catch (error) {
+        console.error("[AI Service] Falha na geração em lote, revertendo para fallback:", error);
+        return fallbackNews();
+    }
 };
 
 export const generateDeepArticle = async (topic: string = ''): Promise<NewsArticle[]> => {
