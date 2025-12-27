@@ -170,7 +170,7 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
         // Imagens Curadas HD (Fallback)
         const topicImages: Record<string, string> = {
             'Animais': 'https://images.unsplash.com/photo-1601758228041-f3b2795255db?auto=format&fit=crop&q=80&w=1000',
-            'Indústria': 'https://images.unsplash.com/photo-1563968743333-044cef8004c3?auto=format&fit=crop&q=80&w=1000',
+            'Indústria': '/images/repar_turbines_new.jpg',
             'Obras': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
             'Vôlei': 'https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&q=80&w=1000',
             'FoodTruck': '/images/food_trucks_araucaria_v2.jpg',
