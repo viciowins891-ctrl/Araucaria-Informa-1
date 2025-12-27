@@ -20,6 +20,31 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 2025, // High ID to ensure it appears on top
+        title: 'Novas turbinas da REPAR aumentam eficiência energética em 15%',
+        summary: 'Investimento milionário na refinaria moderniza parque industrial e reduz emissões de CO2, garantindo maior sustentabilidade para a região.',
+        content: `
+            <p>A Refinaria Presidente Getúlio Vargas (REPAR), localizada em Araucária, deu um passo significativo rumo à modernização e sustentabilidade de suas operações. Nesta semana, foram inauguradas as novas turbinas de alta eficiência energética, um investimento estratégico que promete aumentar em 15% a capacidade de geração de energia da unidade, sem elevar o consumo de combustíveis.</p>
+            
+            <h3>Tecnologia de Ponta e Sustentabilidade</h3>
+            <p>O projeto, que levou cerca de 18 meses para ser concluído, envolveu a substituição de equipamentos da década de 70 por modelos de última geração. As novas turbinas utilizam tecnologia aeroderivativa – similar à de motores de avião – que permite um aproveitamento termodinâmico muito superior.</p>
+            <p>"Não estamos falando apenas de economia financeira, mas de um ganho ambiental imensurável. Com essa eficiência, deixaremos de emitir toneladas de CO2 na atmosfera anualmente, alinhando a refinaria com as metas globais de descarbonização", explicou o gerente de engenharia da unidade.</p>
+
+            <h3>Impacto Econômico para Araucária</h3>
+            <p>O investimento na casa dos R$ 450 milhões movimentou a economia local durante a fase de instalação, gerando mais de 300 empregos diretos e indiretos para trabalhadores especializados da região. Além disso, a maior eficiência da refinaria garante maior segurança energética para todo o estado do Paraná, especialmente em períodos de alta demanda.</p>
+
+            <h3>O Futuro da Energia</h3>
+            <p>Este movimento faz parte de um plano maior de investimentos da Petrobras para o sul do país. Estão previstas ainda melhorias nas unidades de tratamento de diesel e gasolina, visando a produção de combustíveis cada vez mais limpos (S-10). Para Araucária, sediar uma das refinarias mais eficientes do país significa garantia de arrecadação (ICMS) e atração de novas indústrias satélites para o Polo Petroquímico.</p>
+            
+            <p>A cerimônia de inauguração contou com a presença de autoridades estaduais e municipais, que destacaram a importância da simbiose entre o desenvolvimento industrial e a preservação ambiental.</p>
+        `,
+        imageUrl: '/images/repar_turbines_new_final.jpg',
+        category: 'Economia',
+        categoryColor: 'blue',
+        publishDate: '2025-12-27',
+        author: 'Araucária Urgente'
+    },
+    {
         id: 101, // ID Único Real
         title: 'Araucária zera fila de espera por vagas em CMEIs para 2025',
         summary: 'Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.',
