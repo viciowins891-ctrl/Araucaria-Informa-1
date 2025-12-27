@@ -11,7 +11,9 @@ const HistoryPage: React.FC = () => {
 
             {/* Hero Image: Portal Polonês (Representação artística: Arco/Arquitetura) */}
             <div className="mb-12 rounded-xl overflow-hidden shadow-lg group relative bg-gray-200 dark:bg-gray-800 h-64 sm:h-96 flex flex-col items-center justify-center">
-                <span className="material-icons text-5xl text-gray-400 mb-2">archway</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 mb-2 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m8-2a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
                 <img
                     src="/images/portal_polones_araucaria_real.png"
                     alt="Paisagem e Cultura Local"
@@ -45,7 +47,9 @@ const HistoryPage: React.FC = () => {
                 </div>
                 {/* Imagem: Arquitetura Rústica/Madeira */}
                 <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-md bg-gray-200 dark:bg-gray-800 h-64 relative flex items-center justify-center">
-                    <span className="material-icons text-5xl text-gray-400 absolute">house</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
                     <img
                         src="/images/casa_cavalo_baio.jpg"
                         alt="Arquitetura Típica"
@@ -58,7 +62,9 @@ const HistoryPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
                 {/* Imagem: Araucárias e Natureza */}
                 <div className="rounded-lg overflow-hidden shadow-md bg-gray-200 dark:bg-gray-800 h-64 relative flex items-center justify-center">
-                    <span className="material-icons text-5xl text-gray-400 absolute">park</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
                     <img
                         src="/images/parque_cachoeira_real.png"
                         alt="Pinheiros e Natureza"

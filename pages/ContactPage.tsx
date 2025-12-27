@@ -35,7 +35,9 @@ const ContactPage: React.FC = () => {
                     {status === 'success' ? (
                         <div className="absolute inset-0 bg-surface-light dark:bg-surface-dark flex flex-col items-center justify-center p-8 animate-fade-in-up z-10">
                             <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
-                                <span className="material-icons text-3xl">mail_outline</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Abrindo seu e-mail...</h3>
                             <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
@@ -96,7 +98,9 @@ const ContactPage: React.FC = () => {
 
                     <div className="flex items-center gap-4">
                         <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
-                            <span className="material-icons text-primary">location_on</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                            </svg>
                         </div>
                         <div>
                             <p className="text-sm text-gray-500 dark:text-gray-400">Localização</p>

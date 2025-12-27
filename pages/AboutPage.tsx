@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-16 max-w-4xl">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 font-display">Quem Somos</h1>
-            
+
             <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 mb-12">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                     O <strong>Araucária Informa</strong> é um portal de notícias independente, dedicado a trazer informações relevantes, precisas e atualizadas para os cidadãos de Araucária e região metropolitana.
@@ -25,7 +25,9 @@ const AboutPage: React.FC = () => {
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Nossa Missão</h2>
                     <ul className="space-y-3">
                         <li className="flex items-start">
-                            <span className="material-icons text-primary mr-2 mt-1">check_circle</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span className="text-gray-600 dark:text-gray-400">Informar com imparcialidade e ética.</span>
                         </li>
                         <li className="flex items-start">
@@ -58,8 +60,8 @@ const AboutPage: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
                     Tem uma sugestão de pauta, encontrou um erro ou quer fazer uma denúncia? Entre em contato conosco.
                 </p>
-                <Link 
-                    to="/contato" 
+                <Link
+                    to="/contato"
                     className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition-colors shadow-md"
                 >
                     Entrar em Contato
