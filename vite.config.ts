@@ -91,12 +91,26 @@ export default defineConfig(({ mode }) => {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
     build: {
+      target: 'es2020', // Bundle mais leve para browsers modernos
+      minify: 'esbuild',
+      cssMinify: true,
       rollupOptions: {
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
-            'supabase-vendor': ['@supabase/supabase-js'],
-            'ai-vendor': ['@google/generative-ai']
+          manualChunks(id) {
+            // Isolando dependências principais para cache de longo prazo
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+                return 'react-vendor';
+              }
+              if (id.includes('@supabase')) {
+                return 'supabase-vendor';
+              }
+              if (id.includes('@google')) {
+                return 'ai-vendor';
+              }
+              // Agrupando outras libs de UI/Utils
+              return 'vendor';
+            }
           }
         }
       },
