@@ -42,7 +42,7 @@ const ArticlePage: React.FC = () => {
                         setImgSrc('/images/iptu_real_queue_final.jpg');
                     }
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
-                        setImgSrc('/images/food_trucks_cover_final.png');
+                        setImgSrc('/images/food_trucks_cover_new.png');
                     }
                     if (currentArticle.id === 37) {
                         setImgSrc('/images/bus_schedule_real_final_v5.png');
