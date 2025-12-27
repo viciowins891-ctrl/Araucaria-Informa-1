@@ -173,7 +173,7 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
             'Indústria': 'https://images.unsplash.com/photo-1563968743333-044cef8004c3?auto=format&fit=crop&q=80&w=1000',
             'Obras': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
             'Vôlei': 'https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&q=80&w=1000',
-            'FoodTruck': 'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&q=80&w=1000',
+            'FoodTruck': '/images/food_trucks_araucaria_v2.jpg',
             'Saúde': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
             'Segurança': 'https://images.unsplash.com/photo-1590422749870-13a83017a224?auto=format&fit=crop&q=80&w=1000'
         };

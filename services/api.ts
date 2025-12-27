@@ -212,33 +212,32 @@ export const api = {
     },
 
     getHomeData: async () => {
-        // Wrapper de timeout para evitar travamento eterno (8 segundos)
+        // Wrapper de timeout para evitar travamento eterno (5 segundos)
         const timeoutPromise = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error("Timeout ao carregar dados")), 8000)
+            setTimeout(() => reject(new Error("Timeout ao carregar dados")), 5000)
         );
 
         const loadData = async () => {
             console.log("api.getHomeData: Iniciando...");
 
-            // Busca DB e Evergreen em paralelo com tratamento de erro individual
+            // Busca DB e Cache local em paralelo
+            // IMPORTANTE: Removemos a chamada direta ao AI Service (evergreenPromise) aqui
+            // para evitar travamentos e lentidão no carregamento da Home.
+            // A atualização via IA é feita em background pelo checkAndRunBackgroundUpdate no App.tsx.
+
             const dbNewsPromise = api.getNews().catch(e => { console.error("Falha DB News", e); return []; });
-            const evergreenPromise = import('./aiService').then(mod => mod.fetchWeeklyNewsWithAI()).catch(e => { console.error("Falha Evergreen em Import ou Exec", e); return []; });
-            // const evergreenPromise = fetchWeeklyNewsWithAI().catch(e => { console.error("Falha Evergreen", e); return []; });
             const eventsPromise = api.getEvents().catch(e => { console.error("Falha Events", e); return []; });
             const businessesPromise = api.getBusinesses().catch(e => { console.error("Falha Biz", e); return []; });
 
-            const [dbNews, evergreen, events, businesses] = await Promise.all([
+            const [dbNews, events, businesses] = await Promise.all([
                 dbNewsPromise,
-                evergreenPromise,
                 eventsPromise,
                 businessesPromise
             ]);
 
-            // Combina: Evergreen (IA Fresca) PRIMEIRO, depois DB/Local
-            const combinedNews = [...evergreen, ...dbNews];
-
-            // Re-ordena por data para garantir que o mais recente (Seja IA ou Banco) fique no topo
-            const sortedNews = combinedNews.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+            // Como getNews() já retorna ordenado por data e combinado (DB + Cache + Static),
+            // podemos usá-lo diretamente.
+            const sortedNews = dbNews || [];
 
             return {
                 news: sortedNews.slice(0, 6),
@@ -253,7 +252,10 @@ export const api = {
             return result as { news: NewsArticle[]; events: Event[]; businesses: Business[]; };
         } catch (error) {
             console.error("api.getHomeData: Erro Fatal ou Timeout", error);
-            throw error;
+            // Em caso de erro fatal/timeout, tenta retornar dados estáticos via getNews (cache/static)
+            // se possível, ou lança erro. Para segurança, chamamos getNews direto síncrono (static fallback)
+            // mas aqui vamos apenas relançar por enquanto ou retornar vazio.
+            return { news: [], events: [], businesses: [] };
         }
     },
 
