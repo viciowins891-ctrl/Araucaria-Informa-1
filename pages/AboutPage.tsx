@@ -31,15 +31,21 @@ const AboutPage: React.FC = () => {
                             <span className="text-gray-600 dark:text-gray-400">Informar com imparcialidade e ética.</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="material-icons text-primary mr-2 mt-1">check_circle</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span className="text-gray-600 dark:text-gray-400">Promover a cultura e o turismo local.</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="material-icons text-primary mr-2 mt-1">check_circle</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span className="text-gray-600 dark:text-gray-400">Apoiar o comércio e o desenvolvimento econômico.</span>
                         </li>
                         <li className="flex items-start">
-                            <span className="material-icons text-primary mr-2 mt-1">check_circle</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span className="text-gray-600 dark:text-gray-400">Dar voz às demandas da comunidade.</span>
                         </li>
                     </ul>
