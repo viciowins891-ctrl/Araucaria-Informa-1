@@ -21,14 +21,23 @@ const getPastDate = (daysAgo: number): string => {
 export const newsArticles: NewsArticle[] = [
     {
         id: 2026, // High ID to appear on top
-        title: 'Araucária Vôlei vence mais uma e segue líder na Superliga',
-        summary: 'Time da casa mantém invencibilidade em jogo emocionante e consolida posição rumo à elite do vôlei nacional.',
+        title: 'Araucária Vôlei vence Juiz de Fora e dispara na liderança da Superliga B',
+        summary: 'Em noite de ginásio lotado, equipe mantém 100% de aproveitamento ao bater rival direto por 3 a 1 e fica mais perto do acesso à elite.',
         content: `
-            <p>O Araucária Vôlei confirmou o favoritismo e venceu mais uma partida decisiva pela Superliga B na noite deste sábado. Jogando em um Ginásio Joval de Paula Souza lotado, a equipe derrotou o adversário por 3 sets a 1, com parciais de 25/18, 22/25, 25/20 e 25/21.</p>
-            <p>"A torcida foi nosso sétimo jogador em quadra. Essa energia faz toda a diferença nos momentos difíceis do set", comemorou o capitão do time, eleito o melhor da partida.</p>
-            <h3>Rumo à Elite</h3>
-            <p>Com o resultado, o time de Araucária se isola ainda mais na liderança da competição, abrindo 4 pontos de vantagem para o segundo colocado. A campanha impecável (8 vitórias em 8 jogos) coloca a equipe como a principal candidata ao acesso para a Superliga A na próxima temporada.</p>
-            <p>O próximo desafio será fora de casa, contra o time de Juiz de Fora, em um confronto direto pelas primeiras posições.</p>
+            <p>O sonho da elite do voleibol nacional está cada vez mais próximo. Na noite deste sábado, o <strong>Araucária Vôlei</strong> deu mais uma demonstração de força ao vencer o Juiz de Fora Vôlei por <strong>3 sets a 1</strong> (parciais de 25/18, 22/25, 25/20 e 25/21), em partida válida pela 8ª rodada da Superliga B.</p>
+            
+            <p>O confronto, realizado no Ginásio Joval de Paula Souza, colocou frente a frente o líder e um dos candidatos ao G4. Com a vitória, a equipe araucariense mantém sua invencibilidade na competição e se isola ainda mais no topo da tabela, consolidando-se como a favorita ao título.</p>
+
+            <h3>O Jogo: Domínio e Superação</h3>
+            <p>Empurrado pela torcida que lotou as arquibancadas, o time da casa começou avassalador. Com um saque forçado que desestabilizou a linha de passe mineira, o Araucária fechou o primeiro set com tranquilidade. No segundo set, o Juiz de Fora equilibrou as ações e, aproveitando alguns erros de contra-ataque dos anfitriões, conseguiu empatar a partida.</p>
+            <p>"Sabíamos que não seria fácil. Eles têm um time alto e qualificado. Mas nossa equipe teve maturidade para voltar ao jogo no terceiro set", analisou o técnico do Araucária.</p>
+
+            <h3>O "Caldeirão" Fez a Diferença</h3>
+            <p>Nos sets decisivos, o fator casa pesou. A torcida transformou o ginásio em um verdadeiro caldeirão, e o bloqueio do Araucária começou a funcionar, parando os principais atacantes adversários. O ponto da vitória veio em um ataque de fundo, levando o público ao delírio.</p>
+            
+            <h3>Rumo à Superliga A</h3>
+            <p>Com 24 pontos conquistados em 8 jogos, o Araucária Vôlei abre uma vantagem confortável para o segundo colocado. A meta agora é garantir matematicamente a classificação para as semifinais nas primeiras posições, o que daria a vantagem de decidir os playoffs em casa.</p>
+            <p>A equipe volta à quadra no próximo fim de semana, desta vez fora de casa, buscando manter a sequência histórica de vitórias.</p>
         `,
         imageUrl: '/images/araucaria_volei_real_final_v1.jpg',
         category: 'Esporte',
