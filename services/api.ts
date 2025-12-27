@@ -39,13 +39,22 @@ export const api = {
             // 4. SANITIZAÇÃO DE DADOS (Correção de Imagens Hotfix)
             // Garante que a notícia do Food Truck tenha a capa correta, independente da fonte (Cache/DB/AI)
             const sanitizedNews = uniqueNews.map(item => {
-                if (item.title && item.title.toLowerCase().includes('food truck')) {
-                    // Força a imagem correta (raw png) e adiciona query de cache para garantir refresh
+                const titleLower = (item.title || '').toLowerCase();
+
+                if (titleLower.includes('food truck')) {
                     return {
                         ...item,
-                        imageUrl: '/images/food_trucks_cover_final.png?v=final_v4'
+                        imageUrl: '/images/food_trucks_cover_new.png?v=fixed_v1'
                     };
                 }
+
+                if (titleLower.includes('repar') || titleLower.includes('turbinas')) {
+                    return {
+                        ...item,
+                        imageUrl: '/images/repar_turbines_new.jpg?v=fixed_v1'
+                    };
+                }
+
                 return item;
             });
 
