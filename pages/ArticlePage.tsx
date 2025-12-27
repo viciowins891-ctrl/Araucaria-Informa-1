@@ -87,9 +87,12 @@ const ArticlePage: React.FC = () => {
                         secImg = '/images/news_budget_chamber.png';
                     }
 
-                    // 2. Override de segurança (caso específico - Drogas)
+                    // 2. Override de segurança (caso específico - Drogas/Food Truck)
                     if (currentArticle.title.toLowerCase().includes('drogas') || currentArticle.title.toLowerCase().includes('incinera')) {
                         secImg = '/images/custom_drugs.jpg';
+                    }
+                    if (currentArticle.title.toLowerCase().includes('food truck')) {
+                        secImg = '/images/food_trucks_araucaria_v2.jpg';
                     }
 
                     // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)

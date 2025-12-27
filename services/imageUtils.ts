@@ -47,7 +47,8 @@ export const getPlaceholderImage = (category: string): string => {
     if (normalized.includes('EDUCAÇÃO')) return '/images/placeholder_educacao.png';
     if (normalized.includes('INFRAESTRUTURA') || normalized.includes('OBRA')) return '/images/placeholder_infraestrutura.png';
     if (normalized.includes('SEGURANÇA')) return '/images/placeholder_seguranca.png';
-    if (normalized.includes('ESPORTE') || normalized.includes('CULTURA')) return '/images/placeholder_esporte.png';
+    if (normalized.includes('ESPORTE')) return '/images/placeholder_esporte.png';
+    if (normalized.includes('CULTURA')) return '/images/placeholder_turismo.png';
     if (normalized.includes('COMÉRCIO') || normalized.includes('VAREJO')) return '/images/placeholder_comercio.png';
 
     // Novos mapeamentos
