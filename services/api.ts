@@ -36,22 +36,23 @@ export const api = {
 
             const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
 
-            // 4. SANITIZAÇÃO DE DADOS (Correção de Imagens Hotfix)
-            // Garante que a notícia do Food Truck tenha a capa correta, independente da fonte (Cache/DB/AI)
+            // 4. SANITIZAÇÃO DE DADOS (Override Local para garantir imagens corretas quando o DB não pode ser atualizado)
             const sanitizedNews = uniqueNews.map(item => {
                 const titleLower = (item.title || '').toLowerCase();
 
+                // Garante a imagem correta para o Food Truck (se necessário, embora já tenhamos resolvido)
                 if (titleLower.includes('food truck')) {
-                    return {
-                        ...item,
-                        imageUrl: '/images/food_trucks_cover_new.png?v=fixed_v1'
-                    };
+                    // Mantém o que estiver no DB/Cache, ou força se ainda estiver errado. 
+                    // O user já confirmou que consegue editar este, então não vou forçar, 
+                    // a menos que seja solicitado. Deixarei comentado.
+                    // return { ...item, imageUrl: '/images/food_trucks_cover_new_final.png' };
                 }
 
-                if (titleLower.includes('repar') || titleLower.includes('turbinas')) {
+                // FIX: Força a nova imagem da REPAR (Turbinas) solicitada pelo usuário
+                if (titleLower.includes('turbinas') && titleLower.includes('repar')) {
                     return {
                         ...item,
-                        imageUrl: '/images/repar_turbines_new.jpg?v=fixed_v1'
+                        imageUrl: '/images/repar_turbines_new_final.jpg?v=' + new Date().getTime() // Cache buster
                     };
                 }
 

@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
     // Renderização Condicional
     // LOADING STATE: Não bloqueia mais a renderização inteira.
     // Mostra o Hero com imagem padrão enquanto carrega os dados.
-    const news = data?.news || [];
+    const news = data?.news ? [...data.news].sort((a, b) => b.id - a.id) : [];
     const events = data?.events || [];
     const businesses = data?.businesses || [];
     const gridNews = news.length > 0 ? news.slice(1, 4) : [];

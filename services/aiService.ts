@@ -170,10 +170,10 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
         // Imagens Curadas HD (Fallback)
         const topicImages: Record<string, string> = {
             'Animais': 'https://images.unsplash.com/photo-1601758228041-f3b2795255db?auto=format&fit=crop&q=80&w=1000',
-            'Indústria': '/images/repar_turbines_new.jpg',
+            'Indústria': '/images/repar_turbines_new_final.jpg?v=final_fix_v5',
             'Obras': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
             'Vôlei': 'https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&q=80&w=1000',
-            'FoodTruck': '/images/food_trucks_araucaria_v2.jpg',
+            'FoodTruck': '/images/food_trucks_cover_new_final.png?v=final_fix_v5',
             'Saúde': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
             'Segurança': 'https://images.unsplash.com/photo-1590422749870-13a83017a224?auto=format&fit=crop&q=80&w=1000'
         };

@@ -31,10 +31,19 @@ async function processImages() {
             const name = path.parse(file).name;
             const outputPath = path.join(imagesDir, `${name}_mobile.webp`);
 
+            if (fs.existsSync(outputPath)) {
+                const inputStat = fs.statSync(inputPath);
+                const outputStat = fs.statSync(outputPath);
+                if (outputStat.mtime > inputStat.mtime) {
+                    // console.log(`Skipping ${file}, mobile version already up to date.`);
+                    continue;
+                }
+            }
+
             try {
                 const metadata = await sharp(inputPath).metadata();
-                // Skip if it is a webp small enough, BUT we are creating _mobile versions, so we should allow creating it if it doesn't exist or we want to ensure mobile optimization.
                 // Let's just create the mobile version.
+
 
                 const inputStats = fs.statSync(inputPath);
                 // console.log(`Processing ${file} (${Math.round(inputStats.size / 1024)}KB)...`);

@@ -38,9 +38,9 @@ async function checkLatestNews() {
     // Select simples
     const { data: news, error } = await supabase
         .from('news')
-        .select('id, title, publish_date, created_at')
+        .select('id, title, publish_date, created_at, image_url')
         .order('created_at', { ascending: false })
-        .limit(5);
+        .limit(10);
 
     if (error) {
         console.error("Erro ao buscar notícias:", error);
@@ -51,6 +51,7 @@ async function checkLatestNews() {
         console.log("\n--- Últimas Notícias Encontradas ---");
         news.forEach(n => {
             console.log(`[ID: ${n.id}] Data: ${n.publish_date} - ${n.title}`);
+            console.log(`       Image: ${n.image_url}`);
             console.log(`       (Registrado no sistema em: ${new Date(n.created_at).toLocaleString()})`);
         });
 
