@@ -21,8 +21,8 @@ const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
-    const DEFAULT_HERO_IMAGE = "/images/final_nature.webp";
-    const MOBILE_HERO_IMAGE = "/images/final_nature_mobile.webp";
+    const DEFAULT_HERO_IMAGE = "/images/background_phone.png";
+    const MOBILE_HERO_IMAGE = "/images/background_phone.png";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
