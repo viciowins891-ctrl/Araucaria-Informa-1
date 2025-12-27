@@ -36,8 +36,21 @@ export const api = {
 
             const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
 
+            // 4. SANITIZAÇÃO DE DADOS (Correção de Imagens Hotfix)
+            // Garante que a notícia do Food Truck tenha a capa correta, independente da fonte (Cache/DB/AI)
+            const sanitizedNews = uniqueNews.map(item => {
+                if (item.title && item.title.toLowerCase().includes('food truck')) {
+                    // Força a imagem correta (raw png) e adiciona query de cache para garantir refresh
+                    return {
+                        ...item,
+                        imageUrl: '/images/food_trucks_cover_final.png?v=final_v2'
+                    };
+                }
+                return item;
+            });
+
             // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
-            return uniqueNews
+            return sanitizedNews
                 .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
                 .slice(0, 100) as NewsArticle[];
 

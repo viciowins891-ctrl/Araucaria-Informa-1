@@ -26,8 +26,9 @@ export const getOptimizedImageUrl = (url: string, width: number = 800, quality: 
 
             if (lastDotIndex !== -1) {
                 const basePath = cleanUrl.substring(0, lastDotIndex);
+                const queryParams = url.includes('?') ? '?' + url.split('?')[1] : '';
                 // Retorna a versão mobile (que é garantidamente .webp e < 50kb na maioria dos casos)
-                return `${basePath}_mobile.webp`;
+                return `${basePath}_mobile.webp${queryParams}`;
             }
         }
         return url;

@@ -37,18 +37,10 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
     useEffect(() => {
-        let finalUrl = getOptimizedImageUrl(article.imageUrl, 640);
-
-        // Override específico para Food Truck (Correção Hotfix)
-        if (article.title.toLowerCase().includes('food truck')) {
-            // Usa query param v=new para forçar refresh de cache
-            finalUrl = '/images/food_trucks_cover_final.png?v=new';
-        }
-
-        setImgSrc(finalUrl);
+        setImgSrc(getOptimizedImageUrl(article.imageUrl, 640));
         setIsFallback(false);
         setHasError(false);
-    }, [article.imageUrl, article.title]);
+    }, [article.imageUrl]);
 
     const handleError = () => {
         if (!isFallback) {
