@@ -35,8 +35,9 @@ const CommercePage: React.FC = () => {
             <div className="relative bg-zinc-900 py-20 sm:py-28 mb-10 overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1600&auto=format&fit=crop"
-                        alt="Centro Comercial"
+                        src="/images/commerce_hero_unique.webp"
+                        srcSet="/images/commerce_hero_unique_mobile.webp 768w, /images/commerce_hero_unique.webp 1200w"
+                        alt="Centro Comercial Movimentado de Araucária"
                         className="w-full h-full object-cover opacity-30"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent"></div>
@@ -110,8 +111,8 @@ const CommercePage: React.FC = () => {
 
                         {/* Menu de Filtros (Pills) */}
                         <div className="sticky top-20 z-30 bg-gray-50/95 dark:bg-zinc-900/95 backdrop-blur-sm py-4 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
-                            <div className="bg-white dark:bg-zinc-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-zinc-700/50 max-w-4xl mx-auto overflow-x-auto">
-                                <div className="flex flex-nowrap sm:flex-wrap items-center sm:justify-center gap-2 min-w-max px-2">
+                            <div className="bg-white dark:bg-zinc-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-zinc-700/50 max-w-fit mx-auto overflow-x-auto">
+                                <div className="flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2 min-w-max px-2">
                                     {allBusinessCategories.map(category => (
                                         <button
                                             key={category}

@@ -1,9 +1,10 @@
 
-import { supabase } from './supabaseClient';
+import { getSupabase } from './supabaseClient';
 import { newsArticles, events, businesses } from '../data';
 
 export const migrateContent = async () => {
     console.log('Iniciando migração de conteúdo...');
+    const supabase = await getSupabase();
 
     // Migrar Notícias
     const { error: newsError } = await supabase
