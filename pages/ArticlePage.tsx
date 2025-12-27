@@ -56,6 +56,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 44) {
                         setImgSrc('/images/pioneers_homage_inner_real_final.jpg');
                     }
+                    if (currentArticle.id === 2026) {
+                        setImgSrc('/images/araucaria_volei_inner_final.png');
+                    }
 
                     setImageError(false);
 
@@ -101,6 +104,7 @@ const ArticlePage: React.FC = () => {
                     // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)
                     // Garante que as notícias principais (1-10) mantenham suas fotos internas exclusivas
                     const idNum = Number(id);
+                    if (idNum === 2026) secImg = '/images/araucaria_volei_inner_final.png'; // Vôlei Atual (Interna)
                     if (idNum === 1 || idNum === 101) secImg = '/images/cmei_interior_pessoas.png'; // CMEI
                     if (idNum === 2 || idNum === 102) secImg = '/images/prefeitura_orcamento_real.png'; // Orçamento
                     if (idNum === 3 || idNum === 103) secImg = '/images/poupatempo_atendimento_pessoas.png'; // Poupatempo
