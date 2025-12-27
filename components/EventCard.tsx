@@ -9,7 +9,7 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
     const [imageError, setImageError] = useState(false);
-    const optimizedImageUrl = getOptimizedImageUrl(event.imageUrl, 800);
+    const optimizedImageUrl = getOptimizedImageUrl(event.imageUrl, 640);
 
     return (
         <div className="bg-surface-light dark:bg-surface-dark rounded-lg shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 h-full border border-gray-100 dark:border-gray-700">

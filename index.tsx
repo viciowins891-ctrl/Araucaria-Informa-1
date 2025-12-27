@@ -25,3 +25,18 @@ root.render(
     </HashRouter>
   </ErrorBoundary>
 );
+
+// Register PWA Service Worker
+import { registerSW } from 'virtual:pwa-register';
+
+if ('serviceWorker' in navigator) {
+  registerSW({
+    onNeedRefresh() {
+      // Prompt user to refresh
+      console.log('Nova versão disponível!');
+    },
+    onOfflineReady() {
+      console.log('App pronto para uso offline');
+    },
+  });
+}

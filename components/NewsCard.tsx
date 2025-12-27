@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
-import { getOptimizedImageUrl } from '../services/imageUtils';
-import { getPlaceholderImage } from '../services/aiService';
+import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
+// import { getPlaceholderImage } from '../services/aiService';
 
 interface NewsCardProps {
     article: NewsArticle;

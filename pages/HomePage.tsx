@@ -9,9 +9,9 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
 
-import { getPlaceholderImage } from '../services/aiService';
+// import { getPlaceholderImage } from '../services/aiService';
 
-import { getOptimizedImageUrl } from '../services/imageUtils';
+import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
 
 const HomePage: React.FC = () => {
     useEffect(() => {
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
     const DEFAULT_HERO_IMAGE = "/images/background_city_aerial.jpg";
-    const MOBILE_HERO_IMAGE = "/images/background_city_aerial.jpg";
+    const MOBILE_HERO_IMAGE = "/images/hero_mobile_lcp.webp";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
@@ -60,24 +60,21 @@ const HomePage: React.FC = () => {
             {/* Hero Section Dinâmica - Altura Flexível e Padding Ajustado */}
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
-                    <img
-                        src={DEFAULT_HERO_IMAGE}
-                        srcSet={`${MOBILE_HERO_IMAGE} 767w, ${DEFAULT_HERO_IMAGE} 1920w`}
-                        sizes="(max-width: 767px) 100vw, 100vw"
-                        alt="Imagem de destaque - Araucária"
-                        // Removido srcset complexo para imagem local estática, pois o browser lida bem.
-                        // O preload no index.html garante a prioridade.
-                        // PERFORMANCE: Removida animação 'animate-slow-zoom' no mobile.
-                        // Imagens estáticas registram o LCP mais rápido em dispositivos móveis.
-                        className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
-                        onError={handleImageError}
-                        referrerPolicy="no-referrer"
-                        width="1920"
-                        height="1080"
-                        // @ts-ignore
-                        fetchPriority="high"
-                        loading="eager"
-                    />
+                    <picture>
+                        <source srcSet={MOBILE_HERO_IMAGE} media="(max-width: 767px)" type="image/webp" />
+                        <img
+                            src={DEFAULT_HERO_IMAGE}
+                            alt="Imagem de destaque - Araucária"
+                            className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
+                            onError={handleImageError}
+                            referrerPolicy="no-referrer"
+                            width="1920"
+                            height="1080"
+                            // @ts-ignore
+                            fetchPriority="high"
+                            loading="eager"
+                        />
+                    </picture>
                     {/* Gradiente escuro para garantir leitura */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 opacity-90"></div>
                 </div>

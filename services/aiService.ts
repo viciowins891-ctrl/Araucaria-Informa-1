@@ -6,31 +6,7 @@ import { NewsArticle } from '../types';
 // 1. SISTEMA DE IMAGENS CONTEXTUALIZADAS (Curadoria Profissional)
 // ============================================================================
 
-// Função de Placeholder Local (Fallback Seguro)
-// Garante que se o Unsplash falhar, temos uma imagem bonita localmente.
-export const getPlaceholderImage = (category: string): string => {
-    // Normaliza a categoria para garantir o match (e aceita o formato UPPERCASE do usuário)
-    const normalized = category.toUpperCase();
 
-    // Mapeamento Inteligente: Categoria Interna/Externa -> Arquivo Local
-    // Note: Arquivos convertidos para .png conforme geração
-    if (normalized.includes('ECONOMIA') || normalized.includes('INDÚSTRIA')) return '/images/placeholder_economia.png';
-    if (normalized.includes('TURISMO') || normalized.includes('LAZER')) return '/images/placeholder_turismo.png';
-    if (normalized.includes('EDUCAÇÃO')) return '/images/placeholder_educacao.png';
-    if (normalized.includes('INFRAESTRUTURA') || normalized.includes('OBRA')) return '/images/placeholder_infraestrutura.png';
-    if (normalized.includes('SEGURANÇA')) return '/images/placeholder_seguranca.png';
-    if (normalized.includes('ESPORTE') || normalized.includes('CULTURA')) return '/images/placeholder_esporte.png';
-    if (normalized.includes('COMÉRCIO') || normalized.includes('VAREJO')) return '/images/placeholder_comercio.png';
-
-    // Novos mapeamentos para completar os temas
-    if (normalized.includes('SAÚDE') || normalized.includes('MÉDICO')) return '/images/news_context_health.png';
-    if (normalized.includes('POLÍTICA') || normalized.includes('CÂMARA') || normalized.includes('PREFEITURA')) return '/images/news_budget_chamber.png';
-    if (normalized.includes('TECNOLOGIA') || normalized.includes('INOVAÇÃO')) return '/images/news_hackathon_coding.png';
-    if (normalized.includes('CIDADE') || normalized.includes('URBANO')) return '/images/araucaria_smart_city.jpg';
-
-    // Default seguro
-    return '/images/placeholder_default.png';
-};
 
 // Banco de Imagens Curado: Estilo Jornalístico, Sem Pessoas (focado em objetos/cenários), Alta Resolução
 // Mapeia Tópicos -> Lista de IDs do Unsplash garantidos

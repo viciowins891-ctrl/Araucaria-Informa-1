@@ -1,6 +1,7 @@
-import { supabase } from './supabaseClient';
+// import { supabase } from './supabaseClient'; // REMOVIDO PARA PERFORMANCE
+import { getSupabase } from './supabaseClient';
 import { NewsArticle, Event, Business } from '../types';
-import { fetchWeeklyNewsWithAI } from './aiService';
+// import { fetchWeeklyNewsWithAI } from './aiService';
 
 // Constantes de configuração
 const DB_KEYS = {
@@ -12,6 +13,7 @@ export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
         // FORÇANDO USO DE DADOS LOCAIS (data.ts) PARA GARANTIR ATUALIZAÇÃO DO SITE
         // Isso bypassa o Supabase temporariamente para validar as mudanças do AdSense.
+        // const supabase = await getSupabase();
         // const { data, error } = await supabase
         //     .from('news')
         //     .select('*')
@@ -36,6 +38,7 @@ export const api = {
 
         // Nota: IDs de AI começam em 1000 geralmente
         // const { fetchWeeklyNewsWithAI } = await import('./aiService'); // Removido import dinâmico redundante
+        const { fetchWeeklyNewsWithAI } = await import('./aiService');
         const aiArticles = await fetchWeeklyNewsWithAI();
         const aiArticle = aiArticles.find(n => n.id === Number(id));
 
@@ -56,6 +59,7 @@ export const api = {
             // source_name: n.sourceName
         }));
 
+        const supabase = await getSupabase();
         const { error } = await supabase.from('news').insert(articlesToInsert);
 
         if (error) {
@@ -75,6 +79,7 @@ export const api = {
                 console.log(`[AutoUpdate] Última atualização: ${lastUpdateStr ? new Date(Number(lastUpdateStr)).toLocaleString() : 'Nunca'}`);
 
                 console.log("[AutoUpdate] Iniciando processo de atualização via IA...");
+                const { fetchWeeklyNewsWithAI } = await import('./aiService');
                 const newArticles = await fetchWeeklyNewsWithAI();
 
                 if (newArticles.length > 0) {
@@ -96,36 +101,45 @@ export const api = {
     },
 
     getEvents: async (): Promise<Event[]> => {
-        const { data, error } = await supabase
-            .from('events')
-            .select('*')
-            .order('date', { ascending: true });
+        try {
+            const supabase = await getSupabase();
+            const { data, error } = await supabase
+                .from('events')
+                .select('*')
+                .order('date', { ascending: true });
 
-        // Fallback para Eventos
-        if (!data || data.length === 0) {
+            // Fallback para Eventos
+            if (error || !data || data.length === 0) {
+                const { events } = await import('../data');
+                return events;
+            }
+
+            return (data || []).map((e: any) => ({
+                ...e,
+                imageUrl: e.image_url
+            }));
+        } catch (e) {
             const { events } = await import('../data');
             return events;
         }
-
-        return (data || []).map((e: any) => ({
-            ...e,
-            imageUrl: e.image_url
-        }));
     },
 
     getEventById: async (id: number): Promise<Event | undefined> => {
-        const { data, error } = await supabase
-            .from('events')
-            .select('*')
-            .eq('id', id)
-            .single();
+        try {
+            const supabase = await getSupabase();
+            const { data, error } = await supabase
+                .from('events')
+                .select('*')
+                .eq('id', id)
+                .single();
 
-        if (!error && data) {
-            return {
-                ...data,
-                imageUrl: data.image_url
-            };
-        }
+            if (!error && data) {
+                return {
+                    ...data,
+                    imageUrl: data.image_url
+                };
+            }
+        } catch (e) { }
 
         // Fallback para Eventos
         const { events } = await import('../data');
@@ -133,20 +147,26 @@ export const api = {
     },
 
     getBusinesses: async (): Promise<Business[]> => {
-        const { data, error } = await supabase
-            .from('businesses')
-            .select('*');
+        try {
+            const supabase = await getSupabase();
+            const { data, error } = await supabase
+                .from('businesses')
+                .select('*');
 
-        // Fallback para Comércios
-        if (!data || data.length === 0) {
+            // Fallback para Comércios
+            if (error || !data || data.length === 0) {
+                const { businesses } = await import('../data');
+                return businesses;
+            }
+
+            return (data || []).map((b: any) => ({
+                ...b,
+                imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url
+            }));
+        } catch (e) {
             const { businesses } = await import('../data');
             return businesses;
         }
-
-        return (data || []).map((b: any) => ({
-            ...b,
-            imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url
-        }));
     },
 
     getHomeData: async () => {
@@ -160,7 +180,8 @@ export const api = {
 
             // Busca DB e Evergreen em paralelo com tratamento de erro individual
             const dbNewsPromise = api.getNews().catch(e => { console.error("Falha DB News", e); return []; });
-            const evergreenPromise = fetchWeeklyNewsWithAI().catch(e => { console.error("Falha Evergreen", e); return []; });
+            const evergreenPromise = import('./aiService').then(mod => mod.fetchWeeklyNewsWithAI()).catch(e => { console.error("Falha Evergreen em Import ou Exec", e); return []; });
+            // const evergreenPromise = fetchWeeklyNewsWithAI().catch(e => { console.error("Falha Evergreen", e); return []; });
             const eventsPromise = api.getEvents().catch(e => { console.error("Falha Events", e); return []; });
             const businessesPromise = api.getBusinesses().catch(e => { console.error("Falha Biz", e); return []; });
 

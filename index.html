@@ -8,8 +8,8 @@
     <!-- LCP Optimization: Responsive Preload -->
     <!-- Unified Hero Image (High Priority) -->
     <!-- Unified Hero Image (High Priority) -->
-    <link rel="preload" as="image" href="/images/background_city_aerial.jpg" media="(max-width: 767px)"
-        fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero_mobile_lcp.webp" media="(max-width: 767px)" fetchpriority="high"
+        type="image/webp" />
     <link rel="preload" as="image" href="/images/background_city_aerial.jpg" media="(min-width: 768px)"
         fetchpriority="high" />
 
@@ -71,8 +71,8 @@
         window.addEventListener('touchstart', loadAdSense, { passive: true });
 
         // Fallback: Carrega depois de 8 segundos se não houver interação
-        // (Garante que os anúncios apareçam eventualmente mesmo se o usuário só olhar)
-        setTimeout(loadAdSense, 8000);
+        // REMOVIDO PARA PERFORMANCE: Carrega APENAS com interação do usuário (scroll/touch/mouse)
+        // setTimeout(loadAdSense, 8000);
     </script>
 
     <!-- Scripts e Estilos -->
@@ -100,7 +100,39 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark">
-    <div id="root"></div>
+    <div id="root">
+        <!-- APP SHELL / PRERENDER MANUAL PARA LCP IMEDIATO -->
+        <!-- Este conteúdo é exibido instantaneamente enquanto o React carrega -->
+        <!-- Fake Header para evitar CLS -->
+        <div
+            style="position:fixed;top:0;left:0;right:0;height:80px;background-color:#0f172a;z-index:50;display:flex;align-items:center;padding:0 1rem;box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <div style="width:40px;height:40px;background-color:white;border-radius:0.5rem;margin-right:0.5rem;"></div>
+            <div style="height:24px;width:150px;background-color:rgba(255,255,255,0.1);border-radius:4px;"></div>
+        </div>
+
+        <div
+            style="position:relative;min-height:600px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background-color:#18181b;">
+            <div style="position:absolute;inset:0;z-index:0;">
+                <!-- Usando imagem ultra-otimizada LCP (<20KB) -->
+                <img src="/images/hero_mobile_lcp.webp" alt="Araucária"
+                    style="width:100%;height:100%;object-fit:cover;opacity:0.6;" width="480" height="600"
+                    fetchpriority="high" />
+                <div style="position:absolute;inset:0;background:linear-gradient(to top, black, rgba(0,0,0,0.4));">
+                </div>
+            </div>
+            <div
+                style="position:relative;z-index:10;padding:2rem;max-width:896px;margin:0 auto;width:100%;padding-top:8rem;">
+                <span
+                    style="display:inline-block;padding:6px 12px;border-radius:9999px;background-color:rgba(37,99,235,0.9);color:white;font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.5rem;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);">
+                    Bem-vindo a Araucária
+                </span>
+                <h1
+                    style="color:white;font-size:3rem;font-weight:700;line-height:1.1;text-shadow:0 10px 15px -3px rgba(0, 0, 0, 0.5);">
+                    A Cidade Símbolo<br />do Paraná
+                </h1>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/index.tsx"></script>
 </body>
 

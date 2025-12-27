@@ -8,7 +8,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 import NewsCard from '../components/NewsCard';
 import ShareButton from '../components/ShareButton';
-import { getPlaceholderImage, generateContextualImage } from '../services/aiService';
+import { getPlaceholderImage } from '../services/imageUtils';
+import { generateContextualImage } from '../services/aiService';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
