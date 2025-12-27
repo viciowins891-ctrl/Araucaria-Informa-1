@@ -7,7 +7,10 @@
 
     <!-- LCP Optimization: Responsive Preload -->
     <!-- Unified Hero Image (High Priority) -->
-    <link rel="preload" as="image" href="/images/final_nature.webp" fetchpriority="high" />
+    <!-- Unified Hero Image (High Priority - Responsive) -->
+    <link rel="preload" as="image" href="/images/final_nature_mobile.webp" media="(max-width: 767px)"
+        fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/final_nature.webp" media="(min-width: 768px)" fetchpriority="high" />
 
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>

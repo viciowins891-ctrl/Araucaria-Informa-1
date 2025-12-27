@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
     const DEFAULT_HERO_IMAGE = "/images/final_nature.webp";
-    const MOBILE_HERO_IMAGE = "/images/final_nature.webp"; // Unificado conforme solicitação
+    const MOBILE_HERO_IMAGE = "/images/final_nature_mobile.webp";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
