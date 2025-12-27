@@ -56,6 +56,14 @@ export const api = {
                     };
                 }
 
+                // FIX: Força a nova imagem do Vôlei solicitada pelo usuário
+                if (titleLower.includes('vôlei') && titleLower.includes('araucária')) {
+                    return {
+                        ...item,
+                        imageUrl: '/images/araucaria_volei_real_final_v1.jpg?v=' + new Date().getTime()
+                    };
+                }
+
                 return item;
             });
 
