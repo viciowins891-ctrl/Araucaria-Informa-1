@@ -28,7 +28,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O projeto contempla a recuperação do pavimento, nova sinalização viária e melhorias na iluminação pública, visando garantir mais segurança e fluidez no trânsito.</p>
             <p>"Essa obra era uma demanda antiga da população e agora está saindo do papel", afirmou o prefeito durante a visita ao local.</p>
         `,
-        imageUrl: '/images/archelau_cover_v5.png',
+        imageUrl: '/images/archelau_definitiva.png?v=fixed',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2025-12-27',

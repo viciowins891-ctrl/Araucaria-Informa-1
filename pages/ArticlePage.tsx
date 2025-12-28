@@ -45,7 +45,7 @@ const ArticlePage: React.FC = () => {
                         setImgSrc('/images/food_trucks_cover_new.png');
                     }
                     if (currentArticle.title.toLowerCase().includes('archelau')) {
-                        setImgSrc('/images/archelau_cover_v4.png');
+                        setImgSrc('/images/archelau_definitiva.png');
                     }
                     if (currentArticle.id === 37) {
                         setImgSrc('/images/bus_schedule_real_final_v5.png');

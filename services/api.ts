@@ -68,7 +68,7 @@ export const api = {
                 if (titleLower.includes('archelau')) {
                     return {
                         ...item,
-                        imageUrl: '/images/archelau_cover_v4.png?v=' + new Date().getTime()
+                        imageUrl: '/images/archelau_definitiva.png?v=' + new Date().getTime()
                     };
                 }
 
