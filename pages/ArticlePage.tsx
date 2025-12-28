@@ -380,7 +380,7 @@ const ArticlePage: React.FC = () => {
                             </figure>
                         )}
 
-                        <AdSpace format="horizontal" className="mb-6" />
+
 
                         {/* Conteúdo Principal */}
                         <div
