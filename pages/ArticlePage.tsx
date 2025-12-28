@@ -45,7 +45,7 @@ const ArticlePage: React.FC = () => {
                         setImgSrc('/images/food_trucks_cover_new.png');
                     }
                     if (currentArticle.title.toLowerCase().includes('archelau')) {
-                        setImgSrc('/images/archelau_cover_v3.png');
+                        setImgSrc('/images/archelau_cover_v4.png');
                     }
                     if (currentArticle.id === 37) {
                         setImgSrc('/images/bus_schedule_real_final_v5.png');
@@ -105,7 +105,7 @@ const ArticlePage: React.FC = () => {
                         secImg = '/images/food_trucks_araucaria_v2.jpg';
                     }
                     if (currentArticle.title.toLowerCase().includes('archelau')) {
-                        secImg = '/images/archelau_revitalizacao_real_final_v1.png';
+                        secImg = '/images/archelau_revitalizacao_real_final_v1.png'; // Foto da obra interna
                     }
 
                     // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)
