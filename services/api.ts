@@ -64,6 +64,14 @@ export const api = {
                     };
                 }
 
+                // FIX: Força a nova imagem da Av. Archelau
+                if (titleLower.includes('archelau')) {
+                    return {
+                        ...item,
+                        imageUrl: '/images/archelau_revitalizacao_real_final_v1.png?v=' + new Date().getTime()
+                    };
+                }
+
                 return item;
             });
 
