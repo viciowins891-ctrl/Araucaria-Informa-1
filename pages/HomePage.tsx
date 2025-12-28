@@ -21,8 +21,9 @@ const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
 
     // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
-    const DEFAULT_HERO_IMAGE = "/images/background_city_aerial.jpg";
-    const MOBILE_HERO_IMAGE = "/images/hero_mobile_lcp.webp";
+    // FIX: Atualizado para Pet Adoption como padrão temporário para garantir visualização imediata
+    const DEFAULT_HERO_IMAGE = "/images/pet_adoption_cover_final_v1.png";
+    const MOBILE_HERO_IMAGE = "/images/pet_adoption_cover_final_v1.png";
 
     // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);

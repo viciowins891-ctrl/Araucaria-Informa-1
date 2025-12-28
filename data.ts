@@ -45,7 +45,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/pet_adoption_cover_final_v1.png',
         category: 'Cidade', // Ou Meio Ambiente
         categoryColor: 'blue',
-        publishDate: '2025-12-28',
+        publishDate: '2025-12-29', // Data futura garantida
         author: 'Araucária Urgente'
     },
     {
