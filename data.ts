@@ -20,6 +20,35 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 2029,
+        title: 'Feira de Adoção Pet acontece neste fim de semana no Parque Cachoeira',
+        summary: 'Centenas de cães e gatos esperam por um novo lar. Evento conta com orientação veterinária e brincadeiras para a família.',
+        content: `
+            <p>Se você está pensando em aumentar a família com um amigo de quatro patas, este fim de semana é a oportunidade perfeita. O Parque Cachoeira recebe mais uma edição da <strong>Grande Feira de Adoção Pet de Araucária</strong>.</p>
+
+            <h2>Amor em Forma de Pêlos</h2>
+            <p>O evento reunirá cerca de 50 animais, entre cães e gatos, filhotes e adultos, todos vermifugados e, no caso dos adultos, castrados. Os animais são resgatados por ONGs locais e pela Secretaria de Meio Ambiente (SMMA).</p>
+            <p>"Adotar é um ato de amor e responsabilidade. Nossos animais passam por uma triagem rigorosa de saúde e comportamento para garantir que estejam prontos para um novo lar", explica a veterinária responsável.</p>
+
+            <h2>Atrações para Toda a Família</h2>
+            <p>Além da adoção, quem passar pelo parque poderá aproveitar:</p>
+            <ul>
+                <li><strong>Orientação Veterinária Gratuita:</strong> Tire dúvidas sobre cuidados básicos, vacinação e alimentação.</li>
+                <li><strong>Microchipagem Gratuita:</strong> Para os animais adotados no evento (e vagas limitadas para a comunidade).</li>
+                <li><strong>Apresentação de Agility:</strong> Cães treinados mostrando suas habilidades na pista de obstáculos.</li>
+                <li><strong>Espaço Kids:</strong> Com pintura facial e balões para as crianças.</li>
+            </ul>
+
+            <h3>Requisitos para Adoção</h3>
+            <p>Para levar um pet para casa, é necessário ser maior de 18 anos, apresentar documento com foto (RG/CNH), comprovante de residência e passar por uma breve entrevista com os protetores. A ideia é garantir uma adoção responsável e evitar devoluções futuras.</p>
+        `,
+        imageUrl: '/images/pet_adoption_cover_final_v1.png',
+        category: 'Cidade', // Ou Meio Ambiente
+        categoryColor: 'blue',
+        publishDate: '2025-12-28',
+        author: 'Araucária Urgente'
+    },
+    {
         id: 2028,
         title: 'Festival de Food Trucks agita o Centro Cívico nesta sexta',
         summary: 'Evento reúne o melhor da gastronomia sobre rodas, música ao vivo e diversão para toda a família em Araucária.',

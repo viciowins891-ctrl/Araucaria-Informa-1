@@ -41,6 +41,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 36) {
                         setImgSrc('/images/iptu_real_queue_final.jpg');
                     }
+                    if (currentArticle.title.toLowerCase().includes('adoção pet')) {
+                        setImgSrc('/images/pet_adoption_cover_final_v1.png');
+                    }
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
                         setImgSrc('/images/food_trucks_cover_final_v3.png');
                     }

@@ -40,6 +40,11 @@ export const api = {
             const sanitizedNews = uniqueNews.map(item => {
                 const titleLower = (item.title || '').toLowerCase();
 
+                // FIX: Força a imagem da Feira Pet
+                if (titleLower.includes('adoção pet') || (titleLower.includes('adoção') && titleLower.includes('parque'))) {
+                    return { ...item, imageUrl: '/images/pet_adoption_cover_final_v1.png?v=' + new Date().getTime() };
+                }
+
                 // Garante a imagem correta para o Food Truck (se necessário, embora já tenhamos resolvido)
                 if (titleLower.includes('food truck')) {
                     // Mantém o que estiver no DB/Cache, ou força se ainda estiver errado. 
