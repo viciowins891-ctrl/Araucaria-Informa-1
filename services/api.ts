@@ -80,7 +80,12 @@ export const api = {
 
             // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
             return sanitizedNews
-                .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+                .sort((a, b) => {
+                    const dateA = new Date(a.publishDate).getTime();
+                    const dateB = new Date(b.publishDate).getTime();
+                    if (dateA !== dateB) return dateB - dateA; // Ordena por data (mais recente primeiro)
+                    return b.id - a.id; // Desempate por ID (maior ID primeiro)
+                })
                 .slice(0, 100) as NewsArticle[];
 
         } catch (e) {
