@@ -20,6 +20,37 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 2028,
+        title: 'Festival de Food Trucks agita o Centro Cívico nesta sexta',
+        summary: 'Evento reúne o melhor da gastronomia sobre rodas, música ao vivo e diversão para toda a família em Araucária.',
+        content: `
+            <p>O fim de semana começa com muito sabor e animação em Araucária. O <strong>Festival de Food Trucks</strong> estacionou no Centro Cívico nesta sexta-feira, transformando o espaço em uma grande praça de alimentação a céu aberto.</p>
+
+            <h2>Diversidade Gastronômica</h2>
+            <p>Quem passar pelo local vai encontrar uma variedade incrível de opções culinárias. São mais de 15 operações oferecendo desde os clássicos até novidades gourmet:</p>
+            <ul>
+                <li><strong>Hambúrgueres Artesanais:</strong> Com blends de carnes nobres e molhos especiais.</li>
+                <li><strong>Chopes Artesanais:</strong> Cervejarias locais marcando presença com estilos variados (IPA, Pilsen, Weiss).</li>
+                <li><strong>Churros e Doces:</strong> Opções de sobremesa que vão do churros espanhol ao sorvete na chapa.</li>
+                <li><strong>Culinária Internacional:</strong> Pratos mexicanos, massas italianas e comida oriental.</li>
+            </ul>
+
+            <h2>Ambiente Familiar e Música ao Vivo</h2>
+            <p>O evento foi pensado para receber as famílias araucarienses. O espaço conta com área kids segura para as crianças brincarem enquanto os pais aproveitam a noite. Além disso, o palco principal recebe bandas locais tocando o melhor do pop rock e MPB, garantindo a trilha sonora perfeita para o happy hour.</p>
+
+            <h2>Impulso à Economia Local</h2>
+            <p>"Eventos como este são fundamentais para movimentar a economia da cidade, gerando renda para os pequenos empreendedores e oferecendo lazer de qualidade para a população sem precisar ir para Curitiba", destaca a organização.</p>
+
+            <h3>Serviço</h3>
+            <p>O festival acontece no estacionamento do Centro Cívico (ao lado da Prefeitura), com entrada gratuita. As atividades seguem até às 23h, com segurança reforçada e banheiros químicos à disposição do público.</p>
+        `,
+        imageUrl: '/images/food_trucks_cover_final_v3.png',
+        category: 'Cultura', // Ou Lazer/Cidade
+        categoryColor: 'orange',
+        publishDate: '2025-12-28', // Data futura/atual para ficar no topo
+        author: 'Araucária Urgente'
+    },
+    {
         id: 2027,
         title: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres',
         summary: 'Confira os detalhes sobre este importante acontecimento recente em nossa cidade. A via é uma das mais importantes de Araucária.',
