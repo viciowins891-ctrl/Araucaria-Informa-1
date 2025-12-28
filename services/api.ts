@@ -43,9 +43,7 @@ export const api = {
                 // Garante a imagem correta para o Food Truck (se necessário, embora já tenhamos resolvido)
                 if (titleLower.includes('food truck')) {
                     // Mantém o que estiver no DB/Cache, ou força se ainda estiver errado. 
-                    // O user já confirmou que consegue editar este, então não vou forçar, 
-                    // a menos que seja solicitado. Deixarei comentado.
-                    // return { ...item, imageUrl: '/images/food_trucks_cover_new_final.png' };
+                    return { ...item, imageUrl: '/images/food_trucks_cover_final_v2.png?v=' + new Date().getTime() };
                 }
 
                 // FIX: Força a nova imagem da REPAR (Turbinas) solicitada pelo usuário
