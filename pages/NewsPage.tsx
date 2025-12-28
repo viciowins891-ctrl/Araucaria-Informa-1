@@ -120,8 +120,6 @@ const NewsPage: React.FC = () => {
                     </div>
                 </div>
 
-                <AdSpace format="horizontal" className="mb-10" />
-
                 {loading && <LoadingSpinner />}
 
                 {error && <div className="p-4 bg-red-100 text-red-700 rounded-md">Erro: {error}</div>}

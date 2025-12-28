@@ -20,6 +20,21 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 2027,
+        title: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres',
+        summary: 'Confira os detalhes sobre este importante acontecimento recente em nossa cidade. A via é uma das mais importantes de Araucária.',
+        content: `
+            <p>A Prefeitura de Araucária deu início às obras de revitalização da Avenida Archelau de Almeida Torres, uma das principais artérias da cidade.</p>
+            <p>O projeto contempla a recuperação do pavimento, nova sinalização viária e melhorias na iluminação pública, visando garantir mais segurança e fluidez no trânsito.</p>
+            <p>"Essa obra era uma demanda antiga da população e agora está saindo do papel", afirmou o prefeito durante a visita ao local.</p>
+        `,
+        imageUrl: '/images/archelau_cover_v5.png',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        publishDate: '2025-12-27',
+        author: 'Araucária Urgente'
+    },
+    {
         id: 2026, // High ID to appear on top
         title: 'Araucária Vôlei vence Juiz de Fora e dispara na liderança da Superliga B',
         summary: 'Em noite de ginásio lotado, equipe mantém 100% de aproveitamento ao bater rival direto por 3 a 1 e fica mais perto do acesso à elite.',
