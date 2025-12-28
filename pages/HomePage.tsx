@@ -61,9 +61,9 @@ const HomePage: React.FC = () => {
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
                     <picture>
-                        <source srcSet={MOBILE_HERO_IMAGE} media="(max-width: 767px)" type="image/webp" />
+                        <source srcSet={featuredNews?.imageUrl || MOBILE_HERO_IMAGE} media="(max-width: 767px)" type="image/webp" />
                         <img
-                            src={DEFAULT_HERO_IMAGE}
+                            src={featuredNews?.imageUrl || DEFAULT_HERO_IMAGE}
                             alt="Imagem de destaque - Araucária"
                             className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                             onError={handleImageError}
