@@ -44,9 +44,13 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
                         setImgSrc('/images/food_trucks_cover_new.png');
                     }
+                    if (currentArticle.title.toLowerCase().includes('archelau')) {
+                        setImgSrc('/images/archelau_revitalizacao_real_final_v1.png');
+                    }
                     if (currentArticle.id === 37) {
                         setImgSrc('/images/bus_schedule_real_final_v5.png');
                     }
+
                     if (currentArticle.id === 38) {
                         setImgSrc('/images/environment_week_real_final_v1.jpg');
                     }
@@ -99,6 +103,9 @@ const ArticlePage: React.FC = () => {
                     }
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
                         secImg = '/images/food_trucks_araucaria_v2.jpg';
+                    }
+                    if (currentArticle.title.toLowerCase().includes('archelau')) {
+                        secImg = '/images/archelau_revitalizacao_real_final_v1.png';
                     }
 
                     // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)
