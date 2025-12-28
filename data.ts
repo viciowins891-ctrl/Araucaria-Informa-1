@@ -24,9 +24,27 @@ export const newsArticles: NewsArticle[] = [
         title: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres',
         summary: 'Confira os detalhes sobre este importante acontecimento recente em nossa cidade. A via é uma das mais importantes de Araucária.',
         content: `
-            <p>A Prefeitura de Araucária deu início às obras de revitalização da Avenida Archelau de Almeida Torres, uma das principais artérias da cidade.</p>
-            <p>O projeto contempla a recuperação do pavimento, nova sinalização viária e melhorias na iluminação pública, visando garantir mais segurança e fluidez no trânsito.</p>
-            <p>"Essa obra era uma demanda antiga da população e agora está saindo do papel", afirmou o prefeito durante a visita ao local.</p>
+            <p>Nesta semana, a Prefeitura de Araucária deu um passo decisivo para a modernização da infraestrutura urbana do município. As máquinas já estão na pista para a aguardada revitalização da <strong>Avenida Archelau de Almeida Torres</strong>, considerada uma das artérias vitais para o trânsito da cidade, conectando diversos bairros ao centro e servindo como rota diária para milhares de motoristas e pedestres.</p>
+
+            <h2>Um Projeto Abrangente de Modernização</h2>
+            <p>O projeto não se resume apenas a um novo asfalto. Trata-se de uma requalificação completa da via. Segundo a Secretaria Municipal de Obras Públicas (SMOP), as intervenções incluem:</p>
+            <ul>
+                <li><strong>Recuperação Profunda do Pavimento:</strong> Remoção da camada asfáltica antiga e deteriorada, seguida da aplicação de CBUQ (Concreto Betuminoso Usinado a Quente) de alta durabilidade, projetado para suportar o tráfego intenso de veículos leves e pesados.</li>
+                <li><strong>Nova Sinalização Vertical e Horizontal:</strong> Pintura de faixas com material termoplástico (maior visibilidade noturna) e instalação de novas placas de trânsito, focando na redução de acidentes.</li>
+                <li><strong>Acessibilidade e Calçadas:</strong> Reformas em pontos críticos das calçadas e adequação de rampas de acessibilidade, garantindo o direito de ir e vir para pessoas com mobilidade reduzida.</li>
+                <li><strong>Iluminação em LED:</strong> Substituição das luminárias antigas por tecnologia LED, que além de gerar uma economia de até 50% aos cofres públicos, oferece uma luminosidade superior, aumentando a sensação de segurança para quem transita à noite.</li>
+            </ul>
+
+            <h2>Impacto na Mobilidade Urbana</h2>
+            <p>A Avenida Archelau sofreu por anos com o desgaste natural e o aumento exponencial da frota de veículos em Araucária. Buracos e ondulações eram queixas frequentes da população. Com a obra, a expectativa é não apenas melhorar o conforto ao dirigir, mas também a fluidez do tráfego.</p>
+            <p>"Essa obra era uma demanda antiga da população e agora está saindo do papel. Não estamos apenas tapando buracos, estamos reconstruindo a qualidade dessa via para que ela dure por muitos anos", destacou o prefeito durante a vistoria técnica no início dos trabalhos.</p>
+
+            <h2>Orientações aos Motoristas</h2>
+            <p>Durante o período de obras, o trânsito na região exigirá paciência e atenção redobrada. O Departamento de Trânsito de Araucária informa que haverá operações de "Pare e Siga" e desvios pontuais conforme o avanço das máquinas. Recomenda-se o uso de rotas alternativas, especialmente nos horários de pico, para evitar congestionamentos.</p>
+
+            <h3>Investimento no Futuro</h3>
+            <p>Além da Archelau, a prefeitura anunciou que este pacote de obras deve contemplar outras vias importantes nos próximos meses. A revitalização faz parte de um plano maior de mobilidade que visa preparar Araucária para o crescimento projetado para a próxima década.</p>
+            <p>As obras têm prazo estimado de conclusão de 90 dias, dependendo das condições climáticas.</p>
         `,
         imageUrl: '/images/archelau_definitiva.png?v=fixed',
         category: 'Infraestrutura',
