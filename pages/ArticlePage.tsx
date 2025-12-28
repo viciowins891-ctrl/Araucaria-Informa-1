@@ -42,7 +42,7 @@ const ArticlePage: React.FC = () => {
                         setImgSrc('/images/iptu_real_queue_final.jpg');
                     }
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
-                        setImgSrc('/images/food_trucks_cover_final_v2.png');
+                        setImgSrc('/images/food_trucks_cover_final_v3.png');
                     }
                     if (currentArticle.title.toLowerCase().includes('archelau')) {
                         setImgSrc('/images/archelau_definitiva.png');
@@ -102,7 +102,7 @@ const ArticlePage: React.FC = () => {
                         secImg = '/images/custom_drugs.jpg';
                     }
                     if (currentArticle.title.toLowerCase().includes('food truck')) {
-                        secImg = '/images/food_trucks_cover_final_v2.png';
+                        secImg = '/images/food_trucks_cover_final_v3.png';
                     }
                     if (currentArticle.title.toLowerCase().includes('archelau')) {
                         secImg = '/images/archelau_revitalizacao_real_final_v1.png'; // Foto da obra interna
