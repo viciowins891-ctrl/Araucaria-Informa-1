@@ -32,6 +32,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800',
         category: 'Economia',
         categoryColor: 'blue',
+        internalImageUrl: '/images/araucaria_employment_internal_final_v5.png',
         publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Redação Araucária'
     },
