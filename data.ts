@@ -58,7 +58,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A saúde pública de Araucária deu um salto de qualidade. Chegaram hoje ao HMA os novos equipamentos de diagnóstico por imagem adquiridos pela prefeitura.</p>
             <p>Com tecnologia de ponta, os novos tomógrafos reduzem o tempo de exame em 50%, zerando a fila de espera em poucas semanas.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800',
+        imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2025-12-29',

@@ -23,7 +23,7 @@ export const api = {
             // 2. Busca Cache Local (Fallback para erro de RLS)
             let cachedNews: NewsArticle[] = [];
             try {
-                const stored = localStorage.getItem('araucaria_news_cache_v10');
+                const stored = localStorage.getItem('araucaria_news_cache_v12');
                 if (stored) cachedNews = JSON.parse(stored);
             } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
@@ -39,11 +39,6 @@ export const api = {
             // 4. SANITIZAÇÃO DE DADOS
             const sanitizedNews = uniqueNews.map(item => {
                 // Removidos overrides manuais para permitir que as imagens do banco/IA sejam exibidas
-                // Override de emergência para garantir a imagem correta na lista
-                if (item.title.includes('Parque Cachoeira terá cinema')) {
-                    item.imageUrl = '/images/cinema_cover_real_final_v7.jpg';
-                    item.image_url = '/images/cinema_cover_real_final_v7.jpg'; // Garante compatibilidade
-                }
                 return item;
             });
 
@@ -119,7 +114,7 @@ export const api = {
                 // Adiciona novas no topo
                 const updated = [...articlesToInsert, ...existing];
                 // Mantém apenas as últimas 100 para não estourar memória (aprox 10 páginas)
-                localStorage.setItem('araucaria_news_cache_v10', JSON.stringify(updated.slice(0, 100)));
+                localStorage.setItem('araucaria_news_cache_v12', JSON.stringify(updated.slice(0, 100)));
                 console.log("[API] Notícias salvas no Cache Local com sucesso!");
             } catch (e) {
                 console.error("[API] Falha ao salvar no local storage", e);
