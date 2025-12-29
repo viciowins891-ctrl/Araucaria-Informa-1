@@ -66,8 +66,14 @@ export const newsArticles: NewsArticle[] = [
         title: 'Hospital Municipal recebe equipamentos de última geração',
         summary: 'Novos tomógrafos e aparelhos de raio-x digital agilizam diagnósticos na rede pública.',
         content: `
-            <p>A saúde pública de Araucária deu um salto de qualidade. Chegaram hoje ao HMA os novos equipamentos de diagnóstico por imagem adquiridos pela prefeitura.</p>
-            <p>Com tecnologia de ponta, os novos tomógrafos reduzem o tempo de exame em 50%, zerando a fila de espera em poucas semanas.</p>
+            <p>A saúde pública de Araucária deu um salto de qualidade. Chegaram hoje ao Hospital Municipal (HMA) os novos equipamentos de diagnóstico por imagem, incluindo tomógrafos computadorizados de 64 canais e aparelhos de raio-x digital. O investimento visa humanizar o atendimento e acelerar diagnósticos complexos.</p>
+            
+            <p>Com tecnologia de ponta, os novos tomógrafos reduzem o tempo de exame em 50%, permitindo maior rotatividade. "A meta é zerar a fila de espera por exames de imagem em até quatro semanas", projeta a direção clínica.</p>
+
+            <h2>Saúde Perto de Casa</h2>
+            <p>O impacto para a população é direto: fim das longas viagens de ambulância para Curitiba ou Campo Largo apenas para realizar exames. Moradores de bairros mais distantes, como o Guajuvira, agora contam com resolutividade dentro do próprio município.</p>
+
+            <p>A modernização do parque tecnológico do HMA também atrai especialistas médicos para a cidade, fortalecendo a rede de atendimento especializada disponível para todos os araucarienses.</p>
         `,
         imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
         category: 'Saúde',
@@ -80,8 +86,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Escolas da rede municipal ganham hortas comunitárias',
         summary: 'Alunos aprendem sobre sustentabilidade e alimentação saudável cultivando os próprios alimentos.',
         content: `
-            <p>Da terra para o prato da merenda. Esse é o lema do novo projeto pedagógico implantado em 10 escolas municipais.</p>
-            <p>As hortas comunitárias são cuidadas pelos próprios alunos, que aprendem biologia e responsabilidade ambiental na prática. Os vegetais colhidos enriquecem o cardápio escolar.</p>
+            <p>Da terra para o prato da merenda. Esse é o lema do projeto "Sementes do Futuro", já implantado em 10 escolas municipais de Araucária. A iniciativa transforma pátios ociosos em salas de aula a céu aberto, onde alunos aprendem na prática sobre ciclos naturais, biologia e responsabilidade ambiental.</p>
+            
+            <p>Os vegetais colhidos — alface, tomate, cenoura e temperos — vão direto para a cozinha da escola, enriquecendo o cardápio com alimentos frescos e livres de agrotóxicos. "As crianças comem com mais gosto o que elas mesmas plantaram", relata uma nutricionista da rede.</p>
+
+            <h2>Integração com a Comunidade</h2>
+            <p>O projeto ultrapassa os muros da escola. Nos fins de semana, as hortas são abertas para a comunidade, permitindo que pais e avós ajudem no cultivo e recebam mudas para iniciar plantios em casa. É uma estratégia de segurança alimentar que fortalece os laços comunitários nos bairros, promovendo hábitos saudáveis para toda a família.</p>
         `,
         imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
         category: 'Educação',
@@ -95,8 +105,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária lidera ranking de cidades inteligentes do PR',
         summary: 'Conectividade, semáforos inteligentes e serviços digitais colocam o município no topo.',
         content: `
-            <p>Araucária é, oficialmente, a cidade mais inteligente da região metropolitana. O estudo nacional de Smart Cities destacou o município pela ampla cobertura de Wi-Fi gratuito e pela digitalização de 100% dos serviços públicos.</p>
-            <p>"A tecnologia serve para facilitar a vida do cidadão, e estamos no caminho certo", afirmou o prefeito.</p>
+            <p>Araucária é, oficialmente, a cidade mais inteligente da região metropolitana. O mais recente ranking nacional de Smart Cities colocou o município em destaque pela sua ampla cobertura de Wi-Fi gratuito em praças e parques, além da digitalização de 100% dos serviços públicos municipais.</p>
+            
+            <p>Hoje, é possível abrir empresas, solicitar alvarás ou agendar consultas médicas sem sair de casa, pelo aplicativo "Araucária Digital". "A tecnologia serve para facilitar a vida do cidadão, devolvendo a ele o tempo que antes era perdido em filas", afirmou o prefeito.</p>
+
+            <h2>Inclusão Digital nos Bairros</h2>
+            <p>A conectividade chegou forte nas áreas residenciais. Praças em bairros como Califórnia, CSU e Tupy agora contam com internet de alta velocidade gratuita. Isso democratiza o acesso à informação e permite que estudantes e trabalhadores utilizem os espaços públicos para estudos e qualificação profissional, impulsionando o desenvolvimento local.</p>
         `,
         imageUrl: '/images/araucaria_smart_city_final_v8.png',
         internalImageUrl: '/images/araucaria_smart_city_internal_collage_final_v5.png',
