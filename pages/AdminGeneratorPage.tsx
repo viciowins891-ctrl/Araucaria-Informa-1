@@ -33,6 +33,7 @@ ${article.content}
         imageUrl: '${article.imageUrl}',
         category: '${article.category}',
         categoryColor: '${article.categoryColor}',
+        internalImageUrl: '', // Cole aqui a URL da imagem interna (opcional)
         publishDate: '${article.publishDate}',
         author: '${article.author}',
         sourceName: '${article.sourceName || ''}'

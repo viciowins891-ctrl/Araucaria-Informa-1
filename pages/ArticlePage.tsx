@@ -37,140 +37,36 @@ const ArticlePage: React.FC = () => {
                 const currentArticle = await api.getNewsById(Number(id));
                 if (currentArticle) {
                     setArticle(currentArticle);
+
+                    // Set Main Hero Image (Cover) - Directly from Data Source
                     setImgSrc(currentArticle.imageUrl);
-                    if (currentArticle.id === 36) {
-                        setImgSrc('/images/iptu_real_queue_final.jpg');
-                    }
-                    if (currentArticle.title.toLowerCase().includes('adoção pet')) {
-                        setImgSrc('/images/pet_adoption_cover_final_v1.png');
-                    }
-                    if (currentArticle.title.toLowerCase().includes('food truck')) {
-                        setImgSrc('/images/food_trucks_cover_final_v3.png');
-                    }
-                    if (currentArticle.title.toLowerCase().includes('archelau')) {
-                        setImgSrc('/images/archelau_definitiva.png');
-                    }
-                    if (currentArticle.id === 37) {
-                        setImgSrc('/images/bus_schedule_real_final_v5.png');
-                    }
-
-                    if (currentArticle.id === 38) {
-                        setImgSrc('/images/environment_week_real_final_v1.jpg');
-                    }
-                    if (currentArticle.id === 40) {
-                        setImgSrc('/images/healthy_cooking_real_final_v1.jpg');
-                    }
-                    if (currentArticle.id === 44) {
-                        setImgSrc('/images/pioneers_homage_inner_real_final.jpg');
-                    }
-                    if (currentArticle.id === 2026) {
-                        setImgSrc('/images/araucaria_volei_inner_v2.jpg');
-                    }
-
                     setImageError(false);
 
+                    // Set Secondary Image (Internal)
+                    // Priority 1: Explicit Internal Image from Data
+                    if (currentArticle.internalImageUrl) {
+                        setSecondaryImage(currentArticle.internalImageUrl);
+                    } else {
+                        // Priority 2: Fallback to Category Placeholder or Contextual Logic
+                        let secImg = getPlaceholderImage(currentArticle.category);
 
-                    // Lógica para Imagem Secundária:
-                    // 1. Definição da Imagem Secundária (Interior da Notícia)
-                    // Por padrão, carregamos um placeholder baseado na categoria (Imagens com 'Print'/Tema)
-                    let secImg = getPlaceholderImage(currentArticle.category);
+                        // Optional: Keep some broad category-based logic if strictly necessary substitute for specific placeholders
+                        // But avoid specific ID/Title hardcoding that conflicts with user intention.
 
-                    // Mapeamento explícito para categorias que usam os placeholders "com print"
-                    if (currentArticle.category === 'Educação' || currentArticle.title.toLowerCase().includes('escola')) {
-                        secImg = '/images/placeholder_educacao.png';
-                    } else if (currentArticle.category === 'Infraestrutura' || currentArticle.title.toLowerCase().includes('obra')) {
-                        secImg = '/images/placeholder_infraestrutura.png';
-                    } else if (currentArticle.category === 'Segurança' || currentArticle.title.toLowerCase().includes('polícia')) {
-                        secImg = '/images/placeholder_seguranca.png';
-                    } else if (currentArticle.category === 'Esporte' || currentArticle.title.toLowerCase().includes('jogo')) {
-                        secImg = '/images/placeholder_esporte.png';
-                    } else if (currentArticle.category === 'Turismo') {
-                        secImg = '/images/placeholder_turismo.png';
-                    } else if (currentArticle.category === 'Economia' || currentArticle.title.toLowerCase().includes('emprego')) {
-                        secImg = '/images/placeholder_economia.png';
-                    } else if (currentArticle.category === 'Cidade' && currentArticle.title.toLowerCase().includes('comércio')) {
-                        secImg = '/images/placeholder_comercio.png';
+                        if (currentArticle.category === 'Educação') secImg = '/images/placeholder_educacao.png';
+                        if (currentArticle.category === 'Infraestrutura') secImg = '/images/placeholder_infraestrutura.png';
+                        if (currentArticle.category === 'Segurança') secImg = '/images/placeholder_seguranca.png';
+                        if (currentArticle.category === 'Esporte') secImg = '/images/placeholder_esporte.png';
+                        if (currentArticle.category === 'Turismo') secImg = '/images/placeholder_turismo.png';
+                        if (currentArticle.category === 'Economia') secImg = '/images/placeholder_economia.png';
+
+                        // Contextual Fallbacks (Generic)
+                        if (currentArticle.title.toLowerCase().includes('vacina') || currentArticle.category === 'Saúde') {
+                            secImg = '/images/news_context_health.png';
+                        }
+
+                        setSecondaryImage(secImg);
                     }
-
-                    // Ajustes para temas sem placeholder oficial, usando imagens contextuais
-                    if (currentArticle.category === 'Saúde' || currentArticle.title.toLowerCase().includes('vacina')) {
-                        secImg = '/images/news_context_health.png';
-                    }
-                    if (currentArticle.title.toLowerCase().includes('orçamento') || currentArticle.title.toLowerCase().includes('câmara')) {
-                        secImg = '/images/news_budget_chamber.png';
-                    }
-
-                    // 2. Override de segurança (caso específico - Drogas/Food Truck)
-                    if (currentArticle.title.toLowerCase().includes('drogas') || currentArticle.title.toLowerCase().includes('incinera')) {
-                        secImg = '/images/custom_drugs.jpg';
-                    }
-                    if (currentArticle.title.toLowerCase().includes('food truck')) {
-                        secImg = '/images/food_trucks_cover_final_v3.png';
-                    }
-                    if (currentArticle.title.toLowerCase().includes('archelau')) {
-                        secImg = '/images/archelau_revitalizacao_real_final_v1.png'; // Foto da obra interna
-                    }
-
-                    // 3. Mapeamento Específico por ID (Tem PRECEDÊNCIA sobre tudo)
-                    // Garante que as notícias principais (1-10) mantenham suas fotos internas exclusivas
-                    const idNum = Number(id);
-                    if (idNum === 2026) secImg = '/images/araucaria_volei_inner_v2.jpg'; // Vôlei Atual (Interna V2)
-                    if (idNum === 1 || idNum === 101) secImg = '/images/cmei_interior_pessoas.png'; // CMEI
-                    if (idNum === 2 || idNum === 102) secImg = '/images/prefeitura_orcamento_real.png'; // Orçamento
-                    if (idNum === 3 || idNum === 103) secImg = '/images/poupatempo_atendimento_pessoas.png'; // Poupatempo
-                    if (idNum === 4 || idNum === 104) secImg = '/images/investimento_federal_real.png'; // Investimentos
-                    if (idNum === 5 || idNum === 105) secImg = '/images/operacao_pcpr_viaturas.png'; // Drogas/PCPR
-                    if (idNum === 6) secImg = '/images/rural_tourism_araucaria_path.png'; // Turismo Rural (Interna)
-                    if (idNum === 106) secImg = '/images/news_vaccine_pregnant.png';
-                    if (idNum === 107) secImg = '/images/news_christmas_cantata.png';
-                    if (idNum === 7) secImg = '/images/news_vaccination_indoor_campaign.png'; // Campanha de Vacinação (Interior)
-                    if (idNum === 8) secImg = '/images/childrens_theater_stage_play.png'; // Teatro Infantil (Interna)
-                    if (idNum === 9) secImg = '/images/new_bike_path_industrial.png'; // Ciclovia Industrial (Interna)
-                    if (idNum === 10) secImg = '/images/road_repair_pothole_asphalt.png'; // Tapa Buraco (Interna)
-                    if (idNum === 11) secImg = '/images/municipal_guard_real.png'; // Viaturas GM (Interna)
-                    if (idNum === 109) secImg = '/images/gym_interior_renovation.png'; // Ginásio Joval (Interior)
-                    if (idNum === 16) secImg = '/images/news_chess_inner_araucaria.png'; // Torneio de Xadrez (Interna)
-                    if (idNum === 17) secImg = '/images/vocational_training_industrial_class.png'; // Curso SENAI (Interna)
-                    if (idNum === 18) secImg = '/images/rural_tourism_signage_araucaria.png'; // Sinalização Caminho do Vinho (Interna)
-                    if (idNum === 14) secImg = '/images/new_supermarket_interior.png'; // Novo Supermercado (Interna)
-                    if (idNum === 15) secImg = '/images/river_cleanup_volunteers.png'; // Limpeza Rio Iguaçu (Interna)
-                    if (idNum === 12) secImg = '/images/hospital_pediatric_ward_interior.png'; // Hospital Ala Pediátrica (Interna)
-                    if (idNum === 19) secImg = '/images/school_transport_app_araucaria.png'; // App Transporte Escolar (Interna)
-                    if (idNum === 20) secImg = '/images/plaza_bible_internal_real.jpg'; // Praça da Bíblia (Interna)
-                    if (idNum === 13) secImg = '/images/school_robotics_fair_project.png'; // Feira Robótica (Interna)
-                    if (idNum === 108) secImg = '/images/copel_repair_real_v2.png'; // Ciclone (Interna) - Fix Duplicação
-                    if (idNum === 21) secImg = '/images/news_hackathon_coding.png'; // Hackathon (Interna)
-                    if (idNum === 23) secImg = '/images/araucaria_futsal_real.jpg'; // Futsal (Interna)
-                    if (idNum === 32) secImg = '/images/feira_definitiva_v100.png'; // Feira Produtor (Interna)
-                    if (idNum === 24) secImg = '/images/campanha_agasalho_internal.jpg'; // Campanha Agasalho (Internacom)
-                    if (idNum === 25) secImg = '/images/binario_centro_internal.jpg'; // Binário Centro (Interna)
-                    if (idNum === 26) secImg = '/images/festival_gastronomico_internal.jpg'; // Festival Gastronômico (Interna)
-                    if (idNum === 27) secImg = '/images/lousas_digitais_internal.jpg'; // Lousas Digitais (Interna)
-                    if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
-                    if (idNum === 28) secImg = '/images/logistica_vagas_internal.jpg'; // Vagas Logística (Interna)
-                    if (idNum === 29) secImg = '/images/iluminacao_led_internal.jpg'; // Iluminação LED (Interna)
-                    if (idNum === 29) secImg = '/images/iluminacao_led_internal.jpg'; // Iluminação LED (Interna)
-                    if (idNum === 30) secImg = '/images/feira_livros_internal_real.jpg'; // Feira de Livros (Interna Real)
-                    if (idNum === 31) secImg = '/images/vacinacao_pet_internal.png'; // Vacinação Pet (Interna)
-                    if (idNum === 32) secImg = '/images/feira_produtor_roof_internal.png'; // Feira Produtor Cobertura (Interna)
-                    if (idNum === 33) secImg = '/images/coral_municipal_internal_v2.png'; // Coral (Interna v2)
-                    if (idNum === 34) secImg = '/images/parque_cachoeira_internal_v2.png'; // Parque Cachoeira (Interna v2)
-                    if (idNum === 35) secImg = '/images/carros_antigos_internal_v2.png'; // Carros Antigos (Interna v2)
-                    if (idNum === 37) secImg = '/images/bus_schedule_real_final_v5.png'; // Novos Horários (Interna)
-                    if (idNum === 38) secImg = '/images/environment_week_real_final_v1.jpg'; // Semana Meio Ambiente (Interna)
-                    if (idNum === 36) secImg = '/images/iptu_real_queue_final.jpg'; // IPTU (Interna)
-                    if (idNum === 39) secImg = '/images/araucaria_volei_inner_final.png'; // Vôlei (Interna)
-
-                    if (idNum === 40) secImg = '/images/healthy_cooking_real_final_v1.jpg'; // Culinária (Interna)
-                    if (idNum === 41) secImg = '/images/photography_contest_camera_internal.jpg'; // Fotografia (Interna)
-                    if (idNum === 42) secImg = '/images/ubs_california_inner_real_final.jpg'; // UBS Noturna (Interna)
-                    if (idNum === 43) secImg = '/images/festa_junina_inner_real_final.jpg'; // Festa Junina (Interna)
-                    if (idNum === 44) secImg = '/images/pioneers_homage_inner_real_final.jpg'; // Pioneiros (Interna)
-                    if (idNum === 45) secImg = '/images/school_games_torch_internal.jpg'; // Jogos Escolares (Interna)
-                    if (idNum === 3005) secImg = '/images/cinema_lion.png'; // Cinema (Interna - Rei Leão - NOVO ID)
-
-
-                    setSecondaryImage(secImg);
 
                     // Busca notícias relacionadas
                     const allNews = await api.getNews();

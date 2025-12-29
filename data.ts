@@ -46,6 +46,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/cinema_beauty_beast_v3.jpg',
         category: 'Cultura',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/cinema_lion.png',
         publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Cultura Viva'
     },
@@ -116,6 +117,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/cmei_interior_pessoas.png',
         publishDate: '2025-12-20',
         author: 'Redação Municipal'
     },
@@ -130,6 +132,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Economia',
         categoryColor: 'blue',
+        internalImageUrl: '/images/prefeitura_orcamento_real.png',
         publishDate: '2025-12-18',
         author: 'Câmara Municipal'
     },
@@ -144,6 +147,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/poupatempo_atendimento_pessoas.png',
         publishDate: '2025-12-15',
         author: 'Agência Estadual'
     },
@@ -158,6 +162,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Política',
         categoryColor: 'purple',
+        internalImageUrl: '/images/investimento_federal_real.png',
         publishDate: '2025-12-12',
         author: 'Brasília News'
     },
@@ -172,6 +177,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
         category: 'Segurança',
         categoryColor: 'red',
+        internalImageUrl: '/images/operacao_pcpr_viaturas.png',
         publishDate: '2025-12-10',
         author: 'PCPR'
     },
@@ -186,6 +192,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Saúde',
         categoryColor: 'blue',
+        internalImageUrl: '/images/news_vaccine_pregnant.png',
         publishDate: '2025-12-08',
         author: 'Saúde Agora'
     },
@@ -200,6 +207,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         category: 'Cultura',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/news_christmas_cantata.png',
         publishDate: '2025-12-05',
         author: 'Cultura Viva'
     },
@@ -214,6 +222,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         category: 'Cidade',
         categoryColor: 'gray',
+        internalImageUrl: '/images/copel_repair_real_v2.png',
         publishDate: '2025-12-01',
         author: 'Tempo Agora'
     },
@@ -228,6 +237,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
         category: 'Esporte',
         categoryColor: 'green',
+        internalImageUrl: '/images/gym_interior_renovation.png',
         publishDate: getPastDate(4),
         author: 'Esporte News'
     },
@@ -240,7 +250,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além da gastronomia, a feira contará com apresentações musicais de artistas locais. "É uma opção de lazer acessível e segura para as famílias araucarienses", destacou o organizador.</p>
             <p>O evento começa às 18h e vai até as 22h, com entrada gratuita.</p>
         `,
-        imageUrl: '/images/food_trucks_cover_new_final.png',
+        imageUrl: '/images/food_trucks_cover_real_final_v4.png',
         category: 'Lazer',
         categoryColor: 'yellow',
         publishDate: getPastDate(1),
@@ -262,6 +272,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/rural_tourism_araucaria_path.png',
         publishDate: getPastDate(9),
         author: 'Jornal do Campo'
     },
@@ -277,6 +288,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/news_vaccination_indoor_campaign.png',
         publishDate: getPastDate(10),
         author: 'Saúde em Foco'
     },
@@ -292,6 +304,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/placeholder_educacao.png',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/childrens_theater_stage_play.png',
         publishDate: getPastDate(12),
         author: 'Cultura Viva'
     },
@@ -307,6 +320,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/ciclovia_industrial.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
+        internalImageUrl: '/images/new_bike_path_industrial.png',
         publishDate: getPastDate(14),
         author: 'Mobilidade Urbana'
     },
@@ -322,6 +336,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/tapa_buracos_real_final.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
+        internalImageUrl: '/images/road_repair_pothole_asphalt.png',
         publishDate: getPastDate(15),
         author: 'Redação Municipal'
     },
@@ -337,6 +352,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_gm_official_jeep.webp', // Foto Oficial (Jeep/Chaves)
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/municipal_guard_real.png',
         publishDate: getPastDate(16),
         author: 'Segurança em Pauta'
     },
@@ -352,6 +368,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/custom_hospital_official.webp', // Foto Oficial Inauguração (Corte Fita)
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/hospital_pediatric_ward_interior.png',
         publishDate: getPastDate(18),
         author: 'Saúde Agora'
     },
@@ -366,6 +383,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/robotics_fair_real_final_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/school_robotics_fair_project.png',
         publishDate: getPastDate(20),
         author: 'EducaTech'
     },
@@ -380,6 +398,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/supermarket_opening_real_final_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/new_supermarket_interior.png',
         publishDate: getPastDate(21),
         author: 'Economia Local'
     },
@@ -394,6 +413,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/limpeza_rio_iguacu_real.webp',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/river_cleanup_volunteers.png',
         publishDate: getPastDate(22),
         author: 'EcoAção'
     },
@@ -408,6 +428,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_chess_tournament.png',
         category: 'Esporte',
         categoryColor: 'green',
+        internalImageUrl: '/images/news_chess_inner_araucaria.png',
         publishDate: getPastDate(25),
         author: 'Esporte Araucária'
     },
@@ -422,6 +443,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/vocational_training_industrial_class.png',
         publishDate: getPastDate(28),
         author: 'Carreira e Futuro'
     },
@@ -438,6 +460,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000',
         category: 'Turismo',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/rural_tourism_signage_araucaria.png',
         publishDate: getPastDate(30),
         author: 'Turismo Araucária'
     },
@@ -453,6 +476,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/startup_app_real.webp',
         category: 'Tecnologia',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/school_transport_app_araucaria.png',
         publishDate: getPastDate(32),
         author: 'Inovação Tech'
     },
@@ -468,6 +492,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/plaza_bible_lighting_night.png',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/plaza_bible_internal_real.jpg',
         publishDate: getPastDate(35),
         author: 'Redação Municipal'
     },
@@ -483,6 +508,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/hackathon_real.webp',
         category: 'Tecnologia',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/news_hackathon_coding.png',
         publishDate: getPastDate(40),
         author: 'Tech News'
     },
@@ -512,6 +538,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1518611507436-e92e60832012?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
         categoryColor: 'green',
+        internalImageUrl: '/images/araucaria_futsal_real.jpg',
         publishDate: getPastDate(45),
         author: 'Esporte News'
     },
@@ -526,6 +553,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/campanha_agasalho_internal.jpg',
         publishDate: getPastDate(48),
         author: 'Social Araucária'
     },
@@ -540,6 +568,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
+        internalImageUrl: '/images/binario_centro_internal.jpg',
         publishDate: getPastDate(50),
         author: 'Trânsito Seguro'
     },
@@ -554,6 +583,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/festival_gastronomico_internal.jpg',
         publishDate: getPastDate(52),
         author: 'Roteiro Gourmet'
     },
@@ -568,6 +598,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/lousas_digitais_internal.jpg',
         publishDate: getPastDate(55),
         author: 'EducaTech'
     },
@@ -582,6 +613,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
         category: 'Economia',
         categoryColor: 'blue',
+        internalImageUrl: '/images/logistica_vagas_internal.jpg',
         publishDate: getPastDate(57),
         author: 'Vagas & Oportunidades'
     },
@@ -596,6 +628,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/iluminacao_led_cover.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
+        internalImageUrl: '/images/iluminacao_led_internal.jpg',
         publishDate: getPastDate(60),
         author: 'Cidade Luz'
     },
@@ -610,6 +643,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/feira_livros_cover.png',
         category: 'Cultura',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/feira_livros_internal_real.jpg',
         publishDate: getPastDate(62),
         author: 'Cultura Viva'
     },
@@ -624,6 +658,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_pet_cover.png',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/vacinacao_pet_internal.png',
         publishDate: getPastDate(65),
         author: 'Saúde Animal'
     },
@@ -638,6 +673,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/feira_produtor_roof_cover.png',
         category: 'Economia',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/feira_produtor_roof_internal.png',
         publishDate: getPastDate(68),
         author: 'Agro Araucária'
     },
@@ -652,6 +688,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/coral_municipal_cover.png',
         category: 'Cultura',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/coral_municipal_internal_v2.png',
         publishDate: getPastDate(70),
         author: 'Cultura Viva'
     },
@@ -666,6 +703,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/parque_cachoeira_cleanup_cover.png',
         category: 'Cidade',
         categoryColor: 'green',
+        internalImageUrl: '/images/parque_cachoeira_internal_v2.png',
         publishDate: getPastDate(72),
         author: 'EcoAção'
     },
@@ -680,6 +718,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/carros_antigos_cover.png',
         category: 'Cultura',
         categoryColor: 'yellow',
+        internalImageUrl: '/images/carros_antigos_internal_v2.png',
         publishDate: getPastDate(75),
         author: 'Motor News'
     },
@@ -694,6 +733,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/iptu_real_final_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
+        internalImageUrl: '/images/iptu_real_queue_final.jpg',
         publishDate: getPastDate(78),
         author: 'Finanças em Dia'
     },
@@ -708,6 +748,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/bus_schedule_main.png',
         category: 'Cidade',
         categoryColor: 'gray',
+        internalImageUrl: '/images/bus_schedule_real_final_v5.png',
         publishDate: getPastDate(80),
         author: 'Mobilidade Urbana'
     },
@@ -722,6 +763,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/environment_week_collage.webp',
         category: 'Cidade',
         categoryColor: 'green',
+        internalImageUrl: '/images/environment_week_real_final_v1.jpg',
         publishDate: getPastDate(82),
         author: 'EcoNews'
     },
@@ -736,6 +778,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/araucaria_volei_cover_final.webp',
         category: 'Esporte',
         categoryColor: 'green',
+        internalImageUrl: '/images/araucaria_volei_inner_final.png',
         publishDate: getPastDate(85),
         author: 'Esporte News'
     },
@@ -750,6 +793,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/healthy_cooking_cover_real_final.webp',
         category: 'Cidade',
         categoryColor: 'red',
+        internalImageUrl: '/images/healthy_cooking_real_final_v1.jpg',
         publishDate: getPastDate(88),
         author: 'Cidadania Ativa'
     },
@@ -764,6 +808,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/photography_contest_cover_real_final.webp',
         category: 'Cultura',
         categoryColor: 'indigo',
+        internalImageUrl: '/images/photography_contest_camera_internal.jpg',
         publishDate: getPastDate(90),
         author: 'Arte em Foco'
     },
@@ -778,6 +823,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
         category: 'Saúde',
         categoryColor: 'blue',
+        internalImageUrl: '/images/ubs_california_inner_real_final.jpg',
         publishDate: getPastDate(92),
         author: 'Saúde Agora'
     },
@@ -792,6 +838,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/festa_junina_real_cover.webp',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/festa_junina_inner_real_final.jpg',
         publishDate: getPastDate(95),
         author: 'Educação Viva'
     },
@@ -806,6 +853,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/pioneers_homage_real_final_v2.png',
         category: 'Cidade',
         categoryColor: 'gold',
+        internalImageUrl: '/images/pioneers_homage_inner_real_final.jpg',
         publishDate: getPastDate(98),
         author: 'Memória Viva'
     },
@@ -820,6 +868,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/jea_real_final_v2.webp',
         category: 'Esporte',
         categoryColor: 'green',
+        internalImageUrl: '/images/school_games_torch_internal.jpg',
         publishDate: getPastDate(100),
         author: 'Esporte na Escola'
     }
