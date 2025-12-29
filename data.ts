@@ -24,10 +24,14 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária registra queda histórica no desemprego',
         summary: 'Novas indústrias e comércio fortalecido geram mais de 2.000 vagas no último trimestre.',
         content: `
-            <p>A economia de Araucária vive um momento de ouro. Dados do CAGED divulgados hoje mostram que o município registrou o menor índice de desemprego dos últimos 5 anos.</p>
-            <p>O setor de serviços e a expansão do polo industrial foram os grandes responsáveis pelo resultado. "Araucária se consolida como a terra da oportunidade", celebrou o secretário de trabalho.</p>
-            <h2>Fortalecimento do Comércio</h2>
-            <p>Além da indústria, o comércio local também apresentou crescimento significativo, impulsionado pelas datas comemorativas e pela confiança do consumidor.</p>
+            <p>A economia de Araucária vive um momento de ouro. Dados do CAGED divulgados hoje mostram que o município registrou o menor índice de desemprego dos últimos 5 anos, consolidando-se como um dos principais polos de geração de renda do estado.</p>
+            
+            <p>O "boom" econômico é impulsionado por dois motores principais: a expansão das plantas industriais no complexo petroquímico e a criação de novas empresas de logística. "Não estamos apenas gerando vagas, estamos criando carreiras. A demanda por mão de obra qualificada nunca foi tão alta", celebra o secretário de trabalho.</p>
+
+            <h2>Impacto nos Bairros</h2>
+            <p>O aquecimento da economia não fica restrito à zona industrial. O efeito cascata é visível nos bairros adjacentes como Capela Velha e Jardim Industrial. Com mais pessoas empregadas, o comércio local — de padarias a lojas de construção — registra aumento no faturamento.</p>
+
+            <p>Lojistas da Avenida Archelau já sentem a diferença no movimento, impulsionado pelo aumento do poder de compra das famílias. O ciclo virtuoso se fecha com o setor de serviços, que tem aberto novas frentes de trabalho para atender a essa demanda crescente.</p>
         `,
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800',
         category: 'Economia',
