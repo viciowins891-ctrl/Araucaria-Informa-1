@@ -90,8 +90,8 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Os vegetais colhidos — alface, tomate, cenoura e temperos — vão direto para a cozinha da escola, enriquecendo o cardápio com alimentos frescos e livres de agrotóxicos. "As crianças comem com mais gosto o que elas mesmas plantaram", relata uma nutricionista da rede.</p>
 
-            <h2>Integração com a Comunidade</h2>
-            <p>O projeto ultrapassa os muros da escola. Nos fins de semana, as hortas são abertas para a comunidade, permitindo que pais e avós ajudem no cultivo e recebam mudas para iniciar plantios em casa. É uma estratégia de segurança alimentar que fortalece os laços comunitários nos bairros, promovendo hábitos saudáveis para toda a família.</p>
+            <h2>Impacto nos Bairros Adjacentes</h2>
+            <p>O projeto ultrapassa os muros da escola e gera impacto positivo direto na vizinhança. Famílias de bairros adjacentes participam dos mutirões de colheita nos fins de semana e recebem consultoria para criar suas próprias hortas domésticas, fortalecendo a segurança alimentar e os laços comunitários da região.</p>
         `,
         imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
         category: 'Educação',
