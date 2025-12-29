@@ -66,6 +66,9 @@ const ArticlePage: React.FC = () => {
                     if (currentArticle.id === 2026) {
                         setImgSrc('/images/araucaria_volei_inner_v2.jpg');
                     }
+                    if (currentArticle.id === 3002) {
+                        setImgSrc('/images/cinema_lion.png');
+                    }
 
                     setImageError(false);
 
