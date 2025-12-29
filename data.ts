@@ -103,7 +103,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O esporte respira em Araucária. A federação confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei.</p>
             <p>A expectativa é de casa cheia no Ginásio Joval de Paula Souza. Os ingressos serão trocados por 1kg de alimento não perecível.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800',
+        imageUrl: '/images/gym_volleyball_final_cover_v5.png',
         category: 'Esporte',
         categoryColor: 'orange',
         publishDate: '2025-12-29',
