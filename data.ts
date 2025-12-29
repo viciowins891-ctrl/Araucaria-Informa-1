@@ -250,7 +250,8 @@ export const newsArticles: NewsArticle[] = [
             <p>Além da gastronomia, a feira contará com apresentações musicais de artistas locais. "É uma opção de lazer acessível e segura para as famílias araucarienses", destacou o organizador.</p>
             <p>O evento começa às 18h e vai até as 22h, com entrada gratuita.</p>
         `,
-        imageUrl: '/images/food_trucks_cover_real_final_v4.png',
+        imageUrl: '/images/ft_cover_v5.png',
+        internalImageUrl: '/images/ft_inner_v5.png',
         category: 'Lazer',
         categoryColor: 'yellow',
         publishDate: getPastDate(1),
