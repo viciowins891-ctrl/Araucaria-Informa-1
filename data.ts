@@ -88,6 +88,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"A tecnologia serve para facilitar a vida do cidadão, e estamos no caminho certo", afirmou o prefeito.</p>
         `,
         imageUrl: '/images/araucaria_smart_city_final_v8.png',
+        internalImageUrl: '/images/araucaria_smart_city_internal_collage_final_v5.png',
         category: 'Tecnologia',
         categoryColor: 'indigo',
         publishDate: '2025-12-29',
