@@ -43,7 +43,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Prepare a pipoca e a canga! Neste sábado, o Parque Cachoeira se transforma em um grande cinema a céu aberto. O projeto, totalmente gratuito, exibirá filmes infantis a partir das 19h.</p>
             <p>A iniciativa visa ocupar os espaços públicos com cultura e lazer seguro para as famílias araucarienses.</p>
         `,
-        imageUrl: '/images/cinema_lion.png',
+        imageUrl: '/images/cinema_cover_real_final_v7.jpg',
         category: 'Cultura',
         categoryColor: 'yellow',
         internalImageUrl: '/images/cinema_lion.png',
