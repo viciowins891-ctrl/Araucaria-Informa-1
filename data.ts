@@ -106,6 +106,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gym_volleyball_final_cover_v5.png',
         category: 'Esporte',
         categoryColor: 'orange',
+        internalImageUrl: '/images/gym_volleyball_internal_final_v5.png',
         publishDate: '2025-12-29',
         author: 'Esporte News'
     },

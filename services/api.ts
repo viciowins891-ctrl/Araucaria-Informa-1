@@ -23,7 +23,7 @@ export const api = {
             // 2. Busca Cache Local (Fallback para erro de RLS)
             let cachedNews: NewsArticle[] = [];
             try {
-                const stored = localStorage.getItem('araucaria_news_cache_v15');
+                const stored = localStorage.getItem('araucaria_news_cache_v16');
                 if (stored) cachedNews = JSON.parse(stored);
             } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
@@ -114,7 +114,7 @@ export const api = {
                 // Adiciona novas no topo
                 const updated = [...articlesToInsert, ...existing];
                 // Mantém apenas as últimas 100 para não estourar memória (aprox 10 páginas)
-                localStorage.setItem('araucaria_news_cache_v15', JSON.stringify(updated.slice(0, 100)));
+                localStorage.setItem('araucaria_news_cache_v16', JSON.stringify(updated.slice(0, 100)));
                 console.log("[API] Notícias salvas no Cache Local com sucesso!");
             } catch (e) {
                 console.error("[API] Falha ao salvar no local storage", e);
