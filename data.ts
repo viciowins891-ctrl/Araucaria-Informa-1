@@ -38,6 +38,7 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 3002,
         title: 'Parque Cachoeira terá cinema ao ar livre neste sábado',
+        summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
         content: `
             <p>Prepare a pipoca e a canga! Neste sábado, o Parque Cachoeira se transforma em um grande cinema a céu aberto. O projeto, totalmente gratuito, exibirá filmes infantis a partir das 19h.</p>
             <p>A iniciativa visa ocupar os espaços públicos com cultura e lazer seguro para as famílias araucarienses.</p>
