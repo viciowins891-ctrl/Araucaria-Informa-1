@@ -20,148 +20,90 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
-        id: 2029,
-        title: 'Feira de Adoção Pet acontece neste fim de semana no Parque Cachoeira',
-        summary: 'Centenas de cães e gatos esperam por um novo lar. Evento conta com orientação veterinária e brincadeiras para a família.',
+        id: 3001,
+        title: 'Araucária registra queda histórica no desemprego',
+        summary: 'Novas indústrias e comércio fortalecido geram mais de 2.000 vagas no último trimestre.',
         content: `
-            <p>Se você está pensando em aumentar a família com um amigo de quatro patas, este fim de semana é a oportunidade perfeita. O Parque Cachoeira recebe mais uma edição da <strong>Grande Feira de Adoção Pet de Araucária</strong>.</p>
-
-            <h2>Amor em Forma de Pêlos</h2>
-            <p>O evento reunirá cerca de 50 animais, entre cães e gatos, filhotes e adultos, todos vermifugados e, no caso dos adultos, castrados. Os animais são resgatados por ONGs locais e pela Secretaria de Meio Ambiente (SMMA).</p>
-            <p>"Adotar é um ato de amor e responsabilidade. Nossos animais passam por uma triagem rigorosa de saúde e comportamento para garantir que estejam prontos para um novo lar", explica a veterinária responsável.</p>
-
-            <h2>Atrações para Toda a Família</h2>
-            <p>Além da adoção, quem passar pelo parque poderá aproveitar:</p>
-            <ul>
-                <li><strong>Orientação Veterinária Gratuita:</strong> Tire dúvidas sobre cuidados básicos, vacinação e alimentação.</li>
-                <li><strong>Microchipagem Gratuita:</strong> Para os animais adotados no evento (e vagas limitadas para a comunidade).</li>
-                <li><strong>Apresentação de Agility:</strong> Cães treinados mostrando suas habilidades na pista de obstáculos.</li>
-                <li><strong>Espaço Kids:</strong> Com pintura facial e balões para as crianças.</li>
-            </ul>
-
-            <h3>Requisitos para Adoção</h3>
-            <p>Para levar um pet para casa, é necessário ser maior de 18 anos, apresentar documento com foto (RG/CNH), comprovante de residência e passar por uma breve entrevista com os protetores. A ideia é garantir uma adoção responsável e evitar devoluções futuras.</p>
+            <p>A economia de Araucária vive um momento de ouro. Dados do CAGED divulgados hoje mostram que o município registrou o menor índice de desemprego dos últimos 5 anos.</p>
+            <p>O setor de serviços e a expansão do polo industrial foram os grandes responsáveis pelo resultado. "Araucária se consolida como a terra da oportunidade", celebrou o secretário de trabalho.</p>
+            <h2>Fortalecimento do Comércio</h2>
+            <p>Além da indústria, o comércio local também apresentou crescimento significativo, impulsionado pelas datas comemorativas e pela confiança do consumidor.</p>
         `,
-        imageUrl: '/images/pet_adoption_cover_final_v1.png',
-        category: 'Cidade', // Ou Meio Ambiente
-        categoryColor: 'blue',
-        publishDate: '2025-12-29', // Data futura garantida
-        author: 'Araucária Urgente'
-    },
-    {
-        id: 2028,
-        title: 'Festival de Food Trucks agita o Centro Cívico nesta sexta',
-        summary: 'Evento reúne o melhor da gastronomia sobre rodas, música ao vivo e diversão para toda a família em Araucária.',
-        content: `
-            <p>O fim de semana começa com muito sabor e animação em Araucária. O <strong>Festival de Food Trucks</strong> estacionou no Centro Cívico nesta sexta-feira, transformando o espaço em uma grande praça de alimentação a céu aberto.</p>
-
-            <h2>Diversidade Gastronômica</h2>
-            <p>Quem passar pelo local vai encontrar uma variedade incrível de opções culinárias. São mais de 15 operações oferecendo desde os clássicos até novidades gourmet:</p>
-            <ul>
-                <li><strong>Hambúrgueres Artesanais:</strong> Com blends de carnes nobres e molhos especiais.</li>
-                <li><strong>Chopes Artesanais:</strong> Cervejarias locais marcando presença com estilos variados (IPA, Pilsen, Weiss).</li>
-                <li><strong>Churros e Doces:</strong> Opções de sobremesa que vão do churros espanhol ao sorvete na chapa.</li>
-                <li><strong>Culinária Internacional:</strong> Pratos mexicanos, massas italianas e comida oriental.</li>
-            </ul>
-
-            <h2>Ambiente Familiar e Música ao Vivo</h2>
-            <p>O evento foi pensado para receber as famílias araucarienses. O espaço conta com área kids segura para as crianças brincarem enquanto os pais aproveitam a noite. Além disso, o palco principal recebe bandas locais tocando o melhor do pop rock e MPB, garantindo a trilha sonora perfeita para o happy hour.</p>
-
-            <h2>Impulso à Economia Local</h2>
-            <p>"Eventos como este são fundamentais para movimentar a economia da cidade, gerando renda para os pequenos empreendedores e oferecendo lazer de qualidade para a população sem precisar ir para Curitiba", destaca a organização.</p>
-
-            <h3>Serviço</h3>
-            <p>O festival acontece no estacionamento do Centro Cívico (ao lado da Prefeitura), com entrada gratuita. As atividades seguem até às 23h, com segurança reforçada e banheiros químicos à disposição do público.</p>
-        `,
-        imageUrl: '/images/food_trucks_cover_final_v3.png',
-        category: 'Cultura', // Ou Lazer/Cidade
-        categoryColor: 'orange',
-        publishDate: '2025-12-28', // Data futura/atual para ficar no topo
-        author: 'Araucária Urgente'
-    },
-    {
-        id: 2027,
-        title: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres',
-        summary: 'Confira os detalhes sobre este importante acontecimento recente em nossa cidade. A via é uma das mais importantes de Araucária.',
-        content: `
-            <p>Nesta semana, a Prefeitura de Araucária deu um passo decisivo para a modernização da infraestrutura urbana do município. As máquinas já estão na pista para a aguardada revitalização da <strong>Avenida Archelau de Almeida Torres</strong>, considerada uma das artérias vitais para o trânsito da cidade, conectando diversos bairros ao centro e servindo como rota diária para milhares de motoristas e pedestres.</p>
-
-            <h2>Um Projeto Abrangente de Modernização</h2>
-            <p>O projeto não se resume apenas a um novo asfalto. Trata-se de uma requalificação completa da via. Segundo a Secretaria Municipal de Obras Públicas (SMOP), as intervenções incluem:</p>
-            <ul>
-                <li><strong>Recuperação Profunda do Pavimento:</strong> Remoção da camada asfáltica antiga e deteriorada, seguida da aplicação de CBUQ (Concreto Betuminoso Usinado a Quente) de alta durabilidade, projetado para suportar o tráfego intenso de veículos leves e pesados.</li>
-                <li><strong>Nova Sinalização Vertical e Horizontal:</strong> Pintura de faixas com material termoplástico (maior visibilidade noturna) e instalação de novas placas de trânsito, focando na redução de acidentes.</li>
-                <li><strong>Acessibilidade e Calçadas:</strong> Reformas em pontos críticos das calçadas e adequação de rampas de acessibilidade, garantindo o direito de ir e vir para pessoas com mobilidade reduzida.</li>
-                <li><strong>Iluminação em LED:</strong> Substituição das luminárias antigas por tecnologia LED, que além de gerar uma economia de até 50% aos cofres públicos, oferece uma luminosidade superior, aumentando a sensação de segurança para quem transita à noite.</li>
-            </ul>
-
-            <h2>Impacto na Mobilidade Urbana</h2>
-            <p>A Avenida Archelau sofreu por anos com o desgaste natural e o aumento exponencial da frota de veículos em Araucária. Buracos e ondulações eram queixas frequentes da população. Com a obra, a expectativa é não apenas melhorar o conforto ao dirigir, mas também a fluidez do tráfego.</p>
-            <p>"Essa obra era uma demanda antiga da população e agora está saindo do papel. Não estamos apenas tapando buracos, estamos reconstruindo a qualidade dessa via para que ela dure por muitos anos", destacou o prefeito durante a vistoria técnica no início dos trabalhos.</p>
-
-            <h2>Orientações aos Motoristas</h2>
-            <p>Durante o período de obras, o trânsito na região exigirá paciência e atenção redobrada. O Departamento de Trânsito de Araucária informa que haverá operações de "Pare e Siga" e desvios pontuais conforme o avanço das máquinas. Recomenda-se o uso de rotas alternativas, especialmente nos horários de pico, para evitar congestionamentos.</p>
-
-            <h3>Investimento no Futuro</h3>
-            <p>Além da Archelau, a prefeitura anunciou que este pacote de obras deve contemplar outras vias importantes nos próximos meses. A revitalização faz parte de um plano maior de mobilidade que visa preparar Araucária para o crescimento projetado para a próxima década.</p>
-            <p>As obras têm prazo estimado de conclusão de 90 dias, dependendo das condições climáticas.</p>
-        `,
-        imageUrl: '/images/archelau_definitiva.png?v=fixed',
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        publishDate: '2025-12-27',
-        author: 'Araucária Urgente'
-    },
-    {
-        id: 2026, // High ID to appear on top
-        title: 'Araucária Vôlei vence Juiz de Fora e dispara na liderança da Superliga B',
-        summary: 'Em noite de ginásio lotado, equipe mantém 100% de aproveitamento ao bater rival direto por 3 a 1 e fica mais perto do acesso à elite.',
-        content: `
-            <p>O sonho da elite do voleibol nacional está cada vez mais próximo. Na noite deste sábado, o <strong>Araucária Vôlei</strong> deu mais uma demonstração de força ao vencer o Juiz de Fora Vôlei por <strong>3 sets a 1</strong> (parciais de 25/18, 22/25, 25/20 e 25/21), em partida válida pela 8ª rodada da Superliga B.</p>
-            
-            <p>O confronto, realizado no Ginásio Joval de Paula Souza, colocou frente a frente o líder e um dos candidatos ao G4. Com a vitória, a equipe araucariense mantém sua invencibilidade na competição e se isola ainda mais no topo da tabela, consolidando-se como a favorita ao título.</p>
-
-            <h3>O Jogo: Domínio e Superação</h3>
-            <p>Empurrado pela torcida que lotou as arquibancadas, o time da casa começou avassalador. Com um saque forçado que desestabilizou a linha de passe mineira, o Araucária fechou o primeiro set com tranquilidade. No segundo set, o Juiz de Fora equilibrou as ações e, aproveitando alguns erros de contra-ataque dos anfitriões, conseguiu empatar a partida.</p>
-            <p>"Sabíamos que não seria fácil. Eles têm um time alto e qualificado. Mas nossa equipe teve maturidade para voltar ao jogo no terceiro set", analisou o técnico do Araucária.</p>
-
-            <h3>O "Caldeirão" Fez a Diferença</h3>
-            <p>Nos sets decisivos, o fator casa pesou. A torcida transformou o ginásio em um verdadeiro caldeirão, e o bloqueio do Araucária começou a funcionar, parando os principais atacantes adversários. O ponto da vitória veio em um ataque de fundo, levando o público ao delírio.</p>
-            
-            <h3>Rumo à Superliga A</h3>
-            <p>Com 24 pontos conquistados em 8 jogos, o Araucária Vôlei abre uma vantagem confortável para o segundo colocado. A meta agora é garantir matematicamente a classificação para as semifinais nas primeiras posições, o que daria a vantagem de decidir os playoffs em casa.</p>
-            <p>A equipe volta à quadra no próximo fim de semana, desta vez fora de casa, buscando manter a sequência histórica de vitórias.</p>
-        `,
-        imageUrl: '/images/araucaria_volei_real_final_v1.jpg',
-        category: 'Esporte',
-        categoryColor: 'green',
-        publishDate: '2025-12-27',
-        author: 'Araucária Urgente'
-    },
-    {
-        id: 2025, // High ID to ensure it appears on top
-        title: 'Novas turbinas da REPAR aumentam eficiência energética em 15%',
-        summary: 'Investimento milionário na refinaria moderniza parque industrial e reduz emissões de CO2, garantindo maior sustentabilidade para a região.',
-        content: `
-            <p>A Refinaria Presidente Getúlio Vargas (REPAR), localizada em Araucária, deu um passo significativo rumo à modernização e sustentabilidade de suas operações. Nesta semana, foram inauguradas as novas turbinas de alta eficiência energética, um investimento estratégico que promete aumentar em 15% a capacidade de geração de energia da unidade, sem elevar o consumo de combustíveis.</p>
-            
-            <h3>Tecnologia de Ponta e Sustentabilidade</h3>
-            <p>O projeto, que levou cerca de 18 meses para ser concluído, envolveu a substituição de equipamentos da década de 70 por modelos de última geração. As novas turbinas utilizam tecnologia aeroderivativa – similar à de motores de avião – que permite um aproveitamento termodinâmico muito superior.</p>
-            <p>"Não estamos falando apenas de economia financeira, mas de um ganho ambiental imensurável. Com essa eficiência, deixaremos de emitir toneladas de CO2 na atmosfera anualmente, alinhando a refinaria com as metas globais de descarbonização", explicou o gerente de engenharia da unidade.</p>
-
-            <h3>Impacto Econômico para Araucária</h3>
-            <p>O investimento na casa dos R$ 450 milhões movimentou a economia local durante a fase de instalação, gerando mais de 300 empregos diretos e indiretos para trabalhadores especializados da região. Além disso, a maior eficiência da refinaria garante maior segurança energética para todo o estado do Paraná, especialmente em períodos de alta demanda.</p>
-
-            <h3>O Futuro da Energia</h3>
-            <p>Este movimento faz parte de um plano maior de investimentos da Petrobras para o sul do país. Estão previstas ainda melhorias nas unidades de tratamento de diesel e gasolina, visando a produção de combustíveis cada vez mais limpos (S-10). Para Araucária, sediar uma das refinarias mais eficientes do país significa garantia de arrecadação (ICMS) e atração de novas indústrias satélites para o Polo Petroquímico.</p>
-            
-            <p>A cerimônia de inauguração contou com a presença de autoridades estaduais e municipais, que destacaram a importância da simbiose entre o desenvolvimento industrial e a preservação ambiental.</p>
-        `,
-        imageUrl: '/images/repar_turbines_new_final.jpg',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800',
         category: 'Economia',
         categoryColor: 'blue',
+        publishDate: '2025-12-28',
+        author: 'Redação Araucária'
+    },
+    {
+        id: 3002,
+        title: 'Parque Cachoeira terá cinema ao ar livre neste sábado',
+        summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
+        content: `
+            <p>Prepare a pipoca e a canga! Neste sábado, o Parque Cachoeira se transforma em um grande cinema a céu aberto. O projeto, totalmente gratuito, exibirá filmes infantis a partir das 19h.</p>
+            <p>A iniciativa visa ocupar os espaços públicos com cultura e lazer seguro para as famílias araucarienses.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1517604931442-710536412dad?auto=format&fit=crop&w=800',
+        category: 'Cultura',
+        categoryColor: 'yellow',
+        publishDate: '2025-12-28',
+        author: 'Cultura Viva'
+    },
+    {
+        id: 3003,
+        title: 'Hospital Municipal recebe equipamentos de última geração',
+        summary: 'Novos tomógrafos e aparelhos de raio-x digital agilizam diagnósticos na rede pública.',
+        content: `
+            <p>A saúde pública de Araucária deu um salto de qualidade. Chegaram hoje ao HMA os novos equipamentos de diagnóstico por imagem adquiridos pela prefeitura.</p>
+            <p>Com tecnologia de ponta, os novos tomógrafos reduzem o tempo de exame em 50%, zerando a fila de espera em poucas semanas.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800',
+        category: 'Saúde',
+        categoryColor: 'green',
         publishDate: '2025-12-27',
-        author: 'Araucária Urgente'
+        author: 'Saúde Agora'
+    },
+    {
+        id: 3004,
+        title: 'Escolas da rede municipal ganham hortas comunitárias',
+        summary: 'Alunos aprendem sobre sustentabilidade e alimentação saudável cultivando os próprios alimentos.',
+        content: `
+            <p>Da terra para o prato da merenda. Esse é o lema do novo projeto pedagógico implantado em 10 escolas municipais.</p>
+            <p>As hortas comunitárias são cuidadas pelos próprios alunos, que aprendem biologia e responsabilidade ambiental na prática. Os vegetais colhidos enriquecem o cardápio escolar.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
+        category: 'Educação',
+        categoryColor: 'red',
+        publishDate: '2025-12-27',
+        author: 'Educação Futuro'
+    },
+    {
+        id: 3005,
+        title: 'Araucária lidera ranking de cidades inteligentes do PR',
+        summary: 'Conectividade, semáforos inteligentes e serviços digitais colocam o município no topo.',
+        content: `
+            <p>Araucária é, oficialmente, a cidade mais inteligente da região metropolitana. O estudo nacional de Smart Cities destacou o município pela ampla cobertura de Wi-Fi gratuito e pela digitalização de 100% dos serviços públicos.</p>
+            <p>"A tecnologia serve para facilitar a vida do cidadão, e estamos no caminho certo", afirmou o prefeito.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800',
+        category: 'Tecnologia',
+        categoryColor: 'indigo',
+        publishDate: '2025-12-26',
+        author: 'Tech News'
+    },
+    {
+        id: 3006,
+        title: 'Ginásio Joval de Paula Souza será palco de final estadual',
+        summary: 'Araucária recebe as melhores equipes de vôlei do Paraná para disputa do título.',
+        content: `
+            <p>O esporte respira em Araucária. A federação confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei.</p>
+            <p>A expectativa é de casa cheia no Ginásio Joval de Paula Souza. Os ingressos serão trocados por 1kg de alimento não perecível.</p>
+        `,
+        imageUrl: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800',
+        category: 'Esporte',
+        categoryColor: 'orange',
+        publishDate: '2025-12-26',
+        author: 'Esporte News'
     },
     {
         id: 101, // ID Único Real
