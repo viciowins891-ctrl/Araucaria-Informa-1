@@ -286,10 +286,10 @@ export const newsArticles: NewsArticle[] = [
 
             <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
 
-            <h2>Impacto nos Bairros</h2>
-            <p>Embora sediado no Centro, o evento movimenta toda a cidade. Moradores de bairros populosos como Costeira e Jardim Iguaçu se deslocam para a praça, gerando fluxo intenso para o transporte por aplicativo e taxistas.</p>
+            <h2>Engajamento nos Bairros Vizinhos</h2>
+            <p>A movimentação não se restringe apenas ao Centro. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação</strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
 
-            <p>O comércio do entorno também celebra. Postos de combustíveis e lojas de conveniência registram aumento de até 30% nas vendas em dias de feira, provando que o lazer qualificado é uma poderosa alavanca para a economia local.</p>
+            <p>Para quem vem de mais longe, como do <strong>Jardim Iguaçu</strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v7.png',
         internalImageUrl: '/images/food_trucks_internal_v8.png',
