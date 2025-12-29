@@ -282,9 +282,14 @@ export const newsArticles: NewsArticle[] = [
         title: 'Feira Gastronômica traz Food Trucks e música para o Centro',
         summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
         content: `
-            <p>A Praça Central de Araucária será palco neste fim de semana de mais uma edição da Feira Gastronômica Noturna. O evento reúne dezenas de Food Trucks oferecendo desde hambúrgueres artesanais até pratos típicos da culinária polonesa, como o pierogi.</p>
-            <p>Além da gastronomia, a feira contará com apresentações musicais de artistas locais. "É uma opção de lazer acessível e segura para as famílias araucarienses", destacou o organizador.</p>
-            <p>O evento começa às 18h e vai até as 22h, com entrada gratuita.</p>
+            <p>A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana. A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
+
+            <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
+
+            <h2>Impacto nos Bairros</h2>
+            <p>Embora sediado no Centro, o evento movimenta toda a cidade. Moradores de bairros populosos como Costeira e Jardim Iguaçu se deslocam para a praça, gerando fluxo intenso para o transporte por aplicativo e taxistas.</p>
+
+            <p>O comércio do entorno também celebra. Postos de combustíveis e lojas de conveniência registram aumento de até 30% nas vendas em dias de feira, provando que o lazer qualificado é uma poderosa alavanca para a economia local.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v7.png',
         internalImageUrl: '/images/food_trucks_internal_v8.png',
