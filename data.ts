@@ -79,14 +79,14 @@ export const newsArticles: NewsArticle[] = [
         author: 'Educação Futuro'
     },
     {
-        id: 3005,
+        id: 3002,
         title: 'Araucária lidera ranking de cidades inteligentes do PR',
         summary: 'Conectividade, semáforos inteligentes e serviços digitais colocam o município no topo.',
         content: `
             <p>Araucária é, oficialmente, a cidade mais inteligente da região metropolitana. O estudo nacional de Smart Cities destacou o município pela ampla cobertura de Wi-Fi gratuito e pela digitalização de 100% dos serviços públicos.</p>
             <p>"A tecnologia serve para facilitar a vida do cidadão, e estamos no caminho certo", afirmou o prefeito.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800',
+        imageUrl: '/images/araucaria_smart_city_final_v8.png',
         category: 'Tecnologia',
         categoryColor: 'indigo',
         publishDate: '2025-12-29',
