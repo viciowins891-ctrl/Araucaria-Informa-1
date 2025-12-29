@@ -167,6 +167,7 @@ const ArticlePage: React.FC = () => {
                     if (idNum === 43) secImg = '/images/festa_junina_inner_real_final.jpg'; // Festa Junina (Interna)
                     if (idNum === 44) secImg = '/images/pioneers_homage_inner_real_final.jpg'; // Pioneiros (Interna)
                     if (idNum === 45) secImg = '/images/school_games_torch_internal.jpg'; // Jogos Escolares (Interna)
+                    if (idNum === 3002) secImg = '/images/cinema_lion.png'; // Cinema (Interna - Rei Leão)
 
 
                     setSecondaryImage(secImg);
