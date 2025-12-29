@@ -110,8 +110,16 @@ export const newsArticles: NewsArticle[] = [
         title: 'Ginásio Joval de Paula Souza será palco de final estadual',
         summary: 'Araucária recebe as melhores equipes de vôlei do Paraná para disputa do título.',
         content: `
-            <p>O esporte respira em Araucária. A federação confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei.</p>
-            <p>A expectativa é de casa cheia no Ginásio Joval de Paula Souza. Os ingressos serão trocados por 1kg de alimento não perecível.</p>
+            <p>O esporte respira em Araucária. A Federação Paranaense confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei, consolidando o município como referência na organização de grandes eventos esportivos.</p>
+            
+            <p>As partidas, que reunirão as quatro melhores equipes do estado, prometem lotar o Ginásio Joval de Paula Souza. A expectativa da organização é receber mais de 2.000 torcedores por dia. "A estrutura do ginásio foi totalmente revitalizada para oferecer conforto e segurança às famílias", destaca o diretor de esportes.</p>
+
+            <p>Além do espetáculo em quadra, o evento tem um forte cunho social. Os ingressos serão solidários, trocados por 1kg de alimento não perecível, que será destinado ao Programa de Segurança Alimentar do município.</p>
+
+            <h2>Movimento nos Bairros Vizinhos</h2>
+            <p>A realização de um evento deste porte traz reflexos imediatos para além das quadras. Bairros no entorno do ginásio, como o Centro e o Fazenda Velha, preparam-se para um final de semana atípico e lucrativo.</p>
+            
+            <p>Donos de lanchonetes, postos de gasolina e pequenos comércios locais já reforçaram seus estoques prevendo o aumento do fluxo de visitantes. A circulação de torcedores de outras cidades também movimenta a rede hoteleira e gastronômica, injetando capital novo na economia local e valorizando o potencial turístico-esportivo de Araucária.</p>
         `,
         imageUrl: '/images/gym_volleyball_final_cover_v5.png',
         category: 'Esporte',
