@@ -75,6 +75,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
         category: 'Educação',
         categoryColor: 'red',
+        internalImageUrl: '/images/school_garden_internal_final_v5.png',
         publishDate: '2025-12-29',
         author: 'Educação Futuro'
     },
