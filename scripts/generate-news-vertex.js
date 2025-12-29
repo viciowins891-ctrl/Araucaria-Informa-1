@@ -30,113 +30,112 @@ function loadEnv() {
 const env = loadEnv();
 const supabaseUrl = env['VITE_SupabaseUrl'];
 const supabaseKey = env['VITE_SupabaseKey'];
+const geminiApiKey = env['VITE_GEMINI_API_KEY'] || env['GOOGLE_API_KEY'];
 
 if (!supabaseUrl || !supabaseKey) {
     console.error("❌ ERRO: Credenciais do Supabase não encontradas.");
     process.exit(1);
 }
 
-// Configuração do Cliente
+if (!geminiApiKey) {
+    console.error("❌ ERRO: Chave da API do Gemini (VITE_GEMINI_API_KEY) não encontrada.");
+    process.exit(1);
+}
+
+// Configuração dos Clientes
+import { GoogleGenerativeAI } from '@google/generative-ai';
+const genAI = new GoogleGenerativeAI(geminiApiKey);
 const supabase = createClient(supabaseUrl, supabaseKey, {
     auth: { persistSession: false }
 });
 
-// --- BANCO DE NOTÍCIAS (SIMULAÇÃO) ---
-const bank = [
-    {
-        title: "Araucária registra queda histórica no desemprego",
-        category: "Economia",
-        summary: "Novas indústrias e comércio fortalecido geram mais de 2.000 vagas no último trimestre.",
-        content: "<p>A economia de Araucária vive um momento de ouro. Dados do CAGED divulgados hoje mostram que o município registrou o menor índice de desemprego dos últimos 5 anos.</p><p>O setor de serviços e a expansão do polo industrial foram os grandes responsáveis pelo resultado.</p>",
-        imgKeyword: "industry"
-    },
-    {
-        title: "Parque Cachoeira terá cinema ao ar livre neste sábado",
-        category: "Cultura",
-        summary: "Projeto 'Cine Família' traz clássicos da animação para telão gigante no parque.",
-        content: "<p>Prepare a pipoca! Neste sábado, o Parque Cachoeira se transforma em um cinema a céu aberto. O projeto exibirá filmes infantis a partir das 19h.</p>",
-        imgKeyword: "outdoor cinema park"
-    },
-    {
-        title: "Hospital Municipal recebe equipamentos de última geração",
-        category: "Saúde",
-        summary: "Novos tomógrafos e aparelhos digitais agilizam diagnósticos na rede pública.",
-        content: "<p>A saúde pública de Araucária deu um salto de qualidade. Chegaram hoje ao HMA os novos equipamentos de diagnóstico por imagem adquiridos pela prefeitura.</p>",
-        imgKeyword: "hospital technology"
-    },
-    {
-        title: "Escolas municipais ganham hortas comunitárias",
-        category: "Educação",
-        summary: "Alunos aprendem sobre sustentabilidade cultivando os próprios alimentos.",
-        content: "<p>Da terra para o prato. Esse é o lema do novo projeto pedagógico implantado em 10 escolas municipais. As hortas são cuidadas pelos próprios alunos.</p>",
-        imgKeyword: "gardening school"
-    },
-    {
-        title: "Araucária lidera ranking de cidades inteligentes",
-        category: "Tecnologia",
-        summary: "Conectividade e serviços digitais colocam o município no topo.",
-        content: "<p>Araucária é destaque em tecnologia. O estudo nacional destacou a ampla cobertura de Wi-Fi gratuito e a digitalização dos serviços públicos.</p>",
-        imgKeyword: "smart city"
-    },
-    {
-        title: "Ginásio Joval de Paula Souza terá final estadual",
-        category: "Esporte",
-        summary: "Cidade recebe as melhores equipes de vôlei do Paraná.",
-        content: "<p>O esporte respira em Araucária. A federação confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei.</p>",
-        imgKeyword: "volleyball match"
-    },
-    {
-        title: "Feira de Adoção Pet é sucesso no fim de semana",
-        category: "Cidade",
-        summary: "Dezenas de animais encontraram um novo lar no evento promovido pela prefeitura.",
-        content: "<p>O evento de adoção responsável superou as expectativas. Famílias inteiras compareceram ao parque para levar um novo amigo para casa.</p>",
-        imgKeyword: "puppy adoption"
-    }
-];
-
-// Imagens estáticas confiáveis (Unsplash IDs diretos)
-const imageMap = {
-    "industry": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800",
-    "outdoor cinema park": "https://images.unsplash.com/photo-1517604931442-710536412dad?auto=format&fit=crop&w=800",
-    "hospital technology": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800",
-    "gardening school": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800",
-    "smart city": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800",
-    "volleyball match": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800",
-    "puppy adoption": "https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=800"
+// Banco de Imagens para Fallback/Contexto
+const IMAGE_DB = {
+    'Política': 'https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&q=80&w=1000',
+    'Economia': 'https://images.unsplash.com/photo-1611974765270-ca1258822981?auto=format&fit=crop&q=80&w=1000',
+    'Segurança': 'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000',
+    'Trânsito': 'https://images.unsplash.com/photo-1569629743817-70d8db6c323b?auto=format&fit=crop&q=80&w=1000',
+    'Meio ambiente': 'https://images.unsplash.com/photo-1542601906990-24d4c16419d0?auto=format&fit=crop&q=80&w=1000',
+    'Clima': 'https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80&w=1000',
+    'Tecnologia': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000',
+    'Educação': 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000',
+    'Saúde': 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=1000',
+    'Esporte': 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&q=80&w=1000',
+    'Cultura': 'https://images.unsplash.com/photo-1514525253440-b393452e3383?auto=format&fit=crop&q=80&w=1000',
+    'Cidade': 'https://images.unsplash.com/photo-1449824913929-2b3a3e36e65b?auto=format&fit=crop&q=80&w=1000',
+    'Geral': 'https://images.unsplash.com/photo-1449824913929-2b3a3e36e65b?auto=format&fit=crop&q=80&w=1000'
 };
 
+function getImageForCategory(category) {
+    return IMAGE_DB[category] || IMAGE_DB['Geral'];
+}
+
 async function generateNews() {
-    console.log("\n🚀 Iniciando atualização de notícias (Com Cross-Fetch)...");
+    console.log("\n🤖 Conectando ao Google Gemini...");
 
-    // Embaralha para pegar aleatórias se o banco crescer
-    const newsList = bank;
+    try {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    for (const news of newsList) {
-        console.log(`\n📰 Processando: ${news.title}`);
+        const prompt = `
+            Você é um jornalista investigativo local de Araucária, Paraná.
+            Gere 3 (TRÊS) notícias urgentes, inéditas e realistas sobre a cidade.
+            
+            REGRAS OBRIGATÓRIAS:
+            1. NÃO use temas genéricos como "dia da árvore" ou "feira de ciências" simples.
+            2. Invente fatos concretos: nomes de ruas reais (Av. Victor do Amaral, Rodovia do Xisto), nomes de bairros reais (Costeira, Centro, Capela Velha).
+            3. Varie os sentimentos: uma notícia boa (avanço, inauguração), uma de alerta (trânsito, clima) e uma curiosidade ou cultura.
+            4. Responda ESTRITAMENTE como um JSON puro (Array de Objetos), sem markdown, sem code blocks.
 
-        const imageUrl = imageMap[news.imgKeyword] || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800";
+            Formato do JSON:
+            [
+                { 
+                    "title": "Título Impactante", 
+                    "summary": "Resumo curto e direto para a home.", 
+                    "content": "<p>Primeiro parágrafo detalhado com local e data.</p><p>Segundo parágrafo com citações fictícias de autoridades ou moradores.</p>", 
+                    "category": "Escolha entre: Economia, Política, Segurança, Cidade, Esporte, Cultura, Saúde, Trânsito" 
+                }
+            ]
+        `;
 
-        // Gera ID único grande para aparecer no topo
-        const fakeId = Math.floor(Date.now() / 1000) + Math.floor(Math.random() * 1000);
+        console.log("📡 Solicitando pauta à IA...");
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        let text = response.text();
 
-        const { error } = await supabase.from('news').insert({
-            title: news.title,
-            summary: news.summary,
-            content: news.content,
-            category: news.category,
-            category_color: 'blue',
-            image_url: imageUrl,
-            publish_date: new Date().toISOString(),
-            author: 'Redação Araucária'
-        });
+        // Limpeza do JSON (caso a IA mande markdown)
+        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
 
-        if (error) {
-            console.error(`❌ Erro ao salvar: ${error.message}`);
-        } else {
-            console.log(`💾 Publicada com sucesso!`);
+        const newsList = JSON.parse(text);
+
+        console.log(`\n✅ Recebidas ${newsList.length} notícias. Publicando no Supabase...`);
+
+        for (const news of newsList) {
+            console.log(`\n📰 Processando: ${news.title}`);
+            const imageUrl = getImageForCategory(news.category);
+
+            const { error } = await supabase.from('news').insert({
+                title: news.title,
+                summary: news.summary,
+                content: news.content,
+                category: news.category,
+                category_color: 'blue', // Poderia ser dinâmico, mas 'blue' é safe
+                image_url: imageUrl,
+                publish_date: new Date().toISOString(),
+                author: 'Redação IA'
+            });
+
+            if (error) {
+                console.error(`❌ Erro ao salvar no banco: ${error.message}`);
+            } else {
+                console.log(`💾 Publicada com sucesso!`);
+            }
         }
+
+        console.log("\n🎉 Processo finalizado com sucesso!");
+
+    } catch (error) {
+        console.error("❌ Falha crítica na geração:", error);
     }
-    console.log("\n🎉 Processo finalizado!");
 }
 
 generateNews();
