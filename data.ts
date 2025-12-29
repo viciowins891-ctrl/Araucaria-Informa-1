@@ -36,7 +36,7 @@ export const newsArticles: NewsArticle[] = [
         author: 'Redação Araucária'
     },
     {
-        id: 3002,
+        id: 3005,
         title: 'Parque Cachoeira terá cinema ao ar livre neste sábado',
         summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
         content: `
