@@ -287,7 +287,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O evento começa às 18h e vai até as 22h, com entrada gratuita.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v7.png',
-        internalImageUrl: '/images/food_trucks_final_v6.png',
+        internalImageUrl: '/images/food_trucks_internal_v8.png',
         category: 'Lazer',
         categoryColor: 'yellow',
         publishDate: getPastDate(1),
