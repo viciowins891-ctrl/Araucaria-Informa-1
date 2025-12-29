@@ -286,10 +286,9 @@ export const newsArticles: NewsArticle[] = [
 
             <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
 
-            <h2>Engajamento nos Bairros Vizinhos</h2>
-            <p>A movimentação não se restringe apenas ao Centro. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação</strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
+            <p>A movimentação não se restringe apenas ao Centro. Bairros vizinhos como Fazenda Velha, Estação e Vila Nova sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
 
-            <p>Para quem vem de mais longe, como do <strong>Jardim Iguaçu</strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
+            <p>Para quem vem de mais longe, como do Jardim Iguaçu ou Costeira, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v7.png',
         internalImageUrl: '/images/food_trucks_internal_v8.png',
