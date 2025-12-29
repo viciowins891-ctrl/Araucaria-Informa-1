@@ -32,7 +32,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800',
         category: 'Economia',
         categoryColor: 'blue',
-        publishDate: '2025-12-28',
+        publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Redação Araucária'
     },
     {
@@ -46,7 +46,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1517604931442-710536412dad?auto=format&fit=crop&w=800',
         category: 'Cultura',
         categoryColor: 'yellow',
-        publishDate: '2025-12-28',
+        publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Cultura Viva'
     },
     {
@@ -60,7 +60,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800',
         category: 'Saúde',
         categoryColor: 'green',
-        publishDate: '2025-12-27',
+        publishDate: '2025-12-29',
         author: 'Saúde Agora'
     },
     {
@@ -74,7 +74,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
         category: 'Educação',
         categoryColor: 'red',
-        publishDate: '2025-12-27',
+        publishDate: '2025-12-29',
         author: 'Educação Futuro'
     },
     {
@@ -88,7 +88,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800',
         category: 'Tecnologia',
         categoryColor: 'indigo',
-        publishDate: '2025-12-26',
+        publishDate: '2025-12-29',
         author: 'Tech News'
     },
     {
@@ -102,7 +102,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800',
         category: 'Esporte',
         categoryColor: 'orange',
-        publishDate: '2025-12-26',
+        publishDate: '2025-12-29',
         author: 'Esporte News'
     },
     {
