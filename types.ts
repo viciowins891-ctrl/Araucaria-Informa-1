@@ -12,6 +12,7 @@ export interface NewsArticle {
     sourceUrl?: string; // Link original da notícia (Google Search Grounding)
     sourceName?: string; // Nome do site original
     internalImageUrl?: string; // Imagem específica para o corpo da notícia (Secondary Image)
+    mobileImageUrl?: string; // Imagem específica para dispositivos móveis (Capa Mobile)
 }
 
 export interface Event {
