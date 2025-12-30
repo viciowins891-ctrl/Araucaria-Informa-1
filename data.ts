@@ -33,7 +33,7 @@ export const newsArticles: NewsArticle[] = [
 
             <p>Lojistas da Avenida Archelau já sentem a diferença no movimento, impulsionado pelo aumento do poder de compra das famílias. O ciclo virtuoso se fecha com o setor de serviços, que tem aberto novas frentes de trabalho para atender a essa demanda crescente.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800',
+        imageUrl: '/images/employment_drop_new_cover.png',
         category: 'Economia',
         categoryColor: 'blue',
         internalImageUrl: '/images/araucaria_employment_internal_final_v5.png',
@@ -148,7 +148,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.',
         content: `
             <p>Um marco histórico para a educação de Araucária. A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil (CMEIs) foi totalmente zerada.</p>
-            <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária de educação.</p>
+            
+            <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária.</p>
+
+            <h2>Alívio no Califórnia e Tupy</h2>
+            <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como **Califórnia** e **Tupy**. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
         `,
         imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
         category: 'Educação',
@@ -163,7 +167,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Previsão orçamentária aponta crescimento na arrecadação e maiores investimentos em obras e saúde.',
         content: `
             <p>A Lei Orçamentária Anual (LOA) discutida na Câmara Municipal projeta um orçamento recorde de aproximadamente R$ 2,3 bilhões para Araucária em 2026.</p>
+            
             <p>A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária, como a duplicação de avenidas importantes e a construção do novo hospital.</p>
+
+            <h2>Obras no Industrial e Thomaz Coelho</h2>
+            <p>Entre os destaques, está a revitalização asfáltica de vias arteriais no **Jardim Industrial** e **Thomaz Coelho**. A previsão é que as obras melhorem a fluidez do trânsito para quem se desloca diariamente para a capital. Além disso, recursos foram alocados para a reforma de UBSs no **Tindiquera**, atendendo a uma demanda antiga da comunidade.</p>
         `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Economia',
@@ -178,7 +186,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Nova agência no centro unifica mais de 240 serviços estaduais e facilita a vida do cidadão.',
         content: `
             <p>Foi inaugurada oficialmente a primeira unidade de rua do Poupatempo no Paraná, localizada em Araucária. O espaço moderno facilita a vida do cidadão, permitindo emitir documentos como RG e CNH, além de solicitar serviços da Copel e Sanepar em um único lugar.</p>
+            
             <p>"É o fim da burocracia e das filas. O cidadão resolve tudo em um só lugar", destacou o governador Ratinho Jr durante a cerimônia.</p>
+
+            <h2>Facilidade para a Zona Rural</h2>
+            <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como **Guajuvira** e **Roça Nova**. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
         `,
         imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
         category: 'Cidade',
@@ -193,7 +205,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Recursos anunciados pelo Governo Federal serão aplicados na saúde e educação.',
         content: `
             <p>Em visita oficial, representantes do Governo Federal anunciaram um pacote de investimentos para Araucária. Serão R$ 2,8 milhões destinados à Saúde e R$ 18 milhões para a Educação, focados na ampliação da rede física de atendimento.</p>
+            
             <p>Os recursos devem ser liberados já no início do próximo semestre, acelerando obras paradas e equipando novas unidades.</p>
+
+            <h2>Melhorias no Capela Velha</h2>
+            <p>Parte significativa dos R$ 18 milhões será destinada à ampliação de escolas no bairro **Capela Velha**, uma das regiões que mais cresce na cidade. A construção de novas salas de aula e quadras poliesportivas promete transformar a realidade escolar local, oferecendo infraestrutura de ponta para centenas de alunos.</p>
         `,
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
         category: 'Política',
@@ -208,7 +224,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Ação realizada nesta semana marca o combate efetivo ao tráfico em Araucária.',
         content: `
             <p>A Polícia Civil do Paraná (PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária.</p>
+            
             <p>O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões. Todo o material foi destruído em fornos industriais com autorização judicial.</p>
+
+            <h2>Segurança no Campina da Barra</h2>
+            <p>A operação teve foco especial em pontos críticos denunciados pela comunidade do **Campina da Barra**. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
         `,
         imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
         category: 'Segurança',
@@ -223,7 +243,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Saúde inicia imunização para proteger recém-nascidos de infecções graves.',
         content: `
             <p>A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes. A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.</p>
-            <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município.</p>
+            
+            <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município para o público-alvo.</p>
+
+            <h2>Adesão no CSU e Boqueirão</h2>
+            <p>As UBSs do **CSU** e **Boqueirão** registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do Boqueirão.</p>
         `,
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Saúde',
@@ -238,7 +262,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Apresentação "Um Conto de Natal" reuniu centenas de pessoas no fim de semana.',
         content: `
             <p>O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro. O evento contou com coral infantil e orquestra, emocionando o público presente.</p>
-            <p>Novas apresentações estão programas para o próximo fim de semana na Praça da Matriz.</p>
+            
+            <p>Novas apresentações estão programadas para o próximo fim de semana na Praça da Matriz.</p>
+
+            <h2>Turismo Regional</h2>
+            <p>O evento atraiu não apenas moradores do Centro, mas caravanas de bairros como **Iguaçu** e **Estação**. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
         `,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         category: 'Cultura',
@@ -253,7 +281,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Após tempestade, Copel atua para religar 21 unidades consumidoras ainda sem luz.',
         content: `
             <p>O ciclone extratropical que atingiu a região sul nos últimos dias deixou estragos pontuais em Araucária. Segundo boletim da Copel, cerca de 21 unidades consumidoras permaneciam sem energia nesta manhã.</p>
+            
             <p>Equipes de emergência estão nas ruas para remover galhos de árvores sobre a fiação e normalizar o serviço o mais rápido possível.</p>
+
+            <h2>Jardim Turim Afetado</h2>
+            <p>Os ventos fortes causaram quedas de árvores principalmente na região do **Jardim Turim** e **Shangri-lá**. Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>
         `,
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         category: 'Cidade',
@@ -268,7 +300,11 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Prefeitura anuncia revitalização completa do complexo esportivo no Parque Cachoeira.',
         content: `
             <p>Um dos principais palcos do esporte araucariense, o Ginásio Joval de Paula Souza, passará por uma ampla reforma. O anúncio foi feito pela Secretaria de Esporte e Lazer, que prevê melhorias no piso da quadra, vestiários e cobertura.</p>
-            <p>As obras devem começar no próximo mês e visam oferecer mais conforto e segurança para atletas e torcedores. O ginásio ficará fechado durante o período de intervenção, com atividades remanejadas para outros locais.</p>
+            
+            <p>As obras devem começar no próximo mês e visam oferecer mais conforto e segurança para atletas e torcedores.</p>
+
+            <h2>Alternativa para Atletas</h2>
+            <p>Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do **Parque Cachoeira** e **Centro** serão transferidas temporariamente para ginásios no **Fazenda Velha**. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>
         `,
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
         category: 'Esporte',
@@ -290,11 +326,11 @@ export const newsArticles: NewsArticle[] = [
 
             <p>Para quem vem de mais longe, como do Jardim Iguaçu ou Costeira, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
-        imageUrl: '/images/food_trucks_cover_v7.png',
-        internalImageUrl: '/images/food_trucks_internal_v8.png',
+        imageUrl: '/images/food_trucks_cover_v26.png',
+        internalImageUrl: '/images/food_trucks_internal_v26.png',
         category: 'Lazer',
         categoryColor: 'yellow',
-        publishDate: getPastDate(1),
+        publishDate: getPastDate(0), // Atualizado para hoje para garantir visibilidade
         author: 'Guia Curitiba'
     },
     {
@@ -816,7 +852,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Em uma partida eletrizante, o Araucária Vôlei derrotou o time de Blumenau por 3 sets a 1 e manteve a liderança isolada da Superliga B. O ginásio estava lotado e a torcida empurrou o time em cada ponto.</p>
             <p>O próximo desafio será fora de casa, contra o vice-líder, valendo a ponta da tabela.</p>
         `,
-        imageUrl: '/images/araucaria_volei_cover_final.webp',
+        imageUrl: '/images/araucaria_volei_new_final.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         internalImageUrl: '/images/araucaria_volei_inner_final.png',
