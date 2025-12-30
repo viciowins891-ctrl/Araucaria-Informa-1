@@ -76,6 +76,7 @@ const Header: React.FC = () => {
                         <NavItem to="/eventos">Eventos</NavItem>
                         <NavItem to="/vagas">Vagas</NavItem>
                         <NavItem to="/comercio">Comércio</NavItem>
+                        <NavItem to="/telefones-uteis">Telefones Úteis</NavItem>
                         <NavItem to="/historia">História</NavItem>
                     </div>
 
