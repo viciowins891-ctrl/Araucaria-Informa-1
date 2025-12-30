@@ -59,22 +59,17 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
         <div className="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full hover:-translate-y-1">
             <Link to={`/noticias/${article.id}`} className="block relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800 cursor-pointer">
                 {!hasError ? (
-                    <picture className="w-full h-full block">
-                        {article.mobileImageUrl && (
-                            <source media="(max-width: 768px)" srcSet={article.mobileImageUrl} />
-                        )}
-                        <img
-                            alt={article.title}
-                            className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                            src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
-                            loading="lazy"
-                            width="400"
-                            height="250"
-                            onLoad={() => setImageLoaded(true)}
-                            onError={handleError}
-                            referrerPolicy="no-referrer"
-                        />
-                    </picture>
+                    <img
+                        alt={article.title}
+                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
+                        loading="lazy"
+                        width="400"
+                        height="250"
+                        onLoad={() => setImageLoaded(true)}
+                        onError={handleError}
+                        referrerPolicy="no-referrer"
+                    />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 flex-col gap-2">
                         <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
