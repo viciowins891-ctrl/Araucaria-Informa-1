@@ -181,7 +181,7 @@ const ArticlePage: React.FC = () => {
                 <img
                     src={article.title.toLowerCase().includes('archelau') ? '/images/archelau_definitiva.png' : (imgSrc || FALLBACK_IMAGE)}
                     alt={article.title}
-                    className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
+                    className="w-full h-full object-contain md:object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                 />
