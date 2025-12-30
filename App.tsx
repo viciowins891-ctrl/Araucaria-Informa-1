@@ -32,9 +32,9 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 // Páginas Legais e de Suporte
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
-const CheckContactPage = lazy(() => import('./pages/ContactPage')); // Typo fix in thought trace, strictly following file content
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const AdvertisePage = lazy(() => import('./pages/AdvertisePage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 
 // Página Secreta de Administração
 const AdminGeneratorPage = lazy(() => import('./pages/AdminGeneratorPage'));
@@ -82,6 +82,7 @@ const Layout: React.FC = () => {
                         <Route path="/newsletter" element={<NewsletterPage />} />
 
                         {/* Rotas Legais */}
+                        <Route path="/telefones-uteis" element={<ServicesPage />} />
                         <Route path="/privacidade" element={<PrivacyPolicyPage />} />
                         <Route path="/termos" element={<TermsPage />} />
                         <Route path="/contato" element={<ContactPage />} />
