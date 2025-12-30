@@ -39,6 +39,8 @@ const ArticlePage: React.FC = () => {
                     setArticle(currentArticle);
 
                     // Set Main Hero Image (Cover) - Directly from Data Source
+                    // Set Main Hero Image (Cover) - Directly from Data Source
+                    // Initial set (will be overridden by responsive effect if mobile)
                     setImgSrc(currentArticle.imageUrl);
                     setImageError(false);
 
@@ -88,6 +90,28 @@ const ArticlePage: React.FC = () => {
         fetchArticleAndRelated();
         window.scrollTo(0, 0);
     }, [id]);
+
+    // Responsive Image Switcher (Forces Mobile Image if available)
+    useEffect(() => {
+        if (!article) return;
+
+        const updateImageSource = () => {
+            // Check if mobile (md breakpoint is 768px)
+            const isMobile = window.innerWidth < 768;
+
+            if (isMobile && article.mobileImageUrl) {
+                // Force Mobile Image
+                setImgSrc(article.mobileImageUrl);
+            } else {
+                // Revert/Keep Desktop Image
+                setImgSrc(article.imageUrl);
+            }
+        };
+
+        updateImageSource();
+        window.addEventListener('resize', updateImageSource);
+        return () => window.removeEventListener('resize', updateImageSource);
+    }, [article]);
 
     // Reading Progress Listener
     useEffect(() => {
@@ -175,6 +199,7 @@ const ArticlePage: React.FC = () => {
                 <meta property="twitter:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
             </Helmet>
 
+            {/* Hero Section */}
             {/* Hero Section */}
             <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700 z-10"></div>
@@ -362,7 +387,7 @@ const ArticlePage: React.FC = () => {
                     )}
                 </div>
             </div>
-        </article>
+        </article >
     );
 };
 
