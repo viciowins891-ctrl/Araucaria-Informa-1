@@ -965,7 +965,7 @@ export const events: Event[] = [
         id: 2,
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
-        imageUrl: '/images/food_trucks_cover_new_final.png?v=final_fix_v5',
+        imageUrl: '/images/feira_gastronomica_event_cover.jpg',
         date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
         time: '18:00 - 22:00',
         location: 'Praça Central'
