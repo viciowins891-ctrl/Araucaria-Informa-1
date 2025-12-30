@@ -155,25 +155,53 @@ export const api = {
 
     getEvents: async (): Promise<Event[]> => {
         try {
+            let eventsList: Event[] = [];
             const supabase = await getSupabase();
             const { data, error } = await supabase
                 .from('events')
                 .select('*')
                 .order('date', { ascending: true });
 
-            // Fallback para Eventos
-            if (error || !data || data.length === 0) {
+            if (!error && data && data.length > 0) {
+                eventsList = data.map((e: any) => ({
+                    ...e,
+                    imageUrl: e.image_url
+                }));
+            } else {
+                // Fallback para Eventos Estáticos
                 const { events } = await import('../data');
-                return events;
+                eventsList = events;
             }
 
-            return (data || []).map((e: any) => ({
-                ...e,
-                imageUrl: e.image_url
-            }));
+            // Filtragem de Eventos Passados
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            return eventsList.filter(event => {
+                let eventDate: Date;
+
+                // Suporte para formatos ISO (YYYY-MM-DD) e BR (DD/MM/YYYY)
+                if (event.date.includes('-')) {
+                    const [year, month, day] = event.date.split('-').map(Number);
+                    eventDate = new Date(year, month - 1, day);
+                } else {
+                    const [day, month, year] = event.date.split('/').map(Number);
+                    eventDate = new Date(year, month - 1, day);
+                }
+
+                // Mantém apenas eventos de hoje ou futuros
+                return eventDate >= today;
+            });
+
         } catch (e) {
             const { events } = await import('../data');
-            return events;
+            // Mesma lógica de filtro para o catch
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            return events.filter(event => {
+                const [day, month, year] = event.date.split('/').map(Number);
+                return new Date(year, month - 1, day) >= today;
+            });
         }
     },
 

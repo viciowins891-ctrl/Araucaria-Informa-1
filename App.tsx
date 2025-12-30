@@ -23,6 +23,7 @@ const ArticlePage = lazy(() => import('./pages/ArticlePage'));
 const EventsPage = lazy(() => import('./pages/EventsPage'));
 const EventDetailsPage = lazy(() => import('./pages/EventDetailsPage'));
 const CommercePage = lazy(() => import('./pages/CommercePage'));
+const JobsPage = lazy(() => import('./pages/JobsPage'));
 const HistoryPage = lazy(() => import('./pages/HistoryPage'));
 const NewsletterPage = lazy(() => import('./pages/NewsletterPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -75,6 +76,7 @@ const Layout: React.FC = () => {
                         <Route path="/eventos" element={<EventsPage />} />
                         <Route path="/eventos/:id" element={<EventDetailsPage />} />
                         <Route path="/comercio" element={<CommercePage />} />
+                        <Route path="/vagas" element={<JobsPage />} />
                         <Route path="/historia" element={<HistoryPage />} />
                         <Route path="/quem-somos" element={<AboutPage />} />
                         <Route path="/newsletter" element={<NewsletterPage />} />

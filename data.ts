@@ -996,6 +996,24 @@ export const events: Event[] = [
         date: getUpcomingDate(14),
         time: '15:30',
         location: 'Estádio Municipal'
+    },
+    {
+        id: 6,
+        title: 'Exposição de Flores da Primavera (Exemplo Futuro)',
+        description: 'Um espetáculo de cores e aromas com produtores locais de flores e plantas ornamentais.',
+        imageUrl: '/images/araucaria_park_real.webp',
+        date: '25/09/2026',
+        time: '09:00 - 18:00',
+        location: 'Parque Cachoeira'
+    },
+    {
+        id: 7,
+        title: 'Corrida de Rua de Araucária (Exemplo Futuro)',
+        description: 'Desafio de 5km e 10km pelas ruas da cidade. Inscrições abertas!',
+        imageUrl: '/images/araucaria_smart_city.webp',
+        date: '15/11/2026',
+        time: '07:00 (Largada)',
+        location: 'Praça da Bíblia'
     }
 ];
 

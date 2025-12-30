@@ -74,6 +74,7 @@ const Header: React.FC = () => {
                         <NavItem to="/">Início</NavItem>
                         <NavItem to="/noticias">Notícias</NavItem>
                         <NavItem to="/eventos">Eventos</NavItem>
+                        <NavItem to="/vagas">Vagas</NavItem>
                         <NavItem to="/comercio">Comércio</NavItem>
                         <NavItem to="/historia">História</NavItem>
                     </div>
@@ -130,8 +131,9 @@ const Header: React.FC = () => {
                     <div className="px-4 py-4 space-y-2 flex flex-col">
                         <NavItem to="/" onClick={() => setIsMobileMenuOpen(false)}>Início</NavItem>
                         <NavItem to="/noticias" onClick={() => setIsMobileMenuOpen(false)}>Notícias</NavItem>
-                        <NavItem to="/eventos" onClick={() => setIsMobileMenuOpen(false)}>Eventos</NavItem>
-                        <NavItem to="/comercio" onClick={() => setIsMobileMenuOpen(false)}>Comércio</NavItem>
+                        <NavItem to="/eventos">Eventos</NavItem>
+                        <NavItem to="/vagas">Vagas</NavItem>
+                        <NavItem to="/comercio">Comércio</NavItem>
                         <NavItem to="/historia" onClick={() => setIsMobileMenuOpen(false)}>História</NavItem>
 
                         <hr className="border-white/10 my-2" />
