@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
                     </form>
                 </div>
 
-                <div className="flex flex-col justify-center space-y-8">
+                <div className="flex flex-col justify-start space-y-8">
                     <div>
                         <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 mb-6">
                             Fale com a Gente
