@@ -61,8 +61,8 @@ const Header: React.FC = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <NavLink className="flex items-center gap-2 group z-50 relative" to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 overflow-hidden p-0.5 border-2 border-white/20">
-                            <img src="/images/brasao_araucaria.jpg" alt="Brasão Araucária" className="w-full h-full object-cover" />
+                        <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 overflow-hidden p-1">
+                            <img src="/logo-tree.png" alt="Logo Araucária Informa" className="w-full h-full object-contain" />
                         </div>
                         <span className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight">
                             Araucária<span className="font-light text-blue-200">Informa</span>
