@@ -458,7 +458,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Com a expansão, o número de leitos de internação infantil passou de 15 para 30. Além disso, foram adquiridos novos equipamentos de monitoramento vital e respiradores específicos para o público pediátrico.</p>
             <p>"Saúde é prioridade. Nossas crianças merecem o melhor atendimento possível, sem precisar se deslocar para Curitiba", destacou a direção do hospital.</p>
         `,
-        imageUrl: '/images/custom_hospital_official.webp', // Foto Oficial Inauguração (Corte Fita)
+        imageUrl: '/images/hma_pediatria_cover_v2.png', // Foto Oficial Inauguração (Corte Fita) v2
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/hospital_pediatric_ward_interior.png',
