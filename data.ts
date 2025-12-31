@@ -410,7 +410,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além da pavimentação exclusiva para bicicletas, o projeto inclui iluminação específica e sinalização reforçada nos cruzamentos. A previsão é que as obras sejam concluídas em 4 meses.</p>
             <p>A iniciativa faz parte do Plano de Mobilidade Urbana, que visa reduzir o tráfego de veículos pesados e incentivar o transporte ativo.</p>
         `,
-        imageUrl: '/images/ciclovia_industrial.webp',
+        imageUrl: '/images/ciclovia_industrial_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         internalImageUrl: '/images/new_bike_path_industrial.png',
