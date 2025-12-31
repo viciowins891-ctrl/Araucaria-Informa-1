@@ -653,9 +653,9 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária recebe etapa do Campeonato Paranaense de Futsal',
         summary: 'Ginásio Joval de Paula Souza será palco de grandes jogos neste fim de semana.',
         content: `
-            <p> A torcida araucariense tem um encontro marcado neste fim de semana.A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
-                <p> A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
-                    `,
+            <p>A torcida araucariense tem um encontro marcado neste fim de semana. A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
+            <p>A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
+        `,
         imageUrl: 'https://images.unsplash.com/photo-1518611507436-e92e60832012?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
         categoryColor: 'green',
