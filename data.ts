@@ -88,14 +88,23 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 3004,
         title: 'Escolas da rede municipal ganham hortas comunitárias',
-        summary: 'Alunos aprendem sobre sustentabilidade e alimentação saudável cultivando os próprios alimentos.',
+        summary: 'Projeto "Sementes do Futuro" transforma pátios escolares em salas de aula vivas, envolvendo mais de 3.000 alunos e famílias de diversos bairros.',
         content: `
-            <p>Da terra para o prato da merenda. Esse é o lema do projeto "Sementes do Futuro", já implantado em 10 escolas municipais de Araucária. A iniciativa transforma pátios ociosos em salas de aula a céu aberto, onde alunos aprendem na prática sobre ciclos naturais, biologia e responsabilidade ambiental.</p>
+            <p>Da terra para o prato da merenda. Esse é o lema do projeto "Sementes do Futuro", que acaba de completar seis meses de atividades e já transformou a rotina de dez escolas municipais de Araucária. A iniciativa, que converte pátios ociosos em salas de aula a céu aberto, está ensinando na prática sobre ciclos naturais, biologia e responsabilidade ambiental para mais de 3.000 alunos da rede pública.</p>
             
-            <p>Os vegetais colhidos — alface, tomate, cenoura e temperos — vão direto para a cozinha da escola, enriquecendo o cardápio com alimentos frescos e livres de agrotóxicos. "As crianças comem com mais gosto o que elas mesmas plantaram", relata uma nutricionista da rede.</p>
+            <p>O projeto começou como um piloto no <strong>Jardim Tupy</strong>, mas o sucesso foi tão imediato que a Secretaria de Educação expandiu rapidamente para unidades no <strong>Jardim Iguaçu</strong> e na <strong>Costeira</strong>. "O que antes era apenas um gramado sem uso ou um canto de terra batida, hoje produz alface, tomate, cenoura, beterraba e diversos temperos que vão direto para a cozinha da escola", explica a diretora Maria Helena, de uma das unidades beneficiadas.</p>
 
-            <h2>Impacto nos Bairros Adjacentes</h2>
-            <p>O projeto ultrapassa os muros da escola e gera impacto positivo direto na vizinhança. Famílias de bairros adjacentes participam dos mutirões de colheita nos fins de semana e recebem consultoria para criar suas próprias hortas domésticas, fortalecendo a segurança alimentar e os laços comunitários da região.</p>
+            <h3>Educação Nutricional na Prática</h3>
+            <p>A principal mudança percebida, no entanto, não está apenas na horta, mas no refeitório. Nutricionistas da rede municipal relatam uma diminuição drástica no desperdício de alimentos (sobras nos pratos). "As crianças criam um vínculo com o alimento. Elas plantaram a semente, regaram, cuidaram e viram crescer. Quando aquele alimento chega no prato, elas comem com orgulho e curiosidade, vencendo a resistência a vegetais", afirma Ana Paula, nutricionista responsável pelo acompanhamento do projeto.</p>
+
+            <p>Além dos vegetais tradicionais, o projeto introduziu timidamente o cultivo de PANCs (Plantas Alimentícias Não Convencionais), resgatando saberes antigos e diversificando ainda mais a dieta escolar com nutrientes poderosos e muitas vezes esquecidos.</p>
+
+            <h3>Engajamento que Ultrapassa os Muros</h3>
+            <p>O impacto social do "Sementes do Futuro" já ultrapassou os muros da escola. Aos sábados, mutirões de manutenção reúnem pais, avós e moradores vizinhos, transformando a escola em um verdadeiro polo comunitário de convivência.</p>
+            
+            <p>Em bairros como o <strong>Capela Velha</strong>, o efeito multiplicador é visível: famílias começaram a replicar o modelo em casa, criando pequenas hortas em quintais e até em varandas de apartamentos, utilizando o apoio técnico e as mudas excedentes fornecidas pelos agrônomos da prefeitura.</p>
+
+            <p>"Meu filho de 8 anos me ensinou a fazer compostagem. Hoje reduzimos nosso lixo orgânico pela metade e temos tempero fresco todo dia sem agrotóxico", conta Ricardo Mendes, morador do <strong>Jardim Plínio</strong> e pai de aluno. O projeto prova que a educação ambiental, quando vivenciada na prática, planta raízes profundas que sustentam a saúde de toda a comunidade.</p>
         `,
         imageUrl: '/images/hortas_escolas_cover_v27.jpg',
         mobileImageUrl: '/images/hortas_escolas_cover_v27_mobile.webp',
