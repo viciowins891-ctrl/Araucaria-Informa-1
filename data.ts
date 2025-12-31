@@ -329,7 +329,7 @@ export const newsArticles: NewsArticle[] = [
         author: 'Esporte News'
     },
     {
-        id: 110,
+        id: 9999,
         title: 'Feira Gastronômica traz Food Trucks e música para o Centro',
         summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
         content: `

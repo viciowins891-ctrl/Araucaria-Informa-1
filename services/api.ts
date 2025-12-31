@@ -41,7 +41,7 @@ export const api = {
             // 2. Busca Cache Local (Fallback para erro de RLS)
             let cachedNews: NewsArticle[] = [];
             try {
-                const stored = localStorage.getItem('araucaria_news_cache_v31');
+                const stored = localStorage.getItem('araucaria_news_cache_v32');
                 if (stored) cachedNews = JSON.parse(stored);
             } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
@@ -59,7 +59,7 @@ export const api = {
             const sanitizedNews = uniqueNews.map(item => {
                 // FORCE UPDATE: Garante que a notícia dos Food Trucks use a imagem nova (v29)
                 // Isso previne que versões antigas do Banco de Dados sobrescrevam o código local
-                if (item.id === 110 || item.title.includes("Food Trucks")) {
+                if (item.id === 9999 || item.title.includes("Food Trucks")) {
                     item.imageUrl = '/images/food_trucks_cover_v29.png';
                     item.mobileImageUrl = '/images/food_trucks_cover_v29.png';
                     item.publishDate = '31/12/2025'; // Força data de hoje para garantir topo
@@ -141,7 +141,7 @@ export const api = {
                 // Adiciona novas no topo
                 const updated = [...articlesToInsert, ...existing];
                 // Mantém apenas as últimas 100 para não estourar memória (aprox 10 páginas)
-                localStorage.setItem('araucaria_news_cache_v31', JSON.stringify(updated.slice(0, 100)));
+                localStorage.setItem('araucaria_news_cache_v32', JSON.stringify(updated.slice(0, 100)));
                 console.log("[API] Notícias salvas no Cache Local com sucesso!");
             } catch (e) {
                 console.error("[API] Falha ao salvar no local storage", e);
