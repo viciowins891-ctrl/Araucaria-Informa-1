@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Event } from '../types';
 import { getOptimizedImageUrl } from '../services/imageUtils';
+import { stripHtml } from '../services/textUtils';
 
 interface EventCardProps {
     event: Event;
@@ -16,7 +17,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
             <div className="relative w-full h-56 bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center overflow-hidden">
                 {!imageError ? (
                     <img
-                        alt={event.title}
+                        alt={stripHtml(event.title)}
                         className="absolute inset-0 w-full h-full object-cover z-10"
                         src={optimizedImageUrl}
                         loading="lazy"
@@ -39,8 +40,14 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{event.title}</h2>
-                <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow line-clamp-3">{event.description}</p>
+                <h2
+                    className="text-xl font-bold text-slate-900 dark:text-white mb-2"
+                    dangerouslySetInnerHTML={{ __html: event.title }}
+                />
+                <div
+                    className="text-slate-600 dark:text-slate-400 mb-4 flex-grow line-clamp-3"
+                    dangerouslySetInnerHTML={{ __html: event.description }}
+                />
                 <div className="space-y-3 text-slate-500 dark:text-slate-400 mt-auto">
                     <div className="flex items-center">
                         <svg className="w-5 h-5 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>

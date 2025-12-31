@@ -12,6 +12,7 @@ import AdSpace from '../components/AdSpace';
 // import { getPlaceholderImage } from '../services/aiService';
 
 import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
+import { stripHtml } from '../services/textUtils';
 
 const HomePage: React.FC = () => {
     useEffect(() => {
@@ -72,7 +73,7 @@ const HomePage: React.FC = () => {
                         <source srcSet={mobileImage} media="(max-width: 767px)" type="image/webp" />
                         <img
                             src={desktopImage}
-                            alt="Imagem de destaque - Araucária"
+                            alt={`Imagem de destaque - ${stripHtml(featuredNews.title)}`}
                             className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                             onError={handleImageError}
                             referrerPolicy="no-referrer"
@@ -101,14 +102,16 @@ const HomePage: React.FC = () => {
                                 </span>
 
                                 <Link to={`/noticias/${featuredNews.id}`} className="block transition-opacity py-2 hover:opacity-90">
-                                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 break-words">
-                                        {featuredNews.title}
-                                    </h1>
+                                    <h1
+                                        className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 break-words"
+                                        dangerouslySetInnerHTML={{ __html: featuredNews.title }}
+                                    />
                                 </Link>
 
-                                <p className="text-gray-100 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light">
-                                    {featuredNews.summary}
-                                </p>
+                                <p
+                                    className="text-gray-100 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light"
+                                    dangerouslySetInnerHTML={{ __html: featuredNews.summary }}
+                                />
 
                                 <div className="flex gap-4">
                                     <Link

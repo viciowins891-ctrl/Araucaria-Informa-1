@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
 import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
+import { stripHtml } from '../services/textUtils';
 // import { getPlaceholderImage } from '../services/aiService';
 
 interface NewsCardProps {
@@ -45,12 +46,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const handleError = () => {
         if (!isFallback) {
             // Primeira falha: Tenta carregar a imagem de placeholder contextual
-            console.warn(`Falha ao carregar imagem: ${article.title}. Tentando placeholder contextual.`);
+            console.warn(`Falha ao carregar imagem: ${stripHtml(article.title)}. Tentando placeholder contextual.`);
             setImgSrc(getPlaceholderImage(article.category));
             setIsFallback(true);
         } else {
             // Segunda falha (Fallback também falhou): Mostra o placeholder de erro
-            console.error(`Falha crítica: Imagem original e fallback falharam para ${article.title}`);
+            console.error(`Falha crítica: Imagem original e fallback falharam para ${stripHtml(article.title)}`);
             setHasError(true);
         }
     };
@@ -60,7 +61,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
             <Link to={`/noticias/${article.id}`} className="block relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800 cursor-pointer">
                 {!hasError ? (
                     <img
-                        alt={article.title}
+                        alt={stripHtml(article.title)}
                         className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
                         loading="lazy"
@@ -100,14 +101,16 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                 </div>
 
                 <Link to={`/noticias/${article.id}`} className="block">
-                    <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
-                        {article.title}
-                    </h3>
+                    <h3
+                        className="text-xl font-bold text-text-light dark:text-text-dark mb-3 leading-snug group-hover:text-primary transition-colors"
+                        dangerouslySetInnerHTML={{ __html: article.title }}
+                    />
                 </Link>
 
-                <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
-                    {article.summary}
-                </p>
+                <div
+                    className="text-text-secondary-light dark:text-text-secondary-dark mb-6 text-sm leading-relaxed line-clamp-3 flex-grow"
+                    dangerouslySetInnerHTML={{ __html: article.summary }}
+                />
 
                 <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
                     <Link to={`/noticias/${article.id}`} className="text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors flex items-center gap-1 cursor-pointer">

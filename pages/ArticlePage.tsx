@@ -1,15 +1,14 @@
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
-import NewsCard from '../components/NewsCard';
 import ShareButton from '../components/ShareButton';
 import { getPlaceholderImage } from '../services/imageUtils';
-import { generateContextualImage } from '../services/aiService';
+import { stripHtml } from '../services/textUtils';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -39,7 +38,6 @@ const ArticlePage: React.FC = () => {
                     setArticle(currentArticle);
 
                     // Set Main Hero Image (Cover) - Directly from Data Source
-                    // Set Main Hero Image (Cover) - Directly from Data Source
                     // Initial set (will be overridden by responsive effect if mobile)
                     setImgSrc(currentArticle.imageUrl);
                     setImageError(false);
@@ -51,9 +49,6 @@ const ArticlePage: React.FC = () => {
                     } else {
                         // Priority 2: Fallback to Category Placeholder or Contextual Logic
                         let secImg = getPlaceholderImage(currentArticle.category);
-
-                        // Optional: Keep some broad category-based logic if strictly necessary substitute for specific placeholders
-                        // But avoid specific ID/Title hardcoding that conflicts with user intention.
 
                         if (currentArticle.category === 'Educação') secImg = '/images/placeholder_educacao.png';
                         if (currentArticle.category === 'Infraestrutura') secImg = '/images/placeholder_infraestrutura.png';
@@ -100,53 +95,44 @@ const ArticlePage: React.FC = () => {
             const isMobile = window.innerWidth < 768;
 
             if (isMobile && article.mobileImageUrl) {
-                // Force Mobile Image
                 setImgSrc(article.mobileImageUrl);
             } else {
-                // Revert/Keep Desktop Image
                 setImgSrc(article.imageUrl);
             }
         };
 
+        // Initial check
         updateImageSource();
+
+        // Add listener
         window.addEventListener('resize', updateImageSource);
+
         return () => window.removeEventListener('resize', updateImageSource);
     }, [article]);
 
-    // Reading Progress Listener
     useEffect(() => {
-        const updateReadingProgress = () => {
-            const currentScroll = window.scrollY;
-            const scrollHeight = document.body.scrollHeight - window.innerHeight;
-            if (scrollHeight) {
-                setReadingProgress(Number((currentScroll / scrollHeight).toFixed(2)) * 100);
-            }
+        const handleScroll = () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            setReadingProgress(progress);
         };
 
-        window.addEventListener('scroll', updateReadingProgress);
-        return () => window.removeEventListener('scroll', updateReadingProgress);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleImageError = () => {
-        if (!imageError && article) {
-            setImgSrc(getPlaceholderImage(article.category));
+        if (!imageError) {
+            console.warn("Imagem principal falhou. Tentando fallback seguro.");
             setImageError(true);
+            setImgSrc(FALLBACK_IMAGE);
         }
     };
 
-    const handleShare = () => {
-        navigator.clipboard.writeText(window.location.href);
-        setShowShareToast(true);
-        setTimeout(() => setShowShareToast(false), 3000);
-    };
-
-
-
-    if (loading) return <div className="min-h-screen pt-20"><LoadingSpinner /></div>;
+    if (loading) return <LoadingSpinner />;
 
     if (error || !article) return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-background-light dark:bg-background-dark">
-            <svg className="w-16 h-16 text-gray-300 mb-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+        <div className="flex flex-col items-center justify-center min-h-screen">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Ops!</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">{error || 'Artigo não encontrado.'}</p>
             <button
@@ -157,6 +143,9 @@ const ArticlePage: React.FC = () => {
             </button>
         </div>
     );
+
+    const plainTitle = stripHtml(article.title);
+    const plainSummary = stripHtml(article.summary || article.title);
 
     return (
         <article className="bg-background-light dark:bg-background-dark min-h-screen pb-20 font-body">
@@ -181,31 +170,30 @@ const ArticlePage: React.FC = () => {
 
             {/* SEO & Meta Tags Dinâmicas */}
             <Helmet>
-                <title>{article.title} - Araucária Informa</title>
-                <meta name="description" content={article.summary || article.title} />
+                <title>{plainTitle} - Araucária Informa</title>
+                <meta name="description" content={plainSummary} />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={window.location.href} />
-                <meta property="og:title" content={article.title} />
-                <meta property="og:description" content={article.summary || article.title} />
+                <meta property="og:title" content={plainTitle} />
+                <meta property="og:description" content={plainSummary} />
                 <meta property="og:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={window.location.href} />
-                <meta property="twitter:title" content={article.title} />
-                <meta property="twitter:description" content={article.summary || article.title} />
+                <meta property="twitter:title" content={plainTitle} />
+                <meta property="twitter:description" content={plainSummary} />
                 <meta property="twitter:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
             </Helmet>
 
-            {/* Hero Section */}
             {/* Hero Section */}
             <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700 z-10"></div>
                 <img
                     src={article.title.toLowerCase().includes('archelau') ? '/images/archelau_definitiva.png' : (imgSrc || FALLBACK_IMAGE)}
-                    alt={article.title}
+                    alt={plainTitle}
                     className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
@@ -220,7 +208,7 @@ const ArticlePage: React.FC = () => {
                             <svg className="w-3 h-3 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
                             <Link to="/noticias" className="hover:text-white transition-colors">Notícias</Link>
                             <svg className="w-3 h-3 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
-                            <span className="text-white truncate max-w-[200px]">{article.title}</span>
+                            <span className="text-white truncate max-w-[200px]">{plainTitle}</span>
                         </nav>
                     </div>
                 </div>
@@ -255,9 +243,10 @@ const ArticlePage: React.FC = () => {
                             </time>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white font-display leading-[1.15] tracking-tight">
-                            {article.title}
-                        </h1>
+                        <h1
+                            className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white font-display leading-[1.15] tracking-tight"
+                            dangerouslySetInnerHTML={{ __html: article.title }}
+                        />
 
                         <div className="flex items-center justify-between border-y border-gray-100 dark:border-gray-800 py-6">
                             <div className="flex items-center gap-4">
@@ -271,7 +260,7 @@ const ArticlePage: React.FC = () => {
                             </div>
 
                             <div className="flex gap-2">
-                                <ShareButton title={article.title} />
+                                <ShareButton title={plainTitle} />
                                 <button
                                     className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"
                                     title="Salvar (Favorito)"
@@ -288,9 +277,10 @@ const ArticlePage: React.FC = () => {
 
                         {/* Resumo/Lead */}
                         {article.summary && (
-                            <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6">
-                                {article.summary}
-                            </div>
+                            <div
+                                className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6"
+                                dangerouslySetInnerHTML={{ __html: article.summary }}
+                            />
                         )}
 
                         {/* Imagem Secundária Decorativa */}
@@ -358,47 +348,16 @@ const ArticlePage: React.FC = () => {
                         {/* Tags (Mock) */}
                         <div className="flex flex-wrap gap-2 mb-12">
                             {['Araucária', 'Notícias', article.category, 'Paraná', 'Atualidade'].map((tag) => (
-                                <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-md text-sm cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                <span key={tag} className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer">
                                     #{tag}
                                 </span>
                             ))}
                         </div>
 
                     </div>
-
-                    {/* Seção de Notícias Relacionadas */}
-                    {relatedArticles.length > 0 && (
-                        <div className="mt-20">
-                            <div className="flex items-center justify-between mb-8">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-primary/10 rounded-lg">
-                                        <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                                    </div>
-                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-display">
-                                        Conteúdo Relacionado
-                                    </h2>
-                                </div>
-                                <Link to="/noticias" className="text-primary hover:text-primary-dark font-medium hidden md:inline-flex items-center gap-1">
-                                    Ver tudo <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                                </Link>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {relatedArticles.map(relArticle => (
-                                    <NewsCard key={relArticle.id} article={relArticle} />
-                                ))}
-                            </div>
-
-                            <div className="mt-8 text-center md:hidden">
-                                <Link to="/noticias" className="btn-primary inline-flex">
-                                    Ver todas as notícias
-                                </Link>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </div>
-        </article >
+        </article>
     );
 };
 
