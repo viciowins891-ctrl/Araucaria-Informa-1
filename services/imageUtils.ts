@@ -18,10 +18,10 @@ export const getOptimizedImageUrl = (url: string, width: number = 800, quality: 
 
     // Otimização para imagens locais (conversão para WebP mobile)
     if (url.startsWith('/images/')) {
-        // EXCEÇÃO PADRÃO: Se for uma imagem manual recente (v5, v6, v7, final), 
+        // EXCEÇÃO PADRÃO: Se for uma imagem manual recente (v5, v6, v7, v2x, v3x...), 
         // IGNORA a busca por _mobile.webp pois ela provavelmente não existe ainda.
         // Isso previne que uploads manuais quebrem no mobile.
-        if (url.includes('v5') || url.includes('v6') || url.includes('v7') || url.includes('final')) return url;
+        if (url.includes('v5') || url.includes('v6') || url.includes('v7') || url.includes('v2') || url.includes('v3') || url.includes('final')) return url;
 
         // Se a largura solicitada for pequena (mobile/card), tenta servir a versão _mobile.webp
         // Assumimos que o script 'optimize-images.js' já gerou essas variantes para todas as imagens de /images/
