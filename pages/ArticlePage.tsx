@@ -347,7 +347,6 @@ const ArticlePage: React.FC = () => {
                             </div>
                         )}
 
-                        )}
 
                         {/* Anúncio Fim do Artigo */}
                         <div className="w-full flex justify-center mt-8 mb-4">
