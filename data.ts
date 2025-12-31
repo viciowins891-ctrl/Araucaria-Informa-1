@@ -261,7 +261,7 @@ export const newsArticles: NewsArticle[] = [
             <h2>Adesão no CSU e Boqueirão</h2>
             <p>As UBSs do **CSU** e **Boqueirão** registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do Boqueirão.</p>
         `,
-        imageUrl: '/images/vaccination_vsr_cover_v2.png',
+        imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
         categoryColor: 'blue',
         internalImageUrl: '/images/news_vaccine_pregnant.png',
