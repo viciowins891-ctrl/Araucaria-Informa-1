@@ -10,8 +10,9 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, url }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [showCopiedToast, setShowCopiedToast] = useState(false);
 
-    // URL atual (fallback seguro)
-    const currentUrl = url || window.location.href;
+    // URL atual (fallback seguro, forçando domínio de produção)
+    const productionUrl = 'https://araucariainforma.com';
+    const currentUrl = url || window.location.href.replace(window.location.origin, productionUrl);
 
     // Título codificado para links
     const encodedTitle = encodeURIComponent(title);
