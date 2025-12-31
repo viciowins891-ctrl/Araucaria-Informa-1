@@ -161,7 +161,7 @@ export const newsArticles: NewsArticle[] = [
             <h2>Alívio no Califórnia e Tupy</h2>
             <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como **Califórnia** e **Tupy**. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
         `,
-        imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
+        imageUrl: '/images/cmei_zerando_fila_cover_v2.png', // Versão Otimizada (WebP) para LCP rápido v2
         mobileImageUrl: '/images/custom_cmei_official_mobile.webp',
         category: 'Educação',
         categoryColor: 'red',
