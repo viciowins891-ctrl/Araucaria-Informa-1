@@ -97,8 +97,8 @@ export const newsArticles: NewsArticle[] = [
             <h2>Impacto nos Bairros Adjacentes</h2>
             <p>O projeto ultrapassa os muros da escola e gera impacto positivo direto na vizinhança. Famílias de bairros adjacentes participam dos mutirões de colheita nos fins de semana e recebem consultoria para criar suas próprias hortas domésticas, fortalecendo a segurança alimentar e os laços comunitários da região.</p>
         `,
-        imageUrl: '/images/hortas_escolas_cover_v2.jpg',
-        mobileImageUrl: '/images/hortas_escolas_cover_v2_mobile.webp',
+        imageUrl: '/images/hortas_escolas_cover_v27.jpg',
+        mobileImageUrl: '/images/hortas_escolas_cover_v27_mobile.webp',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/school_garden_internal_final_v5.png',
@@ -162,6 +162,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como **Califórnia** e **Tupy**. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
         `,
         imageUrl: '/images/custom_cmei_official.webp', // Versão Otimizada (WebP) para LCP rápido
+        mobileImageUrl: '/images/custom_cmei_official_mobile.webp',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/cmei_interior_pessoas.png',
@@ -181,6 +182,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Entre os destaques, está a revitalização asfáltica de vias arteriais no **Jardim Industrial** e **Thomaz Coelho**. A previsão é que as obras melhorem a fluidez do trânsito para quem se desloca diariamente para a capital. Além disso, recursos foram alocados para a reforma de UBSs no **Tindiquera**, atendendo a uma demanda antiga da comunidade.</p>
         `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
+        mobileImageUrl: '/images/news_budget_mobile.webp',
         category: 'Economia',
         categoryColor: 'blue',
         internalImageUrl: '/images/prefeitura_orcamento_real.png',
@@ -200,6 +202,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como **Guajuvira** e **Roça Nova**. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
         `,
         imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
+        mobileImageUrl: '/images/custom_poupatempo_official_mobile.webp',
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/poupatempo_atendimento_pessoas.png',
@@ -219,6 +222,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Parte significativa dos R$ 18 milhões será destinada à ampliação de escolas no bairro **Capela Velha**, uma das regiões que mais cresce na cidade. A construção de novas salas de aula e quadras poliesportivas promete transformar a realidade escolar local, oferecendo infraestrutura de ponta para centenas de alunos.</p>
         `,
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
+        mobileImageUrl: '/images/news_investments_mobile.webp',
         category: 'Política',
         categoryColor: 'purple',
         internalImageUrl: '/images/investimento_federal_real.png',
@@ -238,6 +242,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A operação teve foco especial em pontos críticos denunciados pela comunidade do **Campina da Barra**. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
         `,
         imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
+        mobileImageUrl: '/images/custom_drugs_mobile.webp',
         category: 'Segurança',
         categoryColor: 'red',
         internalImageUrl: '/images/operacao_pcpr_viaturas.png',
@@ -276,6 +281,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O evento atraiu não apenas moradores do Centro, mas caravanas de bairros como **Iguaçu** e **Estação**. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
         `,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
+        mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
         category: 'Cultura',
         categoryColor: 'indigo',
         internalImageUrl: '/images/news_christmas_cantata.png',
@@ -295,6 +301,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Os ventos fortes causaram quedas de árvores principalmente na região do **Jardim Turim** e **Shangri-lá**. Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>
         `,
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
+        mobileImageUrl: '/images/news_cyclone_energy_mobile.webp',
         category: 'Cidade',
         categoryColor: 'gray',
         internalImageUrl: '/images/copel_repair_real_v2.png',
@@ -314,6 +321,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do **Parque Cachoeira** e **Centro** serão transferidas temporariamente para ginásios no **Fazenda Velha**. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>
         `,
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
+        mobileImageUrl: '/images/custom_gym_official_mobile.webp',
         category: 'Esporte',
         categoryColor: 'green',
         internalImageUrl: '/images/gym_interior_renovation.png',
@@ -334,6 +342,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Para quem vem de mais longe, como do Jardim Iguaçu ou Costeira, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v27.png',
+        mobileImageUrl: '/images/food_trucks_cover_v26_mobile.webp',
         internalImageUrl: '/images/food_trucks_internal_v26.png',
         category: 'Lazer',
         categoryColor: 'yellow',
