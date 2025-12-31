@@ -426,7 +426,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Segundo o cronograma, as ruas principais serão atendidas prioritariamente para garantir o fluxo do transporte coletivo. Em seguida, as equipes entrarão nas vias secundárias.</p>
             <p>Moradores podem solicitar reparos através do aplicativo oficial da prefeitura ou pelo telefone da ouvidoria.</p>
         `,
-        imageUrl: '/images/tapa_buracos_real_final.webp',
+        imageUrl: '/images/tapa_buracos_iguacu_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         internalImageUrl: '/images/road_repair_pothole_asphalt.png',
