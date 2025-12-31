@@ -73,13 +73,15 @@ export default defineConfig(({ mode }) => {
             },
             {
               urlPattern: ({ request }) => request.destination === 'image',
-              handler: 'CacheFirst',
+              // MUDANÇA CRÍTICA: NetworkFirst para garantir que imagens novas (mesmo nome) sejam baixadas
+              handler: 'NetworkFirst',
               options: {
                 cacheName: 'images-cache',
                 expiration: {
                   maxEntries: 50,
-                  maxAgeSeconds: 60 * 60 * 24 * 30 // <== 30 days
-                }
+                  maxAgeSeconds: 60 * 60 * 24 * 1 // Reduzido para 1 dia
+                },
+                networkTimeoutSeconds: 3 // Se demorar 3s, usa cache
               }
             }
           ]
