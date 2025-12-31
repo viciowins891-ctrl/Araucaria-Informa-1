@@ -6,7 +6,7 @@ import NewsCard from '../components/NewsCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 10;
 
 const NewsPage: React.FC = () => {
     useEffect(() => {
