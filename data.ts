@@ -1003,7 +1003,7 @@ export const events: Event[] = [
         id: 6,
         title: 'Exposição de Flores da Primavera (Exemplo Futuro)',
         description: 'Um espetáculo de cores e aromas com produtores locais de flores e plantas ornamentais.',
-        imageUrl: '/images/flores_primavera_v2.jpg',
+        imageUrl: '/images/flores_primavera_final_v5.jpg',
         date: '25/09/2026',
         time: '09:00 - 18:00',
         location: 'Parque Cachoeira'
