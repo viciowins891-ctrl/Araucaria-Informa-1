@@ -381,7 +381,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/news_vaccination_indoor_campaign.png',
+        internalImageUrl: '/images/vacinacao_campanha_interna.png',
         publishDate: getPastDate(10),
         author: 'Saúde em Foco'
     },
