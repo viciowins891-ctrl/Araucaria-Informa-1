@@ -116,7 +116,7 @@ const App: React.FC = () => {
                 // 2. Crie um App Web
                 // 3. Copie o App ID e cole abaixo
                 await OneSignal.init({
-                    appId: "SUBSTITUA_PELO_SEU_APP_ID", // <--- COLE SEU ID AQUI
+                    appId: "a5db53d7-9156-4047-92a5-9c5928fdb9d7", // ID extraído da sua URL
                     allowLocalhostAsSecureOrigin: true, // Permite testar em localhost
                     notifyButton: {
                         enable: true, // Ativa o "Sininho" flutuante
