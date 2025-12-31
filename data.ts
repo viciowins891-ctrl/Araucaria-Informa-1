@@ -985,7 +985,7 @@ export const events: Event[] = [
         id: 4,
         title: 'Bazar Beneficente da APAE',
         description: 'Grande bazar com roupas, calçados e utensílios a preços acessíveis. Toda a renda será revertida para a instituição.',
-        imageUrl: '/images/feira_livros_cover.png',
+        imageUrl: '/images/bazar_apae_event.png',
         date: getUpcomingDate(10),
         time: '09:00 - 17:00',
         location: 'Salão Paroquial Matriz'
