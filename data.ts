@@ -29,7 +29,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O "boom" econômico é impulsionado por dois motores principais: a expansão das plantas industriais no complexo petroquímico e a criação de novas empresas de logística. "Não estamos apenas gerando vagas, estamos criando carreiras. A demanda por mão de obra qualificada nunca foi tão alta", celebra o secretário de trabalho.</p>
 
             <h2>Impacto nos Bairros</h2>
-            <p>O aquecimento da economia não fica restrito à zona industrial. O efeito cascata é visível nos bairros adjacentes como Capela Velha e Jardim Industrial. Com mais pessoas empregadas, o comércio local — de padarias a lojas de construção — registra aumento no faturamento.</p>
+            <p>O aquecimento da economia não fica restrito à zona industrial. O efeito cascata é visível nos bairros adjacentes como <strong>Capela Velha</strong> e Jardim <strong>Industrial</strong>. Com mais pessoas empregadas, o comércio local — de padarias a lojas de construção — registra aumento no faturamento.</p>
 
             <p>Lojistas da Avenida Archelau já sentem a diferença no movimento, impulsionado pelo aumento do poder de compra das famílias. O ciclo virtuoso se fecha com o setor de serviços, que tem aberto novas frentes de trabalho para atender a essa demanda crescente.</p>
         `,
@@ -43,10 +43,10 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 3005,
-        title: 'Parque Cachoeira terá cinema ao ar livre neste sábado',
+        title: '<strong>Parque Cachoeira</strong> terá cinema ao ar livre neste sábado',
         summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
         content: `
-            <p>Prepare a pipoca e a canga! Neste sábado, o Parque Cachoeira se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
+            <p>Prepare a pipoca e a canga! Neste sábado, o <strong>Parque Cachoeira</strong> se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
             
             <p>A iniciativa visa não apenas oferecer lazer, mas também democratizar o acesso à cultura. "Muitas crianças nunca tiveram a experiência de ver um filme em tela grande. Trazer isso para o parque, um ambiente democrático por natureza, é transformar o espaço público em sala de estar da cidade", destaca a organização.</p>
 
@@ -73,7 +73,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Com tecnologia de ponta, os novos tomógrafos reduzem o tempo de exame em 50%, permitindo maior rotatividade. "A meta é zerar a fila de espera por exames de imagem em até quatro semanas", projeta a direção clínica.</p>
 
             <h2>Saúde Perto de Casa</h2>
-            <p>O impacto para a população é direto: fim das longas viagens de ambulância para Curitiba ou Campo Largo apenas para realizar exames. Moradores de bairros mais distantes, como o Guajuvira, agora contam com resolutividade dentro do próprio município.</p>
+            <p>O impacto para a população é direto: fim das longas viagens de ambulância para Curitiba ou Campo Largo apenas para realizar exames. Moradores de bairros mais distantes, como o <strong>Guajuvira</strong>, agora contam com resolutividade dentro do próprio município.</p>
 
             <p>A modernização do parque tecnológico do HMA também atrai especialistas médicos para a cidade, fortalecendo a rede de atendimento especializada disponível para todos os araucarienses.</p>
         `,
@@ -137,7 +137,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além do espetáculo em quadra, o evento tem um forte cunho social. Os ingressos serão solidários, trocados por 1kg de alimento não perecível, que será destinado ao Programa de Segurança Alimentar do município.</p>
 
             <h2>Movimento nos Bairros Vizinhos</h2>
-            <p>A realização de um evento deste porte traz reflexos imediatos para além das quadras. Bairros no entorno do ginásio, como o Centro e o Fazenda Velha, preparam-se para um final de semana atípico e lucrativo.</p>
+            <p>A realização de um evento deste porte traz reflexos imediatos para além das quadras. Bairros no entorno do ginásio, como o <strong>Centro</strong> e o <strong>Fazenda Velha</strong>, preparam-se para um final de semana atípico e lucrativo.</p>
             
             <p>Donos de lanchonetes, postos de gasolina e pequenos comércios locais já reforçaram seus estoques prevendo o aumento do fluxo de visitantes. A circulação de torcedores de outras cidades também movimenta a rede hoteleira e gastronômica, injetando capital novo na economia local e valorizando o potencial turístico-esportivo de Araucária.</p>
         `,
@@ -178,7 +178,7 @@ export const newsArticles: NewsArticle[] = [
             
             <p>A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária, como a duplicação de avenidas importantes e a construção do novo hospital.</p>
 
-            <h2>Obras no Industrial e Thomaz Coelho</h2>
+            <h2>Obras no <strong>Industrial</strong> e Thomaz Coelho</h2>
             <p>Entre os destaques, está a revitalização asfáltica de vias arteriais no <strong>Jardim Industrial</strong> e <strong>Thomaz Coelho</strong>. A previsão é que as obras melhorem a fluidez do trânsito para quem se desloca diariamente para a capital. Além disso, recursos foram alocados para a reforma de UBSs no <strong>Tindiquera</strong>, atendendo a uma demanda antiga da comunidade.</p>
         `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
@@ -199,7 +199,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"É o fim da burocracia e das filas. O cidadão resolve tudo em um só lugar", destacou o governador Ratinho Jr durante a cerimônia.</p>
 
             <h2>Facilidade para a Zona Rural</h2>
-            <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como <strong>Guajuvira</strong> e <strong>Roça Nova</strong>. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
+            <p>A localização estratégica no <strong>Centro</strong> beneficia especialmente moradores de áreas rurais distantes, como <strong>Guajuvira</strong> e <strong>Roça Nova</strong>. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
         `,
         imageUrl: '/images/poupatempo_inauguracao_v2.png', // Foto oficial externa sem máscaras v2
         mobileImageUrl: '/images/custom_poupatempo_official_mobile.webp',
@@ -259,7 +259,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município para o público-alvo.</p>
 
             <h2>Adesão no CSU e Boqueirão</h2>
-            <p>As UBSs do <strong>CSU</strong> e <strong>Boqueirão</strong> registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do Boqueirão.</p>
+            <p>As UBSs do <strong>CSU</strong> e <strong>Boqueirão</strong> registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do <strong>Boqueirão</strong>.</p>
         `,
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
@@ -278,7 +278,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Novas apresentações estão programadas para o próximo fim de semana na Praça da Matriz.</p>
 
             <h2>Turismo Regional</h2>
-            <p>O evento atraiu não apenas moradores do Centro, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong>Estação</strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
+            <p>O evento atraiu não apenas moradores do <strong>Centro</strong>, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong>Estação</strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
         `,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
@@ -311,7 +311,7 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 109, // Novo ID para o Ginásio
         title: 'Ginásio Joval de Paula Souza será reformado',
-        summary: 'Prefeitura anuncia revitalização completa do complexo esportivo no Parque Cachoeira.',
+        summary: 'Prefeitura anuncia revitalização completa do complexo esportivo no <strong>Parque Cachoeira</strong>.',
         content: `
             <p>Um dos principais palcos do esporte araucariense, o Ginásio Joval de Paula Souza, passará por uma ampla reforma. O anúncio foi feito pela Secretaria de Esporte e Lazer, que prevê melhorias no piso da quadra, vestiários e cobertura.</p>
             
@@ -330,16 +330,16 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 9999,
-        title: 'Feira Gastronômica traz Food Trucks e música para o Centro',
+        title: 'Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>',
         summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
         content: `
             <p>A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana. A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
 
             <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
 
-            <p>A movimentação não se restringe apenas ao Centro. Bairros vizinhos como Fazenda Velha, Estação e Vila Nova sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
+            <p>A movimentação não se restringe apenas ao <strong>Centro</strong>. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação</strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
 
-            <p>Para quem vem de mais longe, como do Jardim Iguaçu ou Costeira, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
+            <p>Para quem vem de mais longe, como do <strong>Jardim Iguaçu</strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
         imageUrl: '/images/food_trucks_cover_v29.png',
         mobileImageUrl: '/images/food_trucks_cover_v29.png', // Fallback to desktop image until optimized
@@ -352,11 +352,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 6,
         title: 'Câmara aprova incentivo ao turismo rural',
-        summary: 'Caminho do Guajuvira e roteiros poloneses receberão verba para sinalização e melhorias.',
+        summary: 'Caminho do <strong>Guajuvira</strong> e roteiros poloneses receberão verba para sinalização e melhorias.',
         content: `
             <p>Em sessão realizada ontem, a Câmara Municipal de Araucária aprovou por unanimidade o projeto de lei que cria incentivos fiscais e destina verbas para o desenvolvimento do turismo rural na região.</p>
             
-            <p>O foco principal são os roteiros do Caminho do Guajuvira e as rotas da colônia polonesa, que possuem grande potencial gastronômico e cultural. Com o novo investimento, será feita a melhoria da sinalização turística, a pavimentação de trechos críticos de estradas rurais e o apoio à divulgação dos produtores locais.</p>
+            <p>O foco principal são os roteiros do Caminho do <strong>Guajuvira</strong> e as rotas da colônia polonesa, que possuem grande potencial gastronômico e cultural. Com o novo investimento, será feita a melhoria da sinalização turística, a pavimentação de trechos críticos de estradas rurais e o apoio à divulgação dos produtores locais.</p>
             
             <p>Pequenos agricultores que abrirem suas propriedades para visitação ou venda de produtos coloniais (como queijos, vinhos e doces) terão descontos em taxas municipais.</p>
             
@@ -392,7 +392,7 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>A magia do teatro invadiu as escolas municipais de Araucária. O Festival de Teatro Infantil, promovido pela Secretaria de Cultura, realizou mais de 20 apresentações gratuitas ao longo da última semana, atingindo cerca de 5 mil crianças.</p>
             <p>Peças clássicas e produções locais fizeram parte do repertório. O objetivo do projeto é formar plateia e incentivar o gosto pela arte desde cedo. "Ver o brilho nos olhos das crianças não tem preço", disse um dos atores da companhia local.</p>
-            <p>O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no Parque Cachoeira.</p>
+            <p>O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no <strong>Parque Cachoeira</strong>.</p>
         `,
         imageUrl: '/images/placeholder_educacao.png',
         category: 'Educação',
@@ -406,7 +406,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Novas ciclovias conectam bairros industriais',
         summary: 'Projeto de mobilidade urbana facilita o deslocamento de trabalhadores para a área industrial.',
         content: `
-            <p>A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial. O projeto de 5km conecta estrategicamente os bairros <strong>Thomaz Coelho</strong> e <strong>Cidade Industrial de Araucária (CIAR)</strong>, uma das zonas com maior fluxo diário de trabalhadores.</p>
+            <p>A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial. O projeto de 5km conecta estrategicamente os bairros <strong>Thomaz Coelho</strong> e <strong>Cidade <strong>Industrial</strong> de Araucária (CIAR)</strong>, uma das zonas com maior fluxo diário de trabalhadores.</p>
             
             <p>O ciclista que sai da <strong>Chapada</strong> ou do <strong>Barigui</strong> não precisará mais disputar espaço com caminhões pesados na Rodovia do Xisto. "É segurança para o trabalhador e agilidade para a indústria", resume o secretário de obras.</p>
 
@@ -423,7 +423,7 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 10,
-        title: 'Operação Tapa-Buracos avança no Jardim Iguaçu',
+        title: 'Operação Tapa-Buracos avança no <strong>Jardim Iguaçu</strong>',
         summary: 'Equipes da Secretaria de Obras trabalham em ritmo acelerado para recuperar vias danificadas pelas chuvas.',
         content: `
             <p>A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa-Buracos no bairro <strong>Jardim Iguaçu</strong>, atendendo a uma demanda antiga dos moradores. A ação concentra-se inicialmente na <strong>Avenida Archelau de Almeida Torres</strong> e ruas transversais, principais corredores de ônibus da região.</p>
@@ -486,7 +486,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Feira de Robótica reúne estudantes da rede pública',
         summary: 'Alunos apresentaram projetos inovadores focados em sustentabilidade e automação.',
         content: `
-            <p>O Parque Cachoeira foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
+            <p>O <strong>Parque Cachoeira</strong> foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
             <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
         `,
         imageUrl: '/images/robotics_fair_real_final_v2.webp',
@@ -499,9 +499,9 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 14,
         title: 'Novo supermercado gera 200 empregos diretos',
-        summary: 'Grande rede varejista abre as portas no bairro Costeira, movimentando a economia local.',
+        summary: 'Grande rede varejista abre as portas no bairro <strong>Costeira</strong>, movimentando a economia local.',
         content: `
-            <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro Costeira.</p>
+            <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro <strong>Costeira</strong>.</p>
             <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
         `,
         imageUrl: '/images/supermarket_opening_real_final_v2.webp',
@@ -534,7 +534,7 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 16,
         title: 'Torneio de Xadrez movimenta o fim de semana',
-        summary: 'Competição reuniu enxadristas de todas as idades no Centro de Convivência.',
+        summary: 'Competição reuniu enxadristas de todas as idades no <strong>Centro</strong> de Convivência.',
         content: `
             <p>O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado. O evento reuniu mais de 80 participantes, divididos em categorias do sub-10 ao veterano.</p>
             <p>O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub-14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>
@@ -564,11 +564,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 18,
         title: 'Rota de Turismo Rural ganha nova sinalização',
-        summary: 'Prefeitura instala placas indicativas no Caminho do Vinho e Guajuvira para orientar visitantes.',
+        summary: 'Prefeitura instala placas indicativas no Caminho do Vinho e <strong>Guajuvira</strong> para orientar visitantes.',
         content: `
             <p>O Departamento de Turismo iniciou a instalação de novas placas de sinalização turística nas principais rotas rurais do município. A ação visa facilitar o acesso de visitantes aos restaurantes coloniais, vinícolas e chácaras de lazer.</p>
             <p>"Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo. O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
-            <p>A rota do Guajuvira é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
+            <p>A rota do <strong>Guajuvira</strong> é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
         `,
         // URL Corrigida (Caminho Local) para evitar erro 404
         imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000',
@@ -633,7 +633,7 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 22,
         title: 'Sítio Ecológico abre novas trilhas para ecoturismo',
-        summary: 'Propriedade rural em Guajuvira aposta no turismo de natureza e observação de aves.',
+        summary: 'Propriedade rural em <strong>Guajuvira</strong> aposta no turismo de natureza e observação de aves.',
         content: `
             <p>O Sítio Ecológico, localizado na área rural de <strong>Guajuvira</strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
             
@@ -679,7 +679,7 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 25,
-        title: 'Novo binário no Centro melhora fluxo de veículos',
+        title: 'Novo binário no <strong>Centro</strong> melhora fluxo de veículos',
         summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
         content: `
                             <p> Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
@@ -742,7 +742,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária investe em iluminação LED nos bairros',
         summary: 'Mais econômicas e eficientes, novas lâmpadas aumentam a segurança nas ruas.',
         content: `
-                                                            <p> O programa "Araucária Mais Iluminada" chegou ao bairro Capela Velha.Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
+                                                            <p> O programa "Araucária Mais Iluminada" chegou ao bairro <strong>Capela Velha</strong>.Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
                                                                 <p> A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
                                                                     `,
         imageUrl: '/images/iluminacao_led_cover.png',
@@ -814,10 +814,10 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 34,
-        title: 'Parque Cachoeira recebe mutirão de limpeza',
+        title: '<strong>Parque Cachoeira</strong> recebe mutirão de limpeza',
         summary: 'Voluntários se reúnem para preservar um dos principais cartões postais da cidade.',
         content: `
-                                                                                                    <p> Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do Parque Cachoeira.A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
+                                                                                                    <p> Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do <strong>Parque Cachoeira</strong>.A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
                                                                                                         <p> A iniciativa visa conscientizar os visitantes sobre a importância de não deixar resíduos na natureza.</p>
                                                                                                             `,
         imageUrl: '/images/parque_cachoeira_cleanup_cover.png',
@@ -830,9 +830,9 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 35,
         title: 'Araucária sedia encontro de carros antigos',
-        summary: 'Relíquias automotivas invadem o Centro Cívico e atraem multidão.',
+        summary: 'Relíquias automotivas invadem o <strong>Centro</strong> Cívico e atraem multidão.',
         content: `
-                                                                                                            <p> O ronco dos motores clássicos tomou conta do Centro Cívico neste fim de semana.O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</p>
+                                                                                                            <p> O ronco dos motores clássicos tomou conta do <strong>Centro</strong> Cívico neste fim de semana.O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</p>
     <p>O evento também contou com mercado de pulgas(peças antigas) e praça de alimentação com food trucks.</p>
         `,
         imageUrl: '/images/carros_antigos_cover.png',
@@ -860,9 +860,9 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 37,
         title: 'Novos horários de ônibus começam a valer segunda-feira',
-        summary: 'CMTC anuncia ajustes nas linhas Tupy e Costeira para atender demanda.',
+        summary: 'CMTC anuncia ajustes nas linhas Tupy e <strong>Costeira</strong> para atender demanda.',
         content: `
-            <p> A Companhia Municipal de Transporte Coletivo(CMTC) informou que, a partir desta segunda - feira, haverá alteração na grade de horários das linhas Tupy e Costeira.O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
+            <p> A Companhia Municipal de Transporte Coletivo(CMTC) informou que, a partir desta segunda - feira, haverá alteração na grade de horários das linhas Tupy e <strong>Costeira</strong>.O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
                 <p> Os novos horários já estão disponíveis no aplicativo do transporte e nos terminais.</p>
                     `,
         imageUrl: '/images/bus_schedule_main.png',
@@ -892,9 +892,9 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária Vôlei vence mais uma na Superliga B',
         summary: 'Time da casa mantém invencibilidade e lidera a competição nacional.',
         content: `
-                            <p> Em uma noite eletrizante no Ginásio Joval de Paula Souza, no <strong> Parque Cachoeira </strong>, o Araucária Vôlei venceu mais uma partida pela Superliga B.A equipe da casa superou o adversário por 3 sets a 1, empurrada por uma torcida apaixonada.</p>
+                            <p> Em uma noite eletrizante no Ginásio Joval de Paula Souza, no <strong> <strong>Parque Cachoeira</strong> </strong>, o Araucária Vôlei venceu mais uma partida pela Superliga B.A equipe da casa superou o adversário por 3 sets a 1, empurrada por uma torcida apaixonada.</p>
 
-                                <p> Caravanas de bairros como <strong> Tindiquera </strong>, <strong> Califórnia </strong> e <strong> Industrial </strong> lotaram as arquibancadas, criando um caldeirão. "Jogar aqui em Araucária é diferente, a energia da torcida nos carrega", declarou o capitão do time.</p>
+                                <p> Caravanas de bairros como <strong> <strong>Tindiquera</strong> </strong>, <strong> Califórnia </strong> e <strong> <strong>Industrial</strong> </strong> lotaram as arquibancadas, criando um caldeirão. "Jogar aqui em Araucária é diferente, a energia da torcida nos carrega", declarou o capitão do time.</p>
 
                                     <h2> Orgulho da Cidade </h2>
                                         <p> A vitória mantém o time na liderança isolada e reforça o projeto esportivo da cidade.Escolinhas de vôlei no <strong> CSU </strong> e <strong> Tayrá </strong> já sentem o aumento na procura de crianças inspiradas pelos ídolos locais.O próximo desafio será fora de casa, mas a torcida promete acompanhar.</p>
@@ -1007,7 +1007,7 @@ export const events: Event[] = [
         imageUrl: '/images/festa_pessego_real.webp',
         date: getUpcomingDate(5), // Daqui a 5 dias (Futuro)
         time: '18:00 - 23:00',
-        location: 'Parque Cachoeira'
+        location: '<strong>Parque Cachoeira</strong>'
     },
     {
         id: 2,
@@ -1052,7 +1052,7 @@ export const events: Event[] = [
         imageUrl: '/images/flores_spring.jpg',
         date: '25/09/2026',
         time: '09:00 - 18:00',
-        location: 'Parque Cachoeira'
+        location: '<strong>Parque Cachoeira</strong>'
     },
     {
         id: 7,
@@ -1071,7 +1071,7 @@ export const businesses: Business[] = [
         name: 'Panificadora e Confeitaria Araucária',
         category: 'Alimentação',
         imageUrl: '/images/panificadora_araucaria_real.webp',
-        address: 'Rua das Flores, 123 - Centro',
+        address: 'Rua das Flores, 123 - <strong>Centro</strong>',
         phone: '(41) 3901-2345',
         website: 'padariaexemplo.com.br',
         description: 'Pães artesanais, tortas e doces finos. O melhor café da manhã da cidade.',
@@ -1102,7 +1102,7 @@ export const businesses: Business[] = [
         name: 'Academia Corpo & Movimento',
         category: 'Serviços',
         imageUrl: '/images/gym_body_movement_real.webp',
-        address: 'Rua São Vicente, 200 - Centro',
+        address: 'Rua São Vicente, 200 - <strong>Centro</strong>',
         phone: '(41) 3642-0000',
         website: 'academiacm.com.br',
         description: 'Estrutura completa para musculação, crossfit e aulas de dança.',
