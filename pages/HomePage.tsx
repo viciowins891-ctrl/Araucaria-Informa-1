@@ -24,8 +24,8 @@ const HomePage: React.FC = () => {
     // Imagem principal: Usando dados da notícia destaque
     // Lógica robusta para garantir carregamento tanto no mobile quanto desktop
 
-    // 1. Determina a notícia de destaque (ordenando por ID decrescente para garantir a mais recente)
-    const sortedNews = data?.news ? [...data.news].sort((a, b) => b.id - a.id) : [];
+    // 1. Determina a notícia de destaque (usa a ordem natural da API: Data Mais Recente Primeiro)
+    const sortedNews = data?.news || [];
     const featuredNews = sortedNews.length > 0 ? sortedNews[0] : null;
 
     // 2. Define as imagens de exibição

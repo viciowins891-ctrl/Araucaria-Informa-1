@@ -45,8 +45,20 @@ export const api = {
             // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
             return sanitizedNews
                 .sort((a, b) => {
-                    const dateA = new Date(a.publishDate).getTime();
-                    const dateB = new Date(b.publishDate).getTime();
+                    const parseDate = (dateStr: string) => {
+                        if (!dateStr) return 0;
+                        // Se for formato BR (DD/MM/AAAA)
+                        if (dateStr.includes('/')) {
+                            const [day, month, year] = dateStr.split('/').map(Number);
+                            return new Date(year, month - 1, day).getTime();
+                        }
+                        // Se for formato ISO ou outro aceito pelo Date
+                        return new Date(dateStr).getTime();
+                    };
+
+                    const dateA = parseDate(a.publishDate);
+                    const dateB = parseDate(b.publishDate);
+
                     if (dateA !== dateB) return dateB - dateA; // Ordena por data (mais recente primeiro)
                     return b.id - a.id; // Desempate por ID (maior ID primeiro)
                 })
