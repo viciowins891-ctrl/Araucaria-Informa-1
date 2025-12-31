@@ -333,7 +333,7 @@ export const newsArticles: NewsArticle[] = [
 
             <p>Para quem vem de mais longe, como do Jardim Iguaçu ou Costeira, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
         `,
-        imageUrl: '/images/food_trucks_cover_v26.png',
+        imageUrl: '/images/food_trucks_cover_v27.png',
         internalImageUrl: '/images/food_trucks_internal_v26.png',
         category: 'Lazer',
         categoryColor: 'yellow',

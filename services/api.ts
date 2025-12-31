@@ -9,6 +9,24 @@ const DB_KEYS = {
 };
 const UPDATE_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000;
 
+// Helper universal para parse de datas (BR e ISO)
+// Garante padronização da ordem em todo o site
+const parseDate = (dateStr: string): number => {
+    if (!dateStr) return 0;
+    // Formato BR: DD/MM/YYYY
+    if (dateStr.includes('/')) {
+        const [day, month, year] = dateStr.split('/').map(Number);
+        return new Date(year, month - 1, day).getTime();
+    }
+    // Formato ISO: YYYY-MM-DD
+    if (dateStr.includes('-')) {
+        const parts = dateStr.split('-').map(Number);
+        // Assume YYYY-MM-DD se o primeiro for ano (maior que 31)
+        if (parts[0] > 31) return new Date(parts[0], parts[1] - 1, parts[2]).getTime();
+    }
+    return new Date(dateStr).getTime();
+};
+
 export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
         // BUSCA HÍBRIDA: Supabase + LocalStorage (Cache) + Estático
@@ -30,9 +48,10 @@ export const api = {
             // 3. Busca Dados Estáticos
             const { newsArticles: staticNews } = await import('../data');
 
-            // COMBINAÇÃO: Cache > DB > Estático
-            // Remove duplicatas baseado no título (já que IDs podem conflitar entre local e server)
-            const allNews = [...cachedNews, ...(dbNews || []), ...staticNews];
+            // COMBINAÇÃO: Estático < Cache < DB
+            // A ordem aqui define a prioridade no Map abaixo (último vence)
+            // Dados mais dinâmicos (DB/Cache) devem vir DEPOIS dos estáticos para sobrescrevê-los
+            const allNews = [...staticNews, ...cachedNews, ...(dbNews || [])];
 
             const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
 
@@ -44,23 +63,13 @@ export const api = {
 
             // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
             return sanitizedNews
+                // Ordenação Padronizada: Novas primeiro
                 .sort((a, b) => {
-                    const parseDate = (dateStr: string) => {
-                        if (!dateStr) return 0;
-                        // Se for formato BR (DD/MM/AAAA)
-                        if (dateStr.includes('/')) {
-                            const [day, month, year] = dateStr.split('/').map(Number);
-                            return new Date(year, month - 1, day).getTime();
-                        }
-                        // Se for formato ISO ou outro aceito pelo Date
-                        return new Date(dateStr).getTime();
-                    };
-
                     const dateA = parseDate(a.publishDate);
                     const dateB = parseDate(b.publishDate);
 
-                    if (dateA !== dateB) return dateB - dateA; // Ordena por data (mais recente primeiro)
-                    return b.id - a.id; // Desempate por ID (maior ID primeiro)
+                    if (dateA !== dateB) return dateB - dateA; // Decrescente (Mais novas topo)
+                    return b.id - a.id;
                 })
                 .slice(0, 100) as NewsArticle[];
 
@@ -185,35 +194,22 @@ export const api = {
                 eventsList = events;
             }
 
-            // Filtragem de Eventos Passados
+            // Filtragem e Ordenação Padronizada
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
-            return eventsList.filter(event => {
-                let eventDate: Date;
-
-                // Suporte para formatos ISO (YYYY-MM-DD) e BR (DD/MM/YYYY)
-                if (event.date.includes('-')) {
-                    const [year, month, day] = event.date.split('-').map(Number);
-                    eventDate = new Date(year, month - 1, day);
-                } else {
-                    const [day, month, year] = event.date.split('/').map(Number);
-                    eventDate = new Date(year, month - 1, day);
-                }
-
-                // Mantém apenas eventos de hoje ou futuros
-                return eventDate >= today;
-            });
+            return eventsList
+                .filter(event => parseDate(event.date) >= today.getTime())
+                .sort((a, b) => parseDate(a.date) - parseDate(b.date)); // Crescente (Próximos primeiro)
 
         } catch (e) {
             const { events } = await import('../data');
             // Mesma lógica de filtro para o catch
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            return events.filter(event => {
-                const [day, month, year] = event.date.split('/').map(Number);
-                return new Date(year, month - 1, day) >= today;
-            });
+            return events
+                .filter(event => parseDate(event.date) >= today.getTime())
+                .sort((a, b) => parseDate(a.date) - parseDate(b.date));
         }
     },
 
