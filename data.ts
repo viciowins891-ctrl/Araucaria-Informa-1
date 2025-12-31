@@ -34,6 +34,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Lojistas da Avenida Archelau já sentem a diferença no movimento, impulsionado pelo aumento do poder de compra das famílias. O ciclo virtuoso se fecha com o setor de serviços, que tem aberto novas frentes de trabalho para atender a essa demanda crescente.</p>
         `,
         imageUrl: '/images/employment_drop_new_cover.png',
+        mobileImageUrl: '/images/employment_drop_new_cover_mobile.webp',
         category: 'Economia',
         categoryColor: 'blue',
         internalImageUrl: '/images/araucaria_employment_internal_final_v5.png',
@@ -55,6 +56,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença e comunidade. Em tempos onde o entretenimento é muitas vezes individual e dentro de casa, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora e segura.</p>
         `,
         imageUrl: '/images/cinema_cover_real_final_v7.jpg',
+        mobileImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
         internalImageUrl: '/images/cinema_lion.png',
@@ -76,6 +78,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A modernização do parque tecnológico do HMA também atrai especialistas médicos para a cidade, fortalecendo a rede de atendimento especializada disponível para todos os araucarienses.</p>
         `,
         imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
+        mobileImageUrl: '/images/hospital_equipment_araucaria_final_v5_mobile.webp',
         category: 'Saúde',
         categoryColor: 'green',
         internalImageUrl: '/images/hospital_delivery_trucks_internal.png',
@@ -95,7 +98,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O projeto ultrapassa os muros da escola e gera impacto positivo direto na vizinhança. Famílias de bairros adjacentes participam dos mutirões de colheita nos fins de semana e recebem consultoria para criar suas próprias hortas domésticas, fortalecendo a segurança alimentar e os laços comunitários da região.</p>
         `,
         imageUrl: '/images/hortas_escolas_cover_v2.jpg',
-        mobileImageUrl: '/images/hortas_escolas_cover_v2.jpg',
+        mobileImageUrl: '/images/hortas_escolas_cover_v2_mobile.webp',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/school_garden_internal_final_v5.png',
@@ -115,6 +118,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A conectividade chegou forte nas áreas residenciais. Praças em bairros como Califórnia, CSU e Tupy agora contam com internet de alta velocidade gratuita. Isso democratiza o acesso à informação e permite que estudantes e trabalhadores utilizem os espaços públicos para estudos e qualificação profissional, impulsionando o desenvolvimento local.</p>
         `,
         imageUrl: '/images/araucaria_smart_city_final_v8.png',
+        mobileImageUrl: '/images/araucaria_smart_city_final_v8_mobile.webp',
         internalImageUrl: '/images/araucaria_smart_city_internal_collage_final_v5.png',
         category: 'Tecnologia',
         categoryColor: 'indigo',
@@ -138,6 +142,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Donos de lanchonetes, postos de gasolina e pequenos comércios locais já reforçaram seus estoques prevendo o aumento do fluxo de visitantes. A circulação de torcedores de outras cidades também movimenta a rede hoteleira e gastronômica, injetando capital novo na economia local e valorizando o potencial turístico-esportivo de Araucária.</p>
         `,
         imageUrl: '/images/gym_volleyball_final_cover_v5.png',
+        mobileImageUrl: '/images/gym_volleyball_final_cover_v5_mobile.webp',
         category: 'Esporte',
         categoryColor: 'orange',
         internalImageUrl: '/images/gym_volleyball_internal_final_v5.png',

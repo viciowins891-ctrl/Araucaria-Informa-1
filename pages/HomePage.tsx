@@ -19,71 +19,63 @@ const HomePage: React.FC = () => {
     }, []);
 
     const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
-
-    // Imagem principal: Usando imagem local gerada/enviada para garantir carregamento offline/online
-    // FIX: Atualizado para Pet Adoption como padrão temporário para garantir visualização imediata
-    const DEFAULT_HERO_IMAGE = "/images/pet_adoption_cover_final_v1.png";
-    const MOBILE_HERO_IMAGE = "/images/pet_adoption_cover_final_v1.png";
-
-    // Estado para controlar erro de carregamento da imagem
     const [imageError, setImageError] = useState(false);
 
-    // Determina a notícia de destaque (se houver dados)
-    const featuredNews = data?.news && data.news.length > 0 ? data.news[0] : null;
+    // Imagem principal: Usando dados da notícia destaque
+    // Lógica robusta para garantir carregamento tanto no mobile quanto desktop
 
-    // Lógica direta de seleção de imagem (Sem useEffect para evitar flash)
-    // 1. Se houve erro, usa fallback
-    // 2. Se for a notícia da Feira de Adoção (ID 2029 ou título), FORÇA a imagem correta.
-    // 3. Senão, usa a do featuredNews ou Default
-    let finalDisplayImage = DEFAULT_HERO_IMAGE;
+    // 1. Determina a notícia de destaque (ordenando por ID decrescente para garantir a mais recente)
+    const sortedNews = data?.news ? [...data.news].sort((a, b) => b.id - a.id) : [];
+    const featuredNews = sortedNews.length > 0 ? sortedNews[0] : null;
+
+    // 2. Define as imagens de exibição
+    const defaultImage = "/images/araucaria_hero.png";
+    let desktopImage = defaultImage;
+    let mobileImage = defaultImage;
 
     if (featuredNews) {
         if (featuredNews.imageUrl) {
-            finalDisplayImage = featuredNews.imageUrl;
+            desktopImage = featuredNews.imageUrl;
         }
 
-        // OVERRIDE DE SEGURANÇA: Garante a imagem da Feira Pet se for ela a destaque
-        if (featuredNews.title.toLowerCase().includes('adoção') || featuredNews.title.toLowerCase().includes('pet')) {
-            finalDisplayImage = '/images/pet_adoption_cover_final_v1.png';
+        // Se houver imagem mobile específica, usa ela. Se não, usa a desktop.
+        if (featuredNews.mobileImageUrl) {
+            mobileImage = featuredNews.mobileImageUrl;
+        } else {
+            mobileImage = desktopImage; // Fallback para a desktop se não tiver mobile
         }
-    }
-
-    if (imageError) {
-        finalDisplayImage = DEFAULT_HERO_IMAGE;
     }
 
     // Otimização de Imagens Responsivas (LCP Boost)
-    // Como é uma imagem local (public folder), não usamos o otimizador do Unsplash aqui,
-    // mas o navegador já vai cachear agressivamente e o preload já fez o trabalho pesado.
-
     const handleImageError = () => {
         console.log("Falha ao carregar imagem principal.");
         setImageError(true);
     };
 
-    // Renderização Condicional
-    // LOADING STATE: Não bloqueia mais a renderização inteira.
-    // Mostra o Hero com imagem padrão enquanto carrega os dados.
-    const news = data?.news ? [...data.news].sort((a, b) => b.id - a.id) : [];
+    if (imageError) {
+        desktopImage = defaultImage;
+        mobileImage = defaultImage;
+    }
+
+    const news = sortedNews;
     const events = data?.events || [];
     const businesses = data?.businesses || [];
     const gridNews = news.length > 0 ? news.slice(1, 4) : [];
 
     return (
         <div>
-            {/* Hero Section Dinâmica - Altura Flexível e Padding Ajustado */}
+            {/* Hero Section Dinâmica */}
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
                 <div className="absolute inset-0 z-0">
-                    <picture>
-                        <source srcSet={finalDisplayImage} media="(max-width: 767px)" type="image/webp" />
+                    <picture className="w-full h-full block">
+                        {/* Mobile Source - Prioriza WebP se disponível */}
+                        <source srcSet={mobileImage} media="(max-width: 767px)" type="image/webp" />
                         <img
-                            src={finalDisplayImage}
+                            src={desktopImage}
                             alt="Imagem de destaque - Araucária"
                             className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                             onError={handleImageError}
                             referrerPolicy="no-referrer"
-                            width="1920"
-                            height="1080"
                             // @ts-ignore
                             fetchPriority="high"
                             loading="eager"
