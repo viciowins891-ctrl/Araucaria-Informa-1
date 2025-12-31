@@ -93,8 +93,8 @@ export const newsArticles: NewsArticle[] = [
             <h2>Impacto nos Bairros Adjacentes</h2>
             <p>O projeto ultrapassa os muros da escola e gera impacto positivo direto na vizinhança. Famílias de bairros adjacentes participam dos mutirões de colheita nos fins de semana e recebem consultoria para criar suas próprias hortas domésticas, fortalecendo a segurança alimentar e os laços comunitários da região.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800',
-        mobileImageUrl: '/images/hortas_escolas_cover.png',
+        imageUrl: '/images/hortas_escolas_cover_v2.jpg',
+        mobileImageUrl: '/images/hortas_escolas_cover_v2.jpg',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/school_garden_internal_final_v5.png',
