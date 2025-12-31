@@ -78,7 +78,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
         category: 'Saúde',
         categoryColor: 'green',
-        internalImageUrl: '/images/hospital_new_internal.png',
+        internalImageUrl: '/images/hospital_delivery_trucks_internal.png',
         publishDate: '2025-12-29',
         author: 'Saúde Agora'
     },
