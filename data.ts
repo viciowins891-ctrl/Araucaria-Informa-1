@@ -503,7 +503,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Um mutirão de limpeza realizado nas margens do Rio Iguaçu, no trecho que corta Araucária, resultou na retirada de mais de 5 toneladas de resíduos sólidos. A ação contou com a participação de 100 voluntários, incluindo escoteiros e moradores ribeirinhos.</p>
             <p>Entre os itens encontrados estavam pneus, plásticos e até móveis velhos. A Secretaria de Meio Ambiente apoiou a ação com caminhões para o transporte correto do material recolhido.</p>
         `,
-        imageUrl: '/images/limpeza_rio_iguacu_real.webp',
+        imageUrl: '/images/limpeza_rio_iguacu_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/river_cleanup_volunteers.png',
