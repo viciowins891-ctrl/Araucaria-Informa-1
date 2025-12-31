@@ -641,7 +641,8 @@ export const newsArticles: NewsArticle[] = [
 
             <h2>Desenvolvimento Rural</h2>
             <p>O turismo ecológico movimenta a economia local. Produtores de <strong>Roça Nova</strong> e <strong>Campestre</strong> vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>
-        
+        `,
+        imageUrl: '/images/sitio_ecologico_trilhas_cover_v2.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: getPastDate(42),
