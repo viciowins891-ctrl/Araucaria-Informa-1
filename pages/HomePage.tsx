@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
     }, []);
 
-    const { data, loading, error } = useFetch(api.getHomeData, 'home-data');
+    const { data, loading, error } = useFetch(api.getHomeData, 'home-data-v31');
     const [imageError, setImageError] = useState(false);
 
     // Imagem principal: Usando dados da notícia destaque
@@ -35,12 +35,17 @@ const HomePage: React.FC = () => {
 
     if (featuredNews) {
         if (featuredNews.imageUrl) {
-            desktopImage = featuredNews.imageUrl;
+            // FORCE CACHE BUST: Adiciona parametro ?v=31 para obrigar navegador a baixar nova imagem
+            const cacheBuster = '?v=31';
+            const baseImg = featuredNews.imageUrl.split('?')[0]; // Remove query anterior se houver
+            desktopImage = `${baseImg}${cacheBuster}`;
         }
 
         // Se houver imagem mobile específica, usa ela. Se não, usa a desktop.
         if (featuredNews.mobileImageUrl) {
-            mobileImage = featuredNews.mobileImageUrl;
+            const cacheBuster = '?v=31';
+            const baseImg = featuredNews.mobileImageUrl.split('?')[0];
+            mobileImage = `${baseImg}${cacheBuster}`;
         } else {
             mobileImage = desktopImage; // Fallback para a desktop se não tiver mobile
         }

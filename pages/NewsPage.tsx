@@ -21,7 +21,7 @@ const NewsPage: React.FC = () => {
     });
 
     // Usamos cache 'news-list' para evitar recarregamento ao voltar
-    const { data: articles, loading, error } = useFetch(api.getNews, 'news-list');
+    const { data: articles, loading, error } = useFetch(api.getNews, 'news-list-v31');
 
     // Persiste categoria ao mudar e RESETA a página (comportamento esperado de filtro novo)
     // Mas se for a mesma categoria inicial (mount), não reseta.
