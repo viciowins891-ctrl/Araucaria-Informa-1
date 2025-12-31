@@ -201,7 +201,7 @@ export const newsArticles: NewsArticle[] = [
             <h2>Facilidade para a Zona Rural</h2>
             <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como **Guajuvira** e **Roça Nova**. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
         `,
-        imageUrl: '/images/custom_poupatempo_official.webp', // Foto oficial externa sem máscaras
+        imageUrl: '/images/poupatempo_inauguracao_v2.png', // Foto oficial externa sem máscaras v2
         mobileImageUrl: '/images/custom_poupatempo_official_mobile.webp',
         category: 'Cidade',
         categoryColor: 'blue',
