@@ -159,7 +159,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária.</p>
 
             <h2>Alívio no Califórnia e Tupy</h2>
-            <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como **Califórnia** e **Tupy**. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
+            <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como <strong>Califórnia</strong> e <strong>Tupy</strong>. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
         `,
         imageUrl: '/images/cmei_zerando_fila_cover_v2.png', // Versão Otimizada (WebP) para LCP rápido v2
         mobileImageUrl: '/images/custom_cmei_official_mobile.webp',
@@ -179,7 +179,7 @@ export const newsArticles: NewsArticle[] = [
             <p>A prioridade dos recursos será para a manutenção dos serviços de saúde e grandes obras de infraestrutura viária, como a duplicação de avenidas importantes e a construção do novo hospital.</p>
 
             <h2>Obras no Industrial e Thomaz Coelho</h2>
-            <p>Entre os destaques, está a revitalização asfáltica de vias arteriais no **Jardim Industrial** e **Thomaz Coelho**. A previsão é que as obras melhorem a fluidez do trânsito para quem se desloca diariamente para a capital. Além disso, recursos foram alocados para a reforma de UBSs no **Tindiquera**, atendendo a uma demanda antiga da comunidade.</p>
+            <p>Entre os destaques, está a revitalização asfáltica de vias arteriais no <strong>Jardim Industrial</strong> e <strong>Thomaz Coelho</strong>. A previsão é que as obras melhorem a fluidez do trânsito para quem se desloca diariamente para a capital. Além disso, recursos foram alocados para a reforma de UBSs no <strong>Tindiquera</strong>, atendendo a uma demanda antiga da comunidade.</p>
         `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         mobileImageUrl: '/images/news_budget_mobile.webp',
@@ -199,7 +199,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"É o fim da burocracia e das filas. O cidadão resolve tudo em um só lugar", destacou o governador Ratinho Jr durante a cerimônia.</p>
 
             <h2>Facilidade para a Zona Rural</h2>
-            <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como **Guajuvira** e **Roça Nova**. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
+            <p>A localização estratégica no Centro beneficia especialmente moradores de áreas rurais distantes, como <strong>Guajuvira</strong> e <strong>Roça Nova</strong>. Antes obrigados a viajar até Curitiba para simples emissões de documentos, agora esses cidadãos resolvem pendências rapidamente, aproveitando a viagem para consumir no comércio central de Araucária.</p>
         `,
         imageUrl: '/images/poupatempo_inauguracao_v2.png', // Foto oficial externa sem máscaras v2
         mobileImageUrl: '/images/custom_poupatempo_official_mobile.webp',
@@ -219,7 +219,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Os recursos devem ser liberados já no início do próximo semestre, acelerando obras paradas e equipando novas unidades.</p>
 
             <h2>Melhorias no Capela Velha</h2>
-            <p>Parte significativa dos R$ 18 milhões será destinada à ampliação de escolas no bairro **Capela Velha**, uma das regiões que mais cresce na cidade. A construção de novas salas de aula e quadras poliesportivas promete transformar a realidade escolar local, oferecendo infraestrutura de ponta para centenas de alunos.</p>
+            <p>Parte significativa dos R$ 18 milhões será destinada à ampliação de escolas no bairro <strong>Capela Velha</strong>, uma das regiões que mais cresce na cidade. A construção de novas salas de aula e quadras poliesportivas promete transformar a realidade escolar local, oferecendo infraestrutura de ponta para centenas de alunos.</p>
         `,
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
         mobileImageUrl: '/images/news_investments_mobile.webp',
@@ -239,7 +239,7 @@ export const newsArticles: NewsArticle[] = [
             <p>O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões. Todo o material foi destruído em fornos industriais com autorização judicial.</p>
 
             <h2>Segurança no Campina da Barra</h2>
-            <p>A operação teve foco especial em pontos críticos denunciados pela comunidade do **Campina da Barra**. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
+            <p>A operação teve foco especial em pontos críticos denunciados pela comunidade do <strong>Campina da Barra</strong>. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
         `,
         imageUrl: '/images/pcpr_drugs_incineration_v2.png', // Foto Real Incineração v2
         mobileImageUrl: '/images/custom_drugs_mobile.webp',
@@ -259,7 +259,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As doses estão disponíveis em todas as Unidades Básicas de Saúde (UBS) do município para o público-alvo.</p>
 
             <h2>Adesão no CSU e Boqueirão</h2>
-            <p>As UBSs do **CSU** e **Boqueirão** registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do Boqueirão.</p>
+            <p>As UBSs do <strong>CSU</strong> e <strong>Boqueirão</strong> registraram a maior procura no primeiro dia de campanha. Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do Boqueirão.</p>
         `,
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
@@ -278,7 +278,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Novas apresentações estão programadas para o próximo fim de semana na Praça da Matriz.</p>
 
             <h2>Turismo Regional</h2>
-            <p>O evento atraiu não apenas moradores do Centro, mas caravanas de bairros como **Iguaçu** e **Estação**. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
+            <p>O evento atraiu não apenas moradores do Centro, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong>Estação</strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
         `,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
@@ -298,7 +298,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Equipes de emergência estão nas ruas para remover galhos de árvores sobre a fiação e normalizar o serviço o mais rápido possível.</p>
 
             <h2>Jardim Turim Afetado</h2>
-            <p>Os ventos fortes causaram quedas de árvores principalmente na região do **Jardim Turim** e **Shangri-lá**. Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>
+            <p>Os ventos fortes causaram quedas de árvores principalmente na região do <strong>Jardim Turim</strong> e <strong>Shangri-lá</strong>. Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>
         `,
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         mobileImageUrl: '/images/news_cyclone_energy_mobile.webp',
@@ -318,7 +318,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As obras devem começar no próximo mês e visam oferecer mais conforto e segurança para atletas e torcedores.</p>
 
             <h2>Alternativa para Atletas</h2>
-            <p>Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do **Parque Cachoeira** e **Centro** serão transferidas temporariamente para ginásios no **Fazenda Velha**. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>
+            <p>Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do <strong>Parque Cachoeira</strong> e <strong>Centro</strong> serão transferidas temporariamente para ginásios no <strong>Fazenda Velha</strong>. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>
         `,
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
         mobileImageUrl: '/images/custom_gym_official_mobile.webp',
@@ -406,12 +406,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Novas ciclovias conectam bairros industriais',
         summary: 'Projeto de mobilidade urbana facilita o deslocamento de trabalhadores para a área industrial.',
         content: `
-            <p>A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial. O projeto de 5km conecta estrategicamente os bairros **Thomaz Coelho** e **Cidade Industrial de Araucária (CIAR)**, uma das zonas com maior fluxo diário de trabalhadores.</p>
+            <p>A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial. O projeto de 5km conecta estrategicamente os bairros <strong>Thomaz Coelho</strong> e <strong>Cidade Industrial de Araucária (CIAR)</strong>, uma das zonas com maior fluxo diário de trabalhadores.</p>
             
-            <p>O ciclista que sai da **Chapada** ou do **Barigui** não precisará mais disputar espaço com caminhões pesados na Rodovia do Xisto. "É segurança para o trabalhador e agilidade para a indústria", resume o secretário de obras.</p>
+            <p>O ciclista que sai da <strong>Chapada</strong> ou do <strong>Barigui</strong> não precisará mais disputar espaço com caminhões pesados na Rodovia do Xisto. "É segurança para o trabalhador e agilidade para a indústria", resume o secretário de obras.</p>
 
             <h2>Mobilidade e Saúde</h2>
-            <p>Além de reduzir o trânsito nos horários de pico, a ciclovia incentiva a prática de exercícios. Moradores do **Jardim Tupy** já utilizam o trecho pronto para caminhadas e corridas noturnas, beneficiados pela nova iluminação de LED instalada em todo o percurso.</p>
+            <p>Além de reduzir o trânsito nos horários de pico, a ciclovia incentiva a prática de exercícios. Moradores do <strong>Jardim Tupy</strong> já utilizam o trecho pronto para caminhadas e corridas noturnas, beneficiados pela nova iluminação de LED instalada em todo o percurso.</p>
         
         `,
         imageUrl: '/images/ciclovia_industrial_cover_v2.png',
@@ -426,12 +426,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Operação Tapa-Buracos avança no Jardim Iguaçu',
         summary: 'Equipes da Secretaria de Obras trabalham em ritmo acelerado para recuperar vias danificadas pelas chuvas.',
         content: `
-            <p>A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa-Buracos no bairro **Jardim Iguaçu**, atendendo a uma demanda antiga dos moradores. A ação concentra-se inicialmente na **Avenida Archelau de Almeida Torres** e ruas transversais, principais corredores de ônibus da região.</p>
+            <p>A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa-Buracos no bairro <strong>Jardim Iguaçu</strong>, atendendo a uma demanda antiga dos moradores. A ação concentra-se inicialmente na <strong>Avenida Archelau de Almeida Torres</strong> e ruas transversais, principais corredores de ônibus da região.</p>
             
-            <p>As equipes também atuam na recuperação de vias no **Jardim Plínio** e **Jardim Shangri-lá**, onde o asfalto sofreu maior desgaste pelas chuvas recentes. O objetivo é garantir a segurança viária e evitar prejuízos aos motoristas.</p>
+            <p>As equipes também atuam na recuperação de vias no <strong>Jardim Plínio</strong> e <strong>Jardim Shangri-lá</strong>, onde o asfalto sofreu maior desgaste pelas chuvas recentes. O objetivo é garantir a segurança viária e evitar prejuízos aos motoristas.</p>
 
             <h2>Valorização Imobiliária</h2>
-            <p>Além do conforto ao dirigir, a manutenção viária impacta diretamente na valorização dos imóveis. "Rua arrumada traz outra cara pro bairro", comenta um comerciante local. A previsão é estender os trabalhos para o **Jardim Planalto** na próxima semana.</p>
+            <p>Além do conforto ao dirigir, a manutenção viária impacta diretamente na valorização dos imóveis. "Rua arrumada traz outra cara pro bairro", comenta um comerciante local. A previsão é estender os trabalhos para o <strong>Jardim Planalto</strong> na próxima semana.</p>
         
         `,
         imageUrl: '/images/tapa_buracos_iguacu_cover_v2.png',
@@ -448,10 +448,10 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>A Guarda Municipal de Araucária recebeu hoje 5 novas viaturas Jeep Commander, totalmente equipadas e blindadas para o patrulhamento ostensivo. Os veículos serão destinados à Ronda Ostensiva Municipal (ROMU), reforçando o combate à criminalidade.</p>
             
-            <p>As novas unidades já estão em operação, com foco no patrulhamento escolar nos bairros **Fazenda Velha** e **Capela Velha**, além de reforçar a segurança no comércio da região central durante o horário bancário.</p>
+            <p>As novas unidades já estão em operação, com foco no patrulhamento escolar nos bairros <strong>Fazenda Velha</strong> e <strong>Capela Velha</strong>, além de reforçar a segurança no comércio da região central durante o horário bancário.</p>
 
             <h2>Resposta Rápida no Costeira</h2>
-            <p>Uma base móvel será instalada rotativamente na região do **Costeira** e **Jardim Tropical**, reduzindo o tempo de resposta a ocorrências nestas localidades. "A presença física da viatura inibe delitos e traz tranquilidade para quem chega do trabalho à noite", afirmou o comandante.</p>
+            <p>Uma base móvel será instalada rotativamente na região do <strong>Costeira</strong> e <strong>Jardim Tropical</strong>, reduzindo o tempo de resposta a ocorrências nestas localidades. "A presença física da viatura inibe delitos e traz tranquilidade para quem chega do trabalho à noite", afirmou o comandante.</p>
         
         `,
         imageUrl: '/images/gm_viaturas_cover_v2.png', // Foto Oficial (Jeep/Chaves) v2
@@ -468,10 +468,10 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>O Hospital Municipal de Araucária (HMA) inaugurou nesta manhã sua nova ala pediátrica, um marco para a saúde pública da cidade. O espaço, decorado de forma lúdica, conta com 30 novos leitos e equipamentos de UTI neopediátrica de última geração.</p>
             
-            <p>A ampliação desafoga o sistema de saúde, evitando que famílias do **Jardim Califórnia** ou **Tindiquera** precisem se deslocar até hospitais da capital em casos de emergência. O atendimento é 100% SUS e funciona 24 horas.</p>
+            <p>A ampliação desafoga o sistema de saúde, evitando que famílias do <strong>Jardim Califórnia</strong> ou <strong>Tindiquera</strong> precisem se deslocar até hospitais da capital em casos de emergência. O atendimento é 100% SUS e funciona 24 horas.</p>
 
             <h2>Humanização no Atendimento</h2>
-            <p>Mais do que estrutura, o foco é o acolhimento. "Uma criança doente fragiliza a família inteira. Aqui, oferecemos não só medicina, mas conforto", diz a diretora clínica. A nova ala já recebe pacientes de bairros distantes como **Guajuvira**, garantindo equidade no acesso à saúde de qualidade.</p>
+            <p>Mais do que estrutura, o foco é o acolhimento. "Uma criança doente fragiliza a família inteira. Aqui, oferecemos não só medicina, mas conforto", diz a diretora clínica. A nova ala já recebe pacientes de bairros distantes como <strong>Guajuvira</strong>, garantindo equidade no acesso à saúde de qualidade.</p>
         
         `,
         imageUrl: '/images/hma_pediatria_cover_v2.png', // Foto Oficial Inauguração (Corte Fita) v2
@@ -516,12 +516,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Limpeza do Rio Iguaçu retira 5 toneladas de lixo',
         summary: 'Ação voluntária mobilizou comunidade e ONGs ambientais no último fim de semana.',
         content: `
-            <p>Um verdadeiro exército de voluntários retirou mais de 5 toneladas de lixo das margens do Rio Iguaçu neste fim de semana. A ação concentrou-se no trecho próximo à **Ponte do Rio Passaúna** e no **Parque Barigui** de Araucária.</p>
+            <p>Um verdadeiro exército de voluntários retirou mais de 5 toneladas de lixo das margens do Rio Iguaçu neste fim de semana. A ação concentrou-se no trecho próximo à <strong>Ponte do Rio Passaúna</strong> e no <strong>Parque Barigui</strong> de Araucária.</p>
             
-            <p>Moradores do **Jardim Dalla Torre** e **Estação** participaram ativamente, recolhendo desde garrafas PET até sofás descartados irregularmente. O material reciclável foi destinado à cooperativa de catadores do bairro **Sabiá**, gerando renda para dezenas de famílias.</p>
+            <p>Moradores do <strong>Jardim Dalla Torre</strong> e <strong>Estação</strong> participaram ativamente, recolhendo desde garrafas PET até sofás descartados irregularmente. O material reciclável foi destinado à cooperativa de catadores do bairro <strong>Sabiá</strong>, gerando renda para dezenas de famílias.</p>
 
             <h2>Consciência Ambiental</h2>
-            <p>"O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do **Thomaz Coelho**. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no **Capela Velha** para impedir que novos resíduos cheguem ao leito principal do rio.</p>
+            <p>"O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do <strong>Thomaz Coelho</strong>. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no <strong>Capela Velha</strong> para impedir que novos resíduos cheguem ao leito principal do rio.</p>
         
         `,
         imageUrl: '/images/limpeza_rio_iguacu_v2.png',
@@ -583,12 +583,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Startup local desenvolve app para transporte escolar',
         summary: 'Aplicativo criado por jovens araucarienses permite aos pais rastrearem vans escolares em tempo real.',
         content: `
-            <p>Uma startup nascida na incubadora do Parque Tecnológico de Araucária lançou o "Van Segura", aplicativo que revoluciona o transporte escolar na cidade. Pais do **Jardim Iguaçu** e **Campina da Barra** agora monitoram o trajeto dos filhos em tempo real.</p>
+            <p>Uma startup nascida na incubadora do Parque Tecnológico de Araucária lançou o "Van Segura", aplicativo que revoluciona o transporte escolar na cidade. Pais do <strong>Jardim Iguaçu</strong> e <strong>Campina da Barra</strong> agora monitoram o trajeto dos filhos em tempo real.</p>
             
-            <p>A tecnologia oferece notificações de embarque e desembarque, trazendo paz de espírito para as famílias. "Eu ficava ansiosa em dias de chuva forte no **Costeira**. Agora vejo a van chegando pelo celular", conta uma mãe usuária do sistema.</p>
+            <p>A tecnologia oferece notificações de embarque e desembarque, trazendo paz de espírito para as famílias. "Eu ficava ansiosa em dias de chuva forte no <strong>Costeira</strong>. Agora vejo a van chegando pelo celular", conta uma mãe usuária do sistema.</p>
 
             <h2>Tecnologia Local</h2>
-            <p>O app já conta com adesão de 80% dos motoristas que atendem as escolas do **Centro** e **Vila Nova**. A inovação mostra o potencial tecnológico da juventude araucariense, criando soluções locais para problemas reais da nossa comunidade.</p>
+            <p>O app já conta com adesão de 80% dos motoristas que atendem as escolas do <strong>Centro</strong> e <strong>Vila Nova</strong>. A inovação mostra o potencial tecnológico da juventude araucariense, criando soluções locais para problemas reais da nossa comunidade.</p>
         
         `,
         imageUrl: '/images/startup_app_cover_v2.png',
@@ -637,10 +637,10 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>O Sítio Ecológico, localizado na área rural de <strong>Guajuvira</strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
             
-            <p>Os trajetos, que variam de 2km a 5km, passam por áreas preservadas de Mata Atlântica e Araucárias centenárias. Visitantes do **Centro** e **Boqueirão** têm lotado o local nos finais de semana, buscando contato com a natureza sem precisar viajar longe.</p>
+            <p>Os trajetos, que variam de 2km a 5km, passam por áreas preservadas de Mata Atlântica e Araucárias centenárias. Visitantes do <strong>Centro</strong> e <strong>Boqueirão</strong> têm lotado o local nos finais de semana, buscando contato com a natureza sem precisar viajar longe.</p>
 
             <h2>Desenvolvimento Rural</h2>
-            <p>O turismo ecológico movimenta a economia local. Produtores de **Roça Nova** e **Campestre** vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>
+            <p>O turismo ecológico movimenta a economia local. Produtores de <strong>Roça Nova</strong> e <strong>Campestre</strong> vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>
         
         category: 'Turismo',
         categoryColor: 'indigo',
@@ -652,8 +652,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária recebe etapa do Campeonato Paranaense de Futsal',
         summary: 'Ginásio Joval de Paula Souza será palco de grandes jogos neste fim de semana.',
         content: `
-            < p > A torcida araucariense tem um encontro marcado neste fim de semana.A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
-                < p > A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
+            <p> A torcida araucariense tem um encontro marcado neste fim de semana.A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
+                <p> A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
                     `,
         imageUrl: 'https://images.unsplash.com/photo-1518611507436-e92e60832012?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
@@ -667,8 +667,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Campanha do Agasalho arrecada 2 toneladas de doações',
         summary: 'Solidariedade marcou o inverno em Araucária com recorde de arrecadação.',
         content: `
-                    < p > O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
-                        < p > A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
+                    <p> O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
+                        <p> A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
                             `,
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
@@ -682,8 +682,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Novo binário no Centro melhora fluxo de veículos',
         summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
         content: `
-                            < p > Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
-                                < p > A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
+                            <p> Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
+                                <p> A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
                                     `,
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
@@ -697,8 +697,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Festival Gastronômico de Inverno começa hoje',
         summary: 'Restaurantes da cidade oferecem pratos especiais com descontos exclusivos.',
         content: `
-                                    < p > Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
-                                        < p > O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
+                                    <p> Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
+                                        <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
                                             `,
         imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
@@ -712,8 +712,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Escolas municipais recebem lousas digitais',
         summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
         content: `
-                                            < p > A Secretaria de Educação iniciou a instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental.O equipamento permite aos professores utilizarem recursos de vídeo e internet durante as aulas, tornando o aprendizado mais dinâmico.</p>
-                                                < p > "É um salto de qualidade pedagógica que coloca nossa rede no século XXI", destacou a secretária.</p>
+                                            <p> A Secretaria de Educação iniciou a instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental.O equipamento permite aos professores utilizarem recursos de vídeo e internet durante as aulas, tornando o aprendizado mais dinâmico.</p>
+                                                <p> "É um salto de qualidade pedagógica que coloca nossa rede no século XXI", destacou a secretária.</p>
                                                     `,
         imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
@@ -727,8 +727,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
         content: `
-                                                    < p > Uma grande empresa do setor logístico, instalada próximo à Rodovia do Xisto, anunciou a abertura de 50 novas vagas de emprego imediato.A expansão das atividades visa atender o aumento da demanda no final do ano.</p>
-                                                        < p > Os interessados devem cadastrar currículo no site da empresa ou comparecer ao SINE Araucária.</p>
+                                                    <p> Uma grande empresa do setor logístico, instalada próximo à Rodovia do Xisto, anunciou a abertura de 50 novas vagas de emprego imediato.A expansão das atividades visa atender o aumento da demanda no final do ano.</p>
+                                                        <p> Os interessados devem cadastrar currículo no site da empresa ou comparecer ao SINE Araucária.</p>
                                                             `,
         imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
         category: 'Economia',
@@ -742,8 +742,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária investe em iluminação LED nos bairros',
         summary: 'Mais econômicas e eficientes, novas lâmpadas aumentam a segurança nas ruas.',
         content: `
-                                                            < p > O programa "Araucária Mais Iluminada" chegou ao bairro Capela Velha.Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
-                                                                < p > A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
+                                                            <p> O programa "Araucária Mais Iluminada" chegou ao bairro Capela Velha.Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
+                                                                <p> A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
                                                                     `,
         imageUrl: '/images/iluminacao_led_cover.png',
         category: 'Infraestrutura',
@@ -757,8 +757,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Biblioteca Municipal promove feira de troca de livros',
         summary: 'Evento incentiva a leitura e a circulação de obras literárias na comunidade.',
         content: `
-                                                                    < p > Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros.A regra é simples: traga um livro usado em bom estado e troque por outro de seu interesse.</p>
-                                                                        < p > O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças.</p>
+                                                                    <p> Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros.A regra é simples: traga um livro usado em bom estado e troque por outro de seu interesse.</p>
+                                                                        <p> O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças.</p>
                                                                             `,
         imageUrl: '/images/feira_livros_cover.png',
         category: 'Cultura',
@@ -772,8 +772,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Dia D de vacinação pet acontece neste domingo',
         summary: 'Mutirão oferecerá vacina antirrábica gratuita para cães e gatos na Praça da Bíblia.',
         content: `
-                                                                            < p > A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica.A imunização é gratuita e obrigatória para o controle da raiva.</p>
-                                                                                < p > Equipes estarão concentradas na Praça da Bíblia das 9h às 17h.É importante levar os animais em caixas de transporte ou com guias e coleiras.</p>
+                                                                            <p> A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica.A imunização é gratuita e obrigatória para o controle da raiva.</p>
+                                                                                <p> Equipes estarão concentradas na Praça da Bíblia das 9h às 17h.É importante levar os animais em caixas de transporte ou com guias e coleiras.</p>
                                                                                     `,
         imageUrl: '/images/vacinacao_pet_cover.png',
         category: 'Cidade',
@@ -787,8 +787,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Feira do Produtor ganha nova cobertura',
         summary: 'Reforma garante mais conforto para feirantes e clientes em dias de chuva.',
         content: `
-                                                                                    < p > A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova.A obra era uma reivindicação antiga dos agricultores, que sofriam com a exposição ao sol forte e chuvas.</p>
-                                                                                        < p > "Agora temos dignidade para trabalhar e nossos clientes podem comprar com calma", comemorou o presidente da associação dos feirantes.</p>
+                                                                                    <p> A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova.A obra era uma reivindicação antiga dos agricultores, que sofriam com a exposição ao sol forte e chuvas.</p>
+                                                                                        <p> "Agora temos dignidade para trabalhar e nossos clientes podem comprar com calma", comemorou o presidente da associação dos feirantes.</p>
                                                                                             `,
         imageUrl: '/images/feira_produtor_roof_cover.png',
         category: 'Economia',
@@ -802,8 +802,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Coral Municipal abre audições para novas vozes',
         summary: 'Interessados podem se inscrever até o fim do mês; não é preciso experiência profissional.',
         content: `
-                                                                                            < p > Se você gosta de cantar, essa é a sua chance.O Coral Municipal de Araucária abriu vagas para os naipes de soprano, contralto, tenor e baixo.As audições acontecerão na Casa da Cultura.</p>
-                                                                                                < p > O grupo se apresenta em eventos oficiais e festivais de música.Os ensaios são semanais e gratuitos.</p>
+                                                                                            <p> Se você gosta de cantar, essa é a sua chance.O Coral Municipal de Araucária abriu vagas para os naipes de soprano, contralto, tenor e baixo.As audições acontecerão na Casa da Cultura.</p>
+                                                                                                <p> O grupo se apresenta em eventos oficiais e festivais de música.Os ensaios são semanais e gratuitos.</p>
                                                                                                     `,
         imageUrl: '/images/coral_municipal_cover.png',
         category: 'Cultura',
@@ -817,8 +817,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Parque Cachoeira recebe mutirão de limpeza',
         summary: 'Voluntários se reúnem para preservar um dos principais cartões postais da cidade.',
         content: `
-                                                                                                    < p > Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do Parque Cachoeira.A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
-                                                                                                        < p > A iniciativa visa conscientizar os visitantes sobre a importância de não deixar resíduos na natureza.</p>
+                                                                                                    <p> Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do Parque Cachoeira.A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
+                                                                                                        <p> A iniciativa visa conscientizar os visitantes sobre a importância de não deixar resíduos na natureza.</p>
                                                                                                             `,
         imageUrl: '/images/parque_cachoeira_cleanup_cover.png',
         category: 'Cidade',
@@ -832,7 +832,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária sedia encontro de carros antigos',
         summary: 'Relíquias automotivas invadem o Centro Cívico e atraem multidão.',
         content: `
-                                                                                                            < p > O ronco dos motores clássicos tomou conta do Centro Cívico neste fim de semana.O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</ p >
+                                                                                                            <p> O ronco dos motores clássicos tomou conta do Centro Cívico neste fim de semana.O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</p>
     <p>O evento também contou com mercado de pulgas(peças antigas) e praça de alimentação com food trucks.</p>
         `,
         imageUrl: '/images/carros_antigos_cover.png',
@@ -847,8 +847,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Prefeitura alerta para o prazo do IPTU',
         summary: 'Contribuintes têm até o dia 10 para pagar a cota única com desconto.',
         content: `
-    < p > A Secretaria de Finanças reforça que o prazo para pagamento do IPTU com desconto de 15 % na cota única encerra - se no próximo dia 10. Os carnês já foram entregues, mas a segunda via pode ser emitida pelo site oficial.</p>
-        < p > A arrecadação do imposto é fundamental para os investimentos em saúde, educação e asfalto.</p>
+    <p> A Secretaria de Finanças reforça que o prazo para pagamento do IPTU com desconto de 15 % na cota única encerra - se no próximo dia 10. Os carnês já foram entregues, mas a segunda via pode ser emitida pelo site oficial.</p>
+        <p> A arrecadação do imposto é fundamental para os investimentos em saúde, educação e asfalto.</p>
             `,
         imageUrl: '/images/iptu_real_final_v2.png',
         category: 'Cidade',
@@ -862,8 +862,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Novos horários de ônibus começam a valer segunda-feira',
         summary: 'CMTC anuncia ajustes nas linhas Tupy e Costeira para atender demanda.',
         content: `
-            < p > A Companhia Municipal de Transporte Coletivo(CMTC) informou que, a partir desta segunda - feira, haverá alteração na grade de horários das linhas Tupy e Costeira.O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
-                < p > Os novos horários já estão disponíveis no aplicativo do transporte e nos terminais.</p>
+            <p> A Companhia Municipal de Transporte Coletivo(CMTC) informou que, a partir desta segunda - feira, haverá alteração na grade de horários das linhas Tupy e Costeira.O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
+                <p> Os novos horários já estão disponíveis no aplicativo do transporte e nos terminais.</p>
                     `,
         imageUrl: '/images/bus_schedule_main.png',
         category: 'Cidade',
@@ -877,8 +877,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Semana do Meio Ambiente terá oficinas e palestras',
         summary: 'Programação inclui distribuição de mudas e gincana ecológica nas escolas.',
         content: `
-                    < p > Para celebrar a Semana Mundial do Meio Ambiente, a prefeitura organizou uma série de atividades educativas.O destaque fica para as oficinas de compostagem doméstica e reciclagem criativa, abertas ao público no Parque Tecnológico.</p>
-                        < p > "Pequenas atitudes mudam o mundo. Queremos engajar a população na preservação local", disse o diretor de meio ambiente.</p>
+                    <p> Para celebrar a Semana Mundial do Meio Ambiente, a prefeitura organizou uma série de atividades educativas.O destaque fica para as oficinas de compostagem doméstica e reciclagem criativa, abertas ao público no Parque Tecnológico.</p>
+                        <p> "Pequenas atitudes mudam o mundo. Queremos engajar a população na preservação local", disse o diretor de meio ambiente.</p>
                             `,
         imageUrl: '/images/environment_week_collage.webp',
         category: 'Cidade',
@@ -892,12 +892,12 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária Vôlei vence mais uma na Superliga B',
         summary: 'Time da casa mantém invencibilidade e lidera a competição nacional.',
         content: `
-                            < p > Em uma noite eletrizante no Ginásio Joval de Paula Souza, no ** Parque Cachoeira **, o Araucária Vôlei venceu mais uma partida pela Superliga B.A equipe da casa superou o adversário por 3 sets a 1, empurrada por uma torcida apaixonada.</p>
+                            <p> Em uma noite eletrizante no Ginásio Joval de Paula Souza, no <strong> Parque Cachoeira </strong>, o Araucária Vôlei venceu mais uma partida pela Superliga B.A equipe da casa superou o adversário por 3 sets a 1, empurrada por uma torcida apaixonada.</p>
 
-                                < p > Caravanas de bairros como ** Tindiquera **, ** Califórnia ** e ** Industrial ** lotaram as arquibancadas, criando um caldeirão. "Jogar aqui em Araucária é diferente, a energia da torcida nos carrega", declarou o capitão do time.</p>
+                                <p> Caravanas de bairros como <strong> Tindiquera </strong>, <strong> Califórnia </strong> e <strong> Industrial </strong> lotaram as arquibancadas, criando um caldeirão. "Jogar aqui em Araucária é diferente, a energia da torcida nos carrega", declarou o capitão do time.</p>
 
-                                    < h2 > Orgulho da Cidade </h2>
-                                        < p > A vitória mantém o time na liderança isolada e reforça o projeto esportivo da cidade.Escolinhas de vôlei no ** CSU ** e ** Tayrá ** já sentem o aumento na procura de crianças inspiradas pelos ídolos locais.O próximo desafio será fora de casa, mas a torcida promete acompanhar.</p>
+                                    <h2> Orgulho da Cidade </h2>
+                                        <p> A vitória mantém o time na liderança isolada e reforça o projeto esportivo da cidade.Escolinhas de vôlei no <strong> CSU </strong> e <strong> Tayrá </strong> já sentem o aumento na procura de crianças inspiradas pelos ídolos locais.O próximo desafio será fora de casa, mas a torcida promete acompanhar.</p>
 
                                             `,
         imageUrl: '/images/araucaria_volei_new_final.jpg',
@@ -912,8 +912,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Curso de culinária saudável forma primeira turma',
         summary: 'Projeto social capacita moradores para a geração de renda com alimentação.',
         content: `
-                                            < p > Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde".Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
-                                                < p > Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
+                                            <p> Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde".Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
+                                                <p> Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
                                                     `,
         imageUrl: '/images/healthy_cooking_cover_real_final.webp',
         category: 'Cidade',
@@ -927,8 +927,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Inscrições abertas para o concurso de fotografia',
         summary: 'Tema deste ano é "Olhares sobre Araucária"; prêmios chegam a R$ 2 mil.',
         content: `
-                                                    < p > Fotógrafos amadores e profissionais já podem inscrever seus trabalhos no 10º Concurso Municipal de Fotografia.O tema "Olhares sobre Araucária" convida a registrar as belezas urbanas e rurais da cidade.</p>
-                                                        < p > As melhores fotos farão parte de uma exposição itinerante e do calendário oficial do município.</p>
+                                                    <p> Fotógrafos amadores e profissionais já podem inscrever seus trabalhos no 10º Concurso Municipal de Fotografia.O tema "Olhares sobre Araucária" convida a registrar as belezas urbanas e rurais da cidade.</p>
+                                                        <p> As melhores fotos farão parte de uma exposição itinerante e do calendário oficial do município.</p>
                                                             `,
         imageUrl: '/images/photography_contest_cover_real_final.webp',
         category: 'Cultura',
@@ -942,8 +942,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'UBS do Califórnia terá horário estendido',
         summary: 'Unidade passa a atender até as 22h para facilitar acesso de trabalhadores.',
         content: `
-                                                            < p > A partir do próximo mês, a Unidade Básica de Saúde(UBS) do bairro Califórnia funcionará em horário estendido, das 7h às 22h.A medida visa atender a população que trabalha durante o dia e não consegue buscar atendimento no horário comercial.</p>
-                                                                < p > Serão ofertadas consultas médicas, odontológicas e vacinação no período noturno.</p>
+                                                            <p> A partir do próximo mês, a Unidade Básica de Saúde(UBS) do bairro Califórnia funcionará em horário estendido, das 7h às 22h.A medida visa atender a população que trabalha durante o dia e não consegue buscar atendimento no horário comercial.</p>
+                                                                <p> Serão ofertadas consultas médicas, odontológicas e vacinação no período noturno.</p>
                                                                     `,
         imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
         category: 'Saúde',
@@ -957,8 +957,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'FestaJunina das escolas municipais reúne famílias',
         summary: 'Quadrilhas, comidas típicas e brincadeiras animam o sábado letivo.',
         content: `
-                                                                    < p > O sábado foi de festa nas escolas municipais.O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
-                                                                        < p > A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
+                                                                    <p> O sábado foi de festa nas escolas municipais.O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
+                                                                        <p> A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
                                                                             `,
         imageUrl: '/images/festa_junina_real_cover.webp',
         category: 'Educação',
@@ -972,8 +972,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Câmara homenageia pioneiros da cidade',
         summary: 'Sessão solene entregou título de Cidadão Benemérito a personalidades locais.',
         content: `
-                                                                            < p > Em uma noite de emoção, a Câmara Municipal realizou a entrega de títulos de Cidadão Benemérito a cinco personalidades que contribuíram para o desenvolvimento de Araucária.Entre os homenageados estavam professores aposentados e antigos comerciantes.</p>
-                                                                                < p > "Reconhecer nossa história é valorizar nosso futuro", discursou o presidente da casa.</p>
+                                                                            <p> Em uma noite de emoção, a Câmara Municipal realizou a entrega de títulos de Cidadão Benemérito a cinco personalidades que contribuíram para o desenvolvimento de Araucária.Entre os homenageados estavam professores aposentados e antigos comerciantes.</p>
+                                                                                <p> "Reconhecer nossa história é valorizar nosso futuro", discursou o presidente da casa.</p>
                                                                                     `,
         imageUrl: '/images/pioneers_homage_real_final_v2.png',
         category: 'Cidade',
@@ -987,8 +987,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Jogos Escolares de Araucária começam nesta sexta',
         summary: 'Mais de 2 mil alunos atletas competem em 10 modalidades esportivas.',
         content: `
-                                                                                    < p > A tocha olímpica simbólica percorreu as escolas da cidade anunciando a abertura dos Jogos Escolares de Araucária(JEA).A cerimônia de abertura acontece nesta sexta - feira no Ginásio do CSU.</p>
-                                                                                        < p > Os jogos promovem a integração entre as escolas públicas e particulares, revelando novos talentos para o esporte municipal.</p>
+                                                                                    <p> A tocha olímpica simbólica percorreu as escolas da cidade anunciando a abertura dos Jogos Escolares de Araucária(JEA).A cerimônia de abertura acontece nesta sexta - feira no Ginásio do CSU.</p>
+                                                                                        <p> Os jogos promovem a integração entre as escolas públicas e particulares, revelando novos talentos para o esporte municipal.</p>
                                                                                             `,
         imageUrl: '/images/jea_real_final_v2.webp',
         category: 'Esporte',
