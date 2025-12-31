@@ -871,7 +871,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/araucaria_volei_new_final.jpg',
         category: 'Esporte',
         categoryColor: 'green',
-        internalImageUrl: '/images/araucaria_volei_inner_final.png',
+        internalImageUrl: '/images/araucaria_volei_inner_v2.jpg',
         publishDate: getPastDate(85),
         author: 'Esporte News'
     },
