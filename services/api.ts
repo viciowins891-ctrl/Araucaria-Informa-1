@@ -41,34 +41,26 @@ export const api = {
             // 2. Busca Cache Local (Fallback para erro de RLS)
             let cachedNews: NewsArticle[] = [];
             try {
-                const stored = localStorage.getItem('araucaria_news_cache_v33');
+                const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
                 if (stored) cachedNews = JSON.parse(stored);
             } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
             // 3. Busca Dados Estáticos
             const { newsArticles: staticNews } = await import('../data');
 
-            // COMBINAÇÃO: Estático < Cache < DB
-            // A ordem aqui define a prioridade no Map abaixo (último vence)
-            // Dados mais dinâmicos (DB/Cache) devem vir DEPOIS dos estáticos para sobrescrevê-los
-            const allNews = [...staticNews, ...cachedNews, ...(dbNews || [])];
+            // 3. Merge Inteligente: Prioridade Código Local (Static) > Cache > DB
+            // Invertemos a ordem anterior para garantir que o que editamos no VS Code (staticNews)
+            // sempre sobrescreva dados antigos que possam vir do banco ou cache.
+            const allNews = [...(dbNews || []), ...cachedNews, ...staticNews];
 
+            // Remove duplicatas por Título (O último array - staticNews - ganha em caso de conflito)
             const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
 
-            // 4. SANITIZAÇÃO DE DADOS
-            const sanitizedNews = uniqueNews.filter(item => {
-                // Remove duplicatas de Food Truck (remove qualquer um que não seja o ID 9999)
-                if (item.title.toLowerCase().includes("food truck") && item.id !== 9999) {
-                    return false;
-                }
-                return true;
-            }).map(item => {
-                // Garante dados do ID 9999 (Food Trucks Novo)
-                if (item.id === 9999) {
-                    item.imageUrl = '/images/food_trucks_cover_v29.png';
-                    item.mobileImageUrl = '/images/food_trucks_cover_v29.png';
-                    item.publishDate = '31/12/2025';
-                }
+            // 4. SANITIZAÇÃO DE DADOS (Padrão)
+            // Removemos os hacks específicos de Food Truck pois a ordem de merge acima já resolve.
+            const sanitizedNews = uniqueNews.map(item => {
+                // Garante URLs de imagens válidas se vierem quebradas do banco
+                if (!item.imageUrl) item.imageUrl = '/images/placeholder_default.png';
                 return item;
             });
 
@@ -101,7 +93,7 @@ export const api = {
         // Tenta salvar no Supabase, se falhar (RLS), salva no LocalStorage
         const supabase = await getSupabase();
 
-        // Prepara objeto seguro (como antes)
+        // Prepara objeto seguro
         const articlesToInsert = newArticles.map(n => {
             let isoDate;
             if (n.publishDate && n.publishDate.includes('/')) {
@@ -113,7 +105,7 @@ export const api = {
 
             return {
                 ...n, // Mantém propriedades originais para o cache local
-                id: Math.floor(Math.random() * 100000) + 2000, // Gera ID temporário para o cache local
+                id: Math.floor(Math.random() * 100000) + 2000,
                 image_url: n.imageUrl || '/images/placeholder.jpg',
                 category: n.category || 'Geral',
                 publish_date: isoDate,
@@ -124,7 +116,6 @@ export const api = {
 
         console.log("[API] Tentando salvar notícias...");
 
-        // Tenta Supabase (pode falhar por RLS)
         const { error } = await supabase.from('news').insert(articlesToInsert.map(n => ({
             title: n.title,
             summary: n.summary,
@@ -137,16 +128,13 @@ export const api = {
         })));
 
         if (error) {
-            console.warn('[API] Falha no Supabase (Provável RLS). Salvando no Cache Local do Navegador.', error.message);
-
-            // FALLBACK: Salva no LocalStorage
+            console.warn('[API] Falha no Supabase. Salvando no Cache Local.', error.message);
             try {
-                const existingStr = localStorage.getItem('araucaria_news_cache');
+                // Salva no novo cache padrão
+                const existingStr = localStorage.getItem('araucaria_news_cache_v1_stable');
                 const existing = existingStr ? JSON.parse(existingStr) : [];
-                // Adiciona novas no topo
                 const updated = [...articlesToInsert, ...existing];
-                // Mantém apenas as últimas 100 para não estourar memória (aprox 10 páginas)
-                localStorage.setItem('araucaria_news_cache_v33', JSON.stringify(updated.slice(0, 100)));
+                localStorage.setItem('araucaria_news_cache_v1_stable', JSON.stringify(updated.slice(0, 100)));
                 console.log("[API] Notícias salvas no Cache Local com sucesso!");
             } catch (e) {
                 console.error("[API] Falha ao salvar no local storage", e);

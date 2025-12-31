@@ -11,7 +11,7 @@ const rootElement = document.getElementById('root');
 
 // --- NUCLEAR CACHE CLEAR (VARREDURA) ---
 // Executa limpeza profunda se a versão não bater ou forzado
-const APP_VERSION = 'v34-nuclear';
+const APP_VERSION = 'v1.0.0-stable';
 const storedVersion = localStorage.getItem('app_version');
 
 if (storedVersion !== APP_VERSION) {
