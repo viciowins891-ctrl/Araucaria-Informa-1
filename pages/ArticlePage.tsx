@@ -281,6 +281,11 @@ const ArticlePage: React.FC = () => {
                             </div>
                         </div>
 
+                        {/* Anúncio Topo do Artigo */}
+                        <div className="w-full flex justify-center mb-8">
+                            <AdSpace format="horizontal" className="w-full" slotId="topo-artigo" />
+                        </div>
+
                         {/* Resumo/Lead */}
                         {article.summary && (
                             <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 italic border-l-4 border-primary pl-6">
@@ -341,6 +346,13 @@ const ArticlePage: React.FC = () => {
                                 </a>
                             </div>
                         )}
+
+                        )}
+
+                        {/* Anúncio Fim do Artigo */}
+                        <div className="w-full flex justify-center mt-8 mb-4">
+                            <AdSpace format="horizontal" className="w-full" slotId="fim-artigo" />
+                        </div>
 
                         <div className="my-12 h-px bg-gray-200 dark:bg-gray-800 w-full"></div>
 
