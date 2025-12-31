@@ -614,7 +614,7 @@ export const newsArticles: NewsArticle[] = [
             <p>As trilhas possuem diferentes níveis de dificuldade e são guiadas por biólogos que explicam sobre a flora e fauna local. O local também montou uma estrutura para observação de aves (birdwatching), atraindo fotógrafos de natureza.</p>
             <p>Após a caminhada, os visitantes podem desfrutar de um café colonial com produtos feitos na própria fazenda.</p>
         `,
-        imageUrl: '/images/sitio_ecologico_trilhas.webp',
+        imageUrl: '/images/sitio_ecologico_trilhas_cover_v2.jpg',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: getPastDate(42),
