@@ -241,7 +241,7 @@ export const newsArticles: NewsArticle[] = [
             <h2>Segurança no Campina da Barra</h2>
             <p>A operação teve foco especial em pontos críticos denunciados pela comunidade do **Campina da Barra**. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
         `,
-        imageUrl: '/images/custom_drugs.webp', // Nova imagem gerada (Nano Banana Pro)
+        imageUrl: '/images/pcpr_drugs_incineration_v2.png', // Foto Real Incineração v2
         mobileImageUrl: '/images/custom_drugs_mobile.webp',
         category: 'Segurança',
         categoryColor: 'red',
