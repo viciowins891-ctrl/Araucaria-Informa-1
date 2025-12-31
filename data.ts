@@ -566,7 +566,7 @@ export const newsArticles: NewsArticle[] = [
             <p>"A ideia surgiu da nossa própria necessidade de saber se nossos irmãos menores tinham chegado bem à escola", conta um dos fundadores, estudante de Análise de Sistemas da facear.</p>
             <p>O aplicativo já está sendo testado por 15 motoristas de van da cidade e tem recebido feedback positivo pela facilidade de uso e precisão do GPS.</p>
         `,
-        imageUrl: '/images/startup_app_real.webp',
+        imageUrl: '/images/startup_app_cover_v2.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         internalImageUrl: '/images/school_transport_app_araucaria.png',
