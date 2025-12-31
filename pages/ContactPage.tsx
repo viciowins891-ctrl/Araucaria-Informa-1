@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
 
         // Pequeno delay para mostrar a UI de sucesso antes de abrir o email
         setTimeout(() => {
-            window.location.href = `mailto:humberto_485@hotmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:araucariainforma@gmail.com?subject=${subject}&body=${body}`;
         }, 1500);
     };
 
