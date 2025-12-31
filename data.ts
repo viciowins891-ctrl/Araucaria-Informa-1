@@ -635,8 +635,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Sítio Ecológico abre novas trilhas para ecoturismo',
         summary: 'Propriedade rural em Guajuvira aposta no turismo de natureza e observação de aves.',
         content: `
-            <p>O turismo rural em Araucária ganhou mais uma atração de peso. O Sítio Ecológico Recanto das Águas inaugurou neste sábado três novas trilhas interpretativas em meio à mata nativa.</p>
-            <p>O Sítio Ecológico, localizado na área rural de **Guajuvira**, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
+            <p>O Sítio Ecológico, localizado na área rural de <strong>Guajuvira</strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
             
             <p>Os trajetos, que variam de 2km a 5km, passam por áreas preservadas de Mata Atlântica e Araucárias centenárias. Visitantes do **Centro** e **Boqueirão** têm lotado o local nos finais de semana, buscando contato com a natureza sem precisar viajar longe.</p>
 
