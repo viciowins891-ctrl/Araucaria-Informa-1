@@ -442,7 +442,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Além dos veículos, foram entregues novos coletes balísticos e rádios de comunicação digital. "Com esses equipamentos, conseguiremos reduzir o tempo de resposta às ocorrências", afirmou o comandante da GM.</p>
             <p>As novas viaturas já estão em circulação nos bairros com maior índice de criminalidade.</p>
         `,
-        imageUrl: '/images/custom_gm_official_jeep.webp', // Foto Oficial (Jeep/Chaves)
+        imageUrl: '/images/gm_viaturas_cover_v2.png', // Foto Oficial (Jeep/Chaves) v2
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/municipal_guard_real.png',
