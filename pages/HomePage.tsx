@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
                         <source srcSet={mobileImage} media="(max-width: 767px)" type="image/webp" />
                         <img
                             src={desktopImage}
-                            alt={`Imagem de destaque - ${stripHtml(featuredNews.title)}`}
+                            alt={`Imagem de destaque - ${featuredNews ? stripHtml(featuredNews.title) : 'Araucária'}`}
                             className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                             onError={handleImageError}
                             referrerPolicy="no-referrer"
