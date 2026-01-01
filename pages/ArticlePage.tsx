@@ -235,13 +235,13 @@ const ArticlePage: React.FC = () => {
 
                         <div className="flex flex-wrap items-center gap-4">
                             <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border shadow-sm backdrop-blur-sm ${{
-                                blue: 'bg-blue-600/[0.15] text-blue-700 dark:bg-blue-500/25 dark:text-blue-300 border-blue-200 dark:border-blue-500/30',
-                                purple: 'bg-purple-600/[0.15] text-purple-700 dark:bg-purple-500/25 dark:text-purple-300 border-purple-200 dark:border-purple-500/30',
-                                green: 'bg-green-600/[0.15] text-green-700 dark:bg-green-500/25 dark:text-green-300 border-green-200 dark:border-green-500/30',
-                                red: 'bg-red-600/[0.15] text-red-700 dark:bg-red-500/25 dark:text-red-300 border-red-200 dark:border-red-500/30',
-                                yellow: 'bg-yellow-600/[0.15] text-yellow-800 dark:bg-yellow-500/25 dark:text-yellow-300 border-yellow-200 dark:border-yellow-500/30',
-                                indigo: 'bg-indigo-600/[0.15] text-indigo-700 dark:bg-indigo-500/25 dark:text-indigo-300 border-indigo-200 dark:border-indigo-500/30',
-                            }[article.categoryColor] || 'bg-gray-500/[0.15] text-gray-700 dark:bg-gray-500/25 dark:text-gray-300 border-gray-200'
+                                blue: 'bg-blue-600/[0.2] text-blue-700 dark:bg-blue-500/25 dark:text-blue-300 border-blue-200 dark:border-blue-500/30',
+                                purple: 'bg-purple-600/[0.2] text-purple-700 dark:bg-purple-500/25 dark:text-purple-300 border-purple-200 dark:border-purple-500/30',
+                                green: 'bg-green-600/[0.2] text-green-700 dark:bg-green-500/25 dark:text-green-300 border-green-200 dark:border-green-500/30',
+                                red: 'bg-red-600/[0.2] text-red-700 dark:bg-red-500/25 dark:text-red-300 border-red-200 dark:border-red-500/30',
+                                yellow: 'bg-yellow-600/[0.2] text-yellow-800 dark:bg-yellow-500/25 dark:text-yellow-300 border-yellow-200 dark:border-yellow-500/30',
+                                indigo: 'bg-indigo-600/[0.2] text-indigo-700 dark:bg-indigo-500/25 dark:text-indigo-300 border-indigo-200 dark:border-indigo-500/30',
+                            }[article.categoryColor] || 'bg-gray-500/[0.2] text-gray-700 dark:bg-gray-500/25 dark:text-gray-300 border-gray-200'
                                 }`}>
                                 {article.category}
                             </span>
