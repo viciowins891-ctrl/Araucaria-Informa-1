@@ -101,6 +101,9 @@ export default defineConfig(({ mode }) => {
           manualChunks(id) {
             // Isolando dependências principais para cache de longo prazo
             if (id.includes('node_modules')) {
+              if (id.includes('react-onesignal')) {
+                return 'notifications-vendor';
+              }
               if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
                 return 'react-vendor';
               }
