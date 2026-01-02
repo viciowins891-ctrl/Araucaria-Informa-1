@@ -93,35 +93,122 @@
             rel="stylesheet">
     </noscript>
 
+    <!-- Critical CSS for App Shell (Matches HomePage.tsx Tailwind Classes) -->
+    <style>
+        /* Base styles (Mobile First) */
+        .shell-hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #18181b;
+            min-height: 600px;
+        }
+
+        .shell-content {
+            position: relative;
+            z-index: 10;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 896px;
+            /* max-w-4xl */
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 8rem;
+            /* pt-32 */
+            padding-bottom: 4rem;
+            /* pb-16 */
+        }
+
+        .shell-title {
+            color: white;
+            font-weight: 700;
+            line-height: 1.1;
+            /* leading-tight */
+            text-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            font-size: 1.875rem;
+            /* text-3xl (Mobile) */
+            margin-bottom: 1.5rem;
+            /* mb-6 */
+        }
+
+        /* Responsive Breakpoints (Matching Tailwind defaults) */
+        @media (min-width: 640px) {
+
+            /* sm */
+            .shell-content {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            .shell-title {
+                font-size: 2.25rem;
+            }
+
+            /* text-4xl */
+        }
+
+        @media (min-width: 768px) {
+
+            /* md */
+            .shell-title {
+                font-size: 3rem;
+            }
+
+            /* text-5xl */
+        }
+
+        @media (min-width: 1024px) {
+
+            /* lg */
+            .shell-hero {
+                min-height: 700px;
+            }
+
+            /* lg:min-h-[700px] */
+            .shell-content {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .shell-title {
+                font-size: 3.75rem;
+            }
+
+            /* text-6xl */
+        }
+    </style>
+
 </head>
 
 <body class="bg-background-light dark:bg-background-dark">
     <div id="root">
         <!-- APP SHELL / PRERENDER MANUAL PARA LCP IMEDIATO -->
         <!-- Este conteúdo é exibido instantaneamente enquanto o React carrega -->
-        <!-- Fake Header para evitar CLS -->
+
+        <!-- Fake Header (MATCHING: h-20 / 80px) -->
         <div
             style="position:fixed;top:0;left:0;right:0;height:80px;background-color:#0f172a;z-index:50;display:flex;align-items:center;padding:0 1rem;box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);">
             <div style="width:40px;height:40px;background-color:white;border-radius:0.5rem;margin-right:0.5rem;"></div>
             <div style="height:24px;width:150px;background-color:rgba(255,255,255,0.1);border-radius:4px;"></div>
         </div>
 
-        <div
-            style="position:relative;min-height:600px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background-color:#18181b;">
+        <!-- Fake Hero (MATCHING: HomePage.tsx Hero Section) -->
+        <div class="shell-hero">
             <div style="position:absolute;inset:0;z-index:0; background-color: #18181b;">
                 <!-- Skeleton Placeholder (No Image Request) -->
                 <div style="width:100%;height:100%;background-color:#18181b;"></div>
                 <div style="position:absolute;inset:0;background:linear-gradient(to top, black, rgba(0,0,0,0.4));">
                 </div>
             </div>
-            <div
-                style="position:relative;z-index:10;padding:2rem;max-width:896px;margin:0 auto;width:100%;padding-top:8rem;">
+
+            <div class="shell-content">
                 <span
-                    style="display:inline-block;padding:6px 12px;border-radius:9999px;background-color:rgba(234, 179, 8, 0.9);color:black;font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.5rem;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);">
+                    style="display:inline-block;padding:6px 12px;border-radius:9999px;background-color:rgba(234, 179, 8, 0.9);color:black;font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);">
                     Lazer
                 </span>
-                <h1
-                    style="color:white;font-size:3rem;font-weight:700;line-height:1.1;text-shadow:0 10px 15px -3px rgba(0, 0, 0, 0.5);">
+                <h1 class="shell-title">
                     Feira Gastronômica traz<br />Food Trucks e música
                 </h1>
             </div>
