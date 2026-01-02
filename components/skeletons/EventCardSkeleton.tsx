@@ -3,42 +3,46 @@ import SkeletonBase from './SkeletonBase';
 
 const EventCardSkeleton: React.FC = () => {
     return (
-        <div className="bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800 flex flex-col h-full">
-            <div className="relative">
+        <div className="bg-surface-light dark:bg-surface-dark rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-100 dark:border-gray-700">
+            <div className="relative w-full h-56 bg-gray-200 dark:bg-gray-700">
                 {/* Image Placeholder */}
-                <SkeletonBase className="w-full h-48 object-cover" />
+                <SkeletonBase className="w-full h-full" />
 
                 {/* Date Badge Placeholder (Overlay) */}
-                <div className="absolute top-4 right-4 bg-white dark:bg-zinc-800 rounded-lg p-2 shadow-md">
-                    <SkeletonBase className="w-8 h-8" />
+                <div className="absolute top-4 right-4 z-20">
+                    <div className="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
+                        <SkeletonBase className="w-16 h-4" />
+                    </div>
                 </div>
             </div>
 
-            <div className="p-5 flex flex-col flex-grow">
-                {/* Category & Status */}
-                <div className="flex gap-2 mb-3">
-                    <SkeletonBase className="w-20 h-5 rounded-full" />
-                    <SkeletonBase className="w-16 h-5 rounded-full" />
+            <div className="p-6 flex flex-col flex-grow">
+                {/* Title Placeholder */}
+                <SkeletonBase className="w-3/4 h-7 mb-2 rounded" />
+                <SkeletonBase className="w-1/2 h-7 mb-4 rounded" />
+
+                {/* Description Placeholder (multi-line) */}
+                <div className="mb-4 flex-grow space-y-2">
+                    <SkeletonBase className="w-full h-4 rounded" />
+                    <SkeletonBase className="w-full h-4 rounded" />
+                    <SkeletonBase className="w-2/3 h-4 rounded" />
                 </div>
 
-                {/* Title */}
-                <SkeletonBase className="w-full h-8 mb-4" />
-
-                {/* Info Rows */}
-                <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3">
-                        <SkeletonBase className="w-5 h-5 rounded-full" />
-                        <SkeletonBase className="w-3/4 h-4" />
+                {/* Info Rows (Time & Location) */}
+                <div className="space-y-3 mt-auto">
+                    <div className="flex items-center">
+                        <SkeletonBase className="w-5 h-5 mr-3 rounded-full" />
+                        <SkeletonBase className="w-24 h-4 rounded" />
                     </div>
-                    <div className="flex items-center gap-3">
-                        <SkeletonBase className="w-5 h-5 rounded-full" />
-                        <SkeletonBase className="w-1/2 h-4" />
+                    <div className="flex items-center">
+                        <SkeletonBase className="w-5 h-5 mr-3 rounded-full" />
+                        <SkeletonBase className="w-2/3 h-4 rounded" />
                     </div>
                 </div>
 
-                {/* Button */}
-                <div className="mt-auto">
-                    <SkeletonBase className="w-full h-12 rounded-lg" />
+                {/* Button Placeholder */}
+                <div className="mt-6">
+                    <SkeletonBase className="w-full h-10 rounded-lg" />
                 </div>
             </div>
         </div>
