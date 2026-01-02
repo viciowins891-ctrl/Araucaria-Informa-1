@@ -183,12 +183,14 @@ const HomePage: React.FC = () => {
                             {news.slice(4, 9).map(item => (
                                 <div key={item.id} className="border-b border-zinc-100 dark:border-zinc-700/50 last:border-0 pb-6 last:pb-0">
                                     <Link to={`/noticias/${item.id}`} className="group block">
-                                        <h4 className="text-lg font-bold text-zinc-700 dark:text-zinc-200 group-hover:text-primary transition-colors mb-2">
-                                            {item.title}
-                                        </h4>
-                                        <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-3xl">
-                                            {item.summary}
-                                        </p>
+                                        <h4
+                                            className="text-lg font-bold text-zinc-700 dark:text-zinc-200 group-hover:text-primary transition-colors mb-2"
+                                            dangerouslySetInnerHTML={{ __html: item.title }}
+                                        />
+                                        <div
+                                            className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed max-w-3xl"
+                                            dangerouslySetInnerHTML={{ __html: item.summary }}
+                                        />
                                         <div className="mt-2 flex items-center text-xs text-zinc-400 font-medium">
                                             <span className="capitalize">{item.category}</span>
                                             <span className="mx-2">•</span>

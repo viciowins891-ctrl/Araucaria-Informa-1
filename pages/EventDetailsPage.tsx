@@ -6,6 +6,7 @@ import { Event } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 import ShareButton from '../components/ShareButton';
+import { stripHtml } from '../services/textUtils';
 
 const EventDetailsPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -82,7 +83,7 @@ const EventDetailsPage: React.FC = () => {
         googleUrl.searchParams.append('text', event.title + ' - Araucária Informa');
         googleUrl.searchParams.append('dates', `${startDateTime}/${endDateTime}`);
         googleUrl.searchParams.append('details', event.description + '\n\nSaiba mais em: ' + window.location.href);
-        googleUrl.searchParams.append('location', event.location + ', Araucária - PR');
+        googleUrl.searchParams.append('location', stripHtml(event.location) + ', Araucária - PR');
 
         window.open(googleUrl.toString(), '_blank');
     };
@@ -138,7 +139,7 @@ const EventDetailsPage: React.FC = () => {
                                 </h1>
                                 <div className="flex items-center text-white/90 mt-4 text-lg">
                                     <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                    {event.location}
+                                    <span dangerouslySetInnerHTML={{ __html: event.location }} />
                                 </div>
                             </div>
 
@@ -256,9 +257,9 @@ const EventDetailsPage: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Localização</p>
-                                        <p className="text-gray-900 dark:text-white font-bold text-lg">{event.location}</p>
+                                        <p className="text-gray-900 dark:text-white font-bold text-lg" dangerouslySetInnerHTML={{ __html: event.location }}></p>
                                         <a
-                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location + ' Araucária')}`}
+                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stripHtml(event.location) + ' Araucária')}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center text-gray-500 hover:text-primary text-sm mt-2 transition-colors border border-gray-200 dark:border-gray-700 px-3 py-1 rounded-lg hover:border-primary"
