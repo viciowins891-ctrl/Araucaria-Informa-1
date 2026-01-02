@@ -17,13 +17,32 @@ const colorVariants: { [key: string]: string } = {
     red: 'bg-red-600/[0.25] text-red-600 border-red-600 dark:bg-red-500/[0.25] dark:text-red-400 dark:border-red-400',
     yellow: 'bg-yellow-600/[0.25] text-yellow-600 border-yellow-600 dark:bg-yellow-500/[0.25] dark:text-yellow-400 dark:border-yellow-400',
     indigo: 'bg-indigo-600/[0.25] text-indigo-600 border-indigo-600 dark:bg-indigo-500/[0.25] dark:text-indigo-400 dark:border-indigo-400',
+    gray: 'bg-gray-600/[0.25] text-gray-600 border-gray-600 dark:bg-gray-500/[0.25] dark:text-gray-400 dark:border-gray-400',
+};
+
+// --- PADRÃO VISUAL BLOQUEADO ---
+// Mapeamento Estrito de Cores por Categoria (Solicitação do Usuário: "Não alterar sem aval")
+const STANDARD_CATEGORY_COLORS: { [key: string]: string } = {
+    'Lazer': 'yellow',
+    'Cultura': 'yellow',
+    'Economia': 'blue',
+    'Esporte': 'indigo',
+    'Educação': 'red',
+    'Saúde': 'green',
+    'Infraestrutura': 'purple',
+    'Cidade': 'blue',
+    'Segurança': 'red',
+    'Política': 'gray',
+    'Geral': 'gray'
 };
 
 // Imagem genérica de cidade/notícia (Fallback seguro) - Mantemos apenas como última opção se a função falhar
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=800';
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
-    const categoryColorClass = colorVariants[article.categoryColor] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 border-gray-200';
+    // Lógica Blindada: Primeiro tenta o mapa padrão, se falhar usa a cor do objeto, se falhar usa cinza.
+    const standardColor = STANDARD_CATEGORY_COLORS[article.category] || article.categoryColor || 'gray';
+    const categoryColorClass = colorVariants[standardColor] || colorVariants['gray'];
 
     // Otimiza a URL inicial (640px é suficiente para cards e ativa mobile.webp)
     const optimizedImageUrl = getOptimizedImageUrl(article.imageUrl, 640);
@@ -80,9 +99,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 left-4">
+                    {/* --- FORMATO PADRÃO (NÃO ALTERAR) --- */}
+                    {/* Este estilo de "balão" com borda e transparência é a identidade visual fixa do site. */}
                     <span className={`${categoryColorClass} text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border shadow-sm`}>
                         {article.category}
                     </span>
+                    {/* ------------------------------------ */}
                 </div>
             </Link>
 

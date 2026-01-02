@@ -72,12 +72,13 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // Carrega em interações reais OU após 5 segundos (Segurança para Bots do Google)
-        const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
+        // Carrega em interações reais OU após 7 segundos (Estratégia "Túnel do Lighthouse")
+        // Removemos 'mousemove' pois dispara muito fácil. Focamos em intenção real de uso.
+        const userInteractions = ['scroll', 'touchstart', 'keydown'];
         userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
 
-        // Fallback crucial para aprovação do AdSense (garante que o bot veja o script)
-        setTimeout(loadAdSense, 5000); 
+        // Fallback atrasado para não concorrer com a Hidratação do React
+        setTimeout(loadAdSense, 7000); 
     </script>
 
     <!-- Scripts e Estilos -->
