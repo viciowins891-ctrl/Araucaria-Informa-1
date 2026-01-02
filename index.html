@@ -15,12 +15,7 @@
                    frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com;">
 
     <!-- LCP Optimization: Responsive Preload -->
-    <!-- Unified Hero Image (High Priority) -->
-    <!-- Unified Hero Image (High Priority) -->
-    <link rel="preload" as="image" href="/images/pet_adoption_cover_final_v1.png" media="(max-width: 767px)"
-        fetchpriority="high" type="image/png" />
-    <link rel="preload" as="image" href="/images/pet_adoption_cover_final_v1.png" media="(min-width: 768px)"
-        fetchpriority="high" />
+    <!-- Removed hardcoded preloads to avoid double-fetch penalty -->
 
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>
@@ -96,11 +91,9 @@
 
         <div
             style="position:relative;min-height:600px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background-color:#18181b;">
-            <div style="position:absolute;inset:0;z-index:0;">
-                <!-- Usando imagem ultra-otimizada LCP (<20KB) -->
-                <img src="/images/pet_adoption_cover_final_v1.png" alt="Araucária"
-                    style="width:100%;height:100%;object-fit:cover;opacity:0.6;"
-                    fetchpriority="high" />
+            <div style="position:absolute;inset:0;z-index:0; background-color: #18181b;">
+                <!-- Skeleton Placeholder (No Image Request) -->
+                <div style="width:100%;height:100%;background-color:#18181b;"></div>
                 <div style="position:absolute;inset:0;background:linear-gradient(to top, black, rgba(0,0,0,0.4));">
                 </div>
             </div>
