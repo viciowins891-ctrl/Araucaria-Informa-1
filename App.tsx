@@ -1,6 +1,6 @@
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import OneSignal from 'react-onesignal';
+import { useNotificationController } from './hooks/useNotificationController';
 import { HelmetProvider } from 'react-helmet-async';
 import { Analytics } from "@vercel/analytics/react";
 import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
@@ -107,42 +107,8 @@ const Layout: React.FC = () => {
 };
 
 const App: React.FC = () => {
-    // Inicialização do OneSignal Push Notifications
-    useEffect(() => {
-        const runOneSignal = async () => {
-            try {
-                // DOCUMENTAÇÃO: https://onesignal.com/
-                // 1. Crie uma conta no OneSignal
-                // 2. Crie um App Web
-                // 3. Copie o App ID e cole abaixo
-                await OneSignal.init({
-                    appId: "a5db53d7-9156-4047-92a5-9c5928fdb9d7", // ID extraído da sua URL
-                    allowLocalhostAsSecureOrigin: true, // Permite testar em localhost
-                    notifyButton: {
-                        enable: true, // Ativa o "Sininho" flutuante
-                        size: 'medium',
-                        theme: 'default',
-                        position: 'bottom-left',
-                        showCredit: false,
-                        text: {
-                            'tip.state.unsubscribed': 'Inscreva-se para receber notícias!',
-                            'tip.state.subscribed': 'Você está inscrito para receber notícias.',
-                            'message.action.subscribed': "Obrigado por se inscrever!",
-                            'message.action.resubscribed': "Você está inscrito novamente.",
-                            'message.action.unsubscribed': "Você não receberá mais notificações.",
-                            'dialog.main.title': 'Araucária Informa',
-                            'dialog.main.button.subscribe': 'INSCREVER',
-                            'dialog.main.button.unsubscribe': 'CANCELAR',
-                        }
-                    },
-                });
-            } catch (error) {
-                console.warn("OneSignal (Push) não configurado corretamente ou bloqueado:", error);
-            }
-        };
-
-        runOneSignal();
-    }, []);
+    // Inicialização do OneSignal Push Notifications via Maestro
+    useNotificationController();
 
     return (
         <HelmetProvider>
