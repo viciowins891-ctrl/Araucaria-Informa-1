@@ -187,8 +187,8 @@ const ArticlePage: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-700 z-10"></div>
+            <div className="relative h-[60vh] min-h-[500px] w-full bg-gray-900 overflow-hidden group">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
                 <img
                     src={article.title.toLowerCase().includes('archelau') ? '/images/archelau_definitiva.png' : (imgSrc || FALLBACK_IMAGE)}
                     alt={plainTitle}
@@ -196,7 +196,7 @@ const ArticlePage: React.FC = () => {
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/60 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-black/40 z-10"></div>
 
                 {/* Navigation/Breadcrumbs Overlay */}
                 <div className="absolute top-0 left-0 w-full p-6 z-20">
