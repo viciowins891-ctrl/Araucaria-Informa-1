@@ -11,12 +11,12 @@ interface NewsCardProps {
 }
 
 const colorVariants: { [key: string]: string } = {
-    blue: 'bg-blue-50 text-blue-600 border-blue-600 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-400',
-    purple: 'bg-purple-50 text-purple-600 border-purple-600 dark:bg-purple-900/30 dark:text-purple-400 dark:border-purple-400',
-    green: 'bg-green-50 text-green-600 border-green-600 dark:bg-green-900/30 dark:text-green-400 dark:border-green-400',
-    red: 'bg-red-50 text-red-600 border-red-600 dark:bg-red-900/30 dark:text-red-400 dark:border-red-400',
-    yellow: 'bg-yellow-50 text-yellow-600 border-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400 dark:border-yellow-400',
-    indigo: 'bg-indigo-50 text-indigo-600 border-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 dark:border-indigo-400',
+    blue: 'bg-blue-600/[0.25] text-blue-600 border-blue-600 dark:bg-blue-500/[0.25] dark:text-blue-400 dark:border-blue-400',
+    purple: 'bg-purple-600/[0.25] text-purple-600 border-purple-600 dark:bg-purple-500/[0.25] dark:text-purple-400 dark:border-purple-400',
+    green: 'bg-green-600/[0.25] text-green-600 border-green-600 dark:bg-green-500/[0.25] dark:text-green-400 dark:border-green-400',
+    red: 'bg-red-600/[0.25] text-red-600 border-red-600 dark:bg-red-500/[0.25] dark:text-red-400 dark:border-red-400',
+    yellow: 'bg-yellow-600/[0.25] text-yellow-600 border-yellow-600 dark:bg-yellow-500/[0.25] dark:text-yellow-400 dark:border-yellow-400',
+    indigo: 'bg-indigo-600/[0.25] text-indigo-600 border-indigo-600 dark:bg-indigo-500/[0.25] dark:text-indigo-400 dark:border-indigo-400',
 };
 
 // Imagem genérica de cidade/notícia (Fallback seguro) - Mantemos apenas como última opção se a função falhar
