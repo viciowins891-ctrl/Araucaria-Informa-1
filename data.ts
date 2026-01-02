@@ -497,6 +497,9 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>O <strong>Parque Cachoeira</strong> foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
             <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo. Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
+
+            <h2>Talentos do Futuro</h2>
+            <p>Professores da rede destacam que o engajamento dos alunos aumentou significativamente após a introdução da robótica no currículo. Escolas de bairros como <strong>Jardim Tupy</strong> e <strong>Califórnia</strong> tiveram destaque na competição, provando que a tecnologia é uma ferramenta poderosa de inclusão social e desenvolvimento cognitivo para crianças de todas as regiões da cidade.</p>
         `,
         imageUrl: '/images/robotics_fair_real_final_v2.webp',
         category: 'Educação',
@@ -512,6 +515,9 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro <strong>Costeira</strong>.</p>
             <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
+
+            <h2>Desenvolvimento Regional</h2>
+            <p>A chegada do mercado não traz apenas empregos, mas também valorização imobiliária para o entorno. Pequenos comércios satélites, como farmácias e pet shops, já planejam se instalar na mesma avenida, criando um novo polo comercial que reduz a necessidade dos moradores se deslocarem até o <strong>Centro</strong> para compras do dia a dia.</p>
         `,
         imageUrl: '/images/supermarket_opening_real_final_v2.webp',
         category: 'Cidade',
@@ -530,7 +536,7 @@ export const newsArticles: NewsArticle[] = [
             <p>Moradores do <strong>Jardim Dalla Torre</strong> e <strong>Estação</strong> participaram ativamente, recolhendo desde garrafas PET até sofás descartados irregularmente. O material reciclável foi destinado à cooperativa de catadores do bairro <strong>Sabiá</strong>, gerando renda para dezenas de famílias.</p>
 
             <h2>Consciência Ambiental</h2>
-            <p>"O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do <strong>Thomaz Coelho</strong>. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no <strong>Capela Velha</strong> para impedir que novos resíduos cheguem ao leito principal do rio.</p>
+            <p>"O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do <strong>Thomaz Coelho</strong>. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no <strong>Capela Velha</strong> para impedir que novos resíduos cheguem ao leito principal do rio, além de um programa permanente de educação ambiental nas escolas ribeirinhas.</p>
         
         `,
         imageUrl: '/images/limpeza_rio_iguacu_v2.png',
@@ -546,7 +552,10 @@ export const newsArticles: NewsArticle[] = [
         summary: 'Competição reuniu enxadristas de todas as idades no <strong>Centro</strong> de Convivência.',
         content: `
             <p>O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado. O evento reuniu mais de 80 participantes, divididos em categorias do sub-10 ao veterano.</p>
-            <p>O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub-14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>
+            <p>O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub-14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã, que treina no projeto social do <strong>CSU</strong>.</p>
+
+            <h2>Inclusão pelo Esporte</h2>
+            <p>O evento também contou com a participação de idosos do Grupo da Melhor Idade do <strong>Centro</strong>, mostrando que o esporte mental não tem barreiras. A Prefeitura anunciou que, devido ao sucesso, o projeto "Xadrez nas Praças" será ampliado para os bairros <strong>Iguaçu</strong> e <strong>Vila Nova</strong>, levando tabuleiros gigantes para espaços públicos nos fins de semana.</p>
         `,
         imageUrl: '/images/news_chess_tournament.png',
         category: 'Esporte',
@@ -562,6 +571,9 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai. São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
             <p>As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência. O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>
+
+            <h2>Oportunidade de Carreira</h2>
+            <p>Dados do SINE mostram que 70% dos alunos formados nesses cursos conseguem colocação no mercado em até três meses. "A indústria de Araucária precisa de gente qualificada. O curso é a porta de entrada para salários melhores e estabilidade", afirma o diretor da Agência do Trabalhador. Há prioridade de vagas para desempregados residentes em áreas como <strong>Jardim Industrial</strong> e <strong>Thomaz Coelho</strong>.</p>
         `,
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
@@ -578,6 +590,9 @@ export const newsArticles: NewsArticle[] = [
             <p>O Departamento de Turismo iniciou a instalação de novas placas de sinalização turística nas principais rotas rurais do município. A ação visa facilitar o acesso de visitantes aos restaurantes coloniais, vinícolas e chácaras de lazer.</p>
             <p>"Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo. O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
             <p>A rota do <strong>Guajuvira</strong> é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
+
+            <h2>Gastronomia e Cultura</h2>
+            <p>Além de ajudar na localização, as novas placas contam um pouco da história da imigração polonesa na região. Restaurantes tradicionais do <strong>Roça Nova</strong> já preparam cardápios especiais de inverno, prevendo o aumento de visitantes curitibanos que buscam o "turismo de experiência" a poucos minutos da capital.</p>
         `,
         imageUrl: '/images/rural_tourism_signage_araucaria.png',
         mobileImageUrl: '/images/rural_tourism_signage_araucaria_mobile.webp',
@@ -615,6 +630,9 @@ export const newsArticles: NewsArticle[] = [
             <p>Quem passa pela Praça da Bíblia à noite já percebe a diferença. A Prefeitura concluiu nesta semana a instalação do novo sistema de iluminação em LED em todo o perímetro da praça.</p>
             <p>"Agora dá para trazer as crianças para brincar com tranquilidade", elogiou uma moradora local. Além das novas luminárias, o paisagismo foi recuperado e bancos foram reformados.</p>
             <p>O projeto faz parte do programa "Cidade Iluminada", que prevê a modernização da iluminação pública em diversos bairros.</p>
+
+            <h2>Segurança e Lazer</h2>
+            <p>A intervenção transformou a dinâmica noturna do local. Onde antes havia escuridão e insegurança, agora vemos grupos de caminhada e famílias ocupando o espaço até mais tarde. Comerciantes do entorno, como donos de carrinhos de pipoca e lanchonetes próximas, relataram um aumento imediato nas vendas, provando que a revitalização urbana gera economia e bem-estar social.</p>
         `,
         imageUrl: '/images/plaza_bible_lighting_night.png',
         category: 'Cidade',
@@ -631,6 +649,9 @@ export const newsArticles: NewsArticle[] = [
             <p>O primeiro Hackathon Municipal de Araucária foi um sucesso absoluto. O evento, realizado no último fim de semana no Parque Tecnológico, reuniu cerca de 500 estudantes e profissionais de tecnologia.</p>
             <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
             <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
+
+            <h2>Soluções Reais</h2>
+            <p>O aplicativo vencedor, batizado de "ReciclaAraucária", será incubado pela prefeitura e deve entrar em fase de testes piloto no bairro <strong>Fazenda Velha</strong> em breve. A ideia é que moradores acumulem pontos ao descartar corretamente o lixo, trocando-os por descontos no comércio local ou créditos no transporte coletivo, criando um ciclo virtuoso de cidadania e tecnologia.</p>
         `,
         imageUrl: '/images/hackathon_real.webp',
         category: 'Tecnologia',
@@ -664,6 +685,9 @@ export const newsArticles: NewsArticle[] = [
         content: `
             <p>A torcida araucariense tem um encontro marcado neste fim de semana. A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
             <p>A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
+            
+            <h2>Caldeirão do Esporte</h2>
+            <p>A expectativa é de casa cheia no <strong>Ginásio Joval de Paula Souza</strong> (Parque Cachoeira). A diretoria disponibilizou 2 mil ingressos, que podem ser trocados por 1kg de alimento. A movimentação promete agitar o comércio do <strong>Centro</strong> antes e depois dos jogos, com bares e restaurantes se preparando para receber as torcidas organizadas em um clima de festa e rivalidade sadia.</p>
         `,
         imageUrl: 'https://images.unsplash.com/photo-1518611507436-e92e60832012?auto=format&fit=crop&q=80&w=1000',
         category: 'Esporte',
@@ -677,8 +701,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Campanha do Agasalho arrecada 2 toneladas de doações',
         summary: 'Solidariedade marcou o inverno em Araucária com recorde de arrecadação.',
         content: `
-                    <p> O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
-                        <p> A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
+                    <p>O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano. Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
+                    <p>A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade. "A solidariedade do araucariense nunca falha. Recebemos peças de muita qualidade, inclusive roupas infantis novas", agradeceu a presidente do Provopar.</p>
+
+                    <h2>Distribuição Estratégica</h2>
+                    <p>As doações foram encaminhadas prioritariamente para comunidades do <strong>Jardim Israelense</strong> e <strong>Portelinha</strong>, onde o inverno costuma ser mais rigoroso para famílias em casas de madeira. Voluntários realizaram uma triagem cuidadosa para garantir que cada família recebesse itens adequados ao tamanho e necessidade de seus integrantes.</p>
                             `,
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
@@ -692,8 +719,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Novo binário no <strong>Centro</strong> melhora fluxo de veículos',
         summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
         content: `
-                            <p> Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
-                                <p> A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
+                    <p>Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos. O tempo médio de deslocamento nos horários de pico reduziu em 15%, segundo dados do Departamento de Trânsito.</p>
+                    <p>A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão, eliminando os antigos gargalos próximos à prefeitura.</p>
+
+                    <h2>Adaptação dos Motoristas</h2>
+                    <p>Embora mudanças no trânsito gerem dúvidas iniciais, a presença de agentes orientando o tráfego nos primeiros dias garantiu a fluidez. Motoristas que cruzam a cidade sentido <strong>Costeira</strong> relataram ganhar até 10 minutos no trajeto diário. A próxima fase do plano de mobilidade prevê a sincronização inteligente dos semáforos na Avenida Victor do Amaral.</p>
                                     `,
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
@@ -707,8 +737,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Festival Gastronômico de Inverno começa hoje',
         summary: 'Restaurantes da cidade oferecem pratos especiais com descontos exclusivos.',
         content: `
-                                    <p> Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
-                                        <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
+                    <p>Começou hoje o 3º Festival Gastronômico de Inverno de Araucária. Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
+                    <p>O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano. Os pratos variam da tradicional polenta com galinha a criações contemporâneas com pinhão, ingrediente símbolo da nossa terra.</p>
+
+                    <h2>Roteiro do Sabor</h2>
+                    <p>O festival criou um verdadeiro roteiro gastronômico que passa pelo <strong>Centro Histórico</strong> e chega até as cantinas rurais do <strong>Guajuvira</strong>. "É uma oportunidade de conhecer lugares novos pagando um valor justo", comenta uma cliente. A expectativa da organização é servir mais de 5 mil refeições durante o período do evento.</p>
                                             `,
         imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
@@ -722,8 +755,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Escolas municipais recebem lousas digitais',
         summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
         content: `
-                                            <p> A Secretaria de Educação iniciou a instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental.O equipamento permite aos professores utilizarem recursos de vídeo e internet durante as aulas, tornando o aprendizado mais dinâmico.</p>
-                                                <p> "É um salto de qualidade pedagógica que coloca nossa rede no século XXI", destacou a secretária.</p>
+                    <p>A Secretaria de Educação iniciou a instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental. O equipamento permite aos professores utilizarem recursos de vídeo, jogos educativos e internet durante as aulas, tornando o aprendizado mais dinâmico.</p>
+                    <p>"É um salto de qualidade pedagógica que coloca nossa rede no século XXI", destacou a secretária. Os professores já estão passando por treinamento para extrair o máximo potencial da nova ferramenta.</p>
+
+                    <h2>Interatividade no Tupy</h2>
+                    <p>A Escola Municipal do <strong>Jardim Tupy</strong> foi a primeira a receber os equipamentos. Alunos do 5º ano já utilizam a lousa para "viajar" pelo Google Earth nas aulas de Geografia. A tecnologia desperta a curiosidade nativa das crianças e transforma conteúdos abstratos em experiências visuais concretas, melhorando a fixação do aprendizado.</p>
                                                     `,
         imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000',
         category: 'Educação',
@@ -737,8 +773,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
         content: `
-                                                    <p> Uma grande empresa do setor logístico, instalada próximo à Rodovia do Xisto, anunciou a abertura de 50 novas vagas de emprego imediato.A expansão das atividades visa atender o aumento da demanda no final do ano.</p>
-                                                        <p> Os interessados devem cadastrar currículo no site da empresa ou comparecer ao SINE Araucária.</p>
+                    <p>Uma grande empresa do setor logístico, instalada próximo à Rodovia do Xisto, anunciou a abertura de 50 novas vagas de emprego imediato. A expansão das atividades visa atender o aumento da demanda no final do ano.</p>
+                    <p>As oportunidades são para motoristas (categoria D/E), conferentes e auxiliares administrativos. Os interessados devem cadastrar currículo no site da empresa ou comparecer ao SINE Araucária.</p>
+
+                    <h2>Impacto no Emprego</h2>
+                    <p>A contratação em massa movimenta a economia local. "Preferimos contratar gente daqui. O funcionário que mora perto trabalha mais feliz e descansa melhor", diz o RH da empresa. A maioria das vagas não exige experiência anterior, sendo uma excelente porta de entrada para moradores dos bairros <strong>Campina da Barra</strong> e <strong>Thomaz Coelho</strong> que buscam recolocação.</p>
                                                             `,
         imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
         category: 'Economia',
@@ -752,8 +791,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Araucária investe em iluminação LED nos bairros',
         summary: 'Mais econômicas e eficientes, novas lâmpadas aumentam a segurança nas ruas.',
         content: `
-                                                            <p> O programa "Araucária Mais Iluminada" chegou ao bairro <strong>Capela Velha</strong>.Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
-                                                                <p> A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
+                    <p>O programa "Araucária Mais Iluminada" chegou ao bairro <strong>Capela Velha</strong>. Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio (amarelas) por luminárias de LED, que iluminam mais e consomem até 60% menos energia.</p>
+                    <p>A meta é atingir 100% da iluminação pública com LED até o final do próximo ano, gerando uma economia milionária para os cofres públicos.</p>
+
+                    <h2>Mais Segurança</h2>
+                    <p>A nova iluminação, com luz branca e potente, aumenta a sensação de segurança para pedestres e motoristas. "Antes a rua parecia um breu, agora dá pra ver tudo do portão", conta um morador da Rua Curió. A modernização também valoriza os imóveis e incentiva o comércio noturno nos bairros beneficiados.</p>
                                                                     `,
         imageUrl: '/images/iluminacao_led_cover.png',
         category: 'Infraestrutura',
@@ -767,8 +809,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Biblioteca Municipal promove feira de troca de livros',
         summary: 'Evento incentiva a leitura e a circulação de obras literárias na comunidade.',
         content: `
-                                                                    <p> Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros.A regra é simples: traga um livro usado em bom estado e troque por outro de seu interesse.</p>
-                                                                        <p> O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças.</p>
+                    <p>Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros. A regra é simples: traga um livro usado em bom estado (literatura, quadrinhos ou técnico) e troque por outro de seu interesse disponível nas bancas.</p>
+                    <p>O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças e um "cantinho da leitura" ao ar livre.</p>
+
+                    <h2>Cultura Circular</h2>
+                    <p>A iniciativa promove a economia circular e democratiza o acesso à leitura. "Livro parado na estante não conta história. Aqui ele ganha nova vida na mão de outro leitor", diz a bibliotecária chefe. Estudantes do <strong>Centro</strong> aproveitam para renovar as estantes gastando pouco, transformando a praça em um grande clube de leitura a céu aberto.</p>
                                                                             `,
         imageUrl: '/images/feira_livros_cover.png',
         category: 'Cultura',
@@ -782,8 +827,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Dia D de vacinação pet acontece neste domingo',
         summary: 'Mutirão oferecerá vacina antirrábica gratuita para cães e gatos na Praça da Bíblia.',
         content: `
-                                                                            <p> A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica.A imunização é gratuita e obrigatória para o controle da raiva.</p>
-                                                                                <p> Equipes estarão concentradas na Praça da Bíblia das 9h às 17h.É importante levar os animais em caixas de transporte ou com guias e coleiras.</p>
+                    <p>A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica. A imunização é gratuita e obrigatória para o controle da raiva, uma doença fatal tanto para animais quanto para humanos.</p>
+                    <p>Equipes estarão concentradas na Praça da Bíblia das 9h às 17h. É importante levar os animais em caixas de transporte ou com guias e coleiras para evitar fugas e acidentes.</p>
+
+                    <h2>Proteção Animal</h2>
+                    <p>A expectativa é vacinar mais de 2 mil animais em um único dia. Veterinários também estarão no local tirando dúvidas sobre guarda responsável e agendando castrações gratuitas. Moradores do <strong>Fazenda Velha</strong> organizaram caronas solidárias para levar os pets dos vizinhos, garantindo que ninguém fique de fora dessa corrente de proteção.</p>
                                                                                     `,
         imageUrl: '/images/vacinacao_pet_cover.png',
         category: 'Cidade',
@@ -797,7 +845,10 @@ export const newsArticles: NewsArticle[] = [
         title: 'Feira do Produtor ganha nova cobertura',
         summary: 'Reforma garante mais conforto para feirantes e clientes em dias de chuva.',
         content: `
-                                                                                    <p> A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova.A obra era uma reivindicação antiga dos agricultores, que sofriam com a exposição ao sol forte e chuvas.</p>
+                    <p>A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova. A obra era uma reivindicação antiga dos agricultores e feirantes, que sofriam com a exposição ao sol forte e chuvas repentinas, o que muitas vezes prejudicava a qualidade das hortaliças.</p>
+                    
+                    <h2>Conforto para Todos</h2>
+                    <p>Com a nova estrutura, o ambiente ficou mais arejado e seguro. "Agora o cliente pode escolher a verdura com calma, sem se molhar", comemora Dona Maria, feirante há 20 anos. O investimento fortalece a agricultura familiar de Araucária, garantindo que o produto do campo chegue com qualidade à mesa do consumidor, independentemente do clima.</p>
                                                                                         <p> "Agora temos dignidade para trabalhar e nossos clientes podem comprar com calma", comemorou o presidente da associação dos feirantes.</p>
                                                                                             `,
         imageUrl: '/images/feira_produtor_roof_cover.png',
