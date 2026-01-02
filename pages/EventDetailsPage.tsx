@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import SEO from '../components/SEO';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { Event } from '../types';
@@ -106,6 +107,12 @@ const EventDetailsPage: React.FC = () => {
 
     return (
         <div className="bg-background-light dark:bg-background-dark min-h-screen pb-20 font-body">
+            <SEO
+                title={event.title}
+                description={event.description}
+                image={event.imageUrl}
+                type="article"
+            />
             {/* Hero Section */}
             <div className="relative h-[60vh] w-full bg-gray-900 group overflow-hidden">
                 <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-700 z-10"></div>

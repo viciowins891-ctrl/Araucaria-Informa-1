@@ -1,36 +1,31 @@
-
-import React, { useState, useMemo, useEffect } from 'react';
-import { allBusinessCategories } from '../data';
-import { api } from '../services/api';
-import { useFetch } from '../hooks/useFetch';
+import React from 'react';
 import BusinessCard from '../components/BusinessCard';
-import LoadingSpinner from '../components/LoadingSpinner';
+import BusinessCardSkeleton from '../components/skeletons/BusinessCardSkeleton';
 import RegistrationModal from '../components/RegistrationModal';
+import { useCommerceController } from '../hooks/useCommerceController';
+import SEO from '../components/SEO';
 
 const CommercePage: React.FC = () => {
-    useEffect(() => {
-        document.title = "Comércio Local - Araucária Informa";
-    }, []);
-
-    const [selectedCategory, setSelectedCategory] = useState('Todas');
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const { data: businesses, loading, error } = useFetch(api.getBusinesses);
-
-    const filteredBusinesses = useMemo(() => {
-        if (!businesses) return [];
-        if (selectedCategory === 'Todas') {
-            return businesses;
-        }
-        return businesses.filter(business => business.category === selectedCategory);
-    }, [selectedCategory, businesses]);
-
-    const featuredBusinesses = useMemo(() => {
-        if (!businesses) return [];
-        return businesses.filter(b => b.isFeatured);
-    }, [businesses]);
+    // Instância do Maestro Central
+    const {
+        filteredBusinesses,
+        featuredBusinesses,
+        loading,
+        error,
+        selectedCategory,
+        setSelectedCategory,
+        isModalOpen,
+        setIsModalOpen,
+        categories
+    } = useCommerceController();
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-zinc-900">
+            <SEO
+                title="Guia Comercial e Serviços"
+                description="Encontre empresas, comércios e prestadores de serviço em Araucária."
+                image="/images/commerce_hero.jpg"
+            />
             {/* Hero Header Section */}
             <div className="relative bg-zinc-900 py-20 sm:py-28 mb-10 overflow-hidden">
                 <div className="absolute inset-0">
@@ -65,8 +60,6 @@ const CommercePage: React.FC = () => {
             {/* Conteúdo Principal */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 -mt-8 relative z-20">
 
-                {loading && <LoadingSpinner />}
-
                 {error && (
                     <div className="text-center py-16 bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-red-100 dark:border-red-900/30">
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 dark:bg-red-900/20 text-red-500 mb-4">
@@ -77,7 +70,25 @@ const CommercePage: React.FC = () => {
                     </div>
                 )}
 
-                {!loading && businesses && (
+                {loading && (
+                    <div className="mb-6">
+                        {/* Seção Skeleton Categories (simple pills) */}
+                        <div className="flex gap-2 overflow-x-auto mb-8 pb-2">
+                            {[...Array(5)].map((_, i) => (
+                                <div key={i} className="w-24 h-10 bg-gray-200 dark:bg-gray-700 rounded-xl animate-pulse flex-shrink-0" />
+                            ))}
+                        </div>
+
+                        {/* Grid Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[...Array(6)].map((_, index) => (
+                                <BusinessCardSkeleton key={`skeleton-${index}`} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {!loading && !error && (
                     <>
                         {/* Seção de Destaques (Featured) */}
                         {featuredBusinesses.length > 0 && selectedCategory === 'Todas' && (
@@ -113,7 +124,7 @@ const CommercePage: React.FC = () => {
                         <div className="sticky top-20 z-30 bg-gray-50/95 dark:bg-zinc-900/95 backdrop-blur-sm py-4 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
                             <div className="bg-white dark:bg-zinc-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-zinc-700/50 max-w-fit mx-auto overflow-x-auto">
                                 <div className="flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2 min-w-max px-2">
-                                    {allBusinessCategories.map(category => (
+                                    {categories.map(category => (
                                         <button
                                             key={category}
                                             onClick={() => setSelectedCategory(category)}
@@ -192,9 +203,6 @@ const CommercePage: React.FC = () => {
                             Ver Planos Premium
                         </button>
                     </div>
-                    <p className="text-indigo-200/60 text-sm mt-8">
-                        * Cadastro básico gratuito para MEI e pequenas empresas locais.
-                    </p>
                 </div>
             </div>
             <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

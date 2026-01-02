@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { NewsArticle } from '../types';
@@ -9,6 +9,7 @@ import AdSpace from '../components/AdSpace';
 import ShareButton from '../components/ShareButton';
 import { getPlaceholderImage } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
+import TextToSpeech from '../components/TextToSpeech';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -168,25 +169,15 @@ const ArticlePage: React.FC = () => {
                 </div>
             )}
 
-            {/* SEO & Meta Tags Dinâmicas */}
-            <Helmet>
-                <title>{plainTitle} - Araucária Informa</title>
-                <meta name="description" content={plainSummary} />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="article" />
-                <meta property="og:url" content={window.location.href} />
-                <meta property="og:title" content={plainTitle} />
-                <meta property="og:description" content={plainSummary} />
-                <meta property="og:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
-
-                {/* Twitter */}
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content={window.location.href} />
-                <meta property="twitter:title" content={plainTitle} />
-                <meta property="twitter:description" content={plainSummary} />
-                <meta property="twitter:image" content={article.imageUrl?.startsWith('http') ? article.imageUrl : `https://araucariainforma.com${article.imageUrl}`} />
-            </Helmet>
+            {/* SEO & Meta Tags Dinâmicas (Centralizado via Componente) */}
+            <SEO
+                title={plainTitle}
+                description={plainSummary}
+                image={article.imageUrl}
+                type="article"
+                author={article.author}
+                publishedTime={article.publishDate}
+            />
 
             {/* Hero Section */}
             <div className="relative h-[50vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
@@ -268,6 +259,7 @@ const ArticlePage: React.FC = () => {
                             </div>
 
                             <div className="flex gap-2">
+                                <TextToSpeech text={stripHtml(article.content || article.summary || '')} />
                                 <ShareButton title={plainTitle} />
                                 <button
                                     className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"

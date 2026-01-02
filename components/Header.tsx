@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import GlobalSearch from './GlobalSearch';
 
 const NavItem: React.FC<{ to: string; children: React.ReactNode; onClick?: () => void }> = ({ to, children, onClick }) => {
     const location = useLocation();
@@ -82,6 +83,9 @@ const Header: React.FC = () => {
 
                     {/* Actions & Mobile Menu Button */}
                     <div className="flex items-center space-x-2 z-50 relative">
+                        {/* BUSCA GLOBAL */}
+                        <GlobalSearch />
+
                         <button
                             onClick={toggleDarkMode}
                             className="p-2 rounded-full text-blue-100 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"

@@ -1,6 +1,7 @@
 // import { supabase } from './supabaseClient'; // REMOVIDO PARA PERFORMANCE
 import { getSupabase } from './supabaseClient';
 import { NewsArticle, Event, Business } from '../types';
+import { Job } from '../data-jobs';
 // import { fetchWeeklyNewsWithAI } from './aiService';
 
 // Constantes de configuração
@@ -308,5 +309,21 @@ export const api = {
     resetDatabase: async () => {
         localStorage.removeItem(DB_KEYS.LAST_UPDATE);
         window.location.reload();
+    },
+
+    getJobs: async (): Promise<Job[]> => {
+        try {
+            const supabase = await getSupabase();
+            const { data, error } = await supabase.from('jobs').select('*').order('created_at', { ascending: false });
+
+            if (error || !data || data.length === 0) {
+                const { jobs } = await import('../data-jobs');
+                return jobs;
+            }
+            return data;
+        } catch (e) {
+            const { jobs } = await import('../data-jobs');
+            return jobs;
+        }
     }
 };
