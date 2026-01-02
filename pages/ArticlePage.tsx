@@ -10,6 +10,7 @@ import ShareButton from '../components/ShareButton';
 import { getPlaceholderImage } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
 import TextToSpeech from '../components/TextToSpeech';
+import NewsCard from '../components/NewsCard';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -66,12 +67,18 @@ const ArticlePage: React.FC = () => {
                         setSecondaryImage(secImg);
                     }
 
-                    // Busca notícias relacionadas
+                    // Busca notícias relacionadas com Inteligência (Prioriza Mesma Categoria)
                     const allNews = await api.getNews();
-                    const others = allNews
-                        .filter(item => item.id !== currentArticle.id)
-                        .slice(0, 3);
-                    setRelatedArticles(others);
+
+                    // 1. Mesma Categoria (excluindo atual)
+                    const sameCategory = allNews.filter(item => item.id !== currentArticle.id && item.category === currentArticle.category);
+
+                    // 2. Outras (para preencher)
+                    const others = allNews.filter(item => item.id !== currentArticle.id && item.category !== currentArticle.category);
+
+                    // Merge: Prioridade Categoria + Resto, limita a 3
+                    const smartRelated = [...sameCategory, ...others].slice(0, 3);
+                    setRelatedArticles(smartRelated);
 
                 } else {
                     setError('Artigo não encontrado.');
@@ -308,7 +315,8 @@ const ArticlePage: React.FC = () => {
                         prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
                         prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-8
                         prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                        prose-img:rounded-xl prose-img:shadow-lg"
+                        prose-img:rounded-xl prose-img:shadow-lg
+                        text-justify hyphens-auto"
                             dangerouslySetInnerHTML={{ __html: article.content || `<p>${article.summary}</p>` }}
                         />
 
@@ -357,6 +365,26 @@ const ArticlePage: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Seção Inteligente: Leia Também (Retenção de Usuário) */}
+            {relatedArticles.length > 0 && (
+                <section className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/20 py-12 mt-0">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                        <div className="flex items-center gap-2 mb-8">
+                            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
+                                Continue Lendo
+                            </h3>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {relatedArticles.map(item => (
+                                <NewsCard key={item.id} article={item} />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
         </article>
     );
 };

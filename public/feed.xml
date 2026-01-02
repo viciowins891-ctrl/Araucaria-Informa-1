@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Araucária Informa</title>
+    <link>https://araucariainforma.com/</link>
+    <description>Notícias locais, eventos e comércio de Araucária em tempo real.</description>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 02 Jan 2026 09:00:00 -0300</lastBuildDate>
+
+    <item>
+      <title>Feira Gastronômica traz Food Trucks e música para o Centro</title>
+      <link>https://araucariainforma.com/noticias/9999</link>
+      <guid isPermaLink="true">https://araucariainforma.com/noticias/9999</guid>
+      <pubDate>Fri, 02 Jan 2026 08:00:00 -0300</pubDate>
+      <description>Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.</description>
+      <category>Lazer</category>
+    </item>
+
+    <item>
+      <title>Cine Família: Parque Cachoeira vira cinema a céu aberto</title>
+      <link>https://araucariainforma.com/noticias/3005</link>
+      <guid isPermaLink="true">https://araucariainforma.com/noticias/3005</guid>
+      <pubDate>Thu, 01 Jan 2026 14:00:00 -0300</pubDate>
+      <description>Projeto gratuito exibe filmes infantis e democratiza cultura. Bairros vizinhos como Iguaçu e Estação são beneficiados.</description>
+      <category>Cultura</category>
+    </item>
+
+    <item>
+      <title>Impacto dos Food Trucks na economia local</title>
+      <link>https://araucariainforma.com/noticias/110</link>
+      <guid isPermaLink="true">https://araucariainforma.com/noticias/110</guid>
+      <pubDate>Wed, 31 Dec 2025 18:00:00 -0300</pubDate>
+      <description>Análise completa de como o setor movimenta a economia dos bairros Fazenda Velha e Costeira.</description>
+      <category>Economia</category>
+    </item>
+
+  </channel>
+</rss>

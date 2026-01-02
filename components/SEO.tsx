@@ -56,6 +56,48 @@ const SEO: React.FC<SEOProps> = ({
 
             {/* Canonical */}
             <link rel="canonical" href={url} />
+
+            {/* JSON-LD Structured Data (Google News & AdSense Friendly) */}
+            <script type="application/ld+json">
+                {JSON.stringify(
+                    type === 'article' ? {
+                        "@context": "https://schema.org",
+                        "@type": "NewsArticle",
+                        "headline": title.substring(0, 110), // Google limits
+                        "image": [absoluteImage],
+                        "datePublished": publishedTime || new Date().toISOString(),
+                        "dateModified": publishedTime || new Date().toISOString(),
+                        "author": [{
+                            "@type": "Person",
+                            "name": author || "Redação Araucária Informa",
+                            "url": "https://araucariainforma.com/sobre"
+                        }],
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Araucária Informa",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://araucariainforma.com/icon-192.png"
+                            }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": url
+                        },
+                        "description": description
+                    } : {
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "Araucária Informa",
+                        "url": "https://araucariainforma.com/",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://araucariainforma.com/busca?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
+                    }
+                )}
+            </script>
         </Helmet>
     );
 };
