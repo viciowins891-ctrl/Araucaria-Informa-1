@@ -51,12 +51,27 @@
     <meta property="twitter:image" content="https://araucariainforma.com/images/araucaria_social_share.png" />
     <meta name="app-version" content="1.0.0" />
 
-    <!-- Google AdSense -->
-    <!-- Google AdSense (Deferred Loading for Performance) -->
-    <!-- Google AdSense (Lazy Load on Interaction) -->
-    <!-- Google AdSense (Standard Loading for Verification) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1266405844459024"
-        crossorigin="anonymous"></script>
+    <!-- Google AdSense (Lazy Load Strategy for High Performance) -->
+    <!-- Adia o carregamento do script pesado de anúncios para liberar a CPU inicial -->
+    <script>
+        // Função para carregar o AdSense apenas quando necessário
+        function loadAdSense() {
+            if (window.adsLoaded) return;
+            window.adsLoaded = true;
+
+            var script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1266405844459024";
+            script.crossOrigin = "anonymous";
+            script.async = true;
+            document.head.appendChild(script);
+            console.log('[SEO] AdSense Carregado (Lazy)');
+        }
+
+        // Carrega em interações do usuário ou após 4 segundos
+        const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
+        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
+        setTimeout(loadAdSense, 4000); // Fallback de segurança
+    </script>
 
     <!-- Scripts e Estilos -->
     <!-- Scripts e Estilos -->
