@@ -370,7 +370,8 @@ export const newsArticles: NewsArticle[] = [
             
             <p>"Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/rural_tourism_araucaria_path.png',
+        mobileImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
         category: 'Turismo',
         categoryColor: 'indigo',
         internalImageUrl: '/images/rural_tourism_araucaria_path.png',
@@ -578,8 +579,8 @@ export const newsArticles: NewsArticle[] = [
             <p>"Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo. O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
             <p>A rota do <strong>Guajuvira</strong> é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
         `,
-        // URL Corrigida (Caminho Local) para evitar erro 404
-        imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/rural_tourism_signage_araucaria.png',
+        mobileImageUrl: '/images/rural_tourism_signage_araucaria_mobile.webp',
         category: 'Turismo',
         categoryColor: 'indigo',
         internalImageUrl: '/images/rural_tourism_signage_araucaria.png',
