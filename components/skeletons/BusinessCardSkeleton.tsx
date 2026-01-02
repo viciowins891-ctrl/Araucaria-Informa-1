@@ -3,46 +3,45 @@ import SkeletonBase from './SkeletonBase';
 
 const BusinessCardSkeleton: React.FC = () => {
     return (
-        <div className="bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-gray-100 dark:border-zinc-700/50 overflow-hidden flex flex-col h-full">
-            {/* Banner/Image */}
-            <div className="relative h-32 bg-gray-100 dark:bg-zinc-700">
+        <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-700/60 overflow-hidden flex flex-col h-full">
+            {/* Banner/Image Area (Matching h-48) */}
+            <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
                 <SkeletonBase className="w-full h-full" />
-                {/* Logo Overlay */}
-                <div className="absolute -bottom-10 left-6">
-                    <SkeletonBase className="w-20 h-20 rounded-xl border-4 border-white dark:border-zinc-800" />
+
+                {/* Simulated Tags Overlay (Top-Right) */}
+                <div className="absolute top-3 right-3 flex flex-col items-end gap-2">
+                    <SkeletonBase className="w-20 h-6 rounded-full" />
                 </div>
             </div>
 
-            <div className="pt-12 px-6 pb-6 flex flex-col flex-grow">
-                {/* Header: Title & Verified Badge */}
-                <div className="flex justify-between items-start mb-2">
-                    <SkeletonBase className="w-3/4 h-6 mb-1" />
-                    <SkeletonBase className="w-5 h-5 rounded-full" />
+            <div className="p-5 flex flex-col flex-grow">
+                {/* Title */}
+                <SkeletonBase className="w-3/4 h-7 mb-2 rounded" />
+
+                {/* Description (2 lines) */}
+                <div className="mt-2 space-y-2">
+                    <SkeletonBase className="w-full h-4 rounded" />
+                    <SkeletonBase className="w-2/3 h-4 rounded" />
                 </div>
 
-                {/* Category */}
-                <SkeletonBase className="w-1/3 h-4 mb-4" />
-
-                {/* Ratings & Status */}
-                <div className="flex items-center gap-4 mb-6">
-                    <SkeletonBase className="w-24 h-5" />
-                    <SkeletonBase className="w-16 h-5" />
-                </div>
-
-                {/* Address & Phone */}
-                <div className="space-y-2 mb-6 text-sm">
-                    <div className="flex items-center gap-2">
-                        <SkeletonBase className="w-4 h-4" />
-                        <SkeletonBase className="w-full h-4" />
+                {/* Info Rows (Address, Phone, Website) */}
+                <div className="space-y-3 mt-4 flex-grow">
+                    <div className="flex items-center gap-3">
+                        <SkeletonBase className="w-5 h-5 rounded-full" />
+                        <SkeletonBase className="w-full h-4 rounded" />
                     </div>
-                    <div className="flex items-center gap-2">
-                        <SkeletonBase className="w-4 h-4" />
-                        <SkeletonBase className="w-2/3 h-4" />
+                    <div className="flex items-center gap-3">
+                        <SkeletonBase className="w-5 h-5 rounded-full" />
+                        <SkeletonBase className="w-1/2 h-4 rounded" />
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <SkeletonBase className="w-5 h-5 rounded-full" />
+                        <SkeletonBase className="w-3/4 h-4 rounded" />
                     </div>
                 </div>
 
-                {/* Buttons placeholder */}
-                <div className="mt-auto grid grid-cols-2 gap-3">
+                {/* Buttons (Ligar / Visitar) */}
+                <div className="pt-6 grid grid-cols-2 gap-3 mt-auto">
                     <SkeletonBase className="h-10 rounded-lg" />
                     <SkeletonBase className="h-10 rounded-lg" />
                 </div>
