@@ -15,7 +15,11 @@
                    frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com;">
 
     <!-- LCP Optimization: Responsive Preload -->
-    <!-- Removed hardcoded preloads to avoid double-fetch penalty -->
+    <!-- Preload Hero Image for "Queda no Desemprego" (Current Feature) -->
+    <link rel="preload" as="image" href="/images/employment_drop_new_cover_mobile.webp" media="(max-width: 767px)"
+        fetchpriority="high" type="image/webp" />
+    <link rel="preload" as="image" href="/images/employment_drop_new_cover.png" media="(min-width: 768px)"
+        fetchpriority="high" />
 
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>
