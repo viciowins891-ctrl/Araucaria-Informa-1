@@ -72,9 +72,12 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // Carrega apenas em interações reais (Zero impacto no Lighthouse)
+        // Carrega em interações reais OU após 5 segundos (Segurança para Bots do Google)
         const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
-        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true })); 
+        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
+
+        // Fallback crucial para aprovação do AdSense (garante que o bot veja o script)
+        setTimeout(loadAdSense, 5000); 
     </script>
 
     <!-- Scripts e Estilos -->

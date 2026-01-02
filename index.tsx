@@ -70,18 +70,16 @@ const renderApp = () => {
   );
 };
 
-// ESTRATÉGIA "MOBILE GREEN": Adia a Hidratação do React
-// Permite que o esqueleto HTML (App Shell) carregue instantaneamente e
-// que o Lighthouse termine a medição de LCP/TBT antes do JS pesado rodar.
+// ESTRATÉGIA EQUILIBRADA: Performance Verde + SEO Seguro
+// Usa requestIdleCallback para não bloquear a Main Thread, mas sem atraso artificial longo.
 if ('requestIdleCallback' in window) {
   // @ts-ignore
   window.requestIdleCallback(() => {
-    // Pequeno delay extra para garantir que a Main Thread esteja livre
-    setTimeout(renderApp, 100);
-  }, { timeout: 4000 });
+    renderApp();
+  }, { timeout: 1000 });
 } else {
-  // Fallback para Safari/Browsers antigos
-  setTimeout(renderApp, 2000);
+  // Fallback rápido
+  setTimeout(renderApp, 0);
 }
 
 // Register PWA Service Worker
