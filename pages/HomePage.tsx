@@ -7,7 +7,7 @@ import EventCard from '../components/EventCard';
 import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
-
+import { newsArticles } from '../data'; // Importação Eager para evitar Flicker
 
 // import { getPlaceholderImage } from '../services/aiService';
 
@@ -22,14 +22,19 @@ const HomePage: React.FC = () => {
     const { data, loading, error } = useFetch(api.getHomeData, 'home-data-stable');
     const [imageError, setImageError] = useState(false);
 
-    // Imagem principal: Usando dados da notícia destaque
-    // Lógica robusta para garantir carregamento tanto no mobile quanto desktop
+    // ESTRATÉGIA ANTI-FLICKER (Zero Layout Shift)
+    // 1. Carregamos a notícia estática ID 9999 (Feira Gastronômica) imediatamente (síncrono).
+    // 2. Usamos ela como 'default' enquanto o useFetch carrega os dados dinâmicos.
+    // 3. Isso garante que o React renderize EXATAMENTE o mesmo HTML que o index.html estático.
+    const staticFeature = newsArticles.find(n => n.id === 9999);
 
-    // 1. Determina a notícia de destaque (Force ID 9999 to match index.html static content)
+    // 1. Determina a notícia de destaque
     const sortedNews = data?.news || [];
-    // FORÇA a notícia de ID 9999 (Feira Gastronômica) para ser a HERO, alinhando com o index.html estático para evitar CLS
     const forcedHeroNews = sortedNews.find(n => n.id === 9999);
-    const featuredNews = forcedHeroNews || (sortedNews.length > 0 ? sortedNews[0] : null);
+
+    // Prioridade: Dados API > Fallback Estático (ID 9999) > Nada
+    // O 'loading' não impede a renderização do Hero, pois temos dados estáticos seguros.
+    const featuredNews = forcedHeroNews || staticFeature || (sortedNews.length > 0 ? sortedNews[0] : null);
 
     // 2. Define as imagens de exibição
     const defaultImage = "/images/araucaria_hero.png";
@@ -90,14 +95,12 @@ const HomePage: React.FC = () => {
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16">
                     <div className="max-w-4xl">
-                        {loading ? (
-                            <div className="animate-pulse space-y-6">
-                                <div className="h-8 bg-white/20 rounded w-48"></div>
-                                <div className="h-20 bg-white/20 rounded w-full max-w-2xl"></div>
-                                <div className="h-4 bg-white/20 rounded w-96"></div>
-                                <div className="h-12 bg-white/20 rounded-full w-64 mt-8"></div>
-                            </div>
-                        ) : featuredNews ? (
+                        {/* 
+                            ANTI-FLICKER: Removemos o loading skeleton do Hero.
+                            Como temos o 'staticFeature', o featuredNews nunca é null no first render.
+                            O conteúdo é exibido instantaneamente, alinhado com o App Shell.
+                        */}
+                        {featuredNews ? (
                             <>
                                 <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm">
                                     Destaque do Dia

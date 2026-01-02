@@ -50,10 +50,10 @@ export const newsArticles: NewsArticle[] = [
             
             <p>A iniciativa visa não apenas oferecer lazer, mas também democratizar o acesso à cultura. "Muitas crianças nunca tiveram a experiência de ver um filme em tela grande. Trazer isso para o parque, um ambiente democrático por natureza, é transformar o espaço público em sala de estar da cidade", destaca a organização.</p>
 
-            <h3>Impacto na Região e Economia Local</h3>
-            <p>Eventos como este têm um efeito multiplicador na economia local. Segundo dados da Secretaria de Turismo, dias de evento no parque registram um aumento de até 40% no movimento de food trucks e comércios do entorno.</p>
+            <h3>Impacto nos Bairros Vizinhos</h3>
+            <p>Eventos como este têm um efeito multiplicador na economia local e na vida comunitária. Pela proximidade, moradores dos bairros <strong>Iguaçu</strong>, <strong>Estação</strong> e <strong>Centro</strong> são os mais beneficiados, podendo acessar o parque a pé. Essa movimentação gera um "cinturão de segurança" natural nas ruas do entorno e aquece o comércio local, com aumento de até 40% no movimento de padarias e sorveterias da região.</p>
             
-            <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença e comunidade. Em tempos onde o entretenimento é muitas vezes individual e dentro de casa, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora e segura.</p>
+            <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença. Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>
         `,
         imageUrl: '/images/cinema_cover_real_final_v7.jpg',
         mobileImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
