@@ -52,6 +52,9 @@
     <!-- Google AdSense (Lazy Load Strategy for High Performance) -->
     <!-- Adia o carregamento do script pesado de anúncios para liberar a CPU inicial -->
     <script>
+        // Inicializa array de comandos do AdSense (Previne erros se o script atrasar)
+        window.adsbygoogle = window.adsbygoogle || [];
+
         // Função para carregar o AdSense apenas quando necessário
         function loadAdSense() {
             if (window.adsLoaded) return;
