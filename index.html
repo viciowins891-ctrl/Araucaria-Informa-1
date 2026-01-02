@@ -194,11 +194,17 @@
         <!-- APP SHELL / PRERENDER MANUAL PARA LCP IMEDIATO -->
         <!-- Este conteúdo é exibido instantaneamente enquanto o React carrega -->
 
-        <!-- Fake Header (MATCHING: h-20 / 80px) -->
+        <!-- Fake Header (MATCHING: h-[72px] / py-4) -->
         <div
-            style="position:fixed;top:0;left:0;right:0;height:80px;background-color:#0f172a;z-index:50;display:flex;align-items:center;padding:0 1rem;box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-            <div style="width:40px;height:40px;background-color:white;border-radius:0.5rem;margin-right:0.5rem;"></div>
-            <div style="height:24px;width:150px;background-color:rgba(255,255,255,0.1);border-radius:4px;"></div>
+            style="position:fixed;top:0;left:0;right:0;height:72px;background-color:#1d4ed8;z-index:50;display:flex;align-items:center;padding:0 1rem;box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <div
+                style="width:40px;height:40px;background-color:white;border-radius:0.5rem;margin-right:0.5rem;display:flex;align-items:center;justify-content:center;">
+                <!-- Simple Box mimicking logo shape -->
+            </div>
+            <div
+                style="height:28px;width:180px;background-color:rgba(255,255,255,0.0);color:white;font-weight:700;font-size:1.5rem;display:flex;align-items:center;font-family: 'Inter', sans-serif;">
+                Araucária<span style="font-weight:300;color:#bfdbfe;">Informa</span>
+            </div>
         </div>
 
         <!-- Fake Hero (MATCHING: HomePage.tsx Hero Section) -->

@@ -2,7 +2,6 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { useNotificationController } from './hooks/useNotificationController';
 import { HelmetProvider } from 'react-helmet-async';
-import { Analytics } from "@vercel/analytics/react";
 import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,6 +10,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { api } from './services/api';
 import CookieConsent from './components/CookieConsent';
 import ErrorBoundary from './components/ErrorBoundary';
+import AnalyticsWrapper from './components/AnalyticsWrapper';
 
 
 
@@ -101,7 +101,7 @@ const Layout: React.FC = () => {
             </main>
             {!isAdminPage && <Footer simple={isSimpleFooterPage} />}
             {!isAdminPage && <CookieConsent />}
-            <Analytics />
+            <AnalyticsWrapper />
         </div>
     );
 };
