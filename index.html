@@ -16,8 +16,12 @@
 
     <!-- LCP Optimization: Responsive Preload -->
     <!-- Preload Hero Image for "Feira Gastronômica" (Current Feature ID 9999) -->
-    <!-- Note: Mobile uses same image for now per data.ts configuration -->
-    <link rel="preload" as="image" href="/images/food_trucks_cover_v29.png" fetchpriority="high" />
+    <!-- Mobile: Lightweight WebP (~50KB) -->
+    <link rel="preload" as="image" href="/images/food_trucks_cover_v29_mobile.webp" fetchpriority="high"
+        media="(max-width: 768px)" />
+    <!-- Desktop: High-Res PNG (~1MB) -->
+    <link rel="preload" as="image" href="/images/food_trucks_cover_v29.png" fetchpriority="high"
+        media="(min-width: 769px)" />
 
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>
@@ -68,10 +72,10 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // Carrega em interações do usuário ou após 8 segundos
+        // Carrega em interações do usuário ou após 12 segundos (Garante Lighthouse limpo)
         const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
         userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
-        setTimeout(loadAdSense, 8000); // Fallback mais lento (8s) para garantir Lighthouse limpo
+        setTimeout(loadAdSense, 12000); 
     </script>
 
     <!-- Scripts e Estilos -->
