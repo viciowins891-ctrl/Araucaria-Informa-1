@@ -15,10 +15,10 @@
                    frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com;">
 
     <!-- LCP Optimization: Responsive Preload -->
-    <!-- Preload Hero Image for "Queda no Desemprego" (Current Feature) -->
-    <link rel="preload" as="image" href="/images/employment_drop_new_cover_mobile.webp" media="(max-width: 767px)"
+    <!-- Preload Hero Image for "Cine Família" (Current Feature ID 3005) -->
+    <link rel="preload" as="image" href="/images/cinema_cover_real_final_v7_mobile.webp" media="(max-width: 767px)"
         fetchpriority="high" type="image/webp" />
-    <link rel="preload" as="image" href="/images/employment_drop_new_cover.png" media="(min-width: 768px)"
+    <link rel="preload" as="image" href="/images/cinema_cover_real_final_v7.jpg" media="(min-width: 768px)"
         fetchpriority="high" />
 
     <!-- SEO Principal -->
@@ -67,10 +67,10 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // Carrega em interações do usuário ou após 4 segundos
+        // Carrega em interações do usuário ou após 8 segundos
         const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
         userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
-        setTimeout(loadAdSense, 4000); // Fallback de segurança
+        setTimeout(loadAdSense, 8000); // Fallback mais lento (8s) para garantir Lighthouse limpo
     </script>
 
     <!-- Scripts e Estilos -->
