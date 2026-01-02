@@ -25,9 +25,11 @@ const HomePage: React.FC = () => {
     // Imagem principal: Usando dados da notícia destaque
     // Lógica robusta para garantir carregamento tanto no mobile quanto desktop
 
-    // 1. Determina a notícia de destaque (usa a ordem natural da API: Data Mais Recente Primeiro)
+    // 1. Determina a notícia de destaque (Force ID 9999 to match index.html static content)
     const sortedNews = data?.news || [];
-    const featuredNews = sortedNews.length > 0 ? sortedNews[0] : null;
+    // FORÇA a notícia de ID 9999 (Feira Gastronômica) para ser a HERO, alinhando com o index.html estático para evitar CLS
+    const forcedHeroNews = sortedNews.find(n => n.id === 9999);
+    const featuredNews = forcedHeroNews || (sortedNews.length > 0 ? sortedNews[0] : null);
 
     // 2. Define as imagens de exibição
     const defaultImage = "/images/araucaria_hero.png";
