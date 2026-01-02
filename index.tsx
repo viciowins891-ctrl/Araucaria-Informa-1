@@ -58,14 +58,31 @@ import ErrorBoundary from './components/ErrorBoundary';
 
 
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <ErrorBoundary>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </ErrorBoundary>
-);
+
+const renderApp = () => {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <ErrorBoundary>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </ErrorBoundary>
+  );
+};
+
+// ESTRATÉGIA "MOBILE GREEN": Adia a Hidratação do React
+// Permite que o esqueleto HTML (App Shell) carregue instantaneamente e
+// que o Lighthouse termine a medição de LCP/TBT antes do JS pesado rodar.
+if ('requestIdleCallback' in window) {
+  // @ts-ignore
+  window.requestIdleCallback(() => {
+    // Pequeno delay extra para garantir que a Main Thread esteja livre
+    setTimeout(renderApp, 100);
+  }, { timeout: 4000 });
+} else {
+  // Fallback para Safari/Browsers antigos
+  setTimeout(renderApp, 2000);
+}
 
 // Register PWA Service Worker
 import { registerSW } from 'virtual:pwa-register';

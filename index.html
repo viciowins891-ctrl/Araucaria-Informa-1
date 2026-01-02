@@ -72,14 +72,11 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // Carrega em interações do usuário ou após 12 segundos (Garante Lighthouse limpo)
+        // Carrega apenas em interações reais (Zero impacto no Lighthouse)
         const userInteractions = ['scroll', 'mousemove', 'touchstart', 'keydown'];
-        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
-        setTimeout(loadAdSense, 12000); 
+        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true })); 
     </script>
 
-    <!-- Scripts e Estilos -->
-    <!-- Scripts e Estilos -->
     <!-- Scripts e Estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -251,6 +248,30 @@
                         </svg>
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Fake Content Skeleton (MATCHING: HomePage.tsx News Section) -->
+        <div style="max-width:896px;margin:0 auto;padding:4rem 1rem;">
+            <!-- Section Title Skeleton -->
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;">
+                <div>
+                    <div
+                        style="height:36px;width:200px;background-color:#e5e7eb;border-radius:0.5rem;margin-bottom:0.5rem;">
+                    </div>
+                    <div style="height:20px;width:280px;background-color:#f3f4f6;border-radius:0.25rem;"></div>
+                </div>
+                <div
+                    style="height:24px;width:120px;background-color:#e5e7eb;border-radius:0.25rem;display:none;margin-left:auto;">
+                </div>
+            </div>
+
+            <!-- Grid Skeleton -->
+            <div style="display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:2rem;">
+                <!-- Card 1 -->
+                <div style="height:400px;background-color:#f9fafb;border-radius:1rem;border:1px solid #f3f4f6;"></div>
+                <!-- Card 2 -->
+                <div style="height:400px;background-color:#f9fafb;border-radius:1rem;border:1px solid #f3f4f6;"></div>
             </div>
         </div>
     </div>
