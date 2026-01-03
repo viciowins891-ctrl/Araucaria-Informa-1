@@ -8,6 +8,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 import ShareButton from '../components/ShareButton';
 import { stripHtml } from '../services/textUtils';
+import { formatDateBR } from '../services/dateUtils';
 
 const EventDetailsPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -63,15 +64,19 @@ const EventDetailsPage: React.FC = () => {
     const addToCalendar = () => {
         if (!event) return;
 
-        // Parse da data (DD/MM/AAAA)
-        const [day, month, year] = event.date.split('/');
+        let day, month, year;
+
+        // Verifica formato (ISO vs BR)
+        if (event.date.includes('-')) {
+            [year, month, day] = event.date.split('-');
+        } else {
+            [day, month, year] = event.date.split('/');
+        }
 
         // Parse do horário (HH:MM - HH:MM)
         const [startTime, endTime] = event.time.split(' - ');
 
         // Formata para o padrão do Google Calendar (AAAAMMDDTHHMMSS)
-        // Nota: Assumindo fuso horário local, o ideal seria converter para UTC, 
-        // mas para simplificar e funcionar no frontend sem lib de data:
         const formatDate = (d: string, m: string, y: string, time: string) => {
             return `${y}${m}${d}T${time.replace(':', '')}00`;
         };
@@ -139,7 +144,7 @@ const EventDetailsPage: React.FC = () => {
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                             <div className="animate-fade-in-up">
                                 <span className="inline-block bg-primary/90 backdrop-blur-sm text-white text-sm font-bold px-4 py-1.5 rounded-full mb-4 shadow-lg border border-primary/20">
-                                    {event.date}
+                                    {formatDateBR(event.date)}
                                 </span>
                                 <h1 className="text-4xl md:text-6xl font-bold text-white font-display drop-shadow-lg leading-tight">
                                     {event.title}
@@ -238,7 +243,7 @@ const EventDetailsPage: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Data</p>
-                                        <p className="text-gray-900 dark:text-white font-bold text-lg">{event.date}</p>
+                                        <p className="text-gray-900 dark:text-white font-bold text-lg">{formatDateBR(event.date)}</p>
                                         <button
                                             onClick={addToCalendar}
                                             className="text-primary text-xs font-bold uppercase tracking-wider mt-1 hover:underline"

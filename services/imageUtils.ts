@@ -21,7 +21,9 @@ export const getOptimizedImageUrl = (url: string, width: number = 800, quality: 
         // EXCEÇÃO PADRÃO: Se for uma imagem manual recente (v5, v6, v7, v2x, v3x...), 
         // IGNORA a busca por _mobile.webp pois ela provavelmente não existe ainda.
         // Isso previne que uploads manuais quebrem no mobile.
-        if (url.includes('v5') || url.includes('v6') || url.includes('v7') || url.includes('v2') || url.includes('v3') || url.includes('final')) return url;
+        // EXCEÇÃO REMOVIDA: Agora permitimos a otimização de arquivos versionados (v2, final, etc)
+        // pois confirmamos que os scripts geram variantes _mobile.webp para eles também.
+        // if (url.includes('v5') || ... ) return url;
 
         // Se a largura solicitada for pequena (mobile/card), tenta servir a versão _mobile.webp
         // Assumimos que o script 'optimize-images.js' já gerou essas variantes para todas as imagens de /images/

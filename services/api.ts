@@ -32,26 +32,25 @@ export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
         // BUSCA HÍBRIDA: Supabase + LocalStorage (Cache) + Estático
         try {
-            // 1. Tenta Supabase
-            const supabase = await getSupabase();
-            const { data: dbNews } = await supabase
-                .from('news')
-                .select('*')
-                .order('publish_date', { ascending: false });
+            // 1. Supabase (TEMPORARIAMENTE DESATIVADO - CONTÉM DADOS CORROMPIDOS/ALUCINAÇÕES DA IA)
+            // const supabase = await getSupabase();
+            // const { data: dbNews } = await supabase
+            //     .from('news')
+            //     .select('*')
+            //     .order('publish_date', { ascending: false });
+            const dbNews: NewsArticle[] = [];
 
-            // 2. Busca Cache Local (Fallback para erro de RLS)
+            // 2. Cache Local (TEMPORARIAMENTE DESATIVADO - EVITAR DADOS STALE)
             let cachedNews: NewsArticle[] = [];
-            try {
-                const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
-                if (stored) cachedNews = JSON.parse(stored);
-            } catch (e) { console.warn("Erro ao ler cache local de news"); }
+            // try {
+            //     const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
+            //     if (stored) cachedNews = JSON.parse(stored);
+            // } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
-            // 3. Busca Dados Estáticos
+            // 3. Busca Dados Estáticos (FONTE DA VERDADE)
             const { newsArticles: staticNews } = await import('../data');
 
-            // 3. Merge Inteligente: Prioridade Código Local (Static) > Cache > DB
-            // Invertemos a ordem anterior para garantir que o que editamos no VS Code (staticNews)
-            // sempre sobrescreva dados antigos que possam vir do banco ou cache.
+            // 3. Merge Inteligente: Agora apenas Static ganha.
             const allNews = [...(dbNews || []), ...cachedNews, ...staticNews];
 
             // Remove duplicatas por Título (O último array - staticNews - ganha em caso de conflito)

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Event } from '../types';
 import { getOptimizedImageUrl } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
+import { formatDateBR } from '../services/dateUtils';
 
 interface EventCardProps {
     event: Event;
@@ -34,7 +35,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 <div className="absolute top-4 right-4 z-20">
                     <span className="bg-white/90 dark:bg-black/80 backdrop-blur-sm text-xs font-bold text-gray-800 dark:text-white px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
                         <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                        {event.date}
+                        {formatDateBR(event.date)}
                     </span>
                 </div>
             </div>
