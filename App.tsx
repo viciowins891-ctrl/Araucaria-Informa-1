@@ -83,7 +83,7 @@ const Layout: React.FC = () => {
                         <Route path="/newsletter" element={<NewsletterPage />} />
 
                         {/* Rotas Legais */}
-                        <Route path="/telefones-uteis" element={<ServicesPage />} />
+                        <Route path="/servicos" element={<ServicesPage />} />
                         <Route path="/privacidade" element={<PrivacyPolicyPage />} />
                         <Route path="/termos" element={<TermsPage />} />
                         <Route path="/contato" element={<ContactPage />} />

@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                         <NavItem to="/eventos">Eventos</NavItem>
                         <NavItem to="/vagas">Vagas</NavItem>
                         <NavItem to="/comercio">Comércio</NavItem>
-                        <NavItem to="/telefones-uteis">Telefones Úteis</NavItem>
+                        <NavItem to="/servicos">Serviços</NavItem>
                         <NavItem to="/historia">História</NavItem>
                     </div>
 
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                         <NavItem to="/vagas">Vagas</NavItem>
                         <NavItem to="/comercio">Comércio</NavItem>
                         <NavItem to="/historia" onClick={() => setIsMobileMenuOpen(false)}>História</NavItem>
-                        <NavItem to="/telefones-uteis" onClick={() => setIsMobileMenuOpen(false)}>Telefones Úteis</NavItem>
+                        <NavItem to="/servicos" onClick={() => setIsMobileMenuOpen(false)}>Serviços</NavItem>
 
                         <hr className="border-white/10 my-2" />
                         <Link
