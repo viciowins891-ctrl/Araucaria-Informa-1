@@ -5,10 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VQB2HZ7LV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5VQB2HZ7LV');
+    </script>
+
     <!-- CSP: Security & Connection Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.vercel-insights.com; 
-                   connect-src 'self' https://hegadwldpjjzucdqcymi.supabase.co https://*.supabase.co https://generativelanguage.googleapis.com https://pagead2.googlesyndication.com https://*.vercel-insights.com https://images.unsplash.com; 
-                   img-src 'self' data: https: https://images.unsplash.com; 
+                   connect-src 'self' https://hegadwldpjjzucdqcymi.supabase.co https://*.supabase.co https://generativelanguage.googleapis.com https://pagead2.googlesyndication.com https://*.vercel-insights.com https://images.unsplash.com https://www.google-analytics.com https://analytics.google.com; 
+                   img-src 'self' data: https: https://images.unsplash.com https://www.google-analytics.com; 
                    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://*.vercel-insights.com; 
                    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
                    font-src 'self' https://fonts.gstatic.com;
