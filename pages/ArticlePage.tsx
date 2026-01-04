@@ -28,8 +28,23 @@ const ArticlePage: React.FC = () => {
 
     // UI States
     const [readingProgress, setReadingProgress] = useState(0);
-    const [showShareToast, setShowShareToast] = useState(false);
     const [secondaryImage, setSecondaryImage] = useState<string>('');
+
+    // Save/Bookmark States
+    const [isSaved, setIsSaved] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
+
+    // Check if article is saved on load
+    useEffect(() => {
+        if (article) {
+            const saved = localStorage.getItem('araucaria_saved_articles');
+            if (saved) {
+                const ids = JSON.parse(saved);
+                setIsSaved(ids.includes(article.id));
+            }
+        }
+    }, [article]);
 
     useEffect(() => {
         const fetchArticleAndRelated = async () => {
@@ -167,12 +182,12 @@ const ArticlePage: React.FC = () => {
                 ></div>
             </div>
 
-            {/* Share Toast */}
-            {showShareToast && (
+            {/* Generic Toast Notification */}
+            {showToast && (
                 <div className="fixed bottom-8 right-8 z-50 animate-fade-in-up">
                     <div className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3">
                         <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                        <span>Link copiado para a área de transferência!</span>
+                        <span>{toastMessage}</span>
                     </div>
                 </div>
             )}
@@ -270,10 +285,34 @@ const ArticlePage: React.FC = () => {
                                 <TextToSpeech text={stripHtml(article.content || article.summary || '')} />
                                 <ShareButton title={plainTitle} />
                                 <button
-                                    className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"
-                                    title="Salvar (Favorito)"
+                                    onClick={() => {
+                                        const saved = localStorage.getItem('araucaria_saved_articles');
+                                        let savedIds: number[] = saved ? JSON.parse(saved) : [];
+
+                                        if (isSaved) {
+                                            savedIds = savedIds.filter(id => id !== article.id);
+                                            setIsSaved(false);
+                                            // Optional: Show removed toast
+                                        } else {
+                                            savedIds.push(article.id);
+                                            setIsSaved(true);
+                                            setToastMessage("Notícia salva nos favoritos!");
+                                            setShowToast(true);
+                                            setTimeout(() => setShowToast(false), 3000);
+                                        }
+                                        localStorage.setItem('araucaria_saved_articles', JSON.stringify(savedIds));
+                                    }}
+                                    className={`p-2.5 rounded-full transition-all active:scale-95 ${isSaved
+                                        ? 'bg-red-50 text-red-500 dark:bg-red-900/20 dark:text-red-400'
+                                        : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10'
+                                        }`}
+                                    title={isSaved ? "Remover dos favoritos" : "Salvar (Favorito)"}
                                 >
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    {isSaved ? (
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    ) : (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    )}
                                 </button>
                             </div>
                         </div>

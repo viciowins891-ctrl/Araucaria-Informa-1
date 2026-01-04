@@ -74,14 +74,15 @@ export default defineConfig(({ mode }) => {
             {
               urlPattern: ({ request }) => request.destination === 'image',
               // MUDANÇA CRÍTICA: NetworkFirst para garantir que imagens novas (mesmo nome) sejam baixadas
+              // Isso resolve o problema de edição de imagens (logo cortado) voltando ao estado antigo
               handler: 'NetworkFirst',
               options: {
                 cacheName: 'images-cache',
                 expiration: {
                   maxEntries: 50,
-                  maxAgeSeconds: 60 * 60 * 24 * 1 // Reduzido para 1 dia
+                  maxAgeSeconds: 60 * 60 * 24 * 1 // Reduzido para 1 dia (Força revalidação diária)
                 },
-                networkTimeoutSeconds: 3 // Se demorar 3s, usa cache
+                networkTimeoutSeconds: 2 // Se a rede demorar 2s, usa o cache (fallback rápido)
               }
             }
           ]

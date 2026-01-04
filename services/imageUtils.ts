@@ -1,3 +1,5 @@
+// Versão global de cache para imagens. Atualize isso para forçar o recarregamento de todas as imagens locais.
+const CACHE_VERSION = 'v20250104_1100';
 
 export const getOptimizedImageUrl = (url: string, width: number = 800, quality: number = 80): string => {
     if (!url) return '';
@@ -18,27 +20,32 @@ export const getOptimizedImageUrl = (url: string, width: number = 800, quality: 
 
     // Otimização para imagens locais (conversão para WebP mobile)
     if (url.startsWith('/images/')) {
-        // EXCEÇÃO PADRÃO: Se for uma imagem manual recente (v5, v6, v7, v2x, v3x...), 
-        // IGNORA a busca por _mobile.webp pois ela provavelmente não existe ainda.
-        // Isso previne que uploads manuais quebrem no mobile.
-        // EXCEÇÃO REMOVIDA: Agora permitimos a otimização de arquivos versionados (v2, final, etc)
-        // pois confirmamos que os scripts geram variantes _mobile.webp para eles também.
-        // if (url.includes('v5') || ... ) return url;
+        let finalUrl = url;
 
-        // Se a largura solicitada for pequena (mobile/card), tenta servir a versão _mobile.webp
-        // Assumimos que o script 'optimize-images.js' já gerou essas variantes para todas as imagens de /images/
+        // 1. Tenta servir a versão mobile se for pequena
         if (width <= 640 && !url.includes('_mobile')) {
             const cleanUrl = url.split('?')[0].split('#')[0];
             const lastDotIndex = cleanUrl.lastIndexOf('.');
 
             if (lastDotIndex !== -1) {
                 const basePath = cleanUrl.substring(0, lastDotIndex);
-                const queryParams = url.includes('?') ? '?' + url.split('?')[1] : '';
-                // Retorna a versão mobile (que é garantidamente .webp e < 50kb na maioria dos casos)
-                return `${basePath}_mobile.webp${queryParams}`;
+                const queryParams = url.includes('?') ? '&' + url.split('?')[1] : ''; // Atenção: aqui viraria '&' pois vamos adicionar '?' na mobile
+                // Mas a mobile é um arquivo novo, então usamos query params originais como secundários OU descartamos.
+                // Simplificação robusta:
+                const existingParams = url.split('?')[1];
+                finalUrl = `${basePath}_mobile.webp`;
+                if (existingParams) finalUrl += `?${existingParams}`;
             }
         }
-        return url;
+
+        // 2. APLICAÇÃO GLOBAL DE CACHE BUSTING (PADRONIZAÇÃO)
+        // Se a URL ainda não tem um parâmetro de versão ('v='), adicionamos a versão global.
+        if (!finalUrl.includes('v=')) {
+            const separator = finalUrl.includes('?') ? '&' : '?';
+            finalUrl = `${finalUrl}${separator}v=${CACHE_VERSION}`;
+        }
+
+        return finalUrl;
     }
 
     return url;

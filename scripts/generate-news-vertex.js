@@ -50,20 +50,21 @@ const supabase = createClient(supabaseUrl, supabaseKey, {
 });
 
 // Banco de Imagens para Fallback/Contexto
+// Banco de Imagens para Fallback/Contexto (Imagens Locais Seguras - SEM LOGO)
 const IMAGE_DB = {
-    'Política': 'https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&q=80&w=1000',
-    'Economia': 'https://images.unsplash.com/photo-1611974765270-ca1258822981?auto=format&fit=crop&q=80&w=1000',
-    'Segurança': 'https://images.unsplash.com/photo-1555627034-7033509618f0?auto=format&fit=crop&q=80&w=1000',
-    'Trânsito': 'https://images.unsplash.com/photo-1569629743817-70d8db6c323b?auto=format&fit=crop&q=80&w=1000',
-    'Meio ambiente': 'https://images.unsplash.com/photo-1542601906990-24d4c16419d0?auto=format&fit=crop&q=80&w=1000',
-    'Clima': 'https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80&w=1000',
-    'Tecnologia': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000',
-    'Educação': 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000',
-    'Saúde': 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=1000',
-    'Esporte': 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&q=80&w=1000',
-    'Cultura': 'https://images.unsplash.com/photo-1514525253440-b393452e3383?auto=format&fit=crop&q=80&w=1000',
-    'Cidade': 'https://images.unsplash.com/photo-1449824913929-2b3a3e36e65b?auto=format&fit=crop&q=80&w=1000',
-    'Geral': 'https://images.unsplash.com/photo-1449824913929-2b3a3e36e65b?auto=format&fit=crop&q=80&w=1000'
+    'Política': '/images/news_budget_chamber.png',
+    'Economia': '/images/placeholder_economia.png',
+    'Segurança': '/images/placeholder_seguranca.png',
+    'Trânsito': '/images/placeholder_infraestrutura.png', // Reuso inteligente
+    'Meio ambiente': '/images/news_river_cleanup.png',
+    'Clima': '/images/news_cyclone_damage.png',
+    'Tecnologia': '/images/news_hackathon_coding.png',
+    'Educação': '/images/placeholder_educacao.png',
+    'Saúde': '/images/news_context_health.png',
+    'Esporte': '/images/placeholder_esporte.png',
+    'Cultura': '/images/placeholder_turismo.png',
+    'Cidade': '/images/araucaria_smart_city.jpg',
+    'Geral': '/images/placeholder_default.png'
 };
 
 function getImageForCategory(category) {

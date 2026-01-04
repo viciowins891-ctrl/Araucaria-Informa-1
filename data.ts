@@ -634,11 +634,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 21,
         title: 'Hackathon Municipal reúne 500 jovens programadores',
-        summary: 'Maratona de programação buscou soluções digitais para problemas urbanos da cidade.',
+        summary: 'Maratona de 48h no Parque Tecnológico cria soluções reais e conecta talentos locais ao Polo Industrial.',
         content: `
-            <p>O primeiro Hackathon Municipal de Araucária foi um sucesso absoluto. O evento, realizado no último fim de semana no Parque Tecnológico, reuniu cerca de 500 estudantes e profissionais de tecnologia.</p>
-            <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
-            <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
+            <p>O ronco dos servidores se misturou ao cheiro de café e pizza durante as 48 horas ininterruptas do 1º Hackathon Municipal de Araucária. O evento, sediado no Parque Tecnológico, transformou o local em um verdadeiro Vale do Silício paranaense, reunindo 500 mentes brilhantes de escolas como <strong>IFPR</strong>, <strong>Unifacear</strong> e colégios estaduais do <strong>Centro</strong> e <strong>Fazenda Velha</strong>.</p>
+            
+            <p>O desafio era criar soluções tecnológicas para dores reais da cidade. A equipe vencedora, formada por jovens do bairro <strong>Costeira</strong>, desenvolveu o "Recicla+", um app que gamifica a coleta seletiva e troca pontos por descontos no comércio local. "A gente queria algo que ajudasse nossa vizinhança a manter as ruas limpas", explicou Lucas, 17 anos, líder do time campeão.</p>
+
+            <h3>Vitrine de Talentos</h3>
+            <p>Além do prêmio em dinheiro, o evento serviu como uma poderosa vitrine profissional. Grandes empresas do <strong>Polo Industrial</strong> (CIAR) marcaram presença como "olheiros", e pelo menos 50 participantes saíram de lá com propostas de estágio ou emprego. É Araucária deixando de ser apenas cidade operária para se tornar um polo de inteligência e inovação.</p>
         `,
         imageUrl: '/images/hackathon_real_final_v2.png',
         mobileImageUrl: '/images/hackathon_real_final_v2_mobile.webp',
@@ -732,13 +735,26 @@ export const newsArticles: NewsArticle[] = [
         title: 'Escolas municipais recebem lousas digitais',
         summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
         content: `
-            <p>A Secretaria de Educação iniciou a instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental. O equipamento permite aos professores utilizarem recursos de vídeo e internet durante as aulas, tornando o aprendizado mais dinâmico.</p>
-            <p>"É um salto de qualidade pedagógica que coloca nossa rede no século XXI", destacou a secretária.</p>
+            <p>A educação pública de Araucária está passando por uma revolução tecnológica silenciosa, mas visível aos olhos atentos dos alunos. A Secretaria Municipal de Educação (SMED) concluiu nesta semana a primeira fase da instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental da rede municipal.</p>
+
+            <p>O investimento, que ultrapassa a casa dos R$ 2 milhões, visa modernizar o processo de ensino-aprendizagem e preparar os estudantes para um mundo cada vez mais conectado. "Não é apenas uma tela grande; é uma janela para o mundo. O professor pode, em tempo real, sair de uma explicação teórica sobre geografia e 'viajar' com os alunos pelo Google Earth, ou mostrar a anatomia do corpo humano em 3D", explica a Secretária de Educação.</p>
+
+            <h3>Tecnologia em Sala de Aula</h3>
+            <p>Os novos equipamentos possuem tela touch screen de 75 polegadas, sistema de som integrado e conexão de alta velocidade com a internet. Diferente do quadro-negro tradicional, onde o conteúdo é apagado ao fim da aula, na lousa digital tudo pode ser salvo e enviado para o tablet ou celular dos alunos, facilitando a revisão em casa.</p>
+
+            <p>Para a professora Helena Bastos, da Escola Municipal Marcelino Champagnat, a mudança foi drástica. "No começo ficamos receosos com a tecnologia, mas o engajamento das crianças aumentou muito. Eles pararam de copiar passivamente e começaram a interagir com o conteúdo. A aula de história, que antes era só texto, agora tem documentários e mapas interativos", relata.</p>
+
+            <h3>Formação Continuada</h3>
+            <p>A entrega dos equipamentos veio acompanhada de um intenso cronograma de treinamento para os docentes. Durante o último mês, mais de 400 professores da rede passaram por oficinas de capacitação para aprender a extrair o máximo das novas ferramentas.</p>
+
+            <p>"A tecnologia pela tecnologia não resolve o problema da educação. O que faz a diferença é o professor mediando esse uso. Por isso, o foco não foi apenas na compra do hardware, mas na formação humana", reforça a equipe pedagógica da SMED.</p>
+
+            <p>A previsão é que até o final do ano letivo, 100% das turmas, incluindo a educação infantil, já contem com o recurso em pleno funcionamento.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/lousas_digitais_capa_final.png?v=final', // Cache buster adicionado para travar a imagem nova
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/lousas_digitais_internal.jpg',
+        internalImageUrl: '/images/lousas_digitais_real.png', // Mantendo a interna anterior (foto real)
         publishDate: '2025-08-01',
         author: 'EducaTech'
     },
@@ -747,23 +763,43 @@ export const newsArticles: NewsArticle[] = [
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
         content: `
-            <p>Uma grande empresa do setor logístico, instalada próximo à Rodovia do Xisto, anunciou a abertura de 50 novas vagas de emprego imediato. A expansão das atividades visa atender o aumento da demanda no final do ano.</p>
-            <p>Os interessados devem cadastrar currículo no site da empresa ou comparecer ao SINE Araucária.</p>
+            <p>A manhã desta sexta-feira foi movimentada no pátio logístico próximo à Rodovia do Xisto. Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
+
+            <p>A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre. As oportunidades são para diversos níveis de escolaridade, incluindo cargos de <strong>Conferente, Operador de Empilhadeira, Motorista Categoria D/E e Auxiliar Administrativo</strong>.</p>
+
+            <h3>Prioridade para Bairros Adjacentes</h3>
+            <p>Um dos diferenciais deste processo seletivo é a valorização da mão de obra local. O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente <strong>Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho</strong>.</p>
+            <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
+
+            <h3>Benefícios Regionalizados</h3>
+            <p>Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local:</p>
+            <ul>
+                <li>Vale-Alimentação/Refeição com valor acima da média;</li>
+                <li>Transporte Fretado (rota exclusiva pelos bairros citados);</li>
+                <li>Plano de Saúde e Odontológico extensivo a dependentes;</li>
+                <li><strong>Parcerias Regionais:</strong> Descontos em farmácias e supermercados de Araucária.</li>
+            </ul>
+
+            <p>Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador (SINE) de Araucária até a próxima quarta-feira.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/logistica_vagas_internal.jpg', // Capa mantida
         category: 'Economia',
         categoryColor: 'blue',
-        internalImageUrl: '/images/logistica_vagas_internal.jpg',
+        internalImageUrl: '/images/logistica_vagas_real.png', // Imagem interna atualizada (foto real)
         publishDate: '2025-07-25',
         author: 'Vagas & Oportunidades'
     },
     {
         id: 29,
         title: 'Araucária investe em iluminação LED nos bairros',
-        summary: 'Mais econômicas e eficientes, novas lâmpadas aumentam a segurança nas ruas.',
+        summary: 'Mais econômicas e eficientes, novas lâmpadas transformam a segurança e a visibilidade noturna no Capela Velha.',
         content: `
-            <p>O programa "Araucária Mais Iluminada" chegou ao bairro <strong>Capela Velha</strong>. Equipes da prefeitura estão substituindo as antigas lâmpadas de vapor de sódio por luminárias de LED, que iluminam mais e consomem menos energia.</p>
-            <p>A meta é atingir 100% da iluminação pública com LED até o final do próximo ano.</p>
+            <p>O programa "Araucária Mais Iluminada" avança a passos largos. Nesta semana, equipes da Prefeitura iniciaram a substituição massiva das antigas lâmpadas de vapor de sódio (amarelas) por modernas luminárias de LED no bairro <strong>Capela Velha</strong>. A mudança não é apenas estética; representa uma revolução na segurança e economia.</p>
+            
+            <p>Segundo a Secretaria de Urbanismo, a tecnologia LED oferece uma luminosidade até 50% superior, eliminando "pontos de sombra" nas calçadas. "Para quem chega do trabalho tarde da noite ou para os estudantes que voltam da faculdade, a sensação de segurança muda completamente. A rua fica clara como o dia", explica o engenheiro responsável.</p>
+
+            <h3>Impacto Regional</h3>
+            <p>Além do <strong>Capela Velha</strong>, o cronograma prevê a extensão das melhorias para o <strong>Jardim Jatobá</strong> e <strong>Jardim Plínio</strong> já no próximo mês. A modernização também gera uma economia de até 60% na conta de luz pública, recursos que poderão ser reinvestidos em outras áreas prioritárias como a pavimentação.</p>
         `,
         imageUrl: '/images/iluminacao_led_cover.png',
         category: 'Infraestrutura',
@@ -775,10 +811,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 30,
         title: 'Biblioteca Municipal promove feira de troca de livros',
-        summary: 'Evento incentiva a leitura e a circulação de obras literárias na comunidade.',
+        summary: 'Evento "Troca Literária" incentiva a renovação de estantes e o debate cultural na comunidade.',
         content: `
-            <p>Neste sábado, a Biblioteca Pública de Araucária realiza mais uma edição da sua tradicional Feira de Troca de Livros. A regra é simples: traga um livro usado em bom estado e troque por outro de seu interesse.</p>
-            <p>O evento é gratuito e aberto a toda a comunidade, contando também com contação de histórias para as crianças.</p>
+            <p>Os amantes da literatura têm um encontro marcado neste sábado na Biblioteca Pública de Araucária. A tradicional "Feira de Troca de Livros" chega à sua 15ª edição com uma proposta renovada: fomentar o hábito da leitura física em tempos de telas digitais.</p>
+            
+            <p>A dinâmica é democrática: basta levar um livro de literatura em bom estado e trocar (um por um) por qualquer outro título disponível nas bancas. "É uma forma sustentável de renovar a biblioteca pessoal sem gastar nada. O livro que está parado na sua estante pode ser a grande descoberta de outra pessoa", convida a bibliotecária-chefe.</p>
+
+            <h3>Cultura que Movimenta o Centro</h3>
+            <p>O evento promete movimentar o entorno da biblioteca, atraindo leitores do <strong>Centro</strong>, <strong>Estação</strong> e até estudantes de escolas do <strong>Fazenda Velha</strong>. Além das trocas, haverá "Contação de Histórias" para as crianças e um espaço dedicado a autores locais, valorizando a produção literária araucariense.</p>
         `,
         imageUrl: '/images/feira_livros_cover.png',
         category: 'Cultura',
@@ -790,10 +830,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 31,
         title: 'Dia D de vacinação pet acontece neste domingo',
-        summary: 'Mutirão oferecerá vacina antirrábica gratuita para cães e gatos na Praça da Bíblia.',
+        summary: 'Mutirão na Praça da Bíblia espera imunizar mais de 2 mil cães e gatos contra a raiva.',
         content: `
-            <p>A Secretaria de Meio Ambiente convoca os tutores de cães e gatos para o Dia D de Vacinação Antirrábica. A imunização é gratuita e obrigatória para o controle da raiva.</p>
-            <p>Equipes estarão concentradas na Praça da Bíblia das 9h às 17h. É importante levar os animais em caixas de transporte ou com guias e coleiras.</p>
+            <p>A proteção dos nossos melhores amigos é prioridade neste fim de semana. A Secretaria de Meio Ambiente e o Centro de Controle de Zoonoses realizam o "Dia D da Vacinação Antirrábica", um super mutirão para garantir que cães e gatos de Araucária fiquem protegidos contra a raiva, uma doença fatal e transmissível aos humanos.</p>
+            
+            <p>A estrutura será montada na Praça da Bíblia, e o atendimento vai das 9h às 17h, sem intervalo. Veterinários voluntários estarão a postos para aplicar as doses e tirar dúvidas dos tutores sobre saúde animal.</p>
+
+            <h3>Domingo Pet Friendly</h3>
+            <p>A expectativa é que famílias inteiras, vindas principalmente do <strong>Fazenda Velha</strong>, <strong>Cachoeira</strong> e <strong>Sabiá</strong>, aproveitem o domingo de sol para levar seus pets. "Vira um evento de socialização. Enquanto os bichinhos são vacinados, os vizinhos se encontram e trocam experiências", comenta o coordenador da ação. É obrigatório o uso de guias para cães e caixas de transporte para gatos.</p>
         `,
         imageUrl: '/images/vacinacao_pet_cover.png',
         category: 'Cidade',
@@ -805,10 +849,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 32,
         title: 'Feira do Produtor ganha nova cobertura',
-        summary: 'Reforma garante mais conforto para feirantes e clientes em dias de chuva.',
+        summary: 'Investimento garante dignidade aos agricultores e conforto para clientes em dias de chuva.',
         content: `
-            <p>A tradicional Feira do Produtor, realizada às quartas e sábados, agora conta com uma cobertura metálica totalmente nova. A obra era uma reivindicação antiga dos agricultores, que sofriam com a exposição ao sol forte e chuvas.</p>
-            <p>"Agora temos dignidade para trabalhar e nossos clientes podem comprar com calma", comemorou o presidente da associação dos feirantes.</p>
+            <p>Adeus às lonas improvisadas e ao "abre e fecha" de guarda-sóis. A tradicional Feira do Produtor de Araucária, realizada às quartas e sábados, inaugurou sua nova estrutura de cobertura metálica fixa. A obra, reivindicação de décadas dos agricultores familiares, transforma o espaço em um verdadeiro mercado gastronômico a céu aberto.</p>
+            
+            <p>"Antes, se chovia, a gente perdia a mercadoria e o cliente sumia. Agora, temos dignidade para trabalhar faça chuva ou faça sol", comemorou Seu João, produtor de hortaliças que vem do <strong>Guajuvira</strong> há mais de 20 anos.</p>
+
+            <h3>Do Campo para a Cidade</h3>
+            <p>A melhoria beneficia diretamente produtores de áreas rurais como <strong>Roça Nova</strong>, <strong>Campestre</strong> e <strong>Tietê</strong>, fortalecendo a economia local. Para o consumidor do <strong>Centro</strong> e bairros vizinhos, a nova estrutura convida a permanecer mais tempo na feira, saboreando o tradicional pastel com caldo de cana e comprando produtos frescos direto da fonte.</p>
         `,
         imageUrl: '/images/feira_produtor_roof_cover.png',
         category: 'Economia',
@@ -820,10 +868,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 33,
         title: 'Coral Municipal abre audições para novas vozes',
-        summary: 'Interessados podem se inscrever até o fim do mês; não é preciso experiência profissional.',
+        summary: 'Casa da Cultura busca talentos de todos os bairros para integrar o coro oficial da cidade.',
         content: `
-            <p>Se você gosta de cantar, essa é a sua chance. O Coral Municipal de Araucária abriu vagas para os naipes de soprano, contralto, tenor e baixo. As audições acontecerão na Casa da Cultura.</p>
-            <p>O grupo se apresenta em eventos oficiais e festivais de música. Os ensaios são semanais e gratuitos.</p>
+            <p>Se você canta no chuveiro ou na igreja do bairro, chegou a sua hora de brilhar nos palcos. O Coral Municipal de Araucária está com inscrições abertas para novos integrantes. A iniciativa busca democratizar o acesso à música erudita e popular, recrutando talentos brutos para lapidação profissional.</p>
+            
+            <p>"Não exigimos leitura de partitura, apenas afinação e vontade de aprender. Temos grandes vozes escondidas no <strong>Jardim Califórnia</strong>, no <strong>Boqueirão</strong>... queremos essa diversidade no nosso coro", afirma o maestro regente. Os ensaios acontecem semanalmente na Casa da Cultura, um espaço histórico recentemente revitalizado.</p>
+
+            <h3>Representatividade</h3>
+            <p>O grupo, que representa a cidade em festivais estaduais e nacionais, é um orgulho local. Participar do coral é também uma oportunidade de viajar e levar o nome de Araucária para outros palcos, fortalecendo a identidade cultural do município através da arte.</p>
         `,
         imageUrl: '/images/coral_municipal_cover.png',
         category: 'Cultura',
@@ -834,11 +886,15 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 34,
-        title: '<strong>Parque Cachoeira</strong> recebe mutirão de limpeza',
-        summary: 'Voluntários se reúnem para preservar um dos principais cartões postais da cidade.',
+        title: 'Parque Cachoeira recebe mutirão de limpeza',
+        summary: 'Ação "Eu Amo, Eu Cuido" mobiliza voluntários e escoteiros pela preservação do parque.',
         content: `
-            <p>Um grupo de 50 voluntários dedicou a manhã de domingo para cuidar do <strong>Parque Cachoeira</strong>. A ação envolveu o recolhimento de lixo nas trilhas e o plantio de 200 mudas de árvores nativas.</p>
-            <p>A iniciativa visa conscientizar os visitantes sobre a importância de não deixar resíduos na natureza.</p>
+            <p>Um exército verde tomou conta do <strong>Parque Cachoeira</strong> neste domingo. Mais de 100 voluntários, incluindo grupos de escoteiros do <strong>Vila Nova</strong> e <strong>Iguaçu</strong>, participaram do mutirão "Eu Amo, Eu Cuido". A ação foi muito além da coleta de lixo: foi uma aula prática de cidadania e pertencimento.</p>
+            
+            <p>Foram recolhidos cerca de 200kg de resíduos deixados por visitantes, mas o foco principal foi o plantio de 200 mudas de árvores nativas nas margens do lago, recompondo a mata ciliar. "O parque é o quintal da nossa casa. Se a gente não cuidar, quem vai?", questionou Ana, estudante de 16 anos que participou pela primeira vez.</p>
+
+            <h3>Turismo Sustentável</h3>
+            <p>A conservação do Parque Cachoeira é vital para o turismo local. O espaço recebe milhares de visitantes da região metropolitana aos fins de semana, movimentando o comércio de lanches e sorvetes no entorno. Manter o parque limpo é manter a economia do turismo girando.</p>
         `,
         imageUrl: '/images/parque_cachoeira_cleanup_cover.png',
         category: 'Cidade',
@@ -850,10 +906,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 35,
         title: 'Araucária sedia encontro de carros antigos',
-        summary: 'Relíquias automotivas invadem o <strong>Centro</strong> Cívico e atraem multidão.',
+        summary: 'Relíquias sobre rodas transformam o Centro Cívico em um museu a céu aberto.',
         content: `
-            <p>O ronco dos motores clássicos tomou conta do <strong>Centro</strong> Cívico neste fim de semana. O 5º Encontro de Carros Antigos de Araucária reuniu colecionadores de todo o Brasil, com exposição de modelos raros das décadas de 20 a 80.</p>
-            <p>O evento também contou com mercado de pulgas (peças antigas) e praça de alimentação com food trucks.</p>
+            <p>Uma verdadeira viagem no tempo estacionou no <strong>Centro Cívico</strong> neste fim de semana. O 5º Encontro de Carros Antigos de Araucária superou todas as expectativas, reunindo mais de 300 veículos clássicos, desde Fordinhos 1929 até Opalas e Mavericks que marcaram época nas décadas de 70 e 80.</p>
+            
+            <p>O evento atraiu colecionadores de Santa Catarina e São Paulo, lotando os hotéis da cidade. "O antigomobilismo é uma paixão que move a economia. O colecionador vem com a família, se hospeda, almoça na churrascaria... é dinheiro novo entrando na cidade", analisa o secretário de Turismo.</p>
+
+            <h3>Paixão Local</h3>
+            <p>Clubes locais, como o organizado por moradores do <strong>Porto das Laranjeiras</strong>, tiveram destaque especial, exibindo restaurações impecáveis feitas nas garagens de Araucária. O evento contou ainda com um "mercado de pulgas" para venda de peças raras, atraindo mecânicos e restauradores de toda a região.</p>
         `,
         imageUrl: '/images/carros_antigos_cover.png',
         category: 'Cultura',
@@ -865,10 +925,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 36,
         title: 'Prefeitura alerta para o prazo do IPTU',
-        summary: 'Contribuintes têm até o dia 10 para pagar a cota única com desconto.',
+        summary: 'Investimento revertido: entenda como o imposto se transforma em obras nos bairros.',
         content: `
-            <p>A Secretaria de Finanças reforça que o prazo para pagamento do IPTU com desconto de 15% na cota única encerra-se no próximo dia 10. Os carnês já foram entregues, mas a segunda via pode ser emitida pelo site oficial.</p>
-            <p>A arrecadação do imposto é fundamental para os investimentos em saúde, educação e asfalto.</p>
+            <p>A Secretaria de Finanças emitiu um alerta importante: o prazo para pagamento da cota única do IPTU, com desconto de 15%, encerra-se no próximo dia 10. Embora o tema tributário seja árido, é fundamental entender o destino desses recursos.</p>
+            
+            <p>"O IPTU não é apenas uma cobrança, é o combustível das melhorias. O asfalto novo que chegou no <strong>Jardim Costeira</strong> e a reforma da creche no <strong>Tupy</strong> foram pagos diretamente com esse dinheiro", explica a secretária da pasta.</p>
+
+            <h3>Facilidade Digital</h3>
+            <p>Para evitar filas na Prefeitura, o contribuinte pode emitir a guia diretamente pelo aplicativo "Araucária Digital" ou pelo site oficial. A inadimplência reduz a capacidade de investimento da cidade, por isso, manter o imposto em dia é um ato de cidadania que volta em forma de qualidade de vida para o seu próprio bairro.</p>
         `,
         imageUrl: '/images/iptu_real_final_v2.png',
         category: 'Cidade',
@@ -880,10 +944,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 37,
         title: 'Novos horários de ônibus começam a valer segunda-feira',
-        summary: 'CMTC anuncia ajustes nas linhas Tupy e <strong>Costeira</strong> para atender demanda.',
+        summary: 'CMTC amplia frota nas linhas Tupy e Costeira para reduzir lotação nos horários de pico.',
         content: `
-            <p>A Companhia Municipal de Transporte Coletivo (CMTC) informou que, a partir desta segunda-feira, haverá alteração na grade de horários das linhas Tupy e <strong>Costeira</strong>. O objetivo é aumentar a frequência nos horários de pico da manhã e tarde.</p>
-            <p>Os novos horários já estão disponíveis no aplicativo do transporte e nos terminais.</p>
+            <p>A partir desta segunda-feira, quem utiliza o transporte coletivo para trabalhar ou estudar sentirá a diferença. A CMTC anunciou um reforço estratégico na frota das linhas <strong>Tupy/Pinheiros</strong> e <strong>Costeira/D.E.R</strong>, historicamente as mais carregadas nos horários de pico.</p>
+            
+            <p>A medida adiciona quatro novos veículos articulados no "entre-picos" (das 17h às 19h), visando reduzir a lotação e oferecer mais dignidade ao trabalhador que retorna para casa. "A gente viajava espremido na porta. Agora, com ônibus a cada 10 minutos, a expectativa é conseguir ir sentado", comenta Maria de Lurdes, moradora do <strong>Jardim Tupy</strong> e usuária diária.</p>
+
+            <h3>Integração Inteligente</h3>
+            <p>Outra novidade é a sincronização com os tubos da linha metropolitana em direção a Curitiba. O objetivo é diminuir o tempo de espera na conexão do Terminal Central, beneficiando centenas de estudantes universitários que se deslocam para a capital à noite.</p>
         `,
         imageUrl: '/images/bus_schedule_main.png',
         category: 'Cidade',
@@ -895,10 +963,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 38,
         title: 'Semana do Meio Ambiente terá oficinas e palestras',
-        summary: 'Programação inclui distribuição de mudas e gincana ecológica nas escolas.',
+        summary: 'Ações no Parque Tecnológico ensinam compostagem e cultivo em pequenos espaços.',
         content: `
-            <p>Para celebrar a Semana Mundial do Meio Ambiente, a prefeitura organizou uma série de atividades educativas. O destaque fica para as oficinas de compostagem doméstica e reciclagem criativa, abertas ao público no Parque Tecnológico.</p>
-            <p>"Pequenas atitudes mudam o mundo. Queremos engajar a população na preservação local", disse o diretor de meio ambiente.</p>
+            <p>Transformar a sacada do apartamento em uma mini-horta produtiva. Esse é um dos desafios propostos nas oficinas da Semana do Meio Ambiente de Araucária, que acontece no Parque Tecnológico. O evento busca traduzir a sustentabilidade para a prática diária do cidadão comum.</p>
+            
+            <p>Além das oficinas de compostagem doméstica (transformar lixo orgânico em adubo), haverá distribuição gratuita de 500 mudas de árvores nativas, incluindo a Araucária angustifolia, símbolo da nossa terra. "Plantar uma árvore é deixar um legado para os netos que nem nasceram", filosofa Seu Antônio, aposentado do <strong>Thomaz Coelho</strong> que garantiu sua muda de ipê-amarelo.</p>
         `,
         imageUrl: '/images/environment_week_collage.webp',
         category: 'Cidade',
@@ -910,12 +979,14 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 39,
         title: 'Araucária Vôlei vence mais uma na Superliga B',
-        summary: 'Time da casa mantém invencibilidade e lidera a competição nacional.',
+        summary: 'Ginásio do Parque Cachoeira vira caldeirão e empurra time da casa para a liderança.',
         content: `
-            <p>Em uma noite eletrizante no Ginásio Joval de Paula Souza, no <strong><strong>Parque Cachoeira</strong></strong>, o Araucária Vôlei venceu mais uma partida pela Superliga B. A equipe da casa superou o adversário por 3 sets a 1, empurrada por uma torcida apaixonada.</p>
-            <p>Caravanas de bairros como <strong><strong>Tindiquera</strong></strong>, <strong>Califórnia</strong> e <strong><strong>Industrial</strong></strong> lotaram as arquibancadas, criando um caldeirão. "Jogar aqui em Araucária é diferente, a energia da torcida nos carrega", declarou o capitão do time.</p>
-            <h2>Orgulho da Cidade</h2>
-            <p>A vitória mantém o time na liderança isolada e reforça o projeto esportivo da cidade. Escolinhas de vôlei no <strong>CSU</strong> e <strong>Tayrá</strong> já sentem o aumento na procura de crianças inspiradas pelos ídolos locais. O próximo desafio será fora de casa, mas a torcida promete acompanhar.</p>
+            <p>Não foi apenas um jogo, foi uma catarse coletiva. Em uma noite eletrizante no Ginásio Joval de Paula Souza, o Araucária Vôlei atropelou o adversário por 3 sets a 1, mantendo a invencibilidade na Superliga B. O destaque, no entanto, veio das arquibancadas.</p>
+            
+            <p>Caravanas organizadas de bairros como <strong>Tindiquera</strong>, <strong>Califórnia</strong> e <strong>Jardim Industrial</strong> transformaram o ginásio em um caldeirão ensurdecedor. "A torcida joga junto. Quando o adversário vai sacar e ouve esse barulho, a perna treme", admitiu o capitão do time, eleito o melhor da partida.</p>
+
+            <h3>Orgulho da Cidade</h3>
+            <p>O sucesso do time profissional contagia a base. As escolinhas de vôlei do município, nos núcleos do <strong>CSU</strong> e <strong>Tayrá</strong>, registraram aumento de 40% nas matrículas. O esporte se consolida como ferramenta de inclusão e orgulho para o araucariense.</p>
         `,
         imageUrl: '/images/araucaria_volei_new_final.jpg',
         category: 'Esporte',
@@ -927,10 +998,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 40,
         title: 'Curso de culinária saudável forma primeira turma',
-        summary: 'Projeto social capacita moradores para a geração de renda com alimentação.',
+        summary: 'Projeto "Cozinha e Saúde" capacita mulheres do Capela Velha para o empreendedorismo.',
         content: `
-            <p>Aconteceu ontem a formatura da primeira turma do projeto "Cozinha e Saúde". Vinte participantes receberam o certificado de conclusão do curso de culinária saudável e reaproveitamento de alimentos.</p>
-            <p>Além de promover a saúde, o curso incentiva o empreendedorismo, ensinando a precificar e vender marmitas fit.</p>
+            <p>Cheiro de bolo, tempero fresco e, principalmente, de oportunidade. Ontem foi noite de formatura para as 20 alunas do projeto "Cozinha e Saúde", focado em moradoras do bairro <strong>Capela Velha</strong> em busca de recolocação profissional.</p>
+            
+            <p>Mais do que receitas fit ou técnicas de corte, o curso ensinou precificação, marketing digital e higiene sanitária. "Eu fazia marmita, mas não sabia cobrar. Agora tenho meu negócio organizado e vendo pelo Instagram", conta orgulhosa a formanda Solange. O projeto une saúde pública e geração de renda na ponta.</p>
         `,
         imageUrl: '/images/healthy_cooking_cover_real_final.webp',
         category: 'Cidade',
@@ -942,10 +1014,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 41,
         title: 'Inscrições abertas para o concurso de fotografia',
-        summary: 'Tema deste ano é "Olhares sobre Araucária"; prêmios chegam a R$ 2 mil.',
+        summary: 'Tema "Olhares sobre Araucária" convida fotógrafos a redescobrir a beleza do cotidiano.',
         content: `
-            <p>Fotógrafos amadores e profissionais já podem inscrever seus trabalhos no 10º Concurso Municipal de Fotografia. O tema "Olhares sobre Araucária" convida a registrar as belezas urbanas e rurais da cidade.</p>
-            <p>As melhores fotos farão parte de uma exposição itinerante e do calendário oficial do município.</p>
+            <p>Qual é o ângulo mais bonito da nossa cidade? O nascer do sol na Represa do Passaúna? A arquitetura polonesa do <strong>Guajuvira</strong>? O movimento frenético da Avenida Victor do Amaral? O 10º Concurso Municipal de Fotografia quer responder a essa pergunta através das lentes dos moradores.</p>
+            
+            <p>Com prêmios que chegam a R$ 2 mil, o concurso é dividido em categorias amador e profissional. As 30 melhores imagens farão parte de uma exposição itinerante que percorrerá escolas e terminais de ônibus, levando arte para o dia a dia da população.</p>
         `,
         imageUrl: '/images/photography_contest_cover_real_final.webp',
         category: 'Cultura',
@@ -957,10 +1030,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 42,
         title: 'UBS do Califórnia terá horário estendido',
-        summary: 'Unidade passa a atender até as 22h para facilitar acesso de trabalhadores.',
+        summary: 'Atendimento noturno até as 22h beneficia trabalhadores que não podem faltar ao serviço.',
         content: `
-            <p>A partir do próximo mês, a Unidade Básica de Saúde (UBS) do bairro Califórnia funcionará em horário estendido, das 7h às 22h. A medida visa atender a população que trabalha durante o dia e não consegue buscar atendimento no horário comercial.</p>
-            <p>Serão ofertadas consultas médicas, odontológicas e vacinação no período noturno.</p>
+            <p>Uma reivindicação antiga dos moradores do <strong>Jardim Califórnia</strong> finalmente foi atendida. A partir do dia 1º, a Unidade Básica de Saúde (UBS) local passará a funcionar no modelo "Saúde na Hora", estendendo o atendimento até as 22h.</p>
+            
+            <p>A medida é vital para quem trabalha em horário comercial na zona industrial e não consegue ir ao médico sem perder dia de serviço. Serão ofertadas consultas médicas, odontológicas, coleta de exames e sala de vacinação no período noturno, garantindo acesso pleno à saúde para a classe trabalhadora da região.</p>
         `,
         imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
         category: 'Saúde',
@@ -971,11 +1045,12 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 43,
-        title: 'FestaJunina das escolas municipais reúne famílias',
-        summary: 'Quadrilhas, comidas típicas e brincadeiras animam o sábado letivo.',
+        title: 'Festa Junina das escolas municipais reúne famílias',
+        summary: 'Arraiás levam cor, dança e tradição para os bairros, integrando escola e comunidade.',
         content: `
-            <p>O sábado foi de festa nas escolas municipais. O tradicional "Arraiá da Educação" integrou família e escola com muita música, dança e pescaria.</p>
-            <p>A renda arrecadada nas barracas de alimentação será revertida para melhorias nas próprias instituições, decididas pelas APMFs.</p>
+            <p>Não faltou quentão (sem álcool!), pipoca e muito xadrez nas escolas municipais neste sábado. O tradicional "Arraiá da Educação" mobilizou todas as unidades da rede em uma grande celebração da cultura caipira.</p>
+            
+            <p>No <strong>CAIC</strong>, a festa reuniu mais de 3 mil pessoas. A renda das barracas, comandadas por pais voluntários, tem destino certo: será reinvestida na compra de equipamentos de som e jogos pedagógicos para os alunos. "A escola viva é isso: portão aberto e comunidade dentro", celebrou a diretora.</p>
         `,
         imageUrl: '/images/festa_junina_real_cover.webp',
         category: 'Educação',
@@ -987,10 +1062,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 44,
         title: 'Câmara homenageia pioneiros da cidade',
-        summary: 'Sessão solene entregou título de Cidadão Benemérito a personalidades locais.',
+        summary: 'Sessão solene reconhece a história de quem construiu Araucária com suor e trabalho.',
         content: `
-            <p>Em uma noite de emoção, a Câmara Municipal realizou a entrega de títulos de Cidadão Benemérito a cinco personalidades que contribuíram para o desenvolvimento de Araucária. Entre os homenageados estavam professores aposentados e antigos comerciantes.</p>
-            <p>"Reconhecer nossa história é valorizar nosso futuro", discursou o presidente da casa.</p>
+            <p>A emoção tomou conta do plenário da Câmara Municipal na noite de ontem. Cinco personalidades históricas receberam o título de Cidadão Benemérito, a mais alta honraria do legislativo. Entre os homenageados, Dona Iracema, parteira que trouxe ao mundo centenas de araucarienses no <strong>Centro</strong> antigo, e Seu Mário, comerciante decano do <strong>Estação</strong>.</p>
+            
+            <p>"Uma cidade sem memória é uma cidade sem alma. Reconhecer o suor desses pioneiros é inspirar as novas gerações a continuarem construindo nosso futuro", discursou o presidente da Casa. A cerimônia contou com a presença de familiares e autoridades.</p>
         `,
         imageUrl: '/images/pioneers_homage_real_final_v2.png',
         category: 'Cidade',
@@ -1002,10 +1078,11 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 45,
         title: 'Jogos Escolares de Araucária começam nesta sexta',
-        summary: 'Mais de 2 mil alunos atletas competem em 10 modalidades esportivas.',
+        summary: 'Ginásio do CSU recebe a tocha olímpica e dá início à maior competição estudantil da cidade.',
         content: `
-            <p>A tocha olímpica simbólica percorreu as escolas da cidade anunciando a abertura dos Jogos Escolares de Araucária (JEA). A cerimônia de abertura acontece nesta sexta-feira no Ginásio do CSU.</p>
-            <p>Os jogos promovem a integração entre as escolas públicas e particulares, revelando novos talentos para o esporte municipal.</p>
+            <p>O espírito olímpico já está no ar. Mais de 2 mil alunos-atletas de escolas públicas e particulares se reúnem nesta sexta-feira no Ginásio do <strong>CSU</strong> para a abertura oficial dos Jogos Escolares de Araucária (JEA).</p>
+            
+            <p>Serão 10 dias de competições em modalidades como futsal, vôlei, basquete e atletismo. Além das medalhas, está em jogo a vaga para a fase regional. "O esporte ensina ganhar e perder, ensina respeito. É a sala de aula mais dinâmica que existe", afirma o Secretário de Esportes. A entrada para assistir aos jogos é gratuita em todos os ginásios.</p>
         `,
         imageUrl: '/images/jea_real_final_v2.webp',
         category: 'Esporte',

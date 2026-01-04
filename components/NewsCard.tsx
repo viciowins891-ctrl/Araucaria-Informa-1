@@ -157,4 +157,4 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     );
 };
 
-export default NewsCard;
+export default React.memo(NewsCard);
