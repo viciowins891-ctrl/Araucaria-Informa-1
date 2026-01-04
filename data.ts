@@ -177,8 +177,8 @@ export const newsArticles: NewsArticle[] = [
             <h2>Alívio no Califórnia e Tupy</h2>
             <p>A medida traz impacto imediato para pais que residem em áreas de alta demanda, como <strong>Califórnia</strong> e <strong>Tupy</strong>. Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento. O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
         `,
-        imageUrl: '/images/cmei_zerando_fila_cover_v2.png', // Versão Otimizada (WebP) para LCP rápido v2
-        mobileImageUrl: '/images/custom_cmei_official_mobile.webp',
+        imageUrl: '/images/cmei_zerando_fila_cover_v4.png', // Imagem real enviada pelo usuário (v4)
+        mobileImageUrl: '/images/cmei_zerando_fila_cover_v4.png',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/cmei_interior_pessoas.png',
@@ -363,7 +363,7 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/food_trucks_internal_v26.png',
         category: 'Lazer',
         categoryColor: 'yellow',
-        publishDate: '2026-01-03', // Mantendo hoje para destaque
+        publishDate: '2026-01-04', // Mantendo hoje para destaque
         author: 'Guia Curitiba'
     },
     {
@@ -1008,7 +1008,8 @@ export const newsArticles: NewsArticle[] = [
             
             <p>Mais do que receitas fit ou técnicas de corte, o curso ensinou precificação, marketing digital e higiene sanitária. "Eu fazia marmita, mas não sabia cobrar. Agora tenho meu negócio organizado e vendo pelo Instagram", conta orgulhosa a formanda Solange. O projeto une saúde pública e geração de renda na ponta.</p>
         `,
-        imageUrl: '/images/healthy_cooking_cover_real_final.webp',
+        imageUrl: '/images/healthy_cooking_cover_araucaria_v3.png',
+        mobileImageUrl: '/images/healthy_cooking_cover_araucaria_v3_mobile.png',
         category: 'Cidade',
         categoryColor: 'red',
         internalImageUrl: '/images/healthy_cooking_real_final_v1.jpg',

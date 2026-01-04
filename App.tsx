@@ -49,9 +49,15 @@ const Layout: React.FC = () => {
     // Hook para rodar a verificação de atualização automática
     useEffect(() => {
         // Executa a verificação em "background" sem travar a UI
-        setTimeout(() => {
-            api.checkAndRunBackgroundUpdate();
-        }, 1000);
+        const timer = setTimeout(async () => {
+            try {
+                await api.checkAndRunBackgroundUpdate();
+            } catch (err) {
+                console.error("[Silent Error] Background Update Failed:", err);
+            }
+        }, 3000); // Aumentado para 3s para garantir prioridade total ao LCP
+
+        return () => clearTimeout(timer);
     }, []);
 
     const navType = useNavigationType();
