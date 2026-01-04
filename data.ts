@@ -671,11 +671,15 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 23,
-        title: 'Araucária recebe etapa do Campeonato Paranaense de Futsal',
-        summary: 'Ginásio Joval de Paula Souza será palco de grandes jogos neste fim de semana.',
+        title: 'Araucária recebe etapa decisiva do Paranaense de Futsal',
+        summary: 'Ginásio Joval de Paula Souza promete virar caldeirão neste sábado; vitória garante vaga nas quartas.',
         content: `
-            <p>A torcida araucariense tem um encontro marcado neste fim de semana. A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
-            <p>A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
+            <p>O <strong>Parque Cachoeira</strong> vai tremer neste fim de semana. O Araucária Futsal entra em quadra no Ginásio Joval de Paula Souza para uma das partidas mais importantes do ano pelo Campeonato Paranaense Série Prata. A equipe da casa precisa de uma vitória simples para garantir a classificação antecipada para os playoffs.</p>
+            
+            <p>A diretoria espera lotação máxima. "A torcida de Araucária nunca decepciona. Quando o ginásio lota, vira o sexto jogador", convoca o capitão do time. Caravanas do <strong>Jardim Industrial</strong> e <strong>Costeira</strong> já organizaram um "corredor de fogo" para recepcionar o ônibus dos atletas na chegada.</p>
+
+            <h3>Ingresso Solidário</h3>
+            <p>Para democratizar o acesso, a entrada será mediante a doação de 1kg de alimento não perecível. Tudo o que for arrecadado será destinado ao Provopar Municipal. É a união da paixão pelo esporte com a solidariedade que marca a nossa gente.</p>
         `,
         imageUrl: '/images/araucaria_futsal_cover_v1.png',
         mobileImageUrl: '/images/araucaria_futsal_cover_v1_mobile.webp',
