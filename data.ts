@@ -46,7 +46,7 @@ export const newsArticles: NewsArticle[] = [
         category: 'Economia',
         categoryColor: 'blue',
         internalImageUrl: '/images/araucaria_employment_internal_final_v5.png',
-        publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
+        publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Redação Araucária'
     },
     {
@@ -67,7 +67,7 @@ export const newsArticles: NewsArticle[] = [
         category: 'Cultura',
         categoryColor: 'yellow',
         internalImageUrl: '/images/cinema_lion.png',
-        publishDate: '2025-12-30', // DATA FUTURA PARA FORÇAR TOPO
+        publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Cultura Viva'
     },
     {
@@ -640,7 +640,8 @@ export const newsArticles: NewsArticle[] = [
             <p>O desafio proposto foi criar aplicativos que ajudassem a resolver problemas de mobilidade e gestão de resíduos. A equipe vencedora desenvolveu um sistema que gamifica a reciclagem nos bairros.</p>
             <p>"Araucária tem muitos talentos na área de TI, e eventos como esse mostram que podemos ser um polo de inovação", disse o secretário de Planejamento.</p>
         `,
-        imageUrl: '/images/hackathon_real.webp',
+        imageUrl: '/images/hackathon_real_final_v2.png',
+        mobileImageUrl: '/images/hackathon_real_final_v2_mobile.webp',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         internalImageUrl: '/images/news_hackathon_coding.png',
@@ -673,7 +674,8 @@ export const newsArticles: NewsArticle[] = [
             <p>A torcida araucariense tem um encontro marcado neste fim de semana. A cidade sediará uma das etapas decisivas do Campeonato Paranaense de Futsal, recebendo equipes de todo o estado.</p>
             <p>A equipe local busca a classificação para as finais e conta com o apoio da arquibancada. "Jogar em casa faz toda a diferença", afirmou o técnico.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1518611507436-e92e60832012?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/araucaria_futsal_cover_v1.png',
+        mobileImageUrl: '/images/araucaria_futsal_cover_v1_mobile.webp',
         category: 'Esporte',
         categoryColor: 'green',
         internalImageUrl: '/images/araucaria_futsal_real.jpg',

@@ -65,10 +65,10 @@ const HomePage: React.FC = () => {
         mobileImage = defaultImage;
     }
 
-    const news = sortedNews;
+    const news = sortedNews.filter(n => n.id !== featuredNews?.id);
     const events = data?.events || [];
     const businesses = data?.businesses || [];
-    const gridNews = news.length > 0 ? news.slice(1, 4) : [];
+    const gridNews = news.slice(0, 3);
 
     return (
         <div>
