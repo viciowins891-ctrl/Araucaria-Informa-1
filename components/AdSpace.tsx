@@ -42,11 +42,24 @@ const AdSpace: React.FC<AdSpaceProps> = ({
         }
     }, []);
 
-    // MODO DE DESENVOLVIMENTO:
-    // Se não tivermos um ID real configurado ou estivermos em localhost,
-    // mostramos o placeholder antigo para não quebrar o layout visualmente.
-    // O AdSense não exibe anúncios em localhost/domínios não aprovados.
-    const isDevelopment = false; // Mude para false quando for para produção com IDs reais
+    // DETECÇÃO DE AMBIENTE:
+    // O Google AdSense bloqueia anúncios em localhost, gerando o erro "Conteúdo Bloqueado".
+    // Para evitar isso, mostramos um placeholder visual quando estamos desenvolvendo.
+    const isDevelopment = typeof window !== 'undefined' &&
+        (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+
+    if (isDevelopment) {
+        return (
+            <div className={`flex justify-center my-8 ${className}`}>
+                <div
+                    className="flex items-center justify-center bg-gray-100 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-700 text-gray-400 text-sm font-semibold uppercase tracking-widest"
+                    style={style}
+                >
+                    Publicidade (AdSense)
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className={`flex justify-center my-8 ${className} overflow-hidden`}>

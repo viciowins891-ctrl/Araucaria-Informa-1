@@ -992,10 +992,11 @@ export const newsArticles: NewsArticle[] = [
             <h3>Orgulho da Cidade</h3>
             <p>O sucesso do time profissional contagia a base. As escolinhas de vôlei do município, nos núcleos do <strong>CSU</strong> e <strong>Tayrá</strong>, registraram aumento de 40% nas matrículas. O esporte se consolida como ferramenta de inclusão e orgulho para o araucariense.</p>
         `,
-        imageUrl: '/images/araucaria_volei_new_final.jpg',
+        imageUrl: '/images/araucaria_volei_match_action.png',
+        mobileImageUrl: '/images/araucaria_volei_match_action.png', // Fallback explícito para evitar 404 na automação
         category: 'Esporte',
         categoryColor: 'green',
-        internalImageUrl: '/images/araucaria_volei_inner_v2.jpg',
+        internalImageUrl: '/images/araucaria_volei_match_action.png',
         publishDate: '2025-03-15',
         author: 'Esporte News'
     },
@@ -1041,10 +1042,11 @@ export const newsArticles: NewsArticle[] = [
             
             <p>A medida é vital para quem trabalha em horário comercial na zona industrial e não consegue ir ao médico sem perder dia de serviço. Serão ofertadas consultas médicas, odontológicas, coleta de exames e sala de vacinação no período noturno, garantindo acesso pleno à saúde para a classe trabalhadora da região.</p>
         `,
-        imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: '/images/ubs_california_night_cover.png',
+        mobileImageUrl: '/images/ubs_california_night_cover.png', // Fallback explícito
         category: 'Saúde',
         categoryColor: 'blue',
-        internalImageUrl: '/images/ubs_california_inner_real_final.jpg',
+        internalImageUrl: '/images/ubs_california_night_cover.png',
         publishDate: '2025-02-20',
         author: 'Saúde Agora'
     },

@@ -95,7 +95,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     <img
                         alt={stripHtml(article.title)}
                         className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
+                        src={(imgSrc === article.imageUrl || imgSrc.includes('?v=new')) ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
                         loading="lazy"
                         width="400"
                         height="250"

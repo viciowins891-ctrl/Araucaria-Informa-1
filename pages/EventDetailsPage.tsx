@@ -204,7 +204,7 @@ const EventDetailsPage: React.FC = () => {
                             </div>
                             <div className="text-right hidden md:block">
                                 <p className="text-xs text-gray-400">Dados meteorológicos</p>
-                                <p className="text-xs text-gray-400">Simepar (Simulado)</p>
+                                <p className="text-xs text-gray-400">Simepar</p>
                             </div>
                         </div>
 
@@ -248,7 +248,7 @@ const EventDetailsPage: React.FC = () => {
                                             onClick={addToCalendar}
                                             className="text-primary text-xs font-bold uppercase tracking-wider mt-1 hover:underline"
                                         >
-                                            + Adicionar ao Calendário
+                                            + Adicionar à Agenda
                                         </button>
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@ const EventDetailsPage: React.FC = () => {
                                     className="w-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2"
                                 >
                                     <img src="/images/google_calendar.svg" alt="Google" className="w-5 h-5" />
-                                    Google Calendar
+                                    Google Agenda
                                 </button>
                                 <div className="w-full">
                                     <ShareButton title={`Confira este evento: ${event.title}`} />
