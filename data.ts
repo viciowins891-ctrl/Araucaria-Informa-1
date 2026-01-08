@@ -992,11 +992,11 @@ export const newsArticles: NewsArticle[] = [
             <h3>Orgulho da Cidade</h3>
             <p>O sucesso do time profissional contagia a base. As escolinhas de vôlei do município, nos núcleos do <strong>CSU</strong> e <strong>Tayrá</strong>, registraram aumento de 40% nas matrículas. O esporte se consolida como ferramenta de inclusão e orgulho para o araucariense.</p>
         `,
-        imageUrl: '/images/araucaria_volei_match_action.png',
-        mobileImageUrl: '/images/araucaria_volei_match_action.png', // Fallback explícito para evitar 404 na automação
+        imageUrl: '/images/araucaria_volei_new_final.jpg',
+        mobileImageUrl: '/images/araucaria_volei_new_final.jpg',
         category: 'Esporte',
         categoryColor: 'green',
-        internalImageUrl: '/images/araucaria_volei_match_action.png',
+        internalImageUrl: '/images/araucaria_volei_inner_v2.jpg',
         publishDate: '2025-03-15',
         author: 'Esporte News'
     },
