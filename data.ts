@@ -28,6 +28,97 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 1769117661,
+        title: "Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná - fappr.pr.gov.br",
+        summary: "\n        ARAUCÁRIA - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br\n        \n        A inic...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=98594',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=98594', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=42688',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769118340,
+        title: "Concurso Procurador Fundação Araucária PR: homologado; veja aprovados! - Estratégia Educacional",
+        summary: "\n        ARAUCÁRIA - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional\n        \n        A iniciativa visa...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=69180',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=69180', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=69184',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769118198,
+        title: "NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR - opopularpr.com.br",
+        summary: "\n        ARAUCÁRIA - NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR  opopularpr.com.br\n        \n        A iniciativa ...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=1271',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=1271', // Fallback seguro
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=81004',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769117615,
+        title: "Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR) - Agência Petrobras de Notícias",
+        summary: "\n        ARAUCÁRIA - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias\n        \n        A iniciativa...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16917',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16917', // Fallback seguro
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=61916',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769118151,
+        title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br",
+        summary: "\n        ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16088',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16088', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=65457',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769118198,
+        title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
+        summary: "\n        ARAUCÁRIA - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br\n        \n        A iniciativa visa atender...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11602',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11602', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=32000',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769117828,
+        title: "Araucária irá sediar campeonato de vôlei depraia neste final de semana - opopularpr.com.br",
+        summary: "\n        ARAUCÁRIA - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br\n        \n        A iniciativa visa aten...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=14704',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=14704', // Fallback seguro
+        category: 'Esporte',
+        categoryColor: 'indigo',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=49319',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
         id: 1769112101,
         title: 'Volta às aulas: Escolas recebem kits de material escolar',
         summary: 'ARAUCÁRIA - A Secretaria de Educação iniciou a distribuição dos kits de material escolar e uniforme para os 18 mil alunos da rede municipal. ...',

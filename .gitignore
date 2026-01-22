@@ -25,3 +25,9 @@ dist-ssr
 .vercel
 .env
 .env*.local
+
+# Sensitive credentials
+token.json
+upload_status_drive.js
+sync_drive_standalone.js
+scripts/squad/shared.js

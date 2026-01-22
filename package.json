@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && npx vercel --prod",
-    "gerar-noticias": "node scripts/generate-news-vertex.js"
+    "gerar-noticias": "node scripts/generate-news-vertex.js",
+    "start:squad": "node scripts/squad/orchestrator.js"
   },
   "dependencies": {
     "@google-cloud/vertexai": "^1.10.0",
