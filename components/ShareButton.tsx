@@ -64,7 +64,21 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, url }) => {
     return (
         <div className="relative inline-block text-left">
             <button
-                onClick={toggleOpen}
+                onClick={() => {
+                    // Tenta usar a API nativa de compartilhamento (Melhor experiência em Mobile)
+                    if (navigator.share) {
+                        navigator.share({
+                            title: title,
+                            text: `Confira esta notícia no Araucária Informa: ${title}`,
+                            url: currentUrl,
+                        })
+                            .then(() => console.log('Compartilhado com sucesso'))
+                            .catch((error) => console.log('Erro ao compartilhar ou cancelado', error));
+                    } else {
+                        // Fallback para Desktop ou navegadores sem suporte: Abre o menu customizado
+                        toggleOpen();
+                    }
+                }}
                 className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all font-medium active:scale-95"
                 title="Compartilhar"
             >

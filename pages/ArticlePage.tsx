@@ -7,10 +7,11 @@ import { NewsArticle } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
 import ShareButton from '../components/ShareButton';
-import { getPlaceholderImage } from '../services/imageUtils';
+import { getPlaceholderImage, getSecondaryPlaceholderImage } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
 import TextToSpeech from '../components/TextToSpeech';
 import NewsCard from '../components/NewsCard';
+import { formatDateBR } from '../services/dateUtils';
 
 // Imagem segura para caso a original quebre (Final fallback)
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
@@ -27,8 +28,23 @@ const ArticlePage: React.FC = () => {
 
     // UI States
     const [readingProgress, setReadingProgress] = useState(0);
-    const [showShareToast, setShowShareToast] = useState(false);
     const [secondaryImage, setSecondaryImage] = useState<string>('');
+
+    // Save/Bookmark States
+    const [isSaved, setIsSaved] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
+
+    // Check if article is saved on load
+    useEffect(() => {
+        if (article) {
+            const saved = localStorage.getItem('araucaria_saved_articles');
+            if (saved) {
+                const ids = JSON.parse(saved);
+                setIsSaved(ids.includes(article.id));
+            }
+        }
+    }, [article]);
 
     useEffect(() => {
         const fetchArticleAndRelated = async () => {
@@ -45,26 +61,14 @@ const ArticlePage: React.FC = () => {
                     setImageError(false);
 
                     // Set Secondary Image (Internal)
-                    // Priority 1: Explicit Internal Image from Data
-                    if (currentArticle.internalImageUrl) {
+                    // Priority 1: Explicit Internal Image from Data (ONLY if different from cover)
+                    if (currentArticle.internalImageUrl && currentArticle.internalImageUrl !== currentArticle.imageUrl) {
                         setSecondaryImage(currentArticle.internalImageUrl);
                     } else {
-                        // Priority 2: Fallback to Category Placeholder or Contextual Logic
-                        let secImg = getPlaceholderImage(currentArticle.category);
-
-                        if (currentArticle.category === 'Educação') secImg = '/images/placeholder_educacao.png';
-                        if (currentArticle.category === 'Infraestrutura') secImg = '/images/placeholder_infraestrutura.png';
-                        if (currentArticle.category === 'Segurança') secImg = '/images/placeholder_seguranca.png';
-                        if (currentArticle.category === 'Esporte') secImg = '/images/placeholder_esporte.png';
-                        if (currentArticle.category === 'Turismo') secImg = '/images/placeholder_turismo.png';
-                        if (currentArticle.category === 'Economia') secImg = '/images/placeholder_economia.png';
-
-                        // Contextual Fallbacks (Generic)
-                        if (currentArticle.title.toLowerCase().includes('vacina') || currentArticle.category === 'Saúde') {
-                            secImg = '/images/news_context_health.png';
-                        }
-
-                        setSecondaryImage(secImg);
+                        // Priority 2: Smart Secondary Placeholder
+                        // DESATIVADO: Para evitar imagens antigas/repetidas. 
+                        // Agora confiamos apenas na imagem injetada no 'content' pelo backend.
+                        setSecondaryImage('');
                     }
 
                     // Busca notícias relacionadas com Inteligência (Prioriza Mesma Categoria)
@@ -166,12 +170,12 @@ const ArticlePage: React.FC = () => {
                 ></div>
             </div>
 
-            {/* Share Toast */}
-            {showShareToast && (
+            {/* Generic Toast Notification */}
+            {showToast && (
                 <div className="fixed bottom-8 right-8 z-50 animate-fade-in-up">
                     <div className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3">
                         <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                        <span>Link copiado para a área de transferência!</span>
+                        <span>{toastMessage}</span>
                     </div>
                 </div>
             )}
@@ -232,20 +236,39 @@ const ArticlePage: React.FC = () => {
                         </Link>
 
                         <div className="flex flex-wrap items-center gap-4">
-                            <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border shadow-sm backdrop-blur-sm ${{
-                                blue: 'bg-blue-600/[0.25] text-blue-600 border-blue-600 dark:bg-blue-500/[0.25] dark:text-blue-400 dark:border-blue-400',
-                                purple: 'bg-purple-600/[0.25] text-purple-600 border-purple-600 dark:bg-purple-500/[0.25] dark:text-purple-400 dark:border-purple-400',
-                                green: 'bg-green-600/[0.25] text-green-600 border-green-600 dark:bg-green-500/[0.25] dark:text-green-400 dark:border-green-400',
-                                red: 'bg-red-600/[0.25] text-red-600 border-red-600 dark:bg-red-500/[0.25] dark:text-red-400 dark:border-red-400',
-                                yellow: 'bg-yellow-600/[0.25] text-yellow-600 border-yellow-600 dark:bg-yellow-500/[0.25] dark:text-yellow-400 dark:border-yellow-400',
-                                indigo: 'bg-indigo-600/[0.25] text-indigo-600 border-indigo-600 dark:bg-indigo-500/[0.25] dark:text-indigo-400 dark:border-indigo-400',
-                            }[article.categoryColor] || 'bg-gray-500/[0.25] text-gray-700 dark:bg-gray-500/25 dark:text-gray-300 border-gray-200'
-                                }`}>
+                            <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border shadow-sm backdrop-blur-sm ${(() => {
+                                const colorVariants: { [key: string]: string } = {
+                                    blue: 'bg-blue-600/[0.25] text-blue-600 border-blue-600 dark:bg-blue-500/[0.25] dark:text-blue-400 dark:border-blue-400',
+                                    purple: 'bg-purple-600/[0.25] text-purple-600 border-purple-600 dark:bg-purple-500/[0.25] dark:text-purple-400 dark:border-purple-400',
+                                    green: 'bg-green-600/[0.25] text-green-600 border-green-600 dark:bg-green-500/[0.25] dark:text-green-400 dark:border-green-400',
+                                    red: 'bg-red-600/[0.25] text-red-600 border-red-600 dark:bg-red-500/[0.25] dark:text-red-400 dark:border-red-400',
+                                    yellow: 'bg-yellow-600/[0.25] text-yellow-600 border-yellow-600 dark:bg-yellow-500/[0.25] dark:text-yellow-400 dark:border-yellow-400',
+                                    indigo: 'bg-indigo-600/[0.25] text-indigo-600 border-indigo-600 dark:bg-indigo-500/[0.25] dark:text-indigo-400 dark:border-indigo-400',
+                                    gray: 'bg-gray-600/[0.25] text-gray-600 border-gray-600 dark:bg-gray-500/[0.25] dark:text-gray-400 dark:border-gray-400',
+                                };
+
+                                const STANDARD_CATEGORY_COLORS: { [key: string]: string } = {
+                                    'Lazer': 'yellow',
+                                    'Cultura': 'yellow',
+                                    'Economia': 'blue',
+                                    'Esporte': 'indigo',
+                                    'Educação': 'red',
+                                    'Saúde': 'green',
+                                    'Infraestrutura': 'purple',
+                                    'Cidade': 'blue',
+                                    'Segurança': 'red',
+                                    'Política': 'gray',
+                                    'Geral': 'gray'
+                                };
+
+                                const standardColor = STANDARD_CATEGORY_COLORS[article.category] || article.categoryColor || 'gray';
+                                return colorVariants[standardColor] || colorVariants['gray'];
+                            })()}`}>
                                 {article.category}
                             </span>
                             <time className="flex items-center text-gray-500 dark:text-gray-400 text-sm font-medium">
                                 <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                {article.publishDate}
+                                {formatDateBR(article.publishDate)}
                             </time>
                         </div>
 
@@ -269,10 +292,34 @@ const ArticlePage: React.FC = () => {
                                 <TextToSpeech text={stripHtml(article.content || article.summary || '')} />
                                 <ShareButton title={plainTitle} />
                                 <button
-                                    className="p-2.5 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10 transition-all active:scale-95"
-                                    title="Salvar (Favorito)"
+                                    onClick={() => {
+                                        const saved = localStorage.getItem('araucaria_saved_articles');
+                                        let savedIds: number[] = saved ? JSON.parse(saved) : [];
+
+                                        if (isSaved) {
+                                            savedIds = savedIds.filter(id => id !== article.id);
+                                            setIsSaved(false);
+                                            // Optional: Show removed toast
+                                        } else {
+                                            savedIds.push(article.id);
+                                            setIsSaved(true);
+                                            setToastMessage("Notícia salva nos favoritos!");
+                                            setShowToast(true);
+                                            setTimeout(() => setShowToast(false), 3000);
+                                        }
+                                        localStorage.setItem('araucaria_saved_articles', JSON.stringify(savedIds));
+                                    }}
+                                    className={`p-2.5 rounded-full transition-all active:scale-95 ${isSaved
+                                        ? 'bg-red-50 text-red-500 dark:bg-red-900/20 dark:text-red-400'
+                                        : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-red-500 hover:bg-red-500/10'
+                                        }`}
+                                    title={isSaved ? "Remover dos favoritos" : "Salvar (Favorito)"}
                                 >
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    {isSaved ? (
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    ) : (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    )}
                                 </button>
                             </div>
                         </div>
@@ -367,25 +414,27 @@ const ArticlePage: React.FC = () => {
             </div>
 
             {/* Seção Inteligente: Leia Também (Retenção de Usuário) */}
-            {relatedArticles.length > 0 && (
-                <section className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/20 py-12 mt-0">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-                        <div className="flex items-center gap-2 mb-8">
-                            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
-                                Continue Lendo
-                            </h3>
-                        </div>
+            {
+                relatedArticles.length > 0 && (
+                    <section className="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/20 py-12 mt-0">
+                        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                            <div className="flex items-center gap-2 mb-8">
+                                <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
+                                    Continue Lendo
+                                </h3>
+                            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {relatedArticles.map(item => (
-                                <NewsCard key={item.id} article={item} />
-                            ))}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {relatedArticles.map(item => (
+                                    <NewsCard key={item.id} article={item} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </section>
-            )}
-        </article>
+                    </section>
+                )
+            }
+        </article >
     );
 };
 

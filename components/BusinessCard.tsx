@@ -99,4 +99,4 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
     );
 };
 
-export default BusinessCard;
+export default React.memo(BusinessCard);

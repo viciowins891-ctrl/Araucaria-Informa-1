@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
     }, []);
 
-    const { data, loading, error } = useFetch(api.getHomeData, 'home-data-stable');
+    const { data, loading, error } = useFetch(api.getHomeData, 'home-data-v2');
     const [imageError, setImageError] = useState(false);
 
     // ESTRATÉGIA ANTI-FLICKER (Zero Layout Shift)
@@ -30,11 +30,9 @@ const HomePage: React.FC = () => {
 
     // 1. Determina a notícia de destaque
     const sortedNews = data?.news || [];
-    const forcedHeroNews = sortedNews.find(n => n.id === 9999);
 
-    // Prioridade: Dados API > Fallback Estático (ID 9999) > Nada
-    // O 'loading' não impede a renderização do Hero, pois temos dados estáticos seguros.
-    const featuredNews = forcedHeroNews || staticFeature || (sortedNews.length > 0 ? sortedNews[0] : null);
+    // Prioridade: A mais recente do banco de dados (API) > Fallback Estático
+    const featuredNews = (sortedNews.length > 0 ? sortedNews[0] : null) || staticFeature;
 
     // 2. Define as imagens de exibição
     const defaultImage = "/images/araucaria_hero.png";
@@ -65,10 +63,10 @@ const HomePage: React.FC = () => {
         mobileImage = defaultImage;
     }
 
-    const news = sortedNews;
+    const news = sortedNews.filter(n => n.id !== featuredNews?.id);
     const events = data?.events || [];
     const businesses = data?.businesses || [];
-    const gridNews = news.length > 0 ? news.slice(1, 4) : [];
+    const gridNews = news.slice(0, 3);
 
     return (
         <div>

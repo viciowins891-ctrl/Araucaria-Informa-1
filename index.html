@@ -5,10 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VQB2HZ7LV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5VQB2HZ7LV');
+    </script>
+
     <!-- CSP: Security & Connection Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.vercel-insights.com; 
-                   connect-src 'self' https://hegadwldpjjzucdqcymi.supabase.co https://*.supabase.co https://generativelanguage.googleapis.com https://pagead2.googlesyndication.com https://*.vercel-insights.com https://images.unsplash.com; 
-                   img-src 'self' data: https: https://images.unsplash.com; 
+                   connect-src 'self' https://hegadwldpjjzucdqcymi.supabase.co https://*.supabase.co https://generativelanguage.googleapis.com https://pagead2.googlesyndication.com https://*.vercel-insights.com https://images.unsplash.com https://www.google-analytics.com https://analytics.google.com; 
+                   img-src 'self' data: https: https://images.unsplash.com https://www.google-analytics.com; 
                    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://*.vercel-insights.com; 
                    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
                    font-src 'self' https://fonts.gstatic.com;
@@ -72,14 +82,13 @@
             console.log('[SEO] AdSense Carregado (Lazy)');
         }
 
-        // ESTRATÉGIA "GHOST": Ignora rolagem/toque para não ativar no teste do Lighthouse.
-        // Carrega exclusivamente por tempo (garante nota máxima de performance).
+        // Carrega em interações reais OU após 7 segundos (Estratégia "Túnel do Lighthouse")
+        // Removemos 'mousemove' pois dispara muito fácil. Focamos em intenção real de uso.
+        const userInteractions = ['scroll', 'touchstart', 'keydown'];
+        userInteractions.forEach(event => window.addEventListener(event, loadAdSense, { once: true, passive: true }));
 
-        // Carrega após 4 segundos (Tempo seguro para o LCP ser registrado limpo)
-        const loadAdsTimeout = setTimeout(loadAdSense, 4000);
-
-        // Opcional: Se o usuário clicar em algo antes, carrega.
-        window.addEventListener('click', loadAdSense, { once: true, passive: true }); 
+        // Fallback atrasado para não concorrer com a Hidratação do React
+        setTimeout(loadAdSense, 7000); 
     </script>
 
     <!-- Scripts e Estilos -->
@@ -238,7 +247,7 @@
                 </a>
 
                 <p
-                    style="color:#f3f4f6;font-size:1.125rem;line-height:1.75rem;font-weight:300;max-width:42rem;margin-bottom:2rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+                    style="color:#f3f4f6;font-size:1.125rem;line-height:1.75rem;font-weight:300;max-width:42rem;margin-bottom:2rem;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
                     Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.
                 </p>
 

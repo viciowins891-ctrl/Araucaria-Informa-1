@@ -14,45 +14,66 @@ const UPDATE_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000;
 // Garante padronização da ordem em todo o site
 const parseDate = (dateStr: string): number => {
     if (!dateStr) return 0;
+
     // Formato BR: DD/MM/YYYY
-    if (dateStr.includes('/')) {
+    if (dateStr.includes('/') && !dateStr.includes('-')) {
         const [day, month, year] = dateStr.split('/').map(Number);
         return new Date(year, month - 1, day).getTime();
     }
-    // Formato ISO: YYYY-MM-DD
-    if (dateStr.includes('-')) {
-        const parts = dateStr.split('-').map(Number);
-        // Assume YYYY-MM-DD se o primeiro for ano (maior que 31)
-        if (parts[0] > 31) return new Date(parts[0], parts[1] - 1, parts[2]).getTime();
-    }
-    return new Date(dateStr).getTime();
+
+    // Tenta parse nativo (ISO, YYYY-MM-DD, etc)
+    const timestamp = new Date(dateStr).getTime();
+    if (!isNaN(timestamp)) return timestamp;
+
+    return 0;
 };
 
 export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
         // BUSCA HÍBRIDA: Supabase + LocalStorage (Cache) + Estático
         try {
-            // 1. Tenta Supabase
+            // 1. Supabase (Reativado - Dados da nova IA)
             const supabase = await getSupabase();
-            const { data: dbNews } = await supabase
+            const { data: dbData } = await supabase
                 .from('news')
                 .select('*')
                 .order('publish_date', { ascending: false });
 
-            // 2. Busca Cache Local (Fallback para erro de RLS)
+            const dbNews: NewsArticle[] = (dbData || []).map((item: any) => ({
+                id: item.id,
+                title: item.title,
+                summary: item.summary,
+                content: item.content,
+                imageUrl: item.image_url,
+                category: item.category,
+                categoryColor: item.category_color,
+                publishDate: item.publish_date,
+                author: item.author,
+                sourceUrl: item.source_url,
+                sourceName: item.source_name,
+                internalImageUrl: item.internal_image_url,
+                mobileImageUrl: item.mobile_image_url
+            }));
+
+            // 2. Cache Local (TEMPORARIAMENTE DESATIVADO - EVITAR DADOS STALE)
             let cachedNews: NewsArticle[] = [];
-            try {
-                const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
-                if (stored) cachedNews = JSON.parse(stored);
-            } catch (e) { console.warn("Erro ao ler cache local de news"); }
+            // try {
+            //     const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
+            //     if (stored) cachedNews = JSON.parse(stored);
+            // } catch (e) { console.warn("Erro ao ler cache local de news"); }
 
-            // 3. Busca Dados Estáticos
-            const { newsArticles: staticNews } = await import('../data');
+            // 3. Merge Inteligente (Estratégia de Transição):
+            // O objetivo é ter 60 notícias (6 páginas).
+            // Se o banco tiver menos que 60, completamos com as antigas (estáticas) no final da lista.
+            // Se o banco tiver 60 ou mais, usamos SÓ as do banco.
 
-            // 3. Merge Inteligente: Prioridade Código Local (Static) > Cache > DB
-            // Invertemos a ordem anterior para garantir que o que editamos no VS Code (staticNews)
-            // sempre sobrescreva dados antigos que possam vir do banco ou cache.
-            const allNews = [...(dbNews || []), ...cachedNews, ...staticNews];
+            let allNews: NewsArticle[] = [...(dbNews || [])];
+
+            if (allNews.length < 60) {
+                const { newsArticles: staticNews } = await import('../data');
+                // Adiciona as estáticas ANTES das novas para que as do banco (allNews) tenham prioridade no Map (sobrescrevam estáticas)
+                allNews = [...staticNews, ...allNews];
+            }
 
             // Remove duplicatas por Título (O último array - staticNews - ganha em caso de conflito)
             const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
@@ -75,7 +96,7 @@ export const api = {
                     if (dateA !== dateB) return dateB - dateA; // Decrescente (Mais novas topo)
                     return b.id - a.id;
                 })
-                .slice(0, 100) as NewsArticle[];
+                .slice(0, 60) as NewsArticle[];
 
         } catch (e) {
             console.error("API: Falha crítica em getNews", e);

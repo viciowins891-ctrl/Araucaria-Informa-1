@@ -41,12 +41,57 @@ const ServicesPage: React.FC = () => {
             {/* Header / Hero */}
             <div className="bg-primary dark:bg-primary-dark pt-24 pb-12 px-4 shadow-md">
                 <div className="container mx-auto max-w-4xl text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display">Telefones Úteis e Plantão</h1>
-                    <p className="text-blue-100 text-lg">Guarde esta página para emergências.</p>
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display">Guia de Serviços</h1>
+                    <p className="text-blue-100 text-lg">Transporte, telefones úteis e utilidade pública em um só lugar.</p>
                 </div>
             </div>
 
             <div className="container mx-auto px-4 max-w-5xl -mt-6">
+
+                {/* --- NOVO: SEÇÃO DE HORÁRIOS DE ÔNIBUS (Destaque) --- */}
+                <div className="bg-white dark:bg-surface-dark rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden mb-8 transform hover:-translate-y-1 transition-transform duration-300">
+                    <div className="bg-blue-600 p-6 flex items-center justify-between relative overflow-hidden">
+                        <div className="relative z-10">
+                            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                                Horários de Ônibus
+                            </h2>
+                            <p className="text-blue-100 text-sm mt-1">Consulte as tabelas oficiais atualizadas.</p>
+                        </div>
+                        {/* Ícone decorativo */}
+                        <svg className="w-24 h-24 text-white/10 absolute -right-4 -bottom-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" /></svg>
+                    </div>
+
+                    <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Cartão TRIAR (Municipal) */}
+                        <a href="https://triarapp.net.br/Default.aspx" target="_blank" rel="noopener noreferrer" className="bg-gray-50 dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-md transition-all group flex items-start gap-4">
+                            <div className="bg-yellow-400 p-3 rounded-lg text-yellow-900 shadow-sm shrink-0">
+                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-blue-600 transition-colors">TRIAR (Municipal)</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-3">Linhas amarelas que circulam dentro de Araucária (Grátis com cartão). Consulte itinerários.</p>
+                                <span className="inline-flex items-center text-sm font-bold text-blue-600 uppercase tracking-wide">
+                                    Ver Horários <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                </span>
+                            </div>
+                        </a>
+
+                        {/* Cartão METROCARD (Metropolitano) */}
+                        <a href="https://www.metrocard.com.br/horarios-e-linhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-50 dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-md transition-all group flex items-start gap-4">
+                            <div className="bg-blue-600 p-3 rounded-lg text-white shadow-sm shrink-0">
+                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-blue-600 transition-colors">Metropolitano (Curitiba)</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-3">Ônibus para Curitiba, Contenda e Fazenda Rio Grande. Consulte as linhas da COMEC/Metrocard.</p>
+                                <span className="inline-flex items-center text-sm font-bold text-blue-600 uppercase tracking-wide">
+                                    Ver Tabela <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
                 {/* Botões de Emergência (Grid principal) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">

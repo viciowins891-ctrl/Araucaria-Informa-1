@@ -1,28 +1,23 @@
-# 🔔 LEMBRETE URGENTE (PRÓXIMA SESSÃO)
-- [x] **Configurar Segurança (RLS) no Supabase:** Executar o script SQL no painel do Supabase para impedir que visitantes apaguem o banco de dados. (Concluído em 18/12/2025).
+# Próximos Passos - Jacaré do Corte
 
-# Status do Projeto - Araucária Informa
-**Data:** 14/12/2025 (Última atualização)
+**Data:** 16/01/2026
 
-## ✅ Concluído Nesta Sessão (Foco: AdSense e SEO):
+## 🚀 Status da Publicação
+O aplicativo **Jacaré do Corte** está **PRONTO** para publicação, mas aguardando liberação temporária de segurança do Google.
 
-### 1. Correção de Sitemap (Crítico)
-- **Sitemap Completo:** O arquivo `sitemap.xml` foi regenerado manualmente para incluir TODAS as URLs de notícias (IDs 1-22 e 101-109) e eventos. Antes, apenas 5 páginas estáticas eram listadas, o que impedia o Google de encontrar 90% do conteúdo do site, gerando a rejeição por "Baixo Valor".
+### ✅ O que foi feito:
+1.  **Conformidade Financeira:** Removida a obrigatoriedade de pagamento no app e alterados termos de "ativação" para "cadastro".
+2.  **Correção de Chaves de Assinatura:** Configurado o build para usar a chave correta (`upload-key.keystore` com alias `upload`).
+3.  **Correção de Nome de Pacote:** Ajustado `applicationId` para `app.vercel.jacaredocorte.twa` em todos os arquivos para bater com o primeiro upload.
+4.  **Novo Build Gerado:** Arquivo `app-release.aab` (versão 4 / 1.3) gerado e testado.
 
-### 2. Melhoria na Home Page
-- **Densidade de Texto:** Adicionada uma nova seção "Resumo das Últimas Notícias" logo abaixo da grade de imagens na `HomePage`. Esta seção lista os títulos e resumos completos em formato de texto.
-  - **Objetivo:** Aumentar a quantidade de texto legível para o crawler na página principal, evitando que o site pareça ser apenas uma galeria de imagens (o que infringe políticas de "Conteúdo Raso").
+### ⏳ Ação Necessária (REVISÃO PENDENTE):
+O Google Play bloqueou novos uploads até **16/01/2026 às 17:41 UTC**.
+**Isso significa que você deve esperar até às 14:42 (Horário de Brasília) de hoje.**
 
-### 3. Validação de Build e Deploy
-- **Deploy Realizado:** O site foi re-publicado no Vercel com sucesso (Comando `vercel --prod`). As alterações já estão online.
-
-### 4. Ajuste Manual de Imagens
-- **Festival de Teatro (ID 8):** Revertido para a imagem genérica de "Educação" (estudantes/livros) conforme solicitação final do usuário, após testes com upload manual.
-- **Correção Geral:** Corrigido bug onde algumas categorias (Saúde, Política, Tecnologia) não tinham imagem secundária definida, causando erro no "print". Agora todas possuem placeholders definidos.
-
----
-
-## 🚀 Ação Imediata do Usuário (Painel AdSense):
-1. **Acesse o Google AdSense:** Vá para a página onde aparece "Encontramos violações da política".
-2. **Confirme a Correção:** Marque a caixinha "Confirmo que corrigi os problemas".
-3. **Solicite Revisão:** Clique no botão azul "Pedir revisão".
+**Passo a passo para as 14:42:**
+1.  Acesse o **Google Play Console** > **Teste Fechado**.
+2.  Edite a versão.
+3.  Remova qualquer arquivo com erro.
+4.  Faça o upload do arquivo `C:\Users\humbe\.gemini\antigravity\scratch\jacare-do-corte\android\app\build\outputs\bundle\release\app-release.aab`.
+5.  Envie para revisão.

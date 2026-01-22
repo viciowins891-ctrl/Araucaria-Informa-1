@@ -162,7 +162,7 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
             { t: 'Novas turbinas da REPAR aumentam eficiência energética em 15%', c: 'Economia', focus: 'Indústria' },
             { t: 'Prefeitura inicia revitalização da Av. Archelau de Almeida Torres', c: 'Infraestrutura', focus: 'Obras' },
             { t: 'Araucária Vôlei vence mais uma e segue líder na Superliga', c: 'Esporte', focus: 'Vôlei' },
-            { t: 'Festival de Food Trucks agita o Centro Cívico nesta sexta', c: 'Cultura', focus: 'FoodTruck' },
+            { t: 'Feira Gastronômica traz Food Trucks e música para o Centro', c: 'Lazer', focus: 'FoodTruck' },
             { t: 'Campanha de Vacinação contra a Gripe bate meta em Araucária', c: 'Saúde', focus: 'Saúde' },
             { t: 'Guarda Municipal recebe novas viaturas tecnológicas', c: 'Segurança', focus: 'Segurança' }
         ];
@@ -173,7 +173,7 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
             'Indústria': '/images/repar_turbines_new_final.jpg?v=final_fix_v5',
             'Obras': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000',
             'Vôlei': 'https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&q=80&w=1000',
-            'FoodTruck': '/images/food_trucks_final_v6.png',
+            'FoodTruck': '/images/food_trucks_cover_v29.png',
             'Saúde': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
             'Segurança': 'https://images.unsplash.com/photo-1590422749870-13a83017a224?auto=format&fit=crop&q=80&w=1000'
         };
@@ -198,8 +198,8 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
     };
 
     if (!apiKey) {
-        console.warn("[AI Service] Sem chave de API. Usando fallback em lote.");
-        return fallbackNews();
+        console.warn("[AI Service] Sem chave de API. Retornando vazio para usar fallback estático.");
+        return []; // Retorna vazio para o api.ts usar os dados estáticos (sem duplicar no banco)
     }
 
     try {
@@ -249,8 +249,8 @@ export const fetchWeeklyNewsWithAI = async (): Promise<NewsArticle[]> => {
         });
 
     } catch (error) {
-        console.error("[AI Service] Falha na geração em lote, revertendo para fallback:", error);
-        return fallbackNews();
+        console.error("[AI Service] Falha na geração em lote.", error);
+        return []; // Retorna vazio para evitar lixo no banco
     }
 };
 

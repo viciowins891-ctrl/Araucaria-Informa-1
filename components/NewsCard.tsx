@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { NewsArticle } from '../types';
 import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
+import { formatDateBR } from '../services/dateUtils';
 // import { getPlaceholderImage } from '../services/aiService';
 
 interface NewsCardProps {
@@ -44,11 +45,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     const standardColor = STANDARD_CATEGORY_COLORS[article.category] || article.categoryColor || 'gray';
     const categoryColorClass = colorVariants[standardColor] || colorVariants['gray'];
 
-    // Otimiza a URL inicial (640px é suficiente para cards e ativa mobile.webp)
-    const optimizedImageUrl = getOptimizedImageUrl(article.imageUrl, 640);
+    // Otimiza a URL inicial. Se houver uma imagem mobile definida explicitamente, usa ela.
+    // Caso contrário, tenta gerar a versão otimizada da imagem principal.
+    const initialImage = article.mobileImageUrl || getOptimizedImageUrl(article.imageUrl, 640);
 
     // Estado para controlar a URL da imagem atual
-    const [imgSrc, setImgSrc] = useState(optimizedImageUrl);
+    const [imgSrc, setImgSrc] = useState(initialImage);
     // Estado para saber se já estamos usando o fallback
     const [isFallback, setIsFallback] = useState(false);
     // Estado para erro final (nem original nem fallback funcionaram)
@@ -57,20 +59,31 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
 
     // Reseta os estados se a prop article mudar (ex: paginação ou filtro)
     useEffect(() => {
-        setImgSrc(getOptimizedImageUrl(article.imageUrl, 640));
+        setImgSrc(article.mobileImageUrl || getOptimizedImageUrl(article.imageUrl, 640));
         setIsFallback(false);
         setHasError(false);
     }, [article.imageUrl]);
 
     const handleError = () => {
-        if (!isFallback) {
-            // Primeira falha: Tenta carregar a imagem de placeholder contextual
+        // Lógica de Fallback em Cascata:
+        // 1. Tenta imagem inicial (Mobile ou Otimizada) -> Já foi tentado no render
+        // 2. Se falhar, tenta a imagem ORIGINAL (sem _mobile, sem otimização)
+        // 3. Se falhar, tenta o Placeholder Contextual
+        // 4. Se falhar, mostra erro genérico
+
+        if (imgSrc !== article.imageUrl && !isFallback) {
+            // Nível 2: Tenta a original (pode ser pesada, mas é melhor que erro)
+            // Verificamos se imgSrc é diferente da original para evitar loop infinito
+            console.log(`Tentativa de recuperação: Usando imagem original para ${stripHtml(article.title)}`);
+            setImgSrc(article.imageUrl);
+        } else if (!isFallback) {
+            // Nível 3: Placeholder Contextual (já tentamos original e não deu)
             console.warn(`Falha ao carregar imagem: ${stripHtml(article.title)}. Tentando placeholder contextual.`);
             setImgSrc(getPlaceholderImage(article.category));
             setIsFallback(true);
         } else {
-            // Segunda falha (Fallback também falhou): Mostra o placeholder de erro
-            console.error(`Falha crítica: Imagem original e fallback falharam para ${stripHtml(article.title)}`);
+            // Nível 4: Erro Final
+            console.error(`Falha crítica: Todas as tentativas falharam para ${stripHtml(article.title)}`);
             setHasError(true);
         }
     };
@@ -82,7 +95,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                     <img
                         alt={stripHtml(article.title)}
                         className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        src={imgSrc.includes('?v=new') ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
+                        src={(imgSrc === article.imageUrl || imgSrc.includes('?v=new')) ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
                         loading="lazy"
                         width="400"
                         height="250"
@@ -112,7 +125,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                 <div className="flex items-center justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark mb-3 font-medium">
                     <div className="flex items-center">
                         <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <span>{article.publishDate}</span>
+                        <span>{formatDateBR(article.publishDate)}</span>
                     </div>
                     {article.sourceName && (
                         <div className="flex items-center text-blue-500 max-w-[50%] truncate">
@@ -144,4 +157,4 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
     );
 };
 
-export default NewsCard;
+export default React.memo(NewsCard);
