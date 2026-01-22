@@ -55,17 +55,34 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 1769118198,
-        title: "NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR - opopularpr.com.br",
-        summary: "\n        ARAUCÁRIA - NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR  opopularpr.com.br\n        \n        A iniciativa ...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - NP: Ministro da Educação autoriza obras de melhorias no campi Araucária do IFPR  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=1271',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=1271', // Fallback seguro
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=81004',
+        title: "Ministro da Educação autoriza obras de melhorias no IFPR Araucária",
+        summary: `ARAUCÁRIA - O Ministério da Educação autorizou oficialmente as obras de melhorias no campus do Instituto Federal do Paraná (IFPR) em Araucária. O projeto contempla reformas estruturais, modernização de laboratórios e ampliação das áreas de convivência.`,
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O Ministério da Educação autorizou oficialmente as obras de melhorias no campus do Instituto Federal do Paraná (IFPR) em Araucária. O investimento faz parte de um pacote de modernização da rede federal de ensino técnico e profissionalizante no Paraná.</p>
+        
+        <p>As obras contemplam reformas estruturais nos prédios existentes, modernização de laboratórios de informática e eletrônica, ampliação das áreas de convivência estudantil e melhorias na acessibilidade do campus. O projeto prevê também a construção de novos espaços para atividades práticas e workshops.</p>
+
+        <figure class="my-8">
+            <img src="/images/ifpr-pedreiro.png" alt="Operários trabalhando na construção do IFPR Araucária" class="w-full rounded-xl shadow-lg" />
+            <figcaption class="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center italic">Obras de modernização do campus IFPR Araucária em andamento</figcaption>
+        </figure>
+
+        <h3>Investimento na Educação Profissional</h3>
+        <p>Segundo a direção do IFPR, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas do Ministério da Educação. A expectativa é que as obras sejam concluídas ainda em 2026, permitindo que mais estudantes sejam atendidos com infraestrutura de qualidade.</p>
+
+        <p>"É uma mudança significativa para nossa comunidade educacional", afirmou a direção do campus. Com a conclusão desta etapa, novos cursos técnicos poderão ser oferecidos, fortalecendo a formação profissional dos jovens de Araucária e região metropolitana de Curitiba.</p>
+
+        <h3>Impacto Regional</h3>
+        <p>O IFPR Araucária é referência em ensino técnico na região, oferecendo cursos gratuitos de qualidade em áreas como Informática, Eletrônica, Mecânica e Administração. A ampliação da infraestrutura deve atrair mais investimentos educacionais para o município, consolidando Araucária como polo de educação profissional no Paraná.</p>
+    `,
+        imageUrl: '/images/ifpr-obras-capa.png',
+        mobileImageUrl: '/images/ifpr-obras-capa.png',
+        category: 'Educação',
+        categoryColor: 'red',
+        internalImageUrl: '/images/ifpr-obras-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
-    },
+    },,
     {
         id: 1769117615,
         title: "Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR) - Agência Petrobras de Notícias",

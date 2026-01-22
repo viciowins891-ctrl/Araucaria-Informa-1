@@ -194,7 +194,7 @@ const ArticlePage: React.FC = () => {
             <div className="relative h-[60vh] min-h-[500px] w-full bg-gray-900 overflow-hidden group">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
                 <img
-                    src={article.title.toLowerCase().includes('archelau') ? '/images/archelau_definitiva.png' : (imgSrc || FALLBACK_IMAGE)}
+                    src={imgSrc || FALLBACK_IMAGE}
                     alt={plainTitle}
                     className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
                     referrerPolicy="no-referrer"
