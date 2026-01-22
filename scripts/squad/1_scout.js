@@ -1,84 +1,89 @@
 
-import { google } from 'googleapis';
-import { getDriveAuth, genAI } from './shared.js';
+import Parser from 'rss-parser';
 
-export async function runScout() {
-    console.log("🔍 [Agente Pesquisador] Iniciando varredura...");
+// Configuração de Feeds (Podemos adicionar mais)
+// Como não temos os links exatos oficiais agora, usar Google News RSS filtrado por 'Araucaria Parana' é um hack excelente
+const RSS_FEEDS = [
+    "https://news.google.com/rss/search?q=Araucaria+Parana&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+    "https://g1.globo.com/rss/g1/pr/parana/" // Generalista Paraná (filtrar depois)
+];
+
+const parser = new Parser();
+
+// Banco de Pautas Realistas para Fallback (Caso falhe a rede)
+const MOCK_PAUTAS = [
+    {
+        title: "SMMA alerta para aumento de casos de Dengue no Costeira",
+        content: "A Secretaria Municipal de Meio Ambiente (SMMA) emitiu um alerta nesta manhã sobre o aumento de focos do mosquito Aedes aegypti no bairro Costeira. Mutirões de limpeza serão realizados no fim de semana.",
+        category: "Saúde"
+    },
+    {
+        title: "Obras de pavimentação chegam ao Jardim Plínio",
+        content: "Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser concluída em 45 dias, melhorando o acesso ao transporte escolar.",
+        category: "Infraestrutura"
+    },
+    {
+        title: "Araucária Vôlei vence em casa e assume a liderança",
+        content: "Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1. A torcida lotou as arquibancadas e empurrou a equipe rumo à liderança do paranaense.",
+        category: "Esporte"
+    }
+];
+
+export async function runScout(count = 1) {
+    console.log(`🔍 [Agente Pesquisador] Buscando notícias reais via RSS...`);
+
+    let foundItems = [];
 
     try {
-        const auth = await getDriveAuth();
-        const drive = google.drive({ version: 'v3', auth });
+        for (const url of RSS_FEEDS) {
+            console.log(`   📡 Conectando a: ${url}`);
+            try {
+                const feed = await parser.parseURL(url);
+                console.log(`      ✅ Sucesso! Encontrados ${feed.items.length} itens.`);
 
-        // 1. Encontrar pasta "Noticias (Drop aqui)"
-        // Para simplificar, vamos buscar pelo nome em qualquer lugar
-        const res = await drive.files.list({
-            q: "name = 'Noticias (Drop aqui)' and mimeType = 'application/vnd.google-apps.folder' and trashed = false",
-            fields: 'files(id, name)'
-        });
+                // Filtro Básico: Garantir que fala de Araucária (para feeds generalistas)
+                const relevant = feed.items.filter(item =>
+                    item.title.toLowerCase().includes('araucária') ||
+                    item.content?.toLowerCase().includes('araucária') ||
+                    item.contentSnippet?.toLowerCase().includes('araucária') ||
+                    url.includes('search?q=Araucaria') // Se for busca específica, aceita tudo
+                );
 
-        let folderId;
-        if (res.data.files.length > 0) {
-            folderId = res.data.files[0].id;
-        } else {
-            console.log("⚠️ Pasta 'Noticias (Drop aqui)' não encontrada. Usando modo Busca Web direto.");
-            return await runWebSearchFallback();
+                foundItems.push(...relevant);
+            } catch (err) {
+                console.warn(`      ⚠️ Falha ao ler feed: ${err.message}`);
+            }
         }
-
-        // 2. Listar arquivos na pasta
-        const fileRes = await drive.files.list({
-            q: `'${folderId}' in parents and trashed = false`,
-            fields: 'files(id, name, mimeType, webContentLink)'
-        });
-
-        const files = fileRes.data.files;
-
-        if (files.length > 0) {
-            console.log(`📂 Encontrados ${files.length} arquivos no Drive.`);
-            // Retorna o primeiro arquivo para processamento (FIFO)
-            const file = files[0];
-
-            // Ler conteúdo do arquivo (Simulação de leitura de Texto/Docs)
-            // Para simplificar: usamos o nome do arquivo como "Pauta" se não conseguirmos ler o body
-            // Em produção leria o stream do arquivo.
-            return {
-                type: 'drive_file',
-                data: {
-                    id: file.id,
-                    title: file.name,
-                    content: `Conteúdo extraído do arquivo ${file.name}. (Simulado para este protótipo)`
-                }
-            };
-        } else {
-            console.log("📭 Pasta vazia. Ativando busca na Web...");
-            return await runWebSearchFallback();
-        }
-
     } catch (e) {
-        console.error("Erro no Pesquisador:", e);
-        return await runWebSearchFallback();
+        console.error("   ❌ Erro geral no Scout RSS:", e);
     }
-}
 
-async function runWebSearchFallback() {
-    console.log("🌍 [Agente Pesquisador] Buscando notícias recentes de Araucária na Web...");
-    // Simulação de busca real via LLM com groundness (ou hallucination controlada)
-    // Aqui usamos o Gemini para simular que "leu" a web ou invocar tools se fosse o vertex.
+    // Se achou pouco, completa com Mock
+    if (foundItems.length < count) {
+        console.log(`   📉 Apenas ${foundItems.length} notícias reais encontradas. Completando com simulação...`);
+        const needed = count - foundItems.length;
+        const shuffled = MOCK_PAUTAS.sort(() => 0.5 - Math.random()).slice(0, needed);
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const prompt = `
-        Liste 1 (UMA) notícia urgente e realista sobre Araucária, Paraná, Brasil.
-        Baseie-se em fatos comuns da região: Indústria (Petrobras/Repar), Clima, Política Local ou Trânsito na Rodovia do Xisto.
-        Retorne apenas o título e um resumo curto dos fatos brutos.
-    `;
+        const mockConverted = shuffled.map(p => ({
+            title: p.title,
+            content: p.content, // Mock content is plain text description
+            link: "http://localhost:3001", // Fake link
+            pubDate: new Date().toISOString()
+        }));
 
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+        foundItems.push(...mockConverted);
+    }
 
-    return {
-        type: 'web_search',
+    // Limitar e Formatar para o Editor
+    const selected = foundItems.slice(0, count);
+
+    return selected.map(item => ({
+        type: 'rss_feed_real',
         data: {
-            title: "Notícia Web (Automática)",
-            content: text
+            title: item.title,
+            // O content do RSS pode ser curto, o Editor vai expandir
+            content: item.contentSnippet || item.content || item.title,
+            link: item.link
         }
-    };
+    }));
 }

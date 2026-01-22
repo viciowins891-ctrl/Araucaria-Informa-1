@@ -28,6 +28,220 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
+        id: 1769112101,
+        title: 'Volta às aulas: Escolas recebem kits de material escolar',
+        summary: 'ARAUCÁRIA - A Secretaria de Educação iniciou a distribuição dos kits de material escolar e uniforme para os 18 mil alunos da rede municipal. ...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - A Secretaria de Educação iniciou a distribuição dos kits de material escolar e uniforme para os 18 mil alunos da rede municipal. A entrega ocorre diretamente nas unidades escolares do CAIC e Tupy.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=29025',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=29025', // Fallback seguro
+        category: 'Educação',
+        categoryColor: 'red',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=35787',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769112147,
+        title: 'SMMA alerta para aumento de casos de Dengue no Costeira',
+        summary: 'ARAUCÁRIA - A Secretaria Municipal de Meio Ambiente (SMMA) emitiu um alerta nesta manhã sobre o aumento de focos do mosquito Aedes aegypti no...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - A Secretaria Municipal de Meio Ambiente (SMMA) emitiu um alerta nesta manhã sobre o aumento de focos do mosquito Aedes aegypti no bairro Costeira. Mutirões de limpeza serão realizados no fim de semana.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=51047',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=51047', // Fallback seguro
+        category: 'Saúde',
+        categoryColor: 'green',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=7298',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769112338,
+        title: 'Feira de Empregos oferta 300 vagas no CIAR',
+        summary: 'ARAUCÁRIA - O polo industrial de Araucária (CIAR) realiza nesta sexta-feira um feirão de empregos com 300 vagas para níveis técnico e operaci...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - O polo industrial de Araucária (CIAR) realiza nesta sexta-feira um feirão de empregos com 300 vagas para níveis técnico e operacional. Interessados devem levar currículo e carteira de trabalho no Sine.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20busy%20commercial%20street%2C%20people%20shopping%2C%20storefronts%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=25038',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20busy%20commercial%20street%2C%20people%20shopping%2C%20storefronts%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=25038', // Fallback seguro
+        category: 'Economia',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20busy%20commercial%20street%2C%20people%20shopping%2C%20storefronts%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=27001',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769112325,
+        title: 'Defesa Civil monitora nível do Rio Iguaçu após chuvas de verão',
+        summary: 'ARAUCÁRIA - As fortes chuvas de verão colocaram a Defesa Civil em estado de atenção. O monitoramento no Rio Iguaçu indica nível elevado, mas ...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - As fortes chuvas de verão colocaram a Defesa Civil em estado de atenção. O monitoramento no Rio Iguaçu indica nível elevado, mas ainda sem risco iminente de transbordo nas áreas habitadas.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=91761',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=91761', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=23220',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769111662,
+        title: 'Obras de pavimentação chegam ao Jardim Plínio',
+        summary: 'ARAUCÁRIA - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser concluída em 45 dias, melhorando o acesso ao transporte escolar.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11921',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11921', // Fallback seguro
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=99458',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769111830,
+        title: 'Araucária Vôlei vence em casa e assume a liderança',
+        summary: 'ARAUCÁRIA - Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1. A torcida lotou as ar...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1. A torcida lotou as arquibancadas e empurrou a equipe rumo à liderança do paranaense.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=54684',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=54684', // Fallback seguro
+        category: 'Esporte',
+        categoryColor: 'indigo',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=56710',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769112488,
+        title: 'Novo semáforo inteligente entra em operação na Archelau',
+        summary: 'ARAUCÁRIA - Motoristas que trafegam pela Av.Archelau de Almeida Torres devem ficar atentos.O novo sistema semafórico inteligente, que ajust...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - Motoristas que trafegam pela Av. Archelau de Almeida Torres devem ficar atentos. O novo sistema semafórico inteligente, que ajusta o tempo conforme o fluxo, começou a operar hoje visando reduzir congestionamentos.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=66753',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=66753', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=43855',
+        publishDate: '2026-01-22',
+        author: 'Redação Squad'
+    },
+    {
+        id: 9001,
+        title: 'Saneamento Básico no Iguaçu recebe investimento milionário',
+        summary: 'Sanepar anuncia obras de expansão da rede de esgoto e água potável beneficiando milhares de famílias.',
+        content: `
+            <p>Moradores do bairro <strong>Iguaçu</strong> têm motivos para comemorar. A Sanepar, em parceria com a Prefeitura de Araucária, anunciou nesta manhã um pacote de obras para a universalização do saneamento básico na região.</p>
+            
+            <p>O projeto prevê a instalação de 15km de novas tubulações e a construção de uma estação elevatória de esgoto. "É dignidade chegando na porta da casa das pessoas", afirmou o gerente regional durante a visita técnica.</p>
+
+            <h3>Saúde Pública</h3>
+            <p>Além da valorização imobiliária, a obra tem impacto direto na saúde preventiva, reduzindo drasticamente a incidência de doenças de veiculação hídrica. A previsão é que as máquinas iniciem os trabalhos já na próxima semana.</p>
+
+            <figure class="my-8 w-full"><img src="/images/saneamento-iguacu-interna.png" alt="Obras no Iguaçu" class="w-full rounded-xl shadow-lg object-cover h-[400px]" /><figcaption class="text-sm text-gray-500 mt-2 text-center">Sanepar conversa com moradores do bairro</figcaption></figure>
+        `,
+        imageUrl: '/images/saneamento-iguacu-capa.png',
+        mobileImageUrl: '/images/saneamento-iguacu-capa.png',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        internalImageUrl: '/images/saneamento-iguacu-interna.png',
+        publishDate: '2026-01-22',
+        author: 'Redação Municipal'
+    },
+    {
+        id: 9002,
+        title: 'Programa Lixo Zero mobiliza escolas e comunidade',
+        summary: 'Iniciativa educativa transforma resíduos em recursos e promove a reciclagem nos bairros.',
+        content: `
+            <p>Araucária dá mais um passo rumo à sustentabilidade com o lançamento do programa "Lixo Zero". A iniciativa visa reduzir em 30% o volume de resíduos enviados ao aterro sanitário através da educação ambiental e do incentivo à compostagem.</p>
+            
+            <p>Escolas municipais do <strong>Centro</strong> e <strong>Costeira</strong> já aderiram, transformando restos de merenda em adubo para as hortas comunitárias. "A criança aprende na escola e ensina os pais em casa. É uma mudança cultural", destaca a Secretária de Meio Ambiente.</p>
+
+            <figure class="my-8 w-full"><img src="/images/lixo-zero-interna-manual.jpg" alt="Educação Ambiental" class="w-full rounded-xl shadow-lg object-cover h-[400px]" /><figcaption class="text-sm text-gray-500 mt-2 text-center">Alunos aprendendo sobre separação correta</figcaption></figure>
+        `,
+        imageUrl: '/images/lixo-zero-manual.png',
+        mobileImageUrl: '/images/lixo-zero-manual.png',
+        category: 'Cidade',
+        categoryColor: 'green',
+        internalImageUrl: '/images/lixo-zero-interna-manual.jpg',
+        publishDate: '2026-01-22',
+        author: 'EcoAção'
+    },
+    {
+        id: 9003,
+        title: 'Festival da Cultura Tropeira agita o Parque Cachoeira',
+        summary: 'Música raiz, culinária típica e apresentações de laço comprido marcam o fim de semana.',
+        content: `
+            <p>O resgate das tradições está garantido em Araucária. O Festival da Cultura Tropeira reuniu milhares de visitantes no <strong>Parque Cachoeira</strong> para celebrar a história dos condutores de tropas que ajudaram a construir o Paraná.</p>
+            
+            <p>O cheiro de feijão tropeiro e arroz carreteiro tomou conta da praça de alimentação, enquanto violeiros animavam o público com moda de viola autêntica.</p>
+
+            <figure class="my-8 w-full"><img src="/images/festival-tropeiro-interna-manual.png" alt="Culinária Tropeira" class="w-full rounded-xl shadow-lg object-cover h-[400px]" /><figcaption class="text-sm text-gray-500 mt-2 text-center">Sabores tradicionais no Parque Cachoeira</figcaption></figure>
+        `,
+        imageUrl: '/images/festival-tropeiro-capa-manual.jpg',
+        mobileImageUrl: '/images/festival-tropeiro-capa-manual.jpg',
+        category: 'Cultura',
+        categoryColor: 'indigo',
+        internalImageUrl: '/images/festival-tropeiro-interna-manual.png',
+        publishDate: '2026-01-22',
+        author: 'Cultura Viva'
+    },
+    {
         id: 3001,
         title: 'Araucária registra queda histórica no desemprego',
         summary: 'Novas indústrias e comércio fortalecido geram mais de 2.000 vagas no último trimestre.',

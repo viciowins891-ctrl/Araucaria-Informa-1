@@ -337,7 +337,8 @@ const ArticlePage: React.FC = () => {
                             />
                         )}
 
-                        {/* Imagem Secundária Decorativa */}
+                        {/* Imagem Secundária Decorativa - REMOVIDA A PEDIDO DO USUÁRIO */}
+                        {/* 
                         {secondaryImage && (
                             <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
                                 <img
@@ -346,13 +347,14 @@ const ArticlePage: React.FC = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     referrerPolicy="no-referrer"
                                     onError={(e) => {
-                                        e.currentTarget.style.display = 'none'; // Esconde se quebrar de vez
+                                        e.currentTarget.style.display = 'none';
                                         e.currentTarget.parentElement!.style.display = 'none';
                                     }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                             </figure>
-                        )}
+                        )} 
+                        */}
 
 
 
