@@ -305,9 +305,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Programa Lixo Zero mobiliza escolas e comunidade',
         summary: 'Iniciativa educativa transforma resíduos em recursos e promove a reciclagem nos bairros.',
         content: `
-                                                                                                                        <p> Araucária dá mais um passo rumo à sustentabilidade com o lançamento do programa "Lixo Zero".A iniciativa visa reduzir em 30 % o volume de resíduos enviados ao aterro sanitário através da educação ambiental e do incentivo à compostagem.</p>
-                                                                                                                            <p> Escolas municipais do <strong>Centro </strong> e <strong>Costeira</strong> já aderiram, transformando restos de merenda em adubo para as hortas comunitárias. "A criança aprende na escola e ensina os pais em casa. É uma mudança cultural", destaca a Secretária de Meio Ambiente.</p>
-                                                                                                                                < figure class="my-8 w-full" > <img src="/images/lixo-zero-interna-manual.jpg" alt = "Educação Ambiental" class="w-full rounded-xl shadow-lg object-cover h-[400px]" /> <figcaption class="text-sm text-gray-500 mt-2 text-center" > Alunos aprendendo sobre separação correta </figcaption></figure>
+                                                                                                                        <p> Araucária dá mais um passo rumo à sustentabilidade com o lançamento do programa "Lixo Zero". A iniciativa visa reduzir em 30% o volume de resíduos enviados ao aterro sanitário através da educação ambiental e do incentivo à compostagem.</p>
+                                                                                                                            <p> Escolas municipais do <strong>Centro</strong> e <strong>Costeira</strong> já aderiram, transformando restos de merenda em adubo para as hortas comunitárias. "A criança aprende na escola e ensina os pais em casa. É uma mudança cultural", destaca a Secretária de Meio Ambiente.</p>
                                                                                                                                     `,
         imageUrl: '/images/lixo-zero-manual.png',
         mobileImageUrl: '/images/lixo-zero-manual.png',
@@ -322,9 +321,8 @@ export const newsArticles: NewsArticle[] = [
         title: 'Festival da Cultura Tropeira agita o Parque Cachoeira',
         summary: 'Música raiz, culinária típica e apresentações de laço comprido marcam o fim de semana.',
         content: `
-                                                                                                                                    <p> O resgate das tradições está garantido em Araucária.O Festival da Cultura Tropeira reuniu milhares de visitantes no <strong> Parque Cachoeira </strong> para celebrar a história dos condutores de tropas que ajudaram a construir o Paraná.</p>
+                                                                                                                                    <p> O resgate das tradições está garantido em Araucária. O Festival da Cultura Tropeira reuniu milhares de visitantes no <strong>Parque Cachoeira</strong> para celebrar a história dos condutores de tropas que ajudaram a construir o Paraná.</p>
                                                                                                                                         <p>O cheiro de feijão tropeiro e arroz carreteiro tomou conta da praça de alimentação, enquanto violeiros animavam o público com moda de viola autêntica.</p>
-                                                                                                                                            < figure class="my-8 w-full" > <img src="/images/festival-tropeiro-interna-manual.png" alt = "Culinária Tropeira" class="w-full rounded-xl shadow-lg object-cover h-[400px]" /> <figcaption class="text-sm text-gray-500 mt-2 text-center" > Sabores tradicionais no Parque Cachoeira </figcaption></figure>
                                                                                                                                                 `,
         imageUrl: '/images/festival-tropeiro-capa-manual.jpg',
         mobileImageUrl: '/images/festival-tropeiro-capa-manual.jpg',
