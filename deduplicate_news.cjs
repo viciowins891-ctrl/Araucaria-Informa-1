@@ -90,7 +90,7 @@ parsedArticles.forEach(art => {
     const cleanTitle = art.title ? art.title.replace(/['"]/g, '').trim() : '';
 
     // Filtro Explícito
-    if (art.id === '1769111830') {
+    if (art.id === '1769252003' || art.id === '1769111830') {
         console.log(`Removing specific duplicate ID: ${art.id}`);
         return;
     }

@@ -5,16 +5,12 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
 
-
-
 const rootElement = document.getElementById('root');
 
 // --- NUCLEAR CACHE CLEAR (VARREDURA) ---
 // Executa limpeza profunda se a versão não bater ou forzado
-// --- NUCLEAR CACHE CLEAR (VARREDURA) ---
-// Executa limpeza profunda se a versão não bater ou forzado
 // otimização: Executa DEPOIS que o app já montou para não bloquear a thread principal
-const APP_VERSION = 'v1.0.1-fix-freeze';
+const APP_VERSION = 'v1.0.2-force-clean';
 
 const clearCache = () => {
   const storedVersion = localStorage.getItem('app_version');
@@ -69,9 +65,6 @@ if (!rootElement) {
 
 import ErrorBoundary from './components/ErrorBoundary';
 
-
-
-
 const renderApp = () => {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
@@ -95,17 +88,17 @@ if ('requestIdleCallback' in window) {
   setTimeout(renderApp, 0);
 }
 
-// Register PWA Service Worker
-import { registerSW } from 'virtual:pwa-register';
+// Register PWA Service Worker - DISABLED
+// import { registerSW } from 'virtual:pwa-register';
 
-if ('serviceWorker' in navigator) {
-  registerSW({
-    onNeedRefresh() {
-      // Prompt user to refresh
-      console.log('Nova versão disponível!');
-    },
-    onOfflineReady() {
-      console.log('App pronto para uso offline');
-    },
-  });
-}
+// if ('serviceWorker' in navigator) {
+//   registerSW({
+//     onNeedRefresh() {
+//       // Prompt user to refresh
+//       console.log('Nova versão disponível!');
+//     },
+//     onOfflineReady() {
+//       console.log('App pronto para uso offline');
+//     },
+//   });
+// }
