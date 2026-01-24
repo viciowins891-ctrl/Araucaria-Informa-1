@@ -107,11 +107,22 @@ parsedArticles.forEach(art => {
     uniqueArticles.push(art);
 });
 
-console.log(`Final unique articles: ${uniqueArticles.length}`);
+console.log(`Unique articles before limit: ${uniqueArticles.length}`);
+
+// LIMITER: Manter apenas 60 notícias (6 páginas x 10)
+const MAX_NEWS = 58;
+if (uniqueArticles.length > MAX_NEWS) {
+    console.log(`Trimming news list. Removing ${uniqueArticles.length - MAX_NEWS} oldest articles.`);
+    // Como a lista já está ordenada por data (mais recente primeiro), 
+    // basta pegar os primeiros 60.
+    uniqueArticles.splice(MAX_NEWS);
+}
+
+console.log(`Final unique articles count: ${uniqueArticles.length}`);
 
 const newArticlesBlock = uniqueArticles.map(a => {
     let t = a.text.trim();
-    if (t.endsWith(',')) t = t.slice(0, -1); // remove trailing comma if any
+    t = t.replace(/,[\s]*$/, ''); // remove trailing comma(s) robustly
     return t;
 }).join(',\n    '); // Add commas back cleanly
 
