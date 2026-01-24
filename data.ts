@@ -33,8 +33,8 @@ export const newsArticles: NewsArticle[] = [
         <p>A entrada é franca, mas a organização pede a doação de 1kg de alimento não perecível. A expectativa é de ginásio lotado, repetindo a festa bonita que a torcida araucariense tem feito nos jogos em casa.</p>
         <p>"O grupo está focado. Sabemos da qualidade do adversário, mas dentro do nosso caldeirão, quem manda é o Araucária", afirmou o técnico da equipe.</p>
     `,
-        imageUrl: '/images/araucaria-volei-vs-elase-capa.png',
-        mobileImageUrl: '/images/araucaria-volei-vs-elase-capa.png',
+        imageUrl: '/images/araucaria-volei-vs-elase-capa_mobile.png',
+        mobileImageUrl: '/images/araucaria-volei-vs-elase-capa_mobile.png',
         category: 'Esporte',
         categoryColor: 'indigo',
         internalImageUrl: '/images/araucaria-volei-spike-interna.png',
