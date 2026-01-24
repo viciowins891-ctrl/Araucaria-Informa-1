@@ -215,11 +215,11 @@ export const newsArticles: NewsArticle[] = [
         <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
     
         `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=91761',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=91761', // Fallback seguro
+        imageUrl: '/images/defesa-civil-rio-iguacu-capa.jpg',
+        mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20stormy%20clouds%20over%20city%2C%20wet%20streets%2C%20rain%20reflection%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=23220',
+        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
