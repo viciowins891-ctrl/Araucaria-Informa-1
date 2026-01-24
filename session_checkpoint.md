@@ -1,26 +1,27 @@
 
-# Session Checkpoint: Araucária Informa Updates
+# Session Checkpoint: Araucária Informa Cleanup & Real-Time Updates
 
 **Date:** 2026-01-24
-**Status:** Success / Stable
-**Last Action:** Updated 'Segurança' news with specific visual identity (Blue GMA vehicles).
+**Status:** Clean & Current
+**Last Action:** Systematic removal of outdated content and real-time update of sports news.
 
-## Key Changes
-1.  **News Updates:**
-    *   **Saúde (Recorde de Atendimentos):** Updated internal image to an AI-generated version depicting a busy, modern clinic with no masks (post-pandemic context).
-    *   **Concurso (FAFIPA):** Updated title, summary, and content to be specific about the banking organizer. Generated and applied new cover (exam building) and internal (studying student) images.
-    *   **Segurança (Veículo Furtado):** Updated title/content to remove site suffix. Generated images with specific visual identity for **Guarda Municipal de Araucária** (Dark Blue SUV/Pickup and Dark Blue uniforms), replacing generic police images.
+## Recent Actions
+1.  **Content Cleanup:**
+    *   **Removals:** Identified and removed outdated articles that were confusing the timeline:
+        *   "Inauguração Poupatempo" (Event from Dec/2025).
+        *   "Festival da Canção" (Inconsistent dates/Past event).
+    *   **Method:** Used targeted regex scripts (`remove_poupatempo.cjs`, `remove_festivals.cjs`) to surgically remove objects from `data.ts` without breaking the array structure.
 
-2.  **Asset Management:**
-    *   Generated multiple AI images using `generate_image`.
-    *   Replaced existing placeholders or generic images with high-fidelity, context-aware visuals.
-    *   Used `update_*.cjs` scripts to safely modify `data.ts` without corrupting the file structure.
+2.  **Real-Time Update (Sports):**
+    *   **Araucária Vôlei:** Verified actual schedule for today (24/01).
+    *   **Update:** Replaced generic text with specific match details: **Araucária Vôlei vs ELASE** (Superliga B), happening tonight at Joval de Paula Souza.
+    *   **Visuals:** Generated dynamic, high-quality images of the match and players in action.
 
-3.  **Project State:**
-    *   `data.ts`: Contains the most up-to-date content.
-    *   `public/images/`: Contains the new assets.
-    *   Server running at: `http://localhost:3002` (likely, based on previous context, though port 3001 was also mentioned. Current active terminal shows running for 6h+).
+## Project Integrity
+*   **Database (`data.ts`):** Now contains fewer but highly relevant and current articles.
+*   **Assets:** New sports assets added (`araucaria-volei-vs-elase-capa.png`, `araucaria-volei-spike-interna.png`).
+*   **Version Control:** All changes committed and pushed to GitHub.
 
 ## Next Steps
-*   Deploy changes to production (if applicable/requested).
-*   Continue monitoring for content consistency.
+*   Monitor site for any visual gaps caused by removals (though layout should handle it automatically).
+*   Ready for deployment or further content additions.
