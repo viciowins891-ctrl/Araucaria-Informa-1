@@ -45,11 +45,11 @@ export const newsArticles: NewsArticle[] = [
         title: "Concurso Procurador Fundação Araucária PR: homologado; veja aprovados! - Estratégia Educacional",
         summary: "\n        ARAUCÁRIA - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional\n        \n        A iniciativa visa...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=69180',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=69180', // Fallback seguro
+        imageUrl: '/images/concurso-fundacao-araucaria-capa.jpg',
+        mobileImageUrl: '/images/concurso-fundacao-araucaria-capa.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=69184',
+        internalImageUrl: '/images/concurso-fundacao-araucaria-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -82,7 +82,7 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/ifpr-obras-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
-    },,
+    },
     {
         id: 1769117615,
         title: "Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR) - Agência Petrobras de Notícias",
@@ -110,15 +110,15 @@ export const newsArticles: NewsArticle[] = [
         author: 'Redação Squad'
     },
     {
-        id: 1769118198,
+        id: 1769119999,
         title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
         summary: "\n        ARAUCÁRIA - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br\n        \n        A iniciativa visa atender...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11602',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11602', // Fallback seguro
+        imageUrl: 'https://image.pollinations.ai/prompt/modern%20public%20service%20building%20facade%2C%20people%20entering%2C%20glass%20windows%2C%20citizens%20getting%20documents%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=55123',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/modern%20public%20service%20building%20facade%2C%20people%20entering%2C%20glass%20windows%2C%20citizens%20getting%20documents%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=55123', // Fallback seguro
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=32000',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/interior%20of%20modern%20public%20service%20office%2C%20attendants%20helping%20citizens%2C%20desks%2C%20computers%2C%20Queue%20management%20system%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=77441',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -127,11 +127,11 @@ export const newsArticles: NewsArticle[] = [
         title: "Araucária irá sediar campeonato de vôlei depraia neste final de semana - opopularpr.com.br",
         summary: "\n        ARAUCÁRIA - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br\n        \n        A iniciativa visa aten...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=14704',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=14704', // Fallback seguro
+        imageUrl: 'https://image.pollinations.ai/prompt/beach%20volleyball%20players%20in%20action%2C%20jumping%20over%20net%2C%20sand%20court%2C%20outdoor%20sunny%20day%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=88291',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/beach%20volleyball%20players%20in%20action%2C%20jumping%20over%20net%2C%20sand%20court%2C%20outdoor%20sunny%20day%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=88291', // Fallback seguro
         category: 'Esporte',
         categoryColor: 'indigo',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=49319',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20of%20hands%20blocking%20volleyball%20over%20net%2C%20sand%20particles%20flying%2C%20beach%20volleyball%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=99102',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },

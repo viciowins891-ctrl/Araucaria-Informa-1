@@ -337,8 +337,7 @@ const ArticlePage: React.FC = () => {
                             />
                         )}
 
-                        {/* Imagem Secundária Decorativa - REMOVIDA A PEDIDO DO USUÁRIO */}
-                        {/* 
+                        {/* Imagem Secundária Decorativa */}
                         {secondaryImage && (
                             <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
                                 <img
@@ -353,8 +352,7 @@ const ArticlePage: React.FC = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                             </figure>
-                        )} 
-                        */}
+                        )}
 
 
 
