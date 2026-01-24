@@ -111,14 +111,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                 )}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 left-4">
-                    {/* --- FORMATO PADRÃO (NÃO ALTERAR) --- */}
-                    {/* Este estilo de "balão" com borda e transparência é a identidade visual fixa do site. */}
+                {/* Category badge removed per user request - was appearing as watermark on images */}
+                {/* <div className="absolute top-4 left-4">
                     <span className={`${categoryColorClass} text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border shadow-sm`}>
                         {article.category}
                     </span>
-                    {/* ------------------------------------ */}
-                </div>
+                </div> */}
             </Link>
 
             <div className="p-6 flex flex-col flex-grow">
