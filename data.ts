@@ -28,29 +28,170 @@ const getPastDate = (daysAgo: number): string => {
 
 export const newsArticles: NewsArticle[] = [
     {
-        id: 1769117661,
-        title: "Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná - fappr.pr.gov.br",
-        summary: "\n        ARAUCÁRIA - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br\n        \n        A inic...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/fundacao-araucaria-investimento-capa.jpg',
-        mobileImageUrl: '/images/fundacao-araucaria-investimento-capa.jpg',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/fundacao-araucaria-investimento-interna.png',
-        publishDate: '2026-01-22',
+        id: 1769253501,
+        title: "Araucária Vôlei vence em casa e assume a liderança",
+        summary: "Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1 e assumiu o topo da tabela.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A noite foi histórica no Ginásio Joval de Paula Souza. Com o apoio massivo da torcida que lotou as arquibancadas, o Araucária Vôlei venceu o Maringá Vôlei por 3 sets a 1 (parciais de 25/22, 19/25, 25/20 e 25/18) e assumiu a liderança isolada do Campeonato Paranaense.</p>
+        
+        <p>O destaque da partida foi o ponteiro Lucas, maior pontuador com 22 acertos. "A energia dessa torcida é surreal. Eles jogaram junto com a gente do primeiro ao último ponto", declarou o atleta ao fim do jogo.</p>
+
+        <h3>Rumo ao Título</h3>
+        <p>Com o resultado, a equipe chega aos 35 pontos e abre vantagem sobre o segundo colocado. O próximo desafio será fora de casa, mas a confiança do elenco nunca esteve tão alta. O técnico Fabiano Ribeiro pede pés no chão: "Faltam três rodadas. É manter o foco e garantir essa taça para nossa cidade".</p>
+        `,
+        imageUrl: '/images/volei-araucaria-lider-capa.jpg',
+        mobileImageUrl: '/images/volei-araucaria-lider-capa.jpg',
+        category: 'Esporte',
+        categoryColor: 'indigo',
+        internalImageUrl: '/images/volei-araucaria-acao-interna.jpg',
+        publishDate: '2026-01-24',
+        author: 'Esporte na Rede'
+    },
+    {
+        id: 1769252001,
+        title: "Saúde de Araucária bate recorde com 150 mil atendimentos",
+        summary: "Secretaria de Saúde divulga balanço positivo com aumento de 50 mil agendamentos em comparação ao ano anterior.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A saúde pública do município alcançou uma marca histórica neste semestre. Segundo dados divulgados hoje pela Secretaria Municipal de Saúde (SMSA), foram realizados mais de 149.186 procedimentos entre janeiro e julho.</p>
+        
+        <p>O número representa um aumento de quase 50 mil atendimentos em relação ao mesmo período do ano passado. "É o resultado da ampliação do horário das UBS e da contratação de novos médicos", celebra a secretária da pasta.</p>
+
+        <h3>Foco na Prevenção</h3>
+        <p>Além das consultas curativas, o relatório aponta crescimento nos programas de prevenção, como o Hiperdia (hipertensão e diabetes) e pré-natal, garantindo mais qualidade de vida a longo prazo para a população.</p>
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/nurse%20attending%20patient%20public%20health%20clinic%20brazil%20araucaria%20context%20indoor%20friendly%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/nurse%20attending%20patient%20public%20health%20clinic%20brazil%20araucaria%20context%20indoor%20friendly%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        category: 'Saúde',
+        categoryColor: 'green',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/doctor%20holding%20tablet%20showing%20charts%20medical%20office%20close%20up%20hyper%20realistic?width=800&height=600&model=flux&nologo=true',
+        publishDate: '2026-01-24',
         author: 'Redação Squad'
     },
     {
-        id: 1769118340,
-        title: "Concurso Procurador Fundação Araucária PR: homologado; veja aprovados! - Estratégia Educacional",
-        summary: "\n        ARAUCÁRIA - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional\n        \n        A iniciativa visa...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - Concurso Procurador Fundação Araucária PR: homologado; veja aprovados!  Estratégia Educacional</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/concurso-fundacao-araucaria-capa.jpg',
-        mobileImageUrl: '/images/concurso-fundacao-araucaria-capa.jpg',
+        id: 1769252002,
+        title: "Araucária lança 'Programa Criança Segura' nas escolas",
+        summary: "Iniciativa pioneira visa fortalecer a proteção de crianças e adolescentes nas redes pública e privada de ensino.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A Prefeitura lançou nesta manhã o "Programa Criança Segura", um pacote de medidas para aumentar a segurança nas escolas. A ação integra Guarda Municipal, Polícia Militar e comunidade escolar.</p>
+        
+        <p>O programa inclui a instalação de novos botões de pânico, treinamento para professores e palestras educativas para os alunos sobre segurança digital e comportamento preventivo.</p>
+
+        <h3>Rede Unificada</h3>
+        <p>O diferencial do projeto é a abrangência: escolas municipais, estaduais e até particulares participarão da rede de proteção, criando um cinturão de segurança em todo o município.</p>
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/brazilian%20police%20officer%20talking%20to%20children%20at%20school%20classroom%20education%20safety%20araucaria%20context%20indoor%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/brazilian%20police%20officer%20talking%20to%20children%20at%20school%20classroom%20education%20safety%20araucaria%20context%20indoor%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        category: 'Educação',
+        categoryColor: 'red',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/kids%20in%20classroom%20listening%20attentively%20brazil%20school%20close%20up%20hyper%20realistic?width=800&height=600&model=flux&nologo=true',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769250291,
+        title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br",
+        summary: "\n        ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=64708',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=64708', // Fallback seguro
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/concurso-fundacao-araucaria-interna.png',
-        publishDate: '2026-01-22',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=99592',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769250987,
+        title: "Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões - fappr.pr.gov.br",
+        summary: "\n        ARAUCÁRIA - Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões  fappr.pr.gov.br\n        \n        A iniciativa visa atender...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões  fappr.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=53572',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=53572', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=12001',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769250568,
+        title: "Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária - opopularpr.com.br",
+        summary: "\n        ARAUCÁRIA - Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária  opopularpr.com.br\n        \n        A iniciativa visa ...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=18594',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=18594', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=72045',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769250512,
+        title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
+        summary: "\n        ARAUCÁRIA - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br\n        \n        A iniciativa visa atender...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=26041',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=26041', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=92153',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769250610,
+        title: "Concurso Araucária PR: FAFIPA é a banca! - Estratégia Concursos",
+        summary: "\n        ARAUCÁRIA - Concurso Araucária PR: FAFIPA é a banca!  Estratégia Concursos\n        \n        A iniciativa visa atender as demandas crescentes ...",
+        content: "\n        <p><strong>ARAUCÁRIA</strong> - Concurso Araucária PR: FAFIPA é a banca!  Estratégia Concursos</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
+        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=67778',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=67778', // Fallback seguro
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=12830',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769252003,
+        title: "7º Festival da Canção abre inscrições para talentos locais",
+        summary: "Músicos de Araucária já podem se inscrever para o tradicional concurso. Premiação contempla categorias popular, sertanejo e teens.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - Estão abertas as inscrições para a 7ª edição do Festival da Canção de Araucária. O evento, que revela novos talentos da música local, promete agitar o Teatro da Praça no próximo mês.</p>
+        
+        <p>Segundo a Secretaria de Cultura, o objetivo é valorizar a produção artística da cidade. "Temos muitos talentos escondidos. O festival é a vitrine que eles precisam", afirma o diretor cultural.</p>
+
+        <h3>Categorias</h3>
+        <p>Neste ano, o concurso terá categorias Popular, Sertanejo e Teens (até 17 anos). As inscrições são gratuitas e podem ser feitas pelo site da prefeitura ou presencialmente na Casa da Cultura.</p>
+        `,
+        imageUrl: 'https://image.pollinations.ai/prompt/singer%20performing%20on%20stage%20with%20microphone%20lights%20theater%20brazil%20araucaria%20context%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/singer%20performing%20on%20stage%20with%20microphone%20lights%20theater%20brazil%20araucaria%20context%20hyper%20realistic%208k?width=1280&height=720&model=flux&nologo=true',
+        category: 'Cultura',
+        categoryColor: 'indigo',
+        internalImageUrl: 'https://image.pollinations.ai/prompt/vintage%20microphone%20on%20stage%20close%20up%20spotlight%20hyper%20realistic?width=800&height=600&model=flux&nologo=true',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
+    {
+        id: 1769111662,
+        title: 'TESTE: Obras de pavimentação chegam ao Jardim Plínio',
+        summary: 'ARAUCÁRIA - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser...',
+        content: `
+            
+        <p><strong>ARAUCÁRIA</strong> - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser concluída em 45 dias, melhorando o acesso ao transporte escolar.</p>
+        
+        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
+
+        <h3>Impacto Local</h3>
+        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
+    
+        `,
+        imageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
+        mobileImageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        internalImageUrl: '/images/pavimentacao-interiror-faixa.png',
+        publishDate: '2026-01-24',
         author: 'Redação Squad'
     },
     {
@@ -84,58 +225,6 @@ export const newsArticles: NewsArticle[] = [
         author: 'Redação Squad'
     },
     {
-        id: 1769117615,
-        title: "Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR) - Agência Petrobras de Notícias",
-        summary: "\n        ARAUCÁRIA - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias\n        \n        A iniciativa...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/petrobras-arla32-capa.png',
-        mobileImageUrl: '/images/petrobras-arla32-capa.png',
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        internalImageUrl: '/images/petrobras-arla32-interna.png',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
-        id: 1769118151,
-        title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br",
-        summary: "\n        ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie  assembleia.pr.leg.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/dia-nacional-araucaria-capa.jpg',
-        mobileImageUrl: '/images/dia-nacional-araucaria-capa.jpg',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/dia-nacional-araucaria-interna.jpg',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
-        id: 1769119999,
-        title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
-        summary: "\n        ARAUCÁRIA - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br\n        \n        A iniciativa visa atender...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/poupatempo-araucaria-capa.jpg',
-        mobileImageUrl: '/images/poupatempo-araucaria-capa.jpg',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/poupatempo-araucaria-interna.png',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
-        id: 1769117828,
-        title: "Araucária irá sediar campeonato de vôlei depraia neste final de semana - opopularpr.com.br",
-        summary: "\n        ARAUCÁRIA - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br\n        \n        A iniciativa visa aten...",
-        content: "\n        <p><strong>ARAUCÁRIA</strong> - Araucária irá sediar campeonato de vôlei depraia neste final de semana  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: '/images/volei-praia-araucaria-capa.png',
-        mobileImageUrl: '/images/volei-praia-araucaria-capa.png',
-        category: 'Esporte',
-        categoryColor: 'indigo',
-        internalImageUrl: '/images/volei-praia-araucaria-interna.jpg',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
         id: 1769112101,
         title: 'Volta às aulas: Escolas recebem kits de material escolar',
         summary: 'ARAUCÁRIA - A Secretaria de Educação iniciou a distribuição dos kits de material escolar e uniforme para os 18 mil alunos da rede municipal. ...',
@@ -149,11 +238,11 @@ export const newsArticles: NewsArticle[] = [
         <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
     
         `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=29025',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=29025', // Fallback seguro
+        imageUrl: '/images/volta-aulas-kits-capa.png',
+        mobileImageUrl: '/images/volta-aulas-kits-capa.png',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20students%20in%20classroom%20learning%2C%20brazil%20public%20school%20context%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=35787',
+        internalImageUrl: '/images/volta-aulas-kits-interna-v2.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -171,11 +260,11 @@ export const newsArticles: NewsArticle[] = [
         <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
     
         `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=51047',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=51047', // Fallback seguro
+        imageUrl: '/images/smma-dengue-costeira-capa.jpg',
+        mobileImageUrl: '/images/smma-dengue-costeira-capa.jpg',
         category: 'Saúde',
         categoryColor: 'green',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20health%20agents%20inspecting%20houses%2C%20sanitary%20check%20context%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=7298',
+        internalImageUrl: '/images/smma-dengue-costeira-interna.jpg',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -220,28 +309,6 @@ export const newsArticles: NewsArticle[] = [
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
-        id: 1769111662,
-        title: 'Obras de pavimentação chegam ao Jardim Plínio',
-        summary: 'ARAUCÁRIA - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser...',
-        content: `
-            
-        <p><strong>ARAUCÁRIA</strong> - Máquinas da prefeitura iniciaram hoje o asfaltamento das ruas principais do Jardim Plínio. A obra, aguardada há 10 anos, deve ser concluída em 45 dias, melhorando o acesso ao transporte escolar.</p>
-        
-        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
-
-        <h3>Impacto Local</h3>
-        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
-    
-        `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11921',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=11921', // Fallback seguro
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=99458',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -391,6 +458,27 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/cinema_lion.png',
         publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
         author: 'Cultura Viva'
+    },
+    {
+        id: 9999,
+        title: 'Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>',
+        summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
+        content: `
+            <p>A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana. A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
+
+            <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
+
+            <p>A movimentação não se restringe apenas ao <strong>Centro</strong>. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação</strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
+
+            <p>Para quem vem de mais longe, como do <strong>Jardim Iguaçu</strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
+        `,
+        imageUrl: '/images/food_trucks_cover_v29.png',
+        mobileImageUrl: '/images/food_trucks_cover_v29_mobile.webp',
+        internalImageUrl: '/images/food_trucks_internal_v26.png',
+        category: 'Lazer',
+        categoryColor: 'yellow',
+        publishDate: '2026-01-04', // Mantendo hoje para destaque
+        author: 'Guia Curitiba'
     },
     {
         id: 3003,
@@ -646,7 +734,6 @@ export const newsArticles: NewsArticle[] = [
         publishDate: '2025-12-01',
         author: 'Tempo Agora'
     },
-
     {
         id: 109, // Novo ID para o Ginásio
         title: 'Ginásio Joval de Paula Souza será reformado',
@@ -666,27 +753,6 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/gym_interior_renovation.png',
         publishDate: '2025-11-28',
         author: 'Esporte News'
-    },
-    {
-        id: 9999,
-        title: 'Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>',
-        summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
-        content: `
-            <p>A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana. A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
-
-            <p>Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
-
-            <p>A movimentação não se restringe apenas ao <strong>Centro</strong>. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação</strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato. Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
-
-            <p>Para quem vem de mais longe, como do <strong>Jardim Iguaçu</strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
-        `,
-        imageUrl: '/images/food_trucks_cover_v29.png',
-        mobileImageUrl: '/images/food_trucks_cover_v29_mobile.webp',
-        internalImageUrl: '/images/food_trucks_internal_v26.png',
-        category: 'Lazer',
-        categoryColor: 'yellow',
-        publishDate: '2026-01-04', // Mantendo hoje para destaque
-        author: 'Guia Curitiba'
     },
     {
         id: 6,
@@ -1230,6 +1296,22 @@ export const newsArticles: NewsArticle[] = [
         author: 'EcoAção'
     },
     {
+        id: 43,
+        title: 'Festa Junina das escolas municipais reúne famílias',
+        summary: 'Arraiás levam cor, dança e tradição para os bairros, integrando escola e comunidade.',
+        content: `
+            <p>Não faltou quentão (sem álcool!), pipoca e muito xadrez nas escolas municipais neste sábado. O tradicional "Arraiá da Educação" mobilizou todas as unidades da rede em uma grande celebração da cultura caipira.</p>
+            
+            <p>No <strong>CAIC</strong>, a festa reuniu mais de 3 mil pessoas. A renda das barracas, comandadas por pais voluntários, tem destino certo: será reinvestida na compra de equipamentos de som e jogos pedagógicos para os alunos. "A escola viva é isso: portão aberto e comunidade dentro", celebrou a diretora.</p>
+        `,
+        imageUrl: '/images/festa_junina_real_cover.webp',
+        category: 'Educação',
+        categoryColor: 'red',
+        internalImageUrl: '/images/festa_junina_inner_real_final.jpg',
+        publishDate: '2025-06-24',
+        author: 'Educação Viva'
+    },
+    {
         id: 35,
         title: 'Araucária sedia encontro de carros antigos',
         summary: 'Relíquias sobre rodas transformam o Centro Cívico em um museu a céu aberto.',
@@ -1247,44 +1329,6 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/carros_antigos_internal_v2.png',
         publishDate: '2025-06-20',
         author: 'Motor News'
-    },
-    {
-        id: 36,
-        title: 'Prefeitura alerta para o prazo do IPTU',
-        summary: 'Investimento revertido: entenda como o imposto se transforma em obras nos bairros.',
-        content: `
-            <p>A Secretaria de Finanças emitiu um alerta importante: o prazo para pagamento da cota única do IPTU, com desconto de 15%, encerra-se no próximo dia 10. Embora o tema tributário seja árido, é fundamental entender o destino desses recursos.</p>
-            
-            <p>"O IPTU não é apenas uma cobrança, é o combustível das melhorias. O asfalto novo que chegou no <strong>Jardim Costeira</strong> e a reforma da creche no <strong>Tupy</strong> foram pagos diretamente com esse dinheiro", explica a secretária da pasta.</p>
-
-            <h3>Facilidade Digital</h3>
-            <p>Para evitar filas na Prefeitura, o contribuinte pode emitir a guia diretamente pelo aplicativo "Araucária Digital" ou pelo site oficial. A inadimplência reduz a capacidade de investimento da cidade, por isso, manter o imposto em dia é um ato de cidadania que volta em forma de qualidade de vida para o seu próprio bairro.</p>
-        `,
-        imageUrl: '/images/iptu_real_final_v2.png',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/iptu_real_queue_final.jpg',
-        publishDate: '2025-02-05',
-        author: 'Finanças em Dia'
-    },
-    {
-        id: 37,
-        title: 'Novos horários de ônibus começam a valer segunda-feira',
-        summary: 'CMTC amplia frota nas linhas Tupy e Costeira para reduzir lotação nos horários de pico.',
-        content: `
-            <p>A partir desta segunda-feira, quem utiliza o transporte coletivo para trabalhar ou estudar sentirá a diferença. A CMTC anunciou um reforço estratégico na frota das linhas <strong>Tupy/Pinheiros</strong> e <strong>Costeira/D.E.R</strong>, historicamente as mais carregadas nos horários de pico.</p>
-            
-            <p>A medida adiciona quatro novos veículos articulados no "entre-picos" (das 17h às 19h), visando reduzir a lotação e oferecer mais dignidade ao trabalhador que retorna para casa. "A gente viajava espremido na porta. Agora, com ônibus a cada 10 minutos, a expectativa é conseguir ir sentado", comenta Maria de Lurdes, moradora do <strong>Jardim Tupy</strong> e usuária diária.</p>
-
-            <h3>Integração Inteligente</h3>
-            <p>Outra novidade é a sincronização com os tubos da linha metropolitana em direção a Curitiba. O objetivo é diminuir o tempo de espera na conexão do Terminal Central, beneficiando centenas de estudantes universitários que se deslocam para a capital à noite.</p>
-        `,
-        imageUrl: '/images/bus_schedule_main.png',
-        category: 'Cidade',
-        categoryColor: 'gray',
-        internalImageUrl: '/images/bus_schedule_real_final_v5.png',
-        publishDate: '2025-01-20',
-        author: 'Mobilidade Urbana'
     },
     {
         id: 38,
@@ -1356,6 +1400,22 @@ export const newsArticles: NewsArticle[] = [
         author: 'Arte em Foco'
     },
     {
+        id: 45,
+        title: 'Jogos Escolares de Araucária começam nesta sexta',
+        summary: 'Ginásio do CSU recebe a tocha olímpica e dá início à maior competição estudantil da cidade.',
+        content: `
+            <p>O espírito olímpico já está no ar. Mais de 2 mil alunos-atletas de escolas públicas e particulares se reúnem nesta sexta-feira no Ginásio do <strong>CSU</strong> para a abertura oficial dos Jogos Escolares de Araucária (JEA).</p>
+            
+            <p>Serão 10 dias de competições em modalidades como futsal, vôlei, basquete e atletismo. Além das medalhas, está em jogo a vaga para a fase regional. "O esporte ensina ganhar e perder, ensina respeito. É a sala de aula mais dinâmica que existe", afirma o Secretário de Esportes. A entrada para assistir aos jogos é gratuita em todos os ginásios.</p>
+        `,
+        imageUrl: '/images/jea_real_final_v2.webp',
+        category: 'Esporte',
+        categoryColor: 'green',
+        internalImageUrl: '/images/school_games_torch_internal.jpg',
+        publishDate: '2025-02-25',
+        author: 'Esporte na Escola'
+    },
+    {
         id: 42,
         title: 'UBS do Califórnia terá horário estendido',
         summary: 'Atendimento noturno até as 22h beneficia trabalhadores que não podem faltar ao serviço.',
@@ -1373,20 +1433,42 @@ export const newsArticles: NewsArticle[] = [
         author: 'Saúde Agora'
     },
     {
-        id: 43,
-        title: 'Festa Junina das escolas municipais reúne famílias',
-        summary: 'Arraiás levam cor, dança e tradição para os bairros, integrando escola e comunidade.',
+        id: 36,
+        title: 'Prefeitura alerta para o prazo do IPTU',
+        summary: 'Investimento revertido: entenda como o imposto se transforma em obras nos bairros.',
         content: `
-            <p>Não faltou quentão (sem álcool!), pipoca e muito xadrez nas escolas municipais neste sábado. O tradicional "Arraiá da Educação" mobilizou todas as unidades da rede em uma grande celebração da cultura caipira.</p>
+            <p>A Secretaria de Finanças emitiu um alerta importante: o prazo para pagamento da cota única do IPTU, com desconto de 15%, encerra-se no próximo dia 10. Embora o tema tributário seja árido, é fundamental entender o destino desses recursos.</p>
             
-            <p>No <strong>CAIC</strong>, a festa reuniu mais de 3 mil pessoas. A renda das barracas, comandadas por pais voluntários, tem destino certo: será reinvestida na compra de equipamentos de som e jogos pedagógicos para os alunos. "A escola viva é isso: portão aberto e comunidade dentro", celebrou a diretora.</p>
+            <p>"O IPTU não é apenas uma cobrança, é o combustível das melhorias. O asfalto novo que chegou no <strong>Jardim Costeira</strong> e a reforma da creche no <strong>Tupy</strong> foram pagos diretamente com esse dinheiro", explica a secretária da pasta.</p>
+
+            <h3>Facilidade Digital</h3>
+            <p>Para evitar filas na Prefeitura, o contribuinte pode emitir a guia diretamente pelo aplicativo "Araucária Digital" ou pelo site oficial. A inadimplência reduz a capacidade de investimento da cidade, por isso, manter o imposto em dia é um ato de cidadania que volta em forma de qualidade de vida para o seu próprio bairro.</p>
         `,
-        imageUrl: '/images/festa_junina_real_cover.webp',
-        category: 'Educação',
-        categoryColor: 'red',
-        internalImageUrl: '/images/festa_junina_inner_real_final.jpg',
-        publishDate: '2025-06-24',
-        author: 'Educação Viva'
+        imageUrl: '/images/iptu_real_final_v2.png',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: '/images/iptu_real_queue_final.jpg',
+        publishDate: '2025-02-05',
+        author: 'Finanças em Dia'
+    },
+    {
+        id: 37,
+        title: 'Novos horários de ônibus começam a valer segunda-feira',
+        summary: 'CMTC amplia frota nas linhas Tupy e Costeira para reduzir lotação nos horários de pico.',
+        content: `
+            <p>A partir desta segunda-feira, quem utiliza o transporte coletivo para trabalhar ou estudar sentirá a diferença. A CMTC anunciou um reforço estratégico na frota das linhas <strong>Tupy/Pinheiros</strong> e <strong>Costeira/D.E.R</strong>, historicamente as mais carregadas nos horários de pico.</p>
+            
+            <p>A medida adiciona quatro novos veículos articulados no "entre-picos" (das 17h às 19h), visando reduzir a lotação e oferecer mais dignidade ao trabalhador que retorna para casa. "A gente viajava espremido na porta. Agora, com ônibus a cada 10 minutos, a expectativa é conseguir ir sentado", comenta Maria de Lurdes, moradora do <strong>Jardim Tupy</strong> e usuária diária.</p>
+
+            <h3>Integração Inteligente</h3>
+            <p>Outra novidade é a sincronização com os tubos da linha metropolitana em direção a Curitiba. O objetivo é diminuir o tempo de espera na conexão do Terminal Central, beneficiando centenas de estudantes universitários que se deslocam para a capital à noite.</p>
+        `,
+        imageUrl: '/images/bus_schedule_main.png',
+        category: 'Cidade',
+        categoryColor: 'gray',
+        internalImageUrl: '/images/bus_schedule_real_final_v5.png',
+        publishDate: '2025-01-20',
+        author: 'Mobilidade Urbana'
     },
     {
         id: 44,
@@ -1404,22 +1486,6 @@ export const newsArticles: NewsArticle[] = [
         publishDate: '2025-01-15',
         author: 'Memória Viva'
     },
-    {
-        id: 45,
-        title: 'Jogos Escolares de Araucária começam nesta sexta',
-        summary: 'Ginásio do CSU recebe a tocha olímpica e dá início à maior competição estudantil da cidade.',
-        content: `
-            <p>O espírito olímpico já está no ar. Mais de 2 mil alunos-atletas de escolas públicas e particulares se reúnem nesta sexta-feira no Ginásio do <strong>CSU</strong> para a abertura oficial dos Jogos Escolares de Araucária (JEA).</p>
-            
-            <p>Serão 10 dias de competições em modalidades como futsal, vôlei, basquete e atletismo. Além das medalhas, está em jogo a vaga para a fase regional. "O esporte ensina ganhar e perder, ensina respeito. É a sala de aula mais dinâmica que existe", afirma o Secretário de Esportes. A entrada para assistir aos jogos é gratuita em todos os ginásios.</p>
-        `,
-        imageUrl: '/images/jea_real_final_v2.webp',
-        category: 'Esporte',
-        categoryColor: 'green',
-        internalImageUrl: '/images/school_games_torch_internal.jpg',
-        publishDate: '2025-02-25',
-        author: 'Esporte na Escola'
-    }
 ];
 
 export const events: Event[] = [

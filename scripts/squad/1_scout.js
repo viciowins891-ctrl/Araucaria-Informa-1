@@ -58,20 +58,12 @@ export async function runScout(count = 1) {
         console.error("   ❌ Erro geral no Scout RSS:", e);
     }
 
-    // Se achou pouco, completa com Mock
+    // MOCK DESATIVADO: Modo "Strict Truth"
     if (foundItems.length < count) {
-        console.log(`   📉 Apenas ${foundItems.length} notícias reais encontradas. Completando com simulação...`);
-        const needed = count - foundItems.length;
-        const shuffled = MOCK_PAUTAS.sort(() => 0.5 - Math.random()).slice(0, needed);
-
-        const mockConverted = shuffled.map(p => ({
-            title: p.title,
-            content: p.content, // Mock content is plain text description
-            link: "http://localhost:3001", // Fake link
-            pubDate: new Date().toISOString()
-        }));
-
-        foundItems.push(...mockConverted);
+        console.log(`   📉 Apenas ${foundItems.length} notícias reais encontradas.`);
+        if (foundItems.length === 0) {
+            console.warn("   ⚠️ Nenhuma notícia real encontrada nos feeds oficiais.");
+        }
     }
 
     // Limitar e Formatar para o Editor
