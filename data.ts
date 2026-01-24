@@ -313,28 +313,6 @@ export const newsArticles: NewsArticle[] = [
         author: 'Redação Squad'
     },
     {
-        id: 1769111830,
-        title: 'Araucária Vôlei vence em casa e assume a liderança',
-        summary: 'ARAUCÁRIA - Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1. A torcida lotou as ar...',
-        content: `
-            
-        <p><strong>ARAUCÁRIA</strong> - Em uma partida eletrizante no Ginásio Joval de Paula Souza, o time da casa venceu o Maringá por 3 sets a 1. A torcida lotou as arquibancadas e empurrou a equipe rumo à liderança do paranaense.</p>
-        
-        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>
-
-        <h3>Impacto Local</h3>
-        <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
-    
-        `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=54684',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=54684', // Fallback seguro
-        category: 'Esporte',
-        categoryColor: 'indigo',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20volleyball%20match%20action%20inside%20gymnasium%2C%20players%20jumping%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=56710',
-        publishDate: '2026-01-22',
-        author: 'Redação Squad'
-    },
-    {
         id: 1769112488,
         title: 'Novo semáforo inteligente entra em operação na Archelau',
         summary: 'ARAUCÁRIA - Motoristas que trafegam pela Av. Archelau de Almeida Torres devem ficar atentos. O novo sistema semafórico inteligente, que ajust...',
