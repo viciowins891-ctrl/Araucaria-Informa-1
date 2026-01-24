@@ -32,11 +32,11 @@ export const newsArticles: NewsArticle[] = [
         title: "Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná - fappr.pr.gov.br",
         summary: "\n        ARAUCÁRIA - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br\n        \n        A inic...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Fundação Araucária investe R$ 53,1 milhões no fortalecimento de INCTs sediados no Paraná  fappr.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=98594',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=98594', // Fallback seguro
+        imageUrl: '/images/fundacao-araucaria-investimento-capa.jpg',
+        mobileImageUrl: '/images/fundacao-araucaria-investimento-capa.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=42688',
+        internalImageUrl: '/images/fundacao-araucaria-investimento-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
