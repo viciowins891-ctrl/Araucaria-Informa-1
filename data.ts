@@ -184,8 +184,8 @@ export const newsArticles: NewsArticle[] = [
                                 <h3> Impacto Regional </h3>
                                     <p> O IFPR Araucária é referência em ensino técnico na região, oferecendo cursos gratuitos de qualidade em áreas como Informática, Eletrônica, Mecânica e Administração.A ampliação da infraestrutura deve atrair mais investimentos educacionais para o município, consolidando Araucária como polo de educação profissional no Paraná.</p>
                                         `,
-        imageUrl: '/images/ifpr-obras-capa.png',
-        mobileImageUrl: '/images/ifpr-obras-capa.png',
+        imageUrl: '/images/ifpr-pedreiro.png',
+        mobileImageUrl: '/images/ifpr-pedreiro.png',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/ifpr-obras-interna.png',
