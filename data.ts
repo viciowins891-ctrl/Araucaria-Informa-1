@@ -114,11 +114,11 @@ export const newsArticles: NewsArticle[] = [
         title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
         summary: "\n        ARAUCÁRIA - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br\n        \n        A iniciativa visa atender...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Primeira unidade de rua: governador inaugura Poupatempo de Araucária  parana.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/modern%20public%20service%20building%20facade%2C%20people%20entering%2C%20glass%20windows%2C%20citizens%20getting%20documents%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=55123',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/modern%20public%20service%20building%20facade%2C%20people%20entering%2C%20glass%20windows%2C%20citizens%20getting%20documents%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=55123', // Fallback seguro
+        imageUrl: '/images/poupatempo-araucaria-capa.jpg',
+        mobileImageUrl: '/images/poupatempo-araucaria-capa.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/interior%20of%20modern%20public%20service%20office%2C%20attendants%20helping%20citizens%2C%20desks%2C%20computers%2C%20Queue%20management%20system%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=77441',
+        internalImageUrl: '/images/poupatempo-araucaria-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
