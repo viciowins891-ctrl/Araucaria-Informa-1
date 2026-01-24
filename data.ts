@@ -88,11 +88,11 @@ export const newsArticles: NewsArticle[] = [
         title: "Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR) - Agência Petrobras de Notícias",
         summary: "\n        ARAUCÁRIA - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias\n        \n        A iniciativa...",
         content: "\n        <p><strong>ARAUCÁRIA</strong> - Petrobras produz primeiro lote de ARLA 32 na Ansa, em Araucária (PR)  Agência Petrobras de Notícias</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16917',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=16917', // Fallback seguro
+        imageUrl: '/images/petrobras-arla32-capa.png',
+        mobileImageUrl: '/images/petrobras-arla32-capa.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20road%20construction%20workers%2C%20asphalt%20pairing%20machine%2C%20heavy%20machinery%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=61916',
+        internalImageUrl: '/images/petrobras-arla32-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
