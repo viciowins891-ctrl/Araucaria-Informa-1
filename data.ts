@@ -270,7 +270,7 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 1769112488,
         title: 'Novo semáforo inteligente entra em operação na Archelau',
-        summary: 'ARAUCÁRIA - Motoristas que trafegam pela Av.Archelau de Almeida Torres devem ficar atentos.O novo sistema semafórico inteligente, que ajust...',
+        summary: 'ARAUCÁRIA - Motoristas que trafegam pela Av. Archelau de Almeida Torres devem ficar atentos. O novo sistema semafórico inteligente, que ajust...',
         content: `
             
         <p><strong>ARAUCÁRIA</strong> - Motoristas que trafegam pela Av. Archelau de Almeida Torres devem ficar atentos. O novo sistema semafórico inteligente, que ajusta o tempo conforme o fluxo, começou a operar hoje visando reduzir congestionamentos.</p>
@@ -281,11 +281,11 @@ export const newsArticles: NewsArticle[] = [
         <p>"É uma mudança significativa para nossa comunidade", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>
     
         `,
-        imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=66753',
-        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=66753', // Fallback seguro
+        imageUrl: '/images/semaforo-archelau-capa.png',
+        mobileImageUrl: '/images/semaforo-archelau-capa.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20traffic%20jam%20city%20street%2C%20cars%20waiting%2C%20urban%20chaos%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=43855',
+        internalImageUrl: '/images/semaforo-archelau-interna.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
