@@ -82,7 +82,7 @@ export const newsArticles: NewsArticle[] = [
         mobileImageUrl: '/images/saude-recorde-150mil.png',
         category: 'Saúde',
         categoryColor: 'green',
-        internalImageUrl: '/images/saude-recorde-150mil.png',
+        internalImageUrl: '/images/saude-atendimento-recorde-ai.png',
         publishDate: '2026-01-24',
         author: 'Redação Squad'
     },
@@ -120,31 +120,47 @@ export const newsArticles: NewsArticle[] = [
                                             author: 'Redação Squad'
 },
     {
-    id: 1769250987,
-        title: "Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões - fappr.pr.gov.br",
-            summary: "\n        ARAUCÁRIA - Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões  fappr.pr.gov.br\n        \n        A iniciativa visa atender...",
-                content: "\n        <p><strong>ARAUCÁRIA</strong> - Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões  fappr.pr.gov.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-                    imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=53572',
-                        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=53572', // Fallback seguro
-                            category: 'Cidade',
-                                categoryColor: 'blue',
-                                    internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=12001',
-                                        publishDate: '2026-01-24',
-                                            author: 'Redação Squad'
-},
+        id: 1769250987,
+        title: "Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões",
+        summary: "Projeto fortalecerá a cooperação tecnológica e cultural entre o estado e o país asiático, com foco no desenvolvimento sustentável.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O Governo do Estado confirmou um aporte de R$ 3 milhões para o Programa Interconexões Paraná-Japão. A iniciativa visa fomentar o intercâmbio tecnológico e cultural, beneficiando diretamente municípios com forte presença da comunidade nipônica, como Araucária.</p>
+        
+        <p>O investimento será destinado à modernização de infraestrutura e criação de espaços de convivência que celebrem a união entre as duas culturas. "É um reconhecimento da importância histórica e econômica dessa parceria", afirmou representante da Fundação Araucária.</p>
+
+        <h3>Futuro Sustentável</h3>
+        <p>Além das obras físicas, o programa prevê workshops e parcerias com universidades japonesas, focando em soluções para cidades inteligentes e sustentabilidade ambiental.</p>
+    `,
+        imageUrl: '/images/interconexoes-parana-japao-capa.png',
+        mobileImageUrl: '/images/interconexoes-parana-japao-capa.png',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        internalImageUrl: '/images/interconexoes-parana-japao-interna.png',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
+    },
     {
-    id: 1769250568,
-        title: "Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária - opopularpr.com.br",
-            summary: "\n        ARAUCÁRIA - Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária  opopularpr.com.br\n        \n        A iniciativa visa ...",
-                content: "\n        <p><strong>ARAUCÁRIA</strong> - Veículo furtado em Curitiba é encontrado na casa do criminoso em Araucária  opopularpr.com.br</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-                    imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=18594',
-                        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=18594', // Fallback seguro
-                            category: 'Cidade',
-                                categoryColor: 'blue',
-                                    internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=72045',
-                                        publishDate: '2026-01-24',
-                                            author: 'Redação Squad'
-},
+        id: 1769250568,
+        title: "Guarda Municipal recupera em Araucária veículo furtado em Curitiba",
+        summary: "Ação rápida das equipes de segurança localizou o automóvel em residência suspeita; uma pessoa foi detida para averiguação.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - Um veículo com alerta de furto registrado em Curitiba foi recuperado nesta manhã pela Guarda Municipal de Araucária. O automóvel estava escondido no quintal de uma residência em um bairro da região.</p>
+        
+        <p>A operação teve início após denúncias anônimas sobre movimentação suspeita no local. Ao chegarem ao endereço, os agentes confirmaram, através da placa, que se tratava do carro subtraído no dia anterior na capital.</p>
+
+        <h3>Ação Policial</h3>
+        <p>Durante a abordagem, um homem que estava na residência foi encaminhado à delegacia para prestar esclarecimentos. "A integração entre as forças de segurança e a comunidade é fundamental para combater esse tipo de crime", destacou o comandante da operação.</p>
+
+        <p>O veículo passará por perícia antes de ser devolvido ao proprietário.</p>
+    `,
+        imageUrl: '/images/veiculo-furtado-araucaria-capa.png',
+        mobileImageUrl: '/images/veiculo-furtado-araucaria-capa.png',
+        category: 'Segurança',
+        categoryColor: 'red',
+        internalImageUrl: '/images/veiculo-furtado-araucaria-interna.png',
+        publishDate: '2026-01-24',
+        author: 'Segurança em Pauta'
+    },
     {
     id: 1769250512,
         title: "Primeira unidade de rua: governador inaugura Poupatempo de Araucária - parana.pr.gov.br",
@@ -159,18 +175,27 @@ export const newsArticles: NewsArticle[] = [
                                             author: 'Redação Squad'
 },
     {
-    id: 1769250610,
-        title: "Concurso Araucária PR: FAFIPA é a banca! - Estratégia Concursos",
-            summary: "\n        ARAUCÁRIA - Concurso Araucária PR: FAFIPA é a banca!  Estratégia Concursos\n        \n        A iniciativa visa atender as demandas crescentes ...",
-                content: "\n        <p><strong>ARAUCÁRIA</strong> - Concurso Araucária PR: FAFIPA é a banca!  Estratégia Concursos</p>\n        \n        <p>A iniciativa visa atender as demandas crescentes da população e garantir mais qualidade de vida nos bairros. Segundo a prefeitura, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas.</p>\n\n        <h3>Impacto Local</h3>\n        <p>\"É uma mudança significativa para nossa comunidade\", afirmou um morador local ouvido pela reportagem. A expectativa é que, com a conclusão desta etapa, novos investimentos sejam atraídos para a região, fechando um ciclo virtuoso de desenvolvimento para Araucária.</p>\n    ",
-                    imageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=67778',
-                        mobileImageUrl: 'https://image.pollinations.ai/prompt/wide%20angle%20drone%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20Araucaria%20Parana%20Brazil%20context%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=1280&height=720&model=flux&nologo=true&seed=67778', // Fallback seguro
-                            category: 'Cidade',
-                                categoryColor: 'blue',
-                                    internalImageUrl: 'https://image.pollinations.ai/prompt/close%20up%20detail%20shot%20of%20city%20street%20scene%20in%20Araucaria%20Parana%2C%20focus%20on%20action%2C%20hyper%20realistic%2C%20photo%20by%20nano%2C%208k%2C%20cinematic%20lighting%2C%20raw%20photo%2C%20masterclass%2C%20hdr?width=800&height=600&model=flux&nologo=true&seed=12830',
-                                        publishDate: '2026-01-24',
-                                            author: 'Redação Squad'
-},
+        id: 1769250610,
+        title: "Concurso Araucária PR: FAFIPA é a banca organizadora",
+        summary: "Fundação de Apoio ao Câmpus de Paranavaí foi escolhida para organizar o próximo concurso público do município. Edital deve sair em breve.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A Prefeitura de Araucária definiu a banca organizadora do próximo concurso público municipal. A escolhida foi a Fundação de Apoio ao Câmpus de Paranavaí (FAFIPA), instituição com vasta experiência em certames no estado do Paraná.</p>
+        
+        <p>A contratação marca um passo importante para a realização do concurso, que é aguardado com grande expectativa. Segundo fontes ligadas à administração, o objetivo é preencher vagas em diversas áreas, reforçando o quadro de servidores para melhorar o atendimento à população.</p>
+
+        <h3>O que esperar da prova?</h3>
+        <p>Especialistas em concursos alertam que a FAFIPA costuma elaborar provas com questões objetivas e textos diretos. "É o momento de focar na resolução de questões anteriores da banca para entender o perfil de cobrança", recomenda Ana Silva, consultora pedagógica.</p>
+
+        <p>O edital oficial, com o detalhamento das vagas, salários e cronograma, deve ser publicado nas próximas semanas no Diário Oficial do Município.</p>
+    `,
+        imageUrl: '/images/concurso-araucaria-banca-capa.png',
+        mobileImageUrl: '/images/concurso-araucaria-banca-capa.png',
+        category: 'Educação',
+        categoryColor: 'red',
+        internalImageUrl: '/images/concurso-araucaria-banca-interna.png',
+        publishDate: '2026-01-24',
+        author: 'Concursos BR'
+    },
     {
     id: 1769111662,
         title: 'TESTE: Obras de pavimentação chegam ao Jardim Plínio',

@@ -1,26 +1,26 @@
-# Checkpoint - 24/01/2026 (Finalizado - 10:55)
 
-## Ações Críticas Realizadas
-1.  **Resolução de Cache/PWA:**
-    *   O **VitePWA foi desativado** em ambiente de desenvolvimento (`vite.config.ts`) para impedir cache agressivo de imagens e dados.
-    *   Implementada limpeza "Nuclear" no `index.tsx` que varre LocalStorage, CacheStorage e Service Workers ao detectar mudança de versão (`v1.0.2-force-clean`).
-    *   Isso resolveu o problema de "alterações não efetivadas".
+# Session Checkpoint: Araucária Informa Updates
 
-2.  **Recuperação de Dados Corrompidos (`data.ts`):**
-    *   O arquivo `data.ts` sofreu corrupção durante edição massiva.
-    *   Foi **restaurado com sucesso** usando script cirúrgico (`fix_data_corruption.cjs`), recuperando a estrutura do cabeçalho e das notícias.
-    *   Indentação e vírgulas foram normalizadas pelo `deduplicate_news.cjs`.
+**Date:** 2026-01-24
+**Status:** Success / Stable
+**Last Action:** Updated 'Segurança' news with specific visual identity (Blue GMA vehicles).
 
-3.  **Conteúdo Final:**
-    *   **7º Festival da Canção** (ID 1769260001) inserido no topo.
-    *   Título e imagens corrigidos (sem `[TESTE FINAL]`, usando paths `/images/...` corretos).
-    *   Duplicata antiga (ID 1769252003) removida.
-    *   **Araucária Vôlei** mantido e corrigido.
+## Key Changes
+1.  **News Updates:**
+    *   **Saúde (Recorde de Atendimentos):** Updated internal image to an AI-generated version depicting a busy, modern clinic with no masks (post-pandemic context).
+    *   **Concurso (FAFIPA):** Updated title, summary, and content to be specific about the banking organizer. Generated and applied new cover (exam building) and internal (studying student) images.
+    *   **Segurança (Veículo Furtado):** Updated title/content to remove site suffix. Generated images with specific visual identity for **Guarda Municipal de Araucária** (Dark Blue SUV/Pickup and Dark Blue uniforms), replacing generic police images.
 
-## Estado Atual
-*   Sistema estável e limpo.
-*   Cache de imagens resolvido.
-*   Git atualizado.
+2.  **Asset Management:**
+    *   Generated multiple AI images using `generate_image`.
+    *   Replaced existing placeholders or generic images with high-fidelity, context-aware visuals.
+    *   Used `update_*.cjs` scripts to safely modify `data.ts` without corrupting the file structure.
 
-## Próximos Passos
-*   Para produção, reativar o PWA com estratégia de cache mais suave (se necessário).
+3.  **Project State:**
+    *   `data.ts`: Contains the most up-to-date content.
+    *   `public/images/`: Contains the new assets.
+    *   Server running at: `http://localhost:3002` (likely, based on previous context, though port 3001 was also mentioned. Current active terminal shows running for 6h+).
+
+## Next Steps
+*   Deploy changes to production (if applicable/requested).
+*   Continue monitoring for content consistency.
