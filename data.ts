@@ -69,8 +69,8 @@ export const newsArticles: NewsArticle[] = [
         <h3>Rede Unificada</h3>
         <p>O diferencial do projeto é a abrangência: escolas municipais, estaduais e até particulares participarão da rede de proteção, criando um cinturão de segurança em todo o município.</p>
         `,
-        imageUrl: '/images/crianca-segura-capa.png',
-        mobileImageUrl: '/images/crianca-segura-capa.png',
+        imageUrl: '/images/crianca-segura-final.png', // TRAVA: IMAGEM MANUAL
+        mobileImageUrl: '/images/crianca-segura-final.png',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/crianca-segura-botao-interna.png',
@@ -163,8 +163,8 @@ export const newsArticles: NewsArticle[] = [
             <h3>Mobilidade Urbana</h3>
             <p>A pavimentação deve facilitar também o acesso de serviços essenciais, como ambulâncias e coleta de lixo. A previsão da Secretaria de Obras é entregar as ruas prontas em até 60 dias, se as condições climáticas ajudarem.</p>
             `,
-        imageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
-        mobileImageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
+        imageUrl: '/images/pavimentacao-jardim-plinio-final.png', // TRAVA: IMAGEM MANUAL
+        mobileImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         internalImageUrl: '/images/pavimentacao-interiror-faixa.png',
@@ -188,7 +188,6 @@ export const newsArticles: NewsArticle[] = [
         mobileImageUrl: '/images/ifpr-obras-capa.png',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/ifpr-pedreiro.png',
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -238,11 +237,11 @@ export const newsArticles: NewsArticle[] = [
             <h3>Oportunidade</h3>
             <p>"Estou desempregado há seis meses, essa é a minha chance de voltar ao mercado", contou João Paulo, morador do <strong>Fazenda Velha</strong>, enquanto aguardava a entrevista. As empresas realizam a triagem e algumas contratações já saem certas no mesmo dia.</p>
             `,
-        imageUrl: '/images/feirao-empregos-ciar-capa.png',
+        imageUrl: '/images/feirao-empregos-ciar-capa.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/feirao-empregos-ciar-capa.png',
         category: 'Economia',
         categoryColor: 'blue',
-        internalImageUrl: '/images/feirao-empregos-ciar-interna.png',
+        internalImageUrl: '/images/feirao-empregos-ciar-interna.png', // TRAVA: IMAGEM MANUAL
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },
@@ -274,11 +273,11 @@ export const newsArticles: NewsArticle[] = [
             <h3>Modernização Viária</h3>
             <p>A tecnologia, que utiliza sensores e câmeras, deve ser expandida em breve para a <strong>Rodovia do Xisto</strong> e outras artérias importantes da cidade. "É mais qualidade de vida para quem antes perdia tempo parado no trânsito", destaca o diretor de Trânsito.</p>
             `,
-        imageUrl: '/images/semaforo-archelau-capa.png',
-        mobileImageUrl: '/images/semaforo-archelau-capa.png',
+        imageUrl: '/images/semaforo-archelau-v2-capa.png', // TRAVA: IMAGEM MANUAL DEFINIDA PELO USUARIO
+        mobileImageUrl: '/images/semaforo-archelau-v2-capa.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/semaforo-archelau-interna.png',
+        internalImageUrl: '/images/semaforo-archelau-interno-real.png', // TRAVA: IMAGEM MANUAL
         publishDate: '2026-01-22',
         author: 'Redação Squad'
     },

@@ -15,6 +15,15 @@ export async function runPhotographer(newsDraft) {
         close: ""
     };
 
+    // 0. TRAVA DE SEGURANÇA (GLOBAL LOCK)
+    // Se a imagem atual já for um arquivo local (ex: /images/...) ou tiver a flag de trava, NÃO GERA NOVA.
+    // Isso protege correções manuais do usuário contra sobrescrita automática.
+    if (newsDraft.imageUrl && (newsDraft.imageUrl.startsWith('/') || newsDraft.imageUrl.includes('TRAVA'))) {
+        console.log(`   🔒 IMAGEM TRAVADA/LOCAL DETECTADA: ${newsDraft.imageUrl}`);
+        console.log("   ✋ Sessão fotográfica cancelada para preservar arquivo manual.");
+        return newsDraft;
+    }
+
     // 1. Tentar Inteligência Cognitiva (Gemini)
     try {
         prompts = await generateAiPrompts(newsDraft);
