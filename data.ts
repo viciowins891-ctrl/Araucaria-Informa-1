@@ -1485,7 +1485,7 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/pioneers_homage_inner_real_final.jpg',
         publishDate: '2025-01-15',
         author: 'Memória Viva'
-    },
+    }
 ];
 
 export const events: Event[] = [
@@ -1493,8 +1493,8 @@ export const events: Event[] = [
         id: 1,
         title: 'Festa do Pêssego',
         description: 'A tradicional celebração da colheita com a melhor gastronomia polonesa e shows regionais.',
-        imageUrl: '/images/festa_pessego_real.webp',
-        date: getUpcomingDate(5), // Daqui a 5 dias (Futuro)
+        imageUrl: '/images/placeholder_default.webp',
+        date: getUpcomingDate(5),
         time: '18:00 - 23:00',
         location: '<strong>Parque Cachoeira</strong>'
     },
@@ -1502,8 +1502,8 @@ export const events: Event[] = [
         id: 2,
         title: 'Feira Gastronômica Noturna',
         description: 'Pastel, pierogi e food trucks na praça central. Traga sua família!',
-        imageUrl: '/images/feira_gastronomica_event_cover.jpg',
-        date: getUpcomingDate(2), // Daqui a 2 dias (Futuro Próximo)
+        imageUrl: '/images/placeholder_default.webp',
+        date: getUpcomingDate(2),
         time: '18:00 - 22:00',
         location: 'Praça Central'
     },
@@ -1512,7 +1512,7 @@ export const events: Event[] = [
         title: 'Concerto no Teatro da Praça',
         description: 'Apresentação especial da orquestra municipal com clássicos e música popular brasileira.',
         imageUrl: '/images/coral_municipal_internal_v2.png',
-        date: getUpcomingDate(7), // Daqui a uma semana (Futuro)
+        date: getUpcomingDate(7),
         time: '19:30',
         location: 'Teatro da Praça'
     },

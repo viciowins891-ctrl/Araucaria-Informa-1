@@ -338,22 +338,9 @@ const ArticlePage: React.FC = () => {
                             />
                         )}
 
-                        {/* Imagem Secundária Decorativa */}
-                        {secondaryImage && (
-                            <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
-                                <img
-                                    src={secondaryImage}
-                                    alt={`Imagem ilustrativa - ${article.category}`}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    referrerPolicy="no-referrer"
-                                    onError={(e) => {
-                                        e.currentTarget.style.display = 'none';
-                                        e.currentTarget.parentElement!.style.display = 'none';
-                                    }}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                            </figure>
-                        )}
+                        {/* Imagem Secundária Decorativa - REMOVIDO PARA EVITAR DUPLICIDADE COM CONTEÚDO */}
+                        {/* O usuário prefere controlar imagens via HTML no content ou apenas Hero */}
+
 
 
 
