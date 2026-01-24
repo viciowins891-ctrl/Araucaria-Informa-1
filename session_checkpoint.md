@@ -1,20 +1,21 @@
-# Checkpoint - 24/01/2026 (Atualizado - 09:20)
+# Checkpoint - 24/01/2026 (Finalizado - 09:55)
 
 ## Últimas Alterações Realizadas
-1.  **Correção de Layout (ArticlePage):**
-    *   Removida a injeção automática de `secondaryImage` (imagem interna) logo abaixo do título.
-    *   Isso resolve o problema de duplicação visual (imagem no topo e imagem igual no corpo) relatado no "Festival Tropeiro".
-    *   Agora o layout padrão é: Hero (Capa) -> Conteúdo (Texto + Imagens Manuais).
-2.  **Correção Estrutural (`data.ts`):**
-    *   Restaurada a sintaxe correta entre o fechamento do array `newsArticles` e a abertura de `events`.
-    *   Eventos 1 e 2 (Gastronomia) tiveram imagens resetadas para placeholder a pedido do usuário ("retira a imagem").
-3.  **Atualização de Conteúdo:**
-    *   Notícias do Vôlei e Jardim Plínio confirmadas no topo.
-    *   Imagens atualizadas e renomeadas na pasta `public/images`.
+1.  **Layout Inteligente (`ArticlePage.tsx`):**
+    *   Implementada lógica "Smart Check": O site agora detecta se a imagem interna já existe no corpo do texto (HTML).
+    *   Se existir, o bloco automático é ocultado para evitar duplicação.
+    *   Se não existir, o bloco automático é exibido. Isso padroniza o site todo (Manuais vs Automáticas).
+2.  **Limpeza de Dados (`data.ts`):**
+    *   Detectada e removida notícia duplicada do "Araucária Vôlei" (ID antigo 1769111830) que conflitava com a nova (ID 1769253501).
+    *   Script `deduplicate_news.cjs` criado e executado para garantir limpeza.
+3.  **Conteúdo:**
+    *   Notícias do Vôlei e Jardim Plínio confirmadas e estáveis.
+    *   Imagens de eventos de gastronomia resetadas para placeholder a pedido ("retirar imagem").
 
 ## Estado Atual
-*   Aplicação estável. Layout de artigo padronizado.
-*   Git atualizado com todas as correções.
+*   Aplicação rodando e estável.
+*   Git atualizado e salvo.
+*   Problemas de duplicação visual e de dados resolvidos.
 
 ## Próximos Passos
-*   Aguardar feedback se o "Festival Tropeiro" (ID 9003 ou similar) está exibindo corretamente agora.
+*   Monitorar se novas notícias inseridas manualmente seguem o padrão esperado.
