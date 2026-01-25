@@ -219,8 +219,8 @@ export const newsArticles: NewsArticle[] = [
             <h3>Mutirão de Limpeza</h3>
             <p>No próximo sábado, caminhões da Prefeitura passarão recolhendo móveis velhos, pneus e objetos que possam acumular água. Os moradores devem colocar os materiais na calçada até as 8h da manhã.</p>
             `,
-        imageUrl: '/images/smma-dengue-costeira-capa.jpg',
-        mobileImageUrl: '/images/smma-dengue-costeira-capa.jpg',
+        imageUrl: '/images/smma-dengue-costeira-capa-real.png', // TRAVA: IMAGEM MANUAL
+        mobileImageUrl: '/images/smma-dengue-costeira-capa-real.png',
         category: 'Saúde',
         categoryColor: 'green',
         internalImageUrl: '/images/smma-dengue-costeira-interna.jpg',
@@ -255,8 +255,8 @@ export const newsArticles: NewsArticle[] = [
             <h3>Prevenção</h3>
             <p>A Prefeitura orienta os moradores a cadastrarem seus celulares no sistema de alerta via SMS (envie seu CEP para 40199) para receber avisos meteorológicos em tempo real. O monitoramento continuará até que as chuvas cessem e o nível do rio normalize.</p>
             `,
-        imageUrl: '/images/defesa-civil-rio-iguacu-capa.jpg',
-        mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa.jpg',
+        imageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png', // TRAVA: IMAGEM MANUAL
+        mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
