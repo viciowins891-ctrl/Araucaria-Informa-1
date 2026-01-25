@@ -62,13 +62,11 @@ const ArticlePage: React.FC = () => {
                     setImageError(false);
 
                     // Set Secondary Image (Internal)
-                    // Priority 1: Explicit Internal Image from Data (ONLY if different from cover)
-                    if (currentArticle.internalImageUrl && currentArticle.internalImageUrl !== currentArticle.imageUrl) {
+                    // Show internal image if it exists (regardless of whether it matches the cover)
+                    if (currentArticle.internalImageUrl) {
                         setSecondaryImage(currentArticle.internalImageUrl);
                     } else {
-                        // Priority 2: Smart Secondary Placeholder
-                        // DESATIVADO: Para evitar imagens antigas/repetidas. 
-                        // Agora confiamos apenas na imagem injetada no 'content' pelo backend.
+                        // No internal image available
                         setSecondaryImage('');
                     }
 
@@ -338,8 +336,9 @@ const ArticlePage: React.FC = () => {
                             />
                         )}
 
-                        {/* Imagem Secundária Decorativa (Smart Check: Apenas se NÃO estiver no corpo do texto) */}
-                        {secondaryImage && (!article.content || !article.content.includes(secondaryImage)) && (
+
+                        {/* Imagem Secundária Decorativa */}
+                        {secondaryImage && (
                             <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
                                 <img
                                     src={secondaryImage}
