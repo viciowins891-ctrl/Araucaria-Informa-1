@@ -23,6 +23,8 @@ export interface Event {
     date: string; // Adicionado: Data do evento (ex: 25/12/2025)
     time: string;
     location: string;
+    internalImageUrl?: string; // Imagem interna opcional
+    mobileImageUrl?: string; // Imagem mobile opcional
 }
 
 export interface Business {
@@ -30,6 +32,8 @@ export interface Business {
     name: string;
     category: string;
     imageUrl: string;
+    internalImageUrl?: string; // Imagem interna opcional
+    mobileImageUrl?: string; // Imagem mobile opcional
     address: string;
     phone: string;
     website: string;

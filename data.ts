@@ -49,8 +49,8 @@ export const newsArticles: NewsArticle[] = [
         content: `
         <p><strong>ARAUCÁRIA</strong> - A saúde pública do município alcançou uma marca histórica neste semestre. Segundo dados divulgados hoje pela Secretaria Municipal de Saúde (SMSA), foram realizados mais de 149.186 procedimentos entre janeiro e julho.</p>
         <p>O número representa um aumento de quase 50 mil atendimentos em relação ao mesmo período do ano passado. "É o resultado da ampliação do horário das UBS e da contratação de novos médicos", celebra a secretária da pasta.</p>
-        <h3>Foco na Prevenção</h3>
         <p>Além das consultas curativas, o relatório aponta crescimento nos programas de prevenção, como o Hiperdia (hipertensão e diabetes) e pré-natal, garantindo mais qualidade de vida a longo prazo para a população.</p>
+        <p>A movimentação gerada pela ampliação dos atendimentos trouxe vida nova para o entorno das unidades de saúde. Moradores e comerciantes de regiões como <strong>Jardim Iguaçu</strong> e <strong>Fazenda Velha</strong> já sentem a diferença: a circulação constante de pacientes e profissionais aqueceu as vendas em padarias e farmácias locais, além de aumentar a sensação de segurança e valorizar os imóveis próximos a esses equipamentos públicos.</p>
 
     `,
         imageUrl: '/images/saude-recorde-150mil.png',
@@ -66,15 +66,14 @@ export const newsArticles: NewsArticle[] = [
         title: "Araucária lança 'Programa Criança Segura' nas escolas",
         summary: "Iniciativa pioneira visa fortalecer a proteção de crianças e adolescentes nas redes pública e privada de ensino.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A Prefeitura lançou nesta manhã o "Programa Criança Segura", um pacote de medidas para aumentar a segurança nas escolas. A ação integra Guarda Municipal, Polícia Militar e comunidade escolar.</p>
-        <p>O programa inclui a instalação de novos botões de pânico, treinamento para professores e palestras educativas para os alunos sobre segurança digital e comportamento preventivo.</p>
-        <h3>Rede Unificada</h3>
-        <p>O diferencial do projeto é a abrangência: escolas municipais, estaduais e até particulares participarão da rede de proteção, criando um cinturão de segurança em todo o município.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - A Prefeitura oficializou nesta manhã o lançamento do "Programa Criança Segura", uma iniciativa robusta voltada à proteção integral dos estudantes da cidade. O projeto, que integra forças da Guarda Municipal, Polícia Militar e Secretaria de Educação, visa criar um cinturão de segurança no entorno das instituições de ensino, prevenindo incidentes e garantindo tranquilidade para pais e alunos.</p>
+        <p>Uma das principais inovações é a instalação de "botões de pânico" silenciosos em todas as salas de aula e secretarias, conectados diretamente à central de monitoramento da Guarda Municipal (GMA). O tempo de resposta para ocorrências escolares promete cair drasticamente com a nova tecnologia, que já está em fase de testes em colégios do <strong>Jardim Tupy</strong> e <strong>Campina da Barra</strong>, regiões com alta densidade estudantil.</p>
+        <p>Além da tecnologia, o fator humano é central no programa. Professores e pedagogos passarão por treinamentos específicos para identificar sinais de vulnerabilidade e mediar conflitos, enquanto os alunos receberão palestras sobre cidadania e segurança digital. A ação se estende também às famílias, com workshops sobre parentalidade responsável.</p>
+        <p>O impacto da medida já movimenta a rotina nos bairros. No <strong>Capela Velha</strong>, por exemplo, a presença ostensiva das patrulhas escolares nos horários de entrada e saída tem inibido a presença de estranhos e melhorado o trânsito local. Comerciantes próximos às escolas, como donos de vans e papelarias, celebram a iniciativa, percebendo que um ambiente escolar seguro valoriza toda a vizinhança e atrai mais famílias para a região.</p>
     `,
         imageUrl: '/images/crianca-segura-final.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/crianca-segura-final.png',
-        internalImageUrl: '/images/crianca-segura-capa.png',
+        internalImageUrl: '/images/crianca-segura-botao-interna.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-24',
