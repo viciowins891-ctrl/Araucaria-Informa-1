@@ -116,23 +116,20 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 1769250568,
-        title: "Guarda Municipal recupera em Araucária veículo furtado em Curitiba",
-        summary: "Ação rápida das equipes de segurança localizou o automóvel em residência suspeita; uma pessoa foi detida para averiguação.",
+        title: "Campeonato Feminino de Araucária movimenta o Estádio Emílio Gunha",
+        summary: "Competição organizada pela Liga Desportiva reúne equipes locais e fortalece o cenário do futebol feminino na região.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - Um veículo com alerta de furto registrado em Curitiba foi recuperado nesta manhã pela Guarda Municipal de Araucária. O automóvel estava escondido no quintal de uma residência em um bairro da região.</p>
-        <p>A operação teve início após denúncias anônimas sobre movimentação suspeita no local. Ao chegarem ao endereço, os agentes confirmaram, através da placa, que se tratava do carro subtraído no dia anterior na capital.</p>
-        <h3>Ação Policial</h3>
-        <p>Durante a abordagem, um homem que estava na residência foi encaminhado à delegacia para prestar esclarecimentos. "A integração entre as forças de segurança e a comunidade é fundamental para combater esse tipo de crime", destacou o comandante da operação.</p>
-        <p>O veículo passará por perícia antes de ser devolvido ao proprietário.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - O futebol feminino vive um momento de ascensão no município com a realização do Campeonato Amador, promovido pela Liga Desportiva de Araucária com apoio da Secretaria de Esporte e Lazer (SMEL). Os jogos, disputados no tradicional Estádio Municipal Emílio Gunha, têm atraído bom público e revelado novos talentos.</p>
+        <p>Times como <strong>Lobas FC</strong>, <strong>Feras FC</strong>, <strong>Gapar</strong> e <strong>Szymanski</strong> protagonizam disputas acirradas nas noites de terça e quinta-feira. "É mais do que uma competição, é a prova de que nossas atletas merecem espaço e estrutura. O nível técnico tem surpreendido a todos", comenta um dos organizadores.</p>
+        <p>Além de fomentar a prática esportiva, o torneio serve como vitrine. Recentemente, a atleta araucariense Patricia Sieben fez história ao ser a primeira da cidade convocada para a Seleção Paranaense de Fut7, um reflexo direto do fortalecimento da modalidade na região.</p>
     `,
-        imageUrl: '/images/veiculo-furtado-araucaria-capa.png',
-        mobileImageUrl: '/images/veiculo-furtado-araucaria-capa.png',
-        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
-        category: 'Segurança',
-        categoryColor: 'red',
+        imageUrl: '/images/araucaria-lobas-campeas-ai.png',
+        mobileImageUrl: '/images/araucaria-lobas-campeas-ai.png',
+        internalImageUrl: '/images/araucaria-lobas-acao-ai.png',
+        category: 'Esporte',
+        categoryColor: 'indigo',
         publishDate: '2026-01-24',
-        author: 'Segurança em Pauta'
+        author: 'Esporte em Foco'
     },
     {
         id: 1769250610,
