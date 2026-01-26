@@ -101,11 +101,10 @@ export const newsArticles: NewsArticle[] = [
         title: "Programa Interconexões Paraná-Japão terá investimento de R$ 3 milhões",
         summary: "Projeto fortalecerá a cooperação tecnológica e cultural entre o estado e o país asiático, com foco no desenvolvimento sustentável.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O Governo do Estado confirmou um aporte de R$ 3 milhões para o Programa Interconexões Paraná-Japão. A iniciativa visa fomentar o intercâmbio tecnológico e cultural, beneficiando diretamente municípios com forte presença da comunidade nipônica, como Araucária.</p>
-        <p>O investimento será destinado à modernização de infraestrutura e criação de espaços de convivência que celebrem a união entre as duas culturas. "É um reconhecimento da importância histórica e econômica dessa parceria", afirmou representante da Fundação Araucária.</p>
-        <h3>Futuro Sustentável</h3>
-        <p>Além das obras físicas, o programa prevê workshops e parcerias com universidades japonesas, focando em soluções para cidades inteligentes e sustentabilidade ambiental.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - A cooperação internacional entre o Paraná e o Japão ganha um novo capítulo com o aporte confirmado de R$ 3 milhões pelo Governo do Estado. O recurso, liberado através da Secretaria da Ciência, Tecnologia e Ensino Superior, será destinado ao Programa Interconexões, que visa modernizar a infraestrutura cultural e tecnológica em municípios com forte herança nipônica.</p>
+        <p>Em Araucária, o investimento já tem destino certo: a revitalização de espaços públicos que celebram essa parceria histórica. O projeto inclui a construção de novos equipamentos de lazer e convivência, desenhados para integrar a arquitetura moderna com elementos tradicionais japoneses, criando pontos turísticos que valorizam a identidade local.</p>
+        <p>Além do aspecto urbanístico, o programa foca no intercâmbio de conhecimento. "Não estamos falando apenas de obras, mas de construir pontes para o futuro. A ideia é trazer tecnologias de sustentabilidade e *smart cities* desenvolvidas no Japão para aplicar na realidade das nossas cidades", explica um representante da Fundação Araucária.</p>
+        <p>A comunidade japonesa local recebeu a notícia com entusiasmo, vendo no projeto uma oportunidade de manter vivas as tradições e, ao mesmo tempo, inserir o município em uma rota global de inovação.</p>
     `,
         imageUrl: '/images/interconexoes-parana-japao-capa.png',
         mobileImageUrl: '/images/interconexoes-parana-japao-capa.png',
