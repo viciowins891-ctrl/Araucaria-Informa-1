@@ -36,7 +36,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/araucaria-volei-vs-elase-capa_mobile.png',
         mobileImageUrl: '/images/araucaria-volei-vs-elase-capa_mobile.png',
-        internalImageUrl: '/images/araucaria-volei-vs-elase-capa_mobile.png',
+        internalImageUrl: '/images/araucaria_volei_match_action.png',
         category: 'Esporte',
         categoryColor: 'indigo',
         publishDate: '2026-01-24',
@@ -55,7 +55,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/saude-recorde-150mil.png',
         mobileImageUrl: '/images/saude-recorde-150mil.png',
-        internalImageUrl: '/images/saude-recorde-150mil.png',
+        internalImageUrl: '/images/saude_atendimento_interno.png',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2026-01-24',
@@ -74,16 +74,16 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/crianca-segura-final.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/crianca-segura-final.png',
-        internalImageUrl: '/images/crianca-segura-final.png',
+        internalImageUrl: '/images/crianca-segura-capa.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-24',
         author: 'Redação Squad'
     },
-    { 
-        id: 1769250291, 
-        title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br", 
-        summary: "ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie. A iniciativa une preservação e renda.", 
+    {
+        id: 1769250291,
+        title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br",
+        summary: "ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie. A iniciativa une preservação e renda.",
         content: `
         <p><strong>ARAUCÁRIA</strong> - No Dia Nacional da Araucária, o Paraná celebra cinco anos da lei pioneira que regulamenta o plantio e o manejo sustentável da espécie símbolo do estado (<em>Araucaria angustifolia</em>). A legislação tem incentivado produtores rurais a preservarem a árvore através do cultivo comercial e da extração legal do pinhão.</p>
 
@@ -92,14 +92,14 @@ export const newsArticles: NewsArticle[] = [
         <h3>Impacto Local</h3>
         <p>Em Araucária, o reflexo é visível nas propriedades rurais. Famílias de regiões como <strong>Guajuvira</strong> e <strong>Roça Nova</strong> têm investido no plantio de novas mudas, garantindo a perpetuação da espécie e uma fonte de renda extra com a venda de pinhões certificados. "É uma mudança cultural significativa para nossa comunidade", afirmou um produtor local.</p>
 
-    `, 
-        imageUrl: '/images/araucaria-aniversario-lei-capa.png', 
+    `,
+        imageUrl: '/images/araucaria-aniversario-lei-capa.png',
         mobileImageUrl: '/images/araucaria-aniversario-lei-capa.png',
-        internalImageUrl: '/images/araucaria-aniversario-lei-capa.png', 
-        category: 'Cidade', 
-        categoryColor: 'blue', 
-        publishDate: '2026-01-24', 
-        author: 'Redação Squad' 
+        internalImageUrl: '/images/araucaria-volei-spike-interna.png',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '2026-01-24',
+        author: 'Redação Squad'
     },
     {
         id: 1769250987,
@@ -114,7 +114,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/interconexoes-parana-japao-capa.png',
         mobileImageUrl: '/images/interconexoes-parana-japao-capa.png',
-        internalImageUrl: '/images/interconexoes-parana-japao-capa.png',
+        internalImageUrl: '/images/interconexoes-parana-japao-interna.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-24',
@@ -134,7 +134,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/veiculo-furtado-araucaria-capa.png',
         mobileImageUrl: '/images/veiculo-furtado-araucaria-capa.png',
-        internalImageUrl: '/images/veiculo-furtado-araucaria-capa.png',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2026-01-24',
@@ -154,7 +154,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/concurso-araucaria-banca-capa.png',
         mobileImageUrl: '/images/concurso-araucaria-banca-capa.png',
-        internalImageUrl: '/images/concurso-araucaria-banca-capa.png',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-24',
@@ -173,7 +173,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/pavimentacao-jardim-plinio-final.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
-        internalImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
+        internalImageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2026-01-24',
@@ -195,7 +195,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/ifpr-obras-capa.png',
         mobileImageUrl: '/images/ifpr-obras-capa.png',
-        internalImageUrl: '/images/ifpr-obras-capa.png',
+        internalImageUrl: '/images/petrobras-arla32-interna.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-22',
@@ -214,7 +214,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/volta-aulas-kits-capa.png',
         mobileImageUrl: '/images/volta-aulas-kits-capa.png',
-        internalImageUrl: '/images/volta-aulas-kits-capa.png',
+        internalImageUrl: '/images/volta-aulas-kits-interna.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-22',
@@ -233,7 +233,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/smma-dengue-costeira-capa-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/smma-dengue-costeira-capa-real.png',
-        internalImageUrl: '/images/smma-dengue-costeira-capa-real.png',
+        internalImageUrl: '/images/smma-dengue-costeira-capa.jpg',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2026-01-22',
@@ -252,7 +252,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/feirao-empregos-ciar-capa.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/feirao-empregos-ciar-capa.png',
-        internalImageUrl: '/images/feirao-empregos-ciar-capa.png',
+        internalImageUrl: '/images/feirao-empregos-ciar-interna.png',
         category: 'Economia',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
@@ -271,7 +271,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
-        internalImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
+        internalImageUrl: '/images/saneamento-iguacu-interna.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
@@ -290,7 +290,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/semaforo-archelau-v2-capa.png', // TRAVA: IMAGEM MANUAL DEFINIDA PELO USUARIO
         mobileImageUrl: '/images/semaforo-archelau-v2-capa.png',
-        internalImageUrl: '/images/semaforo-archelau-v2-capa.png',
+        internalImageUrl: '/images/archelau_cover_v3.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
@@ -309,7 +309,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/saneamento-iguacu-capa.png',
         mobileImageUrl: '/images/saneamento-iguacu-capa.png',
-        internalImageUrl: '/images/saneamento-iguacu-capa.png',
+        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2026-01-22',
@@ -326,7 +326,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/lixo-zero-manual.png',
         mobileImageUrl: '/images/lixo-zero-manual.png',
-        internalImageUrl: '/images/lixo-zero-manual.png',
+        internalImageUrl: '/images/camara-araucaria-interna-manual.png',
         category: 'Cidade',
         categoryColor: 'green',
         publishDate: '2026-01-22',
@@ -343,7 +343,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/festival-tropeiro-capa-manual.jpg',
         mobileImageUrl: '/images/festival-tropeiro-capa-manual.jpg',
-        internalImageUrl: '/images/festival-tropeiro-capa-manual.jpg',
+        internalImageUrl: '/images/camara-araucaria-interna-manual.png',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: '2026-01-22',
@@ -362,7 +362,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/employment_drop_new_cover.png',
         mobileImageUrl: '/images/employment_drop_new_cover_mobile.webp',
-        internalImageUrl: '/images/employment_drop_new_cover_mobile.webp',
+        internalImageUrl: '/images/araucaria_employment_internal_final_v5.png',
         category: 'Economia',
         categoryColor: 'blue',
         publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
@@ -381,7 +381,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/cinema_cover_real_final_v7.jpg',
         mobileImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
-        internalImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
+        internalImageUrl: '/images/cinema_parque_interno_mobile.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
@@ -400,7 +400,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/food_trucks_cover_v29.png',
         mobileImageUrl: '/images/food_trucks_cover_v29_mobile.webp',
-        internalImageUrl: '/images/food_trucks_internal_v26.png',
+        internalImageUrl: '/images/hospital_delivery_trucks_internal.png',
         category: 'Lazer',
         categoryColor: 'yellow',
         publishDate: '2026-01-04', // Mantendo hoje para destaque
@@ -419,7 +419,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
         mobileImageUrl: '/images/hospital_equipment_araucaria_final_v5_mobile.webp',
-        internalImageUrl: '/images/hospital_equipment_araucaria_final_v5_mobile.webp',
+        internalImageUrl: '/images/hospital_pediatric_ward_interior.png',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2025-12-29',
@@ -443,7 +443,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hortas_escolas_cover_v27.jpg',
         mobileImageUrl: '/images/hortas_escolas_cover_v27_mobile.webp',
-        internalImageUrl: '/images/hortas_escolas_cover_v27_mobile.webp',
+        internalImageUrl: '/images/hortas_escolas_cover.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2025-12-29',
@@ -462,7 +462,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/araucaria_smart_city_final_v8.png',
         mobileImageUrl: '/images/araucaria_smart_city_final_v8_mobile.webp',
-        internalImageUrl: '/images/araucaria_smart_city_internal_collage_final_v5.png',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Tecnologia',
         categoryColor: 'indigo',
         publishDate: '2025-12-29',
@@ -483,7 +483,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/gym_volleyball_final_cover_v5.png',
         mobileImageUrl: '/images/gym_volleyball_final_cover_v5_mobile.webp',
-        internalImageUrl: '/images/gym_volleyball_final_cover_v5_mobile.webp',
+        internalImageUrl: '/images/gym_volleyball_internal_final_v5_mobile.webp',
         category: 'Esporte',
         categoryColor: 'orange',
         publishDate: '2025-12-29',
@@ -502,7 +502,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/cmei_zerando_fila_cover_v4.png', // Imagem real enviada pelo usuário (v4)
         mobileImageUrl: '/images/cmei_zerando_fila_cover_v4.png',
-        internalImageUrl: '/images/cmei_zerando_fila_cover_v4.png',
+        internalImageUrl: '/images/cmei_araucaria_real.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2025-12-20',
@@ -521,7 +521,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         mobileImageUrl: '/images/news_budget_mobile.webp',
-        internalImageUrl: '/images/news_budget_mobile.webp',
+        internalImageUrl: '/images/news_budget.webp',
         category: 'Economia',
         categoryColor: 'blue',
         publishDate: '2025-12-18',
@@ -540,7 +540,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/news_investments.png', // Nova imagem gerada (Nano Banana Pro)
         mobileImageUrl: '/images/news_investments_mobile.webp',
-        internalImageUrl: '/images/news_investments_mobile.webp',
+        internalImageUrl: '/images/news_budget.png',
         category: 'Política',
         categoryColor: 'purple',
         publishDate: '2025-12-12',
@@ -559,7 +559,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/pcpr-drugs-incineration-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/custom_drugs_mobile.webp',
-        internalImageUrl: '/images/custom_drugs_mobile.webp',
+        internalImageUrl: '/images/custom_drugs.jpg',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2025-12-10',
@@ -579,7 +579,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
         categoryColor: 'blue',
-        internalImageUrl: '/images/news_vaccine_pregnant.png',
+        internalImageUrl: '/images/news_vaccination_indoor_campaign.webp',
         publishDate: '2025-12-08',
         author: 'Saúde Agora'
     },
@@ -596,7 +596,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
-        internalImageUrl: '/images/cantata_natal_real_mobile.webp',
+        internalImageUrl: '/images/cantata_natal_real.webp',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: '2025-12-05',
@@ -615,7 +615,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         mobileImageUrl: '/images/news_cyclone_energy_mobile.webp',
-        internalImageUrl: '/images/news_cyclone_energy_mobile.webp',
+        internalImageUrl: '/images/cyclone_repair_internal.webp',
         category: 'Cidade',
         categoryColor: 'gray',
         publishDate: '2025-12-01',
@@ -634,7 +634,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
         mobileImageUrl: '/images/custom_gym_official_mobile.webp',
-        internalImageUrl: '/images/custom_gym_official_mobile.webp',
+        internalImageUrl: '/images/custom_cmei_final.png',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '2025-11-28',
@@ -653,7 +653,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/rural_tourism_araucaria_path.png',
         mobileImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
-        internalImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '2025-11-15',
@@ -672,7 +672,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/vacinacao_campanha_interna.png',
+        internalImageUrl: '/images/vacinacao_pet_internal.png',
         publishDate: '2025-11-10',
         author: 'Saúde em Foco'
     },
@@ -689,7 +689,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/placeholder_educacao.png',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/childrens_theater_stage_play.png',
+        internalImageUrl: '/images/placeholder_comercio.png',
         publishDate: '2025-11-05',
         author: 'Cultura Viva'
     },
@@ -707,7 +707,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/ciclovia_industrial_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: '/images/new_bike_path_industrial.png',
+        internalImageUrl: '/images/ciclovia_industrial.jpg',
         publishDate: '2025-10-30',
         author: 'Mobilidade Urbana'
     },
@@ -725,7 +725,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/tapa_buracos_iguacu_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: '/images/road_repair_pothole_asphalt.png',
+        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
         publishDate: '2025-10-25',
         author: 'Redação Municipal'
     },
@@ -743,7 +743,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gm_viaturas_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/municipal_guard_real.png',
+        internalImageUrl: '/images/operacao_pcpr_viaturas.png',
         publishDate: '2025-10-20',
         author: 'Segurança em Pauta'
     },
@@ -761,7 +761,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/hma_pediatria_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/hospital_pediatric_ward_interior.png',
+        internalImageUrl: '/images/hma_pediatria_cover_v2_mobile.webp',
         publishDate: '2025-10-15',
         author: 'Saúde Agora'
     },
@@ -777,7 +777,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/robotics_fair_real_final_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/school_robotics_fair_project.png',
+        internalImageUrl: '/images/custom_robotics_official.jpg',
         publishDate: '2025-10-10',
         author: 'EducaTech'
     },
@@ -793,7 +793,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/supermarket_opening_real_final_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/new_supermarket_interior.png',
+        internalImageUrl: '/images/news_supermarket_jobs.png',
         publishDate: '2025-10-05',
         author: 'Economia Local'
     },
@@ -811,7 +811,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/limpeza_rio_iguacu_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/river_cleanup_volunteers.png',
+        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
         publishDate: '2025-10-01',
         author: 'EcoAção'
     },
@@ -827,7 +827,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/news_chess_tournament.png',
         category: 'Esporte',
         categoryColor: 'green',
-        internalImageUrl: '/images/news_chess_inner_araucaria.png',
+        internalImageUrl: '/images/news_budget.png',
         publishDate: '2025-09-25',
         author: 'Esporte Araucária'
     },
@@ -843,7 +843,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/vocational_training_industrial_class.png',
+        internalImageUrl: '/images/healthy_cooking_course_internal.png',
         publishDate: '2025-09-20',
         author: 'Carreira e Futuro'
     },
@@ -859,7 +859,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/rural_tourism_signage_araucaria.png',
         mobileImageUrl: '/images/rural_tourism_signage_araucaria_mobile.webp',
-        internalImageUrl: '/images/rural_tourism_signage_araucaria_mobile.webp',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '2025-09-15',
@@ -879,7 +879,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/startup_app_cover_v2.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        internalImageUrl: '/images/school_transport_app_araucaria.png',
+        internalImageUrl: '/images/startup_app_real.jpg',
         publishDate: '2025-09-10',
         author: 'Inovação Tech'
     },
@@ -896,7 +896,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/plaza_bible_lighting_night.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/plaza_bible_internal_real.jpg',
+        internalImageUrl: '/images/plaza_bible_internal_real.webp',
         publishDate: '2025-09-05',
         author: 'Redação Municipal'
     },
@@ -913,7 +913,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hackathon_real_final_v2.png',
         mobileImageUrl: '/images/hackathon_real_final_v2_mobile.webp',
-        internalImageUrl: '/images/hackathon_real_final_v2_mobile.webp',
+        internalImageUrl: '/images/hackathon_real.jpg',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '2025-09-01',
@@ -931,6 +931,8 @@ export const newsArticles: NewsArticle[] = [
 
     `,
         imageUrl: '/images/sitio_ecologico_trilhas_cover_v2.jpg',
+        mobileImageUrl: '/images/sitio_ecologico_trilhas_cover_v2_mobile.webp',
+        internalImageUrl: '/images/sitio_ecologico_trilhas.webp',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '2025-08-25',
@@ -949,7 +951,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/araucaria_futsal_cover_v1.png',
         mobileImageUrl: '/images/araucaria_futsal_cover_v1_mobile.webp',
-        internalImageUrl: '/images/araucaria_futsal_cover_v1_mobile.webp',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '2025-08-20',
@@ -967,7 +969,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/campanha_agasalho_internal.jpg',
+        internalImageUrl: '/images/winter_clothing_drive_real_v2.png',
         publishDate: '2025-08-15',
         author: 'Social Araucária'
     },
@@ -983,7 +985,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: '/images/binario_centro_internal.jpg',
+        internalImageUrl: '/images/binario_centro_internal.webp',
         publishDate: '2025-08-10',
         author: 'Trânsito Seguro'
     },
@@ -999,7 +1001,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
-        internalImageUrl: '/images/festival_gastronomico_internal.jpg',
+        internalImageUrl: '/images/festival-cancao-palco-interna.png',
         publishDate: '2025-08-05',
         author: 'Roteiro Gourmet'
     },
@@ -1022,7 +1024,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/lousas_digitais_capa_final.png?v=final', // Cache buster adicionado para travar a imagem nova
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/lousas_digitais_real.png', // Mantendo a interna anterior (foto real)
+        internalImageUrl: '/images/lousas_digitais_internal.jpg', // Mantendo a interna anterior (foto real)
         publishDate: '2025-08-01',
         author: 'EducaTech'
     },
@@ -1050,7 +1052,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/logistica_vagas_internal.jpg', // Capa mantida
         category: 'Economia',
         categoryColor: 'blue',
-        internalImageUrl: '/images/logistica_vagas_real.png', // Imagem interna atualizada (foto real)
+        internalImageUrl: '/images/logistica_vagas_internal.webp', // Imagem interna atualizada (foto real)
         publishDate: '2025-07-25',
         author: 'Vagas & Oportunidades'
     }
@@ -1061,6 +1063,7 @@ export const events: Event[] = [
         title: 'Sessão Ordinária da Câmara',
         description: 'Acompanhe a votação de projetos importantes para a cidade.',
         imageUrl: '/images/camara-araucaria-final-no-logo.png',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         date: 'Terça-feira, 18:00',
         time: '18:00',
         location: 'Câmara Municipal'
@@ -1070,6 +1073,7 @@ export const events: Event[] = [
         title: 'Feira do Produtor Rural',
         description: 'Produtos frescos direto do campo. Apoie a agricultura familiar de Araucária.',
         imageUrl: '/images/feira_definitiva_v100.png',
+        internalImageUrl: '/images/feirao-empregos-ciar-interna.png',
         date: 'Quarta e Sábado',
         time: '08:00 - 13:00',
         location: 'Praça da Bíblia'
@@ -1079,6 +1083,7 @@ export const events: Event[] = [
         title: 'Dia D de Multivacinação',
         description: 'Atualize a carteirinha de vacinação de crianças e adolescentes. Todas as UBS abertas.',
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
+        internalImageUrl: '/images/news_vaccination_indoor_campaign.webp',
         date: '25/01/2026',
         time: '08:00 - 17:00',
         location: 'Todas as UBS'
@@ -1088,6 +1093,7 @@ export const events: Event[] = [
         title: 'Mutirão de Empregos SINE',
         description: 'Mais de 200 vagas para entrevistas imediatas. Levar Carteira de Trabalho.',
         imageUrl: '/images/mutirao_sine_real_mobile.jpg',
+        internalImageUrl: '/images/feirao-empregos-ciar-interno-real.png',
         date: '26/01/2026',
         time: '09:00 - 16:00',
         location: 'Agência do Trabalhador'
@@ -1097,6 +1103,7 @@ export const events: Event[] = [
         title: 'Vencimento IPTU (Cota Única)',
         description: 'Aproveite o desconto de 10% para pagamento à vista. Emita a guia no site.',
         imageUrl: '/images/prefeitura_orcamento_real.png',
+        internalImageUrl: '/images/prefeitura_orcamento_real.webp',
         date: '10/02/2026',
         time: 'Até as 23:59',
         location: 'Online / Bancos'
@@ -1106,6 +1113,7 @@ export const events: Event[] = [
         title: 'Festa do Pêssego 2026 (Abertura)',
         description: 'Shows nacionais, gastronomia e exposição. O maior evento da região!',
         imageUrl: '/images/festa_pessego_real.jpg',
+        internalImageUrl: '/images/festa_junina_school_internal.png',
         date: '05/02/2026',
         time: '19:00',
         location: 'Parque Cachoeira'
@@ -1117,6 +1125,7 @@ export const businesses: Business[] = [
         name: 'Panificadora e Confeitaria Araucária',
         category: 'Alimentação',
         imageUrl: '/images/panificadora_araucaria_real.webp',
+        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
         address: 'Rua das Flores, 123 - <strong>Centro</strong>',
         phone: '(41) 3901-2345',
         website: 'padariaexemplo.com.br',
@@ -1128,6 +1137,7 @@ export const businesses: Business[] = [
         name: 'Livraria e Sebo Cultural',
         category: 'Varejo',
         imageUrl: '/images/bookstore_vinyl_real.webp',
+        internalImageUrl: '/images/bookstore_vinyl_real_mobile.webp',
         address: 'Av. Victor do Amaral, 456',
         phone: '(41) 3901-6789',
         website: 'livrariaexemplo.com.br',
@@ -1138,6 +1148,7 @@ export const businesses: Business[] = [
         name: 'Auto Mecânica Confiança',
         category: 'Serviços',
         imageUrl: '/images/auto_mechanic_shop_real.webp',
+        internalImageUrl: '/images/pet_shop_interior_real.png',
         address: 'Rodovia do Xisto, 789',
         phone: '(41) 3901-1011',
         website: 'mecanicaexemplo.com.br',
@@ -1148,6 +1159,7 @@ export const businesses: Business[] = [
         name: 'Academia Corpo & Movimento',
         category: 'Serviços',
         imageUrl: '/images/gym_body_movement_real.webp',
+        internalImageUrl: '/images/gym_body_movement_real_mobile.webp',
         address: 'Rua São Vicente, 200 - <strong>Centro</strong>',
         phone: '(41) 3642-0000',
         website: 'academiacm.com.br',
@@ -1159,6 +1171,7 @@ export const businesses: Business[] = [
         name: 'Farmácia Saúde Total',
         category: 'Varejo',
         imageUrl: '/images/pharmacy_interior_real.webp',
+        internalImageUrl: '/images/cmei_interior_pessoas.png',
         address: 'Av. Archelau de Almeida Torres, 500',
         phone: '(41) 3643-9999',
         website: 'farmaciasaude.com.br',
@@ -1169,6 +1182,7 @@ export const businesses: Business[] = [
         name: 'Pet Shop Amigo Fiel',
         category: 'Serviços',
         imageUrl: '/images/pet_shop_interior_real.webp',
+        internalImageUrl: '/images/auto_mechanic_shop_real.png',
         address: 'Rua Miguel Bertolino Pizatto, 88',
         phone: '(41) 3901-5555',
         website: 'petshopamigo.com.br',
@@ -1179,6 +1193,7 @@ export const businesses: Business[] = [
         name: 'Restaurante Sabor da Terra',
         category: 'Alimentação',
         imageUrl: '/images/restaurant_buffet_real.webp',
+        internalImageUrl: '/images/restaurant_buffet_real_mobile.webp',
         address: 'Rua Pedro Druszcz, 150',
         phone: '(41) 3642-7777',
         website: 'sabordaterra.com.br',
