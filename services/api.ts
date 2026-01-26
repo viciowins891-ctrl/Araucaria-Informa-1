@@ -30,78 +30,33 @@ const parseDate = (dateStr: string): number => {
 
 export const api = {
     getNews: async (): Promise<NewsArticle[]> => {
-        // BUSCA HÍBRIDA: Supabase + LocalStorage (Cache) + Estático
+        // MODO DE DEBUG/FIX: Forçando uso de dados locais (data.ts)
+        // Isso garante que as correções de IDs e Conteúdo sejam refletidas imediatamente,
+        // ignorando dados antigos ou duplicados que possam estar no Supabase/Cache.
         try {
-            // 1. Supabase (Reativado - Dados da nova IA)
-            const supabase = await getSupabase();
-            const { data: dbData } = await supabase
-                .from('news')
-                .select('*')
-                .order('publish_date', { ascending: false });
+            // Limpa cache antigo para evitar fantasmas
+            // localStorage.removeItem('araucaria_news_cache_v1_stable');
 
-            const dbNews: NewsArticle[] = (dbData || []).map((item: any) => ({
-                id: item.id,
-                title: item.title,
-                summary: item.summary,
-                content: item.content,
-                imageUrl: item.image_url,
-                category: item.category,
-                categoryColor: item.category_color,
-                publishDate: item.publish_date,
-                author: item.author,
-                sourceUrl: item.source_url,
-                sourceName: item.source_name,
-                internalImageUrl: item.internal_image_url,
-                mobileImageUrl: item.mobile_image_url
-            }));
+            const { newsArticles } = await import('../data');
 
-            // 2. Cache Local (TEMPORARIAMENTE DESATIVADO - EVITAR DADOS STALE)
-            let cachedNews: NewsArticle[] = [];
-            // try {
-            //     const stored = localStorage.getItem('araucaria_news_cache_v1_stable');
-            //     if (stored) cachedNews = JSON.parse(stored);
-            // } catch (e) { console.warn("Erro ao ler cache local de news"); }
-
-            // 3. Merge Inteligente (Estratégia de Transição):
-            // O objetivo é ter 60 notícias (6 páginas).
-            // Se o banco tiver menos que 60, completamos com as antigas (estáticas) no final da lista.
-            // Se o banco tiver 60 ou mais, usamos SÓ as do banco.
-
-            let allNews: NewsArticle[] = [...(dbNews || [])];
-
-            if (allNews.length < 60) {
-                const { newsArticles: staticNews } = await import('../data');
-                // Adiciona as estáticas ANTES das novas para que as do banco (allNews) tenham prioridade no Map (sobrescrevam estáticas)
-                allNews = [...staticNews, ...allNews];
-            }
-
-            // Remove duplicatas por Título (O último array - staticNews - ganha em caso de conflito)
-            const uniqueNews = Array.from(new Map(allNews.map(item => [item.title, item])).values());
-
-            // 4. SANITIZAÇÃO DE DADOS (Padrão)
-            // Removemos os hacks específicos de Food Truck pois a ordem de merge acima já resolve.
-            const sanitizedNews = uniqueNews.map(item => {
-                // Garante URLs de imagens válidas se vierem quebradas do banco
+            // Tratamento de imagens e ordenação
+            const sanitizedHelper = newsArticles.map(item => {
                 if (!item.imageUrl) item.imageUrl = '/images/placeholder_default.png';
                 return item;
             });
 
-            // Ordena por data (mais recente primeiro) e limita a 100 itens (~10 páginas)
-            return sanitizedNews
-                // Ordenação Padronizada: Novas primeiro
-                .sort((a, b) => {
-                    const dateA = parseDate(a.publishDate);
-                    const dateB = parseDate(b.publishDate);
-
-                    if (dateA !== dateB) return dateB - dateA; // Decrescente (Mais novas topo)
-                    return b.id - a.id;
-                })
-                .slice(0, 60) as NewsArticle[];
+            // Ordena e retorna
+            return sanitizedHelper.sort((a, b) => {
+                // Lógica de ordenação (Datas ou IDs) - Copiada da original mas simplificada
+                // Se quiser manter ordenação por data:
+                const dateA = new Date(a.publishDate).getTime();
+                const dateB = new Date(b.publishDate).getTime();
+                return dateB - dateA;
+            });
 
         } catch (e) {
-            console.error("API: Falha crítica em getNews", e);
-            const { newsArticles } = await import('../data');
-            return newsArticles;
+            console.error("API: Erro ao carregar dados locais", e);
+            return [];
         }
     },
 
