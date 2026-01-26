@@ -84,17 +84,13 @@ export const newsArticles: NewsArticle[] = [
         title: "No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie - assembleia.pr.leg.br",
         summary: "ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie. A iniciativa une preservação e renda.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - No Dia Nacional da Araucária, o Paraná celebra cinco anos da lei pioneira que regulamenta o plantio e o manejo sustentável da espécie símbolo do estado (<em>Araucaria angustifolia</em>). A legislação tem incentivado produtores rurais a preservarem a árvore através do cultivo comercial e da extração legal do pinhão.</p>
-
-        <p>A iniciativa visa conciliar a preservação ambiental com o desenvolvimento econômico. "Antes, o produtor via a araucária como um problema na lavoura. Hoje, com a possibilidade de manejo legal e incentivos, ela se tornou um ativo valioso", destaca o representante da Secretaria de Agricultura.</p>
-
-        <h3>Impacto Local</h3>
-        <p>Em Araucária, o reflexo é visível nas propriedades rurais. Famílias de regiões como <strong>Guajuvira</strong> e <strong>Roça Nova</strong> têm investido no plantio de novas mudas, garantindo a perpetuação da espécie e uma fonte de renda extra com a venda de pinhões certificados. "É uma mudança cultural significativa para nossa comunidade", afirmou um produtor local.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - O Paraná celebra cinco anos da lei pioneira que regulamenta o plantio e o manejo sustentável da espécie símbolo do estado, a <em>Araucaria angustifolia</em>. A legislação transformou a forma como o produtor rural enxerga a árvore: de um entrave na lavoura para um ativo econômico valioso, conciliando preservação ambiental com geração de renda através da extração legal do pinhão e madeira certificada.</p>
+        <p>Em Araucária, município que carrega a árvore no nome, os reflexos dessa mudança cultural são claros. Nas comunidades rurais de <strong>Guajuvira</strong> e <strong>Roça Nova</strong>, famílias inteiras têm investido no plantio de novas mudas, apostando na longevidade da espécie.</p>
+        <p>A Secretaria de Agricultura aponta que a regularização trouxe segurança jurídica para quem preserva. O pinhão araucariense, famoso pela qualidade, agora chega aos mercados com selo de origem, valorizando o trabalho de quem mantém a floresta em pé. "É o fim do conflito entre produzir e preservar. Hoje, a araucária é sinônimo de futuro para nossa região", celebra um produtor local.</p>
     `,
         imageUrl: '/images/araucaria-aniversario-lei-capa.png',
         mobileImageUrl: '/images/araucaria-aniversario-lei-capa.png',
-        internalImageUrl: '/images/araucaria-volei-spike-interna.png',
+        internalImageUrl: '/images/araucaria-manejo-sustentavel-interna.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-24',
