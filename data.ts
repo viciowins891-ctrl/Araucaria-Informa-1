@@ -304,11 +304,15 @@ export const newsArticles: NewsArticle[] = [
         title: 'Sanepar amplia rede de esgoto no bairro Iguaçu',
         summary: 'Obras de saneamento avançam para levar mais saúde e qualidade de vida aos moradores.',
         content: `
-        <p><strong>ARAUCÁRIA</strong> - As obras de expansão da rede de esgoto seguem avançando no bairro <strong>Iguaçu</strong>. Equipes da Sanepar e da Prefeitura trabalham na instalação de novas tubulações que vão beneficiar centenas de famílias.</p>
-        <p>O investimento em saneamento básico é fundamental para a saúde preventiva e preservação ambiental. "O acesso à rede de esgoto valoriza o imóvel e, principalmente, reduz doenças", reforça a coordenação de obras.</p>
-        <h3>Transtornos Temporários</h3>
-        <p>Durante a execução dos trabalhos, algumas ruas podem sofrer interdições parciais. A orientação é que motoristas e pedestres redobrem a atenção à sinalização nos trechos em obras.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - As obras de expansão da rede de esgoto no bairro <strong>Iguaçu</strong> entraram em uma nova e decisiva fase nesta semana. O projeto, fruto de uma parceria entre a Sanepar e a Prefeitura de Araucária, prevê a instalação de mais de 5 quilômetros de novas tubulações, beneficiando diretamente cerca de 800 famílias que ainda dependiam de fossas sépticas.</p>
+        
+        <p>A intervenção concentra-se atualmente nas ruas próximas à <strong>Avenida Archelau de Almeida Torres</strong>, onde equipes técnicas trabalham na escavação e assentamento dos coletores. "O saneamento é a obra mais importante que uma cidade pode ter, pois é saúde na veia. Cada real investido aqui economiza quatro reais lá na frente em tratamento de doenças", destacou o gerente regional da Sanepar durante visita técnica ao canteiro de obras.</p>
+        
+        <h3>Valorização e Saúde Pública</h3>
+        <p>Além do impacto óbvio na saúde pública, reduzindo a incidência de doenças de veiculação hídrica, a chegada da rede de esgoto traz uma valorização imediata aos imóveis da região. Especialistas do setor imobiliário estimam uma valorização de até 15% nas residências que passam a contar com o serviço.</p>
+        
+        <h3>Cronograma e Trânsito</h3>
+        <p>A previsão de conclusão desta etapa é para o final do próximo mês. Até lá, motoristas devem ficar atentos a bloqueios parciais e desvios sinalizados nas ruas internas do bairro. A Prefeitura pede compreensão pelos transtornos temporários, reforçando que o benefício será permanente para toda a comunidade.</p>
     `,
         imageUrl: '/images/saneamento-iguacu-capa.png',
         mobileImageUrl: '/images/saneamento-iguacu-capa.png',
@@ -658,7 +662,7 @@ export const newsArticles: NewsArticle[] = [
         <p> "Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>`,
         imageUrl: '/images/rural_tourism_araucaria_path.png',
         mobileImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
-        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
+        internalImageUrl: '/images/rural_tourism_signage_araucaria.png',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '2025-11-15',
