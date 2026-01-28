@@ -422,7 +422,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hospital_equipment_araucaria_final_v5.png',
         mobileImageUrl: '/images/hospital_equipment_araucaria_final_v5_mobile.webp',
-        internalImageUrl: '/images/custom_hospital_official.jpg',
+        internalImageUrl: '/images/hospital_equipment_delivery_real.jpg',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2025-12-29',
