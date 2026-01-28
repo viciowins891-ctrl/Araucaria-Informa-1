@@ -48,11 +48,13 @@ export const newsArticles: NewsArticle[] = [
         summary: "Secretaria de Saúde divulga balanço positivo com aumento de 50 mil agendamentos em comparação ao ano anterior.",
         content: `
         <p><strong>ARAUCÁRIA</strong> - A saúde pública do município alcançou uma marca histórica neste semestre. Segundo dados divulgados hoje pela Secretaria Municipal de Saúde (SMSA), foram realizados mais de 149.186 procedimentos entre janeiro e julho.</p>
+        
         <p>O número representa um aumento de quase 50 mil atendimentos em relação ao mesmo período do ano passado. "É o resultado da ampliação do horário das UBS e da contratação de novos médicos", celebra a secretária da pasta.</p>
+        <h3>Oportunidade</h3>
+        
         <p>Além das consultas curativas, o relatório aponta crescimento nos programas de prevenção, como o Hiperdia (hipertensão e diabetes) e pré-natal, garantindo mais qualidade de vida a longo prazo para a população.</p>
-        <p>A movimentação gerada pela ampliação dos atendimentos trouxe vida nova para o entorno das unidades de saúde. Moradores e comerciantes de regiões como <strong>Jardim Iguaçu</strong> e <strong>Fazenda Velha</strong> já sentem a diferença: a circulação constante de pacientes e profissionais aqueceu as vendas em padarias e farmácias locais, além de aumentar a sensação de segurança e valorizar os imóveis próximos a esses equipamentos públicos.</p>
-
-    `,
+        
+        <p>A movimentação gerada pela ampliação dos atendimentos trouxe vida nova para o entorno das unidades de saúde. Moradores e comerciantes de regiões como <strong>Jardim Iguaçu</strong> e <strong>Fazenda Velha</strong> já sentem a diferença: a circulação constante de pacientes e profissionais aqueceu as vendas em padarias e farmácias locais, além de aumentar a sensação de segurança e valorizar os imóveis próximos a esses equipamentos públicos.</p>`,
         imageUrl: '/images/saude-recorde-150mil.png',
         mobileImageUrl: '/images/saude-recorde-150mil.png',
         internalImageUrl: '/images/saude_atendimento_interno.png',
@@ -67,10 +69,13 @@ export const newsArticles: NewsArticle[] = [
         summary: "Iniciativa pioneira visa fortalecer a proteção de crianças e adolescentes nas redes pública e privada de ensino.",
         content: `
         <p><strong>ARAUCÁRIA</strong> - A Prefeitura oficializou nesta manhã o lançamento do "Programa Criança Segura", uma iniciativa robusta voltada à proteção integral dos estudantes da cidade. O projeto, que integra forças da Guarda Municipal, Polícia Militar e Secretaria de Educação, visa criar um cinturão de segurança no entorno das instituições de ensino, prevenindo incidentes e garantindo tranquilidade para pais e alunos.</p>
+        
         <p>Uma das principais inovações é a instalação de "botões de pânico" silenciosos em todas as salas de aula e secretarias, conectados diretamente à central de monitoramento da Guarda Municipal (GMA). O tempo de resposta para ocorrências escolares promete cair drasticamente com a nova tecnologia, que já está em fase de testes em colégios do <strong>Jardim Tupy</strong> e <strong>Campina da Barra</strong>, regiões com alta densidade estudantil.</p>
+        <h3>Educação em Foco</h3>
+        
         <p>Além da tecnologia, o fator humano é central no programa. Professores e pedagogos passarão por treinamentos específicos para identificar sinais de vulnerabilidade e mediar conflitos, enquanto os alunos receberão palestras sobre cidadania e segurança digital. A ação se estende também às famílias, com workshops sobre parentalidade responsável.</p>
-        <p>O impacto da medida já movimenta a rotina nos bairros. No <strong>Capela Velha</strong>, por exemplo, a presença ostensiva das patrulhas escolares nos horários de entrada e saída tem inibido a presença de estranhos e melhorado o trânsito local. Comerciantes próximos às escolas, como donos de vans e papelarias, celebram a iniciativa, percebendo que um ambiente escolar seguro valoriza toda a vizinhança e atrai mais famílias para a região.</p>
-    `,
+        
+        <p>O impacto da medida já movimenta a rotina nos bairros. No <strong>Capela Velha</strong>, por exemplo, a presença ostensiva das patrulhas escolares nos horários de entrada e saída tem inibido a presença de estranhos e melhorado o trânsito local. Comerciantes próximos às escolas, como donos de vans e papelarias, celebram a iniciativa, percebendo que um ambiente escolar seguro valoriza toda a vizinhança e atrai mais famílias para a região.</p>`,
         imageUrl: '/images/crianca-segura-final.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/crianca-segura-final.png',
         internalImageUrl: '/images/crianca-segura-botao-interna.png',
@@ -85,9 +90,11 @@ export const newsArticles: NewsArticle[] = [
         summary: "ARAUCÁRIA - No Dia Nacional da Araucária, Paraná completa cinco anos da lei que permite o manejo sustentável da espécie. A iniciativa une preservação e renda.",
         content: `
         <p><strong>ARAUCÁRIA</strong> - O Paraná celebra cinco anos da lei pioneira que regulamenta o plantio e o manejo sustentável da espécie símbolo do estado, a <em>Araucaria angustifolia</em>. A legislação transformou a forma como o produtor rural enxerga a árvore: de um entrave na lavoura para um ativo econômico valioso, conciliando preservação ambiental com geração de renda através da extração legal do pinhão e madeira certificada.</p>
+        
         <p>Em Araucária, município que carrega a árvore no nome, os reflexos dessa mudança cultural são claros. Nas comunidades rurais de <strong>Guajuvira</strong> e <strong>Roça Nova</strong>, famílias inteiras têm investido no plantio de novas mudas, apostando na longevidade da espécie.</p>
-        <p>A Secretaria de Agricultura aponta que a regularização trouxe segurança jurídica para quem preserva. O pinhão araucariense, famoso pela qualidade, agora chega aos mercados com selo de origem, valorizando o trabalho de quem mantém a floresta em pé. "É o fim do conflito entre produzir e preservar. Hoje, a araucária é sinônimo de futuro para nossa região", celebra um produtor local.</p>
-    `,
+        <h3>Oportunidade</h3>
+        
+        <p>A Secretaria de Agricultura aponta que a regularização trouxe segurança jurídica para quem preserva. O pinhão araucariense, famoso pela qualidade, agora chega aos mercados com selo de origem, valorizando o trabalho de quem mantém a floresta em pé. "É o fim do conflito entre produzir e preservar. Hoje, a araucária é sinônimo de futuro para nossa região", celebra um produtor local.</p>`,
         imageUrl: '/images/araucaria-aniversario-lei-capa.png',
         mobileImageUrl: '/images/araucaria-aniversario-lei-capa.png',
         internalImageUrl: '/images/araucaria-manejo-sustentavel-interna.png',
@@ -102,10 +109,13 @@ export const newsArticles: NewsArticle[] = [
         summary: "Projeto fortalecerá a cooperação tecnológica e cultural entre o estado e o país asiático, com foco no desenvolvimento sustentável.",
         content: `
         <p><strong>ARAUCÁRIA</strong> - A cooperação internacional entre o Paraná e o Japão ganha um novo capítulo com o aporte confirmado de R$ 3 milhões pelo Governo do Estado. O recurso, liberado através da Secretaria da Ciência, Tecnologia e Ensino Superior, será destinado ao Programa Interconexões, que visa modernizar a infraestrutura cultural e tecnológica em municípios com forte herança nipônica.</p>
+        
         <p>Em Araucária, o investimento já tem destino certo: a revitalização de espaços públicos que celebram essa parceria histórica. O projeto inclui a construção de novos equipamentos de lazer e convivência, desenhados para integrar a arquitetura moderna com elementos tradicionais japoneses, criando pontos turísticos que valorizam a identidade local.</p>
+        <h3>Investimento e Melhorias</h3>
+        
         <p>Além do aspecto urbanístico, o programa foca no intercâmbio de conhecimento. "Não estamos falando apenas de obras, mas de construir pontes para o futuro. A ideia é trazer tecnologias de sustentabilidade e *smart cities* desenvolvidas no Japão para aplicar na realidade das nossas cidades", explica um representante da Fundação Araucária.</p>
-        <p>A comunidade japonesa local recebeu a notícia com entusiasmo, vendo no projeto uma oportunidade de manter vivas as tradições e, ao mesmo tempo, inserir o município em uma rota global de inovação.</p>
-    `,
+        
+        <p>A comunidade japonesa local recebeu a notícia com entusiasmo, vendo no projeto uma oportunidade de manter vivas as tradições e, ao mesmo tempo, inserir o município em uma rota global de inovação.</p>`,
         imageUrl: '/images/interconexoes-parana-japao-capa.png',
         mobileImageUrl: '/images/interconexoes-parana-japao-capa.png',
         internalImageUrl: '/images/interconexoes-parana-japao-interna.png',
@@ -116,16 +126,18 @@ export const newsArticles: NewsArticle[] = [
     },
     {
         id: 1769250568,
-        title: "Campeonato Feminino de Araucária movimenta o Estádio Emílio Gunha",
-        summary: "Competição organizada pela Liga Desportiva reúne equipes locais e fortalece o cenário do futebol feminino na região.",
+        title: "Araucária comemora 136 anos com Corrida de Rua e atrações especiais",
+        summary: "Evento esportivo reunirá centenas de atletas neste fim de semana para celebrar o aniversário da cidade. Programação inclui caminhada e atividades para a família.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O futebol feminino vive um momento de ascensão no município com a realização do Campeonato Amador, promovido pela Liga Desportiva de Araucária com apoio da Secretaria de Esporte e Lazer (SMEL). Os jogos, disputados no tradicional Estádio Municipal Emílio Gunha, têm atraído bom público e revelado novos talentos.</p>
-        <p>Times como <strong>Lobas FC</strong>, <strong>Feras FC</strong>, <strong>Gapar</strong> e <strong>Szymanski</strong> protagonizam disputas acirradas nas noites de terça e quinta-feira. "É mais do que uma competição, é a prova de que nossas atletas merecem espaço e estrutura. O nível técnico tem surpreendido a todos", comenta um dos organizadores.</p>
-        <p>Além de fomentar a prática esportiva, o torneio serve como vitrine. Recentemente, a atleta araucariense Patricia Sieben fez história ao ser a primeira da cidade convocada para a Seleção Paranaense de Fut7, um reflexo direto do fortalecimento da modalidade na região.</p>
+        <p><strong>ARAUCÁRIA</strong> - Em comemoração aos 136 anos de emancipação política de Araucária, a cidade se prepara para receber a tradicional <strong>Corrida de Rua de Aniversário</strong>. O evento, que acontece neste domingo, promete movimentar as ruas do Centro com centenas de atletas profissionais e amadores.</p>
+        <p>A largada será na Praça da Bíblia, com percursos de 5km e 10km, além de uma caminhada participativa de 3km para envolver toda a comunidade. "É um momento de celebrar nossa história cuidando da saúde e ocupando os espaços públicos com alegria", destaca a Secretaria de Esporte e Lazer (SMEL).</p>
+        <h3>Festa para a Família</h3>
+        <p>Além da prova, a programação festiva inclui uma praça de alimentação com Food Trucks, apresentações culturais locais e brinquedos para as crianças. O trânsito na região central terá bloqueios parciais durante a manhã para garantir a segurança dos corredores.</p>
+        <p>As inscrições para a corrida já estão encerradas, mas a população é convidada a prestigiar e torcer pelos atletas, fortalecendo o espírito esportivo que marca o aniversário da cidade.</p>
     `,
-        imageUrl: '/images/araucaria-lobas-campeas-ai.png',
-        mobileImageUrl: '/images/araucaria-lobas-campeas-ai.png',
-        internalImageUrl: '/images/araucaria-lobas-acao-ai.png',
+        imageUrl: '/images/araucaria_run_136_years.png',
+        mobileImageUrl: '/images/araucaria_run_136_years.png',
+        internalImageUrl: '/images/araucaria_run_internal.png',
         category: 'Esporte',
         categoryColor: 'indigo',
         publishDate: '2026-01-24',
@@ -145,7 +157,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/concurso-araucaria-banca-capa.png',
         mobileImageUrl: '/images/concurso-araucaria-banca-capa.png',
-        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
+        internalImageUrl: '/images/concurso_estudos_internal.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-24',
@@ -164,7 +176,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/pavimentacao-jardim-plinio-final.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
-        internalImageUrl: '/images/pavimentacao-jardim-plinio-v2.png',
+        internalImageUrl: '/images/pavimentacao_jardim_plinio_internal_real.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2026-01-24',
@@ -186,7 +198,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/ifpr-obras-capa.png',
         mobileImageUrl: '/images/ifpr-obras-capa.png',
-        internalImageUrl: '/images/petrobras-arla32-interna.png',
+        internalImageUrl: '/images/ifpr_construction_worker_internal.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-22',
@@ -243,7 +255,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/feirao-empregos-ciar-capa.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/feirao-empregos-ciar-capa.png',
-        internalImageUrl: '/images/feirao-empregos-ciar-interna.png',
+        internalImageUrl: '/images/feirao_empregos_ciar_internal_real.png',
         category: 'Economia',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
@@ -310,11 +322,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769000232,
         title: 'Programa Lixo Zero mobiliza escolas e comunidade',
         summary: 'Iniciativa educativa transforma resíduos em recursos e promove a reciclagem nos bairros.',
-        content: `
-        <p> Araucária dá mais um passo rumo à sustentabilidade com o lançamento do programa "Lixo Zero". A iniciativa visa reduzir em 30% o volume de resíduos enviados ao aterro sanitário através da educação ambiental e do incentivo à compostagem.</p>
-        <p> Escolas municipais do <strong>Centro</strong> e <strong>Costeira</strong> já aderiram, transformando restos de merenda em adubo para as hortas comunitárias. "A criança aprende na escola e ensina os pais em casa. É uma mudança cultural", destaca a Secretária de Meio Ambiente.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  Araucária dá mais um passo rumo à sustentabilidade com o lançamento do programa "Lixo Zero". A iniciativa visa reduzir em 30% o volume de resíduos enviados ao aterro sanitário através da educação ambiental e do incentivo à compostagem.</p>
+        <h3>Educação em Foco</h3>
+        
+        <p> Escolas municipais do <strong>Centro</strong> e <strong>Costeira</strong> já aderiram, transformando restos de merenda em adubo para as hortas comunitárias. "A criança aprende na escola e ensina os pais em casa. É uma mudança cultural", destaca a Secretária de Meio Ambiente.</p>`,
         imageUrl: '/images/lixo-zero-manual.png',
         mobileImageUrl: '/images/lixo-zero-manual.png',
         internalImageUrl: '/images/camara-araucaria-interna-manual.png',
@@ -327,11 +338,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769000473,
         title: 'Festival da Cultura Tropeira agita o Parque Cachoeira',
         summary: 'Música raiz, culinária típica e apresentações de laço comprido marcam o fim de semana.',
-        content: `
-        <p> O resgate das tradições está garantido em Araucária. O Festival da Cultura Tropeira reuniu milhares de visitantes no <strong>Parque Cachoeira</strong> para celebrar a história dos condutores de tropas que ajudaram a construir o Paraná.</p>
-        <p>O cheiro de feijão tropeiro e arroz carreteiro tomou conta da praça de alimentação, enquanto violeiros animavam o público com moda de viola autêntica.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  O resgate das tradições está garantido em Araucária. O Festival da Cultura Tropeira reuniu milhares de visitantes no <strong>Parque Cachoeira</strong> para celebrar a história dos condutores de tropas que ajudaram a construir o Paraná.</p>
+        <h3>Saiba Mais</h3>
+        
+        <p>O cheiro de feijão tropeiro e arroz carreteiro tomou conta da praça de alimentação, enquanto violeiros animavam o público com moda de viola autêntica.</p>`,
         imageUrl: '/images/festival-tropeiro-capa-manual.jpg',
         mobileImageUrl: '/images/festival-tropeiro-capa-manual.jpg',
         internalImageUrl: '/images/camara-araucaria-interna-manual.png',
@@ -363,13 +373,14 @@ export const newsArticles: NewsArticle[] = [
         id: 1769001982,
         title: '<strong>Parque Cachoeira</strong> terá cinema ao ar livre neste sábado',
         summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
-        content: `
-        <p> Prepare a pipoca e a canga! Neste sábado, o <strong> Parque Cachoeira </strong> se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Prepare a pipoca e a canga! Neste sábado, o <strong> Parque Cachoeira </strong> se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
+        
         <p>A iniciativa visa não apenas oferecer lazer, mas também democratizar o acesso à cultura. "Muitas crianças nunca tiveram a experiência de ver um filme em tela grande. Trazer isso para o parque, um ambiente democrático por natureza, é transformar o espaço público em sala de estar da cidade", destaca a organização.</p>
+        <h3>Segurança Pública</h3>
+        
         <p> Eventos como este têm um efeito multiplicador na economia local e na vida comunitária.Pela proximidade, moradores dos bairros <strong> Iguaçu </strong>, <strong>Estação</strong> e <strong> Centro </strong> são os mais beneficiados, podendo acessar o parque a pé. Essa movimentação gera um "cinturão de segurança" natural nas ruas do entorno e aquece o comércio local, com aumento de até 40% no movimento de padarias e sorveterias da região.</p>
-        <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença.Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>
-
-    `,
+        
+        <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença.Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>`,
         imageUrl: '/images/cinema_cover_real_final_v7.jpg',
         mobileImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
         internalImageUrl: '/images/cinema_parque_interno_mobile.webp',
@@ -382,13 +393,14 @@ export const newsArticles: NewsArticle[] = [
         id: 1769002173,
         title: 'Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>',
         summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
-        content: `
-        <p> A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana.A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana.A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
+        
         <p> Além dos sabores, o evento se destaca pela segurança e organização. "É um ambiente pensado para que pais possam trazer seus filhos com tranquilidade, curtir boa música ao vivo e valorizar os artistas da terra", afirma a organização.</p>
+        <h3>Segurança Pública</h3>
+        
         <p> A movimentação não se restringe apenas ao <strong> Centro </strong>. Bairros vizinhos como <strong>Fazenda Velha</strong>, <strong>Estação </strong> e <strong>Vila Nova</strong> sentem o reflexo positivo imediato.Moradores dessas regiões aproveitam a proximidade para frequentar a feira a pé, ocupando os espaços públicos e aquecendo o comércio local no trajeto, como padarias e pequenos mercados.</p>
-        <p> Para quem vem de mais longe, como do <strong>Jardim Iguaçu </strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>
-
-    `,
+        
+        <p> Para quem vem de mais longe, como do <strong>Jardim Iguaçu </strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>`,
         imageUrl: '/images/food_trucks_cover_v29.png',
         mobileImageUrl: '/images/food_trucks_cover_v29_mobile.webp',
         internalImageUrl: '/images/hospital_delivery_trucks_internal.png',
@@ -420,8 +432,7 @@ export const newsArticles: NewsArticle[] = [
         id: 1769003490,
         title: 'Escolas da rede municipal ganham hortas comunitárias',
         summary: 'Projeto "Sementes do Futuro" transforma pátios escolares em salas de aula vivas, envolvendo mais de 3.000 alunos e famílias de diversos bairros.',
-        content: `
-        <p> Da terra para o prato da merenda.Esse é o lema do projeto "Sementes do Futuro", que acaba de completar seis meses de atividades e já transformou a rotina de dez escolas municipais de Araucária.A iniciativa, que converte pátios ociosos em salas de aula a céu aberto, está ensinando na prática sobre ciclos naturais, biologia e responsabilidade ambiental para mais de 3.000 alunos da rede pública.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Da terra para o prato da merenda.Esse é o lema do projeto "Sementes do Futuro", que acaba de completar seis meses de atividades e já transformou a rotina de dez escolas municipais de Araucária.A iniciativa, que converte pátios ociosos em salas de aula a céu aberto, está ensinando na prática sobre ciclos naturais, biologia e responsabilidade ambiental para mais de 3.000 alunos da rede pública.</p>
         <p> O projeto começou como um piloto no <strong> Jardim Tupy </strong>, mas o sucesso foi tão imediato que a Secretaria de Educação expandiu rapidamente para unidades no <strong>Jardim Iguaçu</strong> e na <strong> Costeira </strong>. "O que antes era apenas um gramado sem uso ou um canto de terra batida, hoje produz alface, tomate, cenoura, beterraba e diversos temperos que vão direto para a cozinha da escola", explica a diretora Maria Helena, de uma das unidades beneficiadas.</p>
         <h3>Educação Nutricional na Prática </h3>
         <p> A principal mudança percebida, no entanto, não está apenas na horta, mas no refeitório.Nutricionistas da rede municipal relatam uma diminuição drástica no desperdício de alimentos(sobras nos pratos). "As crianças criam um vínculo com o alimento. Elas plantaram a semente, regaram, cuidaram e viram crescer. Quando aquele alimento chega no prato, elas comem com orgulho e curiosidade, vencendo a resistência a vegetais", afirma Ana Paula, nutricionista responsável pelo acompanhamento do projeto.</p>
@@ -463,15 +474,17 @@ export const newsArticles: NewsArticle[] = [
         id: 1769004272,
         title: 'Ginásio Joval de Paula Souza será palco de final estadual',
         summary: 'Araucária recebe as melhores equipes de vôlei do Paraná para disputa do título.',
-        content: `
-        <p> O esporte respira em Araucária.A Federação Paranaense confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei, consolidando o município como referência na organização de grandes eventos esportivos.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O esporte respira em Araucária.A Federação Paranaense confirmou que nossa cidade será a sede das finais do Campeonato Paranaense de Vôlei, consolidando o município como referência na organização de grandes eventos esportivos.</p>
+        
         <p> As partidas, que reunirão as quatro melhores equipes do estado, prometem lotar o Ginásio Joval de Paula Souza.A expectativa da organização é receber mais de 2.000 torcedores por dia. "A estrutura do ginásio foi totalmente revitalizada para oferecer conforto e segurança às famílias", destaca o diretor de esportes.</p>
+        
         <p> Além do espetáculo em quadra, o evento tem um forte cunho social.Os ingressos serão solidários, trocados por 1kg de alimento não perecível, que será destinado ao Programa de Segurança Alimentar do município.</p>
+        <h3>Segurança Pública</h3>
+        
         <h2> Movimento nos Bairros Vizinhos </h2>
         <p> A realização de um evento deste porte traz reflexos imediatos para além das quadras.Bairros no entorno do ginásio, como o <strong> Centro </strong> e o <strong>Fazenda Velha</strong>, preparam - se para um final de semana atípico e lucrativo.</p>
-        <p> Donos de lanchonetes, postos de gasolina e pequenos comércios locais já reforçaram seus estoques prevendo o aumento do fluxo de visitantes.A circulação de torcedores de outras cidades também movimenta a rede hoteleira e gastronômica, injetando capital novo na economia local e valorizando o potencial turístico - esportivo de Araucária.</p>
-
-    `,
+        
+        <p> Donos de lanchonetes, postos de gasolina e pequenos comércios locais já reforçaram seus estoques prevendo o aumento do fluxo de visitantes.A circulação de torcedores de outras cidades também movimenta a rede hoteleira e gastronômica, injetando capital novo na economia local e valorizando o potencial turístico - esportivo de Araucária.</p>`,
         imageUrl: '/images/gym_volleyball_final_cover_v5.png',
         mobileImageUrl: '/images/gym_volleyball_final_cover_v5_mobile.webp',
         internalImageUrl: '/images/gym_volleyball_internal_final_v5_mobile.webp',
@@ -484,13 +497,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769005049, // ID Único Real
         title: 'Araucária zera fila de espera por vagas em CMEIs para 2025',
         summary: 'Prefeitura anuncia que todas as 1.500 crianças de 0 a 3 anos inscritas tiveram vagas ofertadas.',
-        content: `
-        <p> Um marco histórico para a educação de Araucária.A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil(CMEIs) foi totalmente zerada.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Um marco histórico para a educação de Araucária.A Secretaria Municipal de Educação confirmou nesta semana que a fila de espera por vagas em Centros Municipais de Educação Infantil(CMEIs) foi totalmente zerada.</p>
+        
         <p> O avanço beneficia cerca de 1.500 famílias que aguardavam vaga para o ano letivo de 2025. "Trabalhamos duro na ampliação das unidades e em parcerias para garantir esse direito fundamental", afirmou a secretária.</p>
+        <h3>Oportunidade</h3>
+        
         <h2> Alívio no Califórnia e Tupy </h2>
-        <p> A medida traz impacto imediato para pais que residem em áreas de alta demanda, como <strong> Califórnia </strong> e <strong>Tupy</strong>.Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento.O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>
-
-    `,
+        <p> A medida traz impacto imediato para pais que residem em áreas de alta demanda, como <strong> Califórnia </strong> e <strong>Tupy</strong>.Com a vaga garantida próxima a casa, as famílias economizam tempo de deslocamento.O comércio local, como papelarias e lojas de uniformes nessas regiões, já projeta um aumento nas vendas para o início do ano letivo.</p>`,
         imageUrl: '/images/cmei_zerando_fila_cover_v4.png', // Imagem real enviada pelo usuário (v4)
         mobileImageUrl: '/images/cmei_zerando_fila_cover_v4.png',
         internalImageUrl: '/images/cmei_araucaria_real.png',
@@ -541,13 +554,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769006673,
         title: 'Polícia Civil incinera 114 kg de drogas apreendidas na região',
         summary: 'Ação realizada nesta semana marca o combate efetivo ao tráfico em Araucária.',
-        content: `
-        <p> A Polícia Civil do Paraná(PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Polícia Civil do Paraná(PCPR) realizou a incineração de mais de 114 quilos de entorpecentes apreendidos em operações recentes em Araucária.</p>
+        
         <p> O delegado responsável destacou a importância das denúncias anônimas da população para o sucesso das apreensões.Todo o material foi destruído em fornos industriais com autorização judicial.</p>
+        <h3>Segurança Pública</h3>
+        
         <h2> Segurança no Campina da Barra </h2>
-        <p> A operação teve foco especial em pontos críticos denunciados pela comunidade do <strong>Campina da Barra </strong>. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>
-
-    `,
+        <p> A operação teve foco especial em pontos críticos denunciados pela comunidade do <strong>Campina da Barra </strong>. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>`,
         imageUrl: '/images/pcpr-drugs-incineration-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/custom_drugs_mobile.webp',
         internalImageUrl: '/images/custom_drugs.jpg',
@@ -560,13 +573,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769006754,
         title: 'Vacinação contra Vírus Sincicial Respiratório (VSR) para gestantes',
         summary: 'Saúde inicia imunização para proteger recém-nascidos de infecções graves.',
-        content: `
-        <p> A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes.A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Secretaria Municipal de Saúde iniciou a campanha de vacinação contra o VSR voltada para gestantes.A medida visa transmitir anticorpos para o bebê ainda na gestação, garantindo proteção contra bronquiolites e pneumonias nos primeiros meses de vida.</p>
+        
         <p> As doses estão disponíveis em todas as Unidades Básicas de Saúde(UBS) do município para o público - alvo.</p>
+        <h3>Prevenção e Cuidado</h3>
+        
         <h2> Adesão no CSU e Boqueirão </h2>
-        <p> As UBSs do <strong>CSU </strong> e <strong>Boqueirão</strong> registraram a maior procura no primeiro dia de campanha.Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do <strong>Boqueirão </strong>.</p>
-
-    `,
+        <p> As UBSs do <strong>CSU </strong> e <strong>Boqueirão</strong> registraram a maior procura no primeiro dia de campanha.Gestantes dessas comunidades destacam a facilidade de ter o imunizante perto de casa. "É uma tranquilidade saber que meu bebê já vai nascer protegido", relatou uma futura mãe moradora do <strong>Boqueirão </strong>.</p>`,
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
         categoryColor: 'blue',
@@ -578,13 +591,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769007605,
         title: 'Cantata de Natal emociona fiéis no Santuário',
         summary: 'Apresentação "Um Conto de Natal" reuniu centenas de pessoas no fim de semana.',
-        content: `
-        <p> O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro.O evento contou com coral infantil e orquestra, emocionando o público presente.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O clima natalino tomou conta de Araucária com a belíssima apresentação da Cantata 'Um Conto de Natal' na Paróquia Nossa Senhora do Perpétuo Socorro.O evento contou com coral infantil e orquestra, emocionando o público presente.</p>
+        
         <p> Novas apresentações estão programadas para o próximo fim de semana na Praça da Matriz.</p>
+        <h3>Programação</h3>
+        
         <h2> Turismo Regional </h2>
-        <p> O evento atraiu não apenas moradores do <strong>Centro </strong>, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong> Estação </strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>
-
-    `,
+        <p> O evento atraiu não apenas moradores do <strong>Centro </strong>, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong> Estação </strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>`,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
         internalImageUrl: '/images/cantata_natal_real.webp',
@@ -597,13 +610,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769007953,
         title: 'Ciclone extratropical: Equipes trabalham para restabelecer energia',
         summary: 'Após tempestade, Copel atua para religar 21 unidades consumidoras ainda sem luz.',
-        content: `
-        <p> O ciclone extratropical que atingiu a região sul nos últimos dias deixou estragos pontuais em Araucária.Segundo boletim da Copel, cerca de 21 unidades consumidoras permaneciam sem energia nesta manhã.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O ciclone extratropical que atingiu a região sul nos últimos dias deixou estragos pontuais em Araucária.Segundo boletim da Copel, cerca de 21 unidades consumidoras permaneciam sem energia nesta manhã.</p>
+        
         <p> Equipes de emergência estão nas ruas para remover galhos de árvores sobre a fiação e normalizar o serviço o mais rápido possível.</p>
+        <h3>Saiba Mais</h3>
+        
         <h2> Jardim Turim Afetado </h2>
-        <p> Os ventos fortes causaram quedas de árvores principalmente na região do <strong>Jardim Turim </strong> e <strong>Shangri-lá</strong>.Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>
-
-    `,
+        <p> Os ventos fortes causaram quedas de árvores principalmente na região do <strong>Jardim Turim </strong> e <strong>Shangri-lá</strong>.Equipes da Prefeitura concentraram esforços nessas localidades durante a madrugada para desobstruir vias e garantir o retorno da energia, minimizando os transtornos para os moradores.</p>`,
         imageUrl: '/images/news_cyclone_energy.png', // Eletricistas no Caminhão (Nano Banana Pro)
         mobileImageUrl: '/images/news_cyclone_energy_mobile.webp',
         internalImageUrl: '/images/cyclone_repair_internal.webp',
@@ -616,13 +629,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769008352, // Novo ID para o Ginásio
         title: 'Ginásio Joval de Paula Souza será reformado',
         summary: 'Prefeitura anuncia revitalização completa do complexo esportivo no <strong>Parque Cachoeira</strong>.',
-        content: `
-        <p> Um dos principais palcos do esporte araucariense, o Ginásio Joval de Paula Souza, passará por uma ampla reforma.O anúncio foi feito pela Secretaria de Esporte e Lazer, que prevê melhorias no piso da quadra, vestiários e cobertura.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Um dos principais palcos do esporte araucariense, o Ginásio Joval de Paula Souza, passará por uma ampla reforma.O anúncio foi feito pela Secretaria de Esporte e Lazer, que prevê melhorias no piso da quadra, vestiários e cobertura.</p>
+        
         <p> As obras devem começar no próximo mês e visam oferecer mais conforto e segurança para atletas e torcedores.</p>
+        <h3>Investimento e Melhorias</h3>
+        
         <h2> Alternativa para Atletas </h2>
-        <p> Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do <strong>Parque Cachoeira </strong> e <strong>Centro</strong> serão transferidas temporariamente para ginásios no <strong> Fazenda Velha </strong>. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>
-
-    `,
+        <p> Durante as obras, as escolinhas de vôlei e futsal que atendem crianças do <strong>Parque Cachoeira </strong> e <strong>Centro</strong> serão transferidas temporariamente para ginásios no <strong> Fazenda Velha </strong>. A medida garante que nenhum atleta tenha seu treinamento interrompido, mantendo o calendário esportivo da cidade ativo e descentralizado.</p>`,
         imageUrl: '/images/custom_gym_official.png', // Foto oficial (Enviada pelo User)
         mobileImageUrl: '/images/custom_gym_official_mobile.webp',
         internalImageUrl: '/images/custom_cmei_final.png',
@@ -635,13 +648,14 @@ export const newsArticles: NewsArticle[] = [
         id: 1769008601,
         title: 'Câmara aprova incentivo ao turismo rural',
         summary: 'Caminho do <strong>Guajuvira</strong> e roteiros poloneses receberão verba para sinalização e melhorias.',
-        content: `
-        <p> Em sessão realizada ontem, a Câmara Municipal de Araucária aprovou por unanimidade o projeto de lei que cria incentivos fiscais e destina verbas para o desenvolvimento do turismo rural na região.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Em sessão realizada ontem, a Câmara Municipal de Araucária aprovou por unanimidade o projeto de lei que cria incentivos fiscais e destina verbas para o desenvolvimento do turismo rural na região.</p>
+        
         <p> O foco principal são os roteiros do Caminho do <strong>Guajuvira </strong> e as rotas da colônia polonesa, que possuem grande potencial gastronômico e cultural. Com o novo investimento, será feita a melhoria da sinalização turística, a pavimentação de trechos críticos de estradas rurais e o apoio à divulgação dos produtores locais.</p>
+        <h3>Sustentabilidade</h3>
+        
         <p>Pequenos agricultores que abrirem suas propriedades para visitação ou venda de produtos coloniais(como queijos, vinhos e doces) terão descontos em taxas municipais.</p>
-        <p> "Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>
-
-    `,
+        
+        <p> "Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>`,
         imageUrl: '/images/rural_tourism_araucaria_path.png',
         mobileImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
         internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
@@ -654,12 +668,12 @@ export const newsArticles: NewsArticle[] = [
         id: 1769008740,
         title: 'Campanha de Vacinação atinge meta no município',
         summary: 'Secretaria de Saúde comemora alta adesão da população na campanha contra a gripe.',
-        content: `
-        <p> A Secretaria Municipal de Saúde de Araucária divulgou hoje que a campanha de vacinação contra a gripe atingiu 95 % da meta estipulada para o público - alvo.O resultado coloca o município entre os mais eficientes do estado na imunização.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Secretaria Municipal de Saúde de Araucária divulgou hoje que a campanha de vacinação contra a gripe atingiu 95 % da meta estipulada para o público - alvo.O resultado coloca o município entre os mais eficientes do estado na imunização.</p>
+        
         <p> As unidades básicas de saúde funcionaram em horário estendido durante a última semana para garantir que trabalhadores pudessem se vacinar. "A conscientização da população foi fundamental. Vacinas salvam vidas", reforçou a diretora de epidemiologia.</p>
-        <p> Ainda há doses disponíveis para a população geral em todas as UBS do município.É necessário apresentar documento com foto e carteirinha de vacinação.</p>
-
-    `,
+        <h3>Prevenção e Cuidado</h3>
+        
+        <p> Ainda há doses disponíveis para a população geral em todas as UBS do município.É necessário apresentar documento com foto e carteirinha de vacinação.</p>`,
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -671,12 +685,12 @@ export const newsArticles: NewsArticle[] = [
         id: 1769009366,
         title: 'Festival de Teatro Infantil lota auditórios',
         summary: 'Semana da criança foi marcada por apresentações culturais gratuitas em diversas escolas.',
-        content: `
-        <p> A magia do teatro invadiu as escolas municipais de Araucária.O Festival de Teatro Infantil, promovido pela Secretaria de Cultura, realizou mais de 20 apresentações gratuitas ao longo da última semana, atingindo cerca de 5 mil crianças.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A magia do teatro invadiu as escolas municipais de Araucária.O Festival de Teatro Infantil, promovido pela Secretaria de Cultura, realizou mais de 20 apresentações gratuitas ao longo da última semana, atingindo cerca de 5 mil crianças.</p>
+        
         <p> Peças clássicas e produções locais fizeram parte do repertório.O objetivo do projeto é formar plateia e incentivar o gosto pela arte desde cedo. "Ver o brilho nos olhos das crianças não tem preço", disse um dos atores da companhia local.</p>
-        <p> O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no <strong> Parque Cachoeira </strong>.</p>
-
-    `,
+        <h3>Educação em Foco</h3>
+        
+        <p> O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no <strong> Parque Cachoeira </strong>.</p>`,
         imageUrl: '/images/placeholder_educacao.png',
         category: 'Educação',
         categoryColor: 'red',
@@ -688,13 +702,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769010006,
         title: 'Novas ciclovias conectam bairros industriais',
         summary: 'Projeto de mobilidade urbana facilita o deslocamento de trabalhadores para a área industrial.',
-        content: `
-        <p> A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial.O projeto de 5km conecta estrategicamente os bairros <strong> Thomaz Coelho </strong> e <strong>Cidade <strong>Industrial</strong> de Araucária(CIAR) </strong>, uma das zonas com maior fluxo diário de trabalhadores.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Prefeitura iniciou as obras de expansão da malha cicloviária na região industrial.O projeto de 5km conecta estrategicamente os bairros <strong> Thomaz Coelho </strong> e <strong>Cidade <strong>Industrial</strong> de Araucária(CIAR) </strong>, uma das zonas com maior fluxo diário de trabalhadores.</p>
+        
         <p>O ciclista que sai da <strong> Chapada </strong> ou do <strong>Barigui</strong> não precisará mais disputar espaço com caminhões pesados na Rodovia do Xisto. "É segurança para o trabalhador e agilidade para a indústria", resume o secretário de obras.</p>
+        <h3>Investimento e Melhorias</h3>
+        
         <h2> Mobilidade e Saúde </h2>
-        <p> Além do reduzir o trânsito nos horários de pico, a ciclovia incentiva a prática de exercícios.Moradores do <strong>Jardim Tupy </strong> já utilizam o trecho pronto para caminhadas e corridas noturnas, beneficiados pela nova iluminação de LED instalada em todo o percurso.</p>
-
-    `,
+        <p> Além do reduzir o trânsito nos horários de pico, a ciclovia incentiva a prática de exercícios.Moradores do <strong>Jardim Tupy </strong> já utilizam o trecho pronto para caminhadas e corridas noturnas, beneficiados pela nova iluminação de LED instalada em todo o percurso.</p>`,
         imageUrl: '/images/ciclovia_industrial_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
@@ -706,13 +720,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769010550,
         title: 'Operação Tapa-Buracos avança no <strong>Jardim Iguaçu</strong>',
         summary: 'Equipes da Secretaria de Obras trabalham em ritmo acelerado para recuperar vias danificadas pelas chuvas.',
-        content: `
-        <p> A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa - Buracos no bairro <strong> Jardim Iguaçu </strong>, atendendo a uma demanda antiga dos moradores. A ação concentra-se inicialmente na <strong>Avenida Archelau de Almeida Torres</strong> e ruas transversais, principais corredores de ônibus da região.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Secretaria de Obras Públicas intensificou nesta semana a Operação Tapa - Buracos no bairro <strong> Jardim Iguaçu </strong>, atendendo a uma demanda antiga dos moradores. A ação concentra-se inicialmente na <strong>Avenida Archelau de Almeida Torres</strong> e ruas transversais, principais corredores de ônibus da região.</p>
+        
         <p> As equipes também atuam na recuperação de vias no <strong> Jardim Plínio </strong> e <strong>Jardim Shangri-lá</strong>, onde o asfalto sofreu maior desgaste pelas chuvas recentes.O objetivo é garantir a segurança viária e evitar prejuízos aos motoristas.</p>
+        <h3>Oportunidade</h3>
+        
         <h2> Valorização Imobiliária </h2>
-        <p> Além do conforto ao dirigir, a manutenção viária impacta diretamente na valorização dos imóveis. "Rua arrumada traz outra cara pro bairro", comenta um comerciante local.A previsão é estender os trabalhos para o <strong> Jardim Planalto </strong> na próxima semana.</p>
-
-    `,
+        <p> Além do conforto ao dirigir, a manutenção viária impacta diretamente na valorização dos imóveis. "Rua arrumada traz outra cara pro bairro", comenta um comerciante local.A previsão é estender os trabalhos para o <strong> Jardim Planalto </strong> na próxima semana.</p>`,
         imageUrl: '/images/tapa_buracos_iguacu_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
@@ -724,13 +738,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769010785,
         title: 'Guarda Municipal recebe novas viaturas',
         summary: 'Investimento na segurança pública inclui renovação da frota e novos equipamentos de proteção.',
-        content: `
-        <p> A Guarda Municipal de Araucária recebeu hoje 5 novas viaturas Jeep Commander, totalmente equipadas e blindadas para o patrulhamento ostensivo.Os veículos serão destinados à Ronda Ostensiva Municipal(ROMU), reforçando o combate à criminalidade.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A Guarda Municipal de Araucária recebeu hoje 5 novas viaturas Jeep Commander, totalmente equipadas e blindadas para o patrulhamento ostensivo.Os veículos serão destinados à Ronda Ostensiva Municipal(ROMU), reforçando o combate à criminalidade.</p>
+        
         <p> As novas unidades já estão em operação, com foco no patrulhamento escolar nos bairros <strong> Fazenda Velha </strong> e <strong>Capela Velha</strong>, além de reforçar a segurança no comércio da região central durante o horário bancário.</p>
+        <h3>Oportunidade</h3>
+        
         <h2> Resposta Rápida no Costeira </h2>
-        <p> Uma base móvel será instalada rotativamente na região do <strong>Costeira </strong> e <strong>Jardim Tropical</strong>, reduzindo o tempo de resposta a ocorrências nestas localidades. "A presença física da viatura inibe delitos e traz tranquilidade para quem chega do trabalho à noite", afirmou o comandante.</p>
-
-    `,
+        <p> Uma base móvel será instalada rotativamente na região do <strong>Costeira </strong> e <strong>Jardim Tropical</strong>, reduzindo o tempo de resposta a ocorrências nestas localidades. "A presença física da viatura inibe delitos e traz tranquilidade para quem chega do trabalho à noite", afirmou o comandante.</p>`,
         imageUrl: '/images/gm_viaturas_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -742,13 +756,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769011351,
         title: 'Hospital Municipal inaugura nova ala pediátrica',
         summary: 'Ampliação promete dobrar a capacidade de atendimento infantil e conta com equipamentos de última geração.',
-        content: `
-        <p> O Hospital Municipal de Araucária(HMA) inaugurou nesta manhã sua nova ala pediátrica, um marco para a saúde pública da cidade.O espaço, decorado de forma lúdica, conta com 30 novos leitos e equipamentos de UTI neopediátrica de última geração.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O Hospital Municipal de Araucária(HMA) inaugurou nesta manhã sua nova ala pediátrica, um marco para a saúde pública da cidade.O espaço, decorado de forma lúdica, conta com 30 novos leitos e equipamentos de UTI neopediátrica de última geração.</p>
+        
         <p> A ampliação desafoga o sistema de saúde, evitando que famílias do <strong>Jardim Califórnia </strong> ou <strong>Tindiquera</strong> precisem se deslocar até hospitais da capital em casos de emergência.O atendimento é 100 % SUS e funciona 24 horas.</p>
+        <h3>Prevenção e Cuidado</h3>
+        
         <h2> Humanização no Atendimento </h2>
-        <p> Mais do que estrutura, o foco é o acolhimento. "Uma criança doente fragiliza a família inteira. Aqui, oferecemos não só medicina, mas conforto", diz a diretora clínica.A nova ala já recebe pacientes de bairros distantes como <strong> Guajuvira </strong>, garantindo equidade no acesso à saúde de qualidade.</p>
-
-    `,
+        <p> Mais do que estrutura, o foco é o acolhimento. "Uma criança doente fragiliza a família inteira. Aqui, oferecemos não só medicina, mas conforto", diz a diretora clínica.A nova ala já recebe pacientes de bairros distantes como <strong> Guajuvira </strong>, garantindo equidade no acesso à saúde de qualidade.</p>`,
         imageUrl: '/images/hma_pediatria_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -760,11 +774,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769011624,
         title: 'Feira de Robótica reúne estudantes da rede pública',
         summary: 'Alunos apresentaram projetos inovadores focados em sustentabilidade e automação.',
-        content: `
-        <p> O <strong> Parque Cachoeira </strong> foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
-        <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo.Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  O <strong> Parque Cachoeira </strong> foi palco da 5ª Feira de Robótica e Inovação das escolas municipais. Mais de 50 projetos foram expostos, variando desde braços mecânicos feitos com material reciclável até sistemas de irrigação automatizada para hortas escolares.</p>
+        <h3>Educação em Foco</h3>
+        
+        <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo.Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>`,
         imageUrl: '/images/robotics_fair_real_final_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
@@ -776,11 +789,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769011870,
         title: 'Novo supermercado gera 200 empregos diretos',
         summary: 'Grande rede varejista abre as portas no bairro <strong>Costeira</strong>, movimentando a economia local.',
-        content: `
-        <p> A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro <strong> Costeira </strong>.</p>
-        <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro <strong> Costeira </strong>.</p>
+        <h3>Oportunidade</h3>
+        
+        <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>`,
         imageUrl: '/images/supermarket_opening_real_final_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -792,13 +804,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769012743,
         title: 'Limpeza do Rio Iguaçu retira 5 toneladas de lixo',
         summary: 'Ação voluntária mobilizou comunidade e ONGs ambientais no último fim de semana.',
-        content: `
-        <p> Um verdadeiro exército de voluntários retirou mais de 5 toneladas de lixo das margens do Rio Iguaçu neste fim de semana.A ação concentrou - se no trecho próximo à <strong> Ponte do Rio Passaúna </strong> e no <strong>Parque Barigui</strong> de Araucária.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Um verdadeiro exército de voluntários retirou mais de 5 toneladas de lixo das margens do Rio Iguaçu neste fim de semana.A ação concentrou - se no trecho próximo à <strong> Ponte do Rio Passaúna </strong> e no <strong>Parque Barigui</strong> de Araucária.</p>
+        
         <p> Moradores do <strong>Jardim Dalla Torre </strong> e <strong>Estação</strong> participaram ativamente, recolhendo desde garrafas PET até sofás descartados irregularmente.O material reciclável foi destinado à cooperativa de catadores do bairro <strong> Sabiá </strong>, gerando renda para dezenas de famílias.</p>
+        <h3>Sustentabilidade</h3>
+        
         <h2>Consciência Ambiental </h2>
-        <p> "O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do <strong>Thomaz Coelho </strong>. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no <strong>Capela Velha</strong> para impedir que novos resíduos cheguem ao leito principal do rio.</p>
-
-    `,
+        <p> "O rio é nosso. Se a gente não cuidar, quem vai?", questionou uma moradora do <strong>Thomaz Coelho </strong>. A Secretaria de Meio Ambiente anunciou a instalação de ecobarreiras em afluentes no <strong>Capela Velha</strong> para impedir que novos resíduos cheguem ao leito principal do rio.</p>`,
         imageUrl: '/images/limpeza_rio_iguacu_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -810,11 +822,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769013037,
         title: 'Torneio de Xadrez movimenta o fim de semana',
         summary: 'Competição reuniu enxadristas de todas as idades no <strong>Centro</strong> de Convivência.',
-        content: `
-        <p> O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado.O evento reuniu mais de 80 participantes, divididos em categorias do sub - 10 ao veterano.</p>
-        <p> O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub - 14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  O raciocínio lógico e a estratégia foram os protagonistas no Torneio Municipal de Xadrez, realizado neste sábado.O evento reuniu mais de 80 participantes, divididos em categorias do sub - 10 ao veterano.</p>
+        <h3>Educação em Foco</h3>
+        
+        <p> O destaque ficou para a jovem promessa local, Ana Clara, de 12 anos, que venceu a categoria sub - 14 invicta. "O xadrez ajuda muito na escola e na concentração", disse a campeã.</p>`,
         imageUrl: '/images/news_chess_tournament.png',
         category: 'Esporte',
         categoryColor: 'green',
@@ -826,11 +837,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769013799,
         title: 'Curso gratuito de qualificação profissional abre inscrições',
         summary: 'Senai e Prefeitura oferecem vagas para cursos na área industrial e administrativa.',
-        content: `
-        <p> Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai.São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
-        <p> As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência.O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai.São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
+        <h3>Oportunidade</h3>
+        
+        <p> As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência.O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>`,
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
@@ -842,12 +852,12 @@ export const newsArticles: NewsArticle[] = [
         id: 1769014746,
         title: 'Rota de Turismo Rural ganha nova sinalização',
         summary: 'Prefeitura instala placas indicativas no Caminho do Vinho e <strong>Guajuvira</strong> para orientar visitantes.',
-        content: `
-        <p> O Departamento de Turismo iniciou a instalação de novas placas de sinalização turística nas principais rotas rurais do município.A ação visa facilitar o acesso de visitantes aos restaurantes coloniais, vinícolas e chácaras de lazer.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O Departamento de Turismo iniciou a instalação de novas placas de sinalização turística nas principais rotas rurais do município.A ação visa facilitar o acesso de visitantes aos restaurantes coloniais, vinícolas e chácaras de lazer.</p>
+        
         <p> "Com a sinalização adequada, esperamos um aumento de 30% no fluxo de turistas nos finais de semana", projetou o diretor de turismo.O projeto também inclui mapas digitais acessíveis via QR Code em pontos estratégicos.</p>
-        <p> A rota do <strong>Guajuvira </strong> é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>
-
-    `,
+        <h3>Saiba Mais</h3>
+        
+        <p> A rota do <strong>Guajuvira </strong> é famosa por suas paisagens bucólicas e pela venda direta de produtos da agricultura familiar, como queijos, salames e doces caseiros.</p>`,
         imageUrl: '/images/rural_tourism_signage_araucaria.png',
         mobileImageUrl: '/images/rural_tourism_signage_araucaria_mobile.webp',
         internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
@@ -860,13 +870,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769015223,
         title: 'Startup local desenvolve app para transporte escolar',
         summary: 'Aplicativo criado por jovens araucarienses permite aos pais rastrearem vans escolares em tempo real.',
-        content: `
-        <p> Uma startup nascida na incubadora do Parque Tecnológico de Araucária lançou o "Van Segura", aplicativo que revoluciona o transporte escolar na cidade.Pais do <strong>Jardim Iguaçu </strong> e <strong>Campina da Barra</strong> agora monitoram o trajeto dos filhos em tempo real.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Uma startup nascida na incubadora do Parque Tecnológico de Araucária lançou o "Van Segura", aplicativo que revoluciona o transporte escolar na cidade.Pais do <strong>Jardim Iguaçu </strong> e <strong>Campina da Barra</strong> agora monitoram o trajeto dos filhos em tempo real.</p>
+        
         <p> A tecnologia oferece notificações de embarque e desembarque, trazendo paz de espírito para as famílias. "Eu ficava ansiosa em dias de chuva forte no <strong>Costeira</strong>. Agora vejo a van chegando pelo celular", conta uma mãe usuária do sistema.</p>
+        <h3>Educação em Foco</h3>
+        
         <h2> Tecnologia Local </h2>
-        <p> O app já conta com adesão de 80 % dos motoristas que atendem as escolas do <strong>Centro </strong> e <strong>Vila Nova</strong>.A inovação mostra o potencial tecnológico da juventude araucariense, criando soluções locais para problemas reais da nossa comunidade.</p>
-
-    `,
+        <p> O app já conta com adesão de 80 % dos motoristas que atendem as escolas do <strong>Centro </strong> e <strong>Vila Nova</strong>.A inovação mostra o potencial tecnológico da juventude araucariense, criando soluções locais para problemas reais da nossa comunidade.</p>`,
         imageUrl: '/images/startup_app_cover_v2.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
@@ -878,12 +888,12 @@ export const newsArticles: NewsArticle[] = [
         id: 1769015403,
         title: 'Praça da Bíblia recebe nova iluminação em LED',
         summary: 'Revitalização do espaço público garante mais segurança e lazer para as famílias à noite.',
-        content: `
-        <p> Quem passa pela Praça da Bíblia à noite já percebe a diferença.A Prefeitura concluiu nesta semana a instalação do novo sistema de iluminação em LED em todo o perímetro da praça.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  Quem passa pela Praça da Bíblia à noite já percebe a diferença.A Prefeitura concluiu nesta semana a instalação do novo sistema de iluminação em LED em todo o perímetro da praça.</p>
+        
         <p> "Agora dá para trazer as crianças para brincar com tranquilidade", elogiou uma moradora local.Além das novas luminárias, o paisagismo foi recuperado e bancos foram reformados.</p>
-        <p> O projeto faz parte do programa "Cidade Iluminada", que prevê a modernização da iluminação pública em diversos bairros.</p>
-
-    `,
+        <h3>Investimento e Melhorias</h3>
+        
+        <p> O projeto faz parte do programa "Cidade Iluminada", que prevê a modernização da iluminação pública em diversos bairros.</p>`,
         imageUrl: '/images/plaza_bible_lighting_night.png',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -895,8 +905,7 @@ export const newsArticles: NewsArticle[] = [
         id: 1769015471,
         title: 'Hackathon Municipal reúne 500 jovens programadores',
         summary: 'Maratona de 48h no Parque Tecnológico cria soluções reais e conecta talentos locais ao Polo Industrial.',
-        content: `
-        <p> O ronco dos servidores se misturou ao cheiro de café e pizza durante as 48 horas ininterruptas do 1º Hackathon Municipal de Araucária.O evento, sediado no Parque Tecnológico, transformou o local em um verdadeiro Vale do Silício paranaense, reunindo 500 mentes brilhantes de escolas como <strong> IFPR </strong>, <strong>Unifacear</strong> e colégios estaduais do <strong>Centro </strong> e <strong>Fazenda Velha</strong>.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O ronco dos servidores se misturou ao cheiro de café e pizza durante as 48 horas ininterruptas do 1º Hackathon Municipal de Araucária.O evento, sediado no Parque Tecnológico, transformou o local em um verdadeiro Vale do Silício paranaense, reunindo 500 mentes brilhantes de escolas como <strong> IFPR </strong>, <strong>Unifacear</strong> e colégios estaduais do <strong>Centro </strong> e <strong>Fazenda Velha</strong>.</p>
         <p> O desafio era criar soluções tecnológicas para dores reais da cidade.A equipe vencedora, formada por jovens do bairro <strong> Costeira </strong>, desenvolveu o "Recicla+", um app que gamifica a coleta seletiva e troca pontos por descontos no comércio local. "A gente queria algo que ajudasse nossa vizinhança a manter as ruas limpas", explicou Lucas, 17 anos, líder do time campeão.</p>
         <h3>Vitrine de Talentos </h3>
         <p> Além do prêmio em dinheiro, o evento serviu como uma poderosa vitrine profissional.Grandes empresas do <strong>Polo Industrial </strong> (CIAR) marcaram presença como "olheiros", e pelo menos 50 participantes saíram de lá com propostas de estágio ou emprego. É Araucária deixando de ser apenas cidade operária para se tornar um polo de inteligência e inovação.</p>
@@ -914,13 +923,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769015642,
         title: 'Sítio Ecológico abre novas trilhas para ecoturismo',
         summary: 'Propriedade rural em <strong>Guajuvira</strong> aposta no turismo de natureza e observação de aves.',
-        content: `
-        <p> O Sítio Ecológico, localizado na área rural de <strong> Guajuvira </strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O Sítio Ecológico, localizado na área rural de <strong> Guajuvira </strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
+        
         <p>Os trajetos, que variam de 2km a 5km, passam por áreas preservadas de Mata Atlântica e Araucárias centenárias.Visitantes do <strong>Centro </strong> e <strong>Boqueirão</strong> têm lotado o local nos finais de semana, buscando contato com a natureza sem precisar viajar longe.</p>
+        <h3>Sustentabilidade</h3>
+        
         <h2> Desenvolvimento Rural </h2>
-        <p> O turismo ecológico movimenta a economia local.Produtores de <strong> Roça Nova </strong> e <strong>Campestre</strong> vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>
-
-    `,
+        <p> O turismo ecológico movimenta a economia local.Produtores de <strong> Roça Nova </strong> e <strong>Campestre</strong> vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>`,
         imageUrl: '/images/sitio_ecologico_trilhas_cover_v2.jpg',
         mobileImageUrl: '/images/sitio_ecologico_trilhas_cover_v2_mobile.webp',
         internalImageUrl: '/images/sitio_ecologico_trilhas.webp',
@@ -933,8 +942,7 @@ export const newsArticles: NewsArticle[] = [
         id: 1769016347,
         title: 'Araucária recebe etapa decisiva do Paranaense de Futsal',
         summary: 'Ginásio Joval de Paula Souza promete virar caldeirão neste sábado; vitória garante vaga nas quartas.',
-        content: `
-        <p> O <strong> Parque Cachoeira </strong> vai tremer neste fim de semana. O Araucária Futsal entra em quadra no Ginásio Joval de Paula Souza para uma das partidas mais importantes do ano pelo Campeonato Paranaense Série Prata. A equipe da casa precisa de uma vitória simples para garantir a classificação antecipada para os playoffs.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  O <strong> Parque Cachoeira </strong> vai tremer neste fim de semana. O Araucária Futsal entra em quadra no Ginásio Joval de Paula Souza para uma das partidas mais importantes do ano pelo Campeonato Paranaense Série Prata. A equipe da casa precisa de uma vitória simples para garantir a classificação antecipada para os playoffs.</p>
         <p>A diretoria espera lotação máxima. "A torcida de Araucária nunca decepciona. Quando o ginásio lota, vira o sexto jogador", convoca o capitão do time.Caravanas do <strong>Jardim Industrial </strong> e <strong>Costeira</strong> já organizaram um "corredor de fogo" para recepcionar o ônibus dos atletas na chegada.</p>
         <h3> Ingresso Solidário </h3>
         <p> Para democratizar o acesso, a entrada será mediante a doação de 1kg de alimento não perecível.Tudo o que for arrecadado será destinado ao Provopar Municipal.É a união da paixão pelo esporte com a solidariedade que marca a nossa gente.</p>
@@ -952,11 +960,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769016822,
         title: 'Campanha do Agasalho arrecada 2 toneladas de doações',
         summary: 'Solidariedade marcou o inverno em Araucária com recorde de arrecadação.',
-        content: `
-        <p> O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
-        <p> A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
+        <h3>Educação em Foco</h3>
+        
+        <p> A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>`,
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
@@ -968,11 +975,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769017500,
         title: 'Novo binário no <strong>Centro</strong> melhora fluxo de veículos',
         summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
-        content: `
-        <p> Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15 %, segundo dados do Departamento de Trânsito.</p>
-        <p> A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15 %, segundo dados do Departamento de Trânsito.</p>
+        <h3>Investimento e Melhorias</h3>
+        
+        <p> A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>`,
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
@@ -984,11 +990,10 @@ export const newsArticles: NewsArticle[] = [
         id: 1769017510,
         title: 'Festival Gastronômico de Inverno começa hoje',
         summary: 'Restaurantes da cidade oferecem pratos especiais com descontos exclusivos.',
-        content: `
-        <p> Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
-        <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>
-
-    `,
+        content: `<p><strong>ARAUCÁRIA</strong> -  Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
+        <h3>Saiba Mais</h3>
+        
+        <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>`,
         imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
         category: 'Cultura',
         categoryColor: 'yellow',
@@ -1000,8 +1005,7 @@ export const newsArticles: NewsArticle[] = [
         id: 1769018194,
         title: 'Escolas municipais recebem lousas digitais',
         summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
-        content: `
-        <p> A educação pública de Araucária está passando por uma revolução tecnológica silenciosa, mas visível aos olhos atentos dos alunos.A Secretaria Municipal de Educação(SMED) concluiu nesta semana a primeira fase da instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental da rede municipal.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A educação pública de Araucária está passando por uma revolução tecnológica silenciosa, mas visível aos olhos atentos dos alunos.A Secretaria Municipal de Educação(SMED) concluiu nesta semana a primeira fase da instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental da rede municipal.</p>
         <p> O investimento, que ultrapassa a casa dos R$ 2 milhões, visa modernizar o processo de ensino - aprendizagem e preparar os estudantes para um mundo cada vez mais conectado. "Não é apenas uma tela grande; é uma janela para o mundo. O professor pode, em tempo real, sair de uma explicação teórica sobre geografia e 'viajar' com os alunos pelo Google Earth, ou mostrar a anatomia do corpo humano em 3D", explica a Secretária de Educação.</p>
         <h3> Tecnologia em Sala de Aula </h3>
         <p> Os novos equipamentos possuem tela touch screen de 75 polegadas, sistema de som integrado e conexão de alta velocidade com a internet.Diferente do quadro - negro tradicional, onde o conteúdo é apagado ao fim da aula, na lousa digital tudo pode ser salvo e enviado para o tablet ou celular dos alunos, facilitando a revisão em casa.</p>
@@ -1023,8 +1027,7 @@ export const newsArticles: NewsArticle[] = [
         id: 1769018855,
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
-        content: `
-        <p> A manhã desta sexta - feira foi movimentada no pátio logístico próximo à Rodovia do Xisto.Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> -  A manhã desta sexta - feira foi movimentada no pátio logístico próximo à Rodovia do Xisto.Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
         <p> A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre.As oportunidades são para diversos níveis de escolaridade, incluindo cargos de <strong> Conferente, Operador de Empilhadeira, Motorista Categoria D / E e Auxiliar Administrativo </strong>.</p>
         <h3>Prioridade para Bairros Adjacentes </h3>
         <p> Um dos diferenciais deste processo seletivo é a valorização da mão de obra local.O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente <strong> Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho </strong>.</p>
@@ -1084,7 +1087,7 @@ export const events: Event[] = [
         title: 'Mutirão de Empregos SINE',
         description: 'Mais de 200 vagas para entrevistas imediatas. Levar Carteira de Trabalho.',
         imageUrl: '/images/mutirao_sine_real_mobile.jpg',
-        internalImageUrl: '/images/feirao-empregos-ciar-interno-real.png',
+        internalImageUrl: '/images/feirao_empregos_ciar_internal_real.png',
         date: '26/01/2026',
         time: '09:00 - 16:00',
         location: 'Agência do Trabalhador'
