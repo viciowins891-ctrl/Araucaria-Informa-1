@@ -15,7 +15,7 @@ import NewsCard from '../components/NewsCard';
 import { formatDateBR } from '../services/dateUtils';
 
 // Imagem segura para caso a original quebre (Final fallback)
-const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=1000';
+const FALLBACK_IMAGE = '/images/fallback_araucaria.png';
 
 const ArticlePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

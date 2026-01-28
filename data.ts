@@ -381,9 +381,9 @@ export const newsArticles: NewsArticle[] = [
         <p> Eventos como este têm um efeito multiplicador na economia local e na vida comunitária.Pela proximidade, moradores dos bairros <strong> Iguaçu </strong>, <strong>Estação</strong> e <strong> Centro </strong> são os mais beneficiados, podendo acessar o parque a pé. Essa movimentação gera um "cinturão de segurança" natural nas ruas do entorno e aquece o comércio local, com aumento de até 40% no movimento de padarias e sorveterias da região.</p>
         
         <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença.Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>`,
-        imageUrl: '/images/cinema_cover_real_final_v7.jpg',
-        mobileImageUrl: '/images/cinema_cover_real_final_v7_mobile.webp',
-        internalImageUrl: '/images/cinema_parque_interno_mobile.webp',
+        imageUrl: '/images/cinema_beauty_beast_v2.jpg',
+        mobileImageUrl: '/images/cinema_beauty_beast_v2_mobile.webp',
+        internalImageUrl: '/images/cinema_parque_interno.png',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
@@ -525,7 +525,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/news_budget.png', // Nova imagem gerada (Nano Banana Pro)
         mobileImageUrl: '/images/news_budget_mobile.webp',
-        internalImageUrl: '/images/news_budget.webp',
+        internalImageUrl: '/images/camara_araucaria_internal_final.png',
         category: 'Economia',
         categoryColor: 'blue',
         publishDate: '2025-12-18',
@@ -561,9 +561,9 @@ export const newsArticles: NewsArticle[] = [
         
         <h2> Segurança no Campina da Barra </h2>
         <p> A operação teve foco especial em pontos críticos denunciados pela comunidade do <strong>Campina da Barra </strong>. A retirada de circulação dessa grande quantidade de entorpecentes impacta diretamente na redução de pequenos furtos na região, devolvendo a sensação de segurança para comerciantes e moradores que transitam pelo bairro à noite.</p>`,
-        imageUrl: '/images/pcpr-drugs-incineration-real.png', // TRAVA: IMAGEM MANUAL
-        mobileImageUrl: '/images/custom_drugs_mobile.webp',
-        internalImageUrl: '/images/custom_drugs.jpg',
+        imageUrl: '/images/pcpr_incineration_cover_final_v2.png',
+        mobileImageUrl: '/images/pcpr_incineration_cover_final_v2.png',
+        internalImageUrl: '/images/pcpr_incineration_internal_real.png',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2025-12-10',
@@ -748,7 +748,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gm_viaturas_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/guarda_municipal_internal_real.png',
+        internalImageUrl: '/images/viaturas_gm_real.jpg',
         publishDate: '2025-10-20',
         author: 'Segurança em Pauta'
     },
@@ -778,7 +778,7 @@ export const newsArticles: NewsArticle[] = [
         <h3>Educação em Foco</h3>
         
         <p>O evento visa estimular o interesse pela ciência e tecnologia desde cedo.Os três melhores projetos receberam kits de programação e uma visita técnica a uma grande indústria de tecnologia da região.</p>`,
-        imageUrl: '/images/robotics_fair_real_final_v2.webp',
+        imageUrl: '/images/school_robotics_fair_project.png',
         category: 'Educação',
         categoryColor: 'red',
         internalImageUrl: '/images/custom_robotics_official.jpg',
@@ -793,7 +793,7 @@ export const newsArticles: NewsArticle[] = [
         <h3>Oportunidade</h3>
         
         <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>`,
-        imageUrl: '/images/supermarket_opening_real_final_v2.webp',
+        imageUrl: '/images/new_supermarket_interior.png',
         category: 'Cidade',
         categoryColor: 'blue',
         internalImageUrl: '/images/news_supermarket_jobs.png',
@@ -911,9 +911,9 @@ export const newsArticles: NewsArticle[] = [
         <p> Além do prêmio em dinheiro, o evento serviu como uma poderosa vitrine profissional.Grandes empresas do <strong>Polo Industrial </strong> (CIAR) marcaram presença como "olheiros", e pelo menos 50 participantes saíram de lá com propostas de estágio ou emprego. É Araucária deixando de ser apenas cidade operária para se tornar um polo de inteligência e inovação.</p>
 
     `,
-        imageUrl: '/images/hackathon_real_final_v2.png',
-        mobileImageUrl: '/images/hackathon_real_final_v2_mobile.webp',
-        internalImageUrl: '/images/hackathon_real.jpg',
+        imageUrl: '/images/hackathon_real.jpg',
+        mobileImageUrl: '/images/hackathon_real_mobile.webp',
+        internalImageUrl: '/images/news_hackathon_coding.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '2025-09-01',
@@ -994,7 +994,7 @@ export const newsArticles: NewsArticle[] = [
         <h3>Saiba Mais</h3>
         
         <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>`,
-        imageUrl: '/images/gastronomic_festival_real_final_v2.webp',
+        imageUrl: '/images/feira_gastronomica_noturna_real.jpg',
         category: 'Cultura',
         categoryColor: 'yellow',
         internalImageUrl: '/images/festival-cancao-palco-interna.png',
