@@ -247,11 +247,11 @@ export const newsArticles: NewsArticle[] = [
         title: 'Feirão de Empregos do CIAR atrai centenas de candidatos',
         summary: 'O polo industrial de Araucária (CIAR) realiza nesta sexta-feira um feirão de empregos com 300 vagas para os níveis técnico e operacional.',
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A fila dobrou a esquina no <strong>Sine de Araucária</strong> nesta sexta-feira. O motivo: um feirão de empregos promovido por empresas do <strong>Companhia de Desenvolvimento de Araucária (CIAR)</strong>, ofertando 300 vagas imediatas.</p>
-        <p>As oportunidades são focadas principalmente no setor industrial, com vagas para soldador, auxiliar de produção, operador de empilhadeira e técnico em logística. O aquecimento do setor automotivo e petroquímico na região tem impulsionado a demanda por mão de obra qualificada.</p>
-        <h3>Oportunidade</h3>
-        <p>"Estou desempregado há seis meses, essa é a minha chance de voltar ao mercado", contou João Paulo, morador do <strong>Fazenda Velha</strong>, enquanto aguardava a entrevista. As empresas realizam a triagem e algumas contratações já saem certas no mesmo dia.</p>
-
+        <p><strong>ARAUCÁRIA</strong> - A busca por uma nova oportunidade de trabalho mobilizou centenas de moradores na manhã desta sexta-feira. Antes mesmo do sol nascer, a fila já dobrava o quarteirão do Sine de Araucária, refletindo a grande expectativa para o Feirão de Empregos promovido pelas empresas do <strong>Centro Industrial de Araucária (CIAR)</strong>. O evento oferta mais de 300 vagas imediatas, reafirmando o aquecimento econômico da região.</p>
+        <p>As contratações são focadas no coração pulsante da cidade: a indústria. Grandes multinacionais dos setores automotivo, petroquímico e de logística buscam preencher quadros com urgência. Cargos como <strong>Soldador MIG/MAG</strong>, <strong>Operador de Empilhadeira</strong>, <strong>Técnico em Automação</strong> e <strong>Auxiliar de Produção</strong> estão entre os mais disputados, com salários iniciais competitivos e pacotes de benefícios atraentes.</p>
+        <h3>Oportunidade de Crescimento</h3>
+        <p>"Cheguei às 4h da manhã e estou confiante. Estou desempregado há seis meses e essa é a chance de garantir o sustento da minha família", relatou João Paulo, morador do bairro <strong>Fazenda Velha</strong>, enquanto aguardava com a carteira de trabalho em mãos. Segundo a organização, o processo seletivo inclui triagem de currículos e entrevistas instantâneas, com possibilidade de candidatos saírem contratados no mesmo dia.</p>
+        <p>O Feirão segue até às 16h ou até o preenchimento total das vagas. Interessados devem levar documentos pessoais (RG, CPF) e Carteira de Trabalho (física ou digital).</p>
     `,
         imageUrl: '/images/feirao-empregos-ciar-capa.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/feirao-empregos-ciar-capa.png',
@@ -274,7 +274,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
-        internalImageUrl: '/images/saneamento-iguacu-interna.png',
+        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
@@ -312,7 +312,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/saneamento-iguacu-capa.png',
         mobileImageUrl: '/images/saneamento-iguacu-capa.png',
-        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
+        internalImageUrl: '/images/saneamento-iguacu-interna.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2026-01-22',
