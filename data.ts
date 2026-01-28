@@ -445,7 +445,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hortas_escolas_cover_v27.jpg',
         mobileImageUrl: '/images/hortas_escolas_cover_v27_mobile.webp',
-        internalImageUrl: '/images/hortas_escolas_cover.png',
+        internalImageUrl: '/images/school_garden_internal_final_v5.png',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2025-12-29',
@@ -677,7 +677,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vacinacao_meta_2024.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/vacinacao_pet_internal.png',
+        internalImageUrl: '/images/vacinacao_gripe_humanos_real.png',
         publishDate: '2025-11-10',
         author: 'Saúde em Foco'
     },
@@ -691,10 +691,10 @@ export const newsArticles: NewsArticle[] = [
         <h3>Educação em Foco</h3>
         
         <p> O encerramento do festival acontecerá no próximo domingo, com uma apresentação aberta ao público no <strong> Parque Cachoeira </strong>.</p>`,
-        imageUrl: '/images/placeholder_educacao.png',
+        imageUrl: '/images/teatro_infantil_cover_real.png',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/placeholder_comercio.png',
+        internalImageUrl: '/images/teatro_infantil_internal_real.png',
         publishDate: '2025-11-05',
         author: 'Cultura Viva'
     },
@@ -730,7 +730,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/tapa_buracos_iguacu_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: '/images/defesa-civil-rio-iguacu-interna.png',
+        internalImageUrl: '/images/tapa_buracos_internal_real.png',
         publishDate: '2025-10-25',
         author: 'Redação Municipal'
     },
@@ -748,7 +748,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gm_viaturas_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/operacao_pcpr_viaturas.png',
+        internalImageUrl: '/images/guarda_municipal_internal_real.png',
         publishDate: '2025-10-20',
         author: 'Segurança em Pauta'
     },
