@@ -387,7 +387,7 @@ export const newsArticles: NewsArticle[] = [
         <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença.Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>`,
         imageUrl: '/images/cinema_beauty_beast_v2.jpg',
         mobileImageUrl: '/images/cinema_beauty_beast_v2_mobile.webp',
-        internalImageUrl: '/images/cinema_parque_interno.png',
+        internalImageUrl: '/images/cinema_lion.png',
         category: 'Cultura',
         categoryColor: 'yellow',
         publishDate: '2026-01-04', // DATA FUTURA PARA FORÇAR TOPO
