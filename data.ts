@@ -583,7 +583,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vaccination_vsr_cover_v3.png',
         category: 'Saúde',
         categoryColor: 'blue',
-        internalImageUrl: '/images/news_vaccination_indoor_campaign.webp',
+        internalImageUrl: '/images/vaccination_vsr_gestante_gen.png',
         publishDate: '2025-12-08',
         author: 'Saúde Agora'
     },
