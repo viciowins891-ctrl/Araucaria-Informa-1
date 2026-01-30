@@ -658,7 +658,7 @@ export const newsArticles: NewsArticle[] = [
         <p> "Araucária tem belezas rurais que muita gente desconhece. Queremos que o curitibano e o próprio araucariense passem o fim de semana aqui, consumindo nossos produtos e valorizando nossa história", defendeu a vereadora autora do projeto.</p>`,
         imageUrl: '/images/rural_tourism_araucaria_path.png',
         mobileImageUrl: '/images/rural_tourism_araucaria_path_mobile.webp',
-        internalImageUrl: '/images/rural_tourism_signage_araucaria.png',
+        internalImageUrl: '/images/turismo_rural_araucaria_gen.png',
         category: 'Turismo',
         categoryColor: 'indigo',
         publishDate: '2025-11-15',
