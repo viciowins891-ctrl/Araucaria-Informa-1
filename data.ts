@@ -712,7 +712,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/ciclovia_industrial_cover_v2.png',
         category: 'Infraestrutura',
         categoryColor: 'purple',
-        internalImageUrl: '/images/ciclovia_industrial.jpg',
+        internalImageUrl: '/images/ciclovia_industrial_angle_gen.png',
         publishDate: '2025-10-30',
         author: 'Mobilidade Urbana'
     },
