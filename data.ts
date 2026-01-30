@@ -600,7 +600,7 @@ export const newsArticles: NewsArticle[] = [
         <p> O evento atraiu não apenas moradores do <strong>Centro </strong>, mas caravanas de bairros como <strong>Iguaçu</strong> e <strong> Estação </strong>. O brilho das luzes e a música clássica movimentaram as cafeterias e sorveterias do entorno da Praça, que operaram com lotação máxima, celebrando o espírito natalino e o aquecimento da economia local.</p>`,
         imageUrl: '/images/cantata_natal_real.png', // Nova imagem gerada
         mobileImageUrl: '/images/cantata_natal_real_mobile.webp',
-        internalImageUrl: '/images/cantata_natal_real.webp',
+        internalImageUrl: '/images/cantata_natal_angle_v2_gen.png',
         category: 'Cultura',
         categoryColor: 'indigo',
         publishDate: '2025-12-05',
