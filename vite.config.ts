@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
         includeAssets: ['favicon.png', 'apple-touch-icon.png', 'robots.txt'],
         manifest: {
           name: 'Araucária Informa',
-          short_name: 'Araucária',
+          short_name: 'Araucária Informa',
           description: 'Notícias, Eventos e Comércio Local de Araucária',
           theme_color: '#0D6EFD',
           background_color: '#ffffff',
