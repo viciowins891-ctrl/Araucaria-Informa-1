@@ -748,7 +748,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/gm_viaturas_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/viaturas_gm_real.jpg',
+        internalImageUrl: '/images/gma_viaturas_manual.png',
         publishDate: '2025-10-20',
         author: 'Segurança em Pauta'
     },
