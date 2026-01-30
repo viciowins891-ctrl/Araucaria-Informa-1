@@ -377,13 +377,9 @@ export const newsArticles: NewsArticle[] = [
         id: 1769001982,
         title: '<strong>Parque Cachoeira</strong> terá cinema ao ar livre neste sábado',
         summary: 'Projeto "Cine Família" traz clássicos da animação para telão gigante no parque.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Prepare a pipoca e a canga! Neste sábado, o <strong> Parque Cachoeira </strong> se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
-        
+        content: `<p><strong>ARAUCÁRIA</strong> - Prepare a pipoca e a canga! Neste sábado, o <strong>Parque Cachoeira</strong> se transforma em um grande cinema a céu aberto. O projeto "Cine Família", totalmente gratuito, exibirá filmes infantis a partir das 19h em um telão de alta definição montado próximo ao lago.</p>
         <p>A iniciativa visa não apenas oferecer lazer, mas também democratizar o acesso à cultura. "Muitas crianças nunca tiveram a experiência de ver um filme em tela grande. Trazer isso para o parque, um ambiente democrático por natureza, é transformar o espaço público em sala de estar da cidade", destaca a organização.</p>
-        <h3>Segurança Pública</h3>
-        
-        <p> Eventos como este têm um efeito multiplicador na economia local e na vida comunitária.Pela proximidade, moradores dos bairros <strong> Iguaçu </strong>, <strong>Estação</strong> e <strong> Centro </strong> são os mais beneficiados, podendo acessar o parque a pé. Essa movimentação gera um "cinturão de segurança" natural nas ruas do entorno e aquece o comércio local, com aumento de até 40% no movimento de padarias e sorveterias da região.</p>
-        
+        <p>Eventos como este têm um efeito multiplicador na economia local e na vida comunitária.Pela proximidade, moradores dos bairros <strong>Iguaçu</strong>, <strong>Estação</strong> e <strong>Centro</strong> são os mais beneficiados, podendo acessar o parque a pé. Essa movimentação gera um "cinturão de segurança" natural nas ruas do entorno e aquece o comércio local, com aumento de até 40% no movimento de padarias e sorveterias da região.</p>
         <p>Além do aspecto econômico, o cinema ao ar livre fortalece o sentimento de pertença.Em tempos de entretenimento individual, reunir centenas de famílias no gramado cria memórias afetivas e reforça os laços sociais que tornam Araucária uma cidade mais acolhedora.</p>`,
         imageUrl: '/images/cinema_beauty_beast_v2.jpg',
         mobileImageUrl: '/images/cinema_beauty_beast_v2_mobile.webp',
