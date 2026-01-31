@@ -339,7 +339,7 @@ const ArticlePage: React.FC = () => {
 
                         {/* Imagem Secundária Decorativa */}
                         {secondaryImage && (
-                            <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full relative group">
+                            <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full max-w-4xl mx-auto relative group">
                                 <img
                                     src={secondaryImage}
                                     alt={`Imagem ilustrativa - ${article.category}`}
