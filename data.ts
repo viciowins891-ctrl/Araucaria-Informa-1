@@ -766,7 +766,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/hma_pediatria_cover_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/hma_pediatria_cover_v2_mobile.webp',
+        internalImageUrl: '/images/hma_pediatria_angle_gen.png',
         publishDate: '2025-10-15',
         author: 'Saúde Agora'
     },
