@@ -886,7 +886,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/startup_app_cover_v2.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
-        internalImageUrl: '/images/startup_app_real.jpg',
+        internalImageUrl: '/images/startup_app_gen.png',
         publishDate: '2025-09-10',
         author: 'Inovação Tech'
     },
