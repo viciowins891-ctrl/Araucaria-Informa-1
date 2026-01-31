@@ -840,10 +840,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769013799,
         title: 'Curso gratuito de qualificação profissional abre inscrições',
         summary: 'Senai e Prefeitura oferecem vagas para cursos na área industrial e administrativa.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Estão abertas as inscrições para os cursos gratuitos de qualificação profissional oferecidos em parceria entre a Prefeitura de Araucária e o Senai.São 300 vagas distribuídas em cursos de mecânica básica, eletricidade predial e assistente administrativo.</p>
-        <h3>Oportunidade</h3>
+        content: `<p><strong>ARAUCÁRIA</strong> - A Prefeitura de Araucária, em parceria estratégica com o Senai, abriu <strong>300 vagas gratuitas</strong> para cursos de qualificação profissional voltados ao mercado industrial e administrativo. A iniciativa visa preparar a mão de obra local para atender a crescente demanda das empresas do Polo Industrial (CIAR), que frequentemente relatam dificuldade em encontrar profissionais capacitados.</p>
+        <h3>Cursos Oferecidos</h3>
         
-        <p> As aulas iniciam no próximo mês e os interessados devem comparecer à Agência do Trabalhador com documentos pessoais e comprovante de residência.O objetivo é preparar a mão de obra local para as demandas do polo industrial.</p>`,
+        <p>As vagas estão distribuídas em três áreas: <strong>Mecânica Básica</strong> (120 vagas, 160h), <strong>Eletricidade Predial</strong> (100 vagas, 180h) e <strong>Assistente Administrativo</strong> (80 vagas, 120h). Todos os cursos são certificados pelo Senai e incluem aulas práticas em laboratórios equipados. "É a chance de entrar no mercado com um diploma reconhecido nacionalmente", destaca o coordenador do programa.</p>
+
+        <h2>Como Se Inscrever</h2>
+        <p>Os interessados devem comparecer à <strong>Agência do Trabalhador</strong> (Rua Pedro Druszcz, Centro) com RG, CPF e comprovante de residência atualizado. As aulas iniciam em <strong>março</strong> e acontecem no contraturno escolar, facilitando a participação de jovens e adultos. Prioridade para moradores de Araucária desempregados ou em busca do primeiro emprego.</p>`,
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
