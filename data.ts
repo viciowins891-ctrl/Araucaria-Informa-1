@@ -789,10 +789,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769011870,
         title: 'Novo supermercado gera 200 empregos diretos',
         summary: 'Grande rede varejista abre as portas no bairro <strong>Costeira</strong>, movimentando a economia local.',
-        content: `<p><strong>ARAUCÁRIA</strong> - A economia de Araucária ganhou um reforço importante nesta semana com a inauguração de uma nova unidade de uma grande rede de supermercados no bairro <strong> Costeira </strong>.</p>
-        <h3>Oportunidade</h3>
+        content: `<p><strong>ARAUCÁRIA</strong> - O desenvolvimento econômico do bairro <strong>Costeira</strong> ganhou um novo impulso nesta semana com a inauguração de uma grande unidade varejista. O empreendimento, que ocupa uma área de 2.000m², não apenas amplia as opções de compra para a comunidade, mas se consolida como um motor vital de geração de renda na região.</p>
+        <h3>Impacto Local e Empregos</h3>
         
-        <p>O empreendimento gerou cerca de 200 vagas de emprego direto, priorizando a contratação de moradores da região através do SINE municipal. "É uma oportunidade de primeiro emprego para muitos jovens", comentou o gerente da loja.</p>`,
+        <p>Ao todo, foram criadas <strong>200 vagas de emprego direto</strong>, preenchidas majoritariamente por moradores de Araucária. A seleção, realizada em parceria estratégica com a Agência do Trabalhador (SINE), focou em funções como operadores de caixa, repositores, açougueiros e equipe administrativa. "Priorizar quem mora perto reduz o trânsito e melhora a qualidade de vida do trabalhador", destaca o gerente regional.</p>
+
+        <h2>Primeiro Emprego</h2>
+        <p>A iniciativa também abriu portas para jovens em busca da primeira oportunidade no mercado de trabalho. Cerca de 30% das contratações foram destinadas a esse público, com programas de treinamento interno. Para comerciantes vizinhos, a chegada do mercado deve aumentar o fluxo de pessoas na Avenida, beneficiando todo o comércio local.</p>`,
         imageUrl: '/images/new_supermarket_interior.png',
         category: 'Cidade',
         categoryColor: 'blue',
