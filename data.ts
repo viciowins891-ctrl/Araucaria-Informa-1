@@ -919,7 +919,7 @@ export const newsArticles: NewsArticle[] = [
     `,
         imageUrl: '/images/hackathon_real.jpg',
         mobileImageUrl: '/images/hackathon_real_mobile.webp',
-        internalImageUrl: '/images/news_hackathon_coding.png',
+        internalImageUrl: '/images/hackathon_gen.png',
         category: 'Tecnologia',
         categoryColor: 'yellow',
         publishDate: '2025-09-01',
