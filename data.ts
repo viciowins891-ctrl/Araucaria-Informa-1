@@ -847,7 +847,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/vocational_course_real_v2.webp',
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/healthy_cooking_course_internal.png',
+        internalImageUrl: '/images/news_vocational_course_v2.png',
         publishDate: '2025-09-20',
         author: 'Carreira e Futuro'
     },
