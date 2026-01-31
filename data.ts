@@ -817,7 +817,7 @@ export const newsArticles: NewsArticle[] = [
         imageUrl: '/images/limpeza_rio_iguacu_v2.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/limpeza_rio_iguacu_real.jpg',
+        internalImageUrl: '/images/limpeza_rio_iguacu_gen.png',
         publishDate: '2025-10-01',
         author: 'EcoAção'
     },
