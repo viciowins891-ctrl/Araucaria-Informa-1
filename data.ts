@@ -1017,21 +1017,19 @@ export const newsArticles: NewsArticle[] = [
         id: 1769018194,
         title: 'Escolas municipais recebem lousas digitais',
         summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
-        content: `<p><strong>ARAUCÁRIA</strong> - A educação pública de Araucária está passando por uma revolução tecnológica silenciosa, mas visível aos olhos atentos dos alunos.A Secretaria Municipal de Educação(SMED) concluiu nesta semana a primeira fase da instalação de lousas digitais interativas em todas as salas de aula do ensino fundamental da rede municipal.</p>
-        <p> O investimento, que ultrapassa a casa dos R$ 2 milhões, visa modernizar o processo de ensino - aprendizagem e preparar os estudantes para um mundo cada vez mais conectado. "Não é apenas uma tela grande; é uma janela para o mundo. O professor pode, em tempo real, sair de uma explicação teórica sobre geografia e 'viajar' com os alunos pelo Google Earth, ou mostrar a anatomia do corpo humano em 3D", explica a Secretária de Educação.</p>
-        <h3> Tecnologia em Sala de Aula </h3>
-        <p> Os novos equipamentos possuem tela touch screen de 75 polegadas, sistema de som integrado e conexão de alta velocidade com a internet.Diferente do quadro - negro tradicional, onde o conteúdo é apagado ao fim da aula, na lousa digital tudo pode ser salvo e enviado para o tablet ou celular dos alunos, facilitando a revisão em casa.</p>
-        <p> Para a professora Helena Bastos, da Escola Municipal Marcelino Champagnat, a mudança foi drástica. "No começo ficamos receosos com a tecnologia, mas o engajamento das crianças aumentou muito. Eles pararam de copiar passivamente e começaram a interagir com o conteúdo. A aula de história, que antes era só texto, agora tem documentários e mapas interativos", relata.</p>
-        <h3> Formação Continuada </h3>
-        <p> A entrega dos equipamentos veio acompanhada de um intenso cronograma de treinamento para os docentes.Durante o último mês, mais de 400 professores da rede passaram por oficinas de capacitação para aprender a extrair o máximo das novas ferramentas.</p>
-        <p> "A tecnologia pela tecnologia não resolve o problema da educação. O que faz a diferença é o professor mediando esse uso. Por isso, o foco não foi apenas na compra do hardware, mas na formação humana", reforça a equipe pedagógica da SMED.</p>
-        <p> A previsão é que até o final do ano letivo, 100 % das turmas, incluindo a educação infantil, já contem com o recurso em pleno funcionamento.</p>
+        content: `<p><strong>ARAUCÁRIA</strong> - O giz e o apagador estão dando lugar ao toque e à interatividade nas escolas da rede municipal. A Prefeitura de Araucária, através da Secretaria Municipal de Educação (SMED), anunciou nesta semana a conclusão da primeira etapa do programa "Escola Digital 2025", que instalou lousas interativas de 75 polegadas em todas as turmas de 4º e 5º ano.</p>
+        <p>A modernização já é realidade na <strong>Escola Municipal Marcelino Champagnat</strong>, no Jardim Tupy, e na <strong>CMAI Archelau de Almeida Torres</strong>, no Costeira. "Não é só substituir o quadro verde por uma tela. É mudar a forma como a criança aprende. Numa aula de Geografia, por exemplo, saímos do mapa estático do livro e 'viajamos' pelo Google Earth em tempo real", explica a diretora pedagógica da SMED.</p>
+        
+        <h3>Engajamento em Alta</h3>
+        <p>Para os professores, a tecnologia veio como uma aliada poderosa no combate à desatenção. Os novos equipamentos possuem sistema de som integrado e conexão de alta velocidade, permitindo o uso de jogos educativos e vídeos em 4K. "O brilho no olho dos alunos voltou. Eles querem ir para o quadro, querem participar. A aula de História virou um cinema, e a de Matemática, um game", relata Helena Bastos, professora da rede há 15 anos.</p>
 
-    `,
+        <h3>Próximos Passos</h3>
+        <p>O investimento municipal ultrapassa a casa dos R$ 2 milhões e inclui também a formação continuada dos docentes. Até o final do semestre, a meta é expandir o projeto para a Educação Infantil, com softwares adaptados para alfabetização e letramento. A tecnologia não substitui o afeto do professor, mas em Araucária, ela tem sido uma ponte fundamental para o futuro.</p>`,
+
         imageUrl: '/images/lousas_digitais_capa_final.png?v=final', // Cache buster adicionado para travar a imagem nova
         category: 'Educação',
         categoryColor: 'red',
-        internalImageUrl: '/images/lousas_digitais_internal.jpg', // Mantendo a interna anterior (foto real)
+        internalImageUrl: '/images/lousas_digitais_manual_final.png',
         publishDate: '2025-08-01',
         author: 'EducaTech'
     },
@@ -1039,22 +1037,22 @@ export const newsArticles: NewsArticle[] = [
         id: 1769018855,
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
-        content: `<p><strong>ARAUCÁRIA</strong> - A manhã desta sexta - feira foi movimentada no pátio logístico próximo à Rodovia do Xisto.Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
-        <p> A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre.As oportunidades são para diversos níveis de escolaridade, incluindo cargos de <strong> Conferente, Operador de Empilhadeira, Motorista Categoria D / E e Auxiliar Administrativo </strong>.</p>
+        content: `< p > <strong>ARAUCÁRIA < /strong> - A manhã desta sexta - feira foi movimentada no pátio logístico próximo à Rodovia do Xisto.Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p >
+    <p>A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre.As oportunidades são para diversos níveis de escolaridade, incluindo cargos de < strong > Conferente, Operador de Empilhadeira, Motorista Categoria D / E e Auxiliar Administrativo < /strong>.</p >
         <h3>Prioridade para Bairros Adjacentes </h3>
-        <p> Um dos diferenciais deste processo seletivo é a valorização da mão de obra local.O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente <strong> Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho </strong>.</p>
-        <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
-        <h3> Benefícios Regionalizados </h3>
-        <p> Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local: </p>
-        <ul>
-        <li>Vale - Alimentação / Refeição com valor acima da média; </li>
-        <li> Transporte Fretado(rota exclusiva pelos bairros citados); </li>
-        <li> Plano de Saúde e Odontológico extensivo a dependentes; </li>
-        <li> <strong>Parcerias Regionais: </strong> Descontos em farmácias e supermercados de Araucária.</li>
-        </ul>
-        <p> Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador(SINE) de Araucária até a próxima quarta - feira.</p>
+            < p > Um dos diferenciais deste processo seletivo é a valorização da mão de obra local.O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente < strong > Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho < /strong>.</p >
+                <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
+                    < h3 > Benefícios Regionalizados </h3>
+                    < p > Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local: </p>
+                        < ul >
+                        <li>Vale - Alimentação / Refeição com valor acima da média; </li>
+                            < li > Transporte Fretado(rota exclusiva pelos bairros citados); </li>
+                                < li > Plano de Saúde e Odontológico extensivo a dependentes; </li>
+                                    < li > <strong>Parcerias Regionais: </strong> Descontos em farmácias e supermercados de Araucária.</li >
+                                        </ul>
+                                        < p > Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador(SINE) de Araucária até a próxima quarta - feira.</p>
 
-    `,
+                                            `,
         imageUrl: '/images/logistica_vagas_internal.jpg', // Capa mantida
         category: 'Economia',
         categoryColor: 'blue',
