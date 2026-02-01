@@ -966,14 +966,15 @@ export const newsArticles: NewsArticle[] = [
         id: 1769016822,
         title: 'Campanha do Agasalho arrecada 2 toneladas de doações',
         summary: 'Solidariedade marcou o inverno em Araucária com recorde de arrecadação.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O Provopar de Araucária divulgou o balanço final da Campanha do Agasalho deste ano.Foram arrecadadas cerca de 2 toneladas de roupas e cobertores, que já foram distribuídos para famílias em situação de vulnerabilidade.</p>
-        <h3>Educação em Foco</h3>
-        
-        <p> A campanha contou com pontos de coleta em comércios, escolas e empresas da cidade.</p>`,
+        content: `<p><strong>ARAUCÁRIA</strong> - A solidariedade aqueceu o inverno de milhares de famílias em Araucária. O Provopar Municipal divulgou nesta semana o balanço final da Campanha do Agasalho 2025, celebrando um recorde histórico: mais de <strong>2 toneladas</strong> de peças arrecadadas, entre roupas, cobertores e calçados em bom estado.</p>
+        <p>A mobilização envolveu toda a cidade. Pontos de coleta espalhados pelo comércio do <strong>Centro</strong> e escolas nos bairros <strong>Iguaçu</strong> e <strong>Fazenda Velha</strong> facilitaram a participação da comunidade. "A resposta do araucariense foi emocionante. Vimos crianças doando seus próprios casacos e empresários enviando fardos de cobertores novos", destacou a coordenadora da ação.</p>
+        <h3>Logística e Distribuição</h3>
+        <p>Todo o material passou por uma triagem rigorosa no Centro de Convivência, onde voluntários separaram as peças por tamanho e gênero. A distribuição priorizou famílias cadastradas nos CRAS, especialmente nas regiões do <strong>Jardim Tropical</strong> e <strong>Capela Velha</strong>, onde o inverno costuma ser mais rigoroso para quem vive em situação de vulnerabilidade.</p>
+        <p>Além dos agasalhos, a campanha também arrecadou cestas básicas, que estão sendo entregues como complemento emergencial. "Não entregamos apenas roupa, entregamos dignidade e carinho", finalizou a presidente do Provopar.</p>`,
         imageUrl: '/images/winter_clothing_drive_real_v2.webp',
         category: 'Cidade',
         categoryColor: 'blue',
-        internalImageUrl: '/images/winter_clothing_drive_real_v2.png',
+        internalImageUrl: '/images/campanha_agasalho_internal.jpg',
         publishDate: '2025-08-15',
         author: 'Social Araucária'
     },
