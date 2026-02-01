@@ -997,14 +997,19 @@ export const newsArticles: NewsArticle[] = [
         id: 1769017510,
         title: 'Festival Gastronômico de Inverno começa hoje',
         summary: 'Restaurantes da cidade oferecem pratos especiais com descontos exclusivos.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Começou hoje o 3º Festival Gastronômico de Inverno de Araucária.Durante os próximos 15 dias, 20 restaurantes participantes oferecerão um menu especial com entrada, prato principal e sobremesa a preço fixo.</p>
-        <h3>Saiba Mais</h3>
+        content: `<p><strong>ARAUCÁRIA</strong> - O inverno curitibano pode ser rigoroso, mas em Araucária ele tem um sabor especial. A Prefeitura Municipal, através da Secretaria de Turismo, deu a largada oficial para o <strong>3º Festival Gastronômico de Inverno</strong>, transformando a cidade em um verdadeiro corredor de sabores.</p>
+        <p>Neste ano, o circuito quebrou recordes de adesão: são mais de 25 estabelecimentos participantes, desde as tradicionais cantinas italianas do <strong>Santa Regina</strong> até os modernos cafés coloniais que têm revitalizado o comércio do <strong>Centro Histórico</strong>. O tema desta edição, "Raízes da Nossa Terra", desafiou os chefs a criarem pratos que valorizem ingredientes locais, com destaque absoluto para o pinhão e a erva-mate.</p>
         
-        <p> O objetivo é valorizar a culinária local e aquecer o comércio durante a estação mais fria do ano.</p>`,
+        <h3>Roteiro de Sabores</h3>
+        <p>Quem passar pela <strong>Avenida Victor do Amaral</strong> já sente o cheiro de novidade. Restaurantes clássicos da região inovaram com receitas como o "Risoto de Pinhão com Bacon Defumado" e o "Pierogi de Abóbora Caramelizada", honrando a forte herança polonesa do município.</p>
+        <p>"O festival não movimenta apenas a gastronomia, ele aquece toda a cadeia produtiva, do agricultor de <strong>Guajuvira</strong> que fornece o insumo fresco, até o garçom que atende com um sorriso no rosto", destacou o prefeito durante a cerimônia de abertura na Praça da Matriz.</p>
+
+        <h3>Serviço</h3>
+        <p>O festival segue até o final do mês. Os pratos promocionais variam de R$ 29,90 a R$ 59,90. Um mapa digital com a rota completa dos restaurantes está disponível no app <em>Araucária Digital</em>, permitindo que o visitante trace seu próprio itinerário gastronômico pelos bairros da cidade.</p>`,
         imageUrl: '/images/feira_gastronomica_noturna_real.jpg',
         category: 'Cultura',
         categoryColor: 'yellow',
-        internalImageUrl: '/images/festival-cancao-palco-interna.png',
+        internalImageUrl: '/images/festival_gastronomico_internal.jpg',
         publishDate: '2025-08-05',
         author: 'Roteiro Gourmet'
     },
