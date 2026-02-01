@@ -1037,26 +1037,25 @@ export const newsArticles: NewsArticle[] = [
         id: 1769018855,
         title: 'Empresa de logística abre 50 vagas de emprego',
         summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
-        content: `< p > <strong>ARAUCÁRIA < /strong> - A manhã desta sexta - feira foi movimentada no pátio logístico próximo à Rodovia do Xisto.Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p >
-    <p>A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre.As oportunidades são para diversos níveis de escolaridade, incluindo cargos de < strong > Conferente, Operador de Empilhadeira, Motorista Categoria D / E e Auxiliar Administrativo < /strong>.</p >
-        <h3>Prioridade para Bairros Adjacentes </h3>
-            < p > Um dos diferenciais deste processo seletivo é a valorização da mão de obra local.O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente < strong > Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho < /strong>.</p >
-                <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
-                    < h3 > Benefícios Regionalizados </h3>
-                    < p > Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local: </p>
-                        < ul >
-                        <li>Vale - Alimentação / Refeição com valor acima da média; </li>
-                            < li > Transporte Fretado(rota exclusiva pelos bairros citados); </li>
-                                < li > Plano de Saúde e Odontológico extensivo a dependentes; </li>
-                                    < li > <strong>Parcerias Regionais: </strong> Descontos em farmácias e supermercados de Araucária.</li >
-                                        </ul>
-                                        < p > Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador(SINE) de Araucária até a próxima quarta - feira.</p>
-
-                                            `,
+        content: `<p><strong>ARAUCÁRIA</strong> - A manhã desta sexta-feira foi movimentada no pátio logístico próximo à Rodovia do Xisto. Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
+        <p>A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre. As oportunidades são para diversos níveis de escolaridade, incluindo cargos de <strong>Conferente, Operador de Empilhadeira, Motorista Categoria D/E e Auxiliar Administrativo</strong>.</p>
+        <h3>Prioridade para Bairros Adjacentes</h3>
+        <p>Um dos diferenciais deste processo seletivo é a valorização da mão de obra local. O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente <strong>Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho</strong>.</p>
+        <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
+        <h3>Benefícios Regionalizados</h3>
+        <p>Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local:</p>
+        <ul>
+            <li>Vale-Alimentação/Refeição com valor acima da média;</li>
+            <li>Transporte Fretado (rota exclusiva pelos bairros citados);</li>
+            <li>Plano de Saúde e Odontológico extensivo a dependentes;</li>
+            <li><strong>Parcerias Regionais:</strong> Descontos em farmácias e supermercados de Araucária.</li>
+        </ul>
+        <p>Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador (SINE) de Araucária até a próxima quarta-feira.</p>
+        `,
         imageUrl: '/images/logistica_vagas_internal.jpg', // Capa mantida
         category: 'Economia',
         categoryColor: 'blue',
-        internalImageUrl: '/images/logistica_vagas_internal.webp', // Imagem interna atualizada (foto real)
+        internalImageUrl: '/images/logistica_vagas_real.png',
         publishDate: '2025-07-25',
         author: 'Vagas & Oportunidades'
     }
