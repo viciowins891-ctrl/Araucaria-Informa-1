@@ -982,10 +982,13 @@ export const newsArticles: NewsArticle[] = [
         id: 1769017500,
         title: 'Novo binário no <strong>Centro</strong> melhora fluxo de veículos',
         summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Após uma semana de implantação, o novo binário no centro de Araucária já apresenta resultados positivos.O tempo médio de deslocamento nos horários de pico reduziu em 15 %, segundo dados do Departamento de Trânsito.</p>
-        <h3>Investimento e Melhorias</h3>
-        
-        <p> A obra incluiu nova sinalização semafórica e faixas exclusivas para conversão.</p>`,
+        content: `<p><strong>ARAUCÁRIA</strong> - Quem transita pelo Centro de Araucária nos últimos dias já percebeu a diferença. O novo binário, implementado nas vias principais que cortam a região central, completou sua primeira semana de operação com saldo positivo. Segundo avaliações preliminares do Departamento de Trânsito, a fluidez nos horários de pico melhorou cerca de 20%, aliviando gargalos históricos.</p>
+        <p>As mudanças alteraram o sentido das ruas <strong>Victor do Amaral</strong> e <strong>São Vicente de Paulo</strong>, criando um sistema de fluxo contínuo que conecta a entrada da cidade até a região da Prefeitura. Além da inversão de sentido, o projeto incluiu o recapeamento asfáltico e a sincronização inteligente dos semáforos.</p>
+        <h3>Mais Segurança para Pedestres</h3>
+        <p>"O objetivo não é apenas fazer o carro andar mais rápido, mas organizar o espaço urbano", explica Carlos Mendes, engenheiro de tráfego da cidade. As esquinas receberam novas faixas de pedestres elevadas e sinalização reforçada, garantindo travessias mais seguras, especialmente próximo às escolas e comércios da região.</p>
+        <p>Para os motoristas, a adaptação foi rápida. "No primeiro dia confundi um pouco, mas agora percebo que não fico mais parado no semáforo fechado a cada quadra. Flui muito melhor", relata Roberto Siqueira, taxista que trabalha no ponto da Praça Matriz.</p>
+        <h3>Monitoramento Contínuo</h3>
+        <p>Equipes de agentes de trânsito continuarão monitorando o local pelos próximos 15 dias para orientar motoristas e realizar ajustes finos nos tempos dos semáforos. A Prefeitura reforça o pedido de atenção redobrada à nova sinalização horizontal.</p>`,
         imageUrl: '/images/binario_centro_cover.webp',
         category: 'Infraestrutura',
         categoryColor: 'purple',
