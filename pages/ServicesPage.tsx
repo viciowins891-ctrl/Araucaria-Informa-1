@@ -1,6 +1,8 @@
 
 import React, { useEffect } from 'react';
 
+import ShareButton from '../components/ShareButton';
+
 const ServicesPage: React.FC = () => {
     useEffect(() => {
         document.title = "Telefones Úteis e Farmácias de Plantão - Araucária Informa";
@@ -42,7 +44,13 @@ const ServicesPage: React.FC = () => {
             <div className="bg-primary dark:bg-primary-dark pt-24 pb-12 px-4 shadow-md">
                 <div className="container mx-auto max-w-4xl text-center">
                     <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display">Guia de Serviços</h1>
-                    <p className="text-blue-100 text-lg">Transporte, telefones úteis e utilidade pública em um só lugar.</p>
+                    <p className="text-blue-100 text-lg mb-6">Transporte, telefones úteis e utilidade pública em um só lugar.</p>
+                    <div className="flex justify-center">
+                        <ShareButton
+                            title="Guia de Serviços Úteis de Araucária (Ônibus, Farmácias, Emergência)"
+                            url="https://araucariainforma.com/servicos"
+                        />
+                    </div>
                 </div>
             </div>
 
