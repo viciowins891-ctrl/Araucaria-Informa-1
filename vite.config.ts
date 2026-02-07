@@ -1,6 +1,7 @@
 // Force Restart Server - Timestamp: 2026-01-24
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
+// Force restart env
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 

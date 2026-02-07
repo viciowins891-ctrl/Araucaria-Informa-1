@@ -23,7 +23,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Cidade Industrial (CIAR)',
         date: 'Hoje',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Experiência 2 anos', 'Certificação em dia']
     },
     {
@@ -35,7 +35,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Costeira',
         date: 'Hoje',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Ensino Médio', 'Experiência prévia desejável']
     },
     {
@@ -47,7 +47,7 @@ export const jobs: Job[] = [
         type: 'Temporário',
         location: 'Thomaz Coelho',
         date: 'Ontem',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Ensino Fundamental', 'Disponibilidade noturna']
     },
     {
@@ -59,7 +59,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Jardim Iguaçu',
         date: 'Ontem',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Curso Técnico Completo', 'Registro Ativo']
     },
     {
@@ -71,7 +71,7 @@ export const jobs: Job[] = [
         type: 'Estágio',
         location: 'Centro (Paço Municipal)',
         date: '23/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Cursando Administração ou RH (1º ao 4º período)']
     },
     {
@@ -83,7 +83,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Rodovia do Xisto',
         date: '22/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['CNH E', 'Mopp Atualizado']
     },
     {
@@ -95,7 +95,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Costeira',
         date: '22/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Sem experiência (Primeiro Emprego)']
     },
     {
@@ -107,7 +107,7 @@ export const jobs: Job[] = [
         type: 'PJ',
         location: 'Fazenda Velha',
         date: '21/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['React', 'Node.js', 'Portfólio']
     },
     {
@@ -119,7 +119,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Centro',
         date: '20/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Experiência comprovada']
     },
     {
@@ -131,7 +131,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Campina da Barra',
         date: '20/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Experiência em Linha Pesada']
     },
     {
@@ -143,7 +143,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Capela Velha',
         date: '19/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Ensino Médio Completo', 'Disponibilidade de horário']
     },
     {
@@ -155,7 +155,7 @@ export const jobs: Job[] = [
         type: 'Estágio',
         location: 'Centro',
         date: '19/01',
-        contactLink: 'https://wa.me/5541999904961',
+        contactLink: '#',
         requirements: ['Cursando a partir do 5º período', 'AutoCAD']
     }
 ];

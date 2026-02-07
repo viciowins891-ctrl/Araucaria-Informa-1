@@ -290,15 +290,37 @@ export const api = {
     getJobs: async (): Promise<Job[]> => {
         try {
             const supabase = await getSupabase();
-            const { data, error } = await supabase.from('jobs').select('*').order('created_at', { ascending: false });
+            const { data, error } = await supabase
+                .from('jobs')
+                .select('*')
+                .order('created_at', { ascending: false });
 
             if (error || !data || data.length === 0) {
+                // Fallback silencioso (retorna mock se vazio)
                 const { jobs } = await import('../data-jobs');
                 return jobs;
             }
-            return data;
+
+            // Mapeamento snake_case (DB) -> camelCase (App)
+            return data.map((job: any) => ({
+                id: job.id,
+                title: job.title,
+                company: job.company,
+                description: job.description,
+                salary: job.salary,
+                type: job.type as 'CLT' | 'Estágio' | 'PJ' | 'Temporário',
+                location: job.location,
+                date: new Date(job.created_at).toLocaleDateString('pt-BR'), // Formata data
+                contactLink: job.contact_link,
+                logoUrl: job.logo_url,
+                requirements: job.requirements || []
+            }));
         } catch (e) {
+            console.error("Erro CRÍTICO ao buscar vagas no Supabase:", e);
+            if (e instanceof Error) console.error("Detalhes do erro:", e.message, e.stack);
+
             const { jobs } = await import('../data-jobs');
+            console.warn("Usando vagas fictícias (Mock Data) devido ao erro acima.");
             return jobs;
         }
     }
