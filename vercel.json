@@ -1,21 +1,16 @@
 {
     "cleanUrls": true,
     "trailingSlash": false,
-    "rewrites": [
-        {
-            "source": "/vagas",
-            "destination": "/vagas/index.html"
-        },
-        {
-            "source": "/servicos",
-            "destination": "/servicos/index.html"
-        },
-        {
-            "source": "/((?!vagas|servicos|assets|images|favicon|sw.js|manifest.json).*)",
-            "destination": "/index.html"
-        }
-    ],
     "headers": [
+        {
+            "source": "/(.*).html",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=0, must-revalidate"
+                }
+            ]
+        },
         {
             "source": "/(.*)",
             "headers": [
@@ -44,6 +39,12 @@
                     "value": "default-src 'self'; img-src 'self' https://images.unsplash.com https://*.supabase.co data: blob: https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google.com https://*.gstatic.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.googleapis.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net;"
                 }
             ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/((?!vagas|servicos|assets|images|favicon.ico|sw.js|manifest.json|.*\\.png|.*\\.jpg|.*\\.webp).*)",
+            "destination": "/index.html"
         }
     ]
 }
