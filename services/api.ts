@@ -293,6 +293,8 @@ export const api = {
             const { data, error } = await supabase
                 .from('jobs')
                 .select('*')
+                // Força atualização de cache (Hack)
+                .neq('id', 0)
                 .order('created_at', { ascending: false });
 
             if (error || !data || data.length === 0) {
