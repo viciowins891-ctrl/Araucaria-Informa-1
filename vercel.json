@@ -1,7 +1,17 @@
 {
+    "cleanUrls": true,
+    "trailingSlash": false,
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/vagas",
+            "destination": "/vagas/index.html"
+        },
+        {
+            "source": "/servicos",
+            "destination": "/servicos/index.html"
+        },
+        {
+            "source": "/((?!vagas|servicos|assets|images|favicon|sw.js|manifest.json).*)",
             "destination": "/index.html"
         }
     ],
