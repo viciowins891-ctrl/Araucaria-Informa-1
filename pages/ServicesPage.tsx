@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 
 import ShareButton from '../components/ShareButton';
 
+import SEO from '../components/SEO';
+
 const ServicesPage: React.FC = () => {
     useEffect(() => {
-        document.title = "Telefones Úteis e Farmácias de Plantão - Araucária Informa";
         window.scrollTo(0, 0);
     }, []);
 
@@ -31,7 +32,6 @@ const ServicesPage: React.FC = () => {
         { name: 'Copel', number: '0800 51 00 116', type: 'Energia' },
     ];
 
-    // Placeholder data - in a real app this could be dynamic
     const pharmacies = [
         { name: 'Farmácia Nissei (24h)', address: 'Rua Pedro Druszcz, 140 - Centro', phone: '(41) 3232-3232' },
         { name: 'Farmácia São João', address: 'Av. Dr. Victor do Amaral, 1020', phone: '(41) 3642-1234' },
@@ -39,6 +39,11 @@ const ServicesPage: React.FC = () => {
 
     return (
         <div className="bg-gray-50 dark:bg-background-dark min-h-screen pb-16">
+            <SEO
+                title="Guia de Serviços Úteis e Telefones de Emergência"
+                description="Consulte horários de ônibus, telefones de emergência, farmácias de plantão e serviços públicos de Araucária."
+                image="/images/share_services.jpg"
+            />
 
             {/* Header / Hero */}
             <div className="bg-primary dark:bg-primary-dark pt-24 pb-12 px-4 shadow-md">

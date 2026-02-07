@@ -12,7 +12,7 @@ const JobsPage: React.FC = () => {
             <SEO
                 title="Vagas de Emprego"
                 description="Oportunidades de emprego e vagas abertas em Araucária hoje."
-                image="/images/jobs_hero.jpg"
+                image="/images/share_jobs.jpg"
             />
             {/* Header Hero */}
             <section className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white pt-24 pb-16 px-4">
