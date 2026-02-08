@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/create_static_routes.cjs",
     "preview": "vite preview",
     "deploy": "npm run build && npx vercel --prod",
     "gerar-noticias": "node scripts/generate-news-vertex.js",
