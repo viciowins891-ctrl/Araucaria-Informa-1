@@ -276,18 +276,18 @@ const ArticlePage: React.FC = () => {
                             dangerouslySetInnerHTML={{ __html: article.title }}
                         />
 
-                        <div className="flex items-center justify-between border-y border-gray-100 dark:border-gray-800 py-6">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center text-xl font-bold text-gray-600 dark:text-gray-300 uppercase">
+                        <div className="flex items-center justify-between border-y border-gray-100 dark:border-gray-800 py-6 gap-4">
+                            <div className="flex items-center gap-4 min-w-0 flex-1">
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center text-xl font-bold text-gray-600 dark:text-gray-300 uppercase flex-shrink-0">
                                     {article.author ? article.author[0] : 'R'}
                                 </div>
-                                <div>
-                                    <p className="text-sm font-bold text-gray-900 dark:text-white">{article.author || 'Redação'}</p>
-                                    <p className="text-xs text-gray-500 dark:text-gray-400">Jornalista / Colunista</p>
+                                <div className="min-w-0 flex-1">
+                                    <p className="text-sm font-bold text-gray-900 dark:text-white truncate">{article.author || 'Redação'}</p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-400 truncate">Jornalista / Colunista</p>
                                 </div>
                             </div>
 
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 flex-shrink-0">
                                 <TextToSpeech text={stripHtml(article.content || article.summary || '')} />
                                 <ShareButton title={plainTitle} />
                                 <button
