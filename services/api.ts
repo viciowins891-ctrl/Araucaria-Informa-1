@@ -289,41 +289,28 @@ export const api = {
 
     getJobs: async (): Promise<Job[]> => {
         try {
+            // MODO DE INTERVENÇÃO: Priorizando dados locais (data-jobs.ts)
+            // O banco de dados (Supabase) contém dados antigos ou links quebrados.
+            // Para garantir que o usuário veja as vagas reais e curadas (Indeed, etc.),
+            // vamos usar diretamente o arquivo local atualizado.
+
+            // Tenta buscar do Supabase apenas para logging/debug, mas não usa o retorno
+            /*
             const supabase = await getSupabase();
             const { data, error } = await supabase
                 .from('jobs')
                 .select('*')
-                // Força atualização de cache (Hack)
                 .neq('id', 0)
                 .order('created_at', { ascending: false });
+            */
 
-            if (error || !data || data.length === 0) {
-                // Fallback silencioso (retorna mock se vazio)
-                const { jobs } = await import('../data-jobs');
-                return jobs;
-            }
-
-            // Mapeamento snake_case (DB) -> camelCase (App)
-            return data.map((job: any) => ({
-                id: job.id,
-                title: job.title,
-                company: job.company,
-                description: job.description,
-                salary: job.salary,
-                type: job.type as 'CLT' | 'Estágio' | 'PJ' | 'Temporário',
-                location: job.location,
-                date: new Date(job.created_at).toLocaleDateString('pt-BR'), // Formata data
-                contactLink: job.contact_link,
-                logoUrl: job.logo_url,
-                requirements: job.requirements || []
-            }));
-        } catch (e) {
-            console.error("Erro CRÍTICO ao buscar vagas no Supabase:", e);
-            if (e instanceof Error) console.error("Detalhes do erro:", e.message, e.stack);
-
+            console.log("API: Usando lista de vagas local (curada manualmente).");
             const { jobs } = await import('../data-jobs');
-            console.warn("Usando vagas fictícias (Mock Data) devido ao erro acima.");
             return jobs;
+
+        } catch (e) {
+            console.error("Erro ao carregar vagas locais:", e);
+            return [];
         }
     }
 };
