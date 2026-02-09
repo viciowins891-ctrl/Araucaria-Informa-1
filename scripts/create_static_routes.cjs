@@ -49,8 +49,9 @@ function replaceTitle(content, newTitle) {
 
 // --- Generate VAGAS ---
 console.log('Generating Vagas static route...');
-const vagasDir = path.join(distDir, 'vagas');
-ensureDir(vagasDir);
+// No subdirectories needed for cleanUrls with direct file mapping in vercel.json if preferred
+// But cleanUrls usually maps /vagas -> /vagas.html OR /vagas/index.html
+// Let's stick to /vagas.html to match the vercel.json 'destination': '/vagas.html' perfectly.
 
 let vagasHtml = html;
 vagasHtml = replaceTitle(vagasHtml, "Vagas de Emprego em Araucária - Araucária Informa");
@@ -59,31 +60,27 @@ vagasHtml = replaceMeta(vagasHtml, "property", "og:title", "Vagas de Emprego em 
 vagasHtml = replaceMeta(vagasHtml, "property", "og:description", "Confira as vagas de emprego atualizadas diariamente em Araucária.");
 vagasHtml = replaceMeta(vagasHtml, "property", "og:image", "https://araucariainforma.com/images/share_jobs.jpg");
 vagasHtml = replaceMeta(vagasHtml, "name", "twitter:title", "Vagas de Emprego em Araucária");
-vagasHtml = replaceMeta(vagasHtml, "property", "twitter:description", "Confira as vagas de emprego atualizadas diariamente em Araucária."); // Twitter often uses name or property
+vagasHtml = replaceMeta(vagasHtml, "property", "twitter:description", "Confira as vagas de emprego atualizadas diariamente em Araucária.");
 vagasHtml = replaceMeta(vagasHtml, "name", "twitter:image", "https://araucariainforma.com/images/share_jobs.jpg");
-// Also standard twitter:image property
 vagasHtml = replaceMeta(vagasHtml, "property", "twitter:image", "https://araucariainforma.com/images/share_jobs.jpg");
 
 
-fs.writeFileSync(path.join(vagasDir, 'index.html'), vagasHtml);
-console.log('✅ Generated dist/vagas/index.html');
+fs.writeFileSync(path.join(distDir, 'vagas.html'), vagasHtml);
+console.log('✅ Generated dist/vagas.html');
 
 // --- Generate SERVICOS ---
 console.log('Generating Servicos static route...');
-const servicosDir = path.join(distDir, 'servicos');
-ensureDir(servicosDir);
 
 let servicosHtml = html;
 servicosHtml = replaceTitle(servicosHtml, "Horários de Ônibus e Telefones Úteis - Araucária Informa");
-servicosHtml = replaceMeta(servicosHtml, "name", "description", "Consulte horários do Triar, Metropolitana, telefones de emergência, farmácias de plantão e serviços públicos de Araucária.");
+servicosHtml = replaceMeta(servicosHtml, "name", "description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
 servicosHtml = replaceMeta(servicosHtml, "property", "og:title", "Horários de Ônibus e Telefones Úteis");
 servicosHtml = replaceMeta(servicosHtml, "property", "og:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
 servicosHtml = replaceMeta(servicosHtml, "property", "og:image", "https://araucariainforma.com/images/share_services.jpg");
-servicosHtml = replaceMeta(servicosHtml, "name", "twitter:title", "Horários de Ônibus e Telefones Úteis");
-servicosHtml = replaceMeta(servicosHtml, "name", "twitter:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
+servicosHtml = replaceMeta(vagasHtml, "name", "twitter:title", "Horários de Ônibus e Telefones Úteis");
+servicosHtml = replaceMeta(vagasHtml, "property", "twitter:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
 servicosHtml = replaceMeta(servicosHtml, "name", "twitter:image", "https://araucariainforma.com/images/share_services.jpg");
-// Also standard twitter:image property
 servicosHtml = replaceMeta(servicosHtml, "property", "twitter:image", "https://araucariainforma.com/images/share_services.jpg");
 
-fs.writeFileSync(path.join(servicosDir, 'index.html'), servicosHtml);
-console.log('✅ Generated dist/servicos/index.html');
+fs.writeFileSync(path.join(distDir, 'servicos.html'), servicosHtml);
+console.log('✅ Generated dist/servicos.html');
