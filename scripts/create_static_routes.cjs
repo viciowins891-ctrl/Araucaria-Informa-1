@@ -77,8 +77,8 @@ servicosHtml = replaceMeta(servicosHtml, "name", "description", "Consulte horár
 servicosHtml = replaceMeta(servicosHtml, "property", "og:title", "Horários de Ônibus e Telefones Úteis");
 servicosHtml = replaceMeta(servicosHtml, "property", "og:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
 servicosHtml = replaceMeta(servicosHtml, "property", "og:image", "https://araucariainforma.com/images/share_services.jpg");
-servicosHtml = replaceMeta(vagasHtml, "name", "twitter:title", "Horários de Ônibus e Telefones Úteis");
-servicosHtml = replaceMeta(vagasHtml, "property", "twitter:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
+servicosHtml = replaceMeta(servicosHtml, "name", "twitter:title", "Horários de Ônibus e Telefones Úteis");
+servicosHtml = replaceMeta(servicosHtml, "property", "twitter:description", "Consulte horários do Triar, Metropolitana, telefones emergência e farmácias.");
 servicosHtml = replaceMeta(servicosHtml, "name", "twitter:image", "https://araucariainforma.com/images/share_services.jpg");
 servicosHtml = replaceMeta(servicosHtml, "property", "twitter:image", "https://araucariainforma.com/images/share_services.jpg");
 

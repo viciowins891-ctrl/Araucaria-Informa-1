@@ -43,6 +43,14 @@
     ],
     "rewrites": [
         {
+            "source": "/vagas",
+            "destination": "/vagas.html"
+        },
+        {
+            "source": "/servicos",
+            "destination": "/servicos.html"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
