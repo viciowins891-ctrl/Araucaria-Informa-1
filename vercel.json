@@ -43,15 +43,7 @@
     ],
     "rewrites": [
         {
-            "source": "/vagas",
-            "destination": "/vagas.html"
-        },
-        {
-            "source": "/servicos",
-            "destination": "/servicos.html"
-        },
-        {
-            "source": "/((?!vagas|servicos|assets|images|favicon.ico|sw.js|manifest.json|.*\\.png|.*\\.jpg|.*\\.webp).*)",
+            "source": "/(.*)",
             "destination": "/index.html"
         }
     ]

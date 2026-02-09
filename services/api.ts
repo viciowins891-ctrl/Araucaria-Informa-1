@@ -152,85 +152,59 @@ export const api = {
 
     getEvents: async (): Promise<Event[]> => {
         try {
-            let eventsList: Event[] = [];
-            const supabase = await getSupabase();
-            const { data, error } = await supabase
-                .from('events')
-                .select('*')
-                .order('date', { ascending: true });
+            // MODO PERFORMANCE: Prioriza dados locais para carregamento instantâneo
+            // O Supabase é chamado apenas em segundo plano ou em páginas específicas se necessário.
+            // Isso elimina o tempo de espera (loading skeletons) na Home.
+            const { events } = await import('../data');
 
-            if (!error && data && data.length > 0) {
-                eventsList = data.map((e: any) => ({
-                    ...e,
-                    imageUrl: e.image_url
-                }));
-            } else {
-                // Fallback para Eventos Estáticos
-                const { events } = await import('../data');
-                eventsList = events;
-            }
+            /* TENTATIVA DE SUPABASE DESABILITADA PARA ESTABILIDADE
+            try {
+                const supabase = await getSupabase();
+                const { data } = await supabase.from('events').select('*');
+                if (data && data.length > 0) return data;
+            } catch (err) { console.warn("Supabase Events unreachable, using local."); }
+            */
 
             // Filtragem e Ordenação Padronizada
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
-            return eventsList
-                .filter(event => parseDate(event.date) >= today.getTime())
-                .sort((a, b) => parseDate(a.date) - parseDate(b.date)); // Crescente (Próximos primeiro)
-
-        } catch (e) {
-            const { events } = await import('../data');
-            // Mesma lógica de filtro para o catch
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
             return events
                 .filter(event => parseDate(event.date) >= today.getTime())
                 .sort((a, b) => parseDate(a.date) - parseDate(b.date));
+
+        } catch (e) {
+            console.error("Erro ao carregar eventos locais:", e);
+            return [];
         }
     },
 
     getEventById: async (id: number): Promise<Event | undefined> => {
-        try {
-            const supabase = await getSupabase();
-            const { data, error } = await supabase
-                .from('events')
-                .select('*')
-                .eq('id', id)
-                .single();
-
-            if (!error && data) {
-                return {
-                    ...data,
-                    imageUrl: data.image_url
-                };
-            }
-        } catch (e) { }
-
-        // Fallback para Eventos
+        // Busca local direta
         const { events } = await import('../data');
         return events.find(e => e.id === Number(id));
     },
 
     getBusinesses: async (): Promise<Business[]> => {
         try {
-            const supabase = await getSupabase();
-            const { data, error } = await supabase
-                .from('businesses')
-                .select('*');
+            // MODO PERFORMANCE: Prioriza dados locais
+            const { businesses } = await import('../data');
 
-            // Fallback para Comércios
-            if (error || !data || data.length === 0) {
-                const { businesses } = await import('../data');
-                return businesses;
-            }
+            /* TENTATIVA DE SUPABASE DESABILITADA
+            try {
+                const supabase = await getSupabase();
+                const { data } = await supabase.from('businesses').select('*');
+                if (data && data.length > 0) return data;
+            } catch (err) { console.warn("Supabase Businesses unreachable, using local."); }
+            */
 
-            return (data || []).map((b: any) => ({
+            return businesses.map((b: any) => ({
                 ...b,
-                imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url
+                imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url || b.imageUrl
             }));
         } catch (e) {
-            const { businesses } = await import('../data');
-            return businesses;
+            console.error("Erro ao carregar comércios locais:", e);
+            return [];
         }
     },
 
