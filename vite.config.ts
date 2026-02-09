@@ -44,6 +44,8 @@ export default defineConfig(({ mode }) => {
           ]
         },
         workbox: {
+          // Garante que o SW não intercepte rotas estáticas geradas pelo servidor (SEO/OpenGraph)
+          navigateFallbackDenylist: [/^\/vagas/, /^\/servicos/, /^\/admin/],
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
