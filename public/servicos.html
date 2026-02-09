@@ -59,7 +59,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Horários de Ônibus e Telefones Úteis" />
-    <meta property="twitter:description" content="Consulte horários do Triar, Metropolitana, telefones emergência e farmácias." />
+    <meta property="twitter:description"
+        content="Consulte horários do Triar, Metropolitana, telefones emergência e farmácias." />
     <meta property="twitter:image" content="https://araucariainforma.com/images/share_services.jpg" />
     <meta name="app-version" content="1.0.0" />
 
@@ -289,6 +290,29 @@
             </div>
         </div>
     </div>
+
+    <!-- Redirecionamento automático para a página de Serviços -->
+    <script>
+        // Redireciona imediatamente para a rota correta do React Router
+        if (window.location.hash !== '#/servicos') {
+            // Oculta o conteúdo estático imediatamente
+            document.getElementById('root').style.display = 'none';
+
+            // Mostra loading simples
+            document.body.innerHTML = `
+                <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#1d4ed8;">
+                    <div style="text-align:center;color:white;">
+                        <div style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">Araucária<span style="font-weight:300;">Informa</span></div>
+                        <div style="font-size:1rem;opacity:0.8;">Carregando Serviços...</div>
+                    </div>
+                </div>
+            `;
+
+            // Redireciona
+            window.location.replace('/#/servicos');
+        }
+    </script>
+
     <script type="module" src="/index.tsx"></script>
 </body>
 

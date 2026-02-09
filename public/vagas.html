@@ -52,8 +52,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://araucariainforma.com/" />
     <meta property="og:title" content="Vagas de Emprego em Araucária" />
-    <meta property="og:description"
-        content="Confira as vagas de emprego atualizadas diariamente em Araucária." />
+    <meta property="og:description" content="Confira as vagas de emprego atualizadas diariamente em Araucária." />
     <meta property="og:image" content="https://araucariainforma.com/images/share_jobs.jpg" />
 
     <!-- Twitter -->
@@ -289,6 +288,29 @@
             </div>
         </div>
     </div>
+
+    <!-- Redirecionamento automático para a página de Vagas -->
+    <script>
+        // Redireciona imediatamente para a rota correta do React Router
+        if (window.location.hash !== '#/vagas') {
+            // Oculta o conteúdo estático imediatamente
+            document.getElementById('root').style.display = 'none';
+
+            // Mostra loading simples
+            document.body.innerHTML = `
+                <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#1d4ed8;">
+                    <div style="text-align:center;color:white;">
+                        <div style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">Araucária<span style="font-weight:300;">Informa</span></div>
+                        <div style="font-size:1rem;opacity:0.8;">Carregando Vagas de Emprego...</div>
+                    </div>
+                </div>
+            `;
+
+            // Redireciona
+            window.location.replace('/#/vagas');
+        }
+    </script>
+
     <script type="module" src="/index.tsx"></script>
 </body>
 
