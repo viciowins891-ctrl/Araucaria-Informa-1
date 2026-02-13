@@ -21,7 +21,171 @@ const getPastDate = (daysAgo: number): string => {
 };
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
-export const newsArticles: NewsArticle[] = [
+export const newsArticles: NewsArticle[] = [\n
+    {
+        id: 1771000020,
+        title: "Araucária E.C. apresenta elenco para a Divisão de Acesso 2026",
+        summary: "O 'Cacique' aposta na mescla de experiência e jovens da base para buscar o retorno à elite do futebol paranaense.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A temporada 2026 começou oficialmente para o Araucária Esporte Clube. Em evento realizado nesta manhã no Estádio Municipal, a diretoria apresentou o elenco que disputará a Segunda Divisão do Campeonato Paranaense. Com o lema "Rumo à Elite", o Cacique investiu em reforços pontuais para o setor defensivo, mas manteve a espinha dorsal da equipe que quase subiu no ano passado.</p>
+        <p>O destaque fica por conta da promoção de cinco atletas do <strong>Sub-20</strong>, categoria que vem brilhando nos estaduais contra gigantes como Coritiba e Athletico. "Essa garotada tem o DNA do clube. Eles sabem o peso dessa camisa", afirmou o técnico Marquinhos.</p>
+        <h3>Estreia em Casa</h3>
+        <p>A estreia está marcada para o próximo domingo, contra o Paraná Clube, com promessa de casa cheia. A torcida organizada Fúria do Cacique já organiza uma caravana partindo da Praça da Matriz.</p>
+        `,
+        imageUrl: '/images/araucaria_ec_team_cover.png', // Usar imagem de time genérica ou placeholder
+        mobileImageUrl: '/images/araucaria_ec_team_cover.png',
+        internalImageUrl: '/images/futsal_action_unique.png', // Reutilizando ação esportiva
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: '2026-02-13',
+        author: 'Esporte na Rede'
+    },
+    {
+        id: 1771000019,
+        title: "Copa Tião Calado: Grêmio vence Beira Rio em clássico eletrizante",
+        summary: "Rodada da 'Primeirona' foi marcada por muitos gols e arquibancada lotada no campo do Costeira.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O futebol amador de Araucária provou mais uma vez porque é uma paixão municipal. No clássico da rodada da Copa Tião Calado, o <strong>Grêmio Araucariense</strong> venceu o tradicional <strong>Beira Rio</strong> por 3 a 2, em uma partida decidida nos acréscimos.</p>
+        <p>O jogo, disputado no campo do Costeira, reuniu centenas de torcedores das duas comunidades. O gol da vitória saiu aos 48 minutos do segundo tempo, em cobrança de falta magistral do meia Canhoto. Com o resultado, o Grêmio assume a liderança isolada do Grupo B.</p>
+        <h3>Várzea Viva</h3>
+        <p>"Isso aqui é futebol raiz. Domingo de manhã, família na beira do campo e muita raça", celebrou o presidente da Liga Desportiva. A próxima rodada promete, com o duelo entre Tropical e Juventus.</p>
+        `,
+        imageUrl: '/images/araucaria_futsal_cover_v1.png', // Reutilizando img esporte
+        mobileImageUrl: '/images/araucaria_futsal_cover_v1.png',
+        internalImageUrl: '/images/futsal_action_unique.png',
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: '2026-02-12',
+        author: 'Várzea News'
+    },
+    {
+        id: 1771000018,
+        title: "CPI do Transporte: Câmara investiga contrato de R$ 31 milhões",
+        summary: "Comissão Processante apura supostas irregularidades em acordo emergencial da Prefeitura.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A política local está em ebulição. A Câmara Municipal instalou esta semana uma Comissão Processante (CPI) para investigar o contrato de R$ 31 milhões firmado entre a Prefeitura e a nova operadora do transporte coletivo. A oposição alega falta de transparência na dispensa de licitação.</p>
+        <p>Em nota, o Executivo defendeu a legalidade do ato, afirmando que a medida foi necessária para evitar o colapso do sistema de ônibus após a falência da antiga concessionária. Os vereadores terão 90 dias para apresentar o relatório final.</p>
+        `,
+        imageUrl: '/images/news_budget.png',
+        mobileImageUrl: '/images/news_budget.png',
+        internalImageUrl: '/images/camara_araucaria_internal_final.png',
+        category: 'Política',
+        categoryColor: 'purple',
+        publishDate: '2026-02-12',
+        author: 'Redação Política'
+    },
+    {
+        id: 1771000017,
+        title: "Araucária Vôlei vence Maringá e segue invicto na Superliga B",
+        summary: "Ginásio Joval de Paula Souza virou caldeirão na noite de quarta-feira. Time busca o acesso.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O projeto de levar Araucária à elite do vôlei nacional segue firme. Jogando em casa, no Ginásio Joval de Paula Souza (Parque Cachoeira), o <strong>Araucária Vôlei/SMEL</strong> derrotou o forte time de Maringá por 3 sets a 1.</p>
+        <p>A torcida compareceu em peso, transformando o ginásio em um caldeirão. O oposto Bruno foi o maior pontuador da partida, com 22 acertos. "A energia dessa torcida é o nosso sétimo jogador", elogiou o técnico. O próximo desafio é fora de casa, contra o líder Juiz de Fora.</p>
+        `,
+        imageUrl: '/images/gym_volleyball_final_cover_v5.png',
+        mobileImageUrl: '/images/gym_volleyball_final_cover_v5.png',
+        internalImageUrl: '/images/gym_volleyball_internal_final_v5_mobile.webp',
+        category: 'Esporte',
+        categoryColor: 'orange',
+        publishDate: '2026-02-11',
+        author: 'Esporte em Foco'
+    },
+    {
+        id: 1771000016,
+        title: "Obras no Contorno Norte exigem atenção redobrada",
+        summary: "Bloqueios parciais para construção de viaduto geram lentidão nos horários de pico.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O motorista que utiliza o Contorno Norte para acessar Curitiba deve ter paciência. As obras do novo viaduto de interconexão entraram em uma fase crítica, exigindo o estreitamento de pista no km 12.</p>
+        <p>O Departamento de Estradas de Rodagem (DER) recomenda rotas alternativas pela Rodovia do Xisto ou pelo centro de Campo Largo. A previsão é que as interferências no tráfego durem cerca de três semanas.</p>
+        `,
+        imageUrl: '/images/pavimentacao-jardim-plinio-final.png',
+        mobileImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
+        internalImageUrl: '/images/pavimentacao_jardim_plinio_internal_real.png',
+        category: 'Infraestrutura',
+        categoryColor: 'purple',
+        publishDate: '2026-02-11',
+        author: 'Mobilidade Urbana'
+    },
+    {
+        id: 1771000015,
+        title: "Atleta de Araucária é ouro no Brasileiro de Judô",
+        summary: "Jovem do Projeto 'Esporte Cidadão' subiu ao lugar mais alto do pódio em São Paulo.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O esporte araucariense tem um novo campeão nacional. Felipe Santos, de 16 anos, conquistou a medalha de ouro na categoria meio-médio do Campeonato Brasileiro de Judô Sub-18, disputado neste fim de semana em São Paulo.</p>
+        <p>Felipe é fruto do projeto social "Esporte Cidadão", mantido pela Prefeitura no CAIC. "Essa medalha é para todos que acreditaram em mim, especialmente meus treinadores do município", disse o atleta emocionado ao desembarcar com o ouro no peito.</p>
+        `,
+        imageUrl: '/images/judoka_generic.png', // Usar placeholder ou genérica
+        mobileImageUrl: '/images/judoka_generic.png',
+        internalImageUrl: '/images/chess_players_unique.png', // Reutilizando img genérica de esporte individual
+        category: 'Esporte',
+        categoryColor: 'green',
+        publishDate: '2026-02-10',
+        author: 'Esporte na Rede'
+    },
+    {
+        id: 1771000014,
+        title: "Segurança: GM apreende drogas no Campina da Barra",
+        summary: "Operação saturação resultou na prisão de dois suspeitos e apreensão de entorpecentes.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A Guarda Municipal de Araucária (GMA) realizou uma importante apreensão de drogas na noite de ontem no bairro Campina da Barra. Durante patrulhamento preventivo, uma equipe da ROMU desconfiou de movimentação suspeita em um terreno baldio.</p>
+        <p>Dois indivíduos foram abordados e com eles encontrados 2kg de maconha e pinos de cocaína. A ação faz parte da "Operação Bairro Seguro", que tem intensificado rondas nas regiões mais afastadas do centro.</p>
+        `,
+        imageUrl: '/images/pcpr_incineration_cover_final_v2.png',
+        mobileImageUrl: '/images/pcpr_incineration_cover_final_v2.png',
+        internalImageUrl: '/images/pcpr_incineration_internal_real.png',
+        category: 'Segurança',
+        categoryColor: 'red',
+        publishDate: '2026-02-09',
+        author: 'Araucária Alerta'
+    },
+    {
+        id: 1771000013,
+        title: "Inscrições abertas para as Escolinhas de Esporte da Prefeitura",
+        summary: "Vagas gratuitas para Futsal, Natação e Ginástica Rítmica para crianças e adolescentes.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A Secretaria Municipal de Esporte e Lazer (SMEL) abriu hoje as inscrições para as turmas de 2026 das escolinhas esportivas. São mais de 1.500 vagas distribuídas em diversas modalidades, com destaque para a Natação (no CSU) e a Ginástica Rítmica.</p>
+        <p>O objetivo é democratizar o acesso ao esporte e descobrir novos talentos. "Queremos tirar a criança da rua e colocar na quadra, na piscina", afirmou o secretário. As inscrições devem ser feitas presencialmente nos núcleos esportivos dos bairros.</p>
+        `,
+        imageUrl: '/images/hortas_escolas_cover_v27.jpg', // Reutilizando img escola/criança
+        mobileImageUrl: '/images/hortas_escolas_cover_v27.jpg',
+        internalImageUrl: '/images/teatro_infantil_internal_real.png',
+        category: 'Esporte', // Foco em Esporte público
+        categoryColor: 'green',
+        publishDate: '2026-02-08',
+        author: 'Prefeitura Municipal'
+    },
+    {
+        id: 1771000012,
+        title: "Acidente grave bloqueia Rodovia do Xisto por 3 horas",
+        summary: "Colisão entre caminhão e moto causou congestionamento quilométrico próximo à Repar.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - Um grave acidente paralisou a Rodovia do Xisto (BR-476) na manhã desta sexta-feira. Uma colisão lateral envolvendo um caminhão tanque e uma motocicleta bloqueou totalmente a pista sentido Curitiba, na altura da Refinaria.</p>
+        <p>O motociclista foi socorrido pelo helicóptero da PRF em estado grave. O trânsito precisou ser desviado por dentro da área urbana, causando lentidão na Avenida das Araucárias. A pista foi liberada por volta do meio-dia.</p>
+        `,
+        imageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
+        mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
+        internalImageUrl: '/images/defesa_civil_internal_generated.png',
+        category: 'Trânsito',
+        categoryColor: 'gray',
+        publishDate: '2026-02-07',
+        author: 'Trânsito Agora'
+    },
+    {
+        id: 1771000011,
+        title: "Violência no Terminal: Adolescentes são apreendidos após briga",
+        summary: "Confronto entre grupos rivais assustou passageiros no Terminal Central.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A segurança nos terminais de ônibus voltou a ser pauta após uma confusão generalizada no Terminal Central. Dois grupos de adolescentes se enfrentaram na plataforma de embarque, gerando pânico entre os usuários.</p>
+        <p>A Guarda Municipal interveio rapidamente, apreendendo três menores com soqueiras e canivetes. Ninguém ficou ferido gravemente, mas o episódio reforça a necessidade de monitoramento constante nos horários de saída escolar.</p>
+        `,
+        imageUrl: '/images/gm_viaturas_cover_v2.png',
+        mobileImageUrl: '/images/gm_viaturas_cover_v2.png',
+        internalImageUrl: '/images/gma_viaturas_manual.png',
+        category: 'Segurança',
+        categoryColor: 'red',
+        publishDate: '2026-02-06',
+        author: 'Segurança Pública'
+    },
     {
         id: 1769253501,
         title: "Hoje tem decisão: Araucária Vôlei enfrenta o ELASE pela Superliga B",
@@ -871,198 +1035,7 @@ export const newsArticles: NewsArticle[] = [
         categoryColor: 'indigo',
         publishDate: '2025-09-15',
         author: 'Turismo Araucária'
-    },
-    {
-        id: 1769015223,
-        title: 'Startup local desenvolve app para transporte escolar',
-        summary: 'Aplicativo criado por jovens araucarienses permite aos pais rastrearem vans escolares em tempo real.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Uma startup nascida na incubadora do Parque Tecnológico de Araucária lançou o "Van Segura", aplicativo que revoluciona o transporte escolar na cidade.Pais do <strong>Jardim Iguaçu </strong> e <strong>Campina da Barra</strong> agora monitoram o trajeto dos filhos em tempo real.</p>
-        
-        <p> A tecnologia oferece notificações de embarque e desembarque, trazendo paz de espírito para as famílias. "Eu ficava ansiosa em dias de chuva forte no <strong>Costeira</strong>. Agora vejo a van chegando pelo celular", conta uma mãe usuária do sistema.</p>
-        <h3>Educação em Foco</h3>
-        
-        <h2> Tecnologia Local </h2>
-        <p> O app já conta com adesão de 80 % dos motoristas que atendem as escolas do <strong>Centro </strong> e <strong>Vila Nova</strong>.A inovação mostra o potencial tecnológico da juventude araucariense, criando soluções locais para problemas reais da nossa comunidade.</p>`,
-        imageUrl: '/images/startup_app_cover_v2.png',
-        category: 'Tecnologia',
-        categoryColor: 'yellow',
-        internalImageUrl: '/images/startup_app_gen.png',
-        publishDate: '2025-09-10',
-        author: 'Inovação Tech'
-    },
-    {
-        id: 1769015403,
-        title: 'Praça da Bíblia recebe nova iluminação em LED',
-        summary: 'Revitalização do espaço público garante mais segurança e lazer para as famílias à noite.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Quem passa pela Praça da Bíblia à noite já percebe a diferença.A Prefeitura concluiu nesta semana a instalação do novo sistema de iluminação em LED em todo o perímetro da praça.</p>
-        
-        <p> "Agora dá para trazer as crianças para brincar com tranquilidade", elogiou uma moradora local.Além das novas luminárias, o paisagismo foi recuperado e bancos foram reformados.</p>
-        <h3>Investimento e Melhorias</h3>
-        
-        <p> O projeto faz parte do programa "Cidade Iluminada", que prevê a modernização da iluminação pública em diversos bairros.</p>`,
-        imageUrl: '/images/plaza_bible_lighting_night.png',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/plaza_bible_internal_real.webp',
-        publishDate: '2025-09-05',
-        author: 'Redação Municipal'
-    },
-    {
-        id: 1769015471,
-        title: 'Hackathon Municipal reúne 500 jovens programadores',
-        summary: 'Maratona de 48h no Parque Tecnológico cria soluções reais e conecta talentos locais ao Polo Industrial.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O ronco dos servidores se misturou ao cheiro de café e pizza durante as 48 horas ininterruptas do 1º Hackathon Municipal de Araucária.O evento, sediado no Parque Tecnológico, transformou o local em um verdadeiro Vale do Silício paranaense, reunindo 500 mentes brilhantes de escolas como <strong> IFPR </strong>, <strong>Unifacear</strong> e colégios estaduais do <strong>Centro </strong> e <strong>Fazenda Velha</strong>.</p>
-        <p> O desafio era criar soluções tecnológicas para dores reais da cidade.A equipe vencedora, formada por jovens do bairro <strong> Costeira </strong>, desenvolveu o "Recicla+", um app que gamifica a coleta seletiva e troca pontos por descontos no comércio local. "A gente queria algo que ajudasse nossa vizinhança a manter as ruas limpas", explicou Lucas, 17 anos, líder do time campeão.</p>
-        <h3>Vitrine de Talentos </h3>
-        <p> Além do prêmio em dinheiro, o evento serviu como uma poderosa vitrine profissional.Grandes empresas do <strong>Polo Industrial </strong> (CIAR) marcaram presença como "olheiros", e pelo menos 50 participantes saíram de lá com propostas de estágio ou emprego. É Araucária deixando de ser apenas cidade operária para se tornar um polo de inteligência e inovação.</p>
-
-    `,
-        imageUrl: '/images/hackathon_real.jpg',
-        mobileImageUrl: '/images/hackathon_real_mobile.webp',
-        internalImageUrl: '/images/hackathon_gen.png',
-        category: 'Tecnologia',
-        categoryColor: 'yellow',
-        publishDate: '2025-09-01',
-        author: 'Tech News'
-    },
-    {
-        id: 1769015642,
-        title: 'Sítio Ecológico abre novas trilhas para ecoturismo',
-        summary: 'Propriedade rural em <strong>Guajuvira</strong> aposta no turismo de natureza e observação de aves.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O Sítio Ecológico, localizado na área rural de <strong> Guajuvira </strong>, inaugurou três novas trilhas interpretativas abertas ao público. O espaço se consolida como principal destino de ecoturismo para famílias de Araucária e região.</p>
-        
-        <p>Os trajetos, que variam de 2km a 5km, passam por áreas preservadas de Mata Atlântica e Araucárias centenárias.Visitantes do <strong>Centro </strong> e <strong>Boqueirão</strong> têm lotado o local nos finais de semana, buscando contato com a natureza sem precisar viajar longe.</p>
-        <h3>Sustentabilidade</h3>
-        
-        <h2> Desenvolvimento Rural </h2>
-        <p> O turismo ecológico movimenta a economia local.Produtores de <strong> Roça Nova </strong> e <strong>Campestre</strong> vendem queijos, vinhos e geleias na entrada do parque, gerando renda extra. "É o turismo sustentável valorizando o homem do campo", afirma o secretário de turismo.</p>`,
-        imageUrl: '/images/sitio_ecologico_trilhas_cover_v2.jpg',
-        mobileImageUrl: '/images/sitio_ecologico_trilhas_cover_v2_mobile.webp',
-        internalImageUrl: '/images/sitio_ecologico_pano.png',
-        category: 'Turismo',
-        categoryColor: 'indigo',
-        publishDate: '2025-08-25',
-        author: 'Jornal do Campo'
-    },
-    {
-        id: 1769016347,
-        title: 'Araucária recebe etapa decisiva do Paranaense de Futsal',
-        summary: 'Ginásio Joval de Paula Souza promete virar caldeirão neste sábado; vitória garante vaga nas quartas.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O <strong> Parque Cachoeira </strong> vai tremer neste fim de semana. O Araucária Futsal entra em quadra no Ginásio Joval de Paula Souza para uma das partidas mais importantes do ano pelo Campeonato Paranaense Série Prata. A equipe da casa precisa de uma vitória simples para garantir a classificação antecipada para os playoffs.</p>
-        <p>A diretoria espera lotação máxima. "A torcida de Araucária nunca decepciona. Quando o ginásio lota, vira o sexto jogador", convoca o capitão do time.Caravanas do <strong>Jardim Industrial </strong> e <strong>Costeira</strong> já organizaram um "corredor de fogo" para recepcionar o ônibus dos atletas na chegada.</p>
-        <h3> Ingresso Solidário </h3>
-        <p> Para democratizar o acesso, a entrada será mediante a doação de 1kg de alimento não perecível.Tudo o que for arrecadado será destinado ao Provopar Municipal.É a união da paixão pelo esporte com a solidariedade que marca a nossa gente.</p>
-
-    `,
-        imageUrl: '/images/araucaria_futsal_cover_v1.png',
-        mobileImageUrl: '/images/araucaria_futsal_cover_v1_mobile.webp',
-        internalImageUrl: '/images/futsal_action_unique.png',
-        category: 'Esporte',
-        categoryColor: 'green',
-        publishDate: '2025-08-20',
-        author: 'Esporte News'
-    },
-    {
-        id: 1769016822,
-        title: 'Campanha do Agasalho arrecada 2 toneladas de doações',
-        summary: 'Solidariedade marcou o inverno em Araucária com recorde de arrecadação.',
-        content: `<p><strong>ARAUCÁRIA</strong> - A solidariedade aqueceu o inverno de milhares de famílias em Araucária. O Provopar Municipal divulgou nesta semana o balanço final da Campanha do Agasalho 2025, celebrando um recorde histórico: mais de <strong>2 toneladas</strong> de peças arrecadadas, entre roupas, cobertores e calçados em bom estado.</p>
-        <p>A mobilização envolveu toda a cidade. Pontos de coleta espalhados pelo comércio do <strong>Centro</strong> e escolas nos bairros <strong>Iguaçu</strong> e <strong>Fazenda Velha</strong> facilitaram a participação da comunidade. "A resposta do araucariense foi emocionante. Vimos crianças doando seus próprios casacos e empresários enviando fardos de cobertores novos", destacou a coordenadora da ação.</p>
-        <h3>Logística e Distribuição</h3>
-        <p>Todo o material passou por uma triagem rigorosa no Centro de Convivência, onde voluntários separaram as peças por tamanho e gênero. A distribuição priorizou famílias cadastradas nos CRAS, especialmente nas regiões do <strong>Jardim Tropical</strong> e <strong>Capela Velha</strong>, onde o inverno costuma ser mais rigoroso para quem vive em situação de vulnerabilidade.</p>
-        <p>Além dos agasalhos, a campanha também arrecadou cestas básicas, que estão sendo entregues como complemento emergencial. "Não entregamos apenas roupa, entregamos dignidade e carinho", finalizou a presidente do Provopar.</p>`,
-        imageUrl: '/images/winter_clothing_drive_real_v2.webp',
-        category: 'Cidade',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/campanha_agasalho_internal.jpg',
-        publishDate: '2025-08-15',
-        author: 'Social Araucária'
-    },
-    {
-        id: 1769017500,
-        title: 'Novo binário no <strong>Centro</strong> melhora fluxo de veículos',
-        summary: 'Mudanças no trânsito das ruas Victor do Amaral e São Vicente agradam motoristas.',
-        content: `<p><strong>ARAUCÁRIA</strong> - Quem transita pelo Centro de Araucária nos últimos dias já percebeu a diferença. O novo binário, implementado nas vias principais que cortam a região central, completou sua primeira semana de operação com saldo positivo. Segundo avaliações preliminares do Departamento de Trânsito, a fluidez nos horários de pico melhorou cerca de 20%, aliviando gargalos históricos.</p>
-        <p>As mudanças alteraram o sentido das ruas <strong>Victor do Amaral</strong> e <strong>São Vicente de Paulo</strong>, criando um sistema de fluxo contínuo que conecta a entrada da cidade até a região da Prefeitura. Além da inversão de sentido, o projeto incluiu o recapeamento asfáltico e a sincronização inteligente dos semáforos.</p>
-        <h3>Mais Segurança para Pedestres</h3>
-        <p>"O objetivo não é apenas fazer o carro andar mais rápido, mas organizar o espaço urbano", explica Carlos Mendes, engenheiro de tráfego da cidade. As esquinas receberam novas faixas de pedestres elevadas e sinalização reforçada, garantindo travessias mais seguras, especialmente próximo às escolas e comércios da região.</p>
-        <p>Para os motoristas, a adaptação foi rápida. "No primeiro dia confundi um pouco, mas agora percebo que não fico mais parado no semáforo fechado a cada quadra. Flui muito melhor", relata Roberto Siqueira, taxista que trabalha no ponto da Praça Matriz.</p>
-        <h3>Monitoramento Contínuo</h3>
-        <p>Equipes de agentes de trânsito continuarão monitorando o local pelos próximos 15 dias para orientar motoristas e realizar ajustes finos nos tempos dos semáforos. A Prefeitura reforça o pedido de atenção redobrada à nova sinalização horizontal.</p>`,
-        imageUrl: '/images/binario_centro_cover.webp',
-        category: 'Infraestrutura',
-        categoryColor: 'purple',
-        internalImageUrl: '/images/binario_centro_internal.webp',
-        publishDate: '2025-08-10',
-        author: 'Trânsito Seguro'
-    },
-    {
-        id: 1769017510,
-        title: 'Festival Gastronômico de Inverno começa hoje',
-        summary: 'Restaurantes da cidade oferecem pratos especiais com descontos exclusivos.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O inverno curitibano pode ser rigoroso, mas em Araucária ele tem um sabor especial. A Prefeitura Municipal, através da Secretaria de Turismo, deu a largada oficial para o <strong>3º Festival Gastronômico de Inverno</strong>, transformando a cidade em um verdadeiro corredor de sabores.</p>
-        <p>Neste ano, o circuito quebrou recordes de adesão: são mais de 25 estabelecimentos participantes, desde as tradicionais cantinas italianas do <strong>Santa Regina</strong> até os modernos cafés coloniais que têm revitalizado o comércio do <strong>Centro Histórico</strong>. O tema desta edição, "Raízes da Nossa Terra", desafiou os chefs a criarem pratos que valorizem ingredientes locais, com destaque absoluto para o pinhão e a erva-mate.</p>
-        
-        <h3>Roteiro de Sabores</h3>
-        <p>Quem passar pela <strong>Avenida Victor do Amaral</strong> já sente o cheiro de novidade. Restaurantes clássicos da região inovaram com receitas como o "Risoto de Pinhão com Bacon Defumado" e o "Pierogi de Abóbora Caramelizada", honrando a forte herança polonesa do município.</p>
-        <p>"O festival não movimenta apenas a gastronomia, ele aquece toda a cadeia produtiva, do agricultor de <strong>Guajuvira</strong> que fornece o insumo fresco, até o garçom que atende com um sorriso no rosto", destacou o prefeito durante a cerimônia de abertura na Praça da Matriz.</p>
-
-        <h3>Serviço</h3>
-        <p>O festival segue até o final do mês. Os pratos promocionais variam de R$ 29,90 a R$ 59,90. Um mapa digital com a rota completa dos restaurantes está disponível no app <em>Araucária Digital</em>, permitindo que o visitante trace seu próprio itinerário gastronômico pelos bairros da cidade.</p>`,
-        imageUrl: '/images/feira_gastronomica_noturna_real.jpg',
-        category: 'Cultura',
-        categoryColor: 'yellow',
-        internalImageUrl: '/images/festival_gastronomico_internal.jpg',
-        publishDate: '2025-08-05',
-        author: 'Roteiro Gourmet'
-    },
-    {
-        id: 1769018194,
-        title: 'Escolas municipais recebem lousas digitais',
-        summary: 'Tecnologia chega à sala de aula para modernizar o ensino em Araucária.',
-        content: `<p><strong>ARAUCÁRIA</strong> - O giz e o apagador estão dando lugar ao toque e à interatividade nas escolas da rede municipal. A Prefeitura de Araucária, através da Secretaria Municipal de Educação (SMED), anunciou nesta semana a conclusão da primeira etapa do programa "Escola Digital 2025", que instalou lousas interativas de 75 polegadas em todas as turmas de 4º e 5º ano.</p>
-        <p>A modernização já é realidade na <strong>Escola Municipal Marcelino Champagnat</strong>, no Jardim Tupy, e na <strong>CMAI Archelau de Almeida Torres</strong>, no Costeira. "Não é só substituir o quadro verde por uma tela. É mudar a forma como a criança aprende. Numa aula de Geografia, por exemplo, saímos do mapa estático do livro e 'viajamos' pelo Google Earth em tempo real", explica a diretora pedagógica da SMED.</p>
-        
-        <h3>Engajamento em Alta</h3>
-        <p>Para os professores, a tecnologia veio como uma aliada poderosa no combate à desatenção. Os novos equipamentos possuem sistema de som integrado e conexão de alta velocidade, permitindo o uso de jogos educativos e vídeos em 4K. "O brilho no olho dos alunos voltou. Eles querem ir para o quadro, querem participar. A aula de História virou um cinema, e a de Matemática, um game", relata Helena Bastos, professora da rede há 15 anos.</p>
-
-        <h3>Próximos Passos</h3>
-        <p>O investimento municipal ultrapassa a casa dos R$ 2 milhões e inclui também a formação continuada dos docentes. Até o final do semestre, a meta é expandir o projeto para a Educação Infantil, com softwares adaptados para alfabetização e letramento. A tecnologia não substitui o afeto do professor, mas em Araucária, ela tem sido uma ponte fundamental para o futuro.</p>`,
-
-        imageUrl: '/images/lousas_digitais_capa_final.png?v=final', // Cache buster adicionado para travar a imagem nova
-        category: 'Educação',
-        categoryColor: 'red',
-        internalImageUrl: '/images/lousas_digitais_manual_final.png',
-        publishDate: '2025-08-01',
-        author: 'EducaTech'
-    },
-    {
-        id: 1769018855,
-        title: 'Empresa de logística abre 50 vagas de emprego',
-        summary: 'Oportunidades são para motoristas, conferentes e auxiliares administrativos.',
-        content: `<p><strong>ARAUCÁRIA</strong> - A manhã desta sexta-feira foi movimentada no pátio logístico próximo à Rodovia do Xisto. Em parceria com o SINE Araucária, uma das maiores operadoras de transportes da região iniciou um mutirão para o preenchimento imediato de 50 vagas de emprego.</p>
-        <p>A ação faz parte do plano de expansão da empresa para atender o aumento da demanda no segundo semestre. As oportunidades são para diversos níveis de escolaridade, incluindo cargos de <strong>Conferente, Operador de Empilhadeira, Motorista Categoria D/E e Auxiliar Administrativo</strong>.</p>
-        <h3>Prioridade para Bairros Adjacentes</h3>
-        <p>Um dos diferenciais deste processo seletivo é a valorização da mão de obra local. O RH da empresa confirmou que haverá prioridade de contratação para moradores de bairros adjacentes ao complexo logístico, especificamente <strong>Campina da Barra, Jardim Tupy, Costeira e Thomaz Coelho</strong>.</p>
-        <p>"Queremos que nosso colaborador <strong>trabalhe perto de casa</strong>. Isso reduz o tempo de deslocamento, melhora a qualidade de vida e fortalece a economia do bairro", afirmou o gerente de operações durante a abertura do portão.</p>
-        <h3>Benefícios Regionalizados</h3>
-        <p>Além do salário compatível com a categoria, a empresa anunciou um pacote de benefícios focado na realidade local:</p>
-        <ul>
-            <li>Vale-Alimentação/Refeição com valor acima da média;</li>
-            <li>Transporte Fretado (rota exclusiva pelos bairros citados);</li>
-            <li>Plano de Saúde e Odontológico extensivo a dependentes;</li>
-            <li><strong>Parcerias Regionais:</strong> Descontos em farmácias e supermercados de Araucária.</li>
-        </ul>
-        <p>Os interessados que não puderam comparecer hoje ainda podem enviar currículo pelo site oficial da empresa ou entregar pessoalmente na Agência do Trabalhador (SINE) de Araucária até a próxima quarta-feira.</p>
-        `,
-        imageUrl: '/images/logistica_vagas_internal.jpg', // Capa mantida
-        category: 'Economia',
-        categoryColor: 'blue',
-        internalImageUrl: '/images/logistica_vagas_real.png',
-        publishDate: '2025-07-25',
-        author: 'Vagas & Oportunidades'
-    }
-];
+    },\n];
 export const events: Event[] = [
     {
         id: 1769019227,
