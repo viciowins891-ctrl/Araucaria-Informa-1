@@ -21,7 +21,7 @@ const getPastDate = (daysAgo: number): string => {
 };
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
-export const newsArticles: NewsArticle[] = [\n
+export const newsArticles: NewsArticle[] = [
     {
         id: 1771000020,
         title: "Araucária E.C. apresenta elenco para a Divisão de Acesso 2026",
@@ -32,8 +32,8 @@ export const newsArticles: NewsArticle[] = [\n
         <h3>Estreia em Casa</h3>
         <p>A estreia está marcada para o próximo domingo, contra o Paraná Clube, com promessa de casa cheia. A torcida organizada Fúria do Cacique já organiza uma caravana partindo da Praça da Matriz.</p>
         `,
-        imageUrl: '/images/araucaria_ec_team_cover.png', // Usar imagem de time genérica ou placeholder
-        mobileImageUrl: '/images/araucaria_ec_team_cover.png',
+        imageUrl: '/images/araucaria_ec_jogo.webp', // Usar imagem de time genérica ou placeholder
+        mobileImageUrl: '/images/araucaria_ec_jogo_mobile.webp',
         internalImageUrl: '/images/futsal_action_unique.png', // Reutilizando ação esportiva
         category: 'Esporte',
         categoryColor: 'green',
@@ -50,8 +50,8 @@ export const newsArticles: NewsArticle[] = [\n
         <h3>Várzea Viva</h3>
         <p>"Isso aqui é futebol raiz. Domingo de manhã, família na beira do campo e muita raça", celebrou o presidente da Liga Desportiva. A próxima rodada promete, com o duelo entre Tropical e Juventus.</p>
         `,
-        imageUrl: '/images/araucaria_futsal_cover_v1.png', // Reutilizando img esporte
-        mobileImageUrl: '/images/araucaria_futsal_cover_v1.png',
+        imageUrl: '/images/placeholder_esporte.webp', // Reutilizando img esporte
+        mobileImageUrl: '/images/placeholder_esporte_mobile.webp',
         internalImageUrl: '/images/futsal_action_unique.png',
         category: 'Esporte',
         categoryColor: 'green',
@@ -114,8 +114,8 @@ export const newsArticles: NewsArticle[] = [\n
         <p><strong>ARAUCÁRIA</strong> - O esporte araucariense tem um novo campeão nacional. Felipe Santos, de 16 anos, conquistou a medalha de ouro na categoria meio-médio do Campeonato Brasileiro de Judô Sub-18, disputado neste fim de semana em São Paulo.</p>
         <p>Felipe é fruto do projeto social "Esporte Cidadão", mantido pela Prefeitura no CAIC. "Essa medalha é para todos que acreditaram em mim, especialmente meus treinadores do município", disse o atleta emocionado ao desembarcar com o ouro no peito.</p>
         `,
-        imageUrl: '/images/judoka_generic.png', // Usar placeholder ou genérica
-        mobileImageUrl: '/images/judoka_generic.png',
+        imageUrl: '/images/judo_escolas_real.jpg', // Usar placeholder ou genérica
+        mobileImageUrl: '/images/judo_escolas_real_mobile.webp',
         internalImageUrl: '/images/chess_players_unique.png', // Reutilizando img genérica de esporte individual
         category: 'Esporte',
         categoryColor: 'green',
@@ -1035,7 +1035,8 @@ export const newsArticles: NewsArticle[] = [\n
         categoryColor: 'indigo',
         publishDate: '2025-09-15',
         author: 'Turismo Araucária'
-    },\n];
+    },
+];
 export const events: Event[] = [
     {
         id: 1769019227,
