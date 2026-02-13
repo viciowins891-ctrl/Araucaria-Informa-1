@@ -32,9 +32,9 @@ export const newsArticles: NewsArticle[] = [
         <h3>Orgulho Municipal</h3>
         <p>"Araucária é uma cidade de gente trabalhadora e acolhedora. Celebrar mais um ano de história é renovar nossa esperança no futuro", destacou o cerimonial do evento. O feriado transcorreu com segurança reforçada e clima de confraternização.</p>
         `,
-        imageUrl: '/images/parque_cachoeira_real.png',
-        mobileImageUrl: '/images/parque_cachoeira_real_mobile.webp',
-        internalImageUrl: '/images/parque_cachoeira_internal.png',
+        imageUrl: '/images/feira_noturna_real_v2.jpg',
+        mobileImageUrl: '/images/feira_noturna_real_v2_mobile.webp',
+        internalImageUrl: '/images/feira_gastronomica_noturna_real.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-02-13',
