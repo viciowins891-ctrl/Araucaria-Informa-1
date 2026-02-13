@@ -37,7 +37,7 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/parque_cachoeira_internal.png',
         category: 'Cidade',
         categoryColor: 'blue',
-        publishDate: '2026-02-12',
+        publishDate: '2026-02-13',
         author: 'Redação Oficial'
     },
     {
@@ -55,7 +55,7 @@ export const newsArticles: NewsArticle[] = [
         internalImageUrl: '/images/futsal_action_unique.png', // Reutilizando ação esportiva
         category: 'Esporte',
         categoryColor: 'green',
-        publishDate: '2026-02-13',
+        publishDate: '2026-02-12',
         author: 'Esporte na Rede'
     },
     {
