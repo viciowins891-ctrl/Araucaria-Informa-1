@@ -32,9 +32,9 @@ export const newsArticles: NewsArticle[] = [
         <h3>Orgulho Municipal</h3>
         <p>"Araucária é uma cidade de gente trabalhadora e acolhedora. Celebrar mais um ano de história é renovar nossa esperança no futuro", destacou o cerimonial do evento. O feriado transcorreu com segurança reforçada e clima de confraternização.</p>
         `,
-        imageUrl: '/images/araucaria_136_aniversario_capa.png',
-        mobileImageUrl: '/images/araucaria_136_aniversario_capa.png',
-        internalImageUrl: '/images/araucaria_136_aniversario_interna.png',
+        imageUrl: '/images/araucaria_136_aniversario_capa_v2.jpg',
+        mobileImageUrl: '/images/araucaria_136_aniversario_capa_v2.jpg',
+        internalImageUrl: '/images/araucaria_136_aniversario_interna_v2.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-02-13',
