@@ -23,6 +23,24 @@ const getPastDate = (daysAgo: number): string => {
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 export const newsArticles: NewsArticle[] = [
     {
+        id: 1771000030,
+        title: "Araucária 136 Anos: Feriado leva multidão ao Parque Cachoeira",
+        summary: "Aniversário da cidade foi celebrado com shows, bolo e atrações culturais nesta quarta-feira (11).",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - O feriado de 11 de fevereiro, data que marca os <strong>136 anos de emancipação política de Araucária</strong>, foi celebrado em grande estilo pela população. O Parque Cachoeira, cartão-postal da cidade, ficou pequeno para as milhares de famílias que compareceram para prestigiar a festa.</p>
+        <p>A programação incluiu apresentações de bandas locais, feira gastronômica e atividades recreativas para as crianças. O momento mais aguardado foi o tradicional corte do bolo, símbolo da partilha e da união da comunidade araucariense.</p>
+        <h3>Orgulho Municipal</h3>
+        <p>"Araucária é uma cidade de gente trabalhadora e acolhedora. Celebrar mais um ano de história é renovar nossa esperança no futuro", destacou o cerimonial do evento. O feriado transcorreu com segurança reforçada e clima de confraternização.</p>
+        `,
+        imageUrl: '/images/parque_cachoeira_real.png',
+        mobileImageUrl: '/images/parque_cachoeira_real_mobile.webp',
+        internalImageUrl: '/images/parque_cachoeira_internal.png',
+        category: 'Cidade',
+        categoryColor: 'blue',
+        publishDate: '2026-02-12',
+        author: 'Redação Oficial'
+    },
+    {
         id: 1771000020,
         title: "Araucária E.C. apresenta elenco para a Divisão de Acesso 2026",
         summary: "O 'Cacique' aposta na mescla de experiência e jovens da base para buscar o retorno à elite do futebol paranaense.",
