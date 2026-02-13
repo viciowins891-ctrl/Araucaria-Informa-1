@@ -10,7 +10,7 @@ const rootElement = document.getElementById('root');
 // --- NUCLEAR CACHE CLEAR (VARREDURA) ---
 // Executa limpeza profunda se a versão não bater ou forzado
 // otimização: Executa DEPOIS que o app já montou para não bloquear a thread principal
-const APP_VERSION = 'v1.1.0-auto-fix';
+const APP_VERSION = 'v1.1.1-force-manual';
 
 const clearCache = () => {
   const storedVersion = localStorage.getItem('app_version');
