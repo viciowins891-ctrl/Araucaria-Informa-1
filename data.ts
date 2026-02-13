@@ -31,6 +31,8 @@ export const newsArticles: NewsArticle[] = [
         <p>Quem passou pelo local encontrou uma estrutura impressionante. A criançada se divertiu nos brinquedos infláveis gigantes montados no gramado, que garantiram a alegria dos pequenos durante toda a tarde. A praça de alimentação, com food trucks e feira gastronômica, ofereceu o melhor da culinária local, enquanto no palco principal, artistas regionais animaram o público com música sertaneja, pop e rock.</p>
         <h3>Tradição e Confraternização</h3>
         <p>O momento mais aguardado, no entanto, foi o tradicional corte do bolo. Neste ano, um bolo simbólico e decorado de 136kg foi o centro das atenções, representando a união e a partilha da comunidade araucariense. Autoridades locais realizaram o corte oficial, distribuindo fatias para a multidão que cercava a mesa principal, num gesto de confraternização que já virou tradição no município.</p>
+        <h3>Impacto Local</h3>
+        <p>A celebração também trouxe reflexos positivos para a economia da região. Comerciantes dos bairros <strong>Iguaçu</strong> e <strong>Costeira</strong> relataram um aumento significativo no movimento, impulsionado pelas famílias que aproveitaram o feriado para visitar o parque e consumir no comércio local.</p>
         <p>"Araucária é uma cidade construída por gente trabalhadora e acolhedora. Celebrar mais um ano de história aqui no Parque, vendo as famílias reunidas, é renovar nossa esperança no futuro", destacou a organização do evento. O feriado transcorreu com segurança reforçada pela <strong>Guarda Municipal</strong> e <strong>Polícia Militar</strong>, garantindo um clima de paz e diversão para todos.</p>
         `,
         imageUrl: '/images/araucaria_136_aniversario_capa_v2.jpg',
