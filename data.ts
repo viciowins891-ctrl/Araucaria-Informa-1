@@ -48,7 +48,7 @@ export const newsArticles: NewsArticle[] = [
         title: "Araucária E.C. apresenta elenco para a Divisão de Acesso 2026",
         summary: "O 'Cacique' aposta na mescla de experiência e jovens da base para buscar o retorno à elite do futebol paranaense.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A temporada 2026 começou oficialmente para o Araucária Esporte Clube. Em evento realizado nesta manhã no Estádio Municipal, a diretoria apresentou o elenco que disputará a Segunda Divisão do Campeonato Paranaense. Com o lema "Rumo à Elite", o Cacique investiu em reforços pontuais para o setor defensivo, mas manteve a espinha dorsal da equipe que quase subiu no ano passado.</p>
+        <p><strong>ARAUCÁRIA</strong> - A temporada 2026 começou oficialmente para o <strong>Araucária Esporte Clube</strong>. Em evento realizado nesta manhã no Estádio Municipal, a diretoria apresentou o elenco que disputará a Segunda Divisão do Campeonato Paranaense. Com o lema "Rumo à Elite", o Cacique investiu em reforços pontuais para o setor defensivo, mas manteve a espinha dorsal da equipe que quase subiu no ano passado.</p>
         <p>O destaque fica por conta da promoção de cinco atletas do <strong>Sub-20</strong>, categoria que vem brilhando nos estaduais contra gigantes como Coritiba e Athletico. "Essa garotada tem o DNA do clube. Eles sabem o peso dessa camisa", afirmou o técnico Marquinhos.</p>
         <h3>Estreia em Casa</h3>
         <p>A estreia está marcada para o próximo domingo, contra o Paraná Clube, com promessa de casa cheia. A torcida organizada Fúria do Cacique já organiza uma caravana partindo da Praça da Matriz.</p>
