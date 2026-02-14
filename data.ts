@@ -71,9 +71,9 @@ export const newsArticles: NewsArticle[] = [
         <h3>Várzea Viva</h3>
         <p>"Isso aqui é futebol raiz. Domingo de manhã, família na beira do campo e muita raça", celebrou o presidente da Liga Desportiva. A próxima rodada promete, com o duelo entre Tropical e Juventus.</p>
         `,
-        imageUrl: '/images/placeholder_esporte.webp', // Reutilizando img esporte
-        mobileImageUrl: '/images/placeholder_esporte_mobile.webp',
-        internalImageUrl: '/images/futsal_action_unique.png',
+        imageUrl: '/images/copa_tiao_calado_capa.jpg',
+        mobileImageUrl: '/images/copa_tiao_calado_capa.jpg',
+        internalImageUrl: '/images/copa_tiao_calado_interna.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '2026-02-12',
