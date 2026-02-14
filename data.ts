@@ -87,9 +87,9 @@ export const newsArticles: NewsArticle[] = [
         <p><strong>ARAUCÁRIA</strong> - A política local está em ebulição. A Câmara Municipal instalou esta semana uma Comissão Processante (CPI) para investigar o contrato de R$ 31 milhões firmado entre a Prefeitura e a nova operadora do transporte coletivo. A oposição alega falta de transparência na dispensa de licitação.</p>
         <p>Em nota, o Executivo defendeu a legalidade do ato, afirmando que a medida foi necessária para evitar o colapso do sistema de ônibus após a falência da antiga concessionária. Os vereadores terão 90 dias para apresentar o relatório final.</p>
         `,
-        imageUrl: '/images/news_budget.png',
-        mobileImageUrl: '/images/news_budget.png',
-        internalImageUrl: '/images/camara_araucaria_internal_final.png',
+        imageUrl: '/images/cpi_transporte_capa.png',
+        mobileImageUrl: '/images/cpi_transporte_capa.png',
+        internalImageUrl: '/images/cpi_transporte_interna.png',
         category: 'Política',
         categoryColor: 'purple',
         publishDate: '2026-02-12',
