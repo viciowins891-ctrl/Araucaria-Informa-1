@@ -66,10 +66,10 @@ export const newsArticles: NewsArticle[] = [
         title: "Copa Tião Calado: Grêmio vence Beira Rio em clássico eletrizante",
         summary: "Rodada da 'Primeirona' foi marcada por muitos gols e arquibancada lotada no campo do Costeira.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O futebol amador de Araucária provou mais uma vez porque é uma paixão municipal. No clássico da rodada da Copa Tião Calado, o <strong>Grêmio Araucariense</strong> venceu o tradicional <strong>Beira Rio</strong> por 3 a 2, em uma partida decidida nos acréscimos.</p>
-        <p>O jogo, disputado no campo do Costeira, reuniu centenas de torcedores das duas comunidades. O gol da vitória saiu aos 48 minutos do segundo tempo, em cobrança de falta magistral do meia Canhoto. Com o resultado, o Grêmio assume a liderança isolada do Grupo B.</p>
-        <h3>Várzea Viva</h3>
-        <p>"Isso aqui é futebol raiz. Domingo de manhã, família na beira do campo e muita raça", celebrou o presidente da Liga Desportiva. A próxima rodada promete, com o duelo entre Tropical e Juventus.</p>
+        <p><strong>ARAUCÁRIA</strong> - O futebol amador de Araucária provou mais uma vez porque é uma verdadeira paixão na cidade. Em um domingo de sol e casa cheia, o clássico da rodada da <strong>Copa Tião Calado</strong> entregou tudo o que prometia: emoção, rivalidade e muitos gols. O <strong>Grêmio Araucariense</strong> levou a melhor sobre o tradicional <strong>Beira Rio</strong>, vencendo por 3 a 2 em uma partida decidida apenas nos acréscimos.</p>
+        <p>A partida, disputada no campo do Costeira, foi um espetáculo à parte. A torcida compareceu em peso, com charangas, bandeiras e sinalizadores, transformando o alambrado em uma verdadeira arquibancada vibrante. Dentro de campo, o jogo foi lá e cá, com viradas no placar e muita disputa física, típica do futebol de várzea. O gol da vitória saiu aos 48 minutos do segundo tempo, em uma cobrança de falta magistral do meia Canhoto, que fez a festa da torcida gremista explodir.</p>
+        <h3>Futebol Raiz</h3>
+        <p>"Isso aqui é a essência do futebol. Domingo de manhã, as famílias na beira do campo, o cheiro de churrasco e essa energia única", celebrou o presidente da Liga Desportiva. Com o resultado, o Grêmio assume a liderança isolada do Grupo B e já mira a classificação antecipada. A próxima rodada promete ainda mais emoção, com o esperado duelo entre Tropical e Juventus.</p>
         `,
         imageUrl: '/images/copa_tiao_calado_capa.jpg',
         mobileImageUrl: '/images/copa_tiao_calado_capa.jpg',
