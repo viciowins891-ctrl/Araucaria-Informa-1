@@ -53,8 +53,8 @@ export const newsArticles: NewsArticle[] = [
         <h3>Estreia em Casa</h3>
         <p>A estreia está marcada para o próximo domingo, contra o Paraná Clube, com promessa de casa cheia. A torcida organizada Fúria do Cacique já organiza uma caravana partindo da Praça da Matriz.</p>
         `,
-        imageUrl: '/images/araucaria_ec_elenco_2026_capa.png',
-        mobileImageUrl: '/images/araucaria_ec_elenco_2026_capa.png',
+        imageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
+        mobileImageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
         internalImageUrl: '/images/araucaria_ec_elenco_2026_interna.jpg',
         category: 'Esporte',
         categoryColor: 'green',
