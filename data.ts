@@ -536,15 +536,19 @@ export const newsArticles: NewsArticle[] = [
         title: 'Semáforos inteligentes agilizam trânsito na Av. Archelau',
         summary: 'Motoristas que trafegam pela Av. Archelau já sentem a diferença com o novo sistema semafórico inteligente que reduz filas.',
         content: `
-        <p><strong>ARAUCÁRIA</strong> - Quem passa pela <strong>Avenida Archelau de Almeida Torres</strong> nos horários de pico já percebeu a diferença. Entrou em operação nesta semana o novo sistema de semáforos inteligentes, capaz de analisar o fluxo de veículos e ajustar o tempo de sinal verde automaticamente.</p>
-        <p>O objetivo é reduzir as longas filas que se formavam no final da tarde, facilitando o retorno dos trabalhadores para casa. Segundo testes iniciais do Departamento de Trânsito, o tempo de deslocamento no trecho entre o Centro e o Costeira reduziu em cerca de 20%.</p>
-        <h3>Modernização Viária</h3>
-        <p>A tecnologia, que utiliza sensores e câmeras, deve ser expandida em breve para a <strong>Rodovia do Xisto</strong> e outras artérias importantes da cidade. "É mais qualidade de vida para quem antes perdia tempo parado no trânsito", destaca o diretor de Trânsito.</p>
+        <p><strong>ARAUCÁRIA</strong> - Uma revolução silenciosa está transformando a mobilidade urbana em uma das principais artérias da cidade. Quem trafega pela <strong>Avenida Archelau de Almeida Torres</strong>, especialmente nos horários de pico, já começou a sentir a diferença com a entrada em operação do novo sistema de <strong>semáforos inteligentes</strong>.</p>
+        
+        <p>Diferente dos modelos tradicionais com tempos fixos, a nova tecnologia utiliza <strong>sensores e inteligência artificial</strong> para ler o fluxo de veículos em tempo real. "O sistema 'enxerga' onde está o congestionamento e libera o sinal verde automaticamente para aquela via, otimizando o tempo de todos", explica o engenheiro responsável pelo projeto no Departamento de Trânsito.</p>
+
+        <h3>Impacto Imediato</h3>
+        <p>Testes preliminares apontam uma redução de até <strong>25%</strong> no tempo de deslocamento entre o <strong>Centro</strong> e o bairro <strong>Costeira</strong> no final da tarde. As longas filas que travavam cruzamentos cruciais diminuíram sensivelmente, proporcionando um retorno para casa mais rápido e menos estressante para os trabalhadores.</p>
+        
+        <p>O projeto piloto na <strong>Archelau</strong> é apenas o começo. A <strong>Prefeitura</strong> planeja expandir a modernização viária para a <strong>Rodovia do Xisto</strong> e a <strong>Avenida Victor do Amaral</strong> ainda neste semestre. "É tecnologia a serviço da qualidade de vida", celebra a <strong>administração municipal</strong>.</p>
 
     `,
         imageUrl: '/images/semaforo-archelau-v2-capa.png', // TRAVA: IMAGEM MANUAL DEFINIDA PELO USUARIO
         mobileImageUrl: '/images/semaforo-archelau-v2-capa.png',
-        internalImageUrl: '/images/semaforos_archelau_internal_real.png',
+        internalImageUrl: '/images/semaforos_archelau_interna.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-22',
