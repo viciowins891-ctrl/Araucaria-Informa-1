@@ -256,12 +256,18 @@ export const newsArticles: NewsArticle[] = [
         title: "Violência no Terminal: Adolescentes são apreendidos após briga",
         summary: "Confronto entre grupos rivais assustou passageiros no Terminal Central.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A segurança nos terminais de ônibus voltou a ser pauta após uma confusão generalizada no Terminal Central. Dois grupos de adolescentes se enfrentaram na plataforma de embarque, gerando pânico entre os usuários.</p>
-        <p>A Guarda Municipal interveio rapidamente, apreendendo três menores com soqueiras e canivetes. Ninguém ficou ferido gravemente, mas o episódio reforça a necessidade de monitoramento constante nos horários de saída escolar.</p>
+        <p><strong>ARAUCÁRIA</strong> - Momentos de tensão tomaram conta do <strong>Terminal Central de Araucária</strong> no final da tarde de ontem. Uma briga generalizada envolvendo dois grupos rivais de adolescentes assustou passageiros que aguardavam a volta para casa no horário de pico.</p>
+        
+        <p>A confusão, que teria começado com provocações na área de embarque, rapidamente evoluiu para agressões físicas. A <strong>Guarda Municipal (GMA)</strong>, que mantém base fixa no local, agiu com rapidez e eficácia para conter o tumulto antes que tomasse proporções maiores. Durante a abordagem, foram apreendidos com três menores de idade: <strong>soqueiras inglesas</strong> e <strong>dois canivetes</strong>, evidenciando que o confronto havia sido premeditado.</p>
+
+        <h3>Medidas Adotadas</h3>
+        <p>Os jovens envolvidos foram encaminhados à <strong>Delegacia Civil</strong> para as providências legais, com o acompanhamento do <strong>Conselho Tutelar</strong>. Os pais foram acionados para comparecer à unidade policial.</p>
+        
+        <p>"Não vamos tolerar que o transporte público vire arena de briga. Nossas equipes estão atentas e a fiscalização será rigorosa, principalmente na saída das escolas", afirmou o comando da <strong>GMA</strong>, tranquilizando a população. Embora o susto tenha sido grande, felizmente não houve registro de feridos graves entre os usuários do terminal.</p>
         `,
-        imageUrl: '/images/gm_viaturas_cover_v2.png',
-        mobileImageUrl: '/images/gm_viaturas_cover_v2.png',
-        internalImageUrl: '/images/gma_viaturas_manual.png',
+        imageUrl: '/images/terminal_capa.jpg',
+        mobileImageUrl: '/images/terminal_capa.jpg',
+        internalImageUrl: '/images/terminal_interna.jpg',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2026-02-06',
@@ -363,7 +369,7 @@ export const newsArticles: NewsArticle[] = [
         <p>A comunidade japonesa local recebeu a notícia com entusiasmo, vendo no projeto uma oportunidade de manter vivas as tradições e, ao mesmo tempo, inserir o município em uma rota global de inovação.</p>`,
         imageUrl: '/images/interconexoes-parana-japao-capa.png',
         mobileImageUrl: '/images/interconexoes-parana-japao-capa.png',
-        internalImageUrl: '/images/interconexoes-parana-japao-interna.png',
+        internalImageUrl: '/images/japao_interna.jpg',
         category: 'Cidade',
         categoryColor: 'blue',
         publishDate: '2026-01-24',
@@ -432,18 +438,18 @@ export const newsArticles: NewsArticle[] = [
         title: "Ministro da Educação autoriza obras de melhorias no IFPR Araucária",
         summary: `ARAUCÁRIA - O Ministério da Educação autorizou oficialmente as obras de melhorias no campus do Instituto Federal do Paraná(IFPR) em Araucária.O projeto contempla reformas estruturais, modernização de laboratórios e ampliação das áreas de convivência.`,
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O Ministério da Educação autorizou oficialmente as obras de melhorias no campus do Instituto Federal do Paraná (IFPR) em Araucária. O investimento faz parte de um pacote de modernização da rede federal de ensino técnico e profissionalizante no Paraná.</p>
-        <p>As obras contemplam reformas estruturais nos prédios existentes, modernização de laboratórios de informática e eletrônica, ampliação das áreas de convivência estudantil e melhorias na acessibilidade do campus. O projeto prevê também a construção de novos espaços para atividades práticas e workshops.</p>
+        <p><strong>ARAUCÁRIA</strong> - O <strong>Ministério da Educação</strong> autorizou oficialmente as obras de melhorias no campus do <strong>Instituto Federal do Paraná</strong> (<strong>IFPR</strong>) em <strong>Araucária</strong>. O investimento faz parte de um pacote de modernização da rede federal de ensino técnico e profissionalizante no <strong>Paraná</strong>.</p>
+        <p>As obras contemplam reformas estruturais nos prédios existentes, modernização de laboratórios de <strong>informática</strong> e <strong>eletrônica</strong>, ampliação das áreas de convivência estudantil e melhorias na acessibilidade do campus. O projeto prevê também a construção de novos espaços para atividades práticas e workshops.</p>
         <h3> Investimento na Educação Profissional </h3>
-        <p> Segundo a direção do IFPR, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas do Ministério da Educação.A expectativa é que as obras sejam concluídas ainda em 2026, permitindo que mais estudantes sejam atendidos com infraestrutura de qualidade.</p>
-        <p> "É uma mudança significativa para nossa comunidade educacional", afirmou a direção do campus.Com a conclusão desta etapa, novos cursos técnicos poderão ser oferecidos, fortalecendo a formação profissional dos jovens de Araucária e região metropolitana de Curitiba.</p>
+        <p> Segundo a direção do <strong>IFPR</strong>, o cronograma está sendo seguido rigorosamente, com fiscalização constante das equipes técnicas do <strong>Ministério da Educação</strong>.A expectativa é que as obras sejam concluídas ainda em <strong>2026</strong>, permitindo que mais estudantes sejam atendidos com infraestrutura de qualidade.</p>
+        <p> "É uma mudança significativa para nossa comunidade educacional", afirmou a direção do campus.Com a conclusão desta etapa, novos cursos técnicos poderão ser oferecidos, fortalecendo a formação profissional dos jovens de <strong>Araucária</strong> e região metropolitana de Curitiba.</p>
         <h3> Impacto Regional </h3>
-        <p> O IFPR Araucária é referência em ensino técnico na região, oferecendo cursos gratuitos de qualidade em áreas como Informática, Eletrônica, Mecânica e Administração.A ampliação da infraestrutura deve atrair mais investimentos educacionais para o município, consolidando Araucária como polo de educação profissional no Paraná.</p>
+        <p> O <strong>IFPR</strong> <strong>Araucária</strong> é referência em ensino técnico na região, oferecendo cursos gratuitos de qualidade em áreas como <strong>Informática</strong>, <strong>Eletrônica</strong>, <strong>Mecânica</strong> e <strong>Administração</strong>.A ampliação da infraestrutura deve atrair mais investimentos educacionais para o município, consolidando <strong>Araucária</strong> como polo de educação profissional no <strong>Paraná</strong>.</p>
 
     `,
         imageUrl: '/images/ifpr-obras-capa.png',
         mobileImageUrl: '/images/ifpr-obras-capa.png',
-        internalImageUrl: '/images/ifpr_construction_worker_internal.jpg',
+        internalImageUrl: '/images/ifpr_obras_interna.jpg',
         category: 'Educação',
         categoryColor: 'red',
         publishDate: '2026-01-22',
