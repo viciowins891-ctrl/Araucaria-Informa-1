@@ -83,10 +83,16 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 1771000018,
         title: "CPI do Transporte: Câmara investiga contrato de R$ 31 milhões",
-        summary: "Comissão Processante apura supostas irregularidades em acordo emergencial da Prefeitura.",
+        summary: "Comissão Processante apura supostas irregularidades em acordo emergencial da Prefeitura para o transporte coletivo.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A política local está em ebulição. A Câmara Municipal instalou esta semana uma Comissão Processante (CPI) para investigar o contrato de R$ 31 milhões firmado entre a Prefeitura e a nova operadora do transporte coletivo. A oposição alega falta de transparência na dispensa de licitação.</p>
-        <p>Em nota, o Executivo defendeu a legalidade do ato, afirmando que a medida foi necessária para evitar o colapso do sistema de ônibus após a falência da antiga concessionária. Os vereadores terão 90 dias para apresentar o relatório final.</p>
+        <p><strong>ARAUCÁRIA</strong> - O clima esquentou nos bastidores da política araucariense. A <strong>Câmara Municipal</strong> aprovou e instalou oficialmente nesta semana uma <strong>Comissão Parlamentar de Inquérito (CPI)</strong> para passar um pente-fino no contrato emergencial de <strong>R$ 31 milhões</strong>, firmado recentemente entre o Executivo e a nova operadora do transporte público da cidade.</p>
+
+        <p>O foco da investigação está na dispensa de licitação utilizada para a contratação. Vereadores da oposição apontam falta de transparência no processo de escolha da empresa e questionam se os valores acordados correspondem à realidade do mercado. "Não somos contra ter ônibus rodando, mas precisamos saber para onde está indo cada centavo desse montante milionário", declarou o relator da comissão durante a sessão plenária.</p>
+        
+        <h3>O Outro Lado</h3>
+        <p>Em nota oficial, a <strong>Prefeitura de Araucária</strong> rechaçou qualquer irregularidade e defendeu a legalidade do ato administrativo. Segundo o Executivo, a medida emergencial foi a única saída para evitar um colapso total no transporte coletivo após a falência súbita da antiga concessionária, o que deixaria milhares de trabalhadores e estudantes a pé. "Nossa prioridade foi garantir o direito de ir e vir do cidadão", diz o comunicado.</p>
+        
+        <p>A CPI terá um prazo inicial de <strong>90 dias</strong> para ouvir testemunhas, analisar documentos e apresentar um relatório final, que poderá recomendar desde o arquivamento do caso até a cassação de mandatos ou envio de denúncia ao Ministério Público.</p>
         `,
         imageUrl: '/images/cpi_transporte_capa.png',
         mobileImageUrl: '/images/cpi_transporte_capa.png',
