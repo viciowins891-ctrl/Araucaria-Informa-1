@@ -13,6 +13,7 @@ export interface NewsArticle {
     sourceName?: string; // Nome do site original
     internalImageUrl?: string; // Imagem específica para o corpo da notícia (Secondary Image)
     mobileImageUrl?: string; // Imagem específica para dispositivos móveis (Capa Mobile)
+    imageFit?: 'cover' | 'contain'; // Controla se a imagem deve preencher ou ajustar (opcional)
 }
 
 export interface Event {
