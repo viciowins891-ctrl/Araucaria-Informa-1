@@ -190,7 +190,7 @@ const ArticlePage: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <div className="relative h-[60vh] min-h-[500px] w-full bg-gray-900 overflow-hidden group">
+            <div className="relative h-[45vh] min-h-[400px] w-full bg-gray-900 overflow-hidden group">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
                 <img
                     src={imgSrc || FALLBACK_IMAGE}
@@ -337,13 +337,13 @@ const ArticlePage: React.FC = () => {
                         )}
 
 
-                        {/* Imagem Secundária Decorativa (Ajustada para exibir inteira e centralizada) */}
+                        {/* Imagem Secundária Decorativa (Ajustada para preencher sem bordas) */}
                         {secondaryImage && (
-                            <figure className="mt-8 mb-6 rounded-xl overflow-hidden shadow-lg w-full max-w-5xl mx-auto relative group flex justify-center bg-gray-50 dark:bg-gray-800/30">
+                            <figure className="mt-8 mb-6 rounded-xl overflow-hidden shadow-lg w-full max-w-5xl mx-auto relative group">
                                 <img
                                     src={secondaryImage}
                                     alt={`Imagem ilustrativa - ${article.category}`}
-                                    className={`w-full h-auto max-h-[700px] object-cover scale-[1.05] mx-auto transform-gpu transition-transform duration-700 group-hover:scale-[1.08]`}
+                                    className={`w-full h-auto max-h-[800px] object-cover mx-auto transform-gpu transition-transform duration-700 group-hover:scale-[1.02]`}
                                     referrerPolicy="no-referrer"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';

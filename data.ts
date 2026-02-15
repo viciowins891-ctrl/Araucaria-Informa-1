@@ -49,10 +49,19 @@ export const newsArticles: NewsArticle[] = [
         title: "Araucária E.C. apresenta elenco para a Divisão de Acesso 2026",
         summary: "O 'Cacique' aposta na mescla de experiência e jovens da base para buscar o retorno à elite do futebol paranaense.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A temporada 2026 começou oficialmente para o <strong>Araucária Esporte Clube</strong>. Em evento realizado nesta manhã no <strong>Estádio Municipal</strong>, a diretoria apresentou o elenco que disputará a <strong>Segunda Divisão do Campeonato Paranaense</strong>. Com o lema "Rumo à Elite", o Cacique investiu em reforços pontuais para o setor defensivo, mas manteve a espinha dorsal da equipe que quase subiu no ano passado.</p>
-        <p>O destaque fica por conta da promoção de cinco atletas do <strong>Sub-20</strong>, categoria que vem brilhando nos estaduais contra gigantes como Coritiba e Athletico. "Essa garotada tem o <strong>DNA</strong> do clube. Eles sabem o peso dessa camisa", afirmou o técnico <strong>Marquinhos</strong>.</p>
-        <h3>Estreia em Casa</h3>
-        <p>A estreia está marcada para o próximo domingo, contra o <strong>Paraná Clube</strong>, com promessa de casa cheia. A torcida organizada <strong>Fúria do Cacique</strong> já organiza uma caravana partindo da <strong>Praça da Matriz</strong>.</p>
+        <p><strong>ARAUCÁRIA</strong> - Ares de renovação e esperança tomaram conta do <strong>Estádio Municipal</strong> na manhã desta quinta-feira. Em um evento aberto à torcida e com presença maciça da imprensa local, o <strong>Araucária Esporte Clube</strong> apresentou oficialmente o elenco que terá a missão de levar o "Cacique" de volta à elite do futebol paranaense na Divisão de Acesso 2026.</p>
+        
+        <p>Sob o comando do técnico <strong>Marquinhos</strong>, que renovou contrato após a boa campanha do ano passado, o grupo de 28 jogadores subiu ao gramado vestindo o novo uniforme de treino. A diretoria apostou em uma estratégia clara: mesclar a vitalidade das promessas da base com a "casca" de veteranos rodados no futebol do sul do país. "Não adianta ter só pulmão se não tiver cabeça fria na hora da decisão. Trouxemos peças pontuais para o eixo central da equipe: um goleiro experiente, um zagueiro 'xerife' e um camisa 10 clássico para cadenciar o jogo", explicou o Diretor de Futebol.</p>
+
+        <h3>A Base Vem Forte</h3>
+        <p>O grande orgulho da torcida, no entanto, é a prata da casa. Cinco atletas do <strong>Sub-20</strong> foram promovidos definitivamente ao time profissional. A categoria de base, que recentemente fez frente a gigantes como Coritiba e Athletico no estadual, cedeu talentos para a lateral e o ataque. "Essa garotada tem o <strong>DNA do Araucária</strong>. Eles sabem o peso dessa camisa e trazem uma identidade que contagia o vestiário", elogiou o comandante técnico.</p>
+
+        <h3>Estreia de Fogo</h3>
+        <p>O calendário não dará trégua. A estreia do Araucária na competição será um verdadeiro teste de fogo: o clássico contra o <strong>Paraná Clube</strong>, já no próximo domingo, em casa. A expectativa é de <strong>Estádio do Pinhão</strong> lotado.</p>
+        
+        <p>A torcida organizada <strong>Fúria do Cacique</strong> promete uma festa inesquecível nas arquibancadas e já organiza uma caravana partindo da <strong>Praça da Matriz</strong> às 14h. "O torcedor é nosso 12º jogador. A Divisão de Acesso é um campeonato de tiro curto, cada ponto em casa vale ouro", finalizou o capitão da equipe.</p>
+
+        <p><strong>Serviço:</strong> Os ingressos para a estreia já estão à venda nas bilheterias do estádio e na sede social do clube. O valor promocional de meia-entrada para todos (R$ 20,00) vale até sábado meio-dia.</p>
         `,
         imageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
         mobileImageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
@@ -174,9 +183,9 @@ export const newsArticles: NewsArticle[] = [
         <p><strong>ARAUCÁRIA</strong> - A Guarda Municipal de Araucária (GMA) realizou uma importante apreensão de drogas na noite de ontem no bairro Campina da Barra. Durante patrulhamento preventivo, uma equipe da ROMU desconfiou de movimentação suspeita em um terreno baldio.</p>
         <p>Dois indivíduos foram abordados e com eles encontrados 2kg de maconha e pinos de cocaína. A ação faz parte da "Operação Bairro Seguro", que tem intensificado rondas nas regiões mais afastadas do centro.</p>
         `,
-        imageUrl: '/images/gm_apreensao_capa_v2.jpg',
-        mobileImageUrl: '/images/gm_apreensao_capa_v2.jpg',
-        internalImageUrl: '/images/gm_apreensao_interna_v2.jpg',
+        imageUrl: '/images/custom_drugs.jpg',
+        mobileImageUrl: '/images/custom_drugs.jpg',
+        internalImageUrl: '/images/news_drugs_seized.png',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2026-02-09',
