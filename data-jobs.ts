@@ -15,6 +15,42 @@ export interface Job {
 
 export const jobs: Job[] = [
     {
+        id: 101,
+        title: 'Operador de Empilhadeira',
+        company: 'Logística Paraná',
+        description: 'Operação de empilhadeira elétrica e a gás, carga e descarga de caminhões. Necessário curso atualizado e experiência na função.',
+        salary: 'R$ 2.450 + Benefícios',
+        type: 'CLT',
+        location: 'Thomaz Coelho, Araucária',
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Empilhadeira&l=Araucária',
+        requirements: ['Curso de Empilhadeira', 'CNH B']
+    },
+    {
+        id: 102,
+        title: 'Soldador MIG/MAG',
+        company: 'Metalúrgica Araucária',
+        description: 'Solda de estruturas metálicas, leitura de desenho técnico e montagem. Vaga para início imediato no pólo industrial.',
+        salary: 'R$ 3.200 + Periculosidade',
+        type: 'CLT',
+        location: 'CIAR',
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG&l=Araucária',
+        requirements: ['Experiência 1 ano', 'Curso de Solda']
+    },
+    {
+        id: 103,
+        title: 'Atendente de Farmácia',
+        company: 'Rede FarmaTotal',
+        description: 'Atendimento ao cliente, leitura de receitas, organização de gôndolas e aplicação de injetáveis (diferencial).',
+        salary: 'R$ 1.980 + Comissões',
+        type: 'CLT',
+        location: 'Centro',
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Atendente+Farmácia&l=Araucária',
+        requirements: ['Ensino Médio', 'Disponibilidade de horário']
+    },
+    {
         id: 1,
         title: 'Auxiliar de Produção',
         company: 'Gelopar Refrigeração',
