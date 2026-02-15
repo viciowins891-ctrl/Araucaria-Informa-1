@@ -195,7 +195,7 @@ const ArticlePage: React.FC = () => {
                 <img
                     src={imgSrc || FALLBACK_IMAGE}
                     alt={plainTitle}
-                    className="w-full h-full object-cover animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-105"
+                    className="w-full h-full object-cover scale-[1.05] transform-gpu animate-slow-zoom md:animate-none md:transition-transform md:duration-[2s] md:group-hover:scale-110"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                 />
@@ -343,7 +343,7 @@ const ArticlePage: React.FC = () => {
                                 <img
                                     src={secondaryImage}
                                     alt={`Imagem ilustrativa - ${article.category}`}
-                                    className={`w-full h-auto max-h-[700px] object-${article.imageFit || 'cover'} mx-auto transition-transform duration-700 group-hover:scale-[1.01]`}
+                                    className={`w-full h-auto max-h-[700px] object-cover scale-[1.05] mx-auto transform-gpu transition-transform duration-700 group-hover:scale-[1.08]`}
                                     referrerPolicy="no-referrer"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';

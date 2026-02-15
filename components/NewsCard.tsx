@@ -94,7 +94,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
                 {!hasError ? (
                     <img
                         alt={stripHtml(article.title)}
-                        className={`w-full h-full object-${article.imageFit || 'cover'} ${article.imageFit === 'contain' ? 'p-2 bg-black/5' : ''} transition-transform duration-700 group-hover:scale-105 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        className={`w-full h-full object-cover scale-[1.05] transform-gpu transition-transform duration-700 group-hover:scale-[1.10] ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         src={(imgSrc === article.imageUrl || imgSrc.includes('?v=new')) ? imgSrc : getOptimizedImageUrl(imgSrc, 400)}
                         loading="lazy"
                         width="400"
