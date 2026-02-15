@@ -121,14 +121,18 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 1771000016,
         title: "Obras no Contorno Norte exigem atenção redobrada",
-        summary: "Bloqueios parciais para construção de viaduto geram lentidão nos horários de pico.",
+        summary: "Bloqueios parciais para construção de viaduto geram lentidão nos horários de pico. Motoristas devem buscar rotas alternativas.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O motorista que utiliza o Contorno Norte para acessar Curitiba deve ter paciência. As obras do novo viaduto de interconexão entraram em uma fase crítica, exigindo o estreitamento de pista no km 12.</p>
-        <p>O Departamento de Estradas de Rodagem (DER) recomenda rotas alternativas pela Rodovia do Xisto ou pelo centro de Campo Largo. A previsão é que as interferências no tráfego durem cerca de três semanas.</p>
+        <p><strong>ARAUCÁRIA</strong> - Quem utiliza o <strong>Contorno Norte</strong> para seus deslocamentos diários entre Araucária e Curitiba deve se preparar para enfrentar lentidão. As obras do novo viaduto de interconexão no <strong>km 12</strong>, fundamentais para a mobilidade da região metropolitana, entraram numa fase crítica de concretagem e instalação de vigas, exigindo bloqueios parciais e operações 'pare e siga' em horários alternados.</p>
+
+        <p>O <strong>Departamento de Estradas de Rodagem (DER-PR)</strong> alerta que os congestionamentos têm sido mais intensos nos horários de pico (7h às 9h e 17h às 19h), com filas que já chegaram a registrar 3km de extensão. A recomendação expressa é buscar rotas alternativas, principalmente pela <strong>Rodovia do Xisto (BR-476)</strong> ou, para quem segue para a região norte da capital, o desvio por dentro de <strong>Campo Largo</strong>.</p>
+        
+        <h3>Segurança e Cronograma</h3>
+        <p>As equipes da empreiteira trabalham em ritmo acelerado para liberar o tráfego total o mais rápido possível, mas a previsão atual é que as interferências na pista durem pelo menos mais três semanas. A <strong>Polícia Rodoviária</strong> reforça o pedido de atenção redobrada à sinalização provisória e respeito aos limites de velocidade reduzidos no trecho em obras, visando prevenir colisões traseiras e garantir a segurança dos operários e usuários da via.</p>
         `,
-        imageUrl: '/images/pavimentacao-jardim-plinio-final.png',
-        mobileImageUrl: '/images/pavimentacao-jardim-plinio-final.png',
-        internalImageUrl: '/images/pavimentacao_jardim_plinio_internal_real.png',
+        imageUrl: '/images/obras_contorno_norte_capa.jpg',
+        mobileImageUrl: '/images/obras_contorno_norte_capa.jpg',
+        internalImageUrl: '/images/obras_contorno_norte_interna.jpg',
         category: 'Infraestrutura',
         categoryColor: 'purple',
         publishDate: '2026-02-11',
