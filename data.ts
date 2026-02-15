@@ -180,12 +180,21 @@ export const newsArticles: NewsArticle[] = [
         title: "Segurança: GM apreende drogas no Campina da Barra",
         summary: "Operação saturação resultou na prisão de dois suspeitos e apreensão de entorpecentes.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A Guarda Municipal de Araucária (GMA) realizou uma importante apreensão de drogas na noite de ontem no bairro Campina da Barra. Durante patrulhamento preventivo, uma equipe da ROMU desconfiou de movimentação suspeita em um terreno baldio.</p>
-        <p>Dois indivíduos foram abordados e com eles encontrados 2kg de maconha e pinos de cocaína. A ação faz parte da "Operação Bairro Seguro", que tem intensificado rondas nas regiões mais afastadas do centro.</p>
+        <p><strong>ARAUCÁRIA</strong> - Uma ação estratégica da <strong>Guarda Municipal de Araucária (GMA)</strong> resultou em um duro golpe contra o tráfico de drogas na região do <strong>Campina da Barra</strong> na noite de ontem. A operação, conduzida pela equipe de Patrulhamento Tático (<strong>ROMU</strong>), desarticulou um ponto de venda que vinha tirando o sossego dos moradores locais.</p>
+
+        <p>A ocorrência teve início durante um patrulhamento preventivo na Rua Lótus, conhecida por denúncias de movimentação suspeita. A equipe visualizou dois indivíduos em atitude compatível com a comercialização de entorpecentes próximo a uma área de mata. Ao perceberem a aproximação da viatura, a dupla tentou dispersar e descartar uma sacola, mas foi rapidamente interceptada pelos agentes.</p>
+
+        <h3>O Material Apreendido</h3>
+        <p>Durante a revista e varredura no perímetro, os guardas localizaram a sacola dispensada contendo uma quantidade significativa de ilícitos. O balanço final da apreensão contabilizou cerca de <strong>2kg de maconha</strong> prensada, dividida em tabletes prontos para distribuição, além de centenas de pinos de cocaína já embalados para venda no varejo. Estima-se que o prejuízo ao crime organizado local ultrapasse os R$ 5.000,00.</p>
+
+        <p>"Essa região tem sido alvo da nossa <strong>Operação Saturação</strong>. Recebemos muitas reclamações da comunidade via <strong>153</strong> e intensificamos a presença policial para coibir não só o tráfico, mas também os furtos e roubos que cercam essa atividade", relatou um dos agentes responsáveis pela prisão.</p>
+
+        <h3>Desfecho na Delegacia</h3>
+        <p>Os dois detidos, ambos maiores de idade e com passagens anteriores por delitos similares, receberam voz de prisão em flagrante. Eles foram encaminhados à <strong>Delegacia de Polícia Civil de Araucária</strong>, juntamente com todo o material apreendido, onde permanecerão à disposição da Justiça. A GMA reforça que a população pode continuar colaborando com denúncias anônimas, que são fundamentais para o sucesso dessas operações.</p>
         `,
-        imageUrl: '/images/custom_drugs.jpg',
-        mobileImageUrl: '/images/custom_drugs.jpg',
-        internalImageUrl: '/images/news_drugs_seized.png',
+        imageUrl: '/images/gm_apreensao_capa.jpg.jpg',
+        mobileImageUrl: '/images/gm_apreensao_capa.jpg.jpg',
+        internalImageUrl: '/images/gm_apreensao_interna.jpg',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2026-02-09',
