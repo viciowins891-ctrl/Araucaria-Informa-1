@@ -210,15 +210,15 @@ export const newsArticles: NewsArticle[] = [
         <p>As oportunidades contemplam diversas modalidades, visando não apenas a prática física, mas também a formação cidadã. Entre as opções mais procuradas estão o <strong>Futsal</strong>, <strong>Voleibol</strong>, <strong>Basquete</strong>, <strong>Ginástica Rítmica</strong> e a sempre disputada <strong>Natação</strong>, cujas aulas acontecem nas piscinas aquecidas do Centro Social Urbano (CSU).</p>
 
         <h3>Como se Inscrever</h3>
-        <p>Para garantir uma vaga, os pais ou responsáveis devem comparecer pessoalmente aos núcleos esportivos (CSU, Parque Cachoeira ou ginásios de referência nos bairros) levando os seguintes documentos:</p>
+        <p>Para garantir uma vaga, os pais ou responsáveis devem comparecer pessoalmente aos núcleos esportivos (<strong>CSU, Parque Cachoeira ou ginásios de referência nos bairros</strong>) levando os seguintes documentos:</p>
         <ul>
-            <li>Documento de identidade (RG ou Certidão) da criança;</li>
+            <li>Documento de identidade (<strong>RG</strong> ou <strong>Certidão</strong>) da criança;</li>
             <li>Comprovante de residência atualizado em nome do responsável;</li>
             <li>Atestado médico de aptidão física (obrigatório para atividades aquáticas).</li>
         </ul>
 
         <h3>Transformando Vidas</h3>
-        <p>"O esporte é uma ferramenta poderosa de inclusão. Nosso objetivo vai além de formar atletas; queremos tirar a criança da ociosidade, oferecer disciplina e saúde. Ver nossos ginásios cheios de vida é a nossa maior medalha", destacou o Secretário de Esporte durante o lançamento. As aulas têm início previsto para a primeira semana de março e as vagas são preenchidas por ordem de chegada.</p>
+        <p>"O esporte é uma ferramenta poderosa de inclusão. Nosso objetivo vai além de formar atletas; queremos tirar a criança da ociosidade, oferecer disciplina e saúde. Ver nossos ginásios cheios de vida é a nossa maior medalha", destacou o <strong>Secretário de Esporte</strong> durante o lançamento. As aulas têm início previsto para a primeira semana de março e as vagas são preenchidas por ordem de chegada.</p>
         `,
         imageUrl: '/images/escolinha_capa.jpg',
         mobileImageUrl: '/images/escolinha_capa.jpg',
@@ -233,12 +233,19 @@ export const newsArticles: NewsArticle[] = [
         title: "Acidente grave bloqueia Rodovia do Xisto por 3 horas",
         summary: "Colisão entre caminhão e moto causou congestionamento quilométrico próximo à Repar.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - Um grave acidente paralisou a Rodovia do Xisto (BR-476) na manhã desta sexta-feira. Uma colisão lateral envolvendo um caminhão tanque e uma motocicleta bloqueou totalmente a pista sentido Curitiba, na altura da Refinaria.</p>
-        <p>O motociclista foi socorrido pelo helicóptero da PRF em estado grave. O trânsito precisou ser desviado por dentro da área urbana, causando lentidão na Avenida das Araucárias. A pista foi liberada por volta do meio-dia.</p>
+        <p><strong>ARAUCÁRIA</strong> - Uma manhã de caos e tensão marcou a rotina de quem precisou trafegar pela <strong>Rodovia do Xisto (BR-476)</strong> nesta sexta-feira. Um grave acidente registrado por volta das 07h30 paralisou completamente o fluxo no km 152, sentido Curitiba, nas imediações da Refinaria Presidente Getúlio Vargas (<strong>Repar</strong>).</p>
+
+        <p>A colisão envolveu um caminhão-tanque e uma motocicleta de alta cilindrada. Segundo relatos de testemunhas à <strong>Polícia Rodoviária Federal (PRF)</strong>, o motociclista teria perdido o controle ao tentar uma ultrapassagem, sendo atingido lateralmente pelo veículo de carga. O impacto foi violento, lançando a vítima e a moto para fora da pista.</p>
+
+        <h3>Resgate Dramático</h3>
+        <p>Devido à gravidade dos ferimentos, a concessionária que administra o trecho acionou o suporte aéreo. O helicóptero do <strong>BPMOA (Batalhão de Polícia Militar de Operações Aéreas)</strong> pousou na rodovia para realizar o resgate. A vítima, um homem de 35 anos morador de Araucária, foi estabilizada no local e encaminhada em estado grave ao Hospital do Trabalhador, na capital.</p>
+
+        <h3>Reflexos no Trânsito</h3>
+        <p>O bloqueio total da pista durou cerca de três horas para os trabalhos de perícia e limpeza da via. O congestionamento ultrapassou os 5 quilômetros, travando também as vias de acesso urbano, como a <strong>Avenida das Araucárias</strong> e a <strong>marginal do Thomaz Coelho</strong>. O trânsito só foi totalmente liberado e normalizado por volta do meio-dia.</p>
         `,
-        imageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
-        mobileImageUrl: '/images/defesa-civil-rio-iguacu-capa-real.png',
-        internalImageUrl: '/images/defesa_civil_internal_generated.png',
+        imageUrl: '/images/acidente_xisto_capa.jpg',
+        mobileImageUrl: '/images/acidente_xisto_capa.jpg',
+        internalImageUrl: '/images/acidente_xisto_interna.jpg',
         category: 'Trânsito',
         categoryColor: 'gray',
         publishDate: '2026-02-07',
