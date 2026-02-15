@@ -101,8 +101,14 @@ export const newsArticles: NewsArticle[] = [
         title: "Araucária Vôlei vence Maringá e segue invicto na Superliga B",
         summary: "Ginásio Joval de Paula Souza virou caldeirão na noite de quarta-feira. Time busca o acesso.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O projeto de levar Araucária à elite do vôlei nacional segue firme. Jogando em casa, no Ginásio Joval de Paula Souza (Parque Cachoeira), o <strong>Araucária Vôlei/SMEL</strong> derrotou o forte time de Maringá por 3 sets a 1.</p>
-        <p>A torcida compareceu em peso, transformando o ginásio em um caldeirão. O oposto Bruno foi o maior pontuador da partida, com 22 acertos. "A energia dessa torcida é o nosso sétimo jogador", elogiou o técnico. O próximo desafio é fora de casa, contra o líder Juiz de Fora.</p>
+        <p><strong>ARAUCÁRIA</strong> - O projeto de levar <strong>Araucária</strong> à elite do vôlei nacional segue firme e forte. Numa noite de quarta-feira eletrizante, o <strong>Araucária Vôlei/SMEL</strong> recebeu o <strong>Maringá Vôlei</strong> no Ginásio Joval de Paula Souza (Parque Cachoeira) e garantiu mais uma vitória importante na Superliga B, fechando o placar em <strong>3 sets a 1</strong> (parciais de <strong>25/22</strong>, <strong>19/25</strong>, <strong>25/18</strong> e <strong>25/20</strong>).</p>
+
+        <p>A partida, válida pela <strong>4ª</strong> rodada, colocou frente a frente duas potências estaduais. Empurrado por uma torcida apaixonada que lotou as arquibancadas, o time da casa impôs seu ritmo desde o início. O oposto <strong>Bruno</strong> foi o destaque individual, anotando 22 pontos e sendo decisivo nos momentos cruciais do quarto set.</p>
+        
+        <h3>O Caldeirão do Cachoeira</h3>
+        <p>"A energia que vem dessa arquibancada é surreal. Quando o <strong>Maringá</strong> empatou o jogo no segundo set, a torcida não parou de cantar e isso nos deu o gás para retomar o controle", elogiou o técnico <strong>Everson Ribeiro</strong> ao final da partida. Com o resultado, o <strong>Araucária</strong> mantém os 100% de aproveitamento em seus domínios.</p>
+        
+        <p>O próximo compromisso da equipe é fora de casa. No sábado, o elenco viaja para enfrentar o líder <strong>Juiz de Fora (MG)</strong>, em um confronto direto que pode valer a liderança isolada da competição.</p>
         `,
         imageUrl: '/images/araucaria_volei_vitoria_capa.jpg',
         mobileImageUrl: '/images/araucaria_volei_vitoria_capa.jpg',
