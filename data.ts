@@ -22,6 +22,7 @@ const getPastDate = (daysAgo: number): string => {
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 export const newsArticles: NewsArticle[] = [
+
     {
         id: 1771000030,
         title: "Araucária 136 Anos: Feriado leva multidão ao Parque Cachoeira",
@@ -103,9 +104,9 @@ export const newsArticles: NewsArticle[] = [
         <p><strong>ARAUCÁRIA</strong> - O projeto de levar Araucária à elite do vôlei nacional segue firme. Jogando em casa, no Ginásio Joval de Paula Souza (Parque Cachoeira), o <strong>Araucária Vôlei/SMEL</strong> derrotou o forte time de Maringá por 3 sets a 1.</p>
         <p>A torcida compareceu em peso, transformando o ginásio em um caldeirão. O oposto Bruno foi o maior pontuador da partida, com 22 acertos. "A energia dessa torcida é o nosso sétimo jogador", elogiou o técnico. O próximo desafio é fora de casa, contra o líder Juiz de Fora.</p>
         `,
-        imageUrl: '/images/gym_volleyball_final_cover_v5.png',
-        mobileImageUrl: '/images/gym_volleyball_final_cover_v5.png',
-        internalImageUrl: '/images/gym_volleyball_internal_final_v5_mobile.webp',
+        imageUrl: '/images/araucaria_volei_vitoria_capa.jpg',
+        mobileImageUrl: '/images/araucaria_volei_vitoria_capa.jpg',
+        internalImageUrl: '/images/araucaria_volei_vitoria_interna.png',
         category: 'Esporte',
         categoryColor: 'orange',
         publishDate: '2026-02-11',
