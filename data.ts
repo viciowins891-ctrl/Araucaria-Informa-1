@@ -147,14 +147,20 @@ export const newsArticles: NewsArticle[] = [
     {
         id: 1771000015,
         title: "Atleta de Araucária é ouro no Brasileiro de Judô",
-        summary: "Jovem do Projeto 'Esporte Cidadão' subiu ao lugar mais alto do pódio em São Paulo.",
+        summary: "Jovem do Projeto 'Esporte Cidadão' subiu ao lugar mais alto do pódio em São Paulo e garante vaga no Sul-Americano.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O esporte araucariense tem um novo campeão nacional. Felipe Santos, de 16 anos, conquistou a medalha de ouro na categoria meio-médio do Campeonato Brasileiro de Judô Sub-18, disputado neste fim de semana em São Paulo.</p>
-        <p>Felipe é fruto do projeto social "Esporte Cidadão", mantido pela Prefeitura no CAIC. "Essa medalha é para todos que acreditaram em mim, especialmente meus treinadores do município", disse o atleta emocionado ao desembarcar com o ouro no peito.</p>
+        <p><strong>ARAUCÁRIA</strong> - O esporte araucariense tem um novo campeão nacional para chamar de seu. O judoca <strong>Felipe Santos</strong>, de 16 anos, conquistou neste fim de semana a medalha de ouro na categoria meio-médio do <strong>Campeonato Brasileiro de Judô Sub-18</strong>, disputado em São Paulo.</p>
+
+        <p>A trajetória até o pódio não foi fácil. Felipe enfrentou cinco lutas duríssimas, vencendo atletas de estados tradicionais como Rio de Janeiro e Minas Gerais. Na grande final, aplicou um <i>ippon</i> espetacular contra o representante paulista, silenciando o ginásio e garantindo o título.</p>
+        
+        <h3>Orgulho da Cidade</h3>
+        <p>Felipe é fruto do projeto social <strong>"Esporte Cidadão"</strong>, mantido pela Prefeitura de Araucária no CAIC. "Essa medalha é para todos que acreditaram em mim, especialmente meus treinadores do município que me viram crescer no tatame", disse o atleta emocionado, segurando a bandeira de Araucária no lugar mais alto do pódio.</p>
+        
+        <p>Com a vitória, o jovem atleta garante automaticamente sua vaga para representar o Brasil no <strong>Campeonato Sul-Americano</strong>, que acontecerá no próximo mês no Chile.</p>
         `,
-        imageUrl: '/images/judo_escolas_real.jpg', // Usar placeholder ou genérica
-        mobileImageUrl: '/images/judo_escolas_real_mobile.webp',
-        internalImageUrl: '/images/chess_players_unique.png', // Reutilizando img genérica de esporte individual
+        imageUrl: '/images/atleta_judo_ouro_capa.jpg',
+        mobileImageUrl: '/images/atleta_judo_ouro_capa.jpg',
+        internalImageUrl: '/images/atleta_judo_ouro_interna.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '2026-02-10',

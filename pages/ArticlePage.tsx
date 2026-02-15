@@ -337,20 +337,19 @@ const ArticlePage: React.FC = () => {
                         )}
 
 
-                        {/* Imagem Secundária Decorativa */}
+                        {/* Imagem Secundária Decorativa (Ajustada para exibir inteira e centralizada) */}
                         {secondaryImage && (
-                            <figure className="mt-8 mb-2 rounded-xl overflow-hidden shadow-lg h-64 md:h-80 w-full max-w-4xl mx-auto relative group">
+                            <figure className="mt-8 mb-6 rounded-xl overflow-hidden shadow-lg w-full max-w-5xl mx-auto relative group flex justify-center bg-gray-50 dark:bg-gray-800/30">
                                 <img
                                     src={secondaryImage}
                                     alt={`Imagem ilustrativa - ${article.category}`}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="max-w-full h-auto max-h-[700px] object-contain mx-auto transition-transform duration-700 group-hover:scale-[1.01]"
                                     referrerPolicy="no-referrer"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';
                                         e.currentTarget.parentElement!.style.display = 'none';
                                     }}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                             </figure>
                         )}
 
