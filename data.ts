@@ -205,12 +205,24 @@ export const newsArticles: NewsArticle[] = [
         title: "Inscrições abertas para as Escolinhas de Esporte da Prefeitura",
         summary: "Vagas gratuitas para Futsal, Natação e Ginástica Rítmica para crianças e adolescentes.",
         content: `
-        <p><strong>ARAUCÁRIA</strong> - A Secretaria Municipal de Esporte e Lazer (SMEL) abriu hoje as inscrições para as turmas de 2026 das escolinhas esportivas. São mais de 1.500 vagas distribuídas em diversas modalidades, com destaque para a Natação (no CSU) e a Ginástica Rítmica.</p>
-        <p>O objetivo é democratizar o acesso ao esporte e descobrir novos talentos. "Queremos tirar a criança da rua e colocar na quadra, na piscina", afirmou o secretário. As inscrições devem ser feitas presencialmente nos núcleos esportivos dos bairros.</p>
+        <p><strong>ARAUCÁRIA</strong> - A Prefeitura de Araucária, por meio da Secretaria Municipal de Esporte e Lazer (SMEL), deu a largada nesta semana ao período de matrículas para as <strong>Escolinhas de Esporte 2026</strong>. O programa, que é referência na região metropolitana, está ofertando mais de <strong>1.500 vagas gratuitas</strong> para crianças e adolescentes de 6 a 17 anos.</p>
+        
+        <p>As oportunidades contemplam diversas modalidades, visando não apenas a prática física, mas também a formação cidadã. Entre as opções mais procuradas estão o <strong>Futsal</strong>, <strong>Voleibol</strong>, <strong>Basquete</strong>, <strong>Ginástica Rítmica</strong> e a sempre disputada <strong>Natação</strong>, cujas aulas acontecem nas piscinas aquecidas do Centro Social Urbano (CSU).</p>
+
+        <h3>Como se Inscrever</h3>
+        <p>Para garantir uma vaga, os pais ou responsáveis devem comparecer pessoalmente aos núcleos esportivos (CSU, Parque Cachoeira ou ginásios de referência nos bairros) levando os seguintes documentos:</p>
+        <ul>
+            <li>Documento de identidade (RG ou Certidão) da criança;</li>
+            <li>Comprovante de residência atualizado em nome do responsável;</li>
+            <li>Atestado médico de aptidão física (obrigatório para atividades aquáticas).</li>
+        </ul>
+
+        <h3>Transformando Vidas</h3>
+        <p>"O esporte é uma ferramenta poderosa de inclusão. Nosso objetivo vai além de formar atletas; queremos tirar a criança da ociosidade, oferecer disciplina e saúde. Ver nossos ginásios cheios de vida é a nossa maior medalha", destacou o Secretário de Esporte durante o lançamento. As aulas têm início previsto para a primeira semana de março e as vagas são preenchidas por ordem de chegada.</p>
         `,
-        imageUrl: '/images/hortas_escolas_cover_v27.jpg', // Reutilizando img escola/criança
-        mobileImageUrl: '/images/hortas_escolas_cover_v27.jpg',
-        internalImageUrl: '/images/teatro_infantil_internal_real.png',
+        imageUrl: '/images/escolinha_capa.jpg',
+        mobileImageUrl: '/images/escolinha_capa.jpg',
+        internalImageUrl: '/images/escolinha_interna.jpg',
         category: 'Esporte', // Foco em Esporte público
         categoryColor: 'green',
         publishDate: '2026-02-08',
