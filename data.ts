@@ -56,7 +56,7 @@ export const newsArticles: NewsArticle[] = [
         `,
         imageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
         mobileImageUrl: '/images/araucaria_ec_elenco_2026_capa_v2.png',
-        internalImageUrl: '/images/araucaria_ec_elenco_2026_interna.jpg',
+        internalImageUrl: '/images/araucaria_ec_campo_jogo.jpg',
         category: 'Esporte',
         categoryColor: 'green',
         publishDate: '2026-02-12',
@@ -174,10 +174,9 @@ export const newsArticles: NewsArticle[] = [
         <p><strong>ARAUCÁRIA</strong> - A Guarda Municipal de Araucária (GMA) realizou uma importante apreensão de drogas na noite de ontem no bairro Campina da Barra. Durante patrulhamento preventivo, uma equipe da ROMU desconfiou de movimentação suspeita em um terreno baldio.</p>
         <p>Dois indivíduos foram abordados e com eles encontrados 2kg de maconha e pinos de cocaína. A ação faz parte da "Operação Bairro Seguro", que tem intensificado rondas nas regiões mais afastadas do centro.</p>
         `,
-        imageUrl: '/images/gm_apreensao_capa.jpg',
-        mobileImageUrl: '/images/gm_apreensao_capa.jpg',
-        internalImageUrl: '/images/gm_apreensao_interna.jpg',
-        imageFit: 'contain',
+        imageUrl: '/images/gm_apreensao_capa_v2.jpg',
+        mobileImageUrl: '/images/gm_apreensao_capa_v2.jpg',
+        internalImageUrl: '/images/gm_apreensao_interna_v2.jpg',
         category: 'Segurança',
         categoryColor: 'red',
         publishDate: '2026-02-09',

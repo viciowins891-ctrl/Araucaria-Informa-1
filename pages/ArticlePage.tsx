@@ -343,7 +343,7 @@ const ArticlePage: React.FC = () => {
                                 <img
                                     src={secondaryImage}
                                     alt={`Imagem ilustrativa - ${article.category}`}
-                                    className="max-w-full h-auto max-h-[700px] object-contain mx-auto transition-transform duration-700 group-hover:scale-[1.01]"
+                                    className={`max-w-full h-auto max-h-[700px] object-${article.imageFit || 'contain'} mx-auto transition-transform duration-700 group-hover:scale-[1.01]`}
                                     referrerPolicy="no-referrer"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';
