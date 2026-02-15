@@ -479,15 +479,15 @@ export const newsArticles: NewsArticle[] = [
         title: 'SMMA intensifica combate à Dengue no bairro Costeira',
         summary: 'A Secretaria de Meio Ambiente emitiu um alerta sobre o aumento de focos do mosquito Aedes aegypti no bairro Costeira.',
         content: `
-        <p><strong>ARAUCÁRIA</strong> - O combate à Dengue ganhou reforço estratégico nesta semana com uma operação concentrada no bairro <strong>Costeira</strong>. Equipes da Secretaria Municipal de Meio Ambiente (SMMA), em parceria com a Vigilância Epidemiológica, iniciaram uma varredura minuciosa em residências e comércios da região, identificada pelo último Levantamento Rápido de Índices de Infestação (LIRAa) como uma área de alerta para a proliferação do mosquito <em>Aedes aegypti</em>.</p>
-        <p>A ação mobiliza cerca de 30 agentes de endemias que, além de eliminar focos de água parada, realizam um trabalho educativo fundamental. "Encontramos muitas larvas em locais que passam despercebidos, como calhas entupidas e bandejas de geladeira. A prevenção de dez minutos semanais é a única barreira eficaz contra o surto", adverte a coordenação da Vigilância Ambiental.</p>
+        <p><strong>ARAUCÁRIA</strong> - O combate à Dengue ganhou reforço estratégico nesta semana com uma operação concentrada no bairro <strong>Costeira</strong>. Equipes da <strong>Secretaria Municipal de Meio Ambiente</strong> (<strong>SMMA</strong>), em parceria com a <strong>Vigilância Epidemiológica</strong>, iniciaram uma varredura minuciosa em residências e comércios da região, identificada pelo último Levantamento Rápido de Índices de Infestação (<strong>LIRAa</strong>) como uma área de alerta para a proliferação do mosquito <strong><em>Aedes aegypti</em></strong>.</p>
+        <p>A ação mobiliza cerca de <strong>30 agentes de endemias</strong> que, além de eliminar focos de água parada, realizam um trabalho educativo fundamental. "Encontramos muitas larvas em locais que passam despercebidos, como calhas entupidas e bandejas de geladeira. A prevenção de dez minutos semanais é a única barreira eficaz contra o surto", adverte a coordenação da Vigilância Ambiental.</p>
         <h3>Mutirão de Limpeza</h3>
-        <p>Para complementar as vistorias, a Prefeitura programou um grande <strong>Bota-Fora</strong> para este sábado. Caminhões da coleta especial percorrerão todas as ruas do bairro recolhendo pneus, móveis velhos, eletrodomésticos em desuso e qualquer material que possa acumular água da chuva. A orientação é que os moradores disponham os entulhos nas calçadas até as 8h da manhã.</p>
-        <p>A SMMA reforça que a recusa em permitir a entrada dos agentes ou a reincidência em manter focos pode gerar notificações conforme o Código Sanitário. Em caso de sintomas como febre alta e dores no corpo, a recomendação é procurar imediatamente a UPA.</p>
+        <p>Para complementar as vistorias, a <strong>Prefeitura</strong> programou um grande <strong>Bota-Fora</strong> para este sábado. Caminhões da coleta especial percorrerão todas as ruas do bairro recolhendo <strong>pneus</strong>, <strong>móveis velhos</strong>, <strong>eletrodomésticos</strong> em desuso e qualquer material que possa acumular água da chuva. A orientação é que os moradores disponham os entulhos nas calçadas até as <strong>8h</strong> da manhã.</p>
+        <p>A <strong>SMMA</strong> reforça que a recusa em permitir a entrada dos agentes ou a reincidência em manter focos pode gerar notificações conforme o <strong>Código Sanitário</strong>. Em caso de sintomas como febre alta e dores no corpo, a recomendação é procurar imediatamente a <strong>UPA</strong>.</p>
     `,
         imageUrl: '/images/smma-dengue-costeira-capa-real.png', // TRAVA: IMAGEM MANUAL
         mobileImageUrl: '/images/smma-dengue-costeira-capa-real.png',
-        internalImageUrl: '/images/smma_dengue_internal_real.jpg',
+        internalImageUrl: '/images/dengue_costeira_interna.jpg',
         category: 'Saúde',
         categoryColor: 'green',
         publishDate: '2026-01-22',
