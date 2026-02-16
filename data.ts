@@ -1,5 +1,6 @@
 import { NewsArticle, Event, Business } from './types';
 // Função auxiliar APENAS para Eventos (para que pareçam sempre futuros/próximos)
+// Force Deploy: 2026-02-16T04:45:00
 const getUpcomingDate = (daysFromNow: number): string => {
     const date = new Date();
     date.setDate(date.getDate() + daysFromNow);
