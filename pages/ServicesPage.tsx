@@ -20,21 +20,21 @@ const ServicesPage: React.FC = () => {
 
     const healthServices = [
         { name: 'Hospital Municipal de Araucária', number: '(41) 3614-8000', type: 'Hospital' },
-        { name: 'UIA - Unidade de Pronto Atendimento', number: '(41) 3614-7500', type: 'UPA' },
-        { name: 'Vigilância Sanitária', number: '(41) 3901-5134', type: 'Saúde' },
+        { name: 'UIA - Unidade de Pronto Atendimento', number: '(41) 3905-6313', type: 'UPA' },
+        { name: 'Vigilância Sanitária', number: '(41) 3901-5131', type: 'Saúde' },
     ];
 
     const publicServices = [
         { name: 'Prefeitura Municipal', number: '(41) 3614-1400', type: 'Administração' },
         { name: 'Câmara Municipal', number: '(41) 3641-5200', type: 'Legislativo' },
-        { name: 'Companhia de Transporte (Triar)', number: '(41) 3614-1772', type: 'Transporte' },
+        { name: 'Companhia de Transporte (Triar)', number: '(41) 3614-7520', type: 'Transporte' },
         { name: 'Sanepar', number: '0800 200 0115', type: 'Água' },
         { name: 'Copel', number: '0800 51 00 116', type: 'Energia' },
     ];
 
     const pharmacies = [
-        { name: 'Farmácia Nissei (24h)', address: 'Rua Pedro Druszcz, 140 - Centro', phone: '(41) 3232-3232' },
-        { name: 'Farmácia São João', address: 'Av. Dr. Victor do Amaral, 1020', phone: '(41) 3642-1234' },
+        { name: 'Farmácia Nissei (24h)', address: 'R. Pres. Carlos Cavalcanti, 168', phone: '(41) 3213-9719' },
+        { name: 'Farmácia São João', address: 'R. Manoel Ribas, 326', phone: '(41) 3552-0957' },
     ];
 
     return (
@@ -91,7 +91,7 @@ const ServicesPage: React.FC = () => {
                         </a>
 
                         {/* Cartão METROCARD (Metropolitano) */}
-                        <a href="https://www.metrocard.com.br/horarios-e-linhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-50 dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-md transition-all group flex items-start gap-4">
+                        <a href="https://cartaometrocard.com.br/sistema-metropolitano/linhas-tarifas-e-horarios-dos-onibus/" target="_blank" rel="noopener noreferrer" className="bg-gray-50 dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-md transition-all group flex items-start gap-4">
                             <div className="bg-blue-600 p-3 rounded-lg text-white shadow-sm shrink-0">
                                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                             </div>

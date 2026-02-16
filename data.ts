@@ -22,6 +22,29 @@ const getPastDate = (daysAgo: number): string => {
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 export const newsArticles: NewsArticle[] = [
+    {
+        id: 1771000040,
+        title: "Abril terá Flash Remember e Junto & Misturado agitando Araucária",
+        summary: "Agenda de eventos para abril de 2026 traz festa retrô no Acqua Park e música no Espaço Garden.",
+        content: `
+        <p><strong>ARAUCÁRIA</strong> - A agenda cultural da cidade para o mês de abril de 2026 já está confirmada e promete agradar a todos os gostos, do nostálgico ao moderno. Dois grandes eventos devem movimentar o público e aquecer o setor de entretenimento local no segundo fim de semana do mês.</p>
+        
+        <h3>Flash Remember: Uma Viagem no Tempo</h3>
+        <p>No sábado, <strong>11 de abril</strong>, o <strong>Araucária Acqua Park</strong> será palco de uma verdadeira viagem no tempo. A festa <strong>Flash Remember</strong> trará os maiores sucessos que marcaram as pistas dos <strong>anos 80, 90 e 2000</strong>. Com início às 22h, o evento contará com decoração temática, globo de espelhos e DJs especializados em flashbacks. A entrada é exclusiva para maiores de 18 anos.</p>
+
+        <h3>Domingo de Mistura e Alegria</h3>
+        <p>Já no domingo, <strong>12 de abril</strong>, a festa continua no <strong>Espaço Garden</strong> (Rodovia do Xisto, 13242 - Rio Abaixinho) com o evento <strong>Junto & Misturado Araucária</strong>. A proposta é reunir diferentes tribos em um só lugar, com uma programação musical eclética que vai do <strong>Funk</strong> à <strong>Música Eletrônica</strong>, passando pelos hits do momento. Os ingressos já estão à venda a preços populares (R$ 25,00).</p>
+
+        <p>Além disso, para março, a cidade aguarda a confirmação da data oficial da <strong>Corrida da Mulher</strong>, etapa tradicional do Circuito Araucária de Corridas de Rua, que deve ocorrer próximo ao dia 08.</p>
+        `,
+        imageUrl: '/images/festival_gastronomico_noturna_real.jpg',
+        mobileImageUrl: '/images/festival_gastronomico_noturna_real.jpg',
+        internalImageUrl: '/images/festival_gastronomico_noturna_real.jpg',
+        category: 'Cultura',
+        categoryColor: 'purple',
+        publishDate: '2026-02-15',
+        author: 'Agenda Cultural'
+    },
 
     {
         id: 1771000030,
@@ -1130,12 +1153,32 @@ export const newsArticles: NewsArticle[] = [
 ];
 export const events: Event[] = [
     {
+        id: 101,
+        title: 'Flash Remember: A Festa Retrô',
+        description: 'Hits dos anos 80, 90 e 2000. Decoração temática e DJs exclusivos. (18+)',
+        imageUrl: '/images/flash_remember_party.jpg',
+        internalImageUrl: '/images/flash_remember_party.jpg',
+        date: '11/04/2026',
+        time: '22:00',
+        location: 'Araucária Acqua Park'
+    },
+    {
+        id: 102,
+        title: 'Junto & Misturado Araucária',
+        description: 'O melhor do Funk e Eletrônico. Várias tribos, um só lugar.',
+        imageUrl: '/images/junto_misturado_araucaria.jpg',
+        internalImageUrl: '/images/junto_misturado_araucaria.jpg',
+        date: '12/04/2026',
+        time: '14:00',
+        location: 'Espaço Garden'
+    },
+    {
         id: 1769019227,
         title: 'Sessão Ordinária da Câmara',
         description: 'Acompanhe a votação de projetos importantes para a cidade.',
         imageUrl: '/images/camara-araucaria-final-no-logo.png',
         internalImageUrl: '/images/news_budget_chamber.png',
-        date: 'Terça-feira, 18:00',
+        date: 'Terça-feira',
         time: '18:00',
         location: 'Câmara Municipal'
     },
@@ -1148,46 +1191,6 @@ export const events: Event[] = [
         date: 'Quarta e Sábado',
         time: '08:00 - 13:00',
         location: 'Praça da Bíblia'
-    },
-    {
-        id: 3,
-        title: 'Dia D de Multivacinação',
-        description: 'Atualize a carteirinha de vacinação de crianças e adolescentes. Todas as UBS abertas.',
-        imageUrl: '/images/vaccination_vsr_cover_v3.png',
-        internalImageUrl: '/images/vacinacao_campanha_interna.png',
-        date: '25/01/2026',
-        time: '08:00 - 17:00',
-        location: 'Todas as UBS'
-    },
-    {
-        id: 4,
-        title: 'Mutirão de Empregos SINE',
-        description: 'Mais de 200 vagas para entrevistas imediatas. Levar Carteira de Trabalho.',
-        imageUrl: '/images/mutirao_sine_real_mobile.jpg',
-        internalImageUrl: '/images/logistica_vagas_internal.jpg',
-        date: '26/01/2026',
-        time: '09:00 - 16:00',
-        location: 'Agência do Trabalhador'
-    },
-    {
-        id: 5,
-        title: 'Vencimento IPTU (Cota Única)',
-        description: 'Aproveite o desconto de 10% para pagamento à vista. Emita a guia no site.',
-        imageUrl: '/images/prefeitura_orcamento_real.png',
-        internalImageUrl: '/images/prefeitura_orcamento_real.webp',
-        date: '10/02/2026',
-        time: 'Até as 23:59',
-        location: 'Online / Bancos'
-    },
-    {
-        id: 6,
-        title: 'Festa do Pêssego 2026 (Abertura)',
-        description: 'Shows nacionais, gastronomia e exposição. O maior evento da região!',
-        imageUrl: '/images/festa_pessego_real.jpg',
-        internalImageUrl: '/images/festa_junina_school_internal.png',
-        date: '05/02/2026',
-        time: '19:00',
-        location: 'Parque Cachoeira'
     }
 ];
 export const businesses: Business[] = [

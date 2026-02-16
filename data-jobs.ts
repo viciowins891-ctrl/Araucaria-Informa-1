@@ -28,15 +28,15 @@ export const jobs: Job[] = [
     },
     {
         id: 102,
-        title: 'Soldador MIG/MAG',
-        company: 'Metalúrgica Araucária',
-        description: 'Solda de estruturas metálicas, leitura de desenho técnico e montagem. Vaga para início imediato no pólo industrial.',
-        salary: 'R$ 3.200 + Periculosidade',
+        title: 'Porteiro',
+        company: 'Condomínio Residencial',
+        description: 'Controle de entrada de visitantes, recebimento de encomendas e monitoramento. Escala 12x36 (Diurno).',
+        salary: 'R$ 1.950 + VA',
         type: 'CLT',
-        location: 'CIAR',
+        location: 'Centro',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG&l=Araucária',
-        requirements: ['Experiência 1 ano', 'Curso de Solda']
+        contactLink: 'https://br.indeed.com/empregos?q=Porteiro&l=Araucária',
+        requirements: ['Ensino Médio', 'Curso de Portaria']
     },
     {
         id: 103,
@@ -112,27 +112,27 @@ export const jobs: Job[] = [
     },
     {
         id: 160,
-        title: 'Operador de Máquinas CNC',
-        company: 'Usinagem Precision',
-        description: 'Programação e operação de torno e centro de usinagem CNC. Leitura e interpretação de desenhos mecânicos.',
-        salary: 'R$ 3.500 a R$ 4.500',
+        title: 'Vigia Noturno',
+        company: 'Segurança Patrimonial',
+        description: 'Ronda perimetral, controle de acesso e monitoramento de câmeras. Escala 12x36 noturna.',
+        salary: 'R$ 1.850 + Adicional Noturno',
         type: 'CLT',
-        location: 'Araucária',
+        location: 'Araucária (Industrial)',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+CNC&l=Araucária',
-        requirements: ['Curso de Mecânica/Usinagem', 'Experiência em CNC']
+        contactLink: 'https://br.indeed.com/empregos?q=Vigia&l=Araucária',
+        requirements: ['Ensino Fundamental', 'Disponibilidade para noite']
     },
     {
         id: 170,
-        title: 'Analista de RH Pleno',
-        company: 'Multinacional (Confidencial)',
-        description: 'Foco em Recrutamento e Seleção de grandes volumes e Treinamento. Inglês intermediário é desejável.',
-        salary: 'R$ 4.500 + Benefícios',
+        title: 'Serviços Gerais - Zeladoria',
+        company: 'Condomínio Club',
+        description: 'Limpeza de áreas comuns, jardinagem básica e pequenos reparos. Vaga para início imediato.',
+        salary: 'R$ 1.950 + Vale Refeição',
         type: 'CLT',
-        location: 'Thomaz Coelho',
+        location: 'Costeira',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Analista+RH&l=Araucária',
-        requirements: ['Superior Completo', 'Experiência em Indústria']
+        contactLink: 'https://br.indeed.com/empregos?q=Serviços+Gerais&l=Araucária',
+        requirements: ['Experiência na função', 'Proatividade']
     },
     {
         id: 180,
