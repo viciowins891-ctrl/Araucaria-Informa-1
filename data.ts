@@ -37,9 +37,9 @@ export const newsArticles: NewsArticle[] = [
 
         <p>Além disso, para março, a cidade aguarda a confirmação da data oficial da <strong>Corrida da Mulher</strong>, etapa tradicional do Circuito Araucária de Corridas de Rua, que deve ocorrer próximo ao dia 08.</p>
         `,
-        imageUrl: '/images/flash_remember_cover.jpg',
-        mobileImageUrl: '/images/flash_remember_cover.jpg',
-        internalImageUrl: '/images/flash_remember_internal.jpg',
+        imageUrl: '/images/flash_remember_cover_v2.jpg',
+        mobileImageUrl: '/images/flash_remember_cover_mobile_v2.webp',
+        internalImageUrl: '/images/flash_remember_internal_v2.jpg',
         category: 'Cultura',
         categoryColor: 'purple',
         publishDate: '2026-02-15',
