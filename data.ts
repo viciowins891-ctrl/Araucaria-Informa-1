@@ -249,7 +249,7 @@ export const newsArticles: NewsArticle[] = [
         `,
         imageUrl: '/images/acidente_rodovia_xisto_nova.jpg',
         mobileImageUrl: '/images/acidente_rodovia_xisto_nova.jpg',
-        internalImageUrl: '/images/acidente_xisto_interna.jpg',
+        internalImageUrl: '/images/acidente_xisto_interno_final_fixed.jpg',
         category: 'Trânsito',
         categoryColor: 'gray',
         publishDate: '2026-02-07',
