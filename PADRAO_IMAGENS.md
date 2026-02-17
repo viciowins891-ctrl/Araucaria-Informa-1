@@ -131,8 +131,9 @@ cinematic lighting, raw photo, masterclass, hdr, photojournalism style
 1. ✅ Menção explícita a "Araucária Paraná Brazil"
 2. ✅ Elemento visual local (árvores, arquitetura, pessoas)
 3. ✅ Estilo "photojournalism" ou "raw photo"
-4. ✅ Resolução mínima: 1280x720 (16:9)
-5. ✅ Modelo: flux (Pollinations)
+4. ✅ Resolução mínima CAPA: 1280x720 (16:9)
+5. ✅ Resolução mínima INTERNA: 800x600 (4:3)
+6. ✅ Modelo: flux (Pollinations)
 
 ### Elementos Contextuais (Usar quando possível):
 - Outdoors digitais com texto da notícia
