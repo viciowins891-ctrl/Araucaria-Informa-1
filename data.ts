@@ -23,29 +23,9 @@ const getPastDate = (daysAgo: number): string => {
 // URLs atualizadas para imagens urbanas e contextuais de alta qualidade.
 // Garante que não tenhamos links quebrados e que a estética seja coesa.
 export const newsArticles: NewsArticle[] = [
-    {
-        id: 1771000040,
-        title: "Abril terá Flash Remember e Junto & Misturado agitando Araucária",
-        summary: "Agenda de eventos para abril de 2026 traz festa retrô no Acqua Park e música no Espaço Garden.",
-        content: `
-        <p><strong>ARAUCÁRIA</strong> - A agenda cultural da cidade para o mês de abril de 2026 já está confirmada e promete agradar a todos os gostos, do nostálgico ao moderno. Dois grandes eventos devem movimentar o público e aquecer o setor de entretenimento local no segundo fim de semana do mês.</p>
-        
-        <h3>Flash Remember: Uma Viagem no Tempo</h3>
-        <p>No sábado, <strong>11 de abril</strong>, o <strong>Araucária Acqua Park</strong> será palco de uma verdadeira viagem no tempo. A festa <strong>Flash Remember</strong> trará os maiores sucessos que marcaram as pistas dos <strong>anos 80, 90 e 2000</strong>. Com início às 22h, o evento contará com decoração temática, globo de espelhos e DJs especializados em flashbacks. A entrada é exclusiva para maiores de 18 anos.</p>
 
-        <h3>Domingo de Mistura e Alegria</h3>
-        <p>Já no domingo, <strong>12 de abril</strong>, a festa continua no <strong>Espaço Garden</strong> (Rodovia do Xisto, 13242 - Rio Abaixinho) com o evento <strong>Junto & Misturado Araucária</strong>. A proposta é reunir diferentes tribos em um só lugar, com uma programação musical eclética que vai do <strong>Funk</strong> à <strong>Música Eletrônica</strong>, passando pelos hits do momento. Os ingressos já estão à venda a preços populares (R$ 25,00).</p>
 
-        <p>Além disso, para março, a cidade aguarda a confirmação da data oficial da <strong>Corrida da Mulher</strong>, etapa tradicional do Circuito Araucária de Corridas de Rua, que deve ocorrer próximo ao dia 08.</p>
-        `,
-        imageUrl: '/images/flash_remember_cover_v2.jpg',
-        mobileImageUrl: '/images/flash_remember_cover_mobile_v2.webp',
-        internalImageUrl: '/images/flash_remember_internal_v2.jpg',
-        category: 'Cultura',
-        categoryColor: 'purple',
-        publishDate: '2026-02-15',
-        author: 'Agenda Cultural'
-    },
+
 
     {
         id: 1771000030,
