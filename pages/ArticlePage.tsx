@@ -360,7 +360,8 @@ const ArticlePage: React.FC = () => {
                         <div
                             className="prose prose-lg md:prose-xl dark:prose-invert max-w-none 
                         prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
-                        prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-8
+                        prose-h3:mt-10 prose-h3:mb-4
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-8 prose-p:mb-6
                         prose-a:text-primary prose-a:no-underline hover:prose-a:underline
                         prose-img:rounded-xl prose-img:shadow-lg
                         text-justify hyphens-auto"
