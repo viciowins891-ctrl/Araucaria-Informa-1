@@ -247,8 +247,8 @@ export const newsArticles: NewsArticle[] = [
         <h3>Reflexos no Trânsito</h3>
         <p>O bloqueio total da pista durou cerca de três horas para os trabalhos de perícia e limpeza da via. O congestionamento ultrapassou os 5 quilômetros, travando também as vias de acesso urbano, como a <strong>Avenida das Araucárias</strong> e a <strong>marginal do Thomaz Coelho</strong>. O trânsito só foi totalmente liberado e normalizado por volta do meio-dia.</p>
         `,
-        imageUrl: '/images/acidente_xisto_capa.jpg',
-        mobileImageUrl: '/images/acidente_xisto_capa.jpg',
+        imageUrl: 'https://image.pollinations.ai/prompt/traffic%20jam%20highway%20br-476%20araucaria%20refinery%20background%20sunny%20day%20realistic%20news%20photo%20wide%20angle%20no%20text%208k?width=1280&height=720&model=flux&nologo=true&seed=101',
+        mobileImageUrl: 'https://image.pollinations.ai/prompt/traffic%20jam%20highway%20br-476%20araucaria%20refinery%20background%20sunny%20day%20realistic%20news%20photo%20wide%20angle%20no%20text%208k?width=800&height=600&model=flux&nologo=true&seed=101',
         internalImageUrl: '/images/acidente_xisto_interna.jpg',
         category: 'Trânsito',
         categoryColor: 'gray',
