@@ -198,10 +198,7 @@ export const api = {
             } catch (err) { console.warn("Supabase Businesses unreachable, using local."); }
             */
 
-            return businesses.map((b: any) => ({
-                ...b,
-                imageUrl: b.id === 1 ? '/images/panificadora_araucaria_real.jpg' : b.image_url || b.imageUrl
-            }));
+            return businesses;
         } catch (e) {
             console.error("Erro ao carregar comércios locais:", e);
             return [];

@@ -1177,14 +1177,14 @@ export const events: Event[] = [
 export const businesses: Business[] = [
     {
         id: 1,
-        name: 'Panificadora e Confeitaria Araucária',
-        category: 'Alimentação',
-        imageUrl: '/images/panificadora_araucaria_real.webp',
-        internalImageUrl: '/images/araucaria-pinhao-detalhe-interna.png',
-        address: 'Rua das Flores, 123 - <strong>Centro</strong>',
-        phone: '(41) 3901-2345',
-        website: 'padariaexemplo.com.br',
-        description: 'Pães artesanais, tortas e doces finos. O melhor café da manhã da cidade.',
+        name: 'QualyService - Qualidade em Serviços Automotivos de Caminhões',
+        category: 'Serviços',
+        imageUrl: '/images/qualy_service_v2.jpg',
+        internalImageUrl: '/images/qualy_service_v2.jpg',
+        address: 'Rua Pedro Druszcz, 145 - Centro',
+        phone: '(41) 9592-5015',
+        website: 'https://www.instagram.com/perreiragnldo1975/',
+        description: 'Especializado em Funilaria, Pintura em Estufa, Martelinho de Ouro e Polimento Cristalizado. Recuperação de para-choques. Atendemos todas as companhias de seguro. Qualidade e garantia no serviço.',
         isFeatured: true
     },
     {
