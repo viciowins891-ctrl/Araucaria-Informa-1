@@ -58,9 +58,9 @@ const JobsPage: React.FC = () => {
                 <section className="container mx-auto px-4 py-12 -mt-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {jobs.map((job) => (
-                            <div key={job.id} className="bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700 p-6 flex flex-col h-full group relative overflow-hidden">
+                            <div key={job.id} className="bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700 p-6 flex flex-col h-full group relative">
                                 {/* Efeito de hover da borda */}
-                                <div className="absolute top-0 left-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                                <div className="absolute top-0 left-0 h-full bg-primary transition-all duration-300 w-0 group-hover:w-1"></div>
 
                                 <div className="flex justify-between items-start mb-4">
                                     <div>
