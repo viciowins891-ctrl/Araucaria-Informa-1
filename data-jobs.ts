@@ -145,5 +145,29 @@ export const jobs: Job[] = [
         date: 'Há 5 dias',
         contactLink: 'https://br.indeed.com/empregos?q=Porteiro&l=Araucária',
         requirements: ['Curso de Vigilante/Portaria', 'Informatica Básica']
+    },
+    {
+        id: 212,
+        title: 'Vigia Noturno',
+        company: 'Segurança Curitiba',
+        description: 'Vaga para atuar em obras e pátios fechados na região da CIC (Cidade Industrial). Preferência por quem mora próximo ou tenha fácil acesso.',
+        salary: 'R$ 1.950 + Adicional Noturn',
+        type: 'CLT',
+        location: 'Curitiba (CIC)',
+        date: 'Há 1 dia',
+        contactLink: 'https://br.indeed.com/empregos?q=Vigia&l=Curitiba',
+        requirements: ['Ensino Fundamental', 'Disponibilidade total']
+    },
+    {
+        id: 213,
+        title: 'Controlador de Acesso',
+        company: 'Grupo Services (Shopping)',
+        description: 'Controle de fluxo de pessoas em Shopping Center. Atendimento ao público e orientação.',
+        salary: 'R$ 1.890 + VR R$ 25/dia',
+        type: 'CLT',
+        location: 'Curitiba (Centro)',
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Controlador+Acesso&l=Curitiba',
+        requirements: ['Ensino Médio', 'Boa postura e comunicação']
     }
 ];
