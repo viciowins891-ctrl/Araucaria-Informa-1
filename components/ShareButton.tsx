@@ -85,8 +85,11 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, url }) => {
         <div className="relative inline-block text-left">
             <button
                 onClick={() => {
-                    // Tenta usar a API nativa de compartilhamento (Melhor experiência em Mobile)
-                    if (navigator.share) {
+                    // Verificação simples de Mobile para priorizar experiência nativa APENAS em celulares
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+                    // Se for mobile E tiver suporte nativo, usa o nativo (melhor UX no celular)
+                    if (isMobile && navigator.share) {
                         navigator.share({
                             title: title,
                             text: `Confira no Araucária Informa: ${title}`,
@@ -95,7 +98,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, url }) => {
                             .then(() => console.log('Compartilhado com sucesso'))
                             .catch((error) => console.log('Erro ao compartilhar ou cancelado', error));
                     } else {
-                        // Fallback para Desktop ou navegadores sem suporte: Abre o menu customizado
+                        // No Desktop (ou sem suporte), abre SEMPRE o menu customizado (onde tem a opção do Instagram)
                         toggleOpen();
                     }
                 }}
