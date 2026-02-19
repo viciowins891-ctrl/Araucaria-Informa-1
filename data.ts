@@ -649,7 +649,7 @@ export const newsArticles: NewsArticle[] = [
         author: 'Cultura Viva'
     },
     {
-        id: 1769002173,
+        id: 1772000000,
         title: 'Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>',
         summary: 'Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.',
         content: `<p><strong>ARAUCÁRIA</strong> - A Praça Central de Araucária se transformou no ponto de encontro oficial das famílias neste fim de semana.A Feira Gastronômica Noturna bateu recorde de público, reunindo mais de 20 opções de Food Trucks que oferecem uma verdadeira volta ao mundo gastronômica — do clássico hambúrguer artesanal ao pierogi polonês, patrimônio da nossa cidade.</p>
@@ -662,10 +662,10 @@ export const newsArticles: NewsArticle[] = [
         <p> Para quem vem de mais longe, como do <strong>Jardim Iguaçu </strong> ou <strong>Costeira</strong>, a feira se tornou o principal destino de lazer nas noites de sexta e sábado, integrando diferentes regiões da cidade em um único espaço de convivência.</p>`,
         imageUrl: '/images/food_trucks_cover_v29.png',
         mobileImageUrl: '/images/food_trucks_cover_v29_mobile.webp',
-        internalImageUrl: '/images/food_trucks_araucaria.jpg',
+        internalImageUrl: '/images/food_trucks_cover_v29.png',
         category: 'Lazer',
         categoryColor: 'yellow',
-        publishDate: '2026-01-04', // Mantendo hoje para destaque
+        publishDate: '2026-01-04', // Data original restaurada
         author: 'Guia Curitiba'
     },
     {
