@@ -155,7 +155,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Vigia+Noturno&l=Cidade+Industrial%2C+Curitiba',
+        contactLink: 'https://br.indeed.com/empregos?q=Vigia&l=Curitiba',
         requirements: ['Ensino Fundamental', 'Disponibilidade para noite']
     },
     {
