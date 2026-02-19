@@ -165,7 +165,7 @@ const HomePage: React.FC = () => {
                             Ver todas as notícias <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </Link>
                     </div>
-                    {loading ? (
+                    {loading && gridNews.length === 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[1, 2, 3].map(i => (
                                 <div key={i} className="bg-white dark:bg-zinc-800 rounded-2xl h-96 animate-pulse"></div>

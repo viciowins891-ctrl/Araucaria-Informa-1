@@ -49,8 +49,14 @@ export const api = {
             return sanitizedHelper.sort((a, b) => {
                 // Lógica de ordenação (Datas ou IDs) - Copiada da original mas simplificada
                 // Se quiser manter ordenação por data:
-                const dateA = new Date(a.publishDate).getTime();
-                const dateB = new Date(b.publishDate).getTime();
+                // CORREÇÃO CRÍTICA MOBILE: new Date() falha em alguns browsers móveis
+                // Usando parseDate para garantir compatibilidade total
+                const dateA = parseDate(a.publishDate);
+                const dateB = parseDate(b.publishDate);
+                // Critério de desempate: ID (mais recente primeiro)
+                if (dateA === dateB) {
+                    return Number(b.id) - Number(a.id);
+                }
                 return dateB - dateA;
             });
 
@@ -245,11 +251,28 @@ export const api = {
             const result = await Promise.race([loadData(), timeoutPromise]);
             return result as { news: NewsArticle[]; events: Event[]; businesses: Business[]; };
         } catch (error) {
-            console.error("api.getHomeData: Erro Fatal ou Timeout", error);
-            // Em caso de erro fatal/timeout, tenta retornar dados estáticos via getNews (cache/static)
-            // se possível, ou lança erro. Para segurança, chamamos getNews direto síncrono (static fallback)
-            // mas aqui vamos apenas relançar por enquanto ou retornar vazio.
-            return { news: [], events: [], businesses: [] };
+            console.error("api.getHomeData: Erro Fatal ou Timeout REVERTENDO PARA LOCAL", error);
+            try {
+                // FALLBACK DE EMERGÊNCIA: Dados locais do data.ts
+                const { newsArticles, events, businesses } = await import('../data');
+
+                // Ordenação segura (Mobile Fix)
+                const news = newsArticles.sort((a, b) => {
+                    const dateA = parseDate(a.publishDate);
+                    const dateB = parseDate(b.publishDate);
+                    if (dateA === dateB) return Number(b.id) - Number(a.id);
+                    return dateB - dateA;
+                });
+
+                return {
+                    news: news.slice(0, 6),
+                    events: events.slice(0, 3),
+                    businesses: businesses.slice(0, 4)
+                };
+            } catch (fallbackError) {
+                console.error("Critical Failure: Local fallback also failed", fallbackError);
+                return { news: [], events: [], businesses: [] };
+            }
         }
     },
 
