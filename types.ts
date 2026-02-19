@@ -37,6 +37,7 @@ export interface Business {
     address: string;
     phone: string;
     website: string;
+    whatsapp?: string; // Link direto para WhatsApp (prioritário no botão de ação)
     description?: string;
     isFeatured?: boolean;
 }

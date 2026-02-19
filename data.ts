@@ -1181,9 +1181,10 @@ export const businesses: Business[] = [
         category: 'Serviços',
         imageUrl: '/images/qualy_service_v2.jpg',
         internalImageUrl: '/images/qualy_service_v2.jpg',
-        address: 'Rua Pedro Druszcz, 145 - Centro',
+        address: 'Avenida Avestruz, S/N - Capela Velha',
         phone: '(41) 9592-5015',
         website: 'https://www.instagram.com/perreiragnldo1975/',
+        whatsapp: 'https://wa.me/554195925015?text=Olá, vi no Araucária Informa!',
         description: 'Especializado em Funilaria, Pintura em Estufa, Martelinho de Ouro e Polimento Cristalizado. Recuperação de para-choques. Atendemos todas as companhias de seguro. Qualidade e garantia no serviço.',
         isFeatured: true
     },
