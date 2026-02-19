@@ -149,14 +149,14 @@ export const jobs: Job[] = [
     {
         id: 212,
         title: 'Vigia Noturno',
-        company: 'Segurança Curitiba',
-        description: 'Vaga para atuar em obras e pátios fechados na região da CIC (Cidade Industrial). Preferência por quem mora próximo ou tenha fácil acesso.',
-        salary: 'R$ 1.950 + Adicional Noturn',
+        company: 'Empresa via RH (Confidencial)',
+        description: 'Atividades de vigia noturno na região da Cidade Industrial (CIC). Escala 12x36. Benefícios: Vale Alimentação (R$ 600,00), Vale Transporte e Adicional Noturno.',
+        salary: 'R$ 2.021,00 + Benefícios',
         type: 'CLT',
         location: 'Curitiba (CIC)',
-        date: 'Há 1 dia',
-        contactLink: 'https://br.indeed.com/empregos?q=Vigia&l=Curitiba',
-        requirements: ['Ensino Fundamental', 'Disponibilidade total']
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Vigia+Noturno&l=Cidade+Industrial%2C+Curitiba',
+        requirements: ['Ensino Fundamental', 'Disponibilidade para noite']
     },
     {
         id: 213,
