@@ -160,15 +160,15 @@ export const jobs: Job[] = [
     },
     {
         id: 213,
-        title: 'Controlador de Acesso',
-        company: 'Grupo Services (Shopping)',
-        description: 'Controle de fluxo de pessoas em Shopping Center. Atendimento ao público e orientação.',
-        salary: 'R$ 1.890 + VR R$ 25/dia',
+        title: 'Porteiro',
+        company: 'Hapvida NotreDame Intermédica',
+        description: 'Atividades de portaria, controle de acesso e atendimento ao público em unidade de saúde. Vaga efetiva.',
+        salary: 'R$ 1.890 + Benefícios',
         type: 'CLT',
-        location: 'Curitiba (Centro)',
+        location: 'Curitiba',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Controlador+Acesso&l=Curitiba',
-        requirements: ['Ensino Médio', 'Boa postura e comunicação']
+        contactLink: 'https://br.indeed.com/empregos?q=Porteiro&l=Curitiba',
+        requirements: ['Ensino Médio', 'Disponibilidade de horário']
     },
     {
         id: 214,
