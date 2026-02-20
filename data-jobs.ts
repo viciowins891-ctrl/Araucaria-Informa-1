@@ -169,5 +169,17 @@ export const jobs: Job[] = [
         date: 'Hoje',
         contactLink: 'https://br.indeed.com/empregos?q=Controlador+Acesso&l=Curitiba',
         requirements: ['Ensino Médio', 'Boa postura e comunicação']
+    },
+    {
+        id: 214,
+        title: 'Ajudante de Carga e Descarga',
+        company: 'Copa Energia',
+        description: 'Auxiliar nas atividades de carga e descarga, organização de pátio e suporte logístico. Vaga operacional em empresa de energia.',
+        salary: 'R$ 1.900 + Benefícios',
+        type: 'CLT',
+        location: 'Araucária (CO)',
+        date: 'Hoje',
+        contactLink: 'https://br.indeed.com/empregos?q=Ajudante+Carga+Descarga&l=Araucária',
+        requirements: ['Ensino Fundamental', 'Disponibilidade Física']
     }
 ];
