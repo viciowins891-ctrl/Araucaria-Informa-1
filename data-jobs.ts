@@ -148,15 +148,15 @@ export const jobs: Job[] = [
     },
     {
         id: 212,
-        title: 'Vigia Noturno',
-        company: 'Empresa via RH (Confidencial)',
-        description: 'Atividades de vigia noturno na região da Cidade Industrial (CIC). Escala 12x36. Benefícios: Vale Alimentação (R$ 600,00), Vale Transporte e Adicional Noturno.',
-        salary: 'R$ 2.021,00 + Benefícios',
+        title: 'Porteiro - PCD',
+        company: 'STV Segurança',
+        description: 'Vaga exclusiva para Pessoas com Deficiência (PCD). Atividades de controle de acesso e portaria. Salário atrativo.',
+        salary: 'R$ 2.500 - R$ 2.501',
         type: 'CLT',
-        location: 'Curitiba (CIC)',
+        location: 'Curitiba',
         date: 'Hoje',
         contactLink: 'https://br.indeed.com/empregos?q=Vigia&l=Curitiba',
-        requirements: ['Ensino Fundamental', 'Disponibilidade para noite']
+        requirements: ['Vaga PCD', 'Ensino Fundamental']
     },
     {
         id: 213,
