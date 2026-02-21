@@ -83,7 +83,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; img-src 'self' https://images.unsplash.com https://*.supabase.co data: blob: https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google.com https://*.gstatic.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.googleapis.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net;"
+                    "value": "default-src 'self'; img-src 'self' https://images.unsplash.com https://*.supabase.co data: blob: https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.monetag.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google.com https://*.gstatic.com https://*.doubleclick.net https://5gvci.com https://*.monetag.com https://publishers.monetag.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.googleapis.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://5gvci.com https://*.monetag.com; frame-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.monetag.com; worker-src 'self' blob: https://5gvci.com https://*.monetag.com;"
                 }
             ]
         }
