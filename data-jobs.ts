@@ -77,7 +77,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Manufatura+Electrolux&l=Curitiba%2C+PR&sort=date&radius=25',
+        contactLink: 'https://br.indeed.com/cmp/Electrolux/jobs?l=Curitiba%2C+PR',
         requirements: ['Ensino Médio Completo', 'Disponibilidade para turno tarde/noite', 'Experiência industrial (diferencial)']
     },
     {
