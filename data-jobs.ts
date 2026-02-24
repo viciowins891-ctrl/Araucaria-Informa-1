@@ -14,6 +14,7 @@ export interface Job {
 }
 
 // Atualizado em: 24/02/2026 — Araucária (hoje) + Curitiba (complemento regional)
+// LINKS: usam parâmetro "as_cmp" do Indeed para filtrar por empresa específica
 export const jobs: Job[] = [
 
     // ─── ARAUCÁRIA — VAGAS DE HOJE ────────────────────────────────────────────
@@ -26,8 +27,8 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Log%C3%ADstico+Gonvarri&l=Arauc%C3%A1ria%2C+PR',
-        requirements: ['Ensino Médio Completo', 'Curso de Empilhadeira (obrigatório)', 'Disponibilidade de horários', 'Fácil acesso a Araucária']
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=ArcelorMittal+Gonvarri&as_jtmd=Operador+Log%C3%ADstico&l=Arauc%C3%A1ria%2C+PR&sort=date',
+        requirements: ['Ensino Médio Completo', 'Curso de Empilhadeira (obrigatório)', 'Disponibilidade de horários']
     },
     {
         id: 202,
@@ -38,8 +39,8 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária (Híbrido)',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Desenvolvedor+Back-end+Atman+Systems&l=Paran%C3%A1',
-        requirements: ['Experiência em APIs REST', 'SQL/NoSQL', 'Integração com IoT (diferencial)', 'Superior ou Técnico em TI']
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=Atman+Systems&as_jtmd=Desenvolvedor+Back-end&sort=date',
+        requirements: ['Experiência em APIs REST', 'SQL/NoSQL', 'Integração com IoT (diferencial)']
     },
     {
         id: 203,
@@ -50,7 +51,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Vendedor+Interno+BRW+Suprimentos&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=BRW+Suprimentos&as_jtmd=Vendedor+Interno&l=Arauc%C3%A1ria%2C+PR&sort=date',
         requirements: ['Comunicação e proatividade', 'Foco em resultados', 'Ensino Médio Completo']
     },
     {
@@ -62,7 +63,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo+RH+Nossa&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=RH+Nossa&as_jtmd=Auxiliar+Administrativo&l=Arauc%C3%A1ria%2C+PR&sort=date',
         requirements: ['Excel Intermediário', 'Ensino Médio Completo', 'Boa comunicação']
     },
 
@@ -76,7 +77,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Manufactura+Electrolux&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=Electrolux&as_jtmd=Operador+Manufatura&l=Curitiba%2C+PR&sort=date',
         requirements: ['Ensino Médio Completo', 'Disponibilidade para turnos', 'Experiência industrial (diferencial)']
     },
     {
@@ -88,7 +89,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Produ%C3%A7%C3%A3o&l=Cidade+Industrial+de+Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Produ%C3%A7%C3%A3o&l=Cidade+Industrial+de+Curitiba%2C+PR&sort=date&fromage=3',
         requirements: ['Ensino Fundamental Completo', 'Disponibilidade de horário']
     },
     {
@@ -100,7 +101,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+de+Log%C3%ADstica&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Log%C3%ADstica&l=Curitiba%2C+PR&sort=date&fromage=3',
         requirements: ['Ensino Médio', 'Organização e agilidade', 'Experiência em logística (diferencial)']
     },
     {
@@ -112,7 +113,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo&l=Curitiba%2C+PR&sort=date&fromage=3',
         requirements: ['Excel Básico/Intermediário', 'Comunicação oral e escrita', 'Ensino Médio Completo']
     },
     {
@@ -124,19 +125,19 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Consultor+Comercial&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Consultor+Comercial&l=Curitiba%2C+PR&sort=date&fromage=3',
         requirements: ['Experiência em vendas', 'Perfil empreendedor', 'CNH B (diferencial)']
     },
     {
         id: 210,
         title: 'Operador Multifuncional',
         company: 'Indústria Curitiba',
-        description: 'Atua em diferentes setores da linha de produção industrial conforme demanda. Vaga para indústria de grande porte na Curitiba. Benefícios completos.',
+        description: 'Atua em diferentes setores da linha de produção industrial conforme demanda. Vaga para indústria de grande porte em Curitiba. Benefícios completos.',
         salary: 'R$ 2.100 + Benefícios',
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional&l=Curitiba%2C+PR&sort=date&fromage=5',
         requirements: ['Disponibilidade para turnos', 'Ensino Médio', 'Experiência industrial']
     },
     {
@@ -148,7 +149,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (Hauer)',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Estoquista+Almoxarifado&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Estoquista&l=Curitiba%2C+PR&sort=date&fromage=5',
         requirements: ['Ensino Médio', 'Organização', 'Experiência em almoxarifado (diferencial)']
     },
     {
@@ -160,7 +161,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Comercial+sem+experiencia&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Comercial&l=Curitiba%2C+PR&sort=date&fromage=5',
         requirements: ['Boa comunicação', 'Proatividade', 'Ensino Médio Completo']
     },
     {
@@ -172,7 +173,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG+MAG&l=Curitiba%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG+MAG&l=Curitiba%2C+PR&sort=date&fromage=7',
         requirements: ['Certificação de Soldagem', 'Experiência comprovada MIG/MAG', 'Ensino Fundamental']
     },
     {
@@ -184,7 +185,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial&l=Curitiba%2C+PR',
-        requirements: ['Experiência em gestão de equipes', 'Perfil analítico e estratégico', 'Superior Completo']
+        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial&l=Curitiba%2C+PR&sort=date&fromage=7',
+        requirements: ['Experiência em gestão de equipes', 'Superior Completo', 'Perfil estratégico']
     },
 ];
