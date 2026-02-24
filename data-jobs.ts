@@ -27,7 +27,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=ArcelorMittal+Gonvarri&as_jtmd=Operador+Log%C3%ADstico&l=Arauc%C3%A1ria%2C+PR&sort=date',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Log%C3%ADstico+Gonvarri&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Médio Completo', 'Curso de Empilhadeira (obrigatório)', 'Disponibilidade de horários']
     },
     {
@@ -39,7 +39,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária (Híbrido)',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=Atman+Systems&as_jtmd=Desenvolvedor+Back-end&sort=date',
+        contactLink: 'https://br.indeed.com/empregos?q=Desenvolvedor+Back-end+Atman+Systems&l=Paran%C3%A1&sort=date&radius=100',
         requirements: ['Experiência em APIs REST', 'SQL/NoSQL', 'Integração com IoT (diferencial)']
     },
     {
@@ -51,7 +51,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=BRW+Suprimentos&as_jtmd=Vendedor+Interno&l=Arauc%C3%A1ria%2C+PR&sort=date',
+        contactLink: 'https://br.indeed.com/empregos?q=Vendedor+Interno+BRW+Suprimentos&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
         requirements: ['Comunicação e proatividade', 'Foco em resultados', 'Ensino Médio Completo']
     },
     {
@@ -63,7 +63,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária (Capela Velha)',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=JVS+Facilities&as_jtmd=Auxiliar+Servi%C3%A7os+Gerais&l=Arauc%C3%A1ria%2C+PR&sort=date',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Servi%C3%A7os+Gerais&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Fundamental', 'Disponibilidade de horários', 'Experiência em limpeza (diferencial)']
     },
 
@@ -77,7 +77,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=Electrolux&as_jtmd=Operador+Manufatura&l=Curitiba%2C+PR&sort=date',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Manufatura+Electrolux&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Médio Completo', 'Disponibilidade para turnos', 'Experiência industrial (diferencial)']
     },
     {
