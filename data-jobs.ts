@@ -178,14 +178,14 @@ export const jobs: Job[] = [
     },
     {
         id: 214,
-        title: 'Gerente Comercial',
-        company: 'Empresa de Serviços Curitiba',
-        description: 'Gestão de equipe de vendas, definição de estratégias e metas comerciais. Publicada em fevereiro de 2026 para profissional sênior com liderança comprovada.',
-        salary: 'R$ 5.000 - R$ 8.000 + Variável',
+        title: 'Gerente Comercial Regional',
+        company: 'Setor Financeiro (via Indeed Curitiba)',
+        description: 'Liderança de equipe interna de vendas, gestão de indicadores e metas comerciais no segmento financeiro. Publicada em 16/02/2026. Benefícios: AM, Odonto, Aux. Combustível, Celular Corporativo, VR, Seguro de Vida, PLR e Veículo da empresa.',
+        salary: 'R$ 10.000 - R$ 15.000 + PLR',
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Experiência em gestão de equipes', 'Superior Completo', 'Perfil estratégico']
+        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial+Regional&l=Curitiba%2C+PR&radius=25',
+        requirements: ['Experiência em liderança comercial', 'Gestão de indicadores de performance', 'Visão estratégica', 'Superior Completo']
     },
 ];
