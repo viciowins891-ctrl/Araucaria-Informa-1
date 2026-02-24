@@ -56,15 +56,15 @@ export const jobs: Job[] = [
     },
     {
         id: 204,
-        title: 'Auxiliar Administrativo I',
-        company: 'RH Nossa',
-        description: 'Apoio às rotinas administrativas: controle de documentos, planilhas e relatórios, atendimento interno e suporte financeiro/comercial. Benefícios: Cesta Básica R$ 115,50, VR R$ 25,42/dia, VT. Horário: 08h–17h (40h semanais). Publicada em 20/02/2026.',
-        salary: 'A combinar + Cesta Básica + VR + VT',
+        title: 'Auxiliar de Serviços Gerais',
+        company: 'JVS Facilities (Condor – Capela Velha)',
+        description: 'Limpeza e conservação de áreas internas e externas do novo Condor do bairro Capela Velha em Araucária. Atividades: varrição, lavagem de pisos, sanitários e corredores. Benefícios: VA, VR, VT e Seguro de Vida. Vaga publicada em 17/02/2026.',
+        salary: 'R$ 1.650 + Benefícios',
         type: 'CLT',
-        location: 'Iguaçu, Araucária',
+        location: 'Araucária (Capela Velha)',
         date: 'Hoje',
-        contactLink: 'https://abler.com.br/vagas/rh-nossa',
-        requirements: ['Ensino Médio (Superior cursando é diferencial)', 'Pacote Office / Excel', 'Organização e atenção aos detalhes']
+        contactLink: 'https://br.indeed.com/empregos?as_cmp=JVS+Facilities&as_jtmd=Auxiliar+Servi%C3%A7os+Gerais&l=Arauc%C3%A1ria%2C+PR&sort=date',
+        requirements: ['Ensino Fundamental', 'Disponibilidade de horários', 'Experiência em limpeza (diferencial)']
     },
 
     // ─── CURITIBA — COMPLEMENTO REGIONAL ─────────────────────────────────────
