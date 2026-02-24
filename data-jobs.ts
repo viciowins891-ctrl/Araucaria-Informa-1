@@ -70,15 +70,15 @@ export const jobs: Job[] = [
     // ─── CURITIBA — COMPLEMENTO REGIONAL ─────────────────────────────────────
     {
         id: 205,
-        title: 'Operador de Manufatura',
-        company: 'Electrolux',
-        description: 'Operação de linha de manufatura em uma das maiores fábricas de eletrodomésticos do país. Plano de carreira estruturado. Benefícios: AM, Odonto, VA, VR, VT, PLR.',
-        salary: 'R$ 2.400 + PLR',
+        title: 'Operador de Manufatura C',
+        company: 'Electrolux (CIC)',
+        description: 'Atua na produção de eletrodomésticos na unidade CIC (R. João Lunardelli, 2205). Turno: seg. a sáb. 14h30–22h30. Benefícios: Refeitório no local, Odonto, Ticket Pontualidade R$ 450, VA.',
+        salary: 'R$ 1.751,91 + Ticket Pontualidade R$ 450',
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
         contactLink: 'https://br.indeed.com/empregos?q=Operador+Manufatura+Electrolux&l=Curitiba%2C+PR&sort=date&radius=25',
-        requirements: ['Ensino Médio Completo', 'Disponibilidade para turnos', 'Experiência industrial (diferencial)']
+        requirements: ['Ensino Médio Completo', 'Disponibilidade para turno tarde/noite', 'Experiência industrial (diferencial)']
     },
     {
         id: 206,
