@@ -89,7 +89,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Produ%C3%A7%C3%A3o&l=Cidade+Industrial+de+Curitiba%2C+PR&sort=date&fromage=3',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Produ%C3%A7%C3%A3o&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Fundamental Completo', 'Disponibilidade de horário']
     },
     {
@@ -101,7 +101,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Log%C3%ADstica&l=Curitiba%2C+PR&sort=date&fromage=3',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Log%C3%ADstica&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Médio', 'Organização e agilidade', 'Experiência em logística (diferencial)']
     },
     {
@@ -113,7 +113,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo&l=Curitiba%2C+PR&sort=date&fromage=3',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Excel Básico/Intermediário', 'Comunicação oral e escrita', 'Ensino Médio Completo']
     },
     {
@@ -125,7 +125,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Consultor+Comercial&l=Curitiba%2C+PR&sort=date&fromage=3',
+        contactLink: 'https://br.indeed.com/empregos?q=Consultor+Comercial&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Experiência em vendas', 'Perfil empreendedor', 'CNH B (diferencial)']
     },
     {
@@ -137,7 +137,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional&l=Curitiba%2C+PR&sort=date&fromage=5',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Disponibilidade para turnos', 'Ensino Médio', 'Experiência industrial']
     },
     {
@@ -149,7 +149,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (Hauer)',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Estoquista&l=Curitiba%2C+PR&sort=date&fromage=5',
+        contactLink: 'https://br.indeed.com/empregos?q=Estoquista&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Ensino Médio', 'Organização', 'Experiência em almoxarifado (diferencial)']
     },
     {
@@ -161,7 +161,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Comercial&l=Curitiba%2C+PR&sort=date&fromage=5',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Comercial&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Boa comunicação', 'Proatividade', 'Ensino Médio Completo']
     },
     {
@@ -173,7 +173,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba (CIC)',
         date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG+MAG&l=Curitiba%2C+PR&sort=date&fromage=7',
+        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG+MAG&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Certificação de Soldagem', 'Experiência comprovada MIG/MAG', 'Ensino Fundamental']
     },
     {
@@ -185,7 +185,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Curitiba',
         date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial&l=Curitiba%2C+PR&sort=date&fromage=7',
+        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial&l=Curitiba%2C+PR&sort=date&radius=25',
         requirements: ['Experiência em gestão de equipes', 'Superior Completo', 'Perfil estratégico']
     },
 ];
