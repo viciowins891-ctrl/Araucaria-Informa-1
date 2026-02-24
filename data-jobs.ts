@@ -58,13 +58,13 @@ export const jobs: Job[] = [
         id: 204,
         title: 'Auxiliar Administrativo I',
         company: 'RH Nossa',
-        description: 'Rotinas administrativas, controle de planilhas e suporte à equipe. Publicada em 23/02/2026. Horário: segunda a quinta 07h–17h, sexta 07h–16h.',
-        salary: 'R$ 2.549 + VA + VT',
+        description: 'Apoio às rotinas administrativas: controle de documentos, planilhas e relatórios, atendimento interno e suporte financeiro/comercial. Benefícios: Cesta Básica R$ 115,50, VR R$ 25,42/dia, VT. Horário: 08h–17h (40h semanais). Publicada em 20/02/2026.',
+        salary: 'A combinar + Cesta Básica + VR + VT',
         type: 'CLT',
-        location: 'Araucária',
+        location: 'Iguaçu, Araucária',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?as_cmp=RH+Nossa&as_jtmd=Auxiliar+Administrativo&l=Arauc%C3%A1ria%2C+PR&sort=date',
-        requirements: ['Excel Intermediário', 'Ensino Médio Completo', 'Boa comunicação']
+        contactLink: 'https://abler.com.br/vagas/rh-nossa',
+        requirements: ['Ensino Médio (Superior cursando é diferencial)', 'Pacote Office / Excel', 'Organização e atenção aos detalhes']
     },
 
     // ─── CURITIBA — COMPLEMENTO REGIONAL ─────────────────────────────────────
