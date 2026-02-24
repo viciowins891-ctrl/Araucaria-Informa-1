@@ -2,19 +2,40 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 
 const globalCache = new Map<string, any>();
 
-// Hook genérico para buscar dados com Cache opcional
-export function useFetch<T>(fetchFunction: () => Promise<T>, cacheKey?: string) {
+interface UseFetchOptions<T> {
+    cacheKey?: string;
+    initialData?: T;
+}
+
+// Hook genérico para buscar dados com Cache e suporte a dados iniciais síncronos
+export function useFetch<T>(
+    fetchFunction: () => Promise<T>,
+    cacheKeyOrOptions?: string | UseFetchOptions<T>
+) {
+    // Suporte a string (legado) ou objeto de opções
+    const cacheKey = typeof cacheKeyOrOptions === 'string'
+        ? cacheKeyOrOptions
+        : cacheKeyOrOptions?.cacheKey;
+    const initialData = typeof cacheKeyOrOptions === 'object'
+        ? cacheKeyOrOptions?.initialData
+        : undefined;
+
     const [data, setData] = useState<T | null>(() => {
+        // 1. Prioridade máxima: cache em memória (navegação entre páginas)
         if (cacheKey && globalCache.has(cacheKey)) {
             return globalCache.get(cacheKey);
+        }
+        // 2. Dados iniciais síncronos (elimina flash de conteúdo vazio)
+        if (initialData !== undefined) {
+            return initialData;
         }
         return null;
     });
 
+    // Se temos dados iniciais ou cache, NÃO mostramos loading -> sem flash!
     const [loading, setLoading] = useState<boolean>(() => {
-        if (cacheKey && globalCache.has(cacheKey)) {
-            return false;
-        }
+        if (cacheKey && globalCache.has(cacheKey)) return false;
+        if (initialData !== undefined) return false;
         return true;
     });
 
@@ -36,8 +57,8 @@ export function useFetch<T>(fetchFunction: () => Promise<T>, cacheKey?: string) 
             return;
         }
 
-        // Se não tem cache, mostra loading (apenas se não tiver dados anteriores pra evitar flash branco)
-        if (!data) setLoading(true);
+        // Só mostra loading se não tiver nenhum dado para exibir
+        if (!data && initialData === undefined) setLoading(true);
 
         setError(null);
 

@@ -85,17 +85,9 @@ const renderApp = () => {
   );
 };
 
-// ESTRATÉGIA EQUILIBRADA: Performance Verde + SEO Seguro
-// Usa requestIdleCallback para não bloquear a Main Thread, mas sem atraso artificial longo.
-if ('requestIdleCallback' in window) {
-  // @ts-ignore
-  window.requestIdleCallback(() => {
-    renderApp();
-  }, { timeout: 1000 });
-} else {
-  // Fallback rápido
-  setTimeout(renderApp, 0);
-}
+// React monta IMEDIATAMENTE — sem delay de requestIdleCallback
+// Isso elimina o período onde o HTML está desprotegido (sem React) e pode mostrar conteúdo incorreto
+renderApp();
 
 // Register PWA Service Worker - DISABLED
 // import { registerSW } from 'virtual:pwa-register';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { useFetch } from '../hooks/useFetch';
@@ -7,9 +7,44 @@ import EventCard from '../components/EventCard';
 import BusinessCard from '../components/BusinessCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AdSpace from '../components/AdSpace';
-import { newsArticles } from '../data'; // Importação Eager para evitar Flicker
+import { newsArticles, events as localEvents, businesses as localBusinesses } from '../data'; // Importação Eager Síncrona
 
-// import { getPlaceholderImage } from '../services/aiService';
+// Helper de parse de data (igual ao api.ts) para ordenação síncrona
+const parseDate = (dateStr: string): number => {
+    if (!dateStr) return 0;
+    if (dateStr.includes('/') && !dateStr.includes('-')) {
+        const [day, month, year] = dateStr.split('/').map(Number);
+        return new Date(year, month - 1, day).getTime();
+    }
+    const ts = new Date(dateStr).getTime();
+    return isNaN(ts) ? 0 : ts;
+};
+
+// Dados iniciais pré-ordenados síncronos — usados ANTES de qualquer fetch async
+// Isso garante que o hero já tenha a notícia correta no primeiro frame renderizado
+const initialNews = [...newsArticles]
+    .sort((a, b) => {
+        const dateA = parseDate(a.publishDate);
+        const dateB = parseDate(b.publishDate);
+        if (dateA === dateB) return Number(b.id) - Number(a.id);
+        return dateB - dateA;
+    })
+    .slice(0, 6);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+const initialEvents = localEvents
+    .filter(e => parseDate(e.date) >= today.getTime())
+    .sort((a, b) => parseDate(a.date) - parseDate(b.date))
+    .slice(0, 3);
+
+const initialBusinesses = localBusinesses.slice(0, 4);
+
+const INITIAL_HOME_DATA = {
+    news: initialNews,
+    events: initialEvents,
+    businesses: initialBusinesses,
+};
 
 import { getOptimizedImageUrl, getPlaceholderImage } from '../services/imageUtils';
 import { stripHtml } from '../services/textUtils';
@@ -19,17 +54,19 @@ const HomePage: React.FC = () => {
         document.title = "Araucária Informa - Notícias, Eventos e Comércio Local";
     }, []);
 
-    const { data, loading, error } = useFetch(api.getHomeData, 'home-data-v2');
+    // initialData garante que o primeiro frame já tenha a notícia correta (sem flash!)
+    const { data, loading, error } = useFetch(api.getHomeData, {
+        cacheKey: 'home-data-v2',
+        initialData: INITIAL_HOME_DATA,
+    });
     const [imageError, setImageError] = useState(false);
 
-    // ESTRATÉGIA ANTI-FLICKER: Removido fallback estático que causava glitch visual
+    // ANTI-FLASH DEFINITIVO: data?.news pode ser nulo/vazio momentaneamente.
+    // initialNews é síncrono e sempre disponível — garante que featuredNews NUNCA seja null.
+    const sortedNews = (data?.news && data.news.length > 0) ? data.news : initialNews;
 
-    // 1. Determina a notícia de destaque
-    const sortedNews = data?.news || [];
-
-    // Prioridade: A mais recente do banco de dados (API)
-    // Se estiver carregando, featuredNews será undefined/null
-    const featuredNews = sortedNews.length > 0 ? sortedNews[0] : null;
+    // featuredNews SEMPRE será a notícia mais recente — sem fallback genérico jamais
+    const featuredNews = sortedNews[0];
 
     // 2. Define as imagens de exibição
     const defaultImage = "/images/araucaria_hero.png";
@@ -61,91 +98,62 @@ const HomePage: React.FC = () => {
     }
 
     const news = sortedNews.filter(n => n.id !== featuredNews?.id);
-    const events = data?.events || [];
-    const businesses = data?.businesses || [];
+    // Fallback síncrono para eventos e comércios também
+    const events = (data?.events && data.events.length > 0) ? data.events : initialEvents;
+    const businesses = (data?.businesses && data.businesses.length > 0) ? data.businesses : initialBusinesses;
     const gridNews = news.slice(0, 3);
 
     return (
         <div>
-            {/* Hero Section Dinâmica */}
+            {/* Hero Section — featuredNews SEMPRE disponível via initialNews síncrono */}
             <section className="relative min-h-[600px] lg:min-h-[700px] flex flex-col justify-center overflow-hidden bg-zinc-900 group">
-                {/* Skeleton Loader para o Hero */}
-                {loading && !featuredNews ? (
-                    <div className="absolute inset-0 z-0 bg-zinc-800 animate-pulse">
-                        <div className="container mx-auto px-4 relative z-10 pt-32 pb-16 h-full flex flex-col justify-center">
-                            <div className="max-w-4xl space-y-4">
-                                <div className="h-6 w-32 bg-zinc-700 rounded mb-4"></div>
-                                <div className="h-16 w-3/4 bg-zinc-700 rounded mb-6"></div>
-                                <div className="h-24 w-FULL bg-zinc-700 rounded mb-8"></div>
-                                <div className="h-12 w-48 bg-zinc-700 rounded-full"></div>
-                            </div>
+                <div className="absolute inset-0 z-0">
+                    <picture className="w-full h-full block">
+                        <source srcSet={mobileImage} media="(max-width: 767px)" type="image/webp" />
+                        <img
+                            src={desktopImage}
+                            alt={`Imagem de destaque - ${stripHtml(featuredNews.title)}`}
+                            className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
+                            onError={handleImageError}
+                            referrerPolicy="no-referrer"
+                            // @ts-ignore
+                            fetchPriority="high"
+                            loading="eager"
+                        />
+                    </picture>
+                    {/* Gradiente escuro para garantir leitura */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 opacity-90"></div>
+                </div>
+
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16">
+                    <div className="max-w-4xl">
+                        <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm">
+                            Destaque do Dia
+                        </span>
+
+                        <Link to={`/noticias/${featuredNews.id}`} className="block transition-opacity py-2 hover:opacity-90">
+                            <h1
+                                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 break-words"
+                                dangerouslySetInnerHTML={{ __html: featuredNews.title }}
+                            />
+                        </Link>
+
+                        <p
+                            className="text-gray-100 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light"
+                            dangerouslySetInnerHTML={{ __html: featuredNews.summary }}
+                        />
+
+                        <div className="flex gap-4">
+                            <Link
+                                to={`/noticias/${featuredNews.id}`}
+                                className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
+                            >
+                                Ler Matéria Completa
+                                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                            </Link>
                         </div>
                     </div>
-                ) : (
-                    <>
-                        <div className="absolute inset-0 z-0">
-                            <picture className="w-full h-full block">
-                                {/* Mobile Source - Prioriza WebP se disponível */}
-                                <source srcSet={mobileImage} media="(max-width: 767px)" type="image/webp" />
-                                <img
-                                    src={desktopImage}
-                                    alt={`Imagem de destaque - ${featuredNews ? stripHtml(featuredNews.title) : 'Araucária'}`}
-                                    className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
-                                    onError={handleImageError}
-                                    referrerPolicy="no-referrer"
-                                    // @ts-ignore
-                                    fetchPriority="high"
-                                    loading="eager"
-                                />
-                            </picture>
-                            {/* Gradiente escuro para garantir leitura */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 opacity-90"></div>
-                        </div>
-
-                        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16">
-                            <div className="max-w-4xl">
-                                {featuredNews ? (
-                                    <>
-                                        <span className="inline-block py-1.5 px-3 rounded-md bg-primary text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-sm border border-primary-dark/30 backdrop-blur-sm animate-fade-in-up">
-                                            Destaque do Dia
-                                        </span>
-
-                                        <Link to={`/noticias/${featuredNews.id}`} className="block transition-opacity py-2 hover:opacity-90">
-                                            <h1
-                                                className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 break-words animate-fade-in-up delay-100"
-                                                dangerouslySetInnerHTML={{ __html: featuredNews.title }}
-                                            />
-                                        </Link>
-
-                                        <p
-                                            className="text-gray-100 text-lg sm:text-xl line-clamp-3 max-w-2xl mb-8 font-light animate-fade-in-up delay-200"
-                                            dangerouslySetInnerHTML={{ __html: featuredNews.summary }}
-                                        />
-
-                                        <div className="flex gap-4 animate-fade-in-up delay-300">
-                                            <Link
-                                                to={`/noticias/${featuredNews.id}`}
-                                                className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1"
-                                            >
-                                                Ler Matéria Completa
-                                                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                                            </Link>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <>
-                                        <span className="inline-block py-1 px-3 rounded-full bg-blue-600/80 border border-blue-400/30 text-blue-50 text-sm font-semibold mb-6 backdrop-blur-md shadow-sm">
-                                            Bem-vindo a Araucária
-                                        </span>
-                                        <h1 className="text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-2xl">
-                                            A Cidade Símbolo<br />do Paraná
-                                        </h1>
-                                    </>
-                                )}
-                            </div>
-                        </div>
-                    </>
-                )}
+                </div>
             </section>
 
             <div className="space-y-20 sm:space-y-28 py-16 sm:py-24 bg-gradient-to-b from-zinc-900/5 to-transparent dark:from-zinc-900 dark:to-background-dark">
