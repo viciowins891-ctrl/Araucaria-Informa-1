@@ -24,15 +24,6 @@
                    font-src 'self' https://fonts.gstatic.com;
                    frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com;">
 
-    <!-- LCP Optimization: Responsive Preload -->
-    <!-- Preload Hero Image for "Feira Gastronômica" (Current Feature ID 9999) -->
-    <!-- Mobile: Lightweight WebP (~50KB) -->
-    <link rel="preload" as="image" href="/images/food_trucks_cover_v29_mobile.webp" fetchpriority="high"
-        media="(max-width: 767px)" />
-    <!-- Desktop: High-Res PNG (~1MB) -->
-    <link rel="preload" as="image" href="/images/food_trucks_cover_v29.png" fetchpriority="high"
-        media="(min-width: 768px)" />
-
     <!-- SEO Principal -->
     <title>Araucária Informa - Notícias, Eventos e Comércio Local</title>
     <meta name="description"
@@ -101,7 +92,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
     <!-- Fonts Optimized Loading (Correct Strategy with display=swap) -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -116,185 +106,17 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
             rel="stylesheet">
     </noscript>
-
-    <!-- Critical CSS for App Shell (Matches HomePage.tsx Tailwind Classes) -->
     <style>
         /* Base styles (Mobile First) */
-        .shell-hero {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-            background-color: #18181b;
-            min-height: 600px;
-        }
-
-        .shell-content {
-            position: relative;
-            z-index: 10;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 896px;
-            /* max-w-4xl */
-            padding-left: 1rem;
-            padding-right: 1rem;
-            padding-top: 8rem;
-            /* pt-32 */
-            padding-bottom: 4rem;
-            /* pb-16 */
-        }
-
-        .shell-title {
-            color: white;
-            font-weight: 700;
-            line-height: 1.1;
-            /* leading-tight */
-            text-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            font-size: 1.875rem;
-            /* text-3xl (Mobile) */
-            margin-bottom: 1.5rem;
-            /* mb-6 */
-        }
-
-        /* Responsive Breakpoints (Matching Tailwind defaults) */
-        @media (min-width: 640px) {
-
-            /* sm */
-            .shell-content {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-
-            .shell-title {
-                font-size: 2.25rem;
-            }
-
-            /* text-4xl */
-        }
-
-        @media (min-width: 768px) {
-
-            /* md */
-            .shell-title {
-                font-size: 3rem;
-            }
-
-            /* text-5xl */
-        }
-
-        @media (min-width: 1024px) {
-
-            /* lg */
-            .shell-hero {
-                min-height: 700px;
-            }
-
-            /* lg:min-h-[700px] */
-            .shell-content {
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-
-            .shell-title {
-                font-size: 3.75rem;
-            }
-
-            /* text-6xl */
+        body {
+            margin: 0;
+            padding: 0;
         }
     </style>
-
 </head>
 
 <body class="bg-background-light dark:bg-background-dark">
-    <div id="root">
-        <!-- APP SHELL / PRERENDER MANUAL PARA LCP IMEDIATO -->
-        <!-- Este conteúdo é exibido instantaneamente enquanto o React carrega -->
-
-        <!-- Fake Header (MATCHING: h-[72px] / py-4) -->
-        <div
-            style="position:fixed;top:0;left:0;right:0;height:72px;background-color:#1d4ed8;z-index:50;display:flex;align-items:center;padding:0 1rem;box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-            <div
-                style="width:40px;height:40px;background-color:white;border-radius:0.5rem;margin-right:0.5rem;display:flex;align-items:center;justify-content:center;">
-                <!-- Simple Box mimicking logo shape -->
-            </div>
-            <div
-                style="height:28px;width:180px;background-color:rgba(255,255,255,0.0);color:white;font-weight:700;font-size:1.5rem;display:flex;align-items:center;font-family: 'Inter', sans-serif;">
-                Araucária<span style="font-weight:300;color:#bfdbfe;">Informa</span>
-            </div>
-        </div>
-
-        <!-- Fake Hero (MATCHING: HomePage.tsx Hero Section) -->
-        <div class="shell-hero">
-            <div style="position:absolute;inset:0;z-index:0; background-color: #18181b;">
-                <!-- Actual Image Injection for LCP (Matches HomePage.tsx) -->
-                <picture style="display:block;width:100%;height:100%;">
-                    <source srcset="/images/food_trucks_cover_v29_mobile.webp" media="(max-width: 767px)"
-                        type="image/webp" />
-                    <img src="/images/food_trucks_cover_v29.png" alt="Imagem de destaque - Feira Gastronômica"
-                        style="width:100%;height:100%;object-fit:cover;" width="800" height="600"
-                        fetchpriority="high" />
-                </picture>
-                <div
-                    style="position:absolute;inset:0;background:linear-gradient(to top, black, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3));opacity:0.9;">
-                </div>
-            </div>
-
-            <div class="shell-content">
-                <span
-                    style="display:inline-block;padding:6px 12px;border-radius:6px;background-color:#0d6efd;color:white;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);">
-                    Destaque do Dia
-                </span>
-
-                <a href="/#/noticias/9999" class="shell-link" style="text-decoration:none;display:block;">
-                    <h1 class="shell-title">
-                        Feira Gastronômica traz Food Trucks e música para o <strong>Centro</strong>
-                    </h1>
-                </a>
-
-                <p
-                    style="color:#f3f4f6;font-size:1.125rem;line-height:1.75rem;font-weight:300;max-width:42rem;margin-bottom:2rem;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
-                    Evento na Praça Central reúne o melhor da culinária de rua e opções de lazer para toda a família.
-                </p>
-
-                <div style="display:flex;gap:1rem;">
-                    <a href="/#/noticias/9999"
-                        style="display:inline-flex;align-items:center;padding:0.75rem 1.5rem;background-color:#0d6efd;color:white;font-weight:700;border-radius:9999px;box-shadow:0 10px 15px -3px rgba(13, 110, 253, 0.3);text-decoration:none;transition:transform 0.2s;">
-                        Ler Matéria Completa
-                        <svg style="width:1.25rem;height:1.25rem;margin-left:0.5rem;" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fake Content Skeleton (MATCHING: HomePage.tsx News Section) -->
-        <div style="max-width:896px;margin:0 auto;padding:4rem 1rem;">
-            <!-- Section Title Skeleton -->
-            <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;">
-                <div>
-                    <div
-                        style="height:36px;width:200px;background-color:#e5e7eb;border-radius:0.5rem;margin-bottom:0.5rem;">
-                    </div>
-                    <div style="height:20px;width:280px;background-color:#f3f4f6;border-radius:0.25rem;"></div>
-                </div>
-                <div
-                    style="height:24px;width:120px;background-color:#e5e7eb;border-radius:0.25rem;display:none;margin-left:auto;">
-                </div>
-            </div>
-
-            <!-- Grid Skeleton -->
-            <div style="display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:2rem;">
-                <!-- Card 1 -->
-                <div style="height:400px;background-color:#f9fafb;border-radius:1rem;border:1px solid #f3f4f6;"></div>
-                <!-- Card 2 -->
-                <div style="height:400px;background-color:#f9fafb;border-radius:1rem;border:1px solid #f3f4f6;"></div>
-            </div>
-        </div>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
 

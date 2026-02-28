@@ -27,6 +27,14 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["."],
-  "exclude": ["node_modules", "dist", "jacare-do-corte", "**/*.spec.ts"]
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "jacare-do-corte",
+    "**/*.spec.ts",
+    "seed_standalone.ts"
+  ]
 }

@@ -2,13 +2,13 @@
 import React from 'react';
 
 interface AdSpaceProps {
-    slotId: string;
+    slotId?: string;
     format?: 'auto' | 'fluid' | 'rectangle' | 'vertical' | 'horizontal';
     className?: string;
     style?: React.CSSProperties;
 }
 
-const AdSpace: React.FC<AdSpaceProps> = ({ slotId, format = 'auto', className = '', style }) => {
+const AdSpace: React.FC<AdSpaceProps> = ({ slotId = '', format = 'auto', className = '', style }) => {
     // Modo de desenvolvimento: Mostrar espaço vazio ou nada, sem texto feio
     // Em produção, o script do AdSense injetaria o anúncio aqui.
 
