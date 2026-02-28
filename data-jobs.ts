@@ -13,179 +13,128 @@ export interface Job {
     requirements?: string[];
 }
 
-// Atualizado em: 24/02/2026 — Araucária (hoje) + Curitiba (complemento regional)
-// LINKS: usam parâmetro "as_cmp" do Indeed para filtrar por empresa específica
+// Atualizado em: 28/02/2026 — Araucária (hoje)
+// LINKS: usam parâmetro de busca direta para a empresa/vaga no Indeed
 export const jobs: Job[] = [
-
-    // ─── ARAUCÁRIA — VAGAS DE HOJE ────────────────────────────────────────────
+    // ─── ARAUCÁRIA — VAGAS RECENTES ────────────────────────────────────────────
     {
-        id: 201,
-        title: 'Operador Logístico II',
-        company: 'ArcelorMittal Gonvarri Brasil',
-        description: 'Movimentações com empilhadeira, recebimento, descarga e armazenagem de materiais, carregamento de caminhões e abastecimento das linhas produtivas. Benefícios: Unimed, Odonto, PPR, Refeição no local, VA R$ 1.000, Fretado/VT, Convênio Farmácia e Auxílio Educação.',
-        salary: 'A combinar + Benefícios completos',
+        id: 301,
+        title: 'APRENDIZ DE ATENDENTE DE RESTAURANTE',
+        company: "McDonald's Restaurante - Arcos Dorados",
+        description: 'Prestar atendimento aos clientes nos pontos de vendas; Preparar sanduíches, bebidas e sobremesas no Méqui.',
+        salary: 'A combinar',
         type: 'CLT',
-        location: 'Araucária',
+        location: 'Centro - Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Log%C3%ADstico+Gonvarri&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
-        requirements: ['Ensino Médio Completo', 'Curso de Empilhadeira (obrigatório)', 'Disponibilidade de horários']
+        contactLink: 'https://br.indeed.com/empregos?q=APRENDIZ+DE+ATENDENTE+DE+RESTAURANTE+McDonald%27s+Restaurante+-+Arcos+Dorados&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Gosto por atendimento ao cliente', 'Disponibilidade de horário', 'Ensino médio (cursando ou completo)']
     },
     {
-        id: 202,
-        title: 'Desenvolvedor Back-end (Pleno/Sênior)',
-        company: 'Atman Systems',
-        description: 'Desenvolvimento de APIs para produtos digitais, integração com hardware e dispositivos IoT. Empresa de tecnologia sediada em Araucária. Benefícios: VA, VR, Unimed, Dental Uni, Seguro de Vida.',
-        salary: 'R$ 5.000 - R$ 11.000',
+        id: 302,
+        title: 'Analista de Departamento Pessoal Pleno',
+        company: 'Tainara Souza - Rh e Carreira',
+        description: 'Atuação em rotinas de departamento pessoal em nível pleno na região de Araucária.',
+        salary: 'R$ 3.700 – R$ 4.000',
         type: 'CLT',
-        location: 'Araucária (Híbrido)',
+        location: 'Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Desenvolvedor+Back-end+Atman+Systems&l=Paran%C3%A1&sort=date&radius=100',
-        requirements: ['Experiência em APIs REST', 'SQL/NoSQL', 'Integração com IoT (diferencial)']
+        contactLink: 'https://br.indeed.com/empregos?q=Analista+de+Departamento+Pessoal+Pleno+Tainara+Souza+-+Rh+e+Carreira&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Experiência consolidada em DP', 'Conhecimento em rotinas trabalhistas', 'Perfil analítico']
     },
     {
-        id: 203,
-        title: 'Vendedor Interno',
-        company: 'BRW Suprimentos Escolares',
-        description: 'Vendas internas, atendimento ao cliente, prospecção, elaboração de propostas e acompanhamento de pedidos. Horário: seg. a quinta 08h–18h e sexta 08h–17h. Benefícios: Unimed, Odonto, PLR, Parking gratuito e VT.',
-        salary: 'R$ 2.094 + Benefícios',
+        id: 303,
+        title: 'Auxiliar Geral - Meio Ambiente | PCD',
+        company: 'Universidade Livre para Eficiência Humana',
+        description: 'Auxiliar em tarefas gerais de conservação e meio ambiente. Vaga exclusiva para pessoas com deficiência.',
+        salary: 'R$ 1.796,60',
         type: 'CLT',
-        location: 'Araucária',
+        location: 'Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Vendedor+Interno+BRW+Suprimentos&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
-        requirements: ['Comunicação e proatividade', 'Foco em resultados', 'Ensino Médio Completo']
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Geral+-+Meio+Ambiente+PCD+Universidade+Livre+para+Efici%C3%AAncia+Humana&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Vaga exclusiva PCD', 'Auxílio em serviços gerais', 'Disponibilidade para Araucária']
     },
     {
-        id: 204,
-        title: 'Auxiliar de Serviços Gerais',
-        company: 'JVS Facilities (Condor – Capela Velha)',
-        description: 'Limpeza e conservação de áreas internas e externas do novo Condor do bairro Capela Velha em Araucária. Atividades: varrição, lavagem de pisos, sanitários e corredores. Benefícios: VA, VR, VT e Seguro de Vida. Vaga publicada em 17/02/2026.',
-        salary: 'R$ 1.650 + Benefícios',
+        id: 304,
+        title: 'Consultor de Vendas Araucária/Presencial',
+        company: 'Sommare Conecta',
+        description: 'Prospecção de clientes e fechamento de vendas de forma presencial em Araucária.',
+        salary: 'R$ 1.900 – R$ 3.000',
         type: 'CLT',
-        location: 'Araucária (Capela Velha)',
-        date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Servi%C3%A7os+Gerais&l=Arauc%C3%A1ria%2C+PR&sort=date&radius=25',
-        requirements: ['Ensino Fundamental', 'Disponibilidade de horários', 'Experiência em limpeza (diferencial)']
-    },
-
-    // ─── CURITIBA — COMPLEMENTO REGIONAL ─────────────────────────────────────
-    {
-        id: 205,
-        title: 'Operador de Manufatura C',
-        company: 'Electrolux (CIC)',
-        description: 'Atua na produção de eletrodomésticos na unidade CIC (R. João Lunardelli, 2205). Turno: seg. a sáb. 14h30–22h30. Benefícios: Refeitório no local, Odonto, Ticket Pontualidade R$ 450, VA.',
-        salary: 'R$ 1.751,91 + Ticket Pontualidade R$ 450',
-        type: 'CLT',
-        location: 'Curitiba (CIC)',
+        location: 'Araucária, PR',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/cmp/Electrolux/jobs?l=Curitiba%2C+PR',
-        requirements: ['Ensino Médio Completo', 'Disponibilidade para turno tarde/noite', 'Experiência industrial (diferencial)']
+        contactLink: 'https://br.indeed.com/empregos?q=Consultor+de+Vendas+Arauc%C3%A1ria+Sommare+Conecta&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Experiência em vendas diretas', 'Comunicação assertiva', 'Atuação presencial']
     },
     {
-        id: 206,
-        title: 'Auxiliar de Produção',
-        company: 'Indústria Curitiba (CIC)',
-        description: 'Abastecimento de linha de produção, separação e embalagem de materiais na Cidade Industrial de Curitiba. Benefícios: AM, Odonto, VA, VR, VT. Sem exigência de experiência anterior.',
-        salary: 'R$ 2.000 + Benefícios',
+        id: 305,
+        title: 'Técnico Segurança do Trabalho',
+        company: 'Alsco Uniformes',
+        description: 'Garantir a segurança dos colaboradores através de inspeções, treinamentos e controle de EPIs.',
+        salary: 'A combinar',
         type: 'CLT',
-        location: 'Curitiba (CIC)',
+        location: 'Araucária, PR',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+de+Produ%C3%A7%C3%A3o&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Ensino Fundamental Completo', 'Disponibilidade de horário']
+        contactLink: 'https://br.indeed.com/empregos?q=T%C3%A9cnico+Seguran%C3%A7a+do+Trabalho+Alsco+Uniformes&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Curso Técnico em Segurança do Trabalho', 'Registro ativo no conselho', 'Experiência industrial']
     },
     {
-        id: 207,
-        title: 'Assistente de Logística',
-        company: 'Transportadora Curitiba',
-        description: 'Suporte a motoristas, organização de rotas de entrega e controle de cargas. Benefícios: AM, VR, VA, VT e Seguro de Vida.',
-        salary: 'R$ 2.200 + Benefícios',
+        id: 306,
+        title: 'Assistente Administrativo | PCD',
+        company: 'Universidade Livre para Eficiência Humana',
+        description: 'Apoio administrativo em diversos setores. Vaga dedicada a pessoas com deficiência.',
+        salary: 'R$ 2.409,90',
         type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+de+Log%C3%ADstica&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Ensino Médio', 'Organização e agilidade', 'Experiência em logística (diferencial)']
+        location: 'Araucária, PR',
+        date: 'Recente',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Administrativo+PCD+Universidade+Livre+para+Efici%C3%AAncia+Humana&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['PCD', 'Rotinas administrativas', 'Informática básica']
     },
     {
-        id: 208,
-        title: 'Auxiliar Administrativo',
-        company: 'Empresa local Curitiba',
-        description: 'Rotinas de escritório, emissão de notas fiscais e suporte ao setor financeiro. Horário comercial, segunda a sexta.',
-        salary: 'R$ 1.800 - R$ 2.300',
+        id: 307,
+        title: 'Auxiliar de Produção - Expedição',
+        company: 'Bruson Metalúrgica',
+        description: 'Atuar no setor de expedição auxiliando na movimentação de materiais e separação.',
+        salary: 'R$ 2.270,40',
         type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Administrativo&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Excel Básico/Intermediário', 'Comunicação oral e escrita', 'Ensino Médio Completo']
+        location: 'Araucária, PR',
+        date: 'Recente',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+de+Produ%C3%A7%C3%A3o+Expedi%C3%A7%25C3%25A3o+Bruson+Metal%25C3%25BArgica&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Disponibilidade para turno noturno', 'Experiência em produção/logística', 'Trabalho em equipe']
     },
     {
-        id: 209,
-        title: 'Consultor Comercial',
-        company: 'Empresa de Serviços Curitiba',
-        description: 'Prospecção de clientes, elaboração de propostas comerciais e relacionamento pós-venda. Metas com comissionamento atrativo.',
-        salary: 'R$ 2.000 + Comissões (até R$ 5.000)',
+        id: 308,
+        title: 'Torneiro Mecânico II',
+        company: 'Berneck S.A Painéis e Serrados',
+        description: 'Operação de torno mecânico para confecção e reparo de peças industriais.',
+        salary: 'A combinar',
         type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 2 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Consultor+Comercial&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Experiência em vendas', 'Perfil empreendedor', 'CNH B (diferencial)']
+        location: 'Araucária, PR',
+        date: 'Recente',
+        contactLink: 'https://br.indeed.com/empregos?q=Torneiro+Mec%C3%A2nico+II+Berneck+S.A&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Experiência comprovada como torneiro', 'Leitura e interpretação de desenhos', 'Conhecimento em usinagem']
     },
     {
-        id: 210,
-        title: 'Operador Multifuncional',
-        company: 'Indústria Curitiba',
-        description: 'Atua em diferentes setores da linha de produção industrial conforme demanda. Vaga para indústria de grande porte em Curitiba. Benefícios completos.',
-        salary: 'R$ 2.100 + Benefícios',
+        id: 309,
+        title: 'Operador Multifuncional / empilhadeira',
+        company: 'Angelo Burbello',
+        description: 'Operação de empilhadeira e auxílio em diversas funções no pátio da construção civil.',
+        salary: 'R$ 2.265,00 – R$ 2.529,30',
         type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Disponibilidade para turnos', 'Ensino Médio', 'Experiência industrial']
+        location: 'Araucária, PR',
+        date: 'Recente',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+Multifuncional+empilhadeira+Angelo+Burbello&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Curso de Operador de Empilhadeira', 'Habilitação ativa', 'Experiência em materiais de construção']
     },
     {
-        id: 211,
-        title: 'Estoquista / Aux. de Almoxarifado',
-        company: 'Distribuidora (Bairro Hauer)',
-        description: 'Controle e organização de estoque, recebimento e expedição de mercadorias. Bairro Hauer, Curitiba. Benefícios: Odonto Bradesco, Seguro de Vida e Day Off no aniversário.',
-        salary: 'R$ 1.900 + Benefícios',
+        id: 310,
+        title: 'Operador de Produção I',
+        company: 'Copa Energia',
+        description: 'Enchimento e movimentação de cilindros de gás de forma segura e eficiente.',
+        salary: 'A combinar',
         type: 'CLT',
-        location: 'Curitiba (Hauer)',
-        date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Estoquista&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Ensino Médio', 'Organização', 'Experiência em almoxarifado (diferencial)']
-    },
-    {
-        id: 212,
-        title: 'Assistente Comercial (sem exp.)',
-        company: 'Empresa Curitiba',
-        description: 'Atendimento e suporte à equipe de vendas, prospecção ativa de clientes. Treinamento completo oferecido. Ótima oportunidade para quem está começando. Benefícios: AM, VA, VT.',
-        salary: 'R$ 1.800 + Comissões',
-        type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 3 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Comercial&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Boa comunicação', 'Proatividade', 'Ensino Médio Completo']
-    },
-    {
-        id: 213,
-        title: 'Soldador (MIG/MAG)',
-        company: 'Metalúrgica Curitiba (CIC)',
-        description: 'Soldagem de peças metálicas estruturais para indústria automotiva em Curitiba. Alta demanda por profissionais qualificados na CIC.',
-        salary: 'R$ 2.700 + Benefícios',
-        type: 'CLT',
-        location: 'Curitiba (CIC)',
-        date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Soldador+MIG+MAG&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Certificação de Soldagem', 'Experiência comprovada MIG/MAG', 'Ensino Fundamental']
-    },
-    {
-        id: 214,
-        title: 'Gerente Comercial Regional',
-        company: 'Setor Financeiro (via Indeed Curitiba)',
-        description: 'Liderança de equipe interna de vendas, gestão de indicadores e metas comerciais no segmento financeiro. Publicada em 16/02/2026. Benefícios: AM, Odonto, Aux. Combustível, Celular Corporativo, VR, Seguro de Vida, PLR e Veículo da empresa.',
-        salary: 'R$ 10.000 - R$ 15.000 + PLR',
-        type: 'CLT',
-        location: 'Curitiba',
-        date: 'Há 4 dias',
-        contactLink: 'https://br.indeed.com/empregos?q=Gerente+Comercial+Regional&l=Curitiba%2C+PR&radius=25',
-        requirements: ['Experiência em liderança comercial', 'Gestão de indicadores de performance', 'Visão estratégica', 'Superior Completo']
-    },
+        location: 'Araucária, PR',
+        date: 'Recente',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+de+Produ%C3%A7%C3%A3o+I+Copa+Energia&l=Arauc%C3%A1ria%2C+PR',
+        requirements: ['Ensino médio completo', 'Disponibilidade de horário', 'Experiência em produção industrial']
+    }
 ];
