@@ -26,7 +26,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Centro - Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=APRENDIZ+DE+ATENDENTE+DE+RESTAURANTE+McDonald%27s+Restaurante+-+Arcos+Dorados&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=APRENDIZ+DE+ATENDENTE+DE+RESTAURANTE+McDonalds&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Gosto por atendimento ao cliente', 'Disponibilidade de horário', 'Ensino médio (cursando ou completo)']
     },
     {
@@ -38,7 +38,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Analista+de+Departamento+Pessoal+Pleno+Tainara+Souza+-+Rh+e+Carreira&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Analista+de+Departamento+Pessoal+Pleno+Tainara+Souza&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Experiência consolidada em DP', 'Conhecimento em rotinas trabalhistas', 'Perfil analítico']
     },
     {
@@ -50,7 +50,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Hoje',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Geral+-+Meio+Ambiente+PCD+Universidade+Livre+para+Efici%C3%AAncia+Humana&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+Geral+Meio+Ambiente+PCD+Universidade+Livre&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Vaga exclusiva PCD', 'Auxílio em serviços gerais', 'Disponibilidade para Araucária']
     },
     {
@@ -62,7 +62,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=Consultor+de+Vendas+Arauc%C3%A1ria+Sommare+Conecta&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Consultor+de+Vendas+Sommare+Conecta&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Experiência em vendas diretas', 'Comunicação assertiva', 'Atuação presencial']
     },
     {
@@ -74,7 +74,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Ontem',
-        contactLink: 'https://br.indeed.com/empregos?q=T%C3%A9cnico+Seguran%C3%A7a+do+Trabalho+Alsco+Uniformes&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Tecnico+Seguranca+do+Trabalho+Alsco+Uniformes&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Curso Técnico em Segurança do Trabalho', 'Registro ativo no conselho', 'Experiência industrial']
     },
     {
@@ -86,7 +86,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Administrativo+PCD+Universidade+Livre+para+Efici%C3%AAncia+Humana&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Assistente+Administrativo+PCD+Universidade+Livre&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['PCD', 'Rotinas administrativas', 'Informática básica']
     },
     {
@@ -98,7 +98,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+de+Produ%C3%A7%C3%A3o+Expedi%C3%A7%25C3%25A3o+Bruson+Metal%25C3%25BArgica&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Auxiliar+de+Producao+Expedicao+Bruson+Metalurgica&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Disponibilidade para turno noturno', 'Experiência em produção/logística', 'Trabalho em equipe']
     },
     {
@@ -110,7 +110,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Torneiro+Mec%C3%A2nico+II+Berneck+S.A&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Torneiro+Mecanico+II+Berneck&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Experiência comprovada como torneiro', 'Leitura e interpretação de desenhos', 'Conhecimento em usinagem']
     },
     {
@@ -134,7 +134,7 @@ export const jobs: Job[] = [
         type: 'CLT',
         location: 'Araucária, PR',
         date: 'Recente',
-        contactLink: 'https://br.indeed.com/empregos?q=Operador+de+Produ%C3%A7%C3%A3o+I+Copa+Energia&l=Arauc%C3%A1ria%2C+PR',
+        contactLink: 'https://br.indeed.com/empregos?q=Operador+de+Producao+Copa+Energia&l=Arauc%C3%A1ria%2C+PR',
         requirements: ['Ensino médio completo', 'Disponibilidade de horário', 'Experiência em produção industrial']
     }
 ];
