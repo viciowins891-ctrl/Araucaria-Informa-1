@@ -4,8 +4,8 @@ import SkeletonBase from './SkeletonBase';
 const BusinessCardSkeleton: React.FC = () => {
     return (
         <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-700/60 overflow-hidden flex flex-col h-full">
-            {/* Banner/Image Area (Matching h-48) */}
-            <div className="relative h-48 bg-gray-200 dark:bg-gray-700">
+            {/* Banner/Image Area (Matching h-64) */}
+            <div className="relative h-64 bg-gray-200 dark:bg-gray-700">
                 <SkeletonBase className="w-full h-full" />
 
                 {/* Simulated Tags Overlay (Top-Right) */}

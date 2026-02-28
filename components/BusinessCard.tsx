@@ -26,7 +26,7 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
 
     return (
         <div className="group bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700/60 flex flex-col h-full transition-all duration-300 hover:-translate-y-1">
-            <div className="relative overflow-hidden h-48 bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center">
+            <div className="relative overflow-hidden h-64 bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center">
                 {!imageError ? (
                     <img
                         alt={`Fachada da ${business.name}`}
